@@ -71,3 +71,7 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+/**
+ *  Load Advanced Custom Fields
+ */
+require get_template_directory() . '/acf/acf.php';
