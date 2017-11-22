@@ -13,7 +13,7 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
@@ -23,7 +23,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="wrapper-index">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
 		<div class="row">
 
