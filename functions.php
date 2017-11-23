@@ -99,3 +99,8 @@ require get_template_directory() . '/inc/editor.php';
 
  // 4. Include ACF
  include_once( get_stylesheet_directory() . '/acf/acf.php' );
+
+ /**
+  * Load iFrame helper content
+  */
+ require get_template_directory() . '/inc/iframe.php';
