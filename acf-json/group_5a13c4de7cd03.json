@@ -254,6 +254,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-glossary.php"
             }
         ]
     ],
@@ -265,5 +270,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511325508
+    "modified": 1511741135
 }
