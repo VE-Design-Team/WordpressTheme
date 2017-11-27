@@ -246,6 +246,187 @@
                     "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a1b72e2b4a86",
+            "label": "Card Content",
+            "name": "card_content",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a1b730bb4a87",
+                    "label": "Card Title",
+                    "name": "card_title",
+                    "type": "select",
+                    "instructions": "Select the card title header",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "custom": "Custom",
+                        "assignment": "Assignments",
+                        "audio": "Audio",
+                        "calendar": "Calendar",
+                        "canvas_inbox": "Canvas inbox",
+                        "communication": "Communication",
+                        "equipment": "Equipment",
+                        "example": "Example",
+                        "expert_tip": "Expert tip",
+                        "further_resources": "Further Resources",
+                        "getting_help": "Getting Help",
+                        "glossary": "Glossary",
+                        "group_registration": "Group Registration",
+                        "homepage": "Homepage",
+                        "hot_spot": "Hot spot",
+                        "learning_activity": "Learning Activity",
+                        "licensing_accreditation": "Licensing Accreditation",
+                        "mobile_guides": "Mobile Guides",
+                        "module": "Module",
+                        "online_behaviour": "Online Behaviour",
+                        "software": "Software",
+                        "video": "Video",
+                        "video_transcript": "Video Transcript",
+                        "your_focus": "Your Focus",
+                        "your_strengths": "Your Strengths"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a1b786d02d1f",
+                    "label": "Custom header",
+                    "name": "custom_header",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a1b730bb4a87",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "text_only": "Text only",
+                        "image_only": "Image only",
+                        "text_and_image": "Text and image"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a1b865eaeaab",
+                    "label": "Card Content",
+                    "name": "card_content",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "....type here",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5a1b95a1a6dc8",
+                    "label": "Card Text Title",
+                    "name": "card_text_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a1b786d02d1f",
+                                "operator": "!=",
+                                "value": "image_only"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a1b9656a6dc9",
+                    "label": "Card header image",
+                    "name": "card_header_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a1b786d02d1f",
+                                "operator": "!=",
+                                "value": "text_only"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -270,5 +451,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511741135
+    "modified": 1511758001
 }

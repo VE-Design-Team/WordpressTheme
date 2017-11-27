@@ -19,7 +19,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="container" id="content" tabindex="-1">
+	<div class="container-fluid" id="content" tabindex="-1">
 
 		<div class="row">
 
