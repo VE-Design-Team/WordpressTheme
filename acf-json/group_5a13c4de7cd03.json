@@ -118,9 +118,9 @@
                 "id": ""
             },
             "choices": {
-                "Tabs on top": "Tabs on top",
-                "Tabs on left": "Tabs on left",
-                "Image tabs on left": "Image tabs on left"
+                "top": "Tabs on top",
+                "left": "Tabs on left",
+                "image": "Image tabs on left"
             },
             "default_value": [],
             "allow_null": 0,
@@ -151,9 +151,9 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5a13c84ca9111",
+            "collapsed": "",
             "min": 1,
-            "max": 4,
+            "max": 10,
             "layout": "row",
             "button_label": "Add another tab",
             "sub_fields": [
@@ -170,11 +170,6 @@
                                 "field": "field_5a13c5a7ec802",
                                 "operator": "==",
                                 "value": "Tabbed sections"
-                            },
-                            {
-                                "field": "field_5a13c748a910f",
-                                "operator": "!=",
-                                "value": "Image tabs on left"
                             }
                         ]
                     ],
@@ -206,7 +201,7 @@
                             {
                                 "field": "field_5a13c748a910f",
                                 "operator": "==",
-                                "value": "Image tabs on left"
+                                "value": "image"
                             }
                         ]
                     ],
@@ -215,7 +210,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -230,20 +225,28 @@
                     "key": "field_5a14fdab64ad0",
                     "label": "Tab Body",
                     "name": "tab_body",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a13c5a7ec802",
+                                "operator": "==",
+                                "value": "Tabbed sections"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         },
@@ -254,7 +257,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Cards"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -268,8 +279,8 @@
             "sub_fields": [
                 {
                     "key": "field_5a1b730bb4a87",
-                    "label": "Card Title",
-                    "name": "card_title",
+                    "label": "Card Type",
+                    "name": "card_type",
                     "type": "select",
                     "instructions": "Select the card title header",
                     "required": 0,
@@ -352,7 +363,7 @@
                     "key": "field_5a1b865eaeaab",
                     "label": "Card Content",
                     "name": "card_content",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -362,10 +373,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "....type here",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_5a1b95a1a6dc8",
@@ -451,5 +462,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511758001
+    "modified": 1511829588
 }
