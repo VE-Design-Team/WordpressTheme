@@ -20,6 +20,8 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!-- ensure iframe links are opened in a new tab in the parent -->
+	<base target="_blank">
 	<?php wp_head(); ?>
 </head>
 
