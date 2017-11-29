@@ -19,9 +19,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div id="content" tabindex="-1">
 
-		<div class="row">
+	
 
 			<!-- Do the left sidebar check -->
 			<div class="col-md-12 content-area" id="primary">
@@ -53,7 +53,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 
 
-	</div><!-- .row -->
+
 
 </div><!-- Container end -->
 
