@@ -13,6 +13,7 @@
           $card_text_title = get_sub_field_object('field_5a1b95a1a6dc8');
           $card_header_image = get_sub_field_object('field_5a1b9656a6dc9');
           ?>
+<div class="row">          
 <div class="col-8">
   <div class="card">
     <div class="card-header">
@@ -25,6 +26,8 @@
 
     </div>
   </div>
+</div>
+
 </div>
 
       <?php if( $link ): ?>

@@ -19,7 +19,8 @@
                 "None": "None",
                 "Accordion": "Accordion",
                 "Tabbed sections": "Tabbed sections",
-                "Cards": "Cards"
+                "Cards": "Cards",
+                "Checklist": "Checklist"
             },
             "default_value": [],
             "allow_null": 0,
@@ -292,6 +293,7 @@
                     },
                     "choices": {
                         "custom": "Custom",
+                        "learning_activity": "Learning Activity",
                         "assignment": "Assignments",
                         "audio": "Audio",
                         "calendar": "Calendar",
@@ -306,7 +308,6 @@
                         "group_registration": "Group Registration",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
-                        "learning_activity": "Learning Activity",
                         "licensing_accreditation": "Licensing Accreditation",
                         "mobile_guides": "Mobile Guides",
                         "module": "Module",
@@ -438,6 +439,46 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a1dfb52cb056",
+            "label": "Checklist Content",
+            "name": "checklist_content",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5a1e03efcb057",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add an item",
+            "sub_fields": [
+                {
+                    "key": "field_5a1e03efcb057",
+                    "label": "Checklist Item",
+                    "name": "checklist_item",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -462,5 +503,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511829588
+    "modified": 1511920968
 }
