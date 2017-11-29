@@ -447,7 +447,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Checklist"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -503,5 +511,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511920968
+    "modified": 1511930077
 }
