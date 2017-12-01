@@ -21,9 +21,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 	<div id="content" tabindex="-1">
 
-	
-
-			<!-- Do the left sidebar check -->
+				<!-- Do the left sidebar check -->
 			<div class="col-md-12 content-area" id="primary">
 
 			<main class="site-main" id="main">
