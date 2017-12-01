@@ -104,21 +104,21 @@ require get_template_directory() . '/inc/editor.php';
   * Load iFrame helper content
   */
  require get_template_directory() . '/inc/iframe.php';
-// Glossary post type
+// Game post type
 // Register Custom Post Type
 // Register Custom Post Type
-function glossary() {
+function game() {
 
 	$labels = array(
-		'name'                  => _x( 'Glossary', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Glossary', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Glossary', 'text_domain' ),
-		'name_admin_bar'        => __( 'Glossary', 'text_domain' ),
-		'archives'              => __( 'Glossary Archives', 'text_domain' ),
-		'attributes'            => __( 'Glossary Attributes', 'text_domain' ),
-		'parent_item_colon'     => __( 'Parent Glossary:', 'text_domain' ),
-		'all_items'             => __( 'All Glossaries', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Glossaries', 'text_domain' ),
+		'name'                  => _x( 'Game', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Game', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Game', 'text_domain' ),
+		'name_admin_bar'        => __( 'Game', 'text_domain' ),
+		'archives'              => __( 'Game Archives', 'text_domain' ),
+		'attributes'            => __( 'Game Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Game:', 'text_domain' ),
+		'all_items'             => __( 'All Games', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Games', 'text_domain' ),
 		'add_new'               => __( 'Add New', 'text_domain' ),
 		'new_item'              => __( 'New Item', 'text_domain' ),
 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
@@ -139,8 +139,8 @@ function glossary() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Glossary', 'text_domain' ),
-		'description'           => __( 'Builds a glossary for external access', 'text_domain' ),
+		'label'                 => __( 'Game', 'text_domain' ),
+		'description'           => __( 'Builds a game for external access', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'custom-fields' ),
 		'hierarchical'          => false,
@@ -158,7 +158,27 @@ function glossary() {
 		'rewrite'               => false,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'glossary', $args );
+	register_post_type( 'game', $args );
 
 }
-add_action( 'init', 'glossary', 0 );
+add_action( 'init', 'game', 0 );
+
+//Allow game fields to choose game pages
+
+function dynamic_author_dropdown( $field ){
+	
+	$authors = get_users(array(
+		'role' => 'author'
+	));
+	
+	if(!empty($authors)){
+		foreach($authors as $author){
+			$field['choices'][$author->ID] = $author->display_name;
+		}
+	}
+ 
+    return $field;
+}
+ 
+// acf/load_field/key={$field_key} - filter for a specific field based on it's key name , CHANGE THIS TO YOUR FIELDS KEY!
+add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
