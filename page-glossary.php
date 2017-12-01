@@ -4,11 +4,11 @@ Template Name: Glossary
 */
 ?>
 
-<?php if( have_rows('field_5a1b4e5ebab7b', $services) ): ?>
+<?php if( have_rows('field_5a1b4e5ebab7b') ): ?>
   <?php echo "[{";?>
-	<?php $rowCount = count( get_field('field_5a1b4e5ebab7b', $services) ); //GET THE COUNT ?>
+	<?php $rowCount = count( get_field('field_5a1b4e5ebab7b') );  ?>
 	<?php $i = 1; ?>
-	<?php while( have_rows('field_5a1b4e5ebab7b', $services) ): the_row(); ?>
+	<?php while( have_rows('field_5a1b4e5ebab7b') ): the_row(); ?>
 		<?php // vars
 			$title = get_sub_field('field_5a1b4e9abab7c');
 			$description = get_sub_field('field_5a1b51d28610a');

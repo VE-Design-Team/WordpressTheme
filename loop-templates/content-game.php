@@ -1,6 +1,6 @@
 <?php if( have_rows('field_5a2094f978d32') ): ?>
 
-	<div id="conditional">
+	<div id="ChoiceGame">
 
 	<?php 
     	$row_count = 1;
@@ -15,7 +15,7 @@
 	<div class="collapse parent " id="collapse<?php echo $row_count; ?>">
 <div class="card">
   <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="Card image cap">
-  <div class="card-body">
+    <div class="card-body">
     <p class="card-text"><h3><?php echo $title; ?></h3><?php echo $content; ?></p>
 <!-- Card <?php echo $row_count; ?>-->
 
@@ -36,7 +36,7 @@
 
 		<a class="btn btn-primary" href="#<?php echo $button_location ?>"
 
-data-toggle="collapse" data-parent="#conditional" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> "
+data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> "
 
 
 			">
@@ -61,7 +61,7 @@ data-toggle="collapse" data-parent="#conditional" data-target="#collapse<?php ec
 $row_count++;
 	endwhile; ?>
 
-</div><!--conditional-->
+</div><!--ChoiceGame-->
 
 <?php endif; ?>
 <script>
