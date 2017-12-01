@@ -19,7 +19,7 @@
             "min": 0,
             "max": 0,
             "layout": "row",
-            "button_label": "",
+            "button_label": "Add another page",
             "sub_fields": [
                 {
                     "key": "field_5a209938a0dce",
@@ -100,7 +100,7 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add another button on this page",
                     "sub_fields": [
                         {
                             "key": "field_5a209a18a0dd2",
@@ -145,6 +145,30 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5a20e2a468c91",
+            "label": "Button Style",
+            "name": "button_style",
+            "type": "radio",
+            "instructions": "Do you want the progression selectors to be buttons or links? Buttons are best for short (one or two word choices) Links otherwise",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "button": "Buttons",
+                "link": "Link"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "link",
+            "layout": "vertical",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -164,5 +188,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512093921
+    "modified": 1512105090
 }

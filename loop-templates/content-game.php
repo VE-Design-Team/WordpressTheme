@@ -23,27 +23,29 @@
 <!-- get button data -->
 <?php if( have_rows('field_5a2099c5a0dd1') ): ?>
 
-
-
 	<?php while( have_rows('field_5a2099c5a0dd1') ): the_row(); 
 
 		// vars
 		$button_title = get_sub_field('field_5a209a18a0dd2');
 		$button_location = get_sub_field('field_5a20b601dd5a4');
-	
 
 		?>
 
+<?php if( get_field('field_5a20e2a468c91') == 'button' ): ?>
 		<a class="btn btn-primary" href="#<?php echo $button_location ?>"
-
-data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> "
-
-
-			">
-
+data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
 			<?php echo $button_title; ?>
-		
 		</a>
+<?php endif; ?>
+<?php if( get_field('field_5a20e2a468c91') == 'link' ): ?>
+	<li><a href="#<?php echo $button_location ?>"
+data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
+			<?php echo $button_title; ?>
+		</a></li>
+<?php endif; ?>
+
+
+	
 
 	<?php endwhile; ?>
 
