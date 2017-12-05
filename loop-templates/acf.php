@@ -16,23 +16,22 @@
 <?php endif; ?>
 
 <script>
-//Make first tab load open
+//Make first tab active- top tabs
 $('.nav-item a.nav-link:first').addClass('active');
-$('.ResidentialManager-tab').addClass('active');
-$('#ResidentialManager-tab').addClass('active');
-$('#ResidentialManager-tab').removeClass('fade');
+//Make first tab active- left tabs
 $('.nav-link:first').addClass('active');
-$('.tab-content .tab-pane:first').addClass('active');
+$('.tab-pane:first').addClass('active show');
 </script>
 <style>
 .desaturate
 {
-	-webkit-filter: grayscale(1);
+ -webkit-filter: grayscale(1);
  filter: grayscale(1);
+}
+.active > img
+{
+ -webkit-filter: grayscale(0);
+ filter: grayscale(0);
 }
 </style>
 <!-- end get custom fields -->
-<a class="nav-link active" id="ResidentialManager-tab" data-toggle="pill" href="#ResidentialManager" role="tab" aria-controls="ResidentialManager" aria-selected="false">
-	<a class="nav-link active" id="ResidentialManager-tab" data-toggle="pill" href="#ResidentialManager" role="tab" aria-controls="ResidentialManager" aria-selected="true">
-
-		<a class="nav-link active" id="ResidentialManager-tab" data-toggle="pill" href="#ResidentialManager" role="tab" aria-controls="ResidentialManager" aria-selected="true"

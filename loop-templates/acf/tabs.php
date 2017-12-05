@@ -19,11 +19,11 @@
   <?php elseif( get_field('field_5a13c748a910f') == 'image' ): ?>
     <!-- image tabs on left -->
     <div class="row">
-          <div class="nav flex-column col-3 col-sm-2 col-md-2 col-lg-1 " id="v-tab<?php echo get_the_ID();?>" role="tablist" aria-orientation="vertical">
+          <div class="nav flex-column col-3 col-sm-2 col-md-2 col-lg-1 " id=" v-tab<?php echo get_the_ID();?>" role="tablist" aria-orientation="vertical">
   <?php endif; //end opening layout ?>
 
 <?php while ( have_rows('field_5a13c7fda9110') ) : the_row();?>
-
+<!-- top tabs-->
 <?php if( get_field('field_5a13c748a910f') == 'top' ):?>
   <li class="nav-item">
 
@@ -33,14 +33,16 @@
     <img src="<?php echo the_sub_field('field_5a14fe2ac18c8');?>">
     </a>
   </li>
+
+  <!-- left tabs-->
 <?php elseif( get_field('field_5a13c748a910f') == 'left' ): ?>
   <a class="nav-link" id="<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab" data-toggle="pill" href="#<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="Sight-impairment" aria-selected="false">
                   <li class="h6"><?php echo the_sub_field('field_5a14fdfcc7bba');?></li></a>
-  
+  <!-- imagetabs-->
 <?php elseif( get_field('field_5a13c748a910f') == 'image' ): ?>
 <!-- tab style-->
 
-<a class="nav-link" id="<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab" data-toggle="pill" href="#<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" aria-selected="false"> <img class="img-fluid desaturate" src="<?php echo the_sub_field('field_5a14fe2ac18c8');?>"  title=" Resident-Manager" alt="c1inta-2"></a>
+<a class="nav-link" id="LeftTab <?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab" data-toggle="pill" href="#<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" aria-selected="false"> <img class="img-fluid desaturate" src="<?php echo the_sub_field('field_5a14fe2ac18c8');?>"  title=" Resident-Manager" alt="c1inta-2"></a>
 
 <?php endif; ?>
 
@@ -67,7 +69,7 @@
 </div></div>
 <?php elseif( get_field('field_5a13c748a910f') == 'image' ): ?>
 </div>
-<div class="tab-content col-9 col-sm-9 col-md-6 pt-2" id="v-pills-tabContent<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>">
+<div style="border: none;" id="v-pills-tabContent<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" class="tab-content col-9 col-sm-9 col-md-6 pt-2" >
 
 
 <?php while ( have_rows('field_5a13c7fda9110') ) : the_row();?>

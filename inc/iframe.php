@@ -1,8 +1,5 @@
 <?php
 // this function outputs Iframe embed code information on relvant pages
-
-
-
 function iframe_admin_notice(){
     global $pagenow;
     if ( $pagenow == 'post.php' || 'page.php' ) {
@@ -10,9 +7,10 @@ function iframe_admin_notice(){
          echo '
          <div class="notice notice-warning is-dismissible">
                       <h2>Embed this page in canvas by pasting this code</h2>
-&lt;iframe src="'.get_home_url().'/?p='.get_the_ID().'" title="'.$iframe_title.'" style="border:0px #ffffff none;" name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this)"  &gt;&lt;/iframe&gt;
+&lt;iframe src="'.get_home_url().'/?p='.get_the_ID().'" title="'.$iframe_title.'" style="border:0px #ffffff none;" id="C3319iframe"   width="800" height="400"name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this)" allowfullscreen="allowfullscreen"  &gt;&lt;/iframe&gt;
                   </div>
          ';
     }
 }
 add_action('admin_notices', 'iframe_admin_notice');
+
