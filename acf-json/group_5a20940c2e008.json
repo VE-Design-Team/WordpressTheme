@@ -3,6 +3,54 @@
     "title": "Adventure game",
     "fields": [
         {
+            "key": "field_5a20e2a468c91",
+            "label": "Button Style",
+            "name": "button_style",
+            "type": "radio",
+            "instructions": "Do you want the progression selectors to be buttons or links? \r\nButtons are best for short (one or two word choices) Links otherwise",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "button": "Buttons",
+                "link": "Link"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "link",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5a25d514c2483",
+            "label": "Background image style",
+            "name": "background_image_style",
+            "type": "radio",
+            "instructions": "Choose between a page header image or full screen background for your selected image. This will affect all pages for consistency.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image_header": "Image in page header",
+                "full_screen": "Fulls screen image"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "image_header",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
             "key": "field_5a2094f978d32",
             "label": "Page",
             "name": "game_page",
@@ -26,7 +74,7 @@
                     "label": "Title",
                     "name": "title",
                     "type": "text",
-                    "instructions": "Enter a title for the page",
+                    "instructions": "Enter a title for the page - not required",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -45,7 +93,7 @@
                     "label": "Content",
                     "name": "content",
                     "type": "wysiwyg",
-                    "instructions": "Enter content for the page",
+                    "instructions": "Enter content for the page - this should give your questions some context.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -64,7 +112,7 @@
                     "label": "Background image",
                     "name": "background_image",
                     "type": "image",
-                    "instructions": "Ensure this is a 800 x 600 image",
+                    "instructions": "Ensure this is at least 800px wide image",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -76,10 +124,10 @@
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": 799,
-                    "min_height": 599,
+                    "min_height": 100,
                     "min_size": "",
-                    "max_width": 801,
-                    "max_height": 601,
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
                     "mime_types": ""
                 },
@@ -100,14 +148,14 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "Add another button on this page",
+                    "button_label": "Add another button",
                     "sub_fields": [
                         {
                             "key": "field_5a209a18a0dd2",
-                            "label": "Button title",
-                            "name": "button_title",
+                            "label": "Choice",
+                            "name": "choice_title",
                             "type": "text",
-                            "instructions": "what appears on the button. If you're using more than 3 or four words, use A, B or C and keep the background information in the page",
+                            "instructions": "What appears on the button. If you're using more than 3 or four words, choose to use buttons",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -123,8 +171,8 @@
                         },
                         {
                             "key": "field_5a20b601dd5a4",
-                            "label": "Button page access",
-                            "name": "button_page_access",
+                            "label": "Choice destination",
+                            "name": "choice_destination",
                             "type": "number",
                             "instructions": "Select the page number that this button takes the user to",
                             "required": 0,
@@ -145,30 +193,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "key": "field_5a20e2a468c91",
-            "label": "Button Style",
-            "name": "button_style",
-            "type": "radio",
-            "instructions": "Do you want the progression selectors to be buttons or links? Buttons are best for short (one or two word choices) Links otherwise",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "button": "Buttons",
-                "link": "Link"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "link",
-            "layout": "vertical",
-            "return_format": "value"
         }
     ],
     "location": [
@@ -188,5 +212,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512105090
+    "modified": 1512434866
 }
