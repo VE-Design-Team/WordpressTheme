@@ -74,7 +74,7 @@
                     "placeholder": "Section title",
                     "prepend": "",
                     "append": "",
-                    "maxlength": 30
+                    "maxlength": 60
                 },
                 {
                     "key": "field_5a13c6ac91a68",
