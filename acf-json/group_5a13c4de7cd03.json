@@ -306,7 +306,6 @@
                         "getting_help": "Getting Help",
                         "glossary": "Glossary",
                         "group_registration": "Group Registration",
-                        "have_a_go": "Have a go",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
                         "licensing_accreditation": "Licensing Accreditation",
@@ -504,7 +503,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -512,5 +511,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511930077
+    "modified": 1512442735
 }
