@@ -33,5 +33,9 @@ $('.tab-pane:first').addClass('active show');
  -webkit-filter: grayscale(0);
  filter: grayscale(0);
 }
+#nav-tab .tab-content
+{
+	border: none;
+}
 </style>
 <!-- end get custom fields -->
