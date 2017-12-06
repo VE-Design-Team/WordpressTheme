@@ -7,7 +7,7 @@ function iframe_admin_notice(){
          echo '
          <div class="notice notice-warning is-dismissible">
                       <h2>Embed this page in canvas by pasting this code</h2>
-&lt;iframe src="'.get_home_url().'/?p='.get_the_ID().'" title="'.$iframe_title.'" style="border:0px #ffffff none;" id="C3319iframe"   width="800" height="400"name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this)" allowfullscreen="allowfullscreen"  &gt;&lt;/iframe&gt;
+&lt;iframe src="'.get_home_url().'/?p='.get_the_ID().'" title="'.$iframe_title.'" style="border:0px #ffffff none;" id="C3319iframe"   width="800" height="400" name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this)" allowfullscreen="allowfullscreen" onload="iFrameResize()" &gt;&lt;/iframe&gt;
                   </div>
          ';
     }
