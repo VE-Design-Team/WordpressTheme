@@ -18,7 +18,7 @@
 
 <div class="col-12 col-sm-6">
 
-<?php else { ?>
+<?php } else { ?>
 
 <div class="col-8">
 <?php } ?>
