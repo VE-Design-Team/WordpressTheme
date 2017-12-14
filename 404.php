@@ -32,13 +32,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   <div class="card-body">
         <p class="card-text">This content failed to load or needs be relinked. Contact your course administrator for assistance</p>
   </div>
-
 							</div>	
-
-		
-
-			
-
+	
 					</section><!-- .error-404 -->
 
 				</main><!-- #main -->

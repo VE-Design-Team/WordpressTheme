@@ -16,11 +16,9 @@
         
  <?php if( get_row_index() % 2 == 0 ){ ?>
 
-<div class="col-12 col-sm-6">
-
+<div class="col">
 <?php } else { ?>
-
-<div class="col-8">
+<div class="col-12 col-xs8-6 mb-5">
 <?php } ?>
   <div class="card">
     <div class="card-header">
@@ -35,12 +33,7 @@
 
     <?php };?>
     <?php endif; ?>
-    
-
-
-    
-
-      
+          
     </div>
     <div class="card-body">
 
