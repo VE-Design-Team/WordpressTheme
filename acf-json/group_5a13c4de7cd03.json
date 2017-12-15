@@ -18,11 +18,14 @@
             "choices": {
                 "None": "None",
                 "Accordion": "Accordion",
-                "Tabbed sections": "Tabbed sections",
                 "Cards": "Cards",
-                "Checklist": "Checklist"
+                "Checklist": "Checklist",
+                "Tabbed sections": "Tabbed sections",
+                "Tooltip": "Tooltip"
             },
-            "default_value": [],
+            "default_value": [
+                "None"
+            ],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -306,7 +309,6 @@
                         "getting_help": "Getting Help",
                         "glossary": "Glossary",
                         "group_registration": "Group Registration",
-                        "have_a_go": "Have a go",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
                         "licensing_accreditation": "Licensing Accreditation",
@@ -488,6 +490,143 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a30b394101e4",
+            "label": "Tooltip",
+            "name": "tooltip",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Tooltip"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a30b40b1abc9",
+                    "label": "Text String",
+                    "name": "text_string",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a30b4251abca",
+                    "label": "Prepend",
+                    "name": "prepend",
+                    "type": "select",
+                    "instructions": "Choose what sort of feature you want at the start of this text string",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "nothing": "Nothing",
+                        "arrow": "Arrow"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a30b4321abcb",
+                    "label": "Append",
+                    "name": "append",
+                    "type": "select",
+                    "instructions": "Choose what sort of feature you want at the end of this text string.\r\n<ul><li>Nothing - The next text string becomes next part of this word<\/li>\r\n<li>single_space : Single space - next text string becomes part of a new word<\/li>\r\n<li>line_break : Line Break - Put the next text string on a new line<\/li>\r\n<li>arrow : Arrow - A space and an arrow and another space separate the text strings<\/li>\r\n<li>end : End - this is the last text string in the content<\/li>\r\n<\/ul>",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "nothing": "Nothing",
+                        "single_space": "Single space",
+                        "line_break": "Line Break",
+                        "arrow": "Arrow",
+                        "end": "End"
+                    },
+                    "default_value": [
+                        "nothing"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a30b4461abcc",
+                    "label": "Tooltip information",
+                    "name": "tooltip_information",
+                    "type": "text",
+                    "instructions": "What's the text in the hover box going to say. <br>If you don't want this text string to have a hover effect, leave this blank.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a30b4531abcd",
+                    "label": "Hover colour",
+                    "name": "hover_colour",
+                    "type": "color_picker",
+                    "instructions": "Choose a colour state for the text string when hovered.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#00FFFF"
+                }
+            ]
         }
     ],
     "location": [
@@ -512,5 +651,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512527031
+    "modified": 1513212620
 }

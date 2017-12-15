@@ -77,11 +77,20 @@
 .results {
   font-family: "Montserrat", sans-serif;
   background-size: cover;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/roadmap.png");
+  background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png");
   font-weight: 800;
   color: white;
   padding: 20px 20px 20px 0;
+
 }
+.results h3
+{
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 2rem;
+  height:auto;
+
 .results .nC {
   width: 120px;
   line-height: 120px;
@@ -113,6 +122,26 @@
     font-size: 1.4rem;
   }
 }
+.outside
+{
+  height: auto;/* was 100% */
+  position: relative;
+  text-align: center;
+  padding:18.75% 0 0;/* create relationship between width and height */
+}
+.inside
+{
+  width: 90%;
+  left: 5%;
+  padding: 10px;
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  border: 1px solid white;
+  border-radius: 5px;
+  bottom: 10%;/* 50px is to tall on smaller screens */
+}
+
 
 </style>
 	<div class="entry-content">
@@ -123,8 +152,9 @@
       <ul id="quiz" class="list-group">
       </ul>
     </div>
-    <div class="container hide results embed-responsive-4by3 ">
-      <div class="embed-responsive-item">
+    <div class="container hide results">
+    <div class="outside">
+      <div class="inside">
         <div class="col-6 offset-5 pt-5 pl-5">
           <h3 class="font-weight-bold  text-center"><u>Your Learning Roadmap</u></h3>
          
@@ -134,6 +164,7 @@
       </div>
     </div>
   </div>
+   </div>
   <div class="container text-center bottom">
     <button id="submit-btn" class="btn btn-primary btn-lg mt-4">Submit</button>
   </div>

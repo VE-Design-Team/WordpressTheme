@@ -3,6 +3,11 @@
 <!-- get accordion -->
 <?php get_template_part('loop-templates/acf/accordion');?>
 
+<?php elseif( get_field('field_5a13c5a7ec802') == 'Checklist' ): ?>
+	<!-- get checklist-->
+<?php get_template_part('loop-templates/acf/checklist');?>
+
+
 <?php elseif( get_field('field_5a13c5a7ec802') == 'Tabbed sections' ): ?>
 	<!-- get tabs -->
 <?php get_template_part('loop-templates/acf/tabs');?>
@@ -10,9 +15,11 @@
 <?php elseif( get_field('field_5a13c5a7ec802') == 'Cards' ): ?>
 	<!-- get cards-->
 <?php get_template_part('loop-templates/acf/cards');?>
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Checklist' ): ?>
-	<!-- get checklist-->
-<?php get_template_part('loop-templates/acf/checklist');?>
+
+
+<?php elseif( get_field('field_5a13c5a7ec802') == 'Tooltip' ): ?>
+	<!-- get Tooltip-->
+<?php get_template_part('loop-templates/acf/tooltip');?>
 <?php endif; ?>
 
 <script>

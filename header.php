@@ -31,6 +31,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!-- ensure iframe links are opened in a new tab in the parent -->
 	<base target="_blank">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
