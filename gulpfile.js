@@ -205,7 +205,10 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/skip-link-focus-fix.js',
 
         // Iframe resizer
-        basePaths.dev + 'js/iframeResizer.contentWindow.js'
+        basePaths.dev + 'js/iframeResizer.contentWindow.js',
+
+        // Iframe resizer
+        basePaths.dev + 'js/glossarizer.js'
     ];
   gulp.src(scripts)
     .pipe(concat('theme.min.js'))
