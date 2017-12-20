@@ -4,107 +4,101 @@
  *
  * @package understrap
  */
+?>
+<article <?php post_class();?> id="post-<?php the_ID();?>">
+  <div class="entry-content">
+<style>
+.hz-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 520px;}
+}
+.card
+{
+  border-color:  #e60028;
+  background-color: #e60028;
+  color: white;
+}
+.card-body
+{
+  padding: .75rem;
+}
+
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('field_5a3987d635060') ):
+
+  // loop through the rows of data
+    while ( have_rows('field_5a3987d635060') ) : the_row(); ?>
+
+.<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>
+{
+  border-color:  <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
+  background-color: <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
+  color: <?php echo the_sub_field('field_5a3ae175998ac'); ?>;
+}
+
+   <?php endwhile;
+
+else :
+
+    // no rows found
+
+endif;
 
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<div class="entry-content">
-
-<style>
-.legal-pyramid { 
-<?php if( get_field('image') ): ?>
-
-	<img src="<?php the_field('image'); ?>" />
-background-image: url('<?php the_field('image'); ?>'); 
-<?php endif; ?>
-
-  
-  background-size: contain; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  height: 520px;} 
-.act{ 
-  background-color: $rmit-red; 
-  border-color:$rmit-red; 
-  color:$white; 
-} 
-.regulation{ 
-  background-color: $rmit-blue; 
-  border-color:$rmit-blue; 
-  color:$white; 
-} 
- 
-.practice{ 
-  background-color: $rmit-teal; 
-  border-color:$rmit-teal; 
-  color:$black; 
-} 
- 
-.guidance{ 
-  background-color: $rmit-yellow; 
-  border-color:$rmit-yellow; 
-  color:$black; 
-} 
-} 
 </style>
 
-		<?php the_content(); ?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-<div class="row ethical-pyramid">
-  <div class="col-12 col-md-9 col-lg-6 text-center mb-2">
-    <div class="btn-group">
-      <button type="button" data-toggle="collapse" data-target="#act-information" aria-expanded="false" aria-controls="act-information" class="btn btn-primary btn-sm act">
-        1. Act
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#regulation-information" aria-expanded="false" aria-controls="regulation-information" class="btn btn-primary btn-sm regulation">
-        2. Regulation
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#practice-information" aria-expanded="false" aria-controls="practice-information" class="btn btn-primary btn-sm practice">
-        3. Codes of practice
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#guidance-information" aria-expanded="false" aria-controls="guidance-information" class="btn btn-primary btn-sm guidance">
-        4. Guidance material
-      </button>
-    </div>
+    <?php
+wp_link_pages(array(
+    'before' => '<div class="page-links">' . __('Pages:', 'understrap'),
+    'after'  => '</div>',
+));
+?>
+<div class="container p-1">
+<div class=" hz-background" <?php if (get_field('field_5a398755da5b1')): ?>
+style="background-image: url(<?php the_field('field_5a398755da5b1');?>);"
+<?php endif;?> >
+  <div class="row">
+  <div class="col-12 mt-2">
+<?php
+// check if the repeater field has rows of data
+if (have_rows('field_5a3987d635060')): ?>
+   <div class="btn-group">
+   <?php while (have_rows('field_5a3987d635060')): the_row();?>
+       <button type="button" data-toggle="collapse" data-target="#<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" aria-expanded="false" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="btn btn-primary btn-sm">
+          <?php echo the_sub_field('field_5a39880135061'); ?>
+        </button>
+   <?php endwhile;?>
+</div>
+<?php else:
+    // no rows found
+endif;
+?>
   </div>
 </div>
-<div class="row ethical-pyramid">
-  <div class="col-12 col-md-9 col-lg-6 text-center">
-    <div class="legal-pyramid">         </div>
-  </div>
-  <div class="col-12 col-lg-5">
-    <div id="act-information" class="collapse">
-      <div class="card-body mt-1 act">
-        Laws made by parliament are ‘statutes’, ‘acts’ or ‘legislation’. Laws set the rules you follow. An example is the Aged Care Act.
+<div class="row">
+  <div class="col-5 offset-7 text-center">
+<?php
+// check if the repeater field has rows of data
+if (have_rows('field_5a3987d635060')): ?>
+   <?php while (have_rows('field_5a3987d635060')): the_row();?>
+     <div id="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="collapse">
+       <div class="card card-block mt-1 <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
+        <div class="card-body  <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
+         <span class="small"><?php echo the_sub_field('field_5a3ac8c7f9f2d'); ?></span>
+        </div>
       </div>
     </div>
-    <div id="regulation-information" class="collapse">
-      <div class="card-body mt-1 regulation">
-        Regulations support laws. They outline specific requirements and explain how to follow the law.  An example is the Occupational health and safety regulations.
-      </div>
-    </div>
-    <div id="practice-information" class="collapse">
-      <div class="card-body mt-1 practice">
-        Regulations support laws. They outline specific requirements and explain how to follow the law.  An example is the Occupational health and safety regulations.
-      </div>
-    </div>
-    <div id="guidance-information" class="collapse">
-      <div class="card-body mt-1 guidance">
-        Regulations support laws. They outline specific requirements and explain how to follow the law.  An example is the Occupational health and safety regulations.
-      </div>
-    </div>
-  </div>
+   <?php endwhile;?>
+<?php else:
+    // no rows found
+endif;
+?>
+ </div>
 </div>
-
-	</div><!-- .entry-content -->
-
-
-
+    </div>
+  </div>
 </article><!-- #post-## -->

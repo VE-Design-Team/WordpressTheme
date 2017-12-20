@@ -1,6 +1,29 @@
 {
     "key": "group_5a13c4de7cd03",
     "title": "Add Rich Content",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-glossary.php"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513728596,
     "fields": [
         {
             "key": "field_5a13c5a7ec802",
@@ -628,28 +651,5 @@
                 }
             ]
         }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "page-glossary.php"
-            }
-        ]
-    ],
-    "menu_order": 2,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1513212620
+    ]
 }

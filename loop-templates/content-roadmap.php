@@ -8,6 +8,8 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <style>
+
+
 .prompt {
   display: block;
 }
@@ -122,25 +124,7 @@
     font-size: 1.4rem;
   }
 }
-.outside
-{
-  height: auto;/* was 100% */
-  position: relative;
-  text-align: center;
-  padding:18.75% 0 0;/* create relationship between width and height */
-}
-.inside
-{
-  width: 90%;
-  left: 5%;
-  padding: 10px;
-  position: absolute;
-  color: white;
-  font-size: 1.6em;
-  border: 1px solid white;
-  border-radius: 5px;
-  bottom: 10%;/* 50px is to tall on smaller screens */
-}
+
 
 
 </style>
