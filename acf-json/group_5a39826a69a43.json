@@ -1,0 +1,88 @@
+{
+    "key": "group_5a39826a69a43",
+    "title": "Hover Zones",
+    "fields": [
+        {
+            "key": "field_5a398755da5b1",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Select a 800 x 600 image for the background, a placeholder template image will be used if there is no image uploaded.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a3987d635060",
+            "label": "Click zone",
+            "name": "click_zone",
+            "type": "repeater",
+            "instructions": "This will create a button, hover text area for each click zone created.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a39880135061",
+                    "label": "Button text",
+                    "name": "Button text",
+                    "type": "text",
+                    "instructions": "Button text",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "171"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513727238
+}
