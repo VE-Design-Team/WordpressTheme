@@ -7133,6 +7133,38 @@ a.skip-link {
   border: 2px solid #000054;
   border-radius: .25rem; }
 
+.accord-item {
+  border-top: 1px solid #dee2e6; }
+  .accord-item .h5 {
+    margin-bottom: 0;
+    color: #0078FF; }
+  .accord-item a:hover {
+    text-decoration: none; }
+
+.accord-item:hover {
+  background-color: #dee2e6; }
+
+.accord-item:nth-last-child(1) {
+  border-bottom: 1px solid #dee2e6; }
+
+.ac-plus {
+  transition: 300ms linear all;
+  display: inline-block;
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -webkit-transform: rotate(0deg);
+  /* Safari 3-8 */
+  transform: rotate(0deg);
+  position: relative; }
+
+[data-toggle="collapse"][aria-expanded="true"] > h3 > .ac-plus {
+  display: inline-block;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari 3-8 */
+  transform: rotate(45deg); }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

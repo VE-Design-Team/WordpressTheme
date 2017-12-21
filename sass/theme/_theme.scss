@@ -33,3 +33,49 @@ background-clip: border-box;
 border: 2px solid $rmit-blue;
 border-radius: .25rem;
 }
+
+.accord-item
+{ 
+	border-top: 1px solid $gray-300;
+
+	.h5
+	{
+	margin-bottom: 0;
+	color: $rmit-lightblue;	
+	}
+	a:hover
+	{
+		text-decoration: none;
+
+	}
+
+}
+.accord-item:hover
+{
+background-color: $gray-300;
+}
+.accord-item:nth-last-child(1)
+{
+border-bottom: 1px solid $gray-300;	
+}
+
+.ac-plus
+{transition: 300ms linear all;
+display:inline-block;
+  -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari 3-8 */
+    transform: rotate(0deg);
+
+    position: relative;
+
+}
+[data-toggle="collapse"][aria-expanded="true"] > h3 > .ac-plus
+{
+   display:inline-block;
+  -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari 3-8 */
+    transform: rotate(45deg);
+   
+
+}
+

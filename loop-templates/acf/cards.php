@@ -18,7 +18,7 @@
 
 <div class="col">
 <?php } else { ?>
-<div class="col-12 col-sm-12 mb-3 mt-3">
+<div class="col-12 col-sm-12 col-lg-8  mb-3 mt-3">
 <?php } ?>
   <div class="card">
     <div class="card-header">
