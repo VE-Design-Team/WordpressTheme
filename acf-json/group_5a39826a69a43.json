@@ -1,6 +1,6 @@
 {
     "key": "group_5a39826a69a43",
-    "title": "Hover Zones",
+    "title": "Image Text Reveal",
     "fields": [
         {
             "key": "field_5a398755da5b1",
@@ -144,19 +144,29 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "171"
+                "value": "page-hover-zones.php"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "discussion",
+        "comments",
+        "author",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1513811666
+    "modified": 1513817562
 }

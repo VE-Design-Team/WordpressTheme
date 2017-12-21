@@ -1,3 +1,9 @@
+
+<?php
+/*
+Template Name: Image Text Reveal
+*/
+?>
 <?php
 /**
  * The template for displaying all pages.

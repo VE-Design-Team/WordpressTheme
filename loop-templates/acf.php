@@ -17,7 +17,7 @@
 <?php get_template_part('loop-templates/acf/cards');?>
 
 
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Tooltip' ): ?>
+<?php elseif( get_field('field_5a13c5a7ec802') == 'Tooltip Textstrings' ): ?>
 	<!-- get Tooltip-->
 <?php get_template_part('loop-templates/acf/tooltip');?>
 <?php endif; ?>
