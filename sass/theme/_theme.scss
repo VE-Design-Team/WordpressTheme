@@ -9,3 +9,27 @@
 {
 
 }
+
+.card-header {
+padding: .4rem 1.25rem;
+margin-bottom: 0;
+background-color: rgba(0,0,84,.05);
+border-bottom: $rmit-blue;
+background: $rmit-blue;
+.h5
+{
+	color: white;
+}
+}
+.card{
+position: relative;
+
+display: flex;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 2px solid $rmit-blue;
+border-radius: .25rem;
+}

@@ -18,18 +18,18 @@
 
 <div class="col">
 <?php } else { ?>
-<div class="col-12 col-xs8-6 mb-5">
+<div class="col-12 col-sm-12 mb-3 mt-3">
 <?php } ?>
   <div class="card">
     <div class="card-header">
 
 <?php 
   if(get_sub_field('field_5a1b730bb4a87') != "custom"): ?>
-   <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/<?php echo $card_image ?>.png" alt="<?php echo $card_title; ?>" class="float-left" width="50" height="50" />
-   <h3 class="float-left ml-2 mt-2"><?php echo $card_title; ?>
+   <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/<?php echo $card_image ?>.png" alt="<?php echo $card_title; ?>" class="float-left" width="35" height="35" />
+   <h3 class="float-left ml-2 mt-2 h5"><?php echo $card_title; ?>
     
    <?php else:{ ?>
-     <h3 class="float-left ml-2 mt-2">   <?php echo get_sub_field('field_5a1b95a1a6dc8'); ?></h3>
+     <h3 class="float-left ml-2 mt-2 h5">   <?php echo get_sub_field('field_5a1b95a1a6dc8'); ?></h3>
 
     <?php };?>
     <?php endif; ?>

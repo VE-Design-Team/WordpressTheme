@@ -7113,6 +7113,26 @@ a.skip-link {
   border-bottom: 1px solid #ddd;
   padding: 10px; }
 
+.card-header {
+  padding: .4rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 84, 0.05);
+  border-bottom: #000054;
+  background: #000054; }
+  .card-header .h5 {
+    color: white; }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 2px solid #000054;
+  border-radius: .25rem; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
