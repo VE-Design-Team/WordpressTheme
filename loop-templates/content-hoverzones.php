@@ -11,7 +11,7 @@
 .hz-background {
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   height: 520px;}
 }
 .card
@@ -58,11 +58,8 @@ wp_link_pages(array(
 ));
 ?>
 <div class="container p-1">
-<div class=" hz-background" <?php if (get_field('field_5a398755da5b1')): ?>
-style="background-image: url(<?php the_field('field_5a398755da5b1');?>);"
-<?php endif;?> >
   <div class="row">
-  <div class="col-12 mt-2">
+  <div class="col-12 col-md-9 col-lg-6 text-center mb-2">
 <?php
 // check if the repeater field has rows of data
 if (have_rows('field_5a3987d635060')): ?>
@@ -80,7 +77,13 @@ endif;
   </div>
 </div>
 <div class="row">
-  <div class="col-5 offset-7 text-center">
+  <div class="col-12 col-md-7 col-lg-6 text-center">
+  <div class=" hz-background" <?php if (get_field('field_5a398755da5b1')): ?>
+style="background-image: url(<?php the_field('field_5a398755da5b1');?>);"
+<?php endif;?> >
+</div>
+  </div>
+  <div class="col-12 col-md-5 col-lg-5">
 <?php
 // check if the repeater field has rows of data
 if (have_rows('field_5a3987d635060')): ?>
@@ -99,6 +102,5 @@ endif;
 ?>
  </div>
 </div>
-    </div>
   </div>
 </article><!-- #post-## -->
