@@ -1,6 +1,6 @@
  <!-- image tabs on left -->
     <div class="row">
-          <div class="nav flex-column col-3 col-sm-2 col-md-2 col-lg-1 " id=" v-tab<?php echo get_the_ID();?>" role="tablist" aria-orientation="vertical">
+          <div class="nav flex-column col-2 " id=" v-tab<?php echo get_the_ID();?>" role="tablist" aria-orientation="vertical">
 <?php while ( have_rows('field_5a13c7fda9110') ) : the_row();?>
 <a class="nav-link" id="LeftTab <?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab" data-toggle="pill" href="#<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a14fdfcc7bba')); ?>" aria-selected="false"> <img class="img-fluid desaturate" src="<?php echo the_sub_field('field_5a14fe2ac18c8');?>"  title=" Resident-Manager" alt="c1inta-2"></a>
 <?php endwhile;?>
