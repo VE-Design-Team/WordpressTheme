@@ -10,7 +10,7 @@ if( have_rows('field_5a13c61e91a66') ):
         <div class="accord-item p-2"><?php //apply the accordion header ?>
 
         <a data-toggle="collapse" data-parent="#accordion<?php echo get_the_ID();?>" href="#collapse<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" aria-controls="collapseOne">
-           <h3 class="h5"><span class='ac-plus pr-2'>+</span><?php echo the_sub_field('field_5a13c67d91a67'); ?></h3>
+           <h3 class="h5"><span class='ac-plus '><i class="fa fa-plus" aria-hidden="true"></i></span>  <?php echo the_sub_field('field_5a13c67d91a67'); ?></h3>
         </a>
         <?php // display the accordion collapsed content ?>
         <div id="collapse<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" class="collapse mt-3 pl-3" role="tabpanel" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>">
