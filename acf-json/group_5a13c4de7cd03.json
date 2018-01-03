@@ -20,6 +20,7 @@
                 "Accordion": "Accordion",
                 "Cards": "Cards",
                 "Checklist": "Checklist",
+                "Sample Document": "Sample Document",
                 "Tabbed sections": "Tabbed sections",
                 "Tooltip Textstrings": "Tooltip Textstrings"
             },
@@ -643,6 +644,60 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a4c656d2c071",
+            "label": "Sample Document",
+            "name": "sample_document",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Sample Document"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5a4c67c8bad65",
+            "label": "Sample Document Watermark",
+            "name": "sample_document_watermark",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Sample Document"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -667,5 +722,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1513817648
+    "modified": 1514956813
 }

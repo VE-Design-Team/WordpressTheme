@@ -20,6 +20,9 @@
 <?php elseif( get_field('field_5a13c5a7ec802') == 'Tooltip Textstrings' ): ?>
 	<!-- get Tooltip-->
 <?php get_template_part('loop-templates/acf/tooltip');?>
+<?php elseif( get_field('field_5a13c5a7ec802') == 'Sample Document' ): ?>
+	<!-- get Tooltip-->
+<?php get_template_part('loop-templates/acf/sample-document');?>
 <?php endif; ?>
 
 <script>
