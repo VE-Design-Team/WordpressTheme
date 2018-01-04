@@ -1,16 +1,8 @@
-
-// Use this file to overwrite the basic Bootstrap variables and add your own variables
-// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
-// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
-
-
-/* Primary */
+//Overrides Bootstrap variables
 $rmit-red: #e60028 !default;
 $rmit-blue: #000054 !default;
 
-
-/* Secondary */
-$rmit-teal: #7ae1AA !default; /* Gradients */
+$rmit-teal: #7ae1AA !default;
 $rmit-yellow: #FAC800 !default;
 $rmit-orange: #FC9147 !default;
 $rmit-yellow: #EEDC00 !default;
@@ -18,28 +10,28 @@ $rmit-green: #AAD75F !default;
 $rmit-aqua: #00DCB4 !default;
 $rmit-lightblue: #0078FF !default;
 $rmit-azure: #00AAFF !default;
-$rmit-artic:  #50D2FF !default;
+$rmit-artic: #50D2FF !default;
 $rmit-purple: #AA0082 !default;
 $rmit-lavender: #C864C8 !default;
 $rmit-pink: #FF8199 !default;
 
-$blue:    $rmit-lightblue!default;
-$indigo:  $rmit-lavender !default;
-$purple:  $rmit-purple !default;
-$pink:    $rmit-pink !default;
-$red:     $rmit-red !default;
-$orange:  $rmit-orange !default;
-$yellow:  $rmit-yellow !default;
-$green:   $rmit-green !default;
-$teal:    $rmit-teal !default;
-$cyan:    #17a2b8 !default;
-$aqua:    $rmit-aqua !default;
+$blue: $rmit-lightblue !default;
+$indigo: $rmit-lavender !default;
+$purple: $rmit-purple !default;
+$pink: $rmit-pink !default;
+$red: $rmit-red !default;
+$orange: $rmit-orange !default;
+$yellow: $rmit-yellow !default;
+$green: $rmit-green !default;
+$teal: $rmit-teal !default;
+$cyan: #17a2b8 !default;
+$aqua: $rmit-aqua !default;
 $lavender: $rmit-lavender !default;
 
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-serif:           "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-serif: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 
-$headings-color:              $rmit-red !default;
-$headings-font-family:        $font-family-serif !default;
+$headings-color: $rmit-red !default;
+$headings-font-family: $font-family-serif !default;
