@@ -207,7 +207,7 @@ gulp.task('scripts', function() {
         // Iframe resizer
         basePaths.dev + 'js/iframeResizer.contentWindow.js',
 
-        // Iframe resizer
+        // Glossary tools
         basePaths.dev + 'js/glossarizer.js'
     ];
   gulp.src(scripts)
