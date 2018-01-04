@@ -129,4 +129,82 @@ display:inline-block;
 
 
 }
+//Quadrant reveal
+#quadrant-reveal{
+  .col-5{
+  border: 4px solid #000000;
+  min-height:270px;
+  color:#000000;
+  cursor: pointer;
+  text-align:center;
+
+  }
+  .heading{
+  font-weight: 800;
+  font-size: 1.5em;
+  text-align:center;
+  margin-top: 0.5rem;
+  }
+
+  .square-1 p:last-child, .square-2 p:last-child, .square-3 p:last-child, .square-4 p:last-child{
+  opacity:0;
+  transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+  }
+
+  .square-1:hover p:last-child, .square-1:focus p:last-child, .square-2:hover p:last-child, .square-2:focus p:last-child, .square-3:hover p:last-child, .square-3:focus p:last-child, .square-4:hover p:last-child, .square-4:focus p:last-child {
+  opacity:1;
+  }
+
+  .square-1, .square-2, .square-3, .square-4{
+    transition:background-color 0.25s ease;
+  }
+  .square-1{
+  background-color:$rmit-red;
+    border-top: 8px solid #000000;
+    border-left: 8px solid #000000;
+    border-radius: 20px 0 0 0;
+  z-index:1;
+  }
+  .square-2{
+  background-color:$rmit-yellow;
+    border-top: 8px solid #000000;
+    border-right: 8px solid #000000;
+    border-radius: 0 20px 0 0 ;
+  z-index:2;
+  }
+  .square-3{
+  background-color:$rmit-teal;
+    border-left: 8px solid #000000;
+    border-bottom: 8px solid #000000;
+     border-radius: 0  0 0 20px   ;
+
+  z-index:3;
+  }
+  .square-4{
+  background-color:$rmit-lightblue;
+    border-right: 8px solid #000000;
+    border-bottom: 8px solid #000000;
+     border-radius: 0 0 20px 0 ;
+  z-index:4;
+  }
+  
+
+
+  .square-1:hover{
+   background-color: rgba($rmit-red,0.4);
+  }
+  .square-2:hover{
+   background-color: rgba($rmit-yellow,0.4);
+  }
+  .square-3:hover{
+   background-color: rgba($rmit-teal,0.4);
+  }
+  .square-4:hover{
+   background-color: rgba($rmit-lightblue,0.4);
+  }
+
+}
+
 

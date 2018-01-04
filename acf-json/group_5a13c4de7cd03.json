@@ -20,6 +20,7 @@
                 "Accordion": "Accordion",
                 "Cards": "Cards",
                 "Checklist": "Checklist",
+                "Quadrant reveal": "Quadrant reveal",
                 "Sample Document": "Sample Document",
                 "Tabbed sections": "Tabbed sections",
                 "Tooltip Textstrings": "Tooltip Textstrings"
@@ -698,6 +699,73 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5a4d9d0dc74ab",
+            "label": "Quadrant reveal",
+            "name": "quadrant_reveal",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Quadrant reveal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 4,
+            "max": 4,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a4d9ddac74ac",
+                    "label": "Title",
+                    "name": "quadrant_title",
+                    "type": "text",
+                    "instructions": "Quadrant title",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a4d9de3c74ad",
+                    "label": "Text",
+                    "name": "quadrant_text",
+                    "type": "text",
+                    "instructions": "Quadrant text is revealed on hover",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -722,5 +790,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1514956813
+    "modified": 1515037822
 }
