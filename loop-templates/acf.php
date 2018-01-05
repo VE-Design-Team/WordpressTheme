@@ -26,6 +26,9 @@
 <?php elseif( get_field('field_5a13c5a7ec802') == 'Quadrant reveal' ): ?>
 	<!-- get Tooltip-->
 <?php get_template_part('loop-templates/acf/quadrant-reveal');?>
+<?php elseif( get_field('field_5a13c5a7ec802') == 'Image title reveal' ): ?>
+	<!-- get Tooltip-->
+<?php get_template_part('loop-templates/acf/image-title-reveal');?>
 <?php endif; ?>
 
 <script>
