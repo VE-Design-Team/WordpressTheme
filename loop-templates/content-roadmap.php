@@ -8,7 +8,7 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <style>
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
 .prompt {
   display: block;
@@ -80,7 +80,7 @@
   font-family: "Montserrat", sans-serif;
   background-size: cover;
   background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png");
-  font-weight: 800;
+  font-weight:700;
   color: white;
   padding: 20px 20px 20px 0;
 
@@ -92,7 +92,7 @@
   text-decoration: none;
   font-size: 2rem;
   height:auto;
-
+}
 .results .nC {
   width: 120px;
   line-height: 120px;
@@ -132,7 +132,7 @@
 
 	
  <div id="roadmap">
-    <div class="container text-center">
+    <div class="container-fluid text-center">
       <ul id="quiz" class="list-group">
       </ul>
     </div>
@@ -143,6 +143,7 @@
           <h3 class="font-weight-bold  text-center"><u>Your Learning Roadmap</u></h3>
          
           <p id="results"></p>
+          <button class="btn btn-sm btn-light text-center" onclick="PrintMap()">Print this page for your reference</button>
           <p class="small text-center">* Optional modules that may be of assistance</p>
         </div>
       </div>
@@ -371,6 +372,10 @@ $("#retake-btn").click(function() {
   $(".results").addClass("hide");
   $(".results").removeClass("show");
 });
+//Setup the print dialogue
+function PrintMap() {
+    window.print();
+}
 
 </script>
 	</div><!-- .entry-content -->
