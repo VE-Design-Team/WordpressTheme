@@ -1,5 +1,10 @@
 
 <style>
+#awm
+{
+  display:inline-block;
+  min-height: 400px;
+}
 <?php
 
 // Get colours
@@ -28,6 +33,10 @@ if (have_rows('field_5a541f36eef91')):
     echo $i; ?>:hover .card-header {
   background: <?php
     the_sub_field('field_5a542031eef94'); ?>;
+}
+.card-header
+{
+  cursor: pointer;
 }
 <?php
     $i++;
@@ -58,7 +67,7 @@ img.collapsing {
 
 </style>
 
-<div class="container aim">
+<div id="awm" class="container aim">
   <div class="row">
     <div class="col-12 text-center">
       <h3><?php
@@ -82,11 +91,16 @@ if (have_rows('field_5a541f36eef91')):
   while (have_rows('field_5a541f36eef91')):
     the_row(); ?>
 
-       <img class="collapse multi-collapse aim-<?php
-    echo $i; ?>" src="<?php
-    the_sub_field('field_5a5423847dc95'); ?>" alt="<?php
-    the_field('field_5a53f3ef29cd8'); ?>" />
+<?php 
 
+$image = get_sub_field('field_5a5423847dc95');
+
+if( !empty($image) ): ?>
+
+  <img src="<?php echo $image['url']; ?>" class="img-fluid collapse multi-collapse aim-<?php
+    echo $i; ?>" />
+
+<?php endif; ?>
         
 <?php
     $i++;
@@ -113,13 +127,18 @@ if (have_rows('field_5a541f36eef91')):
     echo $i; ?> mb-1">
         <div data-toggle="collapse"  data-target=".aim-<?php
     echo $i; ?>" role="button" aria-expanded="false" aria-controls="aim-<?php
-    echo $i; ?>" class="card-header text-white h6"> <span class="ac-plus">+  </span> <?php
+    echo $i; ?>" class="card-header text-white h6">
+
+     <span class="ac-plus">+  </span> <?php
     the_sub_field('field_5a541fbfeef92'); ?></div>
-        <div class="aim-<?php
+        
+<?php if( get_sub_field('field_5a541fc6eef93') ): ?>
+ <div class="aim-<?php
     echo $i; ?> card-body collapse multi-collapse small"><?php
     the_sub_field('field_5a541fc6eef93'); ?></div>
-      </div>
-        
+<?php endif; ?>
+
+      </div>     
 <?php
     $i++;
   endwhile;
