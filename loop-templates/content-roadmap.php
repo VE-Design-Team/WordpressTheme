@@ -140,11 +140,15 @@
     <div class="outside">
       <div class="inside">
         <div class="col-6 offset-5 pt-5 pl-5">
-          <h3 class="font-weight-bold  text-center"><u>Your Learning Roadmap</u></h3>
+         
+          <h3 class="font-weight-bold text-center"><u>Your Learning Roadmap</u></h3>
          
           <p id="results"></p>
-          <button class="btn btn-sm btn-light text-center" onclick="PrintMap()">Print this page for your reference</button>
-          <p class="small text-center">* Optional modules that may be of assistance</p>
+            <div class="container text-center ">
+          <button class="btn btn-sm btn-light mb-1" onclick="PrintMap()">Print this page for your reference</button>
+          </div>
+
+          <p class="small text-center bottom">* Optional modules that may be of assistance</p>
         </div>
       </div>
     </div>
