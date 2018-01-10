@@ -207,4 +207,17 @@
     .square-4:hover {
         background-color: rgba($rmit-lightblue, 0.4);
     }
+
+    //color utilties
+    .bg-light-yellow {
+        background-color: lighten($rmit-yellow, 50%);
+    }
+
+    .bg-light-blue {
+        background-color: lighten($rmit-lightblue, 50%);
+    }
+
+    .bg-light-aqua {
+        background-color: lighten($rmit-aqua, 50%);
+    }
 }

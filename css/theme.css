@@ -9440,6 +9440,9 @@ a.skip-link {
   border-bottom: 1px solid #ddd;
   padding: 10px; }
 
+.text-black {
+  color: #000000; }
+
 .card-header {
   padding: .4rem 1.25rem;
   margin-bottom: 0;
@@ -9594,6 +9597,15 @@ a.skip-link {
 
 #quadrant-reveal .square-4:hover {
   background-color: rgba(0, 120, 255, 0.4); }
+
+#quadrant-reveal .bg-light-yellow {
+  background-color: #fffefa; }
+
+#quadrant-reveal .bg-light-blue {
+  background-color: white; }
+
+#quadrant-reveal .bg-light-aqua {
+  background-color: #dcfff9; }
 
 /*
 * Use existing Bootstrap 4 classes and
