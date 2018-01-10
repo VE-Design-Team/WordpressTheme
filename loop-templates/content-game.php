@@ -37,12 +37,14 @@ data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php ech
 			<?php echo $button_title; ?>
 		</a>
 <?php endif; ?>
+<ul>
 <?php if( get_field('field_5a20e2a468c91') == 'link' ): ?>
 	<li><a href="#<?php echo $button_location ?>"
 data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
 			<?php echo $button_title; ?>
 		</a></li>
 <?php endif; ?>
+</ul>
 
 
 	
