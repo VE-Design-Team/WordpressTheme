@@ -1,35 +1,39 @@
 <!-- get custom fields -->
-<?php if( get_field('field_5a13c5a7ec802') == 'Accordion' ): ?>
+<?php if (get_field('field_5a13c5a7ec802') == 'Accordion'): ?>
 <!-- get accordion -->
 <?php get_template_part('loop-templates/acf/accordion');?>
 
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Checklist' ): ?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Checklist'): ?>
 	<!-- get checklist-->
 <?php get_template_part('loop-templates/acf/checklist');?>
 
 
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Tabbed sections' ): ?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Tabbed sections'): ?>
 	<!-- get tabs -->
 <?php get_template_part('loop-templates/acf/tabs');?>
 
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Cards' ): ?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Cards'): ?>
 	<!-- get cards-->
 <?php get_template_part('loop-templates/acf/cards');?>
 
 
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Tooltip Textstrings' ): ?>
-	<!-- get Tooltip-->
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Tooltip Textstrings'): ?>
+
 <?php get_template_part('loop-templates/acf/tooltip');?>
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Sample Document' ): ?>
-	<!-- get Tooltip-->
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Sample Document'): ?>
+
+
 <?php get_template_part('loop-templates/acf/sample-document');?>
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Quadrant reveal' ): ?>
-	<!-- get Tooltip-->
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Quadrant reveal'): ?>
+
 <?php get_template_part('loop-templates/acf/quadrant-reveal');?>
-<?php elseif( get_field('field_5a13c5a7ec802') == 'Image title reveal' ): ?>
-	<!-- get Tooltip-->
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Image title reveal'): ?>
+
 <?php get_template_part('loop-templates/acf/image-title-reveal');?>
-<?php endif; ?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Accordion with image'): ?>
+
+<?php get_template_part('loop-templates/acf/accordion-with-image');?>
+<?php endif;?>
 
 <script>
 //Make first tab active- top tabs

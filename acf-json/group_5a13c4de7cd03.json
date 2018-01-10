@@ -18,6 +18,7 @@
             "choices": {
                 "None": "None",
                 "Accordion": "Accordion",
+                "Accordion with image": "Accordion with image",
                 "Cards": "Cards",
                 "Checklist": "Checklist",
                 "Image title reveal": "Image title reveal",
@@ -871,6 +872,195 @@
             "default_value": "",
             "layout": "vertical",
             "return_format": "value"
+        },
+        {
+            "key": "field_5a53f3ef29cd8",
+            "label": "Title",
+            "name": "awi_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a541f36eef91",
+            "label": "Section",
+            "name": "awi_section",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a541fbfeef92",
+                    "label": "Title",
+                    "name": "awi_title",
+                    "type": "text",
+                    "instructions": "This is the activating section",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a541fc6eef93",
+                    "label": "Content",
+                    "name": "awi_content",
+                    "type": "wysiwyg",
+                    "instructions": "This is the content that is revealed when the title is activated",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5a542031eef94",
+                    "label": "Section colour",
+                    "name": "awi_section_colour",
+                    "type": "select",
+                    "instructions": "Select a differentiate the section from other sections. RMIT brand colours are used, they should appear in your image also for continuity.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "#e60028": "Red",
+                        "#000054": "Blue",
+                        "#7ae1aa": "Teal",
+                        "#fac800": "Yellow",
+                        "#fc9147": "Orange",
+                        "#eedc00": "Yellow",
+                        "#aad75f": "Green",
+                        "#00dcb4": "Aqua",
+                        "#0078ff": "Light blue",
+                        "#00aaff": "Azure",
+                        "#50d2ff": "Artic",
+                        "#aa0082": "Purple",
+                        "#c864c8": "Lavender",
+                        "#ff8199": "Pink"
+                    },
+                    "default_value": [
+                        "#e60028"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a5423847dc95",
+                    "label": "Image",
+                    "name": "awi_image",
+                    "type": "image",
+                    "instructions": "This image will be overlaid on the background image when the section is active. The layer order will be determined by the order of the sections.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5a5443ce64623",
+            "label": "Background image",
+            "name": "awi_background_image",
+            "type": "image",
+            "instructions": "Select a background image that will appear persistently next to the collapsable buttons",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -895,5 +1085,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515123418
+    "modified": 1515475156
 }
