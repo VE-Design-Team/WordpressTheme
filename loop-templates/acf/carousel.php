@@ -1,8 +1,17 @@
+<script>
+
+
+</script>
 <style>
 .indicators > .row > .col > img
 {
     -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+.col
+{
+  padding-left: 5px ;
+  padding-right: 5px;
 }
 @media (min-width: 20px) { .carousel-min-height
 {
@@ -14,26 +23,7 @@ min-height: 300px;
 }  }
 </style>
 <div class="container">
-<div id="rc-carousel" data-ride="carousel" class="carousel slide">
-  <div data-ride="carousel" class="carousel slide">
-    <div class="carousel-inner">
-<?php
-// check if the repeater field has rows of data
-if( have_rows('field_5a55a5855861a') ):
-  // loop through the rows of data
-    while ( have_rows('field_5a55a5855861a') ) : the_row(); ?>
- <div class="carousel-item">
-         <?php get_template_part('loop-templates/acf/carousel-content');?>
-      </div>
-   <?php endwhile;
-else :
-    // no rows found
-endif;
-?>
-    </div>
-  </div>
-</div>
-<div style="width: 100%" class="mx-auto text-center indicators mt-3">
+  <div style="width: 100%" class="mx-auto text-center indicators mb-3">
   <div class="row">
    <?php
 if( have_rows('field_5a55a5855861a') ): //get left indicator?>
@@ -57,8 +47,29 @@ endif;
 ?>
   </div>
 </div>
+<div id="rc-carousel" data-ride="carousel" class="carousel slide">
+  <div data-ride="carousel" class="carousel slide">
+    <div class="carousel-inner">
+<?php
+// check if the repeater field has rows of data
+if( have_rows('field_5a55a5855861a') ):
+  // loop through the rows of data
+    while ( have_rows('field_5a55a5855861a') ) : the_row(); ?>
+ <div class="carousel-item">
+         <?php get_template_part('loop-templates/acf/carousel-content');?>
+      </div>
+   <?php endwhile;
+else :
+    // no rows found
+endif;
+?>
+    </div>
+  </div>
+</div>
+
 </div>
 <script>
   $('.carousel-inner .carousel-item:first').addClass('active');
+ $('#rc-carousel').carousel('pause');
    </script>
  
