@@ -33,6 +33,9 @@
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Accordion with image'): ?>
 
 <?php get_template_part('loop-templates/acf/accordion-with-image');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Carousel'): ?>
+
+<?php get_template_part('loop-templates/acf/carousel');?>
 <?php endif;?>
 
 <script>

@@ -1,6 +1,6 @@
 {
     "key": "group_5a13c4de7cd03",
-    "title": "Add Rich Content",
+    "title": "Rich Content",
     "fields": [
         {
             "key": "field_5a13c5a7ec802",
@@ -20,6 +20,7 @@
                 "Accordion": "Accordion",
                 "Accordion with image": "Accordion with image",
                 "Cards": "Cards",
+                "Carousel": "Carousel",
                 "Checklist": "Checklist",
                 "Image title reveal": "Image title reveal",
                 "Quadrant reveal": "Quadrant reveal",
@@ -1061,6 +1062,97 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5a55a5855861a",
+            "label": "Carousel Content",
+            "name": "carousel_content",
+            "type": "repeater",
+            "instructions": "Add content for each slide",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Carousel"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a55a5d15861b",
+                    "label": "Image",
+                    "name": "carousel_image",
+                    "type": "image",
+                    "instructions": "Images will be centered",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5a55a5ef5861c",
+                    "label": "Text Content",
+                    "name": "carousel_text_content",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5a5820d027a5d",
+                    "label": "Content title",
+                    "name": "carousel_content_title",
+                    "type": "text",
+                    "instructions": "What's the title of this section? Required for accessibility",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -1085,5 +1177,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515475156
+    "modified": 1515725084
 }
