@@ -3,7 +3,19 @@
 #awm
 {
   display:inline-block;
+  max-height: 400px;
+}
+.background-image img
+{
   min-height: 400px;
+  max-height: 600px;
+  position: absolute;
+right: 0;
+}
+.background-image
+{
+   min-height: 400px;
+  max-height: 600px;
 }
 <?php
 
@@ -44,9 +56,7 @@ if (have_rows('field_5a541f36eef91')):
 else:
 endif;
 ?>
-.background-image img
-{
-position: absolute;
+
 }
 [data-toggle="collapse"][aria-expanded="true"] > h6 > .ac-plus {
     display: inline-block;
@@ -75,9 +85,9 @@ the_field('field_5a53f3ef29cd8'); ?></h3>
     </div>
 
 
-    <div class="col-8 background-image"><img src="<?php
+    <div class="col-8 background-image "><img src="<?php
 the_field('field_5a5443ce64623'); ?>" alt="<?php
-the_field('field_5a53f3ef29cd8'); ?>" />
+the_field('field_5a53f3ef29cd8'); ?>" height="400" class="float-right"/>
 
 <?php
 
@@ -98,7 +108,7 @@ $image = get_sub_field('field_5a5423847dc95');
 if( !empty($image) ): ?>
 
   <img src="<?php echo $image['url']; ?>" class="img-fluid collapse multi-collapse aim-<?php
-    echo $i; ?>" />
+    echo $i; ?>" height="400"/>
 
 <?php endif; ?>
         
