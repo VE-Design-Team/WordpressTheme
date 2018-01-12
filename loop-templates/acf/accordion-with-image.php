@@ -20,11 +20,7 @@ right: 0;
 {
   padding: 0.5rem;
 }
-.col
-{
-  padding-left: 5px ;
-  padding-right: 5px;
-}
+
 <?php
 // Get colours
 if (have_rows('field_5a541f36eef91')):
