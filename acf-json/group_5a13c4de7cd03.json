@@ -1118,7 +1118,7 @@
                     "key": "field_5a55a5ef5861c",
                     "label": "Text Content",
                     "name": "carousel_text_content",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1128,10 +1128,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_5a5820d027a5d",
@@ -1177,5 +1177,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515725084
+    "modified": 1515735183
 }
