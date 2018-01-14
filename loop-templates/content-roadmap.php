@@ -24,7 +24,7 @@
 .btn-smbtn-default:active:focus,
 .btn-smbtn-default.active:focus,
 .btn-smbtn-default:hover {
-  background-color: rgba(137, 137, 137, 0.5);
+  background-color: rgba(137, 137, 137, 0.8);
 }
 
 .btn-strongly-agree.active,
@@ -103,6 +103,7 @@
 }
 .results ul {
   list-style: none;
+  line-height: 1.6rem;
 }
 @media (min-width: 576px) {
   .results {
@@ -141,7 +142,7 @@
       <div class="inside">
         <div class="col-6 offset-5 pt-5 pl-5">
          
-          <h3 class="font-weight-bold text-center"><u>Your Learning Roadmap</u></h3>
+          <h3 class="font-weight-bold text-center">Your Learning Roadmap</h3>
          
           <p id="results"></p>
             <div class="container text-center ">
