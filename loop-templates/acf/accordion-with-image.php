@@ -2,12 +2,12 @@
 #awm
 {
   display:inline-block;
-  max-height: 400px;
+  min-height: 400px;
 }
 .background-image img
 {
   min-height: 300px;
-  max-height: 600px;
+  max-height: 400px;
   position: absolute;
 right: 0;
 }
@@ -78,7 +78,7 @@ img.collapsing {
       <h3><?php
 the_field('field_5a53f3ef29cd8'); ?></h3>
     </div>
-    <div class="col-6 col-md-8 background-image "><img src="<?php
+    <div class="col-6  background-image "><img src="<?php
 the_field('field_5a5443ce64623'); ?>" alt="<?php
 the_field('field_5a53f3ef29cd8'); ?>" height="400" class="float-right"/>
 <?php
@@ -101,7 +101,7 @@ else:
 endif;
 ?>
     </div>
-    <div class="col-6 col-md-4 accordion-area">
+    <div class="col-6  accordion-area">
 <?php
 if (have_rows('field_5a541f36eef91')):
   // output cards and card bodies
