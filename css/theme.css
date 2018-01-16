@@ -9559,28 +9559,28 @@ a.skip-link {
   text-align: center; }
 
 #quadrant-reveal .square-1 {
-  background-color: #e60028;
+  background-color: #C864C8;
   border-top: 4px solid #000000;
   border-left: 4px solid #000000;
   border-radius: 20px 0 0 0;
   z-index: 1; }
 
 #quadrant-reveal .square-2 {
-  background-color: #FAC800;
+  background-color: #00DCB4;
   border-top: 4px solid #000000;
   border-right: 4px solid #000000;
   border-radius: 0 20px 0 0;
   z-index: 2; }
 
 #quadrant-reveal .square-3 {
-  background-color: #7ae1AA;
+  background-color: #50D2FF;
   border-left: 4px solid #000000;
   border-bottom: 4px solid #000000;
   border-radius: 0 0 0 20px;
   z-index: 3; }
 
 #quadrant-reveal .square-4 {
-  background-color: #0078FF;
+  background-color: #FF8199;
   border-right: 4px solid #000000;
   border-bottom: 4px solid #000000;
   border-radius: 0 0 20px 0;
