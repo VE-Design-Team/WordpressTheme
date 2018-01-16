@@ -20,7 +20,6 @@ right: 0;
 {
   padding: 0.5rem;
 }
-
 <?php
 // Get colours
 if (have_rows('field_5a541f36eef91')):
@@ -36,6 +35,15 @@ if (have_rows('field_5a541f36eef91')):
     echo $i; ?> .card-header {
   background: <?php
     the_sub_field('field_5a542031eef94'); ?>;
+}
+.aim .card-<?php
+    echo $i; ?> .card-header {
+<?php 
+  if (get_sub_field('field_5a542031eef94') == "#e60028" || get_sub_field('field_5a542031eef94') == "#000054"): ?>
+  color: #fff;
+<?php else: {}; ?>
+ color: #000;
+    <?php endif; ?>
 }
 .aim .card-<?php
     echo $i; ?>:hover {
@@ -78,7 +86,7 @@ img.collapsing {
       <h3><?php
 the_field('field_5a53f3ef29cd8'); ?></h3>
     </div>
-    <div class="col-6  background-image "><img src="<?php
+    <div class="col-xs-12 col-sm-6  background-image "><img src="<?php
 the_field('field_5a5443ce64623'); ?>" alt="<?php
 the_field('field_5a53f3ef29cd8'); ?>" height="400" class="float-right"/>
 <?php
@@ -101,7 +109,7 @@ else:
 endif;
 ?>
     </div>
-    <div class="col-6  accordion-area">
+    <div class="col-xs-12 col-sm-6 accordion-area">
 <?php
 if (have_rows('field_5a541f36eef91')):
   // output cards and card bodies
@@ -112,7 +120,7 @@ if (have_rows('field_5a541f36eef91')):
     echo $i; ?> mb-1">
         <div data-toggle="collapse"  data-target=".aim-<?php
     echo $i; ?>" role="button" aria-expanded="false" aria-controls="aim-<?php
-    echo $i; ?>" class="card-header text-white h6">
+    echo $i; ?>" class="card-header h6">
      <span class="ac-plus">+  </span> <?php
     the_sub_field('field_5a541fbfeef92'); ?></div>
 <?php if (get_sub_field('field_5a541fc6eef93')): ?>
