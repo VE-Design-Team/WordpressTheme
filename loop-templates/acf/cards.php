@@ -14,12 +14,9 @@
           $card_header_image = get_sub_field_object('field_5a1b9656a6dc9');
           ?>
         
- <?php if( get_row_index() % 2 == 0 ){ ?>
 
 <div class="col">
-<?php } else { ?>
-<div class="col-12 col-sm-12 col-lg-8  mb-3 mt-3">
-<?php } ?>
+
   <div class="card">
     <div class="card-header">
 
