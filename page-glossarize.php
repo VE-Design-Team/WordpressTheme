@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Glossarize jQuery Plugin</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -103,14 +103,15 @@
   </div>
  
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/js/tooltip.js"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/js/jquery.glossarize.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/tooltip.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.glossarize.js"></script>
   <script>
 
   $(function(){
 
     $('.content').glossarizer({
-      sourceURL: 'https://emedia.rmit.edu.au/C3319/index.php/glossary/',
+      sourceURL: '<?php echo get_home_url(); ?>/glossary/',
+
       //sourceURL: '<?php echo get_stylesheet_directory_uri(); ?>/glossary.json',
       callback: function(){
         new tooltip();
