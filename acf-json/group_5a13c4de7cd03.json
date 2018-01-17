@@ -301,7 +301,7 @@
                     },
                     "choices": {
                         "custom": "Custom",
-                        "learning_activity": "Learning activity",
+                        "alert": "Alert",
                         "assignment": "Assignments",
                         "audio": "Audio",
                         "calendar": "Calendar",
@@ -316,6 +316,7 @@
                         "group_registration": "Group registration",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
+                        "learning_activity": "Learning activity",
                         "licensing_accreditation": "Licensing accreditation",
                         "mobile_guides": "Mobile guides",
                         "module": "Module",
