@@ -110,7 +110,7 @@
   $(function(){
 
     $('.content').glossarizer({
-      sourceURL: 'http://localhost/wordpress/glossary/',
+      sourceURL: 'https://emedia.rmit.edu.au/C3319/index.php/glossary/',
       //sourceURL: '<?php echo get_stylesheet_directory_uri(); ?>/glossary.json',
       callback: function(){
         new tooltip();
