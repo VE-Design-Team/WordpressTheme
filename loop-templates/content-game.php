@@ -26,7 +26,7 @@ ul.button-list
 	  <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="<?php echo $title; ?>">
 <?php endif; ?>
     <div class="card-body">
-    <h3><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
+    <h3 class="h4"><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
 <!-- Card <?php echo $row_count; ?>-->
 <!-- get button data -->
 <ul class="button-list">
