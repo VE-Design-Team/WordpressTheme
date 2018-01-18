@@ -9434,6 +9434,9 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.lead {
+  font-weight: 400; }
+
 .tab-content {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
