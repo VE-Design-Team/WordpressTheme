@@ -46,7 +46,7 @@ margin-right: -0.18rem;
 #collapse<?php echo $last;?> > li > i.fa-check-square-o
 {
 display: inline !important;
-margin-right: 0rem;
+margin-right: -0.2rem;
 }
 </style>
      
