@@ -1,17 +1,26 @@
 <script>
-
-
 </script>
 <style>
 .indicators > .row > .col > img
 {
     -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  cursor: pointer;
+}
+.indicators > .row > .col:hover > img
+{
+    -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  
 }
 .col
 {
   padding-left: 5px ;
   padding-right: 5px;
+}
+.carousel-indicators .active {
+      -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 @media (min-width: 20px) { .carousel-min-height
 {
@@ -22,7 +31,7 @@ min-height: 150px;
 min-height: 300px;
 }  }
 </style>
-<div class="container">
+<div class="container glossarize">
   <div style="width: 100%" class="mx-auto text-center indicators mb-3">
   <div class="row">
    <?php
@@ -32,7 +41,7 @@ if( have_rows('field_5a55a5855861a') ): //get left indicator?>
   <?php $i = 0;
     while ( have_rows('field_5a55a5855861a') ) : the_row(); //get carousel indicators ?>
  <?php if( get_sub_field('field_5a55a5d15861b') ): ?>
-        <div data-target="#rc-carousel" data-slide-to="<?php echo $i; ?>" class="col
+        <div data-target="#rc-carousel" data-slide-to="<?php echo $i; ?>" class="col  
 "><img src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>" class="img-fluid" width="100"/></div>
 <?php else: ?>
      <div data-target="#rc-carousel" data-slide-to="<?php echo $i; ?>" class="col
@@ -66,7 +75,6 @@ endif;
     </div>
   </div>
 </div>
-
 </div>
 <script>
   $('.carousel-inner .carousel-item:first').addClass('active');

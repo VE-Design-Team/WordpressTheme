@@ -1,6 +1,6 @@
 <!-- cards.php start -->
 <?php if( have_rows('field_5a1b72e2b4a86') ): ?>
-<div class=" card-deck">  
+<div class="card-deck glossarize">  
   <?php while( have_rows('field_5a1b72e2b4a86') ): the_row();?>
     <?php
           // set variables
@@ -24,8 +24,8 @@
     <?php };?>
     <?php endif; ?>
    </div>
-    <div class="card-body">
-      <p class="card-text"><?php echo $card_content ?></p>
+    <div class="card-body ">
+      <?php echo $card_content ?>
     </div>
 </div>
   <?php endwhile; ?>

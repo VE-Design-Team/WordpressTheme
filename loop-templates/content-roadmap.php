@@ -350,10 +350,11 @@ $("#submit-btn").click(function() {
   $(".results").addClass("show");
 
   if (total < 0) {
-
+    //Confident
     document.getElementById("results").innerHTML =
       "<ul>    <li><b>1)</b> Continuous improvement</li>    <li><b>2)</b> Legal and ethical requirements</li>    <li><b>3)</b> Diversity in aged care</li>    <li><b>4)</b> Safety Hazards and risk management</li>    <li><b>5)</b> Communicating and working with others</li>    <li><b>6)</b> Introduction to aged care</li>    <li><b>7)</b> RMIT learning Lab*</li>    <li><b>8)</b> RMIT study support*</li>    <li><b>9)</b> Canvas in this course*</li></ul>";
   } else if (total > 0) {
+    // Non confident
     document.getElementById("results").innerHTML =
       "<ul>    <li><b>1)</b> RMIT learning Lab*</li>    <li><b>2)</b> RMIT study support*</li>    <li><b>3)</b> Canvas in this course*</li>    <li><b>4)</b> Introduction to aged care</li>    <li><b>5)</b> Diversity in aged care</li>    <li><b>6)</b> Communicating and working with others</li>    <li><b>7)</b> Legal and ethical requirements</li>    <li><b>8)</b> Safety Hazards and risk management</li>    <li><b>9)</b> Continuous improvement</li></ul>";
   } else {

@@ -80,7 +80,7 @@ img.collapsing {
     display: none;
 }
 </style>
-<div id="awm" class="container aim">
+<div id="awm" class="container aim glossarize">
   <div class="row">
     <div class="col-12 text-center">
       <h3><?php
@@ -125,8 +125,8 @@ if (have_rows('field_5a541f36eef91')):
     the_sub_field('field_5a541fbfeef92'); ?></div>
 <?php if (get_sub_field('field_5a541fc6eef93')): ?>
  <div class="aim-<?php
-    echo $i; ?> card-body collapse multi-collapse small"><?php
-    the_sub_field('field_5a541fc6eef93'); ?></div>
+    echo $i; ?> card-body collapse multi-collapse small"><p><?php
+    the_sub_field('field_5a541fc6eef93'); ?></p></div>
 <?php endif; ?>
       </div>     
 <?php
