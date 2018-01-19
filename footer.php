@@ -6,45 +6,38 @@
  *
  * @package understrap
  */
-
 $the_theme = wp_get_theme();
-
 ?>
-
-<?php get_sidebar( 'footerfull' ); ?>
-
-<div class="wrapper" id="wrapper-footer">
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-
-
-
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
-
-</div><!-- #page we need this extra closing tag here -->
-
 <?php wp_footer(); ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/tooltip.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.glossarize.js"></script>
+  <script>
 
+  $(function(){
+
+    $('.glossarize').glossarizer({
+      
+    	<?php if( WP_DEBUG === true ) { 
+    echo "//dev environment
+    ";
+    echo "sourceURL: '".get_site_url()."/glossary/',";
+} else {
+	 echo "//live environment";
+    echo "sourceURL: '".get_site_url()."/glossary/',";
+} ?>
+
+  
+
+      //sourceURL: '<?php echo get_stylesheet_directory_uri(); ?>/glossary.json',
+      callback: function(){
+        new tooltip();
+      }
+    });
+
+
+  });
+
+  </script>
 </body>
-
 </html>
