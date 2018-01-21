@@ -11,7 +11,6 @@
 {
     -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
-  
 }
 .col
 {
@@ -30,6 +29,16 @@ min-height: 150px;
 {
 min-height: 300px;
 }  }
+.desaturate
+{
+ -webkit-filter: grayscale(1);
+ filter: grayscale(1);
+}
+.active > img
+{
+ -webkit-filter: grayscale(0);
+ filter: grayscale(0);
+}
 </style>
 <div class="container glossarize">
   <div style="width: 100%" class="mx-auto text-center indicators mb-3">

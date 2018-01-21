@@ -31,3 +31,10 @@ color: red;
 
 }
 </style>
+<script>
+//Make first tab active- top tabs
+$('.nav-item a.nav-link:first').addClass('active');
+//Make first tab active- left tabs
+$('.nav-link:first').addClass('active');
+$('.tab-pane:first').addClass('active show');
+</script>
