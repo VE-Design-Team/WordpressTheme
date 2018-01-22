@@ -3616,15 +3616,15 @@ tbody.collapse.show {
     color: #868e96; }
 
 .nav-tabs {
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 2px solid #495057; }
   .nav-tabs .nav-item {
-    margin-bottom: -1px; }
+    margin-bottom: -2px; }
   .nav-tabs .nav-link {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
     .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-      border-color: #e9ecef #e9ecef #ddd; }
+      border-color: none none #495057; }
     .nav-tabs .nav-link.disabled {
       color: #868e96;
       background-color: transparent;
@@ -3632,10 +3632,10 @@ tbody.collapse.show {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #495057;
-    background-color: #fff;
-    border-color: #ddd #ddd #fff; }
+    background-color: #F1F3F5;
+    border-color: #495057 #495057 #F1F3F5; }
   .nav-tabs .dropdown-menu {
-    margin-top: -1px;
+    margin-top: -2px;
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
@@ -3958,7 +3958,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -3994,18 +3994,18 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
+    border-radius: calc(0.25rem - 2px) calc(0.25rem - 2px) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
     border-top: 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  border-top: 2px solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
+    border-radius: 0 0 calc(0.25rem - 2px) calc(0.25rem - 2px); }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -4027,17 +4027,17 @@ tbody.collapse.show {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px); }
+  border-radius: calc(0.25rem - 2px); }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px); }
+  border-top-left-radius: calc(0.25rem - 2px);
+  border-top-right-radius: calc(0.25rem - 2px); }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px); }
+  border-bottom-right-radius: calc(0.25rem - 2px);
+  border-bottom-left-radius: calc(0.25rem - 2px); }
 
 .card-deck {
   display: flex;
@@ -9434,14 +9434,26 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+h3, h4, .h3, .h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h3, .h3 {
+  font-size: 1.3em; }
+
+h4, .h4 {
+  font-size: 1.3em;
+  color: #000000;
+  font-weight: 400; }
+
 .lead {
   font-weight: 400; }
 
 .tab-content {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px; }
+  border-left: 2px solid #495057;
+  border-right: 2px solid #495057;
+  border-bottom: 2px solid #495057;
+  padding: 10px;
+  background-color: #F1F3F5; }
 
 .text-black {
   color: #000000; }
