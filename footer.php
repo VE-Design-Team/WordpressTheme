@@ -18,13 +18,14 @@ $the_theme = wp_get_theme();
 
     $('.glossarize').glossarizer({
       
-    	<?php if( WP_DEBUG === true ) { 
+    	<?php if (WP_DEBUG === true) {
     echo "//dev environment
     ";
-    echo "sourceURL: '".get_site_url()."/glossary/',";
+    echo "sourceURL: '".get_site_url()."/glossarydata/',";
 } else {
-	 echo "//live environment";
-    echo "sourceURL: '".get_site_url()."/glossary/',";
+    echo "//live environment
+	 ";
+    echo "sourceURL: '".get_site_url()."/index.php/glossarydata/',";
 } ?>
 
   

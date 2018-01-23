@@ -1,24 +1,30 @@
 <?php
-/*
-Template Name: Glossary
-*/
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package understrap
+ */
+get_header();
+$sidebar_pos = get_theme_mod('understrap_sidebar_position');
 ?>
+<div class="wrapper" id="page-wrapper">
+	<div id="content" tabindex="-1">
+				<!-- Do the left sidebar check -->
+			<div class="col-md-12 content-area" id="primary">
+			<main class="site-main" id="main">
+				<?php while (have_posts()) : the_post(); ?>
+					<?php get_template_part('loop-templates/content', 'glossary'); ?>
+				<?php endwhile; // end of the loop.?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+</div><!-- Container end -->
+</div><!-- Wrapper end -->
+<style>
 
-<?php if( have_rows('field_5a1b4e5ebab7b') ): ?>
-  <?php echo "[{";?>
-	<?php $rowCount = count( get_field('field_5a1b4e5ebab7b') );  ?>
-	<?php $i = 1; ?>
-	<?php while( have_rows('field_5a1b4e5ebab7b') ): the_row(); ?>
-		<?php // vars
-			$title = get_sub_field('field_5a1b4e9abab7c');
-			$description = get_sub_field('field_5a1b51d28610a');
-		?>
-		"term":"<?php echo $title; ?>",
-    "description":"<?php echo $description; ?>"
-		<?php if($i < $rowCount): ?>
-			  <?php echo "},{";?>
-		<?php endif; ?>
-		<?php $i++; ?>
-	<?php endwhile; ?>
-  <?php echo "}]";?>
-<?php endif; ?>
+</style>
+<?php get_footer(); ?>
