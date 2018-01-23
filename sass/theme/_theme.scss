@@ -1,3 +1,5 @@
+// Make like canvas
+
 h3,h4,.h3,.h4
 {
     font-family: $font-family-sans-serif;
@@ -16,6 +18,11 @@ h4,.h4
 .lead {
     font-weight: 400;
 }
+// Rich content
+
+
+//Tabs
+
 .tab-content {
     border-left: $card-border-width  solid $nav-tabs-border-color;
     border-right: $card-border-width solid $nav-tabs-border-color;
@@ -26,6 +33,7 @@ h4,.h4
 .text-black {
     color: #000000;
 }
+
 #ChoiceGame {}
 .card-header {
     padding: .4rem 1.25rem;
