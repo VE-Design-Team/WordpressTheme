@@ -7,9 +7,9 @@
   </li>
 <?php endwhile;?>
 </ul>
-<div class="tab-content mb-1" id="TabContent<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
+<div class="tab-content col-12 mb-1" id="TabContent<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
 <?php while (have_rows('field_5a13c7fda9110')) : the_row();?>
-      <div class="tab-pane fade show p-3" id="<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tabpanel" aria-labelledby="<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab"><?php echo the_sub_field('field_5a14fdab64ad0');?></div> 
+      <div class="tab-pane fade show  p-3" id="<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tabpanel" aria-labelledby="<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab"><?php echo the_sub_field('field_5a14fdab64ad0');?></div> 
 <?php endwhile;?>
 </div></div>
 <script>
