@@ -23,6 +23,7 @@
                 "Carousel": "Carousel",
                 "Checklist": "Checklist",
                 "Image title reveal": "Image title reveal",
+                "Introduction page": "Introduction page",
                 "Quadrant reveal": "Quadrant reveal",
                 "Sample Document": "Sample Document",
                 "Tabbed sections": "Tabbed sections",
@@ -301,7 +302,7 @@
                     },
                     "choices": {
                         "custom": "Custom",
-                        "alert": "Alert",
+                        "learning_activity": "Learning activity",
                         "assignment": "Assignments",
                         "audio": "Audio",
                         "calendar": "Calendar",
@@ -316,7 +317,6 @@
                         "group_registration": "Group registration",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
-                        "learning_activity": "Learning activity",
                         "licensing_accreditation": "Licensing accreditation",
                         "mobile_guides": "Mobile guides",
                         "module": "Module",
@@ -1155,6 +1155,82 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a67bc57f0b60",
+            "label": "Introduction page builder",
+            "name": "introduction_page_builder",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Introduction page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a67bc81f0b61",
+                    "label": "Tab title",
+                    "name": "intro_tab_title",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Learning objectives": "Learning objectives",
+                        "Key objectives": "Key objectives",
+                        "Assessments": "Assessments"
+                    },
+                    "default_value": [
+                        "learning_objectives"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a67c80324ecd",
+                    "label": "Intro tab content",
+                    "name": "intro_tab_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -1166,8 +1242,8 @@
             },
             {
                 "param": "page_template",
-                "operator": "!=",
-                "value": "page-glossary.php"
+                "operator": "==",
+                "value": "default"
             }
         ]
     ],
@@ -1179,5 +1255,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1515958711
+    "modified": 1516751759
 }
