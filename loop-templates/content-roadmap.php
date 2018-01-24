@@ -78,13 +78,22 @@
 /* RESULTS */
 .results {
   font-family: "Montserrat", sans-serif;
-  background-size: cover;
-  background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png");
+  
+  background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap-mobile.png");
   font-weight:700;
   color: white;
-  padding: 20px 20px 20px 0;
-
+  padding: 20px 20px 20px 0; 
+  background-size: cover;
+  
 }
+@media (min-width: 768px) {
+ .results
+ {
+  background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png");
+
+ }
+  }
+
 .results h3
 {
   color: white;
@@ -105,19 +114,38 @@
   list-style: none;
   line-height: 1.6rem;
 }
+ .btn
+  {
+    font-size: 0.7rem;
+        padding: .2rem .5rem;
+  }
+
 @media (min-width: 576px) {
   .results {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
+        padding: .375rem .75rem;
+  }
+ .btn
+  {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 768px) {
   .results {
     font-size: .70rem;
   }
+  .btn
+  {
+    font-size: 0.9rem;
+  }
 }
 @media (min-width: 992px) {
   .results {
     font-size: 0.9rem;
+  }
+  .btn
+  {
+    font-size: 1rem;
   }
 }
 @media (min-width: 1200px) {
@@ -140,9 +168,9 @@
     <div class="container hide results">
     <div class="outside">
       <div class="inside">
-        <div class="col-6 offset-5 pt-5 pl-5">
+        <div class="col-12 col-md-6 offset-md-6 offset-lg-5">
          
-          <h3 class="font-weight-bold text-center">Your Learning Roadmap</h3>
+          <h3 class="font-weight-bold text-center mt-5">Your Learning Roadmap</h3>
          
           <p id="results"></p>
             <div class="container text-center ">
