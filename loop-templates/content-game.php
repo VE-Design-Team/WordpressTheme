@@ -16,9 +16,8 @@ ul.button-list > li > a
     color: #000000;
 }
 </style>
-
 <?php if (have_rows('field_5a2094f978d32')): ?>
-    <div id="ChoiceGame ">
+    <div id="ChoiceGame">
     <?php 
         $row_count = 1;
         while (have_rows('field_5a2094f978d32')): the_row();
@@ -82,7 +81,6 @@ if ($percent_completed > "95") {
 $row_count++;
     endwhile; ?>
 </div><!--ChoiceGame-->
-
 <?php endif; ?>
 <script>
 // Make first card show on loadding, rest hidden by default 
