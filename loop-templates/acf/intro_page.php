@@ -7,9 +7,10 @@
 {
 	max-width: 100px;
 }
-</style><div class="row">
+</style><div class="row intro_page">
 <ul class="nav nav-tabs col-12" id="Tab<?php echo get_the_ID();?>" role="tablist">
 <?php while (have_rows('field_5a67bc57f0b60')) : the_row();?>
+  <?php while (have_rows('field_5a67bc57f0b60')) : the_row();?>
 <li class="nav-item ">
     <a class="nav-link" id="<?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>-tab" data-toggle="tab" href="#<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tab" aria-controls="<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" aria-selected="true"><?php echo the_sub_field('field_5a67bc81f0b61');?> 
     </a>
@@ -23,7 +24,7 @@ $title = get_sub_field('field_5a67bc81f0b61');
 if ($title == "Learning objectives") {
     $icon = "licensing_accreditation.png";
     $background = "bg-success";
-} elseif ($title == "Key objectives") {
+} elseif ($title == "Key activities") {
     $icon = "learning_activity.png";
     $background = "bg-warning";
 } elseif ($title == "Assessments") {

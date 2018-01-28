@@ -10,11 +10,13 @@ $the_theme = wp_get_theme();
 ?>
 <?php wp_footer(); ?>
 <?php if (get_field('field_5a13c5a7ec802') == 'Tooltip Textstrings'): ?>
+  <!-- fix this tooltip conflict -->
 <?php else: {} ?>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/tooltip.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.glossarize.js"></script>
 <?php endif;?>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.glossarize.js"></script>
+
   <script>
   $(function(){
     $('.glossarize').glossarizer({

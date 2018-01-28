@@ -24,6 +24,7 @@
                 "Checklist": "Checklist",
                 "Image title reveal": "Image title reveal",
                 "Introduction page": "Introduction page",
+                "Roadmap": "Roadmap",
                 "Quadrant reveal": "Quadrant reveal",
                 "Sample Document": "Sample Document",
                 "Tabbed sections": "Tabbed sections",
@@ -1231,6 +1232,194 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5a68162825811",
+            "label": "Roadmap",
+            "name": "roadmap",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Roadmap"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a6816c125812",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "repeater",
+                    "instructions": "Enter your question in a way that can be answered across the scale of \"Strongly agree\" (2 points) to \"Strongly disagree\" (-2 points)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a681fb7a5cc0",
+                            "label": "Question",
+                            "name": "question",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a693948b85bf",
+                            "label": "Question weighting",
+                            "name": "question_weighting",
+                            "type": "range",
+                            "instructions": "Affects the influence of this outcome on answers. This multiplies the answer score. This will weight some questions to have a stronger influence on questions than others.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 1,
+                            "min": -5,
+                            "max": 5,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5a681ec374a40",
+                    "label": "Outcomes",
+                    "name": "outcomes",
+                    "type": "repeater",
+                    "instructions": "Build as many outcomes as you require to represent answer options",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a681ed574a41",
+                            "label": "Outcome name",
+                            "name": "outcome_name",
+                            "type": "text",
+                            "instructions": "This is not seen by the student, it's for testing debugging purposes",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a681f3774a42",
+                            "label": "Top answer range",
+                            "name": "top_answer_range",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": "",
+                            "max": 1000,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5a682049db3af",
+                            "label": "Lower answer range",
+                            "name": "lower_answer_range",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "min": "",
+                            "max": 1000,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5a693992b85c0",
+                            "label": "Answer output",
+                            "name": "answer_output",
+                            "type": "textarea",
+                            "instructions": "This is what is revealed to the user when this outcome is achieved by the number range. 300 character limit.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 305,
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -1255,5 +1444,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516751759
+    "modified": 1516851369
 }

@@ -28,17 +28,29 @@ $cyan: $rmit-azure !default;
 $aqua: $rmit-aqua !default;
 $lavender: $rmit-lavender !default;
 
+
+
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-150: #F1F3F5 !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-25: #f9fafa;
+$gray-50: #f3f5f5;
+$gray-100: #eef0f1!default;
+$gray-150: #e8ebec!default;
+$gray-200: #e3e6e8 !default;
+$gray-250: #dde1e3!default;
+$gray-300: #d7d7d7 !default; //canvas grey button fills
+$gray-350: #d2d7da !default;
+$gray-400: #ccd2d5 !default;
+$gray-450: #c7cdd1 !default; //Canvas gray - borders
+$gray-500: #b3b8bc !default;
+$gray-550: #9fa4a7!default;
+$gray-600: #8b8f92!default;
+$gray-650: #777b7d!default;
+$gray-700: #636668!default;
+$gray-750: #4f5253!default;
+$gray-800:#3b3d3e!default;
+$gray-850: #272929 !default;
+$gray-900:#131414!default;
+
 $black:    #000 !default;
 
 
@@ -62,6 +74,6 @@ $headings-font-family: $font-family-serif !default;
 $nav-tabs-border-color:             $gray-700 !default;
 $nav-tabs-link-hover-border-color:  none !default;
 $nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $gray-100 !default;
+$nav-tabs-link-active-bg:           $white !default;
 $nav-tabs-link-active-border-color: $gray-700 !default;
 $nav-tabs-border-width: $card-border-width; 

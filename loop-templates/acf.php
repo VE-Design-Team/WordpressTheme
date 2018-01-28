@@ -21,6 +21,8 @@
 <?php get_template_part('loop-templates/acf/carousel');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Introduction page'): ?>
 <?php get_template_part('loop-templates/acf/intro_page');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Roadmap'): ?>
+<?php get_template_part('loop-templates/acf/roadmap');?>
 <?php endif;?>
 <style>
 #nav-tab .tab-content
