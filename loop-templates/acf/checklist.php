@@ -1,15 +1,13 @@
  <ul class="list-unstyled lead">
 <?php
-if( have_rows('field_5a1dfb52cb056') ):
+if (have_rows('field_5a1dfb52cb056')):
 $i = 1;
-$last = count( get_field('field_5a1dfb52cb056') );
-while(has_sub_field('field_5a1dfb52cb056')):
+$last = count(get_field('field_5a1dfb52cb056'));
+while (has_sub_field('field_5a1dfb52cb056')):
 ?>
-      <?php if ($i == 1){echo "<div>";}else{
-echo "<div class='collapse' id='collapse".$i."' aria-expanded='false'>";
-      }?>
-          <li data-toggle="collapse" data-target="#collapse<?php echo $i+1; ?>">
-<?php if ($i == $last){echo '<i class="fa fa-check-square-o" aria-hidden="true"></i>';} else {echo ' <i class="fa fa-square-o" aria-hidden="true"></i><i class="fa fa-check-square-o" aria-hidden="true"></i>';}?> <?php echo get_sub_field("field_5a1e03efcb057")?>
+     <div>
+          <li data-toggle="collapse" data-target="#collapse<?php echo $i; ?>">
+<i class="fa fa-square-o" aria-hidden="true"></i><i class="fa fa-check-square-o" aria-hidden="true"></i><span aria-hidden="true"> <?php echo get_sub_field("field_5a1e03efcb057")?></span>
             </li>
           </div>
 <?php
@@ -34,19 +32,13 @@ li > i.fa-check-square-o
 {
 display: none
 }
-li.checked > i.fa-square-o
+li.checked > i.fa-square-o, span
 {
 display: none;
 }
-li.checked > i.fa-check-square-o
+li.checked > i.fa-check-square-o, li.checked > span
 {
 display: inline;
 margin-right: -0.18rem;
 }
-#collapse<?php echo $last;?> > li > i.fa-check-square-o
-{
-display: inline !important;
-margin-right: -0.2rem;
-}
 </style>
-     
