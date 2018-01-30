@@ -1199,7 +1199,7 @@
                     },
                     "choices": {
                         "Learning objectives": "Learning objectives",
-                        "Key objectives": "Key objectives",
+                        "Key activities": "Key activities",
                         "Assessments": "Assessments"
                     },
                     "default_value": [
@@ -1303,7 +1303,7 @@
                             "label": "Question weighting",
                             "name": "question_weighting",
                             "type": "range",
-                            "instructions": "Affects the influence of this outcome on answers. This multiplies the answer score. This will weight some questions to have a stronger influence on questions than others.",
+                            "instructions": "Affects the influence of this outcome on answers. This multiplies the answer score. This will weight some questions to have a stronger influence on questions than others. Note: When the multiplier is 0, the question will have no change in the result - use sparingly",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1312,7 +1312,7 @@
                                 "id": ""
                             },
                             "default_value": 1,
-                            "min": -5,
+                            "min": 0,
                             "max": 5,
                             "step": "",
                             "prepend": "",
@@ -1372,7 +1372,7 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "min": "",
+                            "min": -1000,
                             "max": 1000,
                             "step": "",
                             "prepend": "",
@@ -1392,7 +1392,7 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "min": "",
+                            "min": -1000,
                             "max": 1000,
                             "step": "",
                             "prepend": "",
@@ -1444,5 +1444,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516851369
+    "modified": 1517189718
 }

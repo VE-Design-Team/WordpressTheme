@@ -1,56 +1,43 @@
-<h3>Questions</h3>
 <?php
-
 // check if the repeater field has rows of data
-if (have_rows('field_5a6816c125812')):
-
-  // loop through the rows of data
-    while (have_rows('field_5a6816c125812')) : the_row();
-
-        // display a sub field value
-        the_sub_field('field_5a681fb7a5cc0');
-        the_sub_field('field_5a693948b85bf');
-
-    endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
+if (have_rows('field_5a68162825811')):
+  echo "<!--";
+    while (have_rows('field_5a68162825811')) : the_row();
 ?>
-<h3>Outcomes</h3>
-<?php
-
-// check if the repeater field has rows of data
-if (have_rows('field_5a681ec374a40')):
-
+     // Questions 
+      <?php   if (have_rows('field_5a6816c125812')):
+  // loop through the rows of data
+      $q = 1;
+    while (have_rows('field_5a6816c125812')) : the_row();
+        echo "Question: ";
+        the_sub_field('field_5a681fb7a5cc0');
+        echo ", Weight: ";
+        the_sub_field('field_5a693948b85bf');
+        echo "<br>";
+        $q++;
+    endwhile;
+else :
+    // no rows found
+endif;?>  
+         // Outcomes 
+    <?php   if (have_rows('field_5a681ec374a40')):
   // loop through the rows of data
     while (have_rows('field_5a681ec374a40')) : the_row();
-
-        // display a sub field value
-        the_sub_field('field_5a681ed574a41');
+              
+        // Lower unit
         the_sub_field('field_5a681f3774a42');
+        echo " < ";
+        the_sub_field('field_5a681ed574a41');
+        echo " > ";
         the_sub_field('field_5a682049db3af');
+        echo ", Outcome text: ";
         the_sub_field('field_5a693992b85c0');
-
+        echo "<br>";
     endwhile;
-
+    echo "-->";
 else :
-
     // no rows found
-
-endif;
-
-?>
-<?php
-/**
- * Partial template for content in page.php
- *
- * @package understrap
- */
-?>
+endif;?> 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
@@ -117,6 +104,7 @@ endif;
   color: white;
   padding: 20px 20px 20px 0; 
   background-size: cover;
+  min-height: 400px;
 }
 @media (min-width: 768px) {
  .results
@@ -209,71 +197,34 @@ endif;
   </div>
   </div>
 <script>
+  //Generate questions, apply weighting
+      <?php   if (have_rows('field_5a6816c125812')): ?>
 var prompts = [
-  {
-    prompt:
-      "I find it very easy to read and understand English on a computer screen.",
-    weight: -1,
-    class: "group0"
-  },
-  {
-    prompt:
-      "I often upload photos and videos to digital social media like Facebook, Instagram or online messenging services.",
-    weight: -1,
-    class: "group1"
-  },
-  {
-    prompt:
-      "I know a lot about the different support services available in the aged care sector.",
-    weight: -1,
-    class: "group2"
-  },
-  {
-    prompt:
-      "I find it easy to explain my culture and cultural practices to people from different cultures to mine.",
-    weight: -1,
-    class: "group3"
-  },
-  {
-    prompt:
-      "I find filling out forms easy and rarely need to ask for help to complete them.",
-    weight: -1,
-    class: "group4"
-  },
-  {
-    prompt:
-      "I understand what duty of care is and know how to apply it in a residential aged care facility.",
-    weight: -1,
-    class: "group5"
-  },
-  {
-    prompt: "I know how to safely use a lifting machine to move a resident.",
-    weight: 1,
-    class: "group6"
-  },
-  {
-    prompt:
-      "If I see a liquid spilt on the ground at work, I know the steps to take before cleaning it up.",
-    weight: 1,
-    class: "group8"
-  },
-  {
-    prompt:
-      "I have participted in continuous improvement activities in a residential aged care facility.",
-    weight: 1,
-    class: "group9"
-  }
+    <?php $q = 0;
+    while (have_rows('field_5a6816c125812')) : the_row(); ?>
+    {
+       prompt:"<?php the_sub_field('field_5a681fb7a5cc0'); ?>",
+       weight:"<?php the_sub_field('field_5a693948b85bf'); ?>",
+       class: "group<?php echo $q; ?>",
+        // number
+     },   
+        <?php $q++ ?>
+   <?php endwhile;
+else : ?>
+<?php endif;?>  
 ];
+</script>
+<script>
 var prompt_values = [
   {
     value: "Strongly Agree",
     class: "btn-default btn-strongly-agree",
-    weight: 5
+    weight: 2
   },
   {
     value: "Agree",
     class: "btn-default btn-agree",
-    weight: 3
+    weight: 1
   },
   {
     value: "Neutral",
@@ -283,12 +234,12 @@ var prompt_values = [
   {
     value: "Disagree",
     class: "btn-default btn-disagree",
-    weight: -3
+    weight: -1
   },
   {
     value: "Strongly Disagree",
     class: "btn-default btn-strongly-disagree",
-    weight: -5
+    weight: -2
   }
 ];
 function createPromptItems() {
@@ -363,27 +314,47 @@ $(".value-btn").mousedown(function() {
   }
   console.log(total);
 });
+</script>
+
+ <script>
 $("#submit-btn").click(function() {
   $(".results").removeClass("hide");
   $(".results").addClass("show");
-  if (total < 0) {
+  if (total > 99999) {
     //Confident
     document.getElementById("results").innerHTML =
-      "<ul>    <li><b>1)</b> Continuous improvement</li>    <li><b>2)</b> Legal and ethical requirements</li>    <li><b>3)</b> Diversity in aged care</li>    <li><b>4)</b> Safety Hazards and risk management</li>    <li><b>5)</b> Communicating and working with others</li>    <li><b>6)</b> Introduction to aged care</li>    <li><b>7)</b> RMIT learning Lab*</li>    <li><b>8)</b> RMIT study support*</li>    <li><b>9)</b> Canvas in this course*</li></ul>";
-  } else if (total > 0) {
-    // Non confident
-    document.getElementById("results").innerHTML =
-      "<ul>    <li><b>1)</b> RMIT learning Lab*</li>    <li><b>2)</b> RMIT study support*</li>    <li><b>3)</b> Canvas in this course*</li>    <li><b>4)</b> Introduction to aged care</li>    <li><b>5)</b> Diversity in aged care</li>    <li><b>6)</b> Communicating and working with others</li>    <li><b>7)</b> Legal and ethical requirements</li>    <li><b>8)</b> Safety Hazards and risk management</li>    <li><b>9)</b> Continuous improvement</li></ul>";
-  } else {
+     total;
+
+  }
+ <?php   if (have_rows('field_5a681ec374a40')):
+  // loop through the rows of data
+    while (have_rows('field_5a681ec374a40')) : the_row();
+        $upper = get_sub_field('field_5a682049db3af');
+        $lower = get_sub_field('field_5a681f3774a42');
+        $outcome_text = get_sub_field('field_5a693992b85c0');
+
+     echo 'else if (total <= '.$upper.' && total >= '.$lower.') {  
+      document.getElementById("results").innerHTML =
+       "'.$outcome_text.'";
+     }';
+    endwhile;
+
+else :
+    // no rows found
+endif;?> 
+  else {
     //neutral answers
     document.getElementById("results").innerHTML =
-      "<ul><li><b>1)</b> RMIT learning Lab*</li>    <li><b>2)</b> Canvas in this course*</li>    <li><b>3)</b> Introduction to aged care</li>    <li><b>4)</b> Diversity in aged care</li>    <li><b>5)</b> RMIT study support*</li>    <li><b>6)</b> Continuous improvement</li>    <li><b>7)</b> Communicating and working with others</li>    <li><b>8)</b> Legal and ethical requirements</li>    <li><b>9)</b> Safety Hazards and risk management</li></ul>";
+      "We were not able to suggest a roadmap for the answers you have given.";
   }
+
   // Hide the quiz after they submit their results
   $("#quiz").addClass("hide");
   $("#submit-btn").addClass("hide");
   $("#retake-btn").removeClass("hide");
 });
+</script>
+<script>
 // Refresh the screen to show a new quiz if they click the retake quiz button
 $("#retake-btn").click(function() {
   $("#quiz").removeClass("hide");
@@ -399,3 +370,9 @@ function PrintMap() {
 </script>
   </div><!-- .entry-content -->
 </article><!-- #post-## -->
+<?php 
+    endwhile;
+else :
+    // no rows found
+endif;
+?>
