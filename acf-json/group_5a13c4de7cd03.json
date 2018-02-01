@@ -317,6 +317,7 @@
                         "getting_help": "Getting help",
                         "glossary": "Glossary",
                         "group_registration": "Group registration",
+                        "have_a_go": "Have a go",
                         "homepage": "Homepage",
                         "hot_spot": "Hot spot",
                         "licensing_accreditation": "Licensing accreditation",
@@ -1445,5 +1446,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517525396
+    "modified": 1517525843
 }
