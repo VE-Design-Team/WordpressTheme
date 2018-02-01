@@ -1,4 +1,4 @@
-<h3>Questions</h3>
+<!--<h3>Questions</h3>
 <?php
 
 // check if the repeater field has rows of data
@@ -43,7 +43,7 @@ else :
 
 endif;
 
-?>
+?>-->
 <?php
 /**
  * Partial template for content in page.php

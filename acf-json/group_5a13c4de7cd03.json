@@ -305,6 +305,7 @@
                         "custom": "Custom",
                         "learning_activity": "Learning activity",
                         "assignment": "Assignments",
+                        "alert": "Alert",
                         "audio": "Audio",
                         "calendar": "Calendar",
                         "canvas_inbox": "Canvas inbox",
@@ -1444,5 +1445,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517189718
+    "modified": 1517525396
 }
