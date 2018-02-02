@@ -21,6 +21,7 @@
                 "Accordion with image": "Accordion with image",
                 "Cards": "Cards",
                 "Carousel": "Carousel",
+                "Cluster banner": "Cluster banner",
                 "Checklist": "Checklist",
                 "Image title reveal": "Image title reveal",
                 "Introduction page": "Introduction page",
@@ -1422,6 +1423,135 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5a73d3d48b839",
+            "label": "Cluster banner",
+            "name": "cluster_banner",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Cluster banner"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a73d4088b83a",
+                    "label": "Course title",
+                    "name": "course_title",
+                    "type": "text",
+                    "instructions": "eg: \"introduction to service delivery in aged care sector\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73d4aa8b83b",
+                    "label": "Course codes",
+                    "name": "course_codes",
+                    "type": "text",
+                    "instructions": "eg: \"CHCCOM005, CHCDIV001, CHCLEG001, and HLTWHS002\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73d4da8b83c",
+                    "label": "School",
+                    "name": "school",
+                    "type": "text",
+                    "instructions": "eg: \"School of Global, Urban, and Social Studies\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73d775be41f",
+                    "label": "Background image",
+                    "name": "background_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5a73d88c935e5",
+                    "label": "Background style",
+                    "name": "background_style",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "background-repeat: infinity;",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -1439,12 +1569,12 @@
         ]
     ],
     "menu_order": 2,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517525843
+    "modified": 1517542409
 }
