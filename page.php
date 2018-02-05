@@ -15,7 +15,7 @@ $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 <div class="wrapper" id="page-wrapper">
 	<div id="content" tabindex="-1">
 				<!-- Do the left sidebar check -->
-			<div class="col-md-12 content-area" id="primary">
+			<div class="mt-2 content-area" id="primary">
 			<main class="site-main" id="main">
 				<?php while (have_posts()) : the_post(); ?>
 					<?php get_template_part('loop-templates/content', 'page'); ?>

@@ -3,6 +3,7 @@
 {
   display:inline-block;
   min-height: 400px;
+  width: 100%;
 }
 .background-image img
 {
@@ -15,11 +16,14 @@ right: 0;
 {
    min-height: 400px;
   max-height: 600px;
+  
 }
 .card-body
 {
   padding: 0.5rem;
 }
+
+
 <?php
 // Get colours
 if (have_rows('field_5a541f36eef91')):
@@ -80,7 +84,7 @@ img.collapsing {
     display: none;
 }
 </style>
-<div id="awm" class="container aim glossarize">
+<div id="awm" class=" aim glossarize">
   <div class="row">
     <div class="col-12 text-center">
       <h3><?php

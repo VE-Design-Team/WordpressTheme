@@ -1,4 +1,5 @@
  <!-- image tabs on left -->
+ <div class="col-12">
     <div class="row">
           <div class="nav flex-column col-2 " id=" v-tab<?php echo get_the_ID();?>" role="tablist" aria-orientation="vertical">
 <?php while ( have_rows('field_5a13c7fda9110') ) : the_row();?>
@@ -13,6 +14,7 @@
                   <p><?php echo the_sub_field('field_5a14fdab64ad0');?></p>
                 </div>
 <?php endwhile;?>
+</div>
 </div>
 <!-- end image tabs on  left-->
 <script>

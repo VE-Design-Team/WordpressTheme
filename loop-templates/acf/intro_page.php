@@ -7,7 +7,7 @@
 {
 	max-width: 100px;
 }
-</style><div class="row intro_page">
+</style><div class="intro_page">
 <ul class="nav nav-tabs col-12" id="Tab<?php echo get_the_ID();?>" role="tablist">
 <?php while (have_rows('field_5a67bc57f0b60')) : the_row();?>
 
