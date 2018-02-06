@@ -84,7 +84,7 @@ img.collapsing {
     display: none;
 }
 </style>
-<div id="awm" class=" aim glossarize">
+<div id="awm" class=" aim col-12 glossarize">
   <div class="row">
     <div class="col-12 text-center">
       <h3><?php

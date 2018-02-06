@@ -20,7 +20,7 @@ a.nav-link > .h5 {
 }
 a.nav-link.active > .h5
 {
-color: red;
+color: #e60028;
 }
 </style>
 <script>
