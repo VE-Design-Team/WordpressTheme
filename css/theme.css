@@ -9448,6 +9448,9 @@ h4, .h4 {
 .lead {
   font-weight: 400; }
 
+.nav-tabs .nav-item {
+  margin-bottom: -4px; }
+
 .tab-content {
   border-left: 2px solid #636668;
   border-right: 2px solid #636668;
