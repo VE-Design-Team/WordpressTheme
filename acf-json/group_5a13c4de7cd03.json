@@ -24,6 +24,7 @@
                 "Cluster banner": "Cluster banner",
                 "Checklist": "Checklist",
                 "Custom HTML": "Custom HTML",
+                "Hotspots": "Hotspots",
                 "Image title reveal": "Image title reveal",
                 "Introduction page": "Introduction page",
                 "Roadmap": "Roadmap",
@@ -34,6 +35,41 @@
             },
             "default_value": [
                 "None"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a7a6b39ac350",
+            "label": "Accordion style",
+            "name": "accordion_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg": "Blue and grey",
+                "colours": "Colours"
+            },
+            "default_value": [
+                "bg"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -910,7 +946,7 @@
         },
         {
             "key": "field_5a541f36eef91",
-            "label": "Section",
+            "label": "Accordion with image",
             "name": "awi_section",
             "type": "repeater",
             "instructions": "",
@@ -980,7 +1016,15 @@
                     "type": "select",
                     "instructions": "Select a differentiate the section from other sections. RMIT brand colours are used, they should appear in your image also for continuity.",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a7a6b39ac350",
+                                "operator": "!=",
+                                "value": "bg"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -1580,6 +1624,137 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5a7b7e0ddb57c",
+            "label": "Hotspots",
+            "name": "hotspots",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Hotspots"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a7b7e35db57d",
+                    "label": "Hotspots title",
+                    "name": "hotspots_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a7b7e45db57e",
+                    "label": "Hotspot description",
+                    "name": "hotspot_description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5a7b7fa2d4c97",
+                    "label": "X location",
+                    "name": "x_location",
+                    "type": "range",
+                    "instructions": "This determines on the X-axis where this hotspot will appear",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "%"
+                },
+                {
+                    "key": "field_5a7b7ff2d4c98",
+                    "label": "Y location",
+                    "name": "y_location",
+                    "type": "range",
+                    "instructions": "This determines on the Y-axis where this hotspot will appear",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "%"
+                }
+            ]
+        },
+        {
+            "key": "field_5a7ba039caa05",
+            "label": "Hotspot background",
+            "name": "hotspot_background",
+            "type": "image",
+            "instructions": "Select an image to be used for hotspots",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -1604,5 +1779,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517971069
+    "modified": 1518055806
 }
