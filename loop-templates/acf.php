@@ -29,6 +29,19 @@
 <?php get_template_part('loop-templates/acf/hotspots');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Roadmap'): ?>
 <?php get_template_part('loop-templates/acf/roadmap');?>
+<?php elseif(!empty(get_the_content())): { ?>
+
+<?php the_content(); ?>
+
+
+<?php } else: { echo '<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">This content is currently being built</h4>
+
+    <p class="card-text">Please check back later</p>
+  </div>
+</div>'; };
+ ?> 
 <?php endif;?>
 <style>
 #nav-tab .tab-content
