@@ -25,11 +25,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			<div class="col-md-12 content-area" id="primary">
 
 			<main class="site-main" id="main">
-Michael - put your code here
 
-
-End here
-		
 
 			</main><!-- #main -->
 
