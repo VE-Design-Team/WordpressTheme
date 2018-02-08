@@ -20,9 +20,9 @@ html {
   position: absolute;
   left: 5px;
   top: 5px;
-  background-image: url("");
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzcgMjc3Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkFydGJvYXJkIDJGaXZlPC90aXRsZT48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjEwMi41IiB3aWR0aD0iNzIiIGhlaWdodD0iMjc3Ii8+PHJlY3QgY2xhc3M9ImNscy0xIiB4PSIxMDIuNSIgd2lkdGg9IjcyIiBoZWlnaHQ9IjI3NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAyNzcpIHJvdGF0ZSgtOTApIi8+PC9zdmc+);
   background-size: 75%;
-  background-position: center center;
+  background-position: 50%;
   background-repeat: no-repeat;
 }
 .hotspot:before
