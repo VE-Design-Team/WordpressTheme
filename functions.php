@@ -184,23 +184,3 @@ function dynamic_author_dropdown( $field ){
 add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
 
 
-function options_instructions_example() {
-    global $my_admin_page;
-    $screen = get_current_screen();
-
-    if ( is_admin() && ($screen->id == 'page') ) {
-
-        function add_content_after_editor() {
-            global $post;
-            $id = $post->ID;
-			echo '<div class="postbox""><div class="inside">';
-			echo '<h2 class="hndle ui-sortable-handle">Preview </h2><p>Publish first, then update your document and preview here.</p>';
-			echo '<iframe src="http://localhost/wordpress/?p=';
-			echo  get_the_ID();	 
-			echo 'title="" style="border:0px #ffffff none;" id="C3319iframe" width="800" height="600" name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this)" allowfullscreen="allowfullscreen" onload="iFrameResize()" ></iframe>';
-            echo '</div></div>';
-        }
-        add_action( 'edit_form_after_title', 'add_content_after_editor' );
-    }
-}
-add_action( 'admin_notices', 'options_instructions_example' );
