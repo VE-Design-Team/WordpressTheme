@@ -10,10 +10,14 @@
 	<?php $rowCount = count(get_field('field_5a1b4e5ebab7b')); ?>
 	<?php $i = 1; ?>
 	<?php while (have_rows('field_5a1b4e5ebab7b')): the_row(); ?>
+
 		<?php // vars
             $title = get_sub_field('field_5a1b4e9abab7c');
-            $description = get_sub_field('field_5a1b51d28610a'); ?>
-		<h3><?php echo $title; ?></h3>
+						$description = get_sub_field('field_5a1b51d28610a');
+						$otherterms = get_sub_field('field_5a81179b7173a');		
+						?>
+		<h3 class="h4 mb-0"><?php echo $title; ?></h3>
+		<h4 class="small mb-0"><i class="text-muted"><?php echo $otherterms; ?></i></h3>
     <p><?php echo $description; ?></p>
 		<?php if ($i < $rowCount): ?>
 			  <?php // between loops?>

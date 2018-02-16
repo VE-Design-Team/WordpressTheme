@@ -15,7 +15,6 @@ $the_theme = wp_get_theme();
 
   <!--TODO fix this tooltip conflict -->
 <?php else: {} ?>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/tooltip.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.glossarize.js"></script>
 <?php endif;?>
@@ -23,6 +22,10 @@ $the_theme = wp_get_theme();
   <script>
   $(function(){
     $('.glossarize').glossarizer({
+      //lookupTagName: '',
+      lookupTagName: 'p, li',
+      replaceTag: 'abbr',
+      
       <?php if (WP_DEBUG === true) {
     echo "//dev environment
     ";

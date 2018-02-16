@@ -41,6 +41,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5a81179b7173a",
+                    "label": "Other terms",
+                    "name": "other_terms",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5a1b4ec2bab7d",
                     "label": "Ignore terms",
                     "name": "ignore_terms",
@@ -86,7 +105,7 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "page-glossary.php"
+                "value": "page-glossarydata.php"
             }
         ]
     ],
@@ -100,5 +119,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1511741444
+    "modified": 1518409682
 }
