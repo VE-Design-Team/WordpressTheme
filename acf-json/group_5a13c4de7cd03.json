@@ -24,6 +24,7 @@
                 "Cluster banner": "Cluster banner",
                 "Checklist": "Checklist",
                 "Custom HTML": "Custom HTML",
+                "Flip cards": "Flip cards",
                 "Horizontal cards": "Horizontal cards",
                 "Hotspots": "Hotspots",
                 "Image title reveal": "Image title reveal",
@@ -1855,6 +1856,121 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5a865a7a9f82f",
+            "label": "Flip cards",
+            "name": "flip_cards",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Flip cards"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a865a8c9f830",
+                    "label": "Front text",
+                    "name": "front_text",
+                    "type": "wysiwyg",
+                    "instructions": "Text will appear centred on the card, with an image, overlaid.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5a8663981362e",
+                    "label": "Front image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Best to use an image that is the same size as the card content on the back.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5a86650b13630",
+                    "label": "Rear text",
+                    "name": "rear_text",
+                    "type": "wysiwyg",
+                    "instructions": "Text will appear centred on the card, with an image, overlaid.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5a8664851362f",
+                    "label": "Rear image",
+                    "name": "rear_image",
+                    "type": "image",
+                    "instructions": "Best to use an image that is the same size as the card content on the back.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -1879,5 +1995,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1518749665
+    "modified": 1518757348
 }
