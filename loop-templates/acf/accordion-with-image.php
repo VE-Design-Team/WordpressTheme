@@ -68,6 +68,10 @@ if (have_rows('field_5a541f36eef91')):
     /* Safari 3-8 */
     transform: rotate(45deg);
 }
+.activator
+{
+  cursor: pointer;
+}
 <?php
     $i++;
   endwhile;
@@ -130,7 +134,7 @@ if (have_rows('field_5a541f36eef91')):
     echo $i; ?>">
         <div data-toggle="collapse"  data-target=".aim-<?php
     echo $i; ?>" role="button" aria-expanded="false" aria-controls="aim-<?php
-    echo $i; ?>" class="h6 mb-0 p-2">
+    echo $i; ?>" class="activator h6 mb-0 p-2">
      <span class="ac-plus"><i class="fa fa-plus" aria-hidden="true"></i> </span> <?php
     the_sub_field('field_5a541fbfeef92'); ?></div>
 <?php if (get_sub_field('field_5a541fc6eef93')): ?>
