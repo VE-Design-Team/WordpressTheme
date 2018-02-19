@@ -1882,14 +1882,14 @@
             "min": 1,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add another card",
             "sub_fields": [
                 {
                     "key": "field_5a865a8c9f830",
                     "label": "Front text",
                     "name": "front_text",
                     "type": "wysiwyg",
-                    "instructions": "Text will appear centred on the card, with an image, overlaid.",
+                    "instructions": "Text will appear centred on the card, with an image, overlaid. Don't use links - they won't be accessible.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1916,7 +1916,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -1959,7 +1959,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -1995,5 +1995,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1518757348
+    "modified": 1519014893
 }
