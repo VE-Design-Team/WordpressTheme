@@ -28,9 +28,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 							<div class="">
 								
 <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-  <div class="card-header">Content missing</div>
+  <div class="card-header">404 : Content missing</div>
   <div class="card-body">
-        <p class="card-text">This content failed to load or needs be relinked. Contact your course administrator for assistance</p>
+        <p class="card-text">This content failed to load or needs be relinked. Contact your course administrator for assistance
+			
+
+		</p>
   </div>
 							</div>	
 	
