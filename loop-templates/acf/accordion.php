@@ -1,20 +1,51 @@
-<div id="accordion mt-5 accordion<?php echo get_the_ID();?>" role="tablist" aria-multiselectable="true">
-<?php
-// check if the accordian field has  data
-if (have_rows('field_5a13c61e91a66')):
-  // loop through the  data
-    while (have_rows('field_5a13c61e91a66')) : the_row();?>
-        <div class="accord-item p-2"><?php //apply the accordion header?>
-        <a data-toggle="collapse" data-parent="#accordion<?php echo get_the_ID();?>" href="#collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" aria-controls="collapseOne">
-           <h3 class="h5"><span class='ac-plus '><i class="fa fa-plus" aria-hidden="true"></i></span>  <?php echo the_sub_field('field_5a13c67d91a67'); ?></h3>
-        </a>
-        <?php // display the accordion collapsed content?>
-        <div id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" class="collapse mt-3 pl-3 glossarize" role="tabpanel" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>">
-        <?php echo the_sub_field('field_5a13c6ac91a68'); ?>
+<style>
+
+
+
+</style>  
+
+<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+  Select each communication or cultural barrier to learn how to manage it.
+</div>
+<div id="accordion">
+  <div id="cards">
+    <div class="card">
+      <div class="card-header collapsed pl-2" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> Collapsible Group Item #1
+
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+          on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+          raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
         </div>
       </div>
-        <?php  //close the accordion footer?>
-   <?php endwhile;
-else : ?>
-<?php endif; ?>
+    </div>
+    <div class="card">
+      <div class="card-header collapsed pl-2" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> Collapsible Group Item #2
+
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+          on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+          raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header collapsed pl-2" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> Collapsible Group Item #3
+        </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+          on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+          raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

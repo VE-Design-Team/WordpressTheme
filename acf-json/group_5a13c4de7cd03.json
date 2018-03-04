@@ -46,6 +46,89 @@
             "placeholder": ""
         },
         {
+            "key": "field_5a98cf8733d10",
+            "label": "Instruction",
+            "name": "instruction",
+            "type": "text",
+            "instructions": "Add an instruction for this rich content. It may not be required. Won't show if empty.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Carousel"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Checklist"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Custom HTML"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Hotspots"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Roadmap"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Tabbed sections"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Tooltip Textstrings"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a7a6b39ac350",
             "label": "Accordion style",
             "name": "accordion_style",
@@ -1995,5 +2078,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519014893
+    "modified": 1519964207
 }
