@@ -1,5 +1,6 @@
-<?php
-if (have_rows('field_5a1dfb52cb056')):
+<?php 
+  if 
+    (have_rows('field_5a1dfb52cb056')):
 $i = 0;
 $last = count(get_field('field_5a1dfb52cb056')); ?>
 <div class="container-fluid" id="checklist">
@@ -12,29 +13,40 @@ $last = count(get_field('field_5a1dfb52cb056')); ?>
 
   <div class="darkgrey">
     <div class="container">
-      <div class="checkpage">
+      <div class="checkpage row">
+
+      <?php 
+
+$image = get_field('field_5a9ca670e8b54');
+
+if( !empty($image) ): ?>
+<div class="col-12 col-sm-3 order-sm-9">
+<img src="<?php the_field('field_5a9ca670e8b54'); ?>" class="mb-2" />
+</div><div class="col-12 col-sm-9">
+<?php else: {} ?>
+  <div class="col-12">
+<?php endif; ?>
         <ul class="list-unstyled lead">
-          <div>
+        
+        
 <?php while (has_sub_field('field_5a1dfb52cb056')): ?>
-    
 <div>
+
+
+
+
             <li tabindex="<?php echo $i; ?>" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>"><i class="fa fa-square" aria-hidden="true"></i><i class="fa fa-check-square" aria-hidden="true"></i><span aria-hidden="true"><?php echo get_sub_field("field_5a1e03efcb057")?></span></li>
-          </div>
-
-
-
-          
+          </div>          
 <?php
 $i++;
 endwhile; ?>
         </ul>
-      </div>
+      </div></div>
     </div>
   </div>
 </div>
 
 <?php else :
-    // no rows found
 endif;
 ?>
 
