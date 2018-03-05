@@ -9735,6 +9735,63 @@ h4,
     color: #e60028;
     border: 1px solid #e3e6e8; }
 
+#cards .card {
+  border: 2px solid #ddd;
+  border-radius: 0;
+  margin: 5px;
+  background-color: #f7f7f7; }
+  #cards .card #content {
+    float: left;
+    display: inline;
+    position: relative;
+    top: 0; }
+    #cards .card #content .card-header {
+      border-radius: 0;
+      color: #000;
+      font-weight: 700;
+      background: inherit;
+      margin-left: 100px;
+      padding-top: 15px; }
+      #cards .card #content .card-header .fa-minus {
+        display: inline; }
+      #cards .card #content .card-header .fa-plus {
+        display: none; }
+  #cards .card .card-body {
+    margin-left: 100px;
+    margin-right: 50px;
+    padding-top: 0px; }
+    #cards .card .card-body hr {
+      background-color: #00aaff; }
+
+#cards .curve {
+  width: 100px;
+  height: 100px;
+  margin-top: -2px;
+  margin-left: -2px;
+  float: left;
+  position: absolute;
+  background-color: #ccc;
+  -webkit-border-radius: 0px 0px 100px 100px;
+  border-radius: 0% 0% 100% 0%; }
+  #cards .curve img {
+    height: 35px;
+    width: 35px;
+    margin-top: 22px;
+    margin-left: 22px;
+    position: relative; }
+    #cards .curve img .st0 {
+      fill: #fff; }
+
+#cards .pixel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  float: right;
+  right: -2px;
+  bottom: -2px; }
+  #cards .pixel svg .pixel {
+    fill: #00aaff; }
+
 .instruction {
   font-weight: 400;
   background: #e5e5e5;
