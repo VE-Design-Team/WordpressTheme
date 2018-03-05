@@ -13,7 +13,7 @@ $last = count(get_field('field_5a1dfb52cb056')); ?>
 
   <div class="darkgrey">
     <div class="container">
-      <div class="checkpage row">
+      <div class="checkpage row glossarize">
 
       <?php 
 
