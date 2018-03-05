@@ -21,9 +21,73 @@
 // Any additional imported files //
 @import "theme/theme";
 // Rich content //
-@import "theme/rich_content";
+@import "theme/rich-content";
 
 // <--------- That's where you can add your own design. Thats your part!
 @import "theme/contact-form7";
 
 // Contact Form 7 - Bootstrap 4 support
+
+//Checklist
+.instruction {
+    font-weight: 400;
+    background: $grey;
+    padding: 10px;
+    margin-bottom: 0rem;
+    font-weight: 100;
+    .fa-info-circle {
+      color: $blue;
+    }
+  }
+  
+  #checklist {
+    .container {
+      padding: 1rem;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+    }
+    .darkgrey {
+    background: $dark-grey;
+  }
+    .checkpage {
+      border-top: $light-blue 5px solid;
+      background: $light-grey;
+      //margin: 1rem 0 1rem 0;
+      padding: 1rem;
+      position: relative;
+      .note {
+      }
+  
+      .note:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-width: 0 0px 30px 30px;
+        border-style: solid;
+        border-color: $dark-grey $light-grey $dark-grey $grey;
+        background: #658e15;
+        display: block;
+        width: 0;
+      }
+    }
+    li > i.fa-check-square
+  {
+  display: none;
+  color: $light-blue;
+  }
+  li.checked > i.fa-square, span
+  {
+  display: none;
+  }
+  li.checked > i.fa-check-square, li.checked > span
+  {
+  display: inline;
+  margin-right: 0.5rem;
+    
+  }
+  i.fa-square
+    {
+      color: $dark-grey;
+    }
+  }

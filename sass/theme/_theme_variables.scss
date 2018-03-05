@@ -28,8 +28,6 @@ $cyan: $rmit-azure !default;
 $aqua: $rmit-aqua !default;
 $lavender: $rmit-lavender !default;
 
-
-
 $white:    #fff !default;
 $gray-25: #f9fafa;
 $gray-50: #f3f5f5;
@@ -53,7 +51,6 @@ $gray-900:#131414!default;
 
 $black:    #000 !default;
 
-
 $primary: $rmit-lightblue !default;
 $success: $rmit-green !default;
 $info: $rmit-aqua !default;
@@ -61,8 +58,8 @@ $warning: $rmit-yellow !default;
 $danger: $rmit-red !default;
 
 $headings-color: $rmit-red !default;
-
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+@import url("https://fonts.googleapis.com/css?family=Lato");
+$font-family-sans-serif: "Lato", Lato, Arial, sans-serif !default;
 $font-family-serif: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
@@ -77,3 +74,14 @@ $nav-tabs-link-active-color:        $gray-700 !default;
 $nav-tabs-link-active-bg:           $white !default;
 $nav-tabs-link-active-border-color: $gray-700 !default;
 $nav-tabs-border-width: $card-border-width; 
+
+// Need consolidating
+
+$grey: #e5e5e5;
+$dark-grey: #ccc;
+$light-grey: #f7f7f7;
+$white: #fff;
+$black: #000;
+$blue: #000054;
+$light-blue: #00aaff;
+$red: #dc291e;

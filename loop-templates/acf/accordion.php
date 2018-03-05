@@ -1,16 +1,14 @@
 <?php if (get_field('field_5a98cf8733d10')) : ?>
 <div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
   <?php echo the_field('field_5a98cf8733d10'); ?>
-  </div>
+</div>
 <?php endif; ?>
-<?php
-
-if (have_rows('field_5a13c61e91a66')): ?>
+<?php if (have_rows('field_5a13c61e91a66')): ?>
 <div id="accordion">
   <div id="cards">
    <?php while (have_rows('field_5a13c61e91a66')): the_row();?>
     <div class="card">
-      <div class="card-header collapsed pl-2" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" aria-expanded="true" aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> Collapsible Group Item #1
+      <div class="card-header collapsed pl-2" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" aria-expanded="true" aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> <?php echo get_sub_field('field_5a13c67d91a67'); ?>
       </div>
       <div id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" class="collapse" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" data-parent="#accordion">
         <div class="card-body glossarize">
@@ -19,7 +17,7 @@ if (have_rows('field_5a13c61e91a66')): ?>
       </div>
     </div>
 				   <?php endwhile; ?>
-           </div>
+  </div>
 </div>
 <?php else: ?>
 <?php endif;?>
