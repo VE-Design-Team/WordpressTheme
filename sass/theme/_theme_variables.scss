@@ -58,8 +58,7 @@ $warning: $rmit-yellow !default;
 $danger: $rmit-red !default;
 
 $headings-color: $rmit-red !default;
-@import url("https://fonts.googleapis.com/css?family=Lato");
-$font-family-sans-serif: "Lato", Lato, Arial, sans-serif !default;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;

@@ -82,10 +82,10 @@
     border-radius: 0% 0% 100% 0%;
     img
     {
-      height: 35px;
-      width: 35px;
-      margin-top: 22px;
-      margin-left: 22px;
+      height: 60px;
+      width: 60px;
+      margin-top: 10px;
+      margin-left: 10px;
       position: relative;
    
         .st0
@@ -233,7 +233,7 @@
       }
     }
   }
-  ul {
+  ul.nav-tabs {
     li {
       border-right: 2px solid $dark-grey;
       border-top: 2px solid $dark-grey;
