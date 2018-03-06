@@ -28,7 +28,7 @@
 
 // Contact Form 7 - Bootstrap 4 support
 //Cards
-#cards{
+#calloutcards{
   .card {
     border: 2px solid $mid-grey;
     border-radius: 0;
@@ -177,3 +177,77 @@
       color: $dark-grey;
     }
   }
+
+///Tabs
+
+//Top
+#tabs {
+  margin-top: 1rem;
+
+  .nav-tabs {
+    border-bottom: 2px solid $dark-grey;
+    background: $white;
+    .nav-link {
+      border: 0;
+    }
+    .nav-link:hover {
+      border: 0;
+    }
+    li {
+      background: $mid-grey;
+    }
+    .nav-item {
+      font-weight: 700;
+      color: $dark-grey;
+      margin-bottom: -2px;
+      // background: $mid-grey;
+      i {
+        margin-left: 0.5rem;
+      }
+      .title {
+        margin-left: 1rem;
+        color: $v-dark-grey;
+        i {
+          color: $mid-grey;
+        }
+      }
+      .checked,
+      .active {
+        border-top: 0;
+        background: $white;
+        position: relative;
+        margin-top: -8px;
+        padding-top: 11px;
+        bottom: -8px;
+        color: $red;
+        border-radius: 0;
+
+        .title {
+          position: relative;
+          bottom: 3px;
+          color: $red;
+          i {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      border-right: 2px solid $dark-grey;
+      border-top: 2px solid $dark-grey;
+    }
+    li:nth-child(1) {
+      border-left: 2px solid $dark-grey;
+    }
+    .active {
+    }
+  }
+  .tab-content {
+    padding: 1rem;
+    border-left: 2px solid $dark-grey;
+    border-right: 2px solid $dark-grey;
+    border-bottom: 2px solid $dark-grey;
+  }
+}

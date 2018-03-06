@@ -77,10 +77,11 @@ $nav-tabs-border-width: $card-border-width;
 
 // Need consolidating
 
-$grey: #e5e5e5;
-$dark-grey: #ccc;
-$light-grey: #f7f7f7;
-$mid-grey: #ddd;
+$grey: $gray-200;
+$dark-grey: $gray-450;
+$v-dark-grey: $gray-750;
+$light-grey: $gray-25;
+$mid-grey: $gray-300;
 $white: #fff;
 $black: #000;
 $blue: #000054;
