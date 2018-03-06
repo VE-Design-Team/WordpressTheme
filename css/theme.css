@@ -9735,66 +9735,66 @@ h4,
     color: #e60028;
     border: 1px solid #e3e6e8; }
 
-#cards .card {
-  border: 2px solid #ddd;
+#calloutcards .card {
+  border: 2px solid #d7d7d7;
   border-radius: 0;
   margin: 5px;
-  background-color: #f7f7f7; }
-  #cards .card #content {
+  background-color: #f9fafa; }
+  #calloutcards .card #content {
     float: left;
     display: inline;
     position: relative;
     top: 0; }
-    #cards .card #content .card-header {
+    #calloutcards .card #content .card-header {
       border-radius: 0;
       color: #000;
       font-weight: 700;
       background: inherit;
       margin-left: 100px;
       padding-top: 15px; }
-      #cards .card #content .card-header .fa-minus {
+      #calloutcards .card #content .card-header .fa-minus {
         display: inline; }
-      #cards .card #content .card-header .fa-plus {
+      #calloutcards .card #content .card-header .fa-plus {
         display: none; }
-  #cards .card .card-body {
+  #calloutcards .card .card-body {
     margin-left: 100px;
     margin-right: 50px;
     padding-top: 0px; }
-    #cards .card .card-body hr {
+    #calloutcards .card .card-body hr {
       background-color: #00aaff; }
 
-#cards .curve {
+#calloutcards .curve {
   width: 100px;
   height: 100px;
   margin-top: -2px;
   margin-left: -2px;
   float: left;
   position: absolute;
-  background-color: #ccc;
+  background-color: #c7cdd1;
   -webkit-border-radius: 0px 0px 100px 100px;
   border-radius: 0% 0% 100% 0%; }
-  #cards .curve img {
+  #calloutcards .curve img {
     height: 35px;
     width: 35px;
     margin-top: 22px;
     margin-left: 22px;
     position: relative; }
-    #cards .curve img .st0 {
+    #calloutcards .curve img .st0 {
       fill: #fff; }
 
-#cards .pixel {
+#calloutcards .pixel {
   position: absolute;
   width: 50px;
   height: 50px;
   float: right;
   right: -2px;
   bottom: -2px; }
-  #cards .pixel svg .pixel {
+  #calloutcards .pixel svg .pixel {
     fill: #00aaff; }
 
 .instruction {
   font-weight: 400;
-  background: #e5e5e5;
+  background: #e3e6e8;
   padding: 10px;
   margin-bottom: 0rem;
   font-weight: 100; }
@@ -9807,11 +9807,11 @@ h4,
   font-weight: 400; }
 
 #checklist .darkgrey {
-  background: #ccc; }
+  background: #c7cdd1; }
 
 #checklist .checkpage {
   border-top: #00aaff 5px solid;
-  background: #f7f7f7;
+  background: #f9fafa;
   padding: 1rem;
   position: relative; }
   #checklist .checkpage .note:before {
@@ -9821,7 +9821,7 @@ h4,
     right: 0;
     border-width: 0 0px 30px 30px;
     border-style: solid;
-    border-color: #ccc #f7f7f7 #ccc #e5e5e5;
+    border-color: #c7cdd1 #f9fafa #c7cdd1 #e3e6e8;
     background: #658e15;
     display: block;
     width: 0; }
@@ -9838,4 +9838,55 @@ h4,
   margin-right: 0.5rem; }
 
 #checklist i.fa-square {
-  color: #ccc; }
+  color: #c7cdd1; }
+
+#tabs {
+  margin-top: 1rem; }
+  #tabs .nav-tabs {
+    border-bottom: 2px solid #c7cdd1;
+    background: #fff; }
+    #tabs .nav-tabs .nav-link {
+      border: 0; }
+    #tabs .nav-tabs .nav-link:hover {
+      border: 0; }
+    #tabs .nav-tabs li {
+      background: #d7d7d7; }
+    #tabs .nav-tabs .nav-item {
+      font-weight: 700;
+      color: #c7cdd1;
+      margin-bottom: -2px; }
+      #tabs .nav-tabs .nav-item i {
+        margin-left: 0.5rem; }
+      #tabs .nav-tabs .nav-item .title {
+        margin-left: 1rem;
+        color: #4f5253; }
+        #tabs .nav-tabs .nav-item .title i {
+          color: #d7d7d7; }
+      #tabs .nav-tabs .nav-item .checked,
+      #tabs .nav-tabs .nav-item .active {
+        border-top: 0;
+        background: #fff;
+        position: relative;
+        margin-top: -8px;
+        padding-top: 11px;
+        bottom: -8px;
+        color: #dc291e;
+        border-radius: 0; }
+        #tabs .nav-tabs .nav-item .checked .title,
+        #tabs .nav-tabs .nav-item .active .title {
+          position: relative;
+          bottom: 3px;
+          color: #dc291e; }
+          #tabs .nav-tabs .nav-item .checked .title i,
+          #tabs .nav-tabs .nav-item .active .title i {
+            color: #dc291e; }
+  #tabs ul li {
+    border-right: 2px solid #c7cdd1;
+    border-top: 2px solid #c7cdd1; }
+  #tabs ul li:nth-child(1) {
+    border-left: 2px solid #c7cdd1; }
+  #tabs .tab-content {
+    padding: 1rem;
+    border-left: 2px solid #c7cdd1;
+    border-right: 2px solid #c7cdd1;
+    border-bottom: 2px solid #c7cdd1; }
