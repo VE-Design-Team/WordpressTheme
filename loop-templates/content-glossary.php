@@ -16,8 +16,13 @@
 						$description = get_sub_field('field_5a1b51d28610a');
 						$otherterms = get_sub_field('field_5a81179b7173a');		
 						?>
-		<h3 class="h4 mb-0"><?php echo $title; ?></h3>
-		<h4 class="small mb-0"><i class="text-muted"><?php echo $otherterms; ?></i></h3>
+		<h3 class="h4 mb-0 text-danger"><?php echo $title; ?></h3>
+
+<?php if( get_sub_field('field_5a81179b7173a') ): ?>
+<h4 class="mb-0 small"><i class="text-muted">Other terms: </i><?php echo $otherterms; ?></h4>
+<?php endif; ?>
+
+	
     <p><?php echo $description; ?></p>
 		<?php if ($i < $rowCount): ?>
 			  <?php // between loops?>
@@ -28,6 +33,7 @@
 <?php endif; ?>
 </div>
 </div>
+
        <?php
         }
     wp_reset_postdata(); ?>
