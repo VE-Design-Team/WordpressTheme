@@ -14,7 +14,7 @@ Template Name: Glossarydata
 						$otherterms = get_sub_field('field_5a81179b7173a');
         ?>
 		"term":"<?php echo htmlentities($title); ?>",
-		"description":"<?php echo htmlentities($title); ?><?php echo htmlentities($otherterms); ?><br><?php echo htmlentities($description); ?>"
+		"description":"<?php if( get_sub_field('field_5a81179b7173a') ): ?><b><?php echo htmlentities($title); ?>, <?php echo htmlentities($otherterms); ?></b><br><?php endif; ?><?php echo htmlentities($description); ?>"
 		<?php if ($i < $rowCount): ?>
 			  <?php echo "},{";?>
 		<?php endif; ?>
@@ -22,3 +22,5 @@ Template Name: Glossarydata
 	<?php endwhile; ?>
   <?php echo "}]";?>
 <?php endif; ?>
+
+
