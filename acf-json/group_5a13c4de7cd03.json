@@ -52,71 +52,7 @@
             "type": "text",
             "instructions": "Add an instruction for this rich content. It may not be required. Won't show if empty.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Accordion"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Accordion with image"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Carousel"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Checklist"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Custom HTML"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Hotspots"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Roadmap"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Tabbed sections"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Tooltip Textstrings"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -2110,5 +2046,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520219516
+    "modified": 1520468834
 }
