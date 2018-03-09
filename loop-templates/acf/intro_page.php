@@ -1,6 +1,10 @@
+<?php if (get_field('field_5a98cf8733d10')) : ?>
+<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+  <?php echo the_field('field_5a98cf8733d10'); ?>
+</div>
+<?php endif; ?>
 
 
-<!-- new-->
 <style>
 .tab-content
 {
