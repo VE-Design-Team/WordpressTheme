@@ -14,7 +14,7 @@
           $card_text_title = get_sub_field_object('field_5a1b95a1a6dc8');
           $card_header_image = get_sub_field_object('field_5a1b9656a6dc9');
           $numrows = count(get_sub_field('field_5a1b72e2b4a86'));
-          
+          $custom_title = get_sub_field('field_5a1b95a1a6dc8');
     ?>
 
 <div class="card <?php if ($x=1) echo "ml-0";?> <?php if ($x!==$numrows) echo "mr-0";?>">
@@ -28,8 +28,19 @@
 
 
     <?php endif; ?></div>
-   <div class="card-header"><?php echo $card_title; ?>
 
+
+
+
+   <div class="card-header">
+<?php 
+  if (get_sub_field('field_5a1b730bb4a87') != "custom"): ?>
+<?php echo $card_title; ?>
+
+   <?php else:{}; ?>
+    <?php echo $custom_title; ?>
+
+    <?php endif; ?>
     </div>
 
     <div class="card-body">
