@@ -1,10 +1,5 @@
 <style>
-#awm
-{
-  display:inline-block;
-  min-height: 400px;
-  width: 100%;
-}
+
 .background-image img
 {
   min-height: 300px;
@@ -18,82 +13,23 @@
   max-height: 600px;
   margin: auto;
 }
-<?php
-// Get colours
-if (have_rows('field_5a541f36eef91')):
-  $i = 1;
-  while (have_rows('field_5a541f36eef91')):
-    the_row(); 
-// setup colour variables
-    $colour = the_sub_field('field_5a542031eef94');
-    ?>
-.aim .card-<?php
-    echo $i; ?> {
-  border-color: <?php echo $colour ?>;
-}
-.aim .card-<?php
-    echo $i; ?> .card-header {
-  background: <?php echo $colour; ?>;
-   
-}
-.aim .card-<?php
-    echo $i; ?> .card-header {
- color: #000;
-}
-.aim .card-<?php
-    echo $i; ?>:hover {
-  border-color: <?php echo $colour ?>;
-    background: <?php echo $colour ?>;
-    
-}
-.aim .card-<?php
-    echo $i; ?>:hover .card-header {
-  background: <?php echo $colour; ?>;
-   
-}
-.card-header
-{
-  cursor: pointer;
-}
-.h6
-{
-  color: #000;
-}
-[data-toggle="collapse"][aria-expanded="true"] > span
-{
 
-  -ms-transform: rotate(45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(45deg);
-    /* Safari 3-8 */
-    transform: rotate(45deg);
-}
-.activator
-{
-  cursor: pointer;
-}
-<?php
-    $i++;
-  endwhile;
-else:
-endif;
-?>
-}
-[data-toggle="collapse"][aria-expanded="true"] > h6 > .ac-plus {
-    display: inline-block;
-    -ms-transform: rotate(45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(45deg);
-    /* Safari 3-8 */
-    transform: rotate(45deg);
-}
+
+
 img.collapsing {
     -webkit-transition: none;
     transition: none;
     display: none;
 }
 </style>
-<div id="awm" class=" aim col-12 glossarize">
+
+<div id="" class=" aim glossarize">
+<?php if (get_field('field_5a98cf8733d10')) : ?>
+<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+  <?php echo the_field('field_5a98cf8733d10'); ?>
+  <?php endif; ?>
+</div>
+<div class="col-12">
   <div class="row">
     <div class="col-12 text-center">
       <h3><?php
@@ -122,34 +58,32 @@ else:
 endif;
 ?>
     </div>
-    <div class="col-xs-12 col-sm-6 col-sm-1 accordion-area">
-      <div class="row">
-<?php
-if (have_rows('field_5a541f36eef91')):
-  // output cards and card bodies
-  $i = 1;
-  while (have_rows('field_5a541f36eef91')):
-    the_row(); ?>
-     <div class="col-12 accord-item card-<?php
+
+    <div class="col-xs-12 col-sm-6 col-sm-1 accordion">
+  
+      <?php if (have_rows('field_5a541f36eef91')): ?>
+<div id="accordion">
+  <div id="cards">
+   <?php while (have_rows('field_5a541f36eef91')): the_row();?>
+    <div class="card">
+      <div class="card-header collapsed pl-2" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?> " aria-expanded="true" aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> <?php echo get_sub_field('field_5a541fbfeef92'); ?>
+      </div>
+      <div id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="collapse" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" data-parent="#accordion">
+        <div class="card-body glossarize multi-collapse aim-<?php
     echo $i; ?>">
-        <div data-toggle="collapse"  data-target=".aim-<?php
-    echo $i; ?>" role="button" aria-expanded="false" aria-controls="aim-<?php
-    echo $i; ?>" class="activator h6 mb-0 p-2">
-     <span class="ac-plus"><i class="fa fa-plus" aria-hidden="true"></i> </span> <?php
-    the_sub_field('field_5a541fbfeef92'); ?></div>
-<?php if (get_sub_field('field_5a541fc6eef93')): ?>
- <div class="aim-<?php
-    echo $i; ?> card-body pl-4 pt-0 collapse multi-collapse small" ><?php
-    the_sub_field('field_5a541fc6eef93'); ?></div>
-<?php endif; ?>
-      </div>     
-<?php
-    $i++;
-  endwhile;
-else:
-endif;
-?>
+        <?php
+    the_sub_field('field_5a541fc6eef93'); ?>
+        </div>
+
+      </div>
     </div>
-    </div>
+				   <?php endwhile; ?>
   </div>
 </div>
+<?php else: ?>
+<?php endif;?>
+    
+    </div>
+  </div>
+  </div>
+
