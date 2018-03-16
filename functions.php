@@ -212,6 +212,7 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Site Support',
 		'menu_slug' 	=> 'site-support',
 		'capability'	=> 'edit_posts',
+		'icon_url' => 'dashicons-groups', // Add this line and replace the second inverted commas with class of the icon you like
 		'redirect'		=> false
 	));
 	
@@ -257,6 +258,7 @@ class Site_Info_Dashboard_Widget {
 		echo '</table>';
 
 	}
+
 
 }
 
