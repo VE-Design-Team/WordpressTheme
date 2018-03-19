@@ -1,10 +1,10 @@
 <?php if (get_field('field_5a98cf8733d10')) : ?>
-<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+<div id="instruction mr-1"><i class="fa fa-info-circle mr-1 fa-lg"></i>
   <?php echo the_field('field_5a98cf8733d10'); ?>
 </div>
 <?php endif; ?>
 <?php if (have_rows('field_5a13c61e91a66')): ?>
-<div id="accordion">
+<div id="accordion" class="mr-1">
   <div id="cards">
    <?php while (have_rows('field_5a13c61e91a66')): the_row();?>
     <div class="card">

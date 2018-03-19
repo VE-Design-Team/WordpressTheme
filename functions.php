@@ -183,4 +183,83 @@ function dynamic_author_dropdown( $field ){
 // acf/load_field/key={$field_key} - filter for a specific field based on it's key name , CHANGE THIS TO YOUR FIELDS KEY!
 add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
 
+//custom dashboard content
 
+// disable default dashboard widgets
+function disable_default_dashboard_widgets() {
+
+	//remove_meta_box('dashboard_right_now', 'dashboard', 'core');
+	remove_meta_box('dashboard_activity', 'dashboard', 'core');
+	remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');
+	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');
+	remove_meta_box('dashboard_plugins', 'dashboard', 'core');
+
+	remove_meta_box('dashboard_quick_press', 'dashboard', 'core');
+	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');
+	remove_meta_box('dashboard_primary', 'dashboard', 'core');
+	remove_meta_box('dashboard_secondary', 'dashboard', 'core');
+	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+	
+}
+add_action('admin_menu', 'disable_default_dashboard_widgets');
+remove_action('welcome_panel', 'wp_welcome_panel');
+
+//Support team page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Support',
+		'menu_title'	=> 'Site Support',
+		'menu_slug' 	=> 'site-support',
+		'capability'	=> 'edit_posts',
+		'icon_url' => 'dashicons-groups', // Add this line and replace the second inverted commas with class of the icon you like
+		'redirect'		=> false
+	));
+	
+	
+}
+//Dashboard content
+
+class Site_Info_Dashboard_Widget {
+
+	public function __construct() {
+
+		add_action( 'wp_dashboard_setup', array( $this, 'add_dashboard_widget' ) );
+
+	}
+
+	public function add_dashboard_widget() {
+
+		wp_add_dashboard_widget(
+			'site_info_dashboard_widget',
+			__( 'Site Info', 'site-info-dashboard-widget' ),
+			array( $this, 'render_dashboard_widget' )
+		);
+
+	}
+
+	public function render_dashboard_widget() {
+				$info = array(
+			__( 'Site Name',          'site-info-dashboard-widget') => get_bloginfo( 'name' ),
+			__( 'Site Tagline',       'site-info-dashboard-widget') => get_bloginfo( 'description' ),
+			__( 'Site URL',           'site-info-dashboard-widget') => get_bloginfo( 'url' ),
+			__( 'Admin Email',        'site-info-dashboard-widget') => get_bloginfo( 'admin_email' ),
+			__( 'Admin Language',     'site-info-dashboard-widget') => get_bloginfo( 'language' ),
+			__( 'Text Direction',     'site-info-dashboard-widget') => get_bloginfo( 'text_direction' ),
+			__( 'PHP Version',        'site-info-dashboard-widget') => PHP_VERSION,
+			__( 'MySQL Version',      'site-info-dashboard-widget') => MYSQL_VERSION,
+			__( 'WordPress Version',  'site-info-dashboard-widget') => get_bloginfo( 'version' ),
+		);
+
+		echo '<table>';
+		foreach ( $info as $key => $value ) {
+			echo '<tr><td><strong>' . $key . ' :</strong></td><td>' . $value . '</td></tr>';
+		}
+		echo '</table>';
+
+	}
+
+
+}
+
+new Site_Info_Dashboard_Widget;

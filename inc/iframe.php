@@ -2,7 +2,7 @@
 // this function outputs Iframe embed code information on relvant pages
 function iframe_admin_notice(){
     global $pagenow;
-    if ( $pagenow == 'post.php' || 'page.php' ) {
+    if ( $pagenow == 'post.php' ) {
     	$iframe_title = get_field( "field_5a2604a30cdd2" );
          echo '
          <div class="notice notice-warning is-dismissible">
