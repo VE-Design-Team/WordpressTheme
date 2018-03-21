@@ -220,46 +220,50 @@ if( function_exists('acf_add_options_page') ) {
 }
 //Dashboard content
 
-class Site_Info_Dashboard_Widget {
 
-	public function __construct() {
+//Site support widget
 
-		add_action( 'wp_dashboard_setup', array( $this, 'add_dashboard_widget' ) );
+function dashboard_widget_function( $post, $callback_args ) {
+	
+	if( have_rows('field_5aaa08f0cbf4d', 'option') ): 
 
-	}
-
-	public function add_dashboard_widget() {
-
-		wp_add_dashboard_widget(
-			'site_info_dashboard_widget',
-			__( 'Site Info', 'site-info-dashboard-widget' ),
-			array( $this, 'render_dashboard_widget' )
-		);
-
-	}
-
-	public function render_dashboard_widget() {
-				$info = array(
-			__( 'Site Name',          'site-info-dashboard-widget') => get_bloginfo( 'name' ),
-			__( 'Site Tagline',       'site-info-dashboard-widget') => get_bloginfo( 'description' ),
-			__( 'Site URL',           'site-info-dashboard-widget') => get_bloginfo( 'url' ),
-			__( 'Admin Email',        'site-info-dashboard-widget') => get_bloginfo( 'admin_email' ),
-			__( 'Admin Language',     'site-info-dashboard-widget') => get_bloginfo( 'language' ),
-			__( 'Text Direction',     'site-info-dashboard-widget') => get_bloginfo( 'text_direction' ),
-			__( 'PHP Version',        'site-info-dashboard-widget') => PHP_VERSION,
-			__( 'MySQL Version',      'site-info-dashboard-widget') => MYSQL_VERSION,
-			__( 'WordPress Version',  'site-info-dashboard-widget') => get_bloginfo( 'version' ),
-		);
-
-		echo '<table>';
-		foreach ( $info as $key => $value ) {
-			echo '<tr><td><strong>' . $key . ' :</strong></td><td>' . $value . '</td></tr>';
-		}
-		echo '</table>';
-
-	}
-
-
+		while( have_rows('field_5aaa08f0cbf4d', 'option') ): 
+		 
+			the_row(); 
+			
+			echo '<h2>';
+			echo the_sub_field('field_5aaa0948cbf4f' ) .'</h3>';
+			echo the_sub_field('field_5aaa092bcbf4e').'<br>'; 
+	  		the_sub_field('field_5aaa09a5cbf50');  
+	endwhile; 
+	 
+	 endif; ;
 }
 
-new Site_Info_Dashboard_Widget;
+
+function add_dashboard_widgets() {
+	wp_add_dashboard_widget('dashboard_widget', 'Site Support', 'dashboard_widget_function');
+}
+add_action('wp_dashboard_setup', 'add_dashboard_widgets' );
+
+
+
+function dashboard_video_widget_function( $post, $callback_args ) {
+	
+	if( have_rows('field_5ab1efbf6b7cd', 'option') ): 
+
+		while( have_rows('field_5ab1efbf6b7cd', 'option') ): 
+		 
+			the_row(); 
+			
+		
+	  		the_sub_field('field_5ab1f16c05d2e');  
+	endwhile; 
+	 
+	 endif; ;
+}
+
+function add_dashboard_video_widgets() {
+	wp_add_dashboard_widget('dashboard_video_widget', 'How to Videos', 'dashboard_video_widget_function');
+}
+add_action('wp_dashboard_setup', 'add_dashboard_video_widgets' );

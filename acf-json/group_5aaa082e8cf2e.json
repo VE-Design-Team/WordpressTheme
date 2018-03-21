@@ -19,7 +19,7 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "",
+            "button_label": "Add another contact",
             "sub_fields": [
                 {
                     "key": "field_5aaa092bcbf4e",
@@ -78,6 +78,43 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ab1efbf6b7cd",
+            "label": "How to videos",
+            "name": "Video address",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add another video",
+            "sub_fields": [
+                {
+                    "key": "field_5ab1f16c05d2e",
+                    "label": "Video",
+                    "name": "video",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": 540,
+                    "height": 316
+                }
+            ]
         }
     ],
     "location": [
@@ -97,5 +134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1521152302
+    "modified": 1521611808
 }
