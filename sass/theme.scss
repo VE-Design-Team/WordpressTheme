@@ -251,3 +251,68 @@
     border-bottom: 2px solid $dark-grey;
   }
 }
+//cardflip
+#card-flip
+{
+
+.card-flip {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.card-flip:hover .flip, .card-flip.hover .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-flip,
+.front,
+.back {
+  width: 100%;
+  min-height: 200px;
+}
+
+.flip {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card
+{
+	
+	background-repeat: no-repeat;
+  background-size: 300%;
+  border: 2px solid $mid-grey;
+  border-radius: 0;
+  
+  background-color: $light-grey;
+  .btn
+  {
+    float: right;
+    margin: 10px;
+  }
+
+}
+}
