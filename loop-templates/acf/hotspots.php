@@ -10,25 +10,26 @@ html {
 }
 
 .hotspot:before {
-  content: "";
+  content: "\f055";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
   display: block;
-  background-color: rgba(255,0,0,.7);
-  border-radius: 20px;
-  border: 1px solid white;
-  width: 30px;
-  height: 30px;
+  
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;  
+ 
   position: absolute;
   left: 5px;
   top: 5px;
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMSIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDExIDE0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTExIDUuNzV2MS41cTAgMC4zMTItMC4yMTkgMC41MzF0LTAuNTMxIDAuMjE5aC0zLjI1djMuMjVxMCAwLjMxMi0wLjIxOSAwLjUzMXQtMC41MzEgMC4yMTloLTEuNXEtMC4zMTIgMC0wLjUzMS0wLjIxOXQtMC4yMTktMC41MzF2LTMuMjVoLTMuMjVxLTAuMzEyIDAtMC41MzEtMC4yMTl0LTAuMjE5LTAuNTMxdi0xLjVxMC0wLjMxMiAwLjIxOS0wLjUzMXQwLjUzMS0wLjIxOWgzLjI1di0zLjI1cTAtMC4zMTIgMC4yMTktMC41MzF0MC41MzEtMC4yMTloMS41cTAuMzEyIDAgMC41MzEgMC4yMTl0MC4yMTkgMC41MzF2My4yNWgzLjI1cTAuMzEyIDAgMC41MzEgMC4yMTl0MC4yMTkgMC41MzF6Ij48L3BhdGg+PC9zdmc+);
+  font-size: 2rem;
   background-size: 75%;
   background-position: 53%;
   background-repeat: no-repeat;
 }
-.hotspot:before
-{
-  border: 2px solid white;
-}
+
 .hotspots-label {
   color: white;
   background: rgba(0, 0, 0, 0.7);
@@ -76,16 +77,17 @@ html {
 }
 
 .hotspot {
+ 
   padding: 20px;
-  height: 40px;
+  height: 2rem;
   box-sizing: border-box;
   /* background-color: rgba(0, 0, 0, 0.45); */
-  color: #fff;
+  color: #E60028;
   -webkit-font-smoothing: antialiased;
   position: absolute;
   line-height: 40px;
-  border-radius: 20px;
-  font-size: 15px;
+ 
+  font-size: 2rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -93,25 +95,36 @@ html {
   opacity: 0;
   width: 0;
   transition: opacity 650ms ease-in, width 350ms linear;
-  text-indent: -9999em;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
   user-select: none;
 }
+.hotspot:hover
+{
+
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+ 
+}
+
 .hotspot.is-visible {
   opacity: 1;
 }
 .hotspot.is-active {
+
   text-indent: 0;
   width: auto;
-  color: white;
+  color: #fff;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
 }
 .hotspot.is-active > a > span
 {
   display: none;
 }
 .hotspot.is-active:before {
-  /* transform: rotate(45deg); */
-  color: blue;
-  display: block;
+color: #fff;
+
 }
 .hotspot:before {
   transition: transform 150ms cubic-bezier(0.2, 0.5, 0.34, 1);
@@ -194,7 +207,7 @@ if( have_rows('field_5a7b7e0ddb57c') ): ?>
        $description = get_sub_field('field_5a7b7e45db57e');
        $xaxis = get_sub_field('field_5a7b7fa2d4c97');
        $yaxis = get_sub_field('field_5a7b7ff2d4c98'); ?>
-<li><a class="hotspot" data-left="<?php echo $xaxis; ?>" data-top="<?php echo $yaxis; ?>" data-toggle="tooltip" data-placement="top" title="<?php echo $title; ?>"><span class="sr-only"><?php echo $title; ?> : <?php echo $description; ?></span></a></li>
+<li><a class="hotspot" data-left="<?php echo $xaxis; ?>" data-top="<?php echo $yaxis; ?>" data-toggle="tooltip" data-placement="top"  tabindex="0" title="<?php echo $title; ?>"><span class="sr-only"><?php echo $title; ?> : <?php echo $description; ?></span></a></li>
     <?php endwhile; ?>
 </ul>
 <?php else :
@@ -233,6 +246,9 @@ $(".hotspots-label").on('click', function(e){
 	$(this).parents('.image').find('.hotspot').removeClass('is-active');
 	e.preventDefault();
 });
+
+
+
 
 $('.hotspot').on('click', function(e){
 	
