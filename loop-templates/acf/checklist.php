@@ -5,11 +5,6 @@ $i = 0;
 $last = count(get_field('field_5a1dfb52cb056')); ?>
 <div class="container-fluid" id="checklist">
 
-<?php if (get_field('field_5a98cf8733d10')) : ?>
-<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
-  <?php echo the_field('field_5a98cf8733d10'); ?>
-</div>
-<?php endif; ?>
 
   <div class="darkgrey">
     <div class="container">

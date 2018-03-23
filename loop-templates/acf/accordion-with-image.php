@@ -24,10 +24,7 @@ img.collapsing {
 </style>
 
 <div id="" class=" aim glossarize">
-<?php if (get_field('field_5a98cf8733d10')) : ?>
-<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
-  <?php echo the_field('field_5a98cf8733d10'); ?>
-  <?php endif; ?>
+
 </div>
 <div class="col-12">
   <div class="row">
@@ -46,7 +43,7 @@ if (have_rows('field_5a541f36eef91')):
 <?php 
 $image = get_sub_field('field_5a5423847dc95');
 if (!empty($image)): ?>
-  <img src="<?php echo $image['url']; ?>" id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>"  class="img-fluid collapse multi-collapse aim-<?php
+  <img src="<?php echo $image['url']; ?>" id="collapse<?php echo str_replace(str_split('\\/:*?"()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>"  class="img-fluid collapse multi-collapse aim-<?php
     echo $i; ?>" height="400"/>
 <?php endif; ?>
 <?php
@@ -58,7 +55,7 @@ endif;
 <!-- end get images -->
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-sm-1 accordion">
+    <div class="col-xs-12 col-sm-6 col-sm-1 pl-0 accordion">
   
       <?php if (have_rows('field_5a541f36eef91')): ?>
 <div id="accordion">
@@ -66,7 +63,7 @@ endif;
   <!-- get text accordion -->
    <?php while (have_rows('field_5a541f36eef91')): the_row();?>
     <div class="card">
-      <div class="card-header collapsed pl-2" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" role="button" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?> " aria-expanded="true" aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> <?php echo get_sub_field('field_5a541fbfeef92'); ?>
+      <div class="card-header collapsed pl-2" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" role="button" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?"()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?> " aria-expanded="true" aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>"><i class="fa fa-plus mr-1"></i><i class="fa fa-minus mr-1 mr-1"></i> <?php echo get_sub_field('field_5a541fbfeef92'); ?>
       </div>
       <?php if (get_sub_field('field_5a541fc6eef93')): ?>
       <div id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="collapse" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" data-parent="#accordion">

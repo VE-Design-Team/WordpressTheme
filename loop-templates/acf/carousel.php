@@ -124,7 +124,7 @@
 
 
 </style>
-<div class="carousel" id="carousel" data-ride="carousel">
+<div class="carousel mt-1" id="carousel" data-ride="carousel">
   <div class="container navs">
     <div class="row top-nav">
       <div class="col-1 scrollers"><a href="#carousel" role="button" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-2x"></i></a></div>
@@ -211,3 +211,4 @@ $('.carousel').carousel({
   interval: false
 })
 </script>
+
