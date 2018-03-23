@@ -135,7 +135,7 @@
     while ( have_rows('field_5a55a5855861a') ) : the_row(); //get carousel indicators ?>
        
           
-          <div class="col-1 col-auto" 
+          <div class="col-1 col-auto carousel-indicator" 
           data-target="#carousel" data-slide-to="<?php echo $i; ?>"><img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
             <div class="triangle">
               <div class="empty"></div>
@@ -206,7 +206,7 @@
   </div>
 </div>
 <script>
-  $('.carousel-inner .carousel-item:first').addClass('active');
+  $('.carousel-indicator:first').addClass('active');
 $('.carousel').carousel({
   interval: false
 })
