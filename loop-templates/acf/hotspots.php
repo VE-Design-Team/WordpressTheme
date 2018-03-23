@@ -201,14 +201,18 @@ color: #fff;
 if( have_rows('field_5a7b7e0ddb57c') ): ?>
 
 <ul class="list-unstyled">
-  <?php  while ( have_rows('field_5a7b7e0ddb57c') ) : the_row();
+  <?php  
+  $i = 0;
+  while ( have_rows('field_5a7b7e0ddb57c') ) : the_row();
         // set variables
        $title = get_sub_field('field_5a7b7e35db57d');
        $description = get_sub_field('field_5a7b7e45db57e');
        $xaxis = get_sub_field('field_5a7b7fa2d4c97');
        $yaxis = get_sub_field('field_5a7b7ff2d4c98'); ?>
-<li><a class="hotspot" data-left="<?php echo $xaxis; ?>" data-top="<?php echo $yaxis; ?>" data-toggle="tooltip" data-placement="top"  tabindex="0" title="<?php echo $title; ?>"><span class="sr-only"><?php echo $title; ?> : <?php echo $description; ?></span></a></li>
-    <?php endwhile; ?>
+<li><a class="hotspot" data-left="<?php echo $xaxis; ?>" data-top="<?php echo $yaxis; ?>" data-toggle="tooltip" data-placement="top"  tabindex="<?php echo $i; ?>" title="<?php echo $title; ?>"><span class="sr-only"><?php echo $title; ?> : <?php echo $description; ?></span></a></li>
+    <?php 
+  $i++;
+  endwhile; ?>
 </ul>
 <?php else :
 
