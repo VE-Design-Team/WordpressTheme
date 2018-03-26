@@ -337,3 +337,53 @@
    } 
 }
 }
+//Example table body
+#table-body {
+  background: $mid-grey;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+
+  #table-container {
+    margin: 1rem auto;
+    background: $white;
+    padding: 0;
+    border: 2px solid $v-dark-grey;
+
+    th {
+      font-family: "Lato", sans-serif;
+      font-size: 1.2rem;
+      border-bottom: 2px solid $v-dark-grey;
+      background: $v-dark-grey;
+      color: $white;
+    }
+    td,
+    th {
+      padding: 0.5rem;
+    }
+    td
+    {
+      font-size: 0.9rem;
+      border-right: 1px solid $mid-grey;
+    }
+    td:last-child
+    {
+      border-style: none;
+    }
+    tr {
+      background: $white;
+      border-bottom: 1px solid $mid-grey;
+    }
+    tr:nth-child(odd) {
+      background: $light-grey;
+    }
+  }
+  reveal{
+    border-bottom: 2px dashed red;}
+  .highlight, .yellow
+  {
+    background: yellow;
+  }  
+}

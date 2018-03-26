@@ -9951,3 +9951,39 @@ h4,
   #card-flip .card p {
     text-align: center;
     font-size: 1.2rem; }
+
+#table-body {
+  background: #d7d7d7;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%; }
+  #table-body #table-container {
+    margin: 1rem auto;
+    background: #fff;
+    padding: 0;
+    border: 2px solid #4f5253; }
+    #table-body #table-container th {
+      font-family: "Lato", sans-serif;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #4f5253;
+      background: #4f5253;
+      color: #fff; }
+    #table-body #table-container td,
+    #table-body #table-container th {
+      padding: 0.5rem; }
+    #table-body #table-container td {
+      font-size: 0.9rem;
+      border-right: 1px solid #d7d7d7; }
+    #table-body #table-container td:last-child {
+      border-style: none; }
+    #table-body #table-container tr {
+      background: #fff;
+      border-bottom: 1px solid #d7d7d7; }
+    #table-body #table-container tr:nth-child(odd) {
+      background: #f9fafa; }
+  #table-body reveal {
+    border-bottom: 2px dashed red; }
+  #table-body .highlight, #table-body .yellow {
+    background: yellow; }

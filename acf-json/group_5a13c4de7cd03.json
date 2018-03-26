@@ -24,6 +24,7 @@
                 "Cluster banner": "Cluster banner",
                 "Checklist": "Checklist",
                 "Custom HTML": "Custom HTML",
+                "Example content table": "Example content table",
                 "Flip cards": "Flip cards",
                 "Horizontal cards": "Horizontal cards",
                 "Hotspots": "Hotspots",
@@ -1990,6 +1991,65 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ab9734af64f3",
+            "label": "Example content table",
+            "name": "example_content_table",
+            "type": "textarea",
+            "instructions": "Paste your table code here and it will be formatted as a generic document table. You can generate table code easily using https:\/\/www.tablesgenerator.com\/",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Example content table"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "<table><\/table>",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5ab97b191f479",
+            "label": "Example content table options",
+            "name": "example_content_table_options",
+            "type": "radio",
+            "instructions": "Do you want your table placed inside an example document? Your table may have to be smaller.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Example content table"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
         }
     ],
     "location": [
@@ -2014,5 +2074,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1521074669
+    "modified": 1522105235
 }

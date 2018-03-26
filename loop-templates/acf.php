@@ -32,6 +32,8 @@
 <?php get_template_part('loop-templates/acf/horizontal-cards');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Flip cards'): ?>
 <?php get_template_part('loop-templates/acf/flip-cards');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Example content table'): ?>
+<?php get_template_part('loop-templates/acf/example-content-table');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Roadmap'): ?>
 <?php get_template_part('loop-templates/acf/roadmap');?>
 <?php elseif(!empty(get_the_content())): { ?>
