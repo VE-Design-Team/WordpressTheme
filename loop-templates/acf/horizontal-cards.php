@@ -16,7 +16,7 @@ if( have_rows('field_5a86433eed2a0') ): ?>
           <div class="col-12 col-sm-4 pr-0">
     <img src="<?php the_sub_field('field_5a86434fed2a1'); ?>" alt="<?php echo the_sub_field('field_5a67bc81f0b61');?> " class=" aligncenter img-fluid" >
   </div>
-                 <div class="col-12 col-sm-8 p-3 bg-white">
+                 <div class="col-12 col-sm-8 p-3">
           <h3 class="text-dark"><?php the_sub_field('field_5a86477e19328'); ?></h3>
          <?php the_sub_field('field_5a86437bed2a2'); ?>
         
