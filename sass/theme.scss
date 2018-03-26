@@ -259,7 +259,7 @@
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
-.card-flip:hover .flip, .card-flip.hover .flip {
+ .card-flip.hover .flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -269,6 +269,7 @@
 .back {
   width: 100%;
   min-height: 200px;
+  margin-bottom: 20px;
 }
 
 .flip {
@@ -293,26 +294,46 @@
   z-index: 2;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
+          height: 100%;
 }
 
 .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-}
+  height: 100%;
+        } 
 .card
 {
 	
 	background-repeat: no-repeat;
   background-size: 300%;
   border: 2px solid $mid-grey;
+  border-top: 3px solid $red;
   border-radius: 0;
-  
+  display: flex;
   background-color: $light-grey;
+
   .btn
   {
     float: right;
     margin: 10px;
+    background: $red;
+    border: solid 1px $red;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .btn:hover
+  {
+    border: solid 1px $red;
   }
 
+   p
+   {
+     text-align: center;
+     font-size: 1.2rem;
+   } 
 }
 }

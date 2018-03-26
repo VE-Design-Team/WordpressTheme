@@ -13,7 +13,7 @@ if( have_rows('field_5a865a7a9f82f') ): ?>
  <div class="col-sm-6 col-lg-4" tabindex="0" >
         		<!-- Card Flip -->
 				<div class="card-flip" >
-					<div class="flip">
+					<div class="flip card-deck">
 						<div class="front">
 							<!-- front content -->
 							<div class="card">
@@ -28,7 +28,7 @@ if( have_rows('field_5a865a7a9f82f') ): ?>
 								 </div>
 								 <span class="btn btn-primary btn-sm ">Flip me<span>
 							 </div>
-<?php endif; ?>
+							<?php endif; ?>
 
 
 							</div>
@@ -44,14 +44,15 @@ if( have_rows('field_5a865a7a9f82f') ): ?>
 							<div class="card-body">
 							   
 								 <p class="card-text text-center"><?php the_sub_field('field_5a86650b13630'); ?></p>
-							
+								
 							 </div>
-<?php endif; ?>
+							<?php endif; ?>
 
 
 
-						
+						<span class="btn btn-primary btn-sm ">Flip me<span>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -74,7 +75,18 @@ endif;
 
 
 		<script >
-		document.querySelector(".card-flip").classList.toggle("flip");
+$(document).ready(function(){    
+    $('.btn').on('click', function(e) {           
+        $(this).closest('.card-flip').toggleClass('hover');            
+    });    
+});
 
-		
+$(document).ready(function() {
+        var height = Math.max($(".front").height(), $(".back").height());
+        $(".front").height(height);
+        $(".back").height(height);
+		$(".card").height(height);
+		$(".card-flip").height(height);
+    });
+
 		</script>
