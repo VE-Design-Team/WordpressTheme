@@ -1,6 +1,10 @@
 
 <?php if (have_rows('field_5a1b72e2b4a86')): ?>
-<div id="calloutcards" class="card-deck <?php if ($x=1) echo "ml-0";?> <?php if ($x!==$numrows) echo "mr-0";?>"> 
+<div id="calloutcards" class="card-deck <?php if ($x=1) {
+    echo "ml-0";
+}?> <?php if ($x!==$numrows) {
+    echo "mr-0";
+}?>"> 
 <?php $numrows = count(get_field('field_5a1b72e2b4a86'));
           ?>
   <?php $x=1; while (have_rows('field_5a1b72e2b4a86')): the_row();?>
@@ -17,7 +21,11 @@
           $custom_title = get_sub_field('field_5a1b95a1a6dc8');
     ?>
 
-<div class="card <?php if ($x=1) echo "ml-0";?> <?php if ($x!==$numrows) echo "mr-0";?>">
+<div class="card <?php if ($x=1) {
+        echo "ml-0";
+    }?> <?php if ($x!==$numrows) {
+        echo "mr-0";
+    }?>">
 
   <div id="content">
     <div class="curve"><?php 
@@ -26,11 +34,7 @@
  
    <?php else:{}; ?>
 
-
     <?php endif; ?></div>
-
-
-
 
    <div class="card-header">
 <?php 
@@ -58,10 +62,7 @@
 </div>
 </div>
 
-
-
 <?php $x++; endwhile; ?>
 </div>
 
 <?php endif; ?>
-

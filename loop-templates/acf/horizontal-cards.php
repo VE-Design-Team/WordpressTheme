@@ -1,14 +1,11 @@
 
-
  	<div class="container-fluid pr-0 pl-0">
 <?php
 
 // check if the repeater field has rows of data
-if( have_rows('field_5a86433eed2a0') ): ?>
+if (have_rows('field_5a86433eed2a0')): ?>
 
-
- 
-  <?php while ( have_rows('field_5a86433eed2a0') ) : the_row(); ?>
+  <?php while (have_rows('field_5a86433eed2a0')) : the_row(); ?>
   <div id="calloutcards" class="row mr-0">
   <div class="card col-12 mb-2  ml-0">
       
@@ -29,20 +26,12 @@ if( have_rows('field_5a86433eed2a0') ): ?>
      
 </div>
 
-
 </div>
       
-        
-
  <?php endwhile; ?>
 
- 
-
- <?php else : 
-
-
+ <?php else :
 
 endif;
 
-?>
-</div>
+?></div>

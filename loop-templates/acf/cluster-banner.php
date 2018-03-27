@@ -1,10 +1,8 @@
 <?php
 
+if (have_rows('field_5a73d3d48b839')):
 
-if( have_rows('field_5a73d3d48b839') ):
-
- 	
-    while ( have_rows('field_5a73d3d48b839') ) : the_row(); ?>
+    while (have_rows('field_5a73d3d48b839')) : the_row(); ?>
 
 <div class="col-12 pb-3" style="background-image: url('<?php the_sub_field('field_5a73d775be41f'); ?>'); <?php the_sub_field('field_5a73d88c935e5'); ?>">
 <div class="row">
@@ -21,9 +19,6 @@ if( have_rows('field_5a73d3d48b839') ):
 
 else :
 
-  
-
 endif;
 
 ?>
-

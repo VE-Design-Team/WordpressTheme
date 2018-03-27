@@ -14,8 +14,6 @@
   margin: auto;
 }
 
-
-
 img.collapsing {
     -webkit-transition: none;
     transition: none;
@@ -86,4 +84,3 @@ endif;
     </div>
   </div>
   </div>
-
