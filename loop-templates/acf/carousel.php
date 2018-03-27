@@ -58,8 +58,8 @@
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   #carousel .indicators .col-auto .triangle {
-    margin: 0px auto;
-    bottom: -8px;
+    margin: 6px auto;
+    bottom: -12px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -134,6 +134,14 @@
   background:  #dc291e;
   border: #dc291e;
   border-radius: 20px;
+ cursor: pointer;
+}
+.nxt-btn:hover, .nxt-btn:active
+{
+
+  background:  #dc291e;
+  border: #dc291e;
+
 }
 
 
@@ -195,7 +203,7 @@ endif;
 
        
       </div>
-      <div class="col-1 hidden-md-down"></div>
+      <div class="col-1 hidden-lg-down"></div>
     </div>
   </div>
 </div>
