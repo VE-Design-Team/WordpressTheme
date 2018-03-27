@@ -52,22 +52,26 @@
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   #carousel .indicators .col-auto .triangle {
-    margin: 8px auto;
+    margin: 0px auto;
+    bottom: -10px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   #carousel .indicators .col-auto .triangle {
-    margin: 36px auto;
+    margin: 0px auto;
+    bottom: -8px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   #carousel .indicators .col-auto .triangle {
-    margin: 28px auto;
+    margin: 0px auto;
+    bottom: -16px;
   }
 }
 @media (min-width: 1200px) {
   #carousel .indicators .col-auto .triangle {
-    margin: 15px auto;
+    margin: 0px auto;
+    bottom: -16px;
   }
 }
 #carousel .indicators .col-auto .triangle .empty {
@@ -121,12 +125,22 @@
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+.nxt-btn
+{
+ position: absolute;
+  float: right;
+  bottom: 0px;
+  right: 0;
+  background:  #dc291e;
+  border: #dc291e;
+  border-radius: 20px;
+}
 
 
 </style>
-<div class="carousel mt-1" id="carousel" data-ride="carousel">
+<div class="carousel mt-1" id="carousel" >
   <div class="container navs">
-    <div class="row top-nav">
+    <div class="row top-nav ">
       <div class="col-1 scrollers"><a href="#carousel" role="button" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-2x"></i></a></div>
       <div class="col-10">
         <div class="row justify-content-center carousel-indicators indicators">
@@ -135,8 +149,8 @@
     while ( have_rows('field_5a55a5855861a') ) : the_row(); //get carousel indicators ?>
        
           
-          <div class="col-1 col-auto carousel-indicator" 
-          data-target="#carousel" data-slide-to="<?php echo $i; ?>"><img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
+          <div class="col-1 col-auto carousel-indicator <?php if ($i == "0") { echo "active"; } ?>" 
+          data-target="#carousel"   data-slide-to="<?php echo $i; ?>"><img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
             <div class="triangle">
               <div class="empty"></div>
             </div>
@@ -151,64 +165,44 @@
       </div>
       <div class="col-1 scrollers"><a class="right" href="#carousel" role="button" data-slide="next"><i class="fa fa-chevron-circle-right fa-2x"></i></a></div>
     </div>
-    <div class="row side-nav"><a href="#carousel" role="button" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-2x"></i></a><a href="#carousel" role="button" data-slide="next"> <i class="fa fa-chevron-circle-right fa-2x">  </i></a></div>
+   
   </div>
-  <div class="carousel container">
-    <div class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner bordered">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-6">
-              <p>One</p>
-            </div>
-            <div class="col-6">
-              <p>One and a half</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-12">
-              <p>two</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-12">
-              <p>three</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-12">
-              <p>four</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-12">
-              <p>five</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-12">
-              <p>six</p>
-            </div>
-          </div>
-        </div>
+  <div class="carousel container" >
+    <div class="carousel row" >
+    
+    <div class="col-1 hidden-md-down"></div>
+      <div class="carousel-inner bordered col-12 col-md-12">
+
+<?php
+// check if the repeater field has rows of data
+if( have_rows('field_5a55a5855861a') ):
+  // loop through the rows of data 
+    $e = 0;
+    while ( have_rows('field_5a55a5855861a') ) : the_row(); ?>
+ <div class="carousel-item <?php if ($e == "0") { echo "active"; } ?>">
+         <?php get_template_part('loop-templates/acf/carousel-content');?>
       </div>
+   <?php
+    $e++; 
+  endwhile;
+else :
+    // no rows found
+endif;
+?>
+
+
+
+
+       
+      </div>
+      <div class="col-1 hidden-md-down"></div>
     </div>
   </div>
 </div>
 <script>
-  $('.carousel-indicator:first').addClass('active');
-$('.carousel').carousel({
-  interval: false
-})
+  //$('.carousel-indicator:first').addClass('active');
+  //$('.carousel-item:first').addClass('active');
+
+
 </script>
 
