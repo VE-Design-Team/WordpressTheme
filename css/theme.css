@@ -9987,3 +9987,8 @@ h4,
     border-bottom: 2px dashed red; }
   #table-body .highlight, #table-body .yellow {
     background: yellow; }
+
+#tooltips {
+  padding-bottom: 100px; }
+  #tooltips p {
+    cursor: pointer; }

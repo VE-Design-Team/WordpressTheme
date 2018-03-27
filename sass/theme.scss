@@ -387,3 +387,13 @@
     background: yellow;
   }  
 }
+//Tooltips
+#tooltips
+{
+  //so there's enough room for tooltips
+  padding-bottom: 100px;
+  p
+  {
+    cursor: pointer;
+  }
+}

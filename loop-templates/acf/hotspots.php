@@ -78,14 +78,14 @@ html {
 
 .hotspot {
  
-  padding: 20px;
+  padding: 23px;
   height: 2rem;
   box-sizing: border-box;
   /* background-color: rgba(0, 0, 0, 0.45); */
   color: #E60028;
   -webkit-font-smoothing: antialiased;
   position: absolute;
-  line-height: 40px;
+  line-height: 36px;
  
   font-size: 2rem;
   overflow: hidden;
@@ -95,8 +95,9 @@ html {
   opacity: 0;
   width: 0;
   transition: opacity 650ms ease-in, width 350ms linear;
-  text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0 0 10px #ffffff;
   user-select: none;
+  
 }
 .hotspot:hover
 {

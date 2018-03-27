@@ -82,7 +82,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {
-        var height = Math.max($(".front").height(), $(".back").height());
+        var height = Math.max($(".front").height(), $(".back").height(),$(".card").height());
         $(".front").height(height);
         $(".back").height(height);
 		$(".card").height(height);
