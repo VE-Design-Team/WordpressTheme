@@ -131,16 +131,14 @@
   float: right;
   bottom: 0px;
   right: 0;
-  background:  #dc291e;
-  border: #dc291e;
-  border-radius: 20px;
+  color:  #dc291e;
+ 
  cursor: pointer;
 }
 .nxt-btn:hover, .nxt-btn:active
 {
 
-  background:  #dc291e;
-  border: #dc291e;
+
 
 }
 

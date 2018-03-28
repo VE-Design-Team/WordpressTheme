@@ -9,7 +9,7 @@
             <p><?php the_sub_field('field_5a55a5ef5861c'); ?></p>
           </div>
 <?php endif; ?>
-         <a class="right" href="#carousel" role="button" data-slide="next"><span class="btn btn-primary btn-sm d-md-none nxt-btn" role="button" data-slide="next">next</span></a>
+         <a class="right" href="#carousel" role="button" data-slide="next"><span class="d-md-none nxt-btn" role="button" data-slide="next"><i class="fa fa-chevron-circle-right fa-2x"></i></span></a>
 </div>
     
 
