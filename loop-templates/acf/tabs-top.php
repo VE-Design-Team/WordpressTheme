@@ -1,12 +1,3 @@
-<?php if (get_field('field_5a98cf8733d10')) : ?>
-<div id="instruction"><i class="fa fa-info-circle mr-1 fa-lg"></i>
-  <?php echo the_field('field_5a98cf8733d10'); ?>
-</div>
-<?php endif; ?>
-
-
-
-
 <div id="tabs">
   <ul class="nav nav-tabs" role="tablist">
   <?php while (have_rows('field_5a13c7fda9110')) : the_row();?>
