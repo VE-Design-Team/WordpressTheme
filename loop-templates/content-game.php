@@ -1,7 +1,19 @@
 <style>
+.card
+{
+    border: 2px solid #ddd;
+  border-radius: 0;
+  margin: 5px;
+  background-color: #f7f7f7;
+}
+
+
 .btn
 {
-    white-space: normal;
+  
+  background-color:  #dc291e;
+  border-color:   #dc291e;
+ cursor: pointer;
 }
 ul.button-list
 {
@@ -13,7 +25,12 @@ ul.button-list > li > a
 {
     text-decoration: none;
     display: block;
-    color: #000000;
+    background-color:  #dc291e;
+  border-color:   #dc291e;
+ cursor: pointer;
+ color: #fff;
+ border-radius: 25px;
+ padding: 0.5rem 0 0.5rem 1rem; 
 }
 </style>
 <?php if (have_rows('field_5a2094f978d32')): ?>
@@ -44,7 +61,7 @@ ul.button-list > li > a
         $button_location = get_sub_field('field_5a20b601dd5a4');
         ?>
 <?php if (get_field('field_5a20e2a468c91') == 'button'): ?>
-        <li><a class="bg-warning border p-2 mb-2 border-warning round" href="#<?php echo $button_location ?>"
+        <li><a class="border  mb-2  round" href="#<?php echo $button_location ?>"
 data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
             <?php echo $button_title; ?>
         </a></li>
