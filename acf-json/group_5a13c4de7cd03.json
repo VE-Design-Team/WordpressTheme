@@ -53,7 +53,15 @@
             "type": "text",
             "instructions": "Add an instruction for this rich content. It may not be required. Won't show if empty.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "!=",
+                        "value": "None"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -2074,5 +2082,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1522105235
+    "modified": 1522889082
 }
