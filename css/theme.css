@@ -9899,7 +9899,6 @@ h4,
 #card-flip .front,
 #card-flip .back {
   width: 100%;
-  min-height: 200px;
   margin-bottom: 20px; }
 
 #card-flip .flip {
@@ -9935,7 +9934,8 @@ h4,
   border-top: 3px solid #dc291e;
   border-radius: 0;
   display: flex;
-  background-color: #f9fafa; }
+  background-color: #f9fafa;
+  padding-bottom: 60px; }
   #card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit] {
     float: right;
     margin: 10px;
@@ -9950,7 +9950,7 @@ h4,
     border: solid 1px #dc291e; }
   #card-flip .card p {
     text-align: center;
-    font-size: 1.2rem; }
+    font-size: 1rem; }
 
 #table-body {
   background: #d7d7d7;

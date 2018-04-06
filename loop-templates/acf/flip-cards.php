@@ -1,4 +1,6 @@
+<style>
 
+</style>	
 <div id="card-flip">
   <?php
 
@@ -6,8 +8,10 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 
 	<div  class="container pt-5">
 		<div class="row">
- <?php while (have_rows('field_5a865a7a9f82f')) : the_row(); ?>
- <div class="col-sm-6 col-lg-4" tabindex="0" >
+ <?php 
+ $i=1;
+ while (have_rows('field_5a865a7a9f82f')) : the_row(); ?>
+ <div  class="col-6 col-md-4 " tabindex="0" >
         		<!-- Card Flip -->
 				<div class="card-flip" >
 					<div class="flip card-deck">
@@ -44,6 +48,7 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 							<?php endif; ?>
 
 						<span class="btn btn-primary btn-sm ">Flip me<span>
+
 							</div>
 							
 						</div>
@@ -51,8 +56,12 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 				</div>
         		<!-- End Card Flip -->
 			</div>
+	<?php if ($i==3){ echo "</div><div class='row'>"; } ?>
 
-     <?php endwhile; ?>
+
+	 <?php 
+	$i++;
+	endwhile; ?>
 </div>
 </div>
 <?php else :
@@ -70,12 +79,31 @@ $(document).ready(function(){
         $(this).closest('.card-flip').toggleClass('hover');            
     });    
 });
-//make cards same height
-$(document).ready(function() {
-        var height = Math.max($(".front").height(), $(".back").height(),$(".card").height());
-        $(".front").height(height);
-        $(".back").height(height);
-		$(".card").height(height);
-		$(".card-flip").height(height);
-    });
+$(document).ready(function(){
+
+// Select and loop the container element of the elements you want to equalise
+$('.row').each(function(){  
+  
+  // Cache the highest
+  var highestBox = 0;
+  
+  // Select and loop the elements you want to equalise
+  $('.card', this).each(function(){
+	
+	// If this box is higher than the cached highest then store it
+	if($(this).height() > highestBox) {
+	  highestBox = $(this).height(); 
+	}
+  
+  });  
+		
+  // Set the height of all those children to whichever was highest 
+  //$('.card',this).height(highestBox);
+  console.log(highestBox);
+	$('.row').css("height", highestBox + 80 );
+}); 
+
+});
+
+
 		</script>
