@@ -1313,10 +1313,10 @@
         },
         {
             "key": "field_5a68162825811",
-            "label": "Roadmap",
+            "label": "Roadmap Question",
             "name": "roadmap",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Enter your question in a way that can be answered across the scale of \"Strongly agree\"  to \"Strongly disagree\"",
             "required": 0,
             "conditional_logic": [
                 [
@@ -1340,10 +1340,10 @@
             "sub_fields": [
                 {
                     "key": "field_5a6816c125812",
-                    "label": "Question",
-                    "name": "question",
+                    "label": "Questions",
+                    "name": "questions",
                     "type": "repeater",
-                    "instructions": "Enter your question in a way that can be answered across the scale of \"Strongly agree\" (2 points) to \"Strongly disagree\" (-2 points)",
+                    "instructions": "Enter your question in a way that can be answered across the scale of \"Strongly agree\"  to \"Strongly disagree\"",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1358,7 +1358,7 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5a681fb7a5cc0",
+                            "key": "field_5acd04607e5db",
                             "label": "Question",
                             "name": "question",
                             "type": "text",
@@ -1377,52 +1377,11 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5a693948b85bf",
-                            "label": "Question weighting",
-                            "name": "question_weighting",
-                            "type": "range",
-                            "instructions": "Affects the influence of this outcome on answers. This multiplies the answer score. This will weight some questions to have a stronger influence on questions than others. Note: When the multiplier is 0, the question will have no change in the result - use sparingly",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": 1,
-                            "min": 0,
-                            "max": 5,
-                            "step": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5a681ec374a40",
-                    "label": "Outcomes",
-                    "name": "outcomes",
-                    "type": "repeater",
-                    "instructions": "Build as many outcomes as you require to represent answer options",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5a681ed574a41",
-                            "label": "Outcome name",
-                            "name": "outcome_name",
+                            "key": "field_5acd047c7e5dc",
+                            "label": "Modules",
+                            "name": "modules",
                             "type": "text",
-                            "instructions": "This is not seen by the student, it's for testing debugging purposes",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1435,65 +1394,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_5a681f3774a42",
-                            "label": "Top answer range",
-                            "name": "top_answer_range",
-                            "type": "range",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "min": -1000,
-                            "max": 1000,
-                            "step": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5a682049db3af",
-                            "label": "Lower answer range",
-                            "name": "lower_answer_range",
-                            "type": "range",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "min": -1000,
-                            "max": 1000,
-                            "step": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_5a693992b85c0",
-                            "label": "Answer output",
-                            "name": "answer_output",
-                            "type": "textarea",
-                            "instructions": "This is what is revealed to the user when this outcome is achieved by the number range. 300 character limit.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": 305,
-                            "rows": "",
-                            "new_lines": ""
                         }
                     ]
                 }
@@ -2082,5 +1982,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1522889082
+    "modified": 1523385478
 }
