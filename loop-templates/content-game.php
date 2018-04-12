@@ -7,7 +7,6 @@
   background-color: #f7f7f7;
 }
 
-
 .btn
 {
   
@@ -17,11 +16,11 @@
 }
 ul.button-list
 {
-    list-style: none;
-    padding-left:0;
-    cursor: p
+    
+   list-style-type: none;
+    cursor: pointer;
 }
-ul.button-list > li > a
+ul.button-list > li.button > a
 {
     text-decoration: none;
     display: block;
@@ -53,7 +52,14 @@ ul.button-list > li > a
     <h3 class="h4 text-muted"><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
 <!-- Card <?php echo $row_count; ?>-->
 <!-- get button data -->
-<p><ul class="button-list pt-1">
+
+<?php if (get_field('field_5a20e2a468c91') == 'link'): ?>
+<p><ul class=" pt-1">
+<?php elseif (get_field('field_5a20e2a468c91') == 'button'): ?>
+<p><ul class="button-list pl-0 pt-1">
+<?php endif; ?>
+
+
 <?php if (have_rows('field_5a2099c5a0dd1')): ?>
     <?php while (have_rows('field_5a2099c5a0dd1')): the_row();
         // vars
@@ -61,7 +67,7 @@ ul.button-list > li > a
         $button_location = get_sub_field('field_5a20b601dd5a4');
         ?>
 <?php if (get_field('field_5a20e2a468c91') == 'button'): ?>
-        <li><a class="border  mb-2  round" href="#<?php echo $button_location ?>"
+        <li class="button"><a class="border  mb-2  round" href="#<?php echo $button_location ?>"
 data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
             <?php echo $button_title; ?>
         </a></li>
