@@ -153,15 +153,22 @@
           
         <?php $i = 0;
     while ( have_rows('field_5a55a5855861a') ) : the_row(); //get carousel indicators ?>
-       
-          
+                
           <div class="col-1 col-auto carousel-indicator <?php if ($i == "0") { echo "active"; } ?>" 
-          data-target="#carousel"   data-slide-to="<?php echo $i; ?>"><img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
+          data-target="#carousel"   data-slide-to="<?php echo $i; ?>">
+         
+          <?php if( get_sub_field('field_5a55a5d15861b') ): ?>
+          <img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
+<?php else: {echo "".$i+1;};?>
+ 
+<?php endif; ?>
+         
+                
+          
             <div class="triangle">
               <div class="empty"></div>
             </div>
           </div>
-
 
 <?php $i++;
     endwhile; //noe get right indicator ?>
