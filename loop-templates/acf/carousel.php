@@ -158,10 +158,31 @@
           data-target="#carousel"   data-slide-to="<?php echo $i; ?>">
          
           <?php if( get_sub_field('field_5a55a5d15861b') ): ?>
-          <img class="img-fluid" src="<?php the_sub_field('field_5a55a5d15861b'); ?>" alt="<?php the_sub_field('field_5a5820d027a5d'); ?>"/>
-<?php else: {echo "".$i+1;};?>
+          <?php 
+
+$image = get_sub_field('field_5a55a5d15861b');
+$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+
+if( $image ) {
+
+	echo wp_get_attachment_image( $image, $size );
+
+}
+
+?>
+
+
+
+
+
+
+
+<?php else: {?>
+
+ <img src="<?php echo get_stylesheet_directory_uri();?>/img/carousel/<?php echo "".$i+1; ?>.png" alt="View this slide" class="img-fluid">
  
-<?php endif; ?>
+
+<?php } endif; ?>
          
                 
           
