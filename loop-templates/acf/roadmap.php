@@ -1,86 +1,5 @@
 
 <style>
-.survey-wrapper
-{
-  position: relative;
-  display: table;
-  width: 100%; /*height: 500px;*/
-  max-width: 640px;
-  border-collapse: separate !important;
-  border-spacing: 1px !important;
-}
-
-ol.survey
-{
-  list-style: decimal; /*margin-top: 160px;*/
-  list-style-position: inside;
-}
-
-ol.survey > li:last-child
-{
-  border-bottom: 1px solid #CDCDCD;
-}
-
-ol.survey li
-{
-  padding-left: -20px;
-  border-top: 1px solid #CDCDCD;
-  border-right: 1px solid #CDCDCD;
-  border-left: 1px solid #CDCDCD;
-}
-
-ol.survey li.alt, ol.survey li:nth-child(even)
-{
-  background-color: #E8E8E4;
-}
-
-.scores > div
-{
-  background: #E8E8E4;
-}
-
-
-
-ol.survey li .opinion-question
-{
-  margin-bottom: 0.5em;
-  font-weight: bold;
-}
-
-ol.survey li
-{
-  padding-top: 6px;
-  padding-bottom: 1px;
-  padding-left: 12px;
-}
-
-ol.survey li .opinion-responses
-{
-  display: table;
-  width: 100%;
-  margin-bottom: 1.0em;
-}
-
-ol.survey li .opinion-responses .bipolar-adjective
-{
-  display: table-cell;
-  width: 25%;
-  text-align: center;
-  vertical-align: middle;
-  font-style: italic;
-}
-
-ol.survey li .opinion-responses .response-choice
-{
-  display: table-cell;
-  width: 10px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-ol.survey li .opinion-responses .response-choice input[type=radio], ol.survey li .opinion-responses .response-choice input.radio
-{
-}
 
 
 
@@ -93,23 +12,6 @@ ol.survey li .opinion-responses .response-choice input[type=radio], ol.survey li
 
 
 
-    .box 
-    {
-      position: relative;
-      width: 60%;
-      background: #ddd;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      padding: 2em 1.5em;
-      color: rgba(0,0,0, .8);
-      text-shadow: 0 1px 0 #fff;
-      line-height: 1.5;
-      margin: 60px auto;
-    }
-
-
-    
- 
 
 
 
@@ -119,39 +21,30 @@ ol.survey li .opinion-responses .response-choice input[type=radio], ol.survey li
 <form>
 
 
-	<?php 
 
-// check for rows (parent repeater)
-if( have_rows('field_5a68162825811') ): ?>
 
-  <?php 
-
-  // loop through rows (parent repeater)
-  while( have_rows('field_5a68162825811') ): the_row(); ?>
  
 
       <?php 
 
       // check for rows (sub repeater)
-      if( have_rows('field_5a6816c125812') ): ?>
+      if( have_rows('field_5a68162825811') ): ?>
        <ol class="survey" id="survey1">
         <?php 
 
         // loop through rows (sub repeater)
-        while( have_rows('field_5a6816c125812') ): the_row();
+        while( have_rows('field_5a68162825811') ): the_row();
 
           // display each item as a list - with a class of completed ( if completed )
           ?>
-          <li class="question" title="<?php the_sub_field('field_5acd047c7e5dc'); ?>"><?php the_sub_field('field_5acd04607e5db'); ?></li>
+          <li class="question" title="<?php the_sub_field('field_5a681ec374a40'); ?>"><?php the_sub_field('field_5a6816c125812'); ?></li>
          
         <?php endwhile; ?>
         </ol>
       <?php endif; //if( get_sub_field('items') ): ?>
  
 
-  <?php endwhile; // while( has_sub_field('to-do_lists') ): ?>
 
-<?php endif; // if( get_field('to-do_lists') ): ?>
 </form>
  
 
@@ -450,43 +343,10 @@ function sortList() {
 
 var disciplines = $('#survey1').numericScale({
   'responseRange' : 5,
-  'lowOpinionAnswer' : 'Least like me',
-  'highOpinionAnswer' : 'Most like me'
+  'lowOpinionAnswer' : 'Strongly agree',
+  'highOpinionAnswer' : 'Strongly disagree'
 });
 
 
 </script>
 
-	<?php 
-
-// check for rows (parent repeater)
-if( have_rows('field_5a68162825811') ): ?>
-
-  <?php 
-
-  // loop through rows (parent repeater)
-  while( have_rows('field_5a68162825811') ): the_row(); ?>
-    <div>
-
-      <?php 
-
-      // check for rows (sub repeater)
-      if( have_rows('field_5a6816c125812') ): ?>
-     
-        <?php 
-
-        // loop through rows (sub repeater)
-        while( have_rows('field_5a6816c125812') ): the_row();
-
-          // display each item as a list - with a class of completed ( if completed )
-          ?>
-          <?php the_sub_field('field_5acd04607e5db'); ?>
-          <?php the_sub_field('field_5acd047c7e5dc'); ?>
-        <?php endwhile; ?>
-     
-      <?php endif; //if( get_sub_field('items') ): ?>
- 
-
-  <?php endwhile; // while( has_sub_field('to-do_lists') ): ?>
-
-<?php endif; // if( get_field('to-do_lists') ): ?>
