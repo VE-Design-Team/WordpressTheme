@@ -4,22 +4,20 @@
 
     <?php
 
-$image = get_sub_field('field_5a55a5d15861b');
-$size = 'large'; // (thumbnail, medium, large, full or custom size)
+     $image = get_sub_field('field_5a55a5d15861b');
+     $size = 'large'; // (thumbnail, medium, large, full or custom size)
     if ($image) {
-
     echo wp_get_attachment_image($image, $size);
-
     }
 
-?>
+    ?>
 
  </div>
       <div class="col-12 col-sm-6">
             <p><?php the_sub_field('field_5a55a5ef5861c');?></p>
           </div>
 <?php else: ?>
- <div class="col-12 col-sm-6 offset-sm-3 carousel-text-only">
+ <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 carousel-text-only">
             <p><?php the_sub_field('field_5a55a5ef5861c');?></p>
           </div>
 <?php endif;?>
