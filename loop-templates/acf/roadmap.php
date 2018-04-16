@@ -1,23 +1,4 @@
 
-<style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</style>
-
 <form>
 
 
@@ -148,13 +129,13 @@ function sortList() {
           question = "<div class='opinion-question'>"
             + oItem.text()
             + "</div>"
-            + "<div class='opinion-responses'>"
+            + "<div class='opinion-responses btn-group btn-group-toggle' data-toggle='buttons'>"
             + "<span class='bipolar-adjective'>"
             + options.lowOpinionAnswer
             + "</span>";
           // Create a radio button group for each question.
           for (i = 1; i <= options.responseRange; i += 1) {
-            question += "<span class='response-choice'><input type='radio' " 
+            question += "<label class='response-choice btn btn-secondary'><input type='radio' " 
               + "name='" + qName 
               + "' value='" + i 
               + "' class='radio'";
@@ -168,7 +149,7 @@ function sortList() {
               question += " validate='required:true'";
             }
 
-            question += " />" + i + "</span>";
+            question += " />" + i + "</label>";
           }
           question += "<span class='bipolar-adjective'>" 
             + options.highOpinionAnswer 
