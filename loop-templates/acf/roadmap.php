@@ -1,4 +1,16 @@
 
+<style>
+ol
+{
+  list-style-type: none;
+}
+p
+{
+  font-size: 1.2rem;
+}
+</style>
+
+
 <form>
 
 
@@ -10,7 +22,8 @@
 
       // check for rows (sub repeater)
       if( have_rows('field_5a68162825811') ): ?>
-       <ol class="survey" id="survey1">
+      
+       <div class="survey align-center" id="survey1">
         <?php 
 
         // loop through rows (sub repeater)
@@ -18,10 +31,10 @@
 
           // display each item as a list - with a class of completed ( if completed )
           ?>
-          <li class="question" title="<?php the_sub_field('field_5a681ec374a40'); ?>"><?php the_sub_field('field_5a6816c125812'); ?></li>
+          <p class="question align-center " title="<?php the_sub_field('field_5a681ec374a40'); ?>"><?php the_sub_field('field_5a6816c125812'); ?></p>
          
         <?php endwhile; ?>
-        </ol>
+        </div>
       <?php endif; //if( get_sub_field('items') ): ?>
  
 
@@ -126,16 +139,16 @@ function sortList() {
           // Create score items in scores Array.
           createScore(oItem, title, qName);
 
-          question = "<div class='opinion-question'>"
+          question = "<div class='text-center'><div class='opinion-question mb-2 text-center'>"
             + oItem.text()
-            + "</div>"
-            + "<div class='opinion-responses btn-group btn-group-toggle' data-toggle='buttons'>"
-            + "<span class='bipolar-adjective'>"
+            + "</div></div>"
+            + "<div class='opinion-responses btn-group text-center btn-group-toggle' data-toggle='buttons'>"
+            + "<label class='bipolar-adjective btn btn-lg btn-outline-dark'>"
             + options.lowOpinionAnswer
-            + "</span>";
+            + "</label>";
           // Create a radio button group for each question.
           for (i = 1; i <= options.responseRange; i += 1) {
-            question += "<label class='response-choice btn btn-secondary'><input type='radio' " 
+            question += "<label class='response-choice btn btn-lg btn-outline-dark'><input type='radio' " 
               + "name='" + qName 
               + "' value='" + i 
               + "' class='radio'";
@@ -151,9 +164,9 @@ function sortList() {
 
             question += " />" + i + "</label>";
           }
-          question += "<span class='bipolar-adjective'>" 
+          question += "<label class='btn btn-outline-dark btn-lg bipolar-adjective'>" 
             + options.highOpinionAnswer 
-            + "</span>" 
+            + "</label>" 
             + "</div>";
           oItem.empty()
             .prepend(question).attr('data-discipline', oItem.attr('title'))
@@ -174,8 +187,8 @@ function sortList() {
         $list.after('<div id="scores-' 
           + $list.attr('id') 
           + '" class="scores"></div>');
-        $list.after('<input type="button" id="submitBtn" class="button btnStyle" ' 
-          + 'value="Show My Gifts" />');
+        $list.after('<input type="button" id="submitBtn" class="button btnStyle btn btn-primary" ' 
+          + 'value="Prepare my roadmap" />');
 
         $('#scores-' + $list.attr('id')).hide();
 
