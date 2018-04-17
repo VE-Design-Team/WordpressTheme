@@ -86,7 +86,7 @@ display: none;
   width: 2.2rem;
   margin: 0.25rem;
   border: 1px solid #c7cdd1;
-  background: #c7cdd1;
+  background: #fff;
   font-weight: 700;
  
   
