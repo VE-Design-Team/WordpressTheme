@@ -1,18 +1,114 @@
 
 <style>
+#roadmap
+{
+
+}
 ol
 {
   list-style-type: none;
 }
 p
 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
+#survey1
+{
+  background: #c7cdd1;
+  border-top: #0af 5px solid;
+  padding: 1rem;
+  margin: 0 auto;
+
+}
+#scores-survey1
+{
+background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png');
+background-size: cover;
+ width: 100%;
+  padding-bottom: 45%;
+  padding-top:7%;
+
+
+
+}
+#scores-survey1::before {
+    content: "Your learning roadmap";
+    font-weight: 700;
+    margin-left: 40%;
+    font-size: 1.3rem; 
+}
+
+
+#scores-survey1 > li
+{
+ 
+  margin-left: 55%;
+  text-align: left;
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+.
+.question
+{
+  background: #f9fafa;
+    padding: 1rem;
+    position: relative;
+    margin: 1rem;
+ 
+  }
+  .bipolar-adjective
+  {
+    font-size: 0.8rem;
+  }
+.opinion-question
+{
+font-weight: 700;
+}
+.btn-rmit
+{
+  background: #dc291e;
+border: 1px solid #dc291e;
+color: #fff;
+border-radius:1.1rem;
+font-weight: 400;
+font-size: 0.9rem;
+margin-top: 1rem;
+}
+.discipline-total
+{
+display: none;
+}
+
+.btn-roadmap
+{
+  border-radius:1.1rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  margin: 0.25rem;
+  border: 1px solid #c7cdd1;
+  background: #c7cdd1;
+  font-weight: 700;
+ 
+  
+}
+.btn-roadmap:nth-child(1)
+{
+  background: green;
+}
+
+.btn:not([disabled]):not(.disabled).active, .btn:not([disabled]):not(.disabled):active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active
+{
+background: #dc291e;
+border: 1px solid #dc291e;
+color: #fff;
+}
+.bipolar-adjective
+{
+
+
+}
+
 </style>
-
-
-<form>
-
 
 
 
@@ -22,8 +118,14 @@ p
 
       // check for rows (sub repeater)
       if( have_rows('field_5a68162825811') ): ?>
-      
-       <div class="survey align-center" id="survey1">
+      <div id="roadmap" class="container-fluid roadmap ">
+<div class="row">
+
+<form class="col-12" >
+
+
+<div id="questions ">
+       <div  class="survey align-center container" id="survey1">
         <?php 
 
         // loop through rows (sub repeater)
@@ -31,15 +133,17 @@ p
 
           // display each item as a list - with a class of completed ( if completed )
           ?>
-          <p class="question align-center " title="<?php the_sub_field('field_5a681ec374a40'); ?>"><?php the_sub_field('field_5a6816c125812'); ?></p>
+          <p class="question align-center " title="<?php the_sub_field('field_5a681ec374a40'); ?>"><?php str_replace("'","#", the_sub_field('field_5a6816c125812')); ?></p>
          
         <?php endwhile; ?>
         </div>
-      <?php endif; //if( get_sub_field('items') ): ?>
- 
+        </div>
 
 
 </form>
+ </div>
+ </div>
+      <?php endif; //if( get_sub_field('items') ): ?>
  
 
 
@@ -142,13 +246,13 @@ function sortList() {
           question = "<div class='text-center'><div class='opinion-question mb-2 text-center'>"
             + oItem.text()
             + "</div></div>"
-            + "<div class='opinion-responses btn-group text-center btn-group-toggle' data-toggle='buttons'>"
-            + "<label class='bipolar-adjective btn btn-lg btn-outline-dark'>"
+            + "<div class='opinion-responses  text-center btn-group-toggle' data-toggle='buttons'>"
+            + "<label class='bipolar-adjective'>"
             + options.lowOpinionAnswer
             + "</label>";
           // Create a radio button group for each question.
           for (i = 1; i <= options.responseRange; i += 1) {
-            question += "<label class='response-choice btn btn-lg btn-outline-dark'><input type='radio' " 
+            question += "<label class='response-choice btn  btn-roadmap '><input type='radio' " 
               + "name='" + qName 
               + "' value='" + i 
               + "' class='radio'";
@@ -164,7 +268,7 @@ function sortList() {
 
             question += " />" + i + "</label>";
           }
-          question += "<label class='btn btn-outline-dark btn-lg bipolar-adjective'>" 
+          question += "<label class=' bipolar-adjective'>" 
             + options.highOpinionAnswer 
             + "</label>" 
             + "</div>";
@@ -183,12 +287,12 @@ function sortList() {
         // Set up actions based on the disciplines. 
         $list.wrap('<div id="wrap-' 
           + $list.attr('id') 
-          + '" class="survey-wrapper"></div>');
+          + '" class="survey-wrapper text-center"></div>');
         $list.after('<div id="scores-' 
           + $list.attr('id') 
           + '" class="scores"></div>');
-        $list.after('<input type="button" id="submitBtn" class="button btnStyle btn btn-primary" ' 
-          + 'value="Prepare my roadmap" />');
+        $list.after('<input type="button" id="submitBtn" class=" mx-auto btn btn-rmit" ' 
+          + 'value="Submit" />');
 
         $('#scores-' + $list.attr('id')).hide();
 
