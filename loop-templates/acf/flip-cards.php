@@ -1,17 +1,15 @@
-<style>
 
-</style>	
 <div id="card-flip">
   <?php
 
 if (have_rows('field_5a865a7a9f82f')): ?>
 
-	<div  class="container pt-5">
+	<div  class="container-fluid pt-5">
 		<div class="row">
  <?php 
  $i=1;
  while (have_rows('field_5a865a7a9f82f')) : the_row(); ?>
- <div  class="col-6 col-md-4 " tabindex="0" >
+ <div  class="col-4 " tabindex="0" >
         		<!-- Card Flip -->
 				<div class="card-flip" >
 					<div class="flip card-deck">
@@ -79,31 +77,12 @@ $(document).ready(function(){
         $(this).closest('.card-flip').toggleClass('hover');            
     });    
 });
-$(document).ready(function(){
+var maxHeight = 0;
 
-// Select and loop the container element of the elements you want to equalise
-$('.row').each(function(){  
-  
-  // Cache the highest
-  var highestBox = 0;
-  
-  // Select and loop the elements you want to equalise
-  $('.card', this).each(function(){
-	
-	// If this box is higher than the cached highest then store it
-	if($(this).height() > highestBox) {
-	  highestBox = $(this).height(); 
-	}
-  
-  });  
-		
-  // Set the height of all those children to whichever was highest 
-  //$('.card',this).height(highestBox);
-  console.log(highestBox);
-	$('.row').css("height", highestBox + 80 );
-}); 
-
+$(".card").each(function(){
+   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
 });
 
+$(".flip").height(maxHeight + 80);
 
 		</script>
