@@ -9887,82 +9887,75 @@ h4,
     border-right: 2px solid #c7cdd1;
     border-bottom: 2px solid #c7cdd1; }
 
-#card-flip .card-flip {
-  -webkit-perspective: 1000px;
-  perspective: 1000px; }
-
-#card-flip .card-flip.hover .flip {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
-
-#card-flip .card-flip,
-#card-flip .front,
-#card-flip .back {
-  width: 100%;
-  margin-bottom: 20px; }
-
-#card-flip .flip {
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative; }
-
-#card-flip .front,
-#card-flip .back {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-#card-flip .front {
-  z-index: 2;
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  height: 100%; }
-
-#card-flip .back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  height: 100%; }
-
-#card-flip .card {
-  background-repeat: no-repeat;
-  background-size: 300%;
-  border: 2px solid #d7d7d7;
-  border-top: 3px solid #dc291e;
-  border-radius: 0;
-  display: flex;
-  background-color: #f9fafa;
-  padding-bottom: 60px; }
-  #card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit] {
-    float: right;
-    margin: 10px;
-    background: #dc291e;
-    border: solid 1px #dc291e;
-    border-radius: 25px;
-    font-size: 0.8rem;
+#card-flip {
+  background: #e3e6e8; }
+  #card-flip .card-flip {
+    -webkit-perspective: 1000px;
+    perspective: 1000px; }
+  #card-flip .card-flip.hover .flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  #card-flip .card-flip,
+  #card-flip .front,
+  #card-flip .back {
+    width: 100%;
+    margin-bottom: 20px; }
+  #card-flip .flip {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative; }
+  #card-flip .front,
+  #card-flip .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
-    bottom: 10px;
-    right: 10px; }
-  #card-flip .card .btn:hover, #card-flip .card .wpcf7 input[type=submit]:hover, .wpcf7 #card-flip .card input[type=submit]:hover {
-    border: solid 1px #dc291e; }
-  #card-flip .card p {
-    text-align: center;
-    font-size: 1rem; }
-
-@media (max-width: 575.98px) {
-  #card-flip .card-body {
-    padding: 0.5rem; }
-  #card-flip .col-4 {
-    padding: 0.5rem; }
-  #card-flip .card p, #card-flip .btn, #card-flip .wpcf7 input[type=submit], .wpcf7 #card-flip input[type=submit] {
-    font-size: 0.8rem; } }
-
-@media (max-width: 767.98px) {
-  #card-flip .card-body {
-    padding: 0.05rem; } }
+    top: 0;
+    left: 0; }
+  #card-flip .front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    height: 100%; }
+  #card-flip .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    height: 100%; }
+  #card-flip .card {
+    background-repeat: no-repeat;
+    background-size: 300%;
+    border-top: #00AAFF 5px solid;
+    border-top: 3px solid #dc291e;
+    border-radius: 0;
+    display: flex;
+    background-color: #f9fafa;
+    padding-bottom: 60px; }
+    #card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit] {
+      float: right;
+      margin: 10px;
+      background: #dc291e;
+      border: solid 1px #dc291e;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: 10px;
+      right: 10px; }
+    #card-flip .card .btn:hover, #card-flip .card .wpcf7 input[type=submit]:hover, .wpcf7 #card-flip .card input[type=submit]:hover {
+      border: solid 1px #dc291e; }
+    #card-flip .card p {
+      text-align: center;
+      font-size: 1rem; }
+  @media (max-width: 575.98px) {
+    #card-flip .card-body {
+      padding: 0.5rem; }
+    #card-flip .col-4 {
+      padding: 0.5rem; }
+    #card-flip .card p, #card-flip .btn, #card-flip .wpcf7 input[type=submit], .wpcf7 #card-flip input[type=submit] {
+      font-size: 0.8rem; } }
+  @media (max-width: 767.98px) {
+    #card-flip .card-body {
+      padding: 0.05rem; } }
 
 #table-body {
   background: #d7d7d7;
@@ -9999,6 +9992,93 @@ h4,
     border-bottom: 2px dashed red; }
   #table-body .highlight, #table-body .yellow {
     background: yellow; }
+
+#roadmap ol {
+  list-style-type: none; }
+
+#roadmap p {
+  font-size: 1rem; }
+
+#roadmap #survey1 {
+  background: #f9fafa;
+  border-top: #0af 5px solid;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  margin-bottom: 0; }
+
+#roadmap #scores-survey1 {
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 45%;
+  padding-top: 7%; }
+
+#roadmap #scores-survey1::before {
+  content: "Your learning roadmap";
+  font-weight: 700;
+  margin-left: 40%;
+  font-size: 1.3rem; }
+
+#roadmap .footer {
+  background: #f9fafa;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem; }
+
+#roadmap #scores-survey1 > li {
+  margin-left: 55%;
+  text-align: left;
+  list-style-type: none; }
+  @media (max-width: 991.98px) {
+    #roadmap #scores-survey1 > li {
+      font-size: 1.4rem; } }
+  @media (max-width: 767.98px) {
+    #roadmap #scores-survey1 > li {
+      font-size: 1rem; } }
+  @media (max-width: 575.98px) {
+    #roadmap #scores-survey1 > li {
+      font-size: 0.7rem; } }
+
+#roadmap #scores-survey1 > li:nth-child(1)::before {
+  content: "1 "; }
+
+#roadmap .question {
+  padding: 1rem;
+  position: relative;
+  margin: 1rem; }
+
+#roadmap .bipolar-adjective {
+  font-size: 0.8rem; }
+
+#roadmap .opinion-question {
+  font-weight: 700; }
+
+#roadmap .btn-rmit {
+  background: #dc291e;
+  border: 1px solid #dc291e;
+  color: #fff;
+  border-radius: 1.1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 1rem; }
+
+#roadmap .discipline-total {
+  display: none; }
+
+#roadmap .btn-roadmap {
+  border-radius: 1.1rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  margin: 0.25rem;
+  border: 1px solid #c7cdd1;
+  background: #c7cdd1;
+  font-weight: 700; }
+
+#roadmap .btn-roadmap:nth-child(1) {
+  background: green; }
+
+#roadmap .btn:not([disabled]):not(.disabled).active, #roadmap .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, .wpcf7 #roadmap input[type=submit]:not([disabled]):not(.disabled).active, #roadmap .btn:not([disabled]):not(.disabled):active, #roadmap .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active, .wpcf7 #roadmap input[type=submit]:not([disabled]):not(.disabled):active, #roadmap .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, #roadmap .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active {
+  background: #dc291e;
+  border: 1px solid #dc291e;
+  color: #fff; }
 
 #tooltips {
   padding-bottom: 100px; }

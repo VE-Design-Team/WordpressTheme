@@ -254,7 +254,7 @@
 //cardflip
 #card-flip
 {
-
+background: #e3e6e8;
 .card-flip {
   -webkit-perspective: 1000px;
           perspective: 1000px;
@@ -306,7 +306,7 @@
 	
 	background-repeat: no-repeat;
   background-size: 300%;
-  border: 2px solid $mid-grey;
+  border-top: $light-blue 5px solid;
   border-top: 3px solid $red;
   border-radius: 0;
   display: flex;
@@ -420,6 +420,135 @@
     background: yellow;
   }  
 }
+//Roadmap
+#roadmap
+{
+  //background: #c7cdd1;
+
+ol
+{
+  list-style-type: none;
+}
+p
+{
+  font-size: 1rem;
+}
+#survey1
+{
+  
+  background: $light-grey;
+  border-top: #0af 5px solid;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  margin-bottom: 0;
+
+}
+#scores-survey1
+{
+
+background-size: cover;
+ width: 100%;
+  padding-bottom: 45%;
+  padding-top:7%;
+
+}
+#scores-survey1::before {
+    content: "Your learning roadmap";
+    font-weight: 700;
+    margin-left: 40%;
+    font-size: 1.3rem; 
+}
+.footer
+{
+  background: $light-grey;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+#scores-survey1 > li
+{
+ 
+  margin-left: 55%;
+  text-align: left;
+
+  list-style-type: none;
+  @media (max-width: 1199.98px) {  }
+  @media (max-width: 991.98px) { 
+
+    font-size: 1.4rem;
+   }
+   @media (max-width: 767.98px) {
+    font-size: 1rem;
+    }
+  @media (max-width: 575.98px) {
+    font-size: 0.7rem;
+  }
+
+
+}
+#scores-survey1 > li:nth-child(1)::before
+{
+  content: "1 ";
+}
+.question
+{
+  
+    padding: 1rem;
+    position: relative;
+    margin: 1rem;
+ 
+  }
+  .bipolar-adjective
+  {
+    font-size: 0.8rem;
+  }
+.opinion-question
+{
+font-weight: 700;
+}
+.btn-rmit
+{
+  background: #dc291e;
+border: 1px solid #dc291e;
+color: #fff;
+border-radius:1.1rem;
+font-weight: 400;
+font-size: 0.9rem;
+margin-top: 1rem;
+}
+.discipline-total
+{
+display: none;
+}
+
+.btn-roadmap
+{
+  border-radius:1.1rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  margin: 0.25rem;
+  border: 1px solid #c7cdd1;
+  background: #c7cdd1;
+  font-weight: 700;
+ 
+}
+.btn-roadmap:nth-child(1)
+{
+  background: green;
+}
+
+.btn:not([disabled]):not(.disabled).active, .btn:not([disabled]):not(.disabled):active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active
+{
+background: #dc291e;
+border: 1px solid #dc291e;
+color: #fff;
+}
+.bipolar-adjective
+{
+
+}
+}
+
 //Tooltips
 #tooltips
 {

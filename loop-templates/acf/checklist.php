@@ -21,7 +21,7 @@ if( !empty($image) ): ?>
 <?php else: {} ?>
   <div class="col-12">
 <?php endif; ?>
-        <ul class="list-unstyled lead">
+        <ul class="list-unstyled">
         
         
 <?php while (has_sub_field('field_5a1dfb52cb056')): ?>
@@ -47,7 +47,9 @@ endif;
 
 
 <script>
-//reveal next item
+//reveals next item
+// TODO: Turn into a for each statement and loop 
+
 $('#collapse1,#collapse2,#collapse3,#collapse4,#collapse5,#collapse6,#collapse7,#collapse8,#collapse9,#collapse10,#collapse11,#collapse12').on('hide.bs.collapse', function (e) {
   preventDefault(e);
 })

@@ -1,115 +1,44 @@
 
 <style>
-#roadmap
-{
 
-}
-ol
-{
-  list-style-type: none;
-}
-p
-{
-  font-size: 1rem;
-}
-#survey1
-{
-  background: #c7cdd1;
-  border-top: #0af 5px solid;
-  padding: 1rem;
-  margin: 0 auto;
-
-}
 #scores-survey1
 {
-background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png');
-background-size: cover;
- width: 100%;
-  padding-bottom: 45%;
-  padding-top:7%;
-
-
-
+  background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/roadmap.png');
 }
-#scores-survey1::before {
-    content: "Your learning roadmap";
-    font-weight: 700;
-    margin-left: 40%;
-    font-size: 1.3rem; 
-}
-
-
 #scores-survey1 > li
 {
- 
-  margin-left: 55%;
-  text-align: left;
-  font-size: 0.8rem;
-  list-style-type: none;
-}
-.
-.question
-{
-  background: #f9fafa;
-    padding: 1rem;
-    position: relative;
-    margin: 1rem;
- 
-  }
-  .bipolar-adjective
-  {
-    font-size: 0.8rem;
-  }
-.opinion-question
-{
-font-weight: 700;
-}
-.btn-rmit
-{
-  background: #dc291e;
-border: 1px solid #dc291e;
-color: #fff;
-border-radius:1.1rem;
-font-weight: 400;
-font-size: 0.9rem;
-margin-top: 1rem;
-}
-.discipline-total
-{
-display: none;
+  height: 10px;
+  width: 10px;
 }
 
-.btn-roadmap
-{
-  border-radius:1.1rem;
-  height: 2.2rem;
-  width: 2.2rem;
-  margin: 0.25rem;
-  border: 1px solid #c7cdd1;
-  background: #fff;
-  font-weight: 700;
- 
-  
-}
-.btn-roadmap:nth-child(1)
-{
-  background: green;
-}
-
-.btn:not([disabled]):not(.disabled).active, .btn:not([disabled]):not(.disabled):active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active
-{
-background: #dc291e;
-border: 1px solid #dc291e;
-color: #fff;
-}
-.bipolar-adjective
-{
-
-
-}
 
 </style>
+  <?php 
 
+// check for rows (sub repeater)
+if( have_rows('field_5a68162825811') ): ?>
+
+  <?php 
+
+  $i=1;
+  while( have_rows('field_5a68162825811') ): the_row(); ?>
+
+   
+  <style>
+   #scores-survey1 > li:nth-child(<?php echo $i; ?>)::before
+{
+  height:10px;
+  width: 10px;
+  content: url(<?php echo get_stylesheet_directory_uri()."/img/carousel/".$i.".png"; ?>);
+}</style>
+
+   <!--<?php the_sub_field('field_5a681ec374a40'); ?><?php str_replace("'","#", the_sub_field('field_5a6816c125812')); 
+   $i++
+   ?>-->
+   
+  <?php endwhile; ?>
+
+<?php endif; //if( get_sub_field('items') ): ?>
 
 
  
@@ -291,8 +220,8 @@ function sortList() {
         $list.after('<div id="scores-' 
           + $list.attr('id') 
           + '" class="scores"></div>');
-        $list.after('<input type="button" id="submitBtn" class=" mx-auto btn btn-rmit" ' 
-          + 'value="Submit" />');
+        $list.after('<div class="container "><div class="row footer"><input type="button" id="submitBtn" class=" mx-auto btn btn-rmit" ' 
+          + 'value="Submit" /></div></div>');
 
         $('#scores-' + $list.attr('id')).hide();
 
