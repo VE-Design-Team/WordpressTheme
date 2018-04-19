@@ -92,6 +92,12 @@ require get_template_directory() . '/inc/editor.php';
 
  }
 
+ function my_myme_types($mime_types){
+    $mime_types['stl'] = 'image/stl+xml'; //Adding stl extension
+    return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
 
  // 3. Hide ACF field group menu item
  //add_filter('acf/settings/show_admin', '__return_false');
