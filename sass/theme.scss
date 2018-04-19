@@ -443,20 +443,72 @@ p
   margin-bottom: 0;
 
 }
+
 #scores-survey1
 {
 
 background-size: cover;
- width: 100%;
-  padding-bottom: 45%;
+width: 100vw;
+height: 62.5vw;
   padding-top:7%;
 
+     @media (max-width: 767.98px) {
+ 
+    }
+    @media (max-width: 991.98px) { 
+ 
+    }
+    @media (max-width: 575.98px) {
+   
+    }
+    li
+{ margin-left: 55%;
+  font-size: 1.5rem;
+  padding-left: 2.5rem;
+   @media (max-width: 1199.98px) {
+    height: 2rem;
+    width: 2rem;
+    padding-left: 2rem;
+
+     }
+   @media (max-width: 991.98px) { 
+    font-size: 1.4rem;
+    padding-left: 2rem;
+   }
+   @media (max-width: 767.98px) {
+   
+    font-size: 1rem;
+    padding-left: 2rem;
+    }
+   @media (max-width: 575.98px) {
+    font-size: 0.8rem;
+     padding-left: 1.2rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+   background-size:contain;
+  background-repeat: no-repeat;
+  display: block;
+  
+  margin-bottom: 0.2rem;
+
+  text-align: left;
+
+  list-style-type: none;
+
+}
 }
 #scores-survey1::before {
     content: "Your learning roadmap";
     font-weight: 700;
-    margin-left: 40%;
-    font-size: 1.3rem; 
+    margin-left: 45%;
+    font-size: 1.3rem;
+    @media (max-width: 767.98px) {
+   
+      font-size: 1rem;
+  
+      } 
 }
 .footer
 {
@@ -465,31 +517,6 @@ background-size: cover;
   margin-bottom: 2rem;
 }
 
-#scores-survey1 > li
-{
- 
-  margin-left: 55%;
-  text-align: left;
-
-  list-style-type: none;
-  @media (max-width: 1199.98px) {  }
-  @media (max-width: 991.98px) { 
-
-    font-size: 1.4rem;
-   }
-   @media (max-width: 767.98px) {
-    font-size: 1rem;
-    }
-  @media (max-width: 575.98px) {
-    font-size: 0.7rem;
-  }
-
-
-}
-#scores-survey1 > li:nth-child(1)::before
-{
-  content: "1 ";
-}
 .question
 {
   

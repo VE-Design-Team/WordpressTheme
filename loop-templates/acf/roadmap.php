@@ -7,15 +7,17 @@
 }
 #scores-survey1 > li
 {
-  height: 10px;
-  width: 10px;
-}
+
+  background: url(<?php echo get_stylesheet_directory_uri()."/img/carousel/1.png"; ?>);
+} 
+
 
 
 </style>
-  <?php 
 
-// check for rows (sub repeater)
+ <?php 
+
+
 if( have_rows('field_5a68162825811') ): ?>
 
   <?php 
@@ -25,20 +27,24 @@ if( have_rows('field_5a68162825811') ): ?>
 
    
   <style>
-   #scores-survey1 > li:nth-child(<?php echo $i; ?>)::before
+
+#scores-survey1 > li:nth-child(<?php echo $i; ?>)
 {
-  height:10px;
-  width: 10px;
-  content: url(<?php echo get_stylesheet_directory_uri()."/img/carousel/".$i.".png"; ?>);
-}</style>
+  background: url(<?php echo get_stylesheet_directory_uri()."/img/carousel/". $i .".png"; ?>);
+  background-size:contain;
+}
+</style>
 
    <!--<?php the_sub_field('field_5a681ec374a40'); ?><?php str_replace("'","#", the_sub_field('field_5a6816c125812')); 
    $i++
-   ?>-->
+   ?>
+   -->
    
   <?php endwhile; ?>
 
 <?php endif; //if( get_sub_field('items') ): ?>
+
+ 
 
 
  
@@ -50,10 +56,10 @@ if( have_rows('field_5a68162825811') ): ?>
       <div id="roadmap" class="container-fluid roadmap ">
 <div class="row">
 
-<form class="col-12" >
+<form class="col-12 pr-0 pl-0" >
 
 
-<div id="questions ">
+<div id="questions  ">
        <div  class="survey align-center container" id="survey1">
         <?php 
 

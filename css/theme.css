@@ -10008,37 +10008,52 @@ h4,
 
 #roadmap #scores-survey1 {
   background-size: cover;
-  width: 100%;
-  padding-bottom: 45%;
+  width: 100vw;
+  height: 62.5vw;
   padding-top: 7%; }
+  #roadmap #scores-survey1 li {
+    margin-left: 55%;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: 0.2rem;
+    text-align: left;
+    list-style-type: none; }
+    @media (max-width: 1199.98px) {
+      #roadmap #scores-survey1 li {
+        height: 2rem;
+        width: 2rem;
+        padding-left: 2rem; } }
+    @media (max-width: 991.98px) {
+      #roadmap #scores-survey1 li {
+        font-size: 1.4rem;
+        padding-left: 2rem; } }
+    @media (max-width: 767.98px) {
+      #roadmap #scores-survey1 li {
+        font-size: 1rem;
+        padding-left: 2rem; } }
+    @media (max-width: 575.98px) {
+      #roadmap #scores-survey1 li {
+        font-size: 0.8rem;
+        padding-left: 1.2rem;
+        height: 1rem;
+        width: 1rem; } }
 
 #roadmap #scores-survey1::before {
   content: "Your learning roadmap";
   font-weight: 700;
-  margin-left: 40%;
+  margin-left: 45%;
   font-size: 1.3rem; }
+  @media (max-width: 767.98px) {
+    #roadmap #scores-survey1::before {
+      font-size: 1rem; } }
 
 #roadmap .footer {
   background: #f9fafa;
   padding-bottom: 2rem;
   margin-bottom: 2rem; }
-
-#roadmap #scores-survey1 > li {
-  margin-left: 55%;
-  text-align: left;
-  list-style-type: none; }
-  @media (max-width: 991.98px) {
-    #roadmap #scores-survey1 > li {
-      font-size: 1.4rem; } }
-  @media (max-width: 767.98px) {
-    #roadmap #scores-survey1 > li {
-      font-size: 1rem; } }
-  @media (max-width: 575.98px) {
-    #roadmap #scores-survey1 > li {
-      font-size: 0.7rem; } }
-
-#roadmap #scores-survey1 > li:nth-child(1)::before {
-  content: "1 "; }
 
 #roadmap .question {
   padding: 1rem;
