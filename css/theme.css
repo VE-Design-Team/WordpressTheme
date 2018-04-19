@@ -10013,7 +10013,7 @@ h4,
   padding-top: 7%; }
   #roadmap #scores-survey1 li {
     margin-left: 55%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-left: 2.5rem;
     background-size: contain;
     background-repeat: no-repeat;
@@ -10024,7 +10024,6 @@ h4,
     @media (max-width: 1199.98px) {
       #roadmap #scores-survey1 li {
         height: 2rem;
-        width: 2rem;
         padding-left: 2rem; } }
     @media (max-width: 991.98px) {
       #roadmap #scores-survey1 li {
