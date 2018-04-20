@@ -51,4 +51,8 @@
 	border: none;
 }
 </style>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
 <!-- end acf.php -->

@@ -25,10 +25,10 @@
   height: 100px;
 }
 #carousel .scrollers a .fa-chevron-circle-left {
-  margin-top: 50%;
+  margin-top: 0%;
 }
 #carousel .scrollers a .fa-chevron-circle-right {
-  margin-top: 50%;
+  margin-top: 0%;
 }
 #carousel .indicators {
   margin: 0;
@@ -147,7 +147,7 @@
 <div class="carousel mt-1" id="carousel" >
   <div class="container navs">
     <div class="row top-nav ">
-      <div class="col-1 scrollers"><a href="#carousel" role="button" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-2x"></i></a></div>
+      <div class="col-1 scrollers"><a href="#carousel" role="button" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-4x"></i></a></div>
       <div class="col-10">
         <div class="row justify-content-center carousel-indicators indicators">
           
@@ -197,7 +197,7 @@ if( $image ) {
         
         </div>
       </div>
-      <div class="col-1 scrollers"><a class="right" href="#carousel" role="button" data-slide="next"><i class="fa fa-chevron-circle-right fa-2x"></i></a></div>
+      <div class="col-1 scrollers"><a class="right" href="#carousel" role="button" data-slide="next"><i class="fa fa-chevron-circle-right fa-4x"></i></a></div>
     </div>
    
   </div>
