@@ -1,47 +1,35 @@
 @import "theme/museo-font";
-
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
 @import "theme/theme_variables";
-
 // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
 @import "assets/bootstrap4";
-
 // <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
 @import "understrap/understrap";
-
 // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
-
 //Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/font-awesome";
-
 // <------- Font Awesome Icon font
 @import "assets/underscores";
-
 // <------- Underscores media styles
-
 // Any additional imported files //
 @import "theme/theme";
 // Rich content //
 @import "theme/rich-content";
-
 // <--------- That's where you can add your own design. Thats your part!
 @import "theme/contact-form7";
-
 // Contact Form 7 - Bootstrap 4 support
 //Cards
-#calloutcards{
+#calloutcards {
   .card {
     border: 2px solid $mid-grey;
     border-radius: 0;
     margin: 5px;
     background-color: $light-grey;
-    
     #content {
       float: left;
       display: inline;
-  
       position: relative;
       top: 0;
-  
       .card-header {
         border-radius: 0;
         color: $black;
@@ -58,16 +46,12 @@
       }
     }
     .card-body {
-     
       margin-left: 100px;
       margin-right: 50px;
       padding-top: 0px;
-      
-      hr
-      {
-       background-color: $light-blue;
+      hr {
+        background-color: $light-blue;
       }
-      
     }
   }
   .curve {
@@ -80,110 +64,93 @@
     background-color: $dark-grey;
     -webkit-border-radius: 0px 0px 100px 100px;
     border-radius: 0% 0% 100% 0%;
-    img
-    {
+    img {
       height: 60px;
       width: 60px;
       margin-top: 10px;
       margin-left: 10px;
       position: relative;
-   
-        .st0
-        {
+      .st0 {
         fill: $white;
-        }
-      
+      }
     }
   }
-  .pixel
-  {
+  .pixel {
     position: absolute;
-      width: 50px;
-    height: 50px;
-    //margin-top: -5px;
+    width: 50px;
+    height: 50px; //margin-top: -5px;
     float: right;
-    right:-2px;
+    right: -2px;
     bottom: -2px;
-    svg
-    {
-     .pixel
-      {
+    svg {
+      .pixel {
         fill: $light-blue;
       }
     }
   }
-  }
+}
 
 //Checklist
 .instruction {
-    font-weight: 400;
-    background: $grey;
-    padding: 10px;
-    margin-bottom: .5rem;
-   
-    .fa-info-circle {
-      color: $blue;
-    }
+  font-weight: 400;
+  background: $grey;
+  padding: 10px;
+  margin-bottom: .5rem;
+  .fa-info-circle {
+    color: $blue;
   }
-  
-  #checklist {
-    .container {
-      padding: 1rem;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-    }
-    .darkgrey {
+}
+
+#checklist {
+  .container {
+    padding: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  .darkgrey {
     background: $dark-grey;
   }
-    .checkpage {
-      border-top: $light-blue 5px solid;
-      background: $light-grey;
-      //margin: 1rem 0 1rem 0;
-      padding: 1rem;
-      position: relative;
-      .note {
-      }
-  
-      .note:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-width: 0 0px 30px 30px;
-        border-style: solid;
-        border-color: $dark-grey $light-grey $dark-grey $grey;
-        background: #658e15;
-        display: block;
-        width: 0;
-      }
-    }
-    li > i.fa-check-square
-  {
-  display: none;
-  color: $light-blue;
-  }
-  li.checked > i.fa-square, span
-  {
-  display: none;
-  }
-  li.checked > i.fa-check-square, li.checked > span
-  {
-  display: inline;
-  margin-right: 0.5rem;
-    
-  }
-  i.fa-square
-    {
-      color: $dark-grey;
+  .checkpage {
+    border-top: $light-blue 5px solid;
+    background: $light-grey; //margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    position: relative;
+    .note {}
+    .note:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0px 30px 30px;
+      border-style: solid;
+      border-color: $dark-grey $light-grey $dark-grey $grey;
+      background: #658e15;
+      display: block;
+      width: 0;
     }
   }
+  li>i.fa-check-square {
+    display: none;
+    color: $light-blue;
+  }
+  li.checked>i.fa-square,
+  span {
+    display: none;
+  }
+  li.checked>i.fa-check-square,
+  li.checked>span {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  i.fa-square {
+    color: $dark-grey;
+  }
+}
 
 ///Tabs
-
 //Top
 #tabs {
   margin-top: 1rem;
-
   .nav-tabs {
     border-bottom: 2px solid $dark-grey;
     background: $white;
@@ -199,8 +166,7 @@
     .nav-item {
       font-weight: 700;
       color: $dark-grey;
-      margin-bottom: -2px;
-      // background: $mid-grey;
+      margin-bottom: -2px; // background: $mid-grey;
       i {
         margin-left: 0.5rem;
       }
@@ -221,7 +187,6 @@
         bottom: -8px;
         color: $red;
         border-radius: 0;
-
         .title {
           position: relative;
           bottom: 3px;
@@ -241,8 +206,7 @@
     li:nth-child(1) {
       border-left: 2px solid $dark-grey;
     }
-    .active {
-    }
+    .active {}
   }
   .tab-content {
     padding: 1rem;
@@ -251,125 +215,101 @@
     border-bottom: 2px solid $dark-grey;
   }
 }
+
 //cardflip
-#card-flip
-{
-background: #e3e6e8;
-.card-flip {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
- .card-flip.hover .flip {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.card-flip,
-.front,
-.back {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.flip {
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: relative;
-}
-
-.front,
-.back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-}
-
-.front {
-  z-index: 2;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-          height: 100%;
-}
-
-.back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  height: 100%;
-        } 
-.card
-{
-	
-	background-repeat: no-repeat;
-  background-size: 300%;
-  border-top: $light-blue 5px solid;
-  border-top: 3px solid $red;
-  border-radius: 0;
-  display: flex;
-  background-color: $light-grey;
-  padding-bottom: 60px;
-
-  .btn
-  {
-    float: right;
-    margin: 10px;
-    background: $red;
-    border: solid 1px $red;
-    border-radius: 25px;
-    font-size: 0.8rem;
+#card-flip {
+  background: #e3e6e8;
+  .card-flip {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .card-flip.hover .flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .card-flip,
+  .front,
+  .back {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .flip {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
   }
-  .btn:hover
-  {
-    border: solid 1px $red;
+  .front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    height: 100%;
   }
-
-   p
-   {
-     text-align: center;
-     font-size: 1rem;
-   } 
-}
-
-@media (max-width: 575.98px) {
-.card-body
-{
-  padding: 0.5rem;
-  
-}
-.col-4
-{
- padding: 0.5rem;
-}
-.card p,  .btn
-{font-size: 0.8rem;
-
-}
-}
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-
-  .card-body
-  {
-    padding: 0.05rem;
+  .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    height: 100%;
   }
-
+  .card {
+    background-repeat: no-repeat;
+    background-size: 300%;
+    border-top: $light-blue 5px solid;
+    border-top: 3px solid $red;
+    border-radius: 0;
+    display: flex;
+    background-color: $light-grey;
+    padding-bottom: 60px;
+    .btn {
+      float: right;
+      margin: 10px;
+      background: $red;
+      border: solid 1px $red;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+    .btn:hover {
+      border: solid 1px $red;
+    }
+    p {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
-
-}//cardflip
+  @media (max-width: 575.98px) {
+    .card-body {
+      padding: 0.5rem;
+    }
+    .col-4 {
+      padding: 0.5rem;
+    }
+    .card p,
+    .btn {
+      font-size: 0.8rem;
+    }
+  }
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 767.98px) {
+    .card-body {
+      padding: 0.05rem;
+    }
+  }
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 991.98px) {}
+  // Large devices (desktops, less than 1200px)
+  @media (max-width: 1199.98px) {}
+} //cardflip
 //Example table body
 #table-body {
   background: $mid-grey;
@@ -378,13 +318,11 @@ background: #e3e6e8;
   padding: 0;
   position: absolute;
   width: 100%;
-
   #table-container {
     margin: 1rem auto;
     background: $white;
     padding: 0;
     border: 2px solid $v-dark-grey;
-
     th {
       font-family: "Lato", sans-serif;
       font-size: 1.2rem;
@@ -396,13 +334,11 @@ background: #e3e6e8;
     th {
       padding: 0.5rem;
     }
-    td
-    {
+    td {
       font-size: 0.9rem;
       border-right: 1px solid $mid-grey;
     }
-    td:last-child
-    {
+    td:last-child {
       border-style: none;
     }
     tr {
@@ -413,175 +349,157 @@ background: #e3e6e8;
       background: $light-grey;
     }
   }
-  reveal{
-    border-bottom: 2px dashed red;}
-  .highlight, .yellow
-  {
+  reveal {
+    border-bottom: 2px dashed red;
+  }
+  .highlight,
+  .yellow {
     background: yellow;
-  }  
+  }
 }
+
 //Roadmap
-#roadmap
-{
+#roadmap {
   //background: #c7cdd1;
-
-ol
-{
-  list-style-type: none;
-}
-p
-{
-  font-size: 1rem;
-}
-#survey1
-{
-  
-  background: $light-grey;
-  border-top: #0af 5px solid;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  margin-bottom: 0;
-
-}
-
-#scores-survey1
-{
-
-background-size: cover;
-width: 100vw;
-height: 62.5vw;
-  padding-top:7%;
-
-     @media (max-width: 767.98px) {
- 
-    }
-    @media (max-width: 991.98px) { 
- 
-    }
-    @media (max-width: 575.98px) {
-   
-    }
-    li
-{ margin-left: 55%;
-  font-size: 1.3rem;
-  padding-left: 2.5rem;
-   @media (max-width: 1199.98px) {
-    height: 2rem;
-    padding-left: 2rem;
-
-     }
-   @media (max-width: 991.98px) { 
-    font-size: 1.4rem;
-    padding-left: 2rem;
-   }
-   @media (max-width: 767.98px) {
-   
+  ol {
+    list-style-type: none;
+  }
+  p {
     font-size: 1rem;
-    padding-left: 2rem;
+  }
+  #survey1 {
+    background: $light-grey;
+    border-top: #0af 5px solid;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    margin-bottom: 0;
+  }
+  #scores-survey1 {
+    background-size: cover;
+    width: 100vw;
+    height: 62.5vw;
+    padding-top: 7%;
+    @media (max-width: 767.98px) {}
+    @media (max-width: 991.98px) {}
+    @media (max-width: 575.98px) {}
+    li {
+      margin-left: 55%;
+      font-size: 1.3rem;
+      padding-left: 2.5rem;
+      @media (max-width: 1199.98px) {
+        height: 2rem;
+        padding-left: 2rem;
+      }
+      @media (max-width: 991.98px) {
+        font-size: 1.4rem;
+        padding-left: 2rem;
+      }
+      @media (max-width: 767.98px) {
+        font-size: 1rem;
+        padding-left: 2rem;
+      }
+      @media (max-width: 575.98px) {
+        font-size: 0.8rem;
+        padding-left: 1.2rem;
+        height: 1rem;
+        width: 1rem;
+      }
+      background-size:contain;
+      background-repeat: no-repeat;
+      display: block;
+      margin-bottom: 0.2rem;
+      text-align: left;
+      list-style-type: none;
     }
-   @media (max-width: 575.98px) {
-    font-size: 0.8rem;
-     padding-left: 1.2rem;
-    height: 1rem;
-    width: 1rem;
-}
-
-   background-size:contain;
-  background-repeat: no-repeat;
-  display: block;
-  
-  margin-bottom: 0.2rem;
-
-  text-align: left;
-
-  list-style-type: none;
-
-}
-}
-#scores-survey1::before {
+  }
+  #scores-survey1::before {
     content: "Your learning roadmap";
     font-weight: 700;
     margin-left: 45%;
     font-size: 1.3rem;
     @media (max-width: 767.98px) {
-   
       font-size: 1rem;
-  
-      } 
-}
-.footer
-{
-  background: $light-grey;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-}
-
-.question
-{
-  
+    }
+  }
+  .footer {
+    background: $light-grey;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  .question {
     padding: 1rem;
     position: relative;
     margin: 1rem;
- 
   }
-  .bipolar-adjective
-  {
+  .bipolar-adjective {
     font-size: 0.8rem;
   }
-.opinion-question
-{
-font-weight: 700;
-}
-.btn-rmit
-{
-  background: #dc291e;
-border: 1px solid #dc291e;
-color: #fff;
-border-radius:1.1rem;
-font-weight: 400;
-font-size: 0.9rem;
-margin-top: 1rem;
-}
-.discipline-total
-{
-display: none;
-}
-
-.btn-roadmap
-{
-  border-radius:1.1rem;
-  height: 2.2rem;
-  width: 2.2rem;
-  margin: 0.25rem;
-  border: 1px solid #c7cdd1;
-  background: #c7cdd1;
-  font-weight: 700;
- 
-}
-.btn-roadmap:nth-child(1)
-{
-  background: green;
-}
-
-.btn:not([disabled]):not(.disabled).active, .btn:not([disabled]):not(.disabled):active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active, .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active
-{
-background: #dc291e;
-border: 1px solid #dc291e;
-color: #fff;
-}
-.bipolar-adjective
-{
-
-}
+  .opinion-question {
+    font-weight: 700;
+  }
+  .btn-rmit {
+    background: #dc291e;
+    border: 1px solid #dc291e;
+    color: #fff;
+    border-radius: 1.1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  .discipline-total {
+    display: none;
+  }
+  .btn-roadmap {
+    border-radius: 1.1rem;
+    height: 2.2rem;
+    width: 2.2rem;
+    margin: 0.25rem;
+    border: 1px solid #c7cdd1;
+    background: #c7cdd1;
+    font-weight: 700;
+  }
+  .btn-roadmap:nth-child(1) {
+    background: green;
+  }
+  .btn:not([disabled]):not(.disabled).active,
+  .btn:not([disabled]):not(.disabled):active,
+  .wpcf7 input[type=submit]:not([disabled]):not(.disabled).active,
+  .wpcf7 input[type=submit]:not([disabled]):not(.disabled):active {
+    background: #dc291e;
+    border: 1px solid #dc291e;
+    color: #fff;
+  }
+  .bipolar-adjective {}
 }
 
 //Tooltips
-#tooltips
-{
+#tooltips {
   //so there's enough room for tooltips
   padding-bottom: 100px;
-  p
-  {
+  p {
     cursor: pointer;
   }
+}
+
+//Special Text formatting
+.script {
+  font-family: 'Gamja Flower', cursive;
+  font-size: 1.5rem;
+  color: $rmit-blue;
+}
+
+.vertical-text {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+reveal {
+  border-bottom: 2px dashed $rmit-red;
+}
+
+.yellow {
+  background: yellow;
 }
