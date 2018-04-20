@@ -1236,6 +1236,41 @@
             ]
         },
         {
+            "key": "field_5ad936e5e0fdd",
+            "label": "Carousel options",
+            "name": "carousel_options",
+            "type": "select",
+            "instructions": "Do you want the carousel content to fill the width of the frame? Useful if embedding non-text content in the carousel frame like tables.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Carousel"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fullwidth": "Yes, full width",
+                "nonfullwidth": "No, maintain width"
+            },
+            "default_value": [
+                "nonfullwidth"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5a67bc57f0b60",
             "label": "Introduction page builder",
             "name": "introduction_page_builder",
@@ -1904,45 +1939,11 @@
                 "rmit": "RMIT",
                 "canvas": "LMS Canvas",
                 "simple": "Simple",
-                "colour": "Colourful"
+                "colour": "Colourful",
+                "none": "No custom styles"
             },
             "default_value": [
                 "rmit"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5ad936e5e0fdd",
-            "label": "Carousel options",
-            "name": "carousel_options",
-            "type": "select",
-            "instructions": "Do you want the carousel content to fill the width of the frame? Useful if embedding non-text content in the carousel frame like tables.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Carousel"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "fullwidth": "Yes, full width",
-                "nonfullwidth": "No, maintain width"
-            },
-            "default_value": [
-                "nonfullwidth"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -1974,5 +1975,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1524185213
+    "modified": 1524185442
 }

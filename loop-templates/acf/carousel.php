@@ -201,7 +201,16 @@ if( $image ) {
     </div>
    
   </div>
-  <div class="carousel container" >
+
+<?php if( get_field('field_5ad936e5e0fdd') == 'fullwidth' ): ?>
+<div class="carousel container-fluid" >
+  <?php else: {?>
+    <div class="carousel container" >
+<?php } endif; ?>
+
+
+
+
     <div class="carousel row" >
     
     <div class="col-1 hidden-md-down"></div>
