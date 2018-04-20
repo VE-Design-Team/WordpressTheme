@@ -17,7 +17,18 @@
             <p><?php the_sub_field('field_5a55a5ef5861c');?></p>
           </div>
 <?php else: ?>
- <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 carousel-text-only">
+
+<?php if( get_field('field_5ad936e5e0fdd') == 'fullwidth' ): ?>
+<div class="col-12 carousel-text-only"> 
+  <?php else: {?>
+    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 carousel-text-only">
+<?php } endif; ?>
+
+
+
+
+
+
             <p><?php the_sub_field('field_5a55a5ef5861c');?></p>
           </div>
 <?php endif;?>
