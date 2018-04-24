@@ -6,7 +6,7 @@ $last = count(get_field('field_5a1dfb52cb056')); ?>
 <div class="container-fluid" id="checklist">
 
 
-  <div class="darkgrey">
+  <div class="row darkgrey">
     <div class="container">
       <div class="checkpage row glossarize">
 
