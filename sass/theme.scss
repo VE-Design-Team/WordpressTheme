@@ -18,6 +18,42 @@
 // <--------- That's where you can add your own design. Thats your part!
 @import "theme/contact-form7";
 // Contact Form 7 - Bootstrap 4 support
+#ChoiceGame
+{
+  .card
+  {
+      border: 2px solid #ddd;
+    border-radius: 0;
+    margin: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .btn
+  {
+    
+    background-color:  #dc291e;
+    border-color:   #dc291e;
+   cursor: pointer;
+  }
+  ul.button-list
+  {
+      
+     list-style-type: none;
+      cursor: pointer;
+  }
+  ul.button-list > li.button > a
+  {
+      text-decoration: none;
+      display: block;
+      background-color:  #dc291e;
+    border-color:   #dc291e;
+   cursor: pointer;
+   color: #fff;
+   border-radius: 25px;
+   padding: 0.5rem 0 0.5rem 1rem; 
+  }
+}
+
 //Cards
 #calloutcards {
   .card {

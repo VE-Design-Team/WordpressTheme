@@ -1,37 +1,8 @@
-<style>
-.card
-{
-    border: 2px solid #ddd;
-  border-radius: 0;
-  margin: 5px;
-  background-color: #f7f7f7;
-}
-
-.btn
-{
-  
-  background-color:  #dc291e;
-  border-color:   #dc291e;
- cursor: pointer;
-}
-ul.button-list
-{
-    
-   list-style-type: none;
-    cursor: pointer;
-}
-ul.button-list > li.button > a
-{
-    text-decoration: none;
-    display: block;
-    background-color:  #dc291e;
-  border-color:   #dc291e;
- cursor: pointer;
- color: #fff;
- border-radius: 25px;
- padding: 0.5rem 0 0.5rem 1rem; 
-}
-</style>
+<?php if (get_field('field_5ade80680cd32')): ?>
+				<div class="instruction mr-1"><i class="fa fa-info-circle mr-1 fa-lg"></i>
+	  <?php echo the_field('field_5ade80680cd32'); ?>
+	</div>
+	<?php endif;?>
 <?php if (have_rows('field_5a2094f978d32')): ?>
     <div id="ChoiceGame">
     <?php 

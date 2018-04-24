@@ -193,6 +193,25 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5ade80680cd32",
+            "label": "Instruction",
+            "name": "instruction",
+            "type": "text",
+            "instructions": "Provide an instruction to the user on how to complete the branching scenario.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -212,5 +231,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512442724
+    "modified": 1524533645
 }
