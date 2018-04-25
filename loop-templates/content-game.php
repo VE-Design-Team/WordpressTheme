@@ -38,7 +38,7 @@
         $button_location = get_sub_field('field_5a20b601dd5a4');
         ?>
 <?php if (get_field('field_5a20e2a468c91') == 'button'): ?>
-        <li class="button"><a class="border  mb-2  round" href="#<?php echo $button_location ?>"
+        <li class="button"><a class="border  mb-2  round btn btn-warning small" href="#<?php echo $button_location ?>"
 data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
             <?php echo $button_title; ?>
         </a></li>
