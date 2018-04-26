@@ -9910,6 +9910,37 @@ h4,
     border-right: 2px solid #c7cdd1;
     border-bottom: 2px solid #c7cdd1; }
 
+#left-tabs .tab-content {
+  border: 1px solid #c7cdd1; }
+
+#left-tabs .tab-pane {
+  margin: 1rem; }
+
+#left-tabs a.nav-link > .h5 {
+  color: black; }
+
+#left-tabs a.nav-link.active > .h5 {
+  color: #e60028; }
+
+#left-tabs .triangle {
+  display: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid blue;
+  height: 15px; }
+
+#left-tabs .empty- {
+  position: absolute;
+  top: 24px;
+  left: -19px;
+  width: 0;
+  border-bottom: solid 20px white;
+  border-right: solid 19px transparent;
+  border-left: solid 19px transparent; }
+
+#left-tabs a.nav-link.active .triangle {
+  display: inline; }
+
 #card-flip {
   background: #e3e6e8; }
   #card-flip .card-flip {

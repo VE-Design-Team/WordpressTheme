@@ -237,6 +237,58 @@
     border-right: 2px solid $dark-grey;
     border-bottom: 2px solid $dark-grey;
   }
+
+}
+#left-tabs
+{
+  .tab-content{
+border: 1px solid $dark-grey;
+  }
+  .tab-pane
+  {
+    margin: 1rem;
+  }
+  a.nav-link > .h5 {
+    color: black;
+  }
+  a.nav-link.active > .h5
+  {
+  color: #e60028;
+  }
+ 
+  .triangle
+  {
+    //position: relative;
+    display: none;
+    //width: 0; 
+    //height: 0; 
+    border-top:10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:10px solid blue; 
+    //z-index: 1000;
+  //  width: 15px;
+    height: 15px;
+   // top: 2px;
+   // left: 32px;
+  }
+  .empty-
+  {
+    position: absolute;
+    top: 24px;
+    left: -19px;
+    width: 0;
+    border-bottom: solid 20px white;
+    border-right: solid 19px transparent;
+    border-left: solid 19px transparent;
+  }
+  
+  a.nav-link.active 
+  {
+    .triangle
+    {
+      display: inline;
+    }
+  }
 }
 
 //cardflip
@@ -561,4 +613,8 @@ reveal {
   -ms-filter: 'FlipH';
 }
 
-//Tables
+//Carousel
+#Carousel
+{
+
+}
