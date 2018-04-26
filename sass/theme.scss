@@ -242,7 +242,7 @@
 #left-tabs
 {
   .tab-content{
-border: 1px solid $dark-grey;
+border: 2px solid $dark-grey;
   }
   .tab-pane
   {
@@ -250,6 +250,7 @@ border: 1px solid $dark-grey;
   }
   a.nav-link > .h5 {
     color: black;
+
   }
   a.nav-link.active > .h5
   {
@@ -262,24 +263,27 @@ border: 1px solid $dark-grey;
     display: none;
     //width: 0; 
     //height: 0; 
-    border-top:10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-right:10px solid blue; 
-    //z-index: 1000;
-  //  width: 15px;
-    height: 15px;
-   // top: 2px;
-   // left: 32px;
-  }
-  .empty-
+    position: relative;
+    top: -47px;
+    right: -17px;
+    
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent $dark-grey transparent transparent;
+  }    
+  .empty
   {
     position: absolute;
-    top: 24px;
-    left: -19px;
-    width: 0;
-    border-bottom: solid 20px white;
-    border-right: solid 19px transparent;
-    border-left: solid 19px transparent;
+    right: -22px;
+    top: -20px;
+   height: 10px;
+   width: 10px;
+    z-index: 10000;
+   border-style: solid;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent $white transparent transparent;
+    
   }
   
   a.nav-link.active 
@@ -429,6 +433,60 @@ border: 1px solid $dark-grey;
   .yellow {
     background: yellow;
   }
+}
+#card-flip .back, #card-flip .card-flip, #card-flip .front{
+  width:100%;
+  max-width:300px;
+  height: 350px;
+}
+
+#card-flip .card-body{
+  padding:0px;
+  margin: 0px;
+}
+
+#card-flip .back .card-body{
+  margin: 20px 0px;
+  overflow-x: auto;
+}
+
+#card-flip .card{
+  height:350px;
+  background-color:#ffffff;
+  box-shadow: 3px 3px 5px #ddd;
+  border: none;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+#card-flip .front  p{
+  margin-top: 30px;
+  padding: 0px 12px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+#card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit]{
+  font-size:0.9rem;
+  cursor:pointer;
+  margin: 0 auto;
+  position:relative;
+  bottom:auto;
+  right:auto;
+  background-color:#EBEBEB;
+  border-color:#AFAFAF;
+  color:#000;
+  border-width:1px;
+  padding: 8px 30px;
+  text-align:center;
+  float:none;
+  vertical-align: bottom;
+}
+
+#card-flip .card .btn:hover, #card-flip .card .btn:focus {
+  background-color:#E60028;
+  border-width:1px;
+  color:#fff;
+  transition:300ms;
 }
 
 //Roadmap

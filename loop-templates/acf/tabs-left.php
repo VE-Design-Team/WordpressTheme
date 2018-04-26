@@ -6,7 +6,7 @@
   <!-- end setup tabs on left-->
   <?php while (have_rows('field_5a13c7fda9110')) : the_row();?>
   <a class=" nav-link text-right  " aria-hidden="true" id="v-pills-home-tab" data-toggle="pill" href="#<?php echo str_replace(str_split('\\()/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="v-pills-home" aria-selected="true"><h3 class="h5"><?php echo the_sub_field('field_5a14fdfcc7bba');?>
-</span></h3>  </a>
+</span></h3> </a><div class="triangle" ><div class="empty"></div></div> 
 <!-- triangle here -->
 
 <?php endwhile;?>
