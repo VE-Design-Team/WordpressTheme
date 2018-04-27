@@ -10066,7 +10066,7 @@ h4,
   margin: 0px; }
 
 #card-flip .back .card-body {
-  margin: 20px 0px;
+  margin: 20px 10px;
   overflow-x: auto; }
 
 #card-flip .card {
@@ -10104,6 +10104,13 @@ h4,
   border-width: 1px;
   color: #fff;
   transition: 300ms; }
+
+#card-flip .card-text p {
+  padding: 0;
+  margin: 1rem; }
+
+#card-flip .card-img-top {
+  border-radius: 10px 10px 0 0; }
 
 #roadmap ol {
   list-style-type: none; }
