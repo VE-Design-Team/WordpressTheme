@@ -13,7 +13,7 @@
         $image = get_sub_field('field_5a20996ca0dd0');
         $content = get_sub_field('field_5a20995da0dcf');
         ?>
-<div class="parent col-xs-12 col-lg-6">
+<div class="parent col-xs-12 col-lg-8 offset-lg-2">
     <div class="collapse parent " id="collapse<?php echo $row_count; ?>">
 <div class="card ">
 <?php if (get_sub_field('field_5a20996ca0dd0')): ?>
@@ -56,7 +56,7 @@ data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php ech
 <!-- end get button data -->
       </div><!--card-body-->
 </div><!--card-->
- <div class="progress mt-2">
+ <div class="progress mt-2 mr-1 ml-1">
     <?php 
     $total_row_count = count(get_field('field_5a2094f978d32'));
   $percent_completed =(($row_count / $total_row_count) * 100);
