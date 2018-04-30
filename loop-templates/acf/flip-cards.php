@@ -92,7 +92,7 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 								
 
 	<?php if (get_sub_field('field_5a86650b13630')): ?>
-	<div class="card-text text-center">
+	<div class="card-text">
 							   
 					<?php the_sub_field('field_5a86650b13630'); ?>
 					
