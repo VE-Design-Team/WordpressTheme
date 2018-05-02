@@ -62,8 +62,9 @@ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
 /**
- *  Load Advanced Custom Fields
+ *  Load Advanced Custom Fields from theme directory
  */
  // 1. customize ACF path
  add_filter('acf/settings/path', 'my_acf_settings_path');
@@ -77,7 +78,6 @@ require get_template_directory() . '/inc/editor.php';
      return $path;
 
  }
-
 
  // 2. customize ACF dir
  add_filter('acf/settings/dir', 'my_acf_settings_dir');
@@ -169,6 +169,49 @@ function game() {
 }
 add_action( 'init', 'game', 0 );
 
+// Display advancecd custom fields in admin columns  
+/*-------------------------------------------------------------------------------
+	Custom Columns
+-------------------------------------------------------------------------------*/
+
+function my_page_columns($columns)
+{
+    $columns = array(
+        'cb'         => '<input type="checkbox" />',
+        'title'     => 'Last Name',
+		'mod_by' => 'Last modified by',
+		'first'     => 'Rich content',
+		'date'        =>    'Date',
+    );
+    return $columns;
+}
+
+function my_custom_columns($column)
+{
+    global $post;
+    
+    if ($column == 'first') {
+        echo get_field( "content_type", $post->ID );
+    }
+    else {
+         echo '';
+	}
+	
+  global $post;
+    
+    if ($column == 'mod_by') {
+        echo the_modified_author() ;
+    }
+    else {
+         echo '';
+	}
+
+
+
+}
+
+add_action("manage_pages_custom_column", "my_custom_columns");
+add_filter("manage_pages_columns", "my_page_columns");
 //Allow game fields to choose game pages
 
 function dynamic_author_dropdown( $field ){
