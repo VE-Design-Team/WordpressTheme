@@ -47,6 +47,10 @@ $gray-800:#3b3d3e !default;
 $gray-850: #272929 !default;
 $gray-900:#131414 !default;
 $black : #000 !default;
+
+$lighter-green: lighten($rmit-green, 20%);
+$much-lighter-green: lighten($rmit-green, 30%); 
+
 $primary: $rmit-lightblue !default;
 $success: $rmit-green !default;
 $info: $rmit-aqua !default;
