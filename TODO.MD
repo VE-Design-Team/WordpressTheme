@@ -7,7 +7,7 @@
 * add animate.css - https://github.com/daneden/animate.css
 * Add "Edit me" z-index: 2000, absolute top tight corner link for logged in users.
 * Flip card arrangement for 6 and stange numbers 
-
+* 'Canvas' styling fo H5P
 
 /// Bugs
 
