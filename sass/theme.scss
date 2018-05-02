@@ -688,8 +688,162 @@ reveal {
   -ms-filter: 'FlipH';
 }
 
-//Carousel
-#Carousel
+//Tables
+table
 {
 
+}
+
+$rmit-blue: #000054 !default;
+$rmit-azure: #00aaff !default;
+$rmit-green: #BFE187 !default;
+$rmit-lightblue: #0078ff !default;
+$gray-50: #f3f5f5;
+$gray-150: #e8ebec !default;
+$gray-400: #ccd2d5 !default;
+$gray-750: #4f5253 !default;
+
+$lighter-green: lighten($rmit-green, 20%);
+$much-lighter-green: lighten($rmit-green, 30%); 
+
+//From Hye
+//FAFBED
+//E9F1CC
+
+//Rmit Colours
+//#D4EBAF
+//#E9F5D/
+
+.table {
+  font-size: 0.8rem;
+  a {
+    color: $rmit-azure;
+  }
+  thead {
+    background: $gray-150;
+
+    tr {
+      th {
+        border: 1px solid #000;
+      }
+    }
+  }
+  tbody {
+    tr {
+      th {
+        border: 1px solid #000;
+      }
+      td {
+        border: 1px solid #000;
+      }
+    }
+  }
+}
+.table-rmit {
+  thead {
+    background: $rmit-blue;
+    color: white;
+    tr {
+      th {
+        border: 1px solid #fff;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background: $gray-50;
+    }
+    tr:nth-child(even) {
+      background: $gray-150;
+    }
+    tr {
+      th,td {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.table-canvas {
+  thead {
+    background: $rmit-azure;
+    color: white;
+    tr {
+      th {
+        border: 1px solid #fff;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background: $gray-50;
+    }
+    tr:nth-child(even) {
+      background: $gray-150;
+    }
+    tr {
+       th,td {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.table-document {
+  thead {
+    background: $rmit-paleblue;
+    color: white;
+      tr {
+      th {
+        border: 1px solid #fff;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background: $gray-50;
+    }
+    tr:nth-child(even) {
+      background: $gray-150;
+    }
+    tr {
+      th,td {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.table-colour {
+  thead {
+    background: $rmit-green;
+    color: black;
+      tr {
+      th {
+        border: 1px solid #fff;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background: $much-lighter-green;
+    }
+    tr:nth-child(even) {
+      background: $lighter-green;
+    }
+    tr {
+      th,td {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-top: 0;
+        border-bottom: 0;
+      }
+    }
+  }
 }

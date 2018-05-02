@@ -23,7 +23,7 @@
                 "Carousel": "Carousel",
                 "Cluster banner": "Cluster banner",
                 "Checklist": "Checklist",
-                "Custom HTML": "Custom HTML",
+                "Custom HTML or table": "Custom HTML or table",
                 "Example content table": "Example content table",
                 "Flip cards": "Flip cards",
                 "Horizontal cards": "Horizontal cards",
@@ -1544,7 +1544,7 @@
         },
         {
             "key": "field_5a7a65d146584",
-            "label": "Custom HTML",
+            "label": "Custom HTML or Table",
             "name": "custom_html",
             "type": "textarea",
             "instructions": "Enter your HTML here",
@@ -1554,7 +1554,7 @@
                     {
                         "field": "field_5a13c5a7ec802",
                         "operator": "==",
-                        "value": "Custom HTML"
+                        "value": "Custom HTML or table"
                     }
                 ]
             ],
@@ -1926,7 +1926,7 @@
                     {
                         "field": "field_5a13c5a7ec802",
                         "operator": "==",
-                        "value": "None"
+                        "value": "Custom HTML or table"
                     }
                 ]
             ],
@@ -1938,7 +1938,7 @@
             "choices": {
                 "rmit": "RMIT",
                 "canvas": "LMS Canvas",
-                "simple": "Simple",
+                "document": "Document",
                 "colour": "Colourful",
                 "none": "No custom styles"
             },
@@ -1975,5 +1975,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1524185442
+    "modified": 1525223858
 }

@@ -26,6 +26,8 @@
 <?php get_template_part('loop-templates/acf/intro_page');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Custom HTML'): ?>
 <?php get_template_part('loop-templates/acf/custom-html');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Custom HTML or table'): ?>
+<?php get_template_part('loop-templates/acf/custom-html');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Hotspots'): ?>
 <?php get_template_part('loop-templates/acf/hotspots');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Horizontal cards'): ?>
