@@ -2,9 +2,15 @@
 get_header();
 $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 ?>
+
+
+	
+<?php edit_post_link('Update this content', '<div class="edit-me btn btn-sm small" title="Only logged in administrators see this">','</div>');?>
+	
+
 <div class="wrapper" id="page-wrapper">
 	<div id="content" tabindex="-1">
-				<!-- Do the left sidebar check -->
+			
 			<div class="pt-2 pb-2 content-area" id="primary">
 			<main class="site-main" id="main">
 			<?php if (get_field('field_5a98cf8733d10')) : ?>

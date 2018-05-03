@@ -1,6 +1,6 @@
 @import "theme/museo-font";
 @import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
-@import "theme/theme_variables";
+@import "theme/course_selector";
 // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
 @import "assets/bootstrap4";
 // <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
@@ -16,8 +16,25 @@
 // Rich content //
 @import "theme/rich-content";
 // <--------- That's where you can add your own design. Thats your part!
-@import "theme/contact-form7";
-// Contact Form 7 - Bootstrap 4 support
+
+//Edit me link
+.edit-me
+{
+  position: fixed;
+  z-index: 2000;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid #ccc;
+  background: #eeeeee;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+.edit-me:hover, .edit-me:active
+{
+   opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
 #ChoiceGame {
   .card {
     border: 2px solid #ddd;
@@ -694,28 +711,8 @@ table
 
 }
 
-$rmit-blue: #000054 !default;
-$rmit-azure: #00aaff !default;
-$rmit-green: #BFE187 !default;
-$rmit-lightblue: #0078ff !default;
-$gray-50: #f3f5f5;
-$gray-150: #e8ebec !default;
-$gray-400: #ccd2d5 !default;
-$gray-750: #4f5253 !default;
-
-$lighter-green: lighten($rmit-green, 20%);
-$much-lighter-green: lighten($rmit-green, 30%); 
-
-//From Hye
-//FAFBED
-//E9F1CC
-
-//Rmit Colours
-//#D4EBAF
-//#E9F5D/
-
-.table {
-  font-size: 0.8rem;
+table {
+  font-size: 1rem;
   a {
     color: $rmit-azure;
   }
