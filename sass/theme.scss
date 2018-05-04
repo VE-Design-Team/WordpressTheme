@@ -354,7 +354,7 @@ border: 2px solid $dark-grey;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     height: 100%;
-  }
+     }
   .card {
     background-repeat: no-repeat;
     background-size: 300%;
@@ -588,8 +588,6 @@ border: 2px solid $dark-grey;
   }
   .footer {
     background: $light-grey;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
   }
   .question {
     padding: 1rem;
