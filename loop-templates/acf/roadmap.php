@@ -226,7 +226,7 @@ function sortList() {
         $list.after('<div id="scores-' 
           + $list.attr('id') 
           + '" class="scores"></div>');
-        $list.after('<div class="container "><div class="row footer"><input type="button" id="submitBtn" class=" mx-auto btn btn-rmit" ' 
+        $list.after('<div class="container "><div class="row footer"><input type="button" id="submitBtn" class=" mx-auto btn btn-rmit mb-5" ' 
           + 'value="Submit" /></div></div>');
 
         $('#scores-' + $list.attr('id')).hide();
