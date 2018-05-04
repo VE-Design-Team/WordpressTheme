@@ -3,6 +3,25 @@
     "title": "Rich Content",
     "fields": [
         {
+            "key": "field_5a98cf8733d10",
+            "label": "Instruction",
+            "name": "instruction",
+            "type": "text",
+            "instructions": "Add an instruction for this rich content. It may not be required. Won't show if empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a13c5a7ec802",
             "label": "Content Type",
             "name": "content_type",
@@ -45,33 +64,6 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
-        },
-        {
-            "key": "field_5a98cf8733d10",
-            "label": "Instruction",
-            "name": "instruction",
-            "type": "text",
-            "instructions": "Add an instruction for this rich content. It may not be required. Won't show if empty.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "!=",
-                        "value": "None"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5a7a6b39ac350",
@@ -392,6 +384,7 @@
                         "mobile_guides": "Mobile guides",
                         "module": "Module",
                         "online_behaviour": "Online behaviour",
+                        "quote": "Quote",
                         "software": "Software",
                         "video": "Video",
                         "video_transcript": "Video transcript",
@@ -1543,6 +1536,44 @@
             ]
         },
         {
+            "key": "field_5ab97b191f479",
+            "label": "Table options",
+            "name": "table_options",
+            "type": "select",
+            "instructions": "If there is a table on this page, how would you like it styled? For best results use this tool - https:\/\/www.tablestrap.com\/#tables",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Custom HTML or table"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rmit": "RMIT",
+                "canvas": "LMS Canvas",
+                "document": "Document",
+                "colour": "Colourful",
+                "none": "No custom styles"
+            },
+            "default_value": [
+                "rmit"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5a7a65d146584",
             "label": "Custom HTML or Table",
             "name": "custom_html",
@@ -1913,44 +1944,6 @@
                     "mime_types": ""
                 }
             ]
-        },
-        {
-            "key": "field_5ab97b191f479",
-            "label": "Table options",
-            "name": "table_options",
-            "type": "select",
-            "instructions": "If there is a table on this page, how would you like it styled?",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Custom HTML or table"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "rmit": "RMIT",
-                "canvas": "LMS Canvas",
-                "document": "Document",
-                "colour": "Colourful",
-                "none": "No custom styles"
-            },
-            "default_value": [
-                "rmit"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
         }
     ],
     "location": [
@@ -1975,5 +1968,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1525223858
+    "modified": 1525395706
 }
