@@ -1,5 +1,5 @@
 //Overrides Bootstrap variables
-$rmit-red: #e60028 !default;
+$rmit-red: #d3261d !default; //Actually not RMIT red, but Canvas red - https://sites.rmit.edu.au/projectrewire/2018/04/26/canvas-scoop-great-news-for-canvas-accessibility/
 $rmit-blue: #000054 !default;
 $rmit-teal: #7ae1AA !default;
 $rmit-yellow: #FAC800 !default;
@@ -7,7 +7,7 @@ $rmit-orange: #FC9147 !default;
 $rmit-lemon: #EEDC00 !default;
 $rmit-green: #AAD75F !default;
 $rmit-aqua: #00DCB4 !default;
-$rmit-lightblue: #0078FF !default;
+$rmit-lightblue: #0074e7 !default; //Actually no RMIT red, but canvas red
 $rmit-paleblue: #3F99FF !default;
 $rmit-azure: #00AAFF !default;
 $rmit-artic: #50D2FF !default;
@@ -51,7 +51,7 @@ $black : #000 !default;
 $lighter-green: lighten($rmit-green, 20%);
 $much-lighter-green: lighten($rmit-green, 30%); 
 
-$primary: $rmit-lightblue !default;
+$primary: $rmit-red !default;
 $success: $rmit-green !default;
 $info: $rmit-aqua !default;
 $warning: $rmit-yellow !default;
