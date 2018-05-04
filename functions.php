@@ -116,12 +116,12 @@ add_filter('upload_mimes', 'my_myme_types', 1, 1);
 function game() {
 
 	$labels = array(
-		'name'                  => _x( 'Game', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Game', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Game', 'text_domain' ),
-		'name_admin_bar'        => __( 'Game', 'text_domain' ),
-		'archives'              => __( 'Game Archives', 'text_domain' ),
-		'attributes'            => __( 'Game Attributes', 'text_domain' ),
+		'name'                  => _x( 'Branching scenario', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Branching scenario', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Branching scenario', 'text_domain' ),
+		'name_admin_bar'        => __( 'Branching scenario', 'text_domain' ),
+		'archives'              => __( 'Branching Scenario archives', 'text_domain' ),
+		'attributes'            => __( 'Branching Scenario attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Game:', 'text_domain' ),
 		'all_items'             => __( 'All Games', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Games', 'text_domain' ),
@@ -146,7 +146,7 @@ function game() {
 	);
 	$args = array(
 		'label'                 => __( 'Game', 'text_domain' ),
-		'description'           => __( 'Builds a game for external access', 'text_domain' ),
+		'description'           => __( 'Builds a Branching Scenario for external access', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'custom-fields' ),
 		'hierarchical'          => false,
@@ -170,9 +170,6 @@ function game() {
 add_action( 'init', 'game', 0 );
 
 // Display advancecd custom fields in admin columns  
-/*-------------------------------------------------------------------------------
-	Custom Columns
--------------------------------------------------------------------------------*/
 
 function my_page_columns($columns)
 {
@@ -191,7 +188,8 @@ function my_custom_columns($column)
     global $post;
     
     if ($column == 'first') {
-        echo get_field( "content_type", $post->ID );
+		echo get_field( "content_type", $post->ID );
+		
     }
     else {
          echo '';
@@ -206,12 +204,14 @@ function my_custom_columns($column)
          echo '';
 	}
 
-
-
 }
 
 add_action("manage_pages_custom_column", "my_custom_columns");
 add_filter("manage_pages_columns", "my_page_columns");
+// Allow sort by custom field
+
+
+
 //Allow game fields to choose game pages
 
 function dynamic_author_dropdown( $field ){
