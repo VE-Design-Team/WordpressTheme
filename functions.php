@@ -349,3 +349,12 @@ function add_dashboard_video_widgets() {
 	wp_add_dashboard_widget('dashboard_video_widget', 'How to Videos', 'dashboard_video_widget_function');
 }
 add_action('wp_dashboard_setup', 'add_dashboard_video_widgets' );
+//Custom H5p Styles
+function h5p_alter_styles(&$styles, $libraries, $embed_type) {
+	$styles[] = (object) array(
+	  // Path must be relative to wp-content/uploads/h5p or absolute.
+	  'path' => bloginfo('template_directory') . '/custom-h5p.css',
+	  'version' => '?ver=0.1' // Cache buster
+	);
+  }
+  add_action('h5p_alter_library_styles', 'h5p_alter_styles', 10, 3);

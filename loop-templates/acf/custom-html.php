@@ -8,5 +8,5 @@ $tablestyle = get_field('field_5ab97b191f479');
 <script>
  //add the table classes
 
-$("table").addClass('<?php echo 'table-'.$tablestyle; ?>');
+$("table").addClass('<?php echo 'table table-'.$tablestyle; ?>');
 </script>
