@@ -47,16 +47,10 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-
-
-
-
 /**
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
-
-
 
 /**
  * Load Editor functions.
@@ -98,10 +92,8 @@ require get_template_directory() . '/inc/editor.php';
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
-
  // 3. Hide ACF field group menu item
  //add_filter('acf/settings/show_admin', '__return_false');
-
 
  // 4. Include ACF
  include_once( get_stylesheet_directory() . '/acf/acf.php' );
@@ -210,8 +202,6 @@ add_action("manage_pages_custom_column", "my_custom_columns");
 add_filter("manage_pages_columns", "my_page_columns");
 // Allow sort by custom field
 
-
-
 //Allow game fields to choose game pages
 
 function dynamic_author_dropdown( $field ){
@@ -265,7 +255,6 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 	
-	
 }
 // Completely remove comments from the site
 
@@ -297,11 +286,7 @@ function post_remove ()      //creating functions post_remove for removing menu 
 
 add_action('admin_menu', 'post_remove');   //adding action for triggering function call
 
-
-
-
 // Dashboard content
-
 
 // Site support widget
 
@@ -322,13 +307,10 @@ function dashboard_widget_function( $post, $callback_args ) {
 	 endif; ;
 }
 
-
 function add_dashboard_widgets() {
 	wp_add_dashboard_widget('dashboard_widget', 'Site Support', 'dashboard_widget_function');
 }
 add_action('wp_dashboard_setup', 'add_dashboard_widgets' );
-
-
 
 function dashboard_video_widget_function( $post, $callback_args ) {
 	
@@ -338,7 +320,6 @@ function dashboard_video_widget_function( $post, $callback_args ) {
 		 
 			the_row(); 
 			
-		
 	  		the_sub_field('field_5ab1f16c05d2e');  
 	endwhile; 
 	 
@@ -349,12 +330,13 @@ function add_dashboard_video_widgets() {
 	wp_add_dashboard_widget('dashboard_video_widget', 'How to Videos', 'dashboard_video_widget_function');
 }
 add_action('wp_dashboard_setup', 'add_dashboard_video_widgets' );
-//Custom H5p Styles
-function h5p_alter_styles(&$styles, $libraries, $embed_type) {
+
+
+function MYPLUGIN_alter_styles(&$styles, $libraries, $embed_type) {
 	$styles[] = (object) array(
 	  // Path must be relative to wp-content/uploads/h5p or absolute.
-	  'path' => bloginfo('template_directory') . '/custom-h5p.css',
-	  'version' => '?ver=0.1' // Cache buster
+	  'path' => get_template_directory_uri().'/css/h5p.css',
+	  'version' => '?ver=' .rand().'/n' // Cache buster
 	);
   }
-  add_action('h5p_alter_library_styles', 'h5p_alter_styles', 10, 3);
+  add_action('h5p_alter_library_styles', 'MYPLUGIN_alter_styles', 10, 3);

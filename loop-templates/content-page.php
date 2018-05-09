@@ -2,7 +2,7 @@
 
 	<div class="entry-content">
 
-<?php get_template_part('loop-templates/acf');?>
+<?php  get_template_part('loop-templates/acf');?>
 
 	</div><!-- .entry-content -->
 

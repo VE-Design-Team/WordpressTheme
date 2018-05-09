@@ -5,7 +5,6 @@ var basePaths = {
     dev: './src/'
 };
 
-
 // browser-sync watched files
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
@@ -14,14 +13,12 @@ var browserSyncWatchFiles = [
     './**/*.php'
 ];
 
-
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
     proxy: "localhost/wordpress/",
     notify: false
 };
-
 
 // Defining requirements
 var gulp = require('gulp');
@@ -44,7 +41,6 @@ var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 var gulpSequence = require('gulp-sequence');
 
-
 // Run:
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
@@ -64,7 +60,6 @@ gulp.task('scss-for-prod', function() {
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
 
-
     var pipe2 = source.pipe(clone())
         .pipe(minify-css())
         .pipe(rename({suffix: '.min'}))
@@ -72,7 +67,6 @@ gulp.task('scss-for-prod', function() {
 
     return merge(pipe1, pipe2);
 });
-
 
 // Run:
 // gulp sourcemaps + sass + reload(browserSync)
@@ -91,10 +85,23 @@ gulp.task('scss-for-dev', function() {
         .pipe(gulp.dest('./css'))
 });
 
-gulp.task('watch-scss', ['browser-sync'], function () {
-    gulp.watch('./sass/**/*.scss', ['scss-for-dev']);
+gulp.task('h5p-scss', function() {
+    gulp.src('./sass/theme/h5p.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+ 
+        .pipe(sass())
+
+        .pipe(gulp.dest('css/'))
 });
 
+gulp.task('watch-scss', ['browser-sync'], function () {
+    gulp.watch('./sass/**/*.scss', ['scss-for-dev', 'h5p-scss']);
+});
 
 // Run:
 // gulp sass
@@ -112,7 +119,6 @@ gulp.task('sass', function () {
         .pipe(rename('custom-editor-style.css'))
     return stream;
 });
-
 
 // Run:
 // gulp watch
@@ -133,7 +139,6 @@ gulp.task('imagemin', function(){
     .pipe(imagemin())
     .pipe(gulp.dest('img'))
 });
-
 
 // Run:
 // gulp cssnano
@@ -174,9 +179,8 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
+gulp.task('styles', function(callback){ gulpSequence('sass', 'h5p-scss', 'minify-css')(callback) });
  
-
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -184,12 +188,10 @@ gulp.task('browser-sync', function() {
     browserSync.init(browserSyncWatchFiles, browserSyncOptions);
 });
 
-
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
-
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts', 'h5p-scss' ], function () { });
 
 // Run: 
 // gulp scripts. 
@@ -274,7 +276,6 @@ gulp.task('copy-assets', ['clean-source'], function() {
         .pipe(gulp.dest(basePaths.js));
     return stream;
 });
-
 
 // Run
 // gulp dist
