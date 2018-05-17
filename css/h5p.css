@@ -62,6 +62,30 @@ ul.dots-container {
   ul.dots-container li.progress-item:nth-child(2) a.progress-dot:before {
     content: '2'; }
 
+.h5p-answers .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container, .h5p-answers .h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container, .h5p-answers .h5p-answer[role="radio"] .h5p-alternative-container:before, .h5p-answers .h5p-answer[role="radio"][aria-checked="true"] .h5p-alternative-container:before {
+  content: ''; }
+
+.h5p-answers .h5p-answer[aria-checked="true"] .h5p-alternative-container, .h5p-answers .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container, .h5p-answers .h5p-answer[aria-checked="true"]:focus .h5p-alternative-container {
+  background: #AAD75F;
+  border: #5a7e1f 1px solid; }
+
+.h5p-answers .h5p-answer:hover .h5p-alternative-container, .h5p-answers .h5p-multichoice .h5p-answer:focus .h5p-alternative-container {
+  color: #fff;
+  background: #5a7e1f;
+  border: #020301 1px solid; }
+
+.h5p-answers .h5p-answer .h5p-alternative-container {
+  padding: .375rem .75rem .375rem .75rem;
+  margin: 0;
+  border: 1px solid #e3e6e8;
+  margin-right: 1rem;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 50%;
+  width: max-content;
+  background: #f9fafa; }
+
 .h5p-true-false-answer {
   padding: .375rem .75rem .375rem .75rem;
   margin: 0;
@@ -78,9 +102,14 @@ ul.dots-container {
   content: '';
   margin: 0; }
 
-.h5p-true-false-answer:active, .h5p-true-false-answer:hover, .h5p-true-false-answer:focus, .h5p-true-false-answer[aria-checked=true] {
+.h5p-true-false-answer:active, .h5p-true-false-answer:focus, .h5p-true-false-answer[aria-checked=true] {
   background: #AAD75F;
   border-color: #5a7e1f; }
+
+.h5p-true-false-answer:hover {
+  color: #fff;
+  background: #5a7e1f;
+  border: #020301 1px solid; }
 
 .h5p-true-false-answers .wrong:after, .h5p-true-false-answers .correct:after {
   width: 100%; }
