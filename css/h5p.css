@@ -20,30 +20,47 @@
     margin: 0 auto; }
 
 .h5p-joubelui-button {
-  background: #d3261d;
-  padding: .375rem .75rem .375rem .75rem;
-  margin: 0; }
+  font-size: 0.9em;
+  cursor: pointer;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  background-color: #d3261d;
+  border-color: #4c0e0b;
+  color: #fff;
+  border-width: 1px;
+  padding: 8px 30px;
+  float: none;
+  vertical-align: bottom; }
 
 .h5p-joubelui-button:before {
   content: '';
   padding: 0; }
 
 .h5p-joubelui-button:hover, .h5p-joubelui-button:active, .h5p-joubelui-button:focus {
-  background: #a61e17; }
+  background: #a61e17;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
 
 .h5p-question-content.h5p-radio > ul > li {
   width: 50%;
   width: max-content; }
 
 .h5p-answers
-.h5p-question-next, .h5p-question-prev {
-  height: 1rem;
-  width: 1rem;
-  margin: 0;
-  padding: 0; }
-
 .h5p-question .h5p-question-next {
   content: "next \f054"; }
+
+.h5p-question .h5p-question-prev, .h5p-question .h5p-question-next {
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  text-decoration: none;
+  padding: 0;
+  margin: 0; }
+
+.h5p-question .h5p-question-next:before, .h5p-question .h5p-question-prev:before {
+  top: 0.5rem; }
 
 ul.dots-container {
   padding-top: 1rem; }
@@ -80,18 +97,6 @@ ul.dots-container {
   background: #d3261d !important;
   border: #4c0e0b 1px solid !important; }
 
-.h5p-answers .h5p-answer-icon, .h5p-answers .h5p-solution-icon {
-  display: none; }
-
-.h5p-answers .h5p-should .h5p-alternative-container {
-  background: #AAD75F;
-  border: #5a7e1f 1px solid !important; }
-
-.h5p-answers .h5p-should-not .h5p-alternative-container {
-  color: #fff;
-  background: #d3261d !important;
-  border: #4c0e0b 1px solid !important; }
-
 .h5p-answers .h5p-answer .h5p-alternative-container {
   padding: .375rem .75rem .375rem .75rem;
   margin: 0;
@@ -103,6 +108,18 @@ ul.dots-container {
   width: 50%;
   width: max-content;
   background: #f9fafa; }
+
+.h5p-answer-icon, .h5p-solution-icon {
+  display: none; }
+
+.h5p-should .h5p-alternative-container {
+  background: #AAD75F !important;
+  border: #5a7e1f 1px solid !important; }
+
+.h5p-should-not .h5p-alternative-container {
+  color: #fff;
+  background: #d3261d !important;
+  border: #4c0e0b 1px solid !important; }
 
 .h5p-true-false-answer {
   padding: .375rem .75rem .375rem .75rem;

@@ -32,11 +32,19 @@
 //Check button
 .h5p-joubelui-button
 {
-    background: $rmit-red;
-    padding: .375rem .75rem .375rem .75rem ;
-    margin: 0;
-    
-}
+ font-size:0.9em;
+  cursor:pointer;
+  position:relative;
+  bottom:auto;
+  right:auto;
+  background-color: $rmit-red;
+  border-color: darken($rmit-red, 30%);
+  color: $white;
+  border-width:1px;
+  padding: 8px 30px;
+  float:none;
+  vertical-align: bottom;
+  }
 
 .h5p-joubelui-button:before
 {
@@ -47,7 +55,9 @@
 .h5p-joubelui-button:hover, .h5p-joubelui-button:active, .h5p-joubelui-button:focus, 
 {
     background: darken($rmit-red, 10%);
-    
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 //Quiz 
 
@@ -61,19 +71,26 @@
 
 //choice buttons
    
-//next page selector
-.h5p-question-next, .h5p-question-prev, 
-{
-height: 1rem;
-width: 1rem;
-margin: 0;
-padding: 0;
-
-}
-
 .h5p-question .h5p-question-next
 {
     content: "next \f054";
+}
+//next page selector
+.h5p-question .h5p-question-prev, .h5p-question .h5p-question-next
+{
+    //conforms next selector
+    height: 2rem;
+    width: 2rem;
+    background-size: contain;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.h5p-question .h5p-question-next:before, .h5p-question .h5p-question-prev:before 
+{
+//centers arrow    
+top: 0.5rem;
 }
 
  //Progress icons
@@ -140,6 +157,14 @@ padding: 0;
     background: darken($rmit-green, 30%);
     border: darken($rmit-green, 60%) 1px solid;
 }
+ .h5p-answer.h5p-wrong .h5p-alternative-container, 
+ .h5p-answer.h5p-wrong:hover .h5p-alternative-container
+{
+    color: $white;    
+    background: $rmit-red !important;
+    border: darken($rmit-red, 30%) 1px solid !important;
+}
+//correct and incorrect icon overrides - TODO these could be improved.
 
 .h5p-answer
 {
@@ -160,6 +185,29 @@ padding: 0;
    
 }
 }
+
+.h5p-answer-icon, .h5p-solution-icon
+{
+display: none;
+}
+.h5p-should
+
+{
+// shows solution 
+.h5p-alternative-container
+{
+    background: $rmit-green !important;
+    border: darken($rmit-green, 30%) 1px solid !important;
+}
+}
+.h5p-should-not
+{
+    .h5p-alternative-container
+{
+    color: $white;    
+    background: $rmit-red !important;
+    border: darken($rmit-red, 30%) 1px solid !important;
+}}
 
 // True False activity 
 .h5p-true-false-answer

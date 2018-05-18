@@ -1,5 +1,7 @@
 //Overrides Bootstrap variables
 $rmit-red: #d3261d !default; //Actually not RMIT red, but Canvas red - https://sites.rmit.edu.au/projectrewire/2018/04/26/canvas-scoop-great-news-for-canvas-accessibility/
+$canvas-link-blue: #0074E7;
+
 $rmit-blue: #000054 !default;
 $rmit-teal: #7ae1AA !default;
 $rmit-yellow: #FAC800 !default;
@@ -95,3 +97,5 @@ $black: #000;
 $blue: #000054;
 $light-blue: $rmit-azure;
 $red: #dc291e;
+
+$link-color:                $canvas-link-blue !default;
