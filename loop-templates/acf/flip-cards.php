@@ -1,23 +1,6 @@
 
-
-
- 
         		<!-- Card Flip -->
 				
-	
-						
-						
-						
-						
-						
-						
-			
-   
-
-	  
-			
-
-
 		<script>
 $(document).ready(function(){
     $('.btn').on('click', function(e) {
@@ -39,14 +22,13 @@ $(function () {
 })</script>
 <!-- end acf.php -->
 
-
   <?php
 
 if (have_rows('field_5a865a7a9f82f')): ?>
 
 <div id="card-flip">
 
-<div class="container-fluid pt-5">
+<div class="container pt-5 pb-4">
 	<div class="row" >
 <!-- Build card-->
  <?php 
@@ -72,7 +54,6 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 					
 <?php endif; ?></div>
 
-							
 								 <span class="btn btn-primary">Flip me<span>
 							 </span></span>
 
@@ -80,16 +61,11 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 
 						</div><!-- end front-->
 							
-
-							
-
 					<!--front/back -->
 					<div class="back">
 							<!-- back content -->
 							<div class="card">
 															<div class="card-body">
-
-								
 
 	<?php if (get_sub_field('field_5a86650b13630')): ?>
 	<div class="card-text">
@@ -98,8 +74,6 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 					
 					</div>
 				<?php endif; ?>
-
-							
 
 							 </div>
 
@@ -110,8 +84,6 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 					
 							 <!-- <img src="<?php the_sub_field('field_5a8664851362f'); ?>" data-holder-rendered="true" width: 100%; display: block;">-->
 								
-							
-
 	</div>
 				</div>
 
@@ -131,5 +103,4 @@ if (have_rows('field_5a865a7a9f82f')): ?>
 endif;
 
 ?>
-<!-- for providing odd classes-->
-<?php if ($i==3){ echo "</div><div class='row'>"; } ?>
+<!-- for providing odd classes--><?php if ($i==3){ echo "</div><div class='row'>"; } ?>
