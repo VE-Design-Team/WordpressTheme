@@ -270,3 +270,23 @@ display: none;
       }
     }
 //Multichoice
+
+// Drop zone text
+.h5p-drag-droppable-words 
+{
+.h5p-drag-dropzone-container
+{
+.ui-droppable
+{
+    background-color: $white;
+    border: 1px dashed $gray-700;
+}
+}
+}
+
+.h5p-drag-text [aria-grabbed=true], .h5p-drag-text [aria-grabbed].h5p-drag-dropped:not(.ui-state-disabled):hover, .h5p-drag-text [aria-grabbed]:not(.ui-state-disabled):hover
+{
+    background-color: $link-color;
+    color: $white;
+
+}

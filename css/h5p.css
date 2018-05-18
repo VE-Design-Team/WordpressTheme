@@ -161,3 +161,11 @@ ul.dots-container {
   background: #e3e6e8; }
   .h5p-drag-dropzone-container .h5p-drag-text [aria-dropeffect] {
     background: #e3e6e8; }
+
+.h5p-drag-droppable-words .h5p-drag-dropzone-container .ui-droppable {
+  background-color: #fff;
+  border: 1px dashed #636668; }
+
+.h5p-drag-text [aria-grabbed=true], .h5p-drag-text [aria-grabbed].h5p-drag-dropped:not(.ui-state-disabled):hover, .h5p-drag-text [aria-grabbed]:not(.ui-state-disabled):hover {
+  background-color: #0074E7;
+  color: #fff; }
