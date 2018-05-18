@@ -8875,7 +8875,6 @@ h4,
     #card-flip .card .btn:hover {
       border: solid 1px #dc291e; }
     #card-flip .card p {
-      text-align: center;
       font-size: 1rem; }
   @media (max-width: 575.98px) {
     #card-flip .card-body {
@@ -8936,8 +8935,7 @@ h4,
   margin: 0px; }
 
 #card-flip .back .card-body {
-  margin: 20px 10px;
-  overflow-x: auto; }
+  margin: 20px 10px; }
 
 #card-flip .card {
   height: 350px;
@@ -8950,11 +8948,10 @@ h4,
 #card-flip .front p {
   margin-top: 30px;
   padding: 0px 12px;
-  font-size: 1.4rem;
-  vertical-align: middle; }
+  font-size: 1.3rem; }
 
 #card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit] {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   cursor: pointer;
   margin: 0 auto;
   position: relative;
@@ -8965,7 +8962,6 @@ h4,
   color: #000;
   border-width: 1px;
   padding: 8px 30px;
-  text-align: center;
   float: none;
   vertical-align: bottom; }
 

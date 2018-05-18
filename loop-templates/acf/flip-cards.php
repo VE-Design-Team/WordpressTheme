@@ -48,7 +48,7 @@ if (have_rows('field_5a865a7a9f82f')): ?>
                               <img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e'); ?>" width:="" 100%;="" display:="" block;"=" data-holder-rendered="true">
 
 								 <?php if (get_sub_field('field_5a865a8c9f830')): ?>
-								 <div class="card-text text-center ">
+								 <div class="card-text ">
 					<?php the_sub_field('field_5a865a8c9f830'); ?>
 					</div>
 					
