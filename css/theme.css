@@ -170,12 +170,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #d3261d;
+  color: #0074E7;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #901a14;
+    color: #004e9b;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -1942,10 +1942,10 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #d3261d;
+  color: #0074E7;
   background-color: transparent; }
   .btn-link:hover {
-    color: #901a14;
+    color: #004e9b;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent; }
@@ -3039,11 +3039,11 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #d3261d;
+  color: #0074E7;
   background-color: #fff;
   border: 1px solid #ddd; }
   .page-link:focus, .page-link:hover {
-    color: #901a14;
+    color: #004e9b;
     text-decoration: none;
     background-color: #e3e6e8;
     border-color: #ddd; }
@@ -8615,6 +8615,16 @@ h4,
   text-align: left;
   font-size: 0.85rem; }
 
+#bluetrim .top-trim {
+  margin: 1rem 0 1rem 0;
+  border-top: #00AAFF 5px solid;
+  background: #f9fafa;
+  padding: 1rem;
+  position: relative; }
+
+.darkgrey {
+  background: #c7cdd1; }
+
 #calloutcards .card {
   border: 2px solid #d7d7d7;
   border-radius: 0;
@@ -9074,10 +9084,12 @@ h4,
   border: 1px solid #dc291e;
   color: #fff; }
 
-#tooltips {
-  padding-bottom: 100px; }
-  #tooltips p {
-    cursor: pointer; }
+#tooltips p {
+  cursor: pointer; }
+
+.tooltip-inner {
+  max-width: 300px;
+  z-index: 1000; }
 
 .script {
   font-family: 'Gamja Flower', cursive;

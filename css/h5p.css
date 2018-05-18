@@ -74,6 +74,24 @@ ul.dots-container {
   background: #5a7e1f;
   border: #020301 1px solid; }
 
+.h5p-answers .h5p-answer.h5p-wrong .h5p-alternative-container,
+.h5p-answers .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
+  color: #fff;
+  background: #d3261d !important;
+  border: #4c0e0b 1px solid !important; }
+
+.h5p-answers .h5p-answer-icon, .h5p-answers .h5p-solution-icon {
+  display: none; }
+
+.h5p-answers .h5p-should .h5p-alternative-container {
+  background: #AAD75F;
+  border: #5a7e1f 1px solid !important; }
+
+.h5p-answers .h5p-should-not .h5p-alternative-container {
+  color: #fff;
+  background: #d3261d !important;
+  border: #4c0e0b 1px solid !important; }
+
 .h5p-answers .h5p-answer .h5p-alternative-container {
   padding: .375rem .75rem .375rem .75rem;
   margin: 0;
