@@ -331,7 +331,6 @@ function add_dashboard_video_widgets() {
 }
 add_action('wp_dashboard_setup', 'add_dashboard_video_widgets' );
 
-
 function MYPLUGIN_alter_styles(&$styles, $libraries, $embed_type) {
 	$styles[] = (object) array(
 	  // Path must be relative to wp-content/uploads/h5p or absolute.
@@ -340,3 +339,44 @@ function MYPLUGIN_alter_styles(&$styles, $libraries, $embed_type) {
 	);
   }
   add_action('h5p_alter_library_styles', 'MYPLUGIN_alter_styles', 10, 3);
+
+ //custom login logo
+ 
+ function rmit_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/rmit-login-logo.png);
+		height:65px;
+		width:320px;
+		background-size: 320px 65px;
+		background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'rmit_login_logo' );
+
+function rmit_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'rmit_login_logo_url' );
+
+function rmit_login_logo_url_title() {
+    return 'An emedia resource';
+}
+add_filter( 'login_headertitle', 'rmit_login_logo_url_title' );
+
+// remove wordpress from admin bar
+
+add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
+function remove_wp_logo( $wp_admin_bar ) {
+	$wp_admin_bar->remove_node( 'wp-logo' );
+}
+
+// Admin footer modification
+  
+function remove_footer_admin () 
+{
+    echo '<span id="footer-thankyou">Latest version of this custom Wordpress theme <a href="https://stash.its.rmit.edu.au/users/e37247/repos/rich-content-page-builder/" target="_blank">is available here</a></span>';
+}
+ add_filter('admin_footer_text', 'remove_footer_admin');
