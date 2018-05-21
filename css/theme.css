@@ -8795,27 +8795,39 @@ h4,
   color: #e60028; }
 
 #left-tabs .triangle {
+  float: right;
+  background: red;
   display: none;
   position: relative;
-  top: -47px;
-  right: -17px;
+  background: #f1f1f1;
+  border: 2px solid #c7cdd1;
+  left: 1.25rem;
+  z-index: 1000;
+  top: 0.6rem; }
+
+#left-tabs .triangle:after, #left-tabs .triangle:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
   height: 0;
-  border-style: solid;
-  border-width: 20px 20px 20px 0;
-  border-color: transparent #c7cdd1 transparent transparent; }
-
-#left-tabs .empty {
+  width: 0;
   position: absolute;
-  right: -22px;
-  top: -20px;
-  height: 10px;
-  width: 10px;
-  z-index: 10000;
-  border-style: solid;
-  border-width: 20px 20px 20px 0;
-  border-color: transparent #fff transparent transparent; }
+  pointer-events: none; }
 
-#left-tabs a.nav-link.active .triangle {
+#left-tabs .triangle:after {
+  border-color: rgba(241, 241, 241, 0);
+  border-right-color: #fff;
+  border-width: 1rem;
+  margin-top: -1rem; }
+
+#left-tabs .triangle:before {
+  border-color: rgba(221, 221, 221, 0);
+  border-right-color: #c7cdd1;
+  border-width: 1.175rem;
+  margin-top: -1.175rem; }
+
+#left-tabs a.nav-link.active > .h5 > .triangle {
   display: inline; }
 
 #card-flip {

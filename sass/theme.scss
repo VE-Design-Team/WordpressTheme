@@ -289,44 +289,52 @@ border: 2px solid $dark-grey;
   a.nav-link.active > .h5
   {
   color: #e60028;
+
   }
- 
   .triangle
   {
-    //position: relative;
-    display: none;
-    //width: 0; 
-    //height: 0; 
-    position: relative;
-    top: -47px;
-    right: -17px;
-    
+    float: right;
+   // position: relative;
+  background: red;
+  display: none;
+  position: relative;
+	background: #f1f1f1;
+  border: 2px solid $dark-grey;
+  left: 1.25rem;
+  z-index: 1000;
+  top: 0.6rem;
+  }
+
+  .triangle:after, .triangle:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
     height: 0;
-    border-style: solid;
-    border-width: 20px 20px 20px 0;
-    border-color: transparent $dark-grey transparent transparent;
-  }    
-  .empty
-  {
+    width: 0;
     position: absolute;
-    right: -22px;
-    top: -20px;
-   height: 10px;
-   width: 10px;
-    z-index: 10000;
-   border-style: solid;
-    border-width: 20px 20px 20px 0;
-    border-color: transparent $white transparent transparent;
-    
+    pointer-events: none;
   }
-  
-  a.nav-link.active 
+  .triangle:after {
+    border-color: rgba(241, 241, 241, 0);
+    border-right-color: $white;
+    border-width: 1rem;
+    margin-top: -1rem;
+  }
+  .triangle:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-right-color: $dark-grey;
+    border-width: 1.175rem;
+    margin-top: -1.175rem;
+  }
+
+  a.nav-link.active > .h5 > .triangle
   {
-    .triangle
-    {
-      display: inline;
-    }
+
+display: inline;
+
   }
+
 }
 
 //cardflip
