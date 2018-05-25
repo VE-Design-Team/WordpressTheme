@@ -8590,7 +8590,8 @@ h4,
   filter: alpha(opacity=80);
   /* For IE8 and earlier */ }
 
-.edit-me:hover, .edit-me:active {
+.edit-me:hover,
+.edit-me:active {
   opacity: 1;
   filter: alpha(opacity=100);
   /* For IE8 and earlier */ }
@@ -8805,7 +8806,8 @@ h4,
   z-index: 1000;
   top: 0.6rem; }
 
-#left-tabs .triangle:after, #left-tabs .triangle:before {
+#left-tabs .triangle:after,
+#left-tabs .triangle:before {
   right: 100%;
   top: 50%;
   border: solid transparent;
@@ -8937,7 +8939,9 @@ h4,
   #table-body .yellow {
     background: yellow; }
 
-#card-flip .back, #card-flip .card-flip, #card-flip .front {
+#card-flip .back,
+#card-flip .card-flip,
+#card-flip .front {
   width: 100%;
   max-width: 300px;
   height: 350px; }
@@ -8962,7 +8966,9 @@ h4,
   padding: 0px 12px;
   font-size: 1.3rem; }
 
-#card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit] {
+#card-flip .card .btn,
+#card-flip .card .wpcf7 input[type=submit],
+.wpcf7 #card-flip .card input[type=submit] {
   font-size: 0.9em;
   cursor: pointer;
   margin: 0 auto;
@@ -8977,7 +8983,8 @@ h4,
   float: none;
   vertical-align: bottom; }
 
-#card-flip .card .btn:hover, #card-flip .card .btn:focus {
+#card-flip .card .btn:hover,
+#card-flip .card .btn:focus {
   background-color: #E60028;
   border-width: 1px;
   color: #fff;
@@ -9172,7 +9179,8 @@ table {
 .table-rmit tbody tr:nth-child(even) {
   background: #e8ebec; }
 
-.table-rmit tbody tr th, .table-rmit tbody tr td {
+.table-rmit tbody tr th,
+.table-rmit tbody tr td {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   border-top: 0;
@@ -9190,7 +9198,8 @@ table {
 .table-canvas tbody tr:nth-child(even) {
   background: #e8ebec; }
 
-.table-canvas tbody tr th, .table-canvas tbody tr td {
+.table-canvas tbody tr th,
+.table-canvas tbody tr td {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   border-top: 0;
@@ -9208,7 +9217,8 @@ table {
 .table-document tbody tr:nth-child(even) {
   background: #e8ebec; }
 
-.table-document tbody tr th, .table-document tbody tr td {
+.table-document tbody tr th,
+.table-document tbody tr td {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   border-top: 0;
@@ -9226,8 +9236,50 @@ table {
 .table-colour tbody tr:nth-child(even) {
   background: #d5ebb1; }
 
-.table-colour tbody tr th, .table-colour tbody tr td {
+.table-colour tbody tr th,
+.table-colour tbody tr td {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   border-top: 0;
   border-bottom: 0; }
+
+#sample-document .physical-document {
+  border: solid 0px #cfcfcf;
+  border-bottom: none;
+  padding: 3rem 4rem;
+  margin: 20px 20px 0px 20px;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 1em;
+  line-height: 1.7em;
+  -webkit-box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+  max-width: 800px; }
+  #sample-document .physical-document p:last-child {
+    padding-bottom: 1rem; }
+
+#sample-document .tear {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: auto 100%;
+  height: 100%;
+  padding: 2.47% 0;
+  margin: 0px 20px 20px 20px;
+  -webkit-filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.28));
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.28));
+  max-width: 800px; }
+
+#sample-document .background-watermark {
+  position: absolute;
+  z-index: -5;
+  display: block;
+  margin: auto; }
+
+#sample-document .bg-text {
+  color: lightgrey;
+  font-size: 3rem;
+  line-height: 4rem;
+  z-index: -5;
+  transform: rotate(330deg);
+  -webkit-transform: rotate(330deg);
+  padding-top: 10rem; }

@@ -16,10 +16,8 @@
 // Rich content //
 @import "theme/rich-content";
 // <--------- That's where you can add your own design. Thats your part!
-
 //Edit me link
-.edit-me
-{
+.edit-me {
   position: fixed;
   z-index: 2000;
   top: 1rem;
@@ -27,12 +25,15 @@
   border: 1px solid #ccc;
   background: #eeeeee;
   opacity: 0.8;
-  filter: alpha(opacity=80); /* For IE8 and earlier */
+  filter: alpha(opacity=80);
+  /* For IE8 and earlier */
 }
-.edit-me:hover, .edit-me:active
-{
-   opacity: 1;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
+
+.edit-me:hover,
+.edit-me:active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
 }
 
 #ChoiceGame {
@@ -57,24 +58,23 @@
     font-size: 0.85rem;
   }
 }
-/// Global utilities
 
+/// Global utilities
 //Blue trim 
 #bluetrim {
- 
   .top-trim {
     margin: 1rem 0 1rem 0;
     border-top: $light-blue 5px solid;
     background: $light-grey; //margin: 1rem 0 1rem 0;
     padding: 1rem;
     position: relative;
-
+  }
 }
 
-}
 .darkgrey {
   background: $dark-grey;
 }
+
 //Cards
 #calloutcards {
   .card {
@@ -271,41 +271,34 @@
     border-right: 2px solid $dark-grey;
     border-bottom: 2px solid $dark-grey;
   }
-
 }
-#left-tabs
-{
-  .tab-content{
-border: 2px solid $dark-grey;
+
+#left-tabs {
+  .tab-content {
+    border: 2px solid $dark-grey;
   }
-  .tab-pane
-  {
+  .tab-pane {
     margin: 1rem;
   }
-  a.nav-link > .h5 {
+  a.nav-link>.h5 {
     color: black;
-
   }
-  a.nav-link.active > .h5
-  {
-  color: #e60028;
-
+  a.nav-link.active>.h5 {
+    color: #e60028;
   }
-  .triangle
-  {
-    float: right;
-   // position: relative;
-  background: red;
-  display: none;
-  position: relative;
-	background: #f1f1f1;
-  border: 2px solid $dark-grey;
-  left: 1.25rem;
-  z-index: 1000;
-  top: 0.6rem;
+  .triangle {
+    float: right; // position: relative;
+    background: red;
+    display: none;
+    position: relative;
+    background: #f1f1f1;
+    border: 2px solid $dark-grey;
+    left: 1.25rem;
+    z-index: 1000;
+    top: 0.6rem;
   }
-
-  .triangle:after, .triangle:before {
+  .triangle:after,
+  .triangle:before {
     right: 100%;
     top: 50%;
     border: solid transparent;
@@ -327,14 +320,9 @@ border: 2px solid $dark-grey;
     border-width: 1.175rem;
     margin-top: -1.175rem;
   }
-
-  a.nav-link.active > .h5 > .triangle
-  {
-
-display: inline;
-
+  a.nav-link.active>.h5>.triangle {
+    display: inline;
   }
-
 }
 
 //cardflip
@@ -379,7 +367,7 @@ display: inline;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     height: 100%;
-     }
+  }
   .card {
     background-repeat: no-repeat;
     background-size: 300%;
@@ -404,7 +392,6 @@ display: inline;
       border: solid 1px $red;
     }
     p {
-      
       font-size: 1rem;
     }
   }
@@ -474,79 +461,77 @@ display: inline;
   .highlight,
   .yellow {
     background: yellow;
-  
   }
 }
-#card-flip .back, #card-flip .card-flip, #card-flip .front{
-  width:100%;
-  max-width:300px;
+
+#card-flip .back,
+#card-flip .card-flip,
+#card-flip .front {
+  width: 100%;
+  max-width: 300px;
   height: 350px;
- 
 }
 
-#card-flip .card-body{
-  padding:0px;
+#card-flip .card-body {
+  padding: 0px;
   margin: 0px;
 }
 
-#card-flip .back .card-body{
+#card-flip .back .card-body {
   margin: 20px 10px;
-
 }
 
-#card-flip .card{
-  height:350px;
-  background-color:#ffffff;
+#card-flip .card {
+  height: 350px;
+  background-color: #ffffff;
   box-shadow: 3px 3px 5px #ddd;
   border: none;
   border-radius: 10px;
   padding-bottom: 30px;
 }
 
-#card-flip .front p{
+#card-flip .front p {
   margin-top: 30px;
   padding: 0px 12px;
   font-size: 1.3rem;
-
 }
-#card-flip .card .btn, #card-flip .card .wpcf7 input[type=submit], .wpcf7 #card-flip .card input[type=submit]{
-  font-size:0.9em;
-  cursor:pointer;
+
+#card-flip .card .btn,
+#card-flip .card .wpcf7 input[type=submit],
+.wpcf7 #card-flip .card input[type=submit] {
+  font-size: 0.9em;
+  cursor: pointer;
   margin: 0 auto;
-  position:relative;
-  bottom:auto;
-  right:auto;
-  background-color:#EBEBEB;
-  border-color:#AFAFAF;
-  color:#000;
-  border-width:1px;
+  position: relative;
+  bottom: auto;
+  right: auto;
+  background-color: #EBEBEB;
+  border-color: #AFAFAF;
+  color: #000;
+  border-width: 1px;
   padding: 8px 30px;
-  float:none;
+  float: none;
   vertical-align: bottom;
 }
 
-#card-flip .card .btn:hover, #card-flip .card .btn:focus {
-  background-color:#E60028;
-  border-width:1px;
-  color:#fff;
-  transition:300ms;
+#card-flip .card .btn:hover,
+#card-flip .card .btn:focus {
+  background-color: #E60028;
+  border-width: 1px;
+  color: #fff;
+  transition: 300ms;
 }
 
-#card-flip
-{
-  .card-text
-  {
-    p 
-    {
+#card-flip {
+  .card-text {
+    p {
       padding: 0;
       margin: 1rem;
     }
   }
-
-  .card-img-top
-  {
-    border-radius: 10px 10px 0 0  ; 
-   }
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 //Roadmap
@@ -664,13 +649,12 @@ display: inline;
 //Tooltips
 #tooltips {
   //so there's enough room for tooltips
- 
   p {
     cursor: pointer;
   }
 }
-.tooltip-inner
-{
+
+.tooltip-inner {
   max-width: 300px;
   z-index: 1000;
 }
@@ -735,10 +719,7 @@ reveal {
 }
 
 //Tables
-table
-{
-
-}
+table {}
 
 table {
   font-size: 1rem;
@@ -747,7 +728,6 @@ table {
   }
   thead {
     background: $gray-150;
-
     tr {
       th {
         border: 1px solid #000;
@@ -765,6 +745,7 @@ table {
     }
   }
 }
+
 .table-rmit {
   thead {
     background: $rmit-blue;
@@ -783,7 +764,8 @@ table {
       background: $gray-150;
     }
     tr {
-      th,td {
+      th,
+      td {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-top: 0;
@@ -792,6 +774,7 @@ table {
     }
   }
 }
+
 .table-canvas {
   thead {
     background: $rmit-azure;
@@ -810,7 +793,8 @@ table {
       background: $gray-150;
     }
     tr {
-       th,td {
+      th,
+      td {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-top: 0;
@@ -819,11 +803,12 @@ table {
     }
   }
 }
+
 .table-document {
   thead {
     background: $rmit-paleblue;
     color: white;
-      tr {
+    tr {
       th {
         border: 1px solid #fff;
       }
@@ -837,7 +822,8 @@ table {
       background: $gray-150;
     }
     tr {
-      th,td {
+      th,
+      td {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-top: 0;
@@ -846,11 +832,12 @@ table {
     }
   }
 }
+
 .table-colour {
   thead {
     background: $rmit-green;
     color: black;
-      tr {
+    tr {
       th {
         border: 1px solid #fff;
       }
@@ -864,12 +851,60 @@ table {
       background: $lighter-green;
     }
     tr {
-      th,td {
+      th,
+      td {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-top: 0;
         border-bottom: 0;
       }
     }
+  }
+}
+
+//Sample document
+#sample-document {
+  .physical-document {
+    border: solid 0px #cfcfcf;
+    border-bottom: none;
+    padding: 3rem 4rem;
+    margin: 20px 20px 0px 20px;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 1em;
+    line-height: 1.7em;
+    -webkit-box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+    box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.44);
+    max-width: 800px;
+    p:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+  .tear {
+    //background-image: url(<?php echo get_stylesheet_directory_uri();?>/img/tear.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 100%;
+    height: 100%;
+    padding: 2.47% 0;
+    margin: 0px 20px 20px 20px;
+    -webkit-filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.28));
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.28));
+    max-width: 800px;
+  }
+  .background-watermark {
+    position: absolute;
+    z-index: -5;
+    display: block;
+    margin: auto;
+  }
+  .bg-text {
+    color: lightgrey;
+    font-size: 3rem;
+    line-height: 4rem;
+    z-index: -5;
+    transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+    padding-top: 10rem;
   }
 }

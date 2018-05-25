@@ -1,30 +1,31 @@
+<div class="row">
+    <?php if( get_field('field_5a4ec7a12d3c2') == 'horizontal' ): ?>
 
-<div class ="row">
-<?php if( get_field('field_5a4ec7a12d3c2') == 'horizontal' ): ?>
-    
 
     <?php //Get titles ?>
-   <?php
+    <?php
 
 // check if the repeater field has rows of data
 if( have_rows('field_5a4ec33a28284') ): ?>
 
-<div id="myTabContent">  
-<?php while ( have_rows('field_5a4ec33a28284') ) : the_row(); ?>
+        <div id="myTabContent">
+            <?php while ( have_rows('field_5a4ec33a28284') ) : the_row(); ?>
 
-<h3 class="h4 text-muted "><?php the_sub_field('field_5a4ec6eb28286'); ?></h3>
+            <h3 class="h4 text-muted ">
+                <?php the_sub_field('field_5a4ec6eb28286'); ?>
+            </h3>
 
-<?php endwhile; ?>
-</div>
+            <?php endwhile; ?>
+        </div>
 
-<?php else : ?>
+        <?php else : ?>
 
- 
 
-<?php endif; ?>
-    <?php //Get images ?>
 
-    <?php
+        <?php endif; ?>
+        <?php //Get images ?>
+
+        <?php
 
 // check if the repeater field has rows of data
 if( have_rows('field_5a4ec33a28284') ):
@@ -48,8 +49,6 @@ endif;
 
 
 
-<?php else: ?>
-    See your developer
-<?php endif; ?>
+            <?php else: ?> See your developer
+            <?php endif; ?>
 </div>
-
