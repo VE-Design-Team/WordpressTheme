@@ -19,3 +19,5 @@ npm-debug.log
 src
 
 temp/
+
+sass/theme/course_selector\.scss
