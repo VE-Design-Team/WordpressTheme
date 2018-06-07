@@ -1,13 +1,15 @@
 // Make like canvas
-
-body
-{
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 h3,
 h4,
 .h3,
-.h4 {
+h5,
+.h5,
+h6,
+.h6 {
     font-family: $font-family-sans-serif;
 }
 
@@ -25,4 +27,198 @@ h4,
 
 .lead {
     font-weight: 400;
+}
+
+//Edit me link
+.edit-me {
+    position: fixed;
+    z-index: 2000;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid #ccc;
+    background: #eeeeee;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    /* For IE8 and earlier */
+}
+
+.edit-me:hover,
+.edit-me:active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* For IE8 and earlier */
+} /// Global utilities
+//Blue trim 
+#bluetrim {
+    .top-trim {
+        margin: 1rem 0 1rem 0;
+        border-top: $light-blue 5px solid;
+        background: $light-grey; //margin: 1rem 0 1rem 0;
+        padding: 1rem;
+        position: relative;
+    }
+}
+
+.darkgrey {
+    background: $dark-grey;
+}
+
+.flip-y {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: 'FlipV';
+}
+
+.flip-x {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: 'FlipH';
+} //Tables
+table {}
+
+table {
+    font-size: 1rem;
+    a {
+        color: $rmit-azure;
+    }
+    thead {
+        background: $gray-150;
+        tr {
+            th {
+                border: 1px solid #000;
+            }
+        }
+    }
+    tbody {
+        tr {
+            th {
+                border: 1px solid #000;
+            }
+            td {
+                border: 1px solid #000;
+            }
+        }
+    }
+}
+
+.table-rmit {
+    thead {
+        background: $rmit-blue;
+        color: white;
+        tr {
+            th {
+                border: 1px solid #fff;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(odd) {
+            background: $gray-50;
+        }
+        tr:nth-child(even) {
+            background: $gray-150;
+        }
+        tr {
+            th,
+            td {
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.table-canvas {
+    thead {
+        background: $rmit-azure;
+        color: white;
+        tr {
+            th {
+                border: 1px solid #fff;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(odd) {
+            background: $gray-50;
+        }
+        tr:nth-child(even) {
+            background: $gray-150;
+        }
+        tr {
+            th,
+            td {
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.table-document {
+    thead {
+        background: $rmit-paleblue;
+        color: white;
+        tr {
+            th {
+                border: 1px solid #fff;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(odd) {
+            background: $gray-50;
+        }
+        tr:nth-child(even) {
+            background: $gray-150;
+        }
+        tr {
+            th,
+            td {
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.table-colour {
+    thead {
+        background: $rmit-green;
+        color: black;
+        tr {
+            th {
+                border: 1px solid #fff;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(odd) {
+            background: $much-lighter-green;
+        }
+        tr:nth-child(even) {
+            background: $lighter-green;
+        }
+        tr {
+            th,
+            td {
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
 }
