@@ -263,6 +263,19 @@ if (function_exists('acf_add_options_page')) {
     ));
 
 }
+//Analytics options page
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Analytics',
+        'menu_title' => 'Analytics',
+        'menu_slug' => 'analytics-options',
+        'capability' => 'edit_posts',
+        'icon_url' => 'dashicons-chart-line', // Add this line and replace the second inverted commas with class of the icon you like
+        'redirect' => false,
+    ));
+
+}
 // Completely remove comments from the site
 
 // Removes from admin menu
