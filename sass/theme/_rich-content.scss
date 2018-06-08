@@ -519,6 +519,7 @@
   }
   
   #left-tabs {
+    
     .tab-content {
       border: 2px solid $dark-grey;
     }
@@ -537,10 +538,10 @@
       display: none;
       position: relative;
       background: #f1f1f1;
-      border: 2px solid $dark-grey;
-      left: 1.25rem;
+      //border: 2px solid $dark-grey;
+      left: 1.15rem;
       z-index: 1000;
-      top: 0.6rem;
+      top: 0.7rem;
     }
     .triangle:after,
     .triangle:before {
@@ -572,6 +573,9 @@
   
   //cardflip
   #card-flip {
+  
+      font-size: 1rem;
+  
     background: #e3e6e8;
     .card-flip {
       -webkit-perspective: 1000px;
@@ -616,7 +620,7 @@
     .card {
       background-repeat: no-repeat;
       background-size: 300%;
-      border-top: $light-blue 5px solid;
+      border-top: $light-blue 5px solid; 
       border-top: 3px solid $red;
       border-radius: 0;
       display: flex;
@@ -636,9 +640,7 @@
       .btn:hover {
         border: solid 1px $red;
       }
-      p {
-        font-size: 1rem;
-      }
+ 
     }
     @media (max-width: 575.98px) {
       .card-body {
@@ -735,10 +737,10 @@
     padding-bottom: 30px;
   }
   
-  #card-flip .front p {
+  #card-flip .front p{
     margin-top: 30px;
     padding: 0px 12px;
-    font-size: 1.3rem;
+    
   }
   
   #card-flip .card .btn,

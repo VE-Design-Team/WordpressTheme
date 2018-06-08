@@ -1,26 +1,19 @@
-<?php
-if
-(have_rows('field_5a1dfb52cb056')):
+<?php if (have_rows('field_5a1dfb52cb056')):
     $i = 0;
     $last = count(get_field('field_5a1dfb52cb056'));?>
-		<div class="container-fluid" id="checklist">
-
-		  <div class="row darkgrey">
-		    <div class="container">
-		      <div class="checkpage row glossarize">
-
-		        <?php
-
-    $image = get_field('field_5a9ca670e8b54');
-
-    if (!empty($image)): ?>
-		        <div class="col-12 col-sm-3 order-sm-9">
-		          <img src="<?php the_field('field_5a9ca670e8b54');?>" class="mb-2" />
-		        </div>
-		        <div class="col-12 col-sm-9">
-		          <?php else:{}?>
-		          <div class="col-12">
-		            <?php endif;?>
+				<div class="container-fluid" id="checklist">
+				  <div class="row darkgrey">
+				    <div class="container">
+				      <div class="checkpage row glossarize">
+                <?php $image = get_field('field_5a9ca670e8b54');
+                      if (!empty($image)): ?>
+				        <div class="col-12 col-sm-3 order-sm-9">
+				          <img src="<?php the_field('field_5a9ca670e8b54');?>" class="mb-2" />
+				        </div>
+				        <div class="col-12 col-sm-9">
+				          <?php else:{}?>
+				          <div class="col-12">
+				            <?php endif;?>
             <ul class="list-unstyled">
 
               <?php while (has_sub_field('field_5a1dfb52cb056')): ?>
@@ -56,14 +49,13 @@ endif;
     })
     $("li:nth-last-child(1)").click(function () {
       $(this).addClass("checked");
-    });  
-//this fires on enter keypress for accessibility	
+    });
+//this fires on enter keypress for accessibility
 $(function(){
   $('li').keypress(function(e){
     if(e.which == 13) {
-     // $.children().collapse('toggle');
-	  $(this).addClass("checked");
-    }		
+    $(this).addClass("checked");
+    }
   })
-}); 
+});
     </script>

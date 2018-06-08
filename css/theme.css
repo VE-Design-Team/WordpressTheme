@@ -8905,10 +8905,9 @@ table {
   display: none;
   position: relative;
   background: #f1f1f1;
-  border: 2px solid #c7cdd1;
-  left: 1.25rem;
+  left: 1.15rem;
   z-index: 1000;
-  top: 0.6rem; }
+  top: 0.7rem; }
 
 #left-tabs .triangle:after,
 #left-tabs .triangle:before {
@@ -8937,6 +8936,7 @@ table {
   display: inline; }
 
 #card-flip {
+  font-size: 1rem;
   background: #e3e6e8; }
   #card-flip .card-flip {
     -webkit-perspective: 1000px;
@@ -8992,8 +8992,6 @@ table {
       right: 10px; }
     #card-flip .card .btn:hover {
       border: solid 1px #dc291e; }
-    #card-flip .card p {
-      font-size: 1rem; }
   @media (max-width: 575.98px) {
     #card-flip .card-body {
       padding: 0.5rem; }
@@ -9067,8 +9065,7 @@ table {
 
 #card-flip .front p {
   margin-top: 30px;
-  padding: 0px 12px;
-  font-size: 1.3rem; }
+  padding: 0px 12px; }
 
 #card-flip .card .btn,
 #card-flip .card .wpcf7 input[type=submit],

@@ -1,26 +1,12 @@
 <!-- Card Flip -->
-
-<script>
-	$(document).ready(function () {
-		$('.btn').on('click', function (e) {
-			$(this).closest('.card-flip').toggleClass('hover');
-		});
-	});
-
-	$(".flip").height(maxHeight + 80);
-</script>
 <style>
 	#nav-tab .tab-content {
 		border: none;
 	}
 </style>
 <script>
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	})
-</script>
-<!-- end acf.php -->
 
+</script>
 <?php
 
 if (have_rows('field_5a865a7a9f82f')): ?>
@@ -39,17 +25,17 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
     ?> ">
 						<!-- these offsets on odds-->
 						<div class="card-flip">
-							<div class="flip card-deck">
+							<div class="flip card-deck"  >
 								<!-- front content -->
 								<div class="front">
 									<!-- front content -->
-									<div class="card">
+									<div class="card" tabindex="0">
 										<div class="card-body">
 											<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
 
 											<?php if (get_sub_field('field_5a865a8c9f830')): ?>
 											<div class="card-text ">
-												<?php the_sub_field('field_5a865a8c9f830');?>
+												<p><?php the_sub_field('field_5a865a8c9f830');?></p>
 											</div>
 
 											<?php endif;?>
@@ -59,9 +45,7 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 											<span>
 											</span>
 										</span>
-
 									</div>
-
 								</div>
 								<!-- end front-->
 
@@ -88,9 +72,7 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 									</div>
 
 								</div>
-
-								<!-- <img src="<?php the_sub_field('field_5a8664851362f');?>" data-holder-rendered="true" width: 100%; display: block;">-->
-
+		
 							</div>
 						</div>
 
@@ -98,7 +80,7 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 					</div>
 					<!-- end build card -->
 					<?php
-$i++;
+$i++; 
 endwhile;?>
 			</div>
 			<!-- row-->
@@ -106,10 +88,29 @@ endwhile;?>
 	</div>
 	<?php else:
 
-    // no rows found
+    // no cards here, move along....
 
 endif;
 
 ?>
 	<!-- for providing odd classes-->
 	<?php if ($i == 3) {echo "</div><div class='row'>";}?>
+
+	<script>
+	$(document).ready(function () {
+		$('.btn').on('click', function (e) {
+			$(this).closest('.card-flip').toggleClass('hover');
+		});
+	});
+
+	$(".flip").height(maxHeight + 80);
+
+//this fires on enter keypress for accessibility	
+$(function(){
+  $('.card-flip').keypress(function(e){
+    if(e.which == 13) {
+     $(this).find('.card').toggleClass('hover');
+    }		
+  })
+})
+</script>	
