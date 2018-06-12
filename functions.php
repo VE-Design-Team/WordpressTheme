@@ -415,3 +415,12 @@ function remove_footer_admin()
     echo '<span id="footer-thankyou">Latest version of this custom Wordpress theme <a href="https://stash.its.rmit.edu.au/users/e37247/repos/rich-content-page-builder/" target="_blank">is available here</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
+
+//Permit Json uploads for Lottie animations
+// https://github.com/airbnb/lottie-web
+
+function custom_myme_types($mime_types){
+    $mime_types['json'] = 'application/json';
+    return $mime_types;
+  }
+  add_filter('upload_mimes', 'custom_myme_types', 1, 1);
