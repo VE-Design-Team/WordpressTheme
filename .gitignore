@@ -16,8 +16,6 @@ npm-debug.log
 
 *.zip
 
-src
-
 temp/
 
 sass/theme/course_selector\.scss

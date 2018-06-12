@@ -2005,8 +2005,8 @@
             "key": "field_5b1f326f775ae",
             "label": "Animation loop",
             "name": "animation_loop",
-            "type": "true_false",
-            "instructions": "Do you want your animation to loop? 'False' means it will play once only.",
+            "type": "select",
+            "instructions": "Do you want your animation to loop?",
             "required": 0,
             "conditional_logic": [
                 [
@@ -2022,11 +2022,19 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
+            "choices": {
+                "true: Loop": "true: Loop",
+                "false": "Don't loop"
+            },
+            "default_value": [
+                "false"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
             "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -2051,5 +2059,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528771352
+    "modified": 1528775296
 }
