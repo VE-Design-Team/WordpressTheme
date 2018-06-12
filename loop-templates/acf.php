@@ -37,6 +37,8 @@
 <?php get_template_part('loop-templates/acf/example-content-table');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Roadmap'): ?>
 <?php get_template_part('loop-templates/acf/roadmap');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Animation'): ?>
+<?php get_template_part('loop-templates/acf/animation');?>
 <?php elseif(!empty(get_the_content())): { ?>
 <?php the_content(); ?>
 <?php } else: { echo '<div class="card">

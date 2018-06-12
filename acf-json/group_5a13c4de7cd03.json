@@ -38,6 +38,7 @@
                 "None": "None",
                 "Accordion": "Accordion",
                 "Accordion with image": "Accordion with image",
+                "Animation": "Animation",
                 "Cards": "Cards",
                 "Carousel": "Carousel",
                 "Cluster banner": "Cluster banner",
@@ -1862,7 +1863,7 @@
                     "key": "field_5a865a8c9f830",
                     "label": "Front text",
                     "name": "front_text",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "Text will appear centred on the card, with an image, overlaid. Don't use links - they won't be accessible.",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1872,10 +1873,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": 40,
+                    "rows": "",
+                    "new_lines": ""
                 },
                 {
                     "key": "field_5a8663981362e",
@@ -1972,6 +1973,60 @@
             "min_size": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5b1f1f55c2402",
+            "label": "Animation file",
+            "name": "animation_file",
+            "type": "file",
+            "instructions": "Upload a json file that contains the animation. You need to generate this file using the After Effects Bodymovin plugin as outlined here: https:\/\/github.com\/airbnb\/lottie-web",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Animation"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "uploadedTo",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "json"
+        },
+        {
+            "key": "field_5b1f326f775ae",
+            "label": "Animation loop",
+            "name": "animation_loop",
+            "type": "true_false",
+            "instructions": "Do you want your animation to loop? 'False' means it will play once only.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Animation"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -1996,5 +2051,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1525676942
+    "modified": 1528771352
 }
