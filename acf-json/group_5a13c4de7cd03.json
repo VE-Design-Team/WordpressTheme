@@ -49,6 +49,7 @@
                 "Horizontal cards": "Horizontal cards",
                 "Hotspots": "Hotspots",
                 "Image title reveal": "Image title reveal",
+                "Imagemap": "Imagemap",
                 "Introduction page": "Introduction page",
                 "Roadmap": "Roadmap",
                 "Quadrant reveal": "Quadrant reveal",
@@ -2035,6 +2036,105 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
+        },
+        {
+            "key": "field_5b1f6b5c746f6",
+            "label": "Imagemap",
+            "name": "imagemap",
+            "type": "image",
+            "instructions": "Upload and select an SVG to apply tooltips to.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Imagemap"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg"
+        },
+        {
+            "key": "field_5b1f6bd8746f7",
+            "label": "Tooltips",
+            "name": "Tooltips",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Imagemap"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5b1f6bef746f8",
+                    "label": "Path ID",
+                    "name": "path_id",
+                    "type": "text",
+                    "instructions": "Provide the path id for the element you wish to apply a tooltip to. You can name this ID in illustrator or find the ID by opening the SVG in a text editor. This field is case sensitive",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "id=\"",
+                    "append": "\"",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b1f6e66746f9",
+                    "label": "Hover information",
+                    "name": "hover_information",
+                    "type": "text",
+                    "instructions": "What information do you want to appear in the tooltip for this path id?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -2059,5 +2159,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528775296
+    "modified": 1528786642
 }

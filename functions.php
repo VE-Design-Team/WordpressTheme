@@ -407,6 +407,9 @@ function remove_wp_logo($wp_admin_bar)
 {
     $wp_admin_bar->remove_node('wp-logo');
 }
+//remove toolbar from logged in users
+add_filter('show_admin_bar', '__return_false');
+
 
 // Admin footer modification
 
@@ -421,6 +424,7 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 
 function custom_myme_types($mime_types){
     $mime_types['json'] = 'application/json';
+    $mime_types['svg'] = 'image/svg+xml';
     return $mime_types;
   }
   add_filter('upload_mimes', 'custom_myme_types', 1, 1);

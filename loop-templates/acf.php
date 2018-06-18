@@ -17,6 +17,8 @@
 <?php get_template_part('loop-templates/acf/quadrant-reveal');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Image title reveal'): ?>
 <?php get_template_part('loop-templates/acf/image-title-reveal');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Imagemap'): ?>
+<?php get_template_part('loop-templates/acf/imagemap');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Accordion with image'): ?>
 <?php get_template_part('loop-templates/acf/accordion-with-image');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Carousel'): ?>
