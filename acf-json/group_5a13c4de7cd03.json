@@ -2041,7 +2041,7 @@
             "key": "field_5b1f6b5c746f6",
             "label": "Imagemap",
             "name": "imagemap",
-            "type": "image",
+            "type": "file",
             "instructions": "Upload and select an SVG to apply tooltips to.",
             "required": 0,
             "conditional_logic": [
@@ -2059,22 +2059,17 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "thumbnail",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
             "max_size": "",
-            "mime_types": "svg"
+            "mime_types": ""
         },
         {
             "key": "field_5b1f6bd8746f7",
             "label": "Tooltips",
             "name": "Tooltips",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "When building SVGs in Illustrator ensure the layer name of the element is applied. The Path ID (see below) needs to match the case of this.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -2237,5 +2232,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528786642
+    "modified": 1529368814
 }

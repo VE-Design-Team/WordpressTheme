@@ -55,9 +55,14 @@
 {
 	border: none;
 }
+<?php the_field('field_5b2849d5b9d0c'); ?>
+
 </style>
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})</script>
+})
+
+<?php the_field('field_5b2849e6b9d0d'); ?>
+</script>
 <!-- end acf.php -->
