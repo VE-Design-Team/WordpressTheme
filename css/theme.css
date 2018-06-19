@@ -9054,7 +9054,7 @@ table {
   margin: 0px; }
 
 #card-flip .back .card-body {
-  margin: 20px 10px; }
+  margin: 0 0 2rem 0; }
 
 #card-flip .card {
   height: 350px;
@@ -9073,8 +9073,9 @@ table {
 .wpcf7 #card-flip .card input[type=submit] {
   font-size: 0.9em;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
+  right: 2rem;
   margin: auto;
   background-color: #EBEBEB;
   border-color: #AFAFAF;
