@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title>SVG Map with Tooltips</title>
-  
-  
-  
 <style>
-html, body {
-  width: 100%;
-}
 
-svg {
-  max-width: 100% !important;
-  height: auto;
-  display: block;
-}
-
-.heyo:hover {
+.tooltips:hover {
   fill: #CC2929;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -39,8 +21,8 @@ svg {
   background: white;
   padding: 10px 15px;
   z-index: 5;
-  height: 30px;
-  line-height: 30px;
+  height: 2rem;
+  line-height: 1rem;
   margin: 0 auto;
   color: #21669e;
   border-radius: 5px;
@@ -69,54 +51,61 @@ svg {
 
     </style>
 
-  
 </head>
 
 <body>
 
-
-<?php $url = the_field('field_5b1f6b5c746f6');
-echo $url;
-
-$rss = file_get_contents($url);
-
-var_dump($rss); ?>
-
-
-<img src="<?php the_field('field_5b1f6b5c746f6'); ?>" alt="Kiwi standing on oval">
-<?php echo file_get_contents( $txt); ?>
-
+<?php $logo = get_field('field_5b1f6b5c746f6');?>
+<?php echo file_get_contents($logo); ?>
 
 <div class="description"></div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> 
+
+
+<?php
+
+// check if there are ids with tooltips to be applied
+if (have_rows('field_5b1f6bd8746f7')):
+    echo "<script>";
+    // loop through the information
+    while (have_rows('field_5b1f6bd8746f7')): the_row();?>
+
+		       $("#<?php the_sub_field('field_5b1f6bef746f8');?>").attr("class", "enabled");
+		       $("#<?php the_sub_field('field_5b1f6bef746f8');?>").attr("id", "<?php the_sub_field('field_5b1f6e66746f9');?>");
+
+
+
+		    <?php endwhile;
+    echo "</script>";
+
+else:
+
+    // No tooltips to be applied
+
+endif;
+
+?>
 
     <script>
-    
+// apply tooltips
     $description = $(".description");
 
   $('.enabled').hover(function() {
-    
-    $(this).attr("class", "enabled heyo");
+
+    $(this).attr("class", "enabled tooltips");
     $description.addClass('active');
     $description.html($(this).attr('id'));
-  }, function() {
+  }
+
+  , function() {
     $description.removeClass('active');
   });
 
 $(document).on('mousemove', function(e){
-  
+
   $description.css({
     left:  e.pageX,
     top:   e.pageY - 70
   });
-  
+
 });
-    
-    </script>
-
-
-
-
-</body>
-
-</html>
+        </script>

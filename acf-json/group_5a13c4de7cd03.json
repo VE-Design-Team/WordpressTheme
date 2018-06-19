@@ -2135,6 +2135,84 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b284957b9d0b",
+            "label": "Custom Code",
+            "name": "custom_code",
+            "type": "radio",
+            "instructions": "If you need to include custom code to format your rich content further, select \"Yes\". CSS and JS will be added to the bottom of the page. If you're not sure, select no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b2849d5b9d0c",
+            "label": "Custom CSS",
+            "name": "custom_css",
+            "type": "textarea",
+            "instructions": "Enter your custom CSS here",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b284957b9d0b",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5b2849e6b9d0d",
+            "label": "Custom JavaScript",
+            "name": "custom_javascript",
+            "type": "textarea",
+            "instructions": "Enter you custom Javascript here",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b284957b9d0b",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
