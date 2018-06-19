@@ -21,7 +21,6 @@
   background: white;
   padding: 10px 15px;
   z-index: 5;
-  height: 2rem;
   line-height: 1rem;
   margin: 0 auto;
   color: #21669e;
