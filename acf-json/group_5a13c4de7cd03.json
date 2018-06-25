@@ -1432,7 +1432,7 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 0,
+            "max": 1,
             "layout": "row",
             "button_label": "",
             "sub_fields": [
@@ -1535,6 +1535,83 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": ""
+                },
+                {
+                    "key": "field_5b3058d98687f",
+                    "label": "National Qualification code and title",
+                    "name": "national_qualification_code_and_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b3058f786880",
+                    "label": "National unit code",
+                    "name": "national_unit_code",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b305d3e27736",
+                    "label": "Em dash colour",
+                    "name": "em_dash_colour",
+                    "type": "select",
+                    "instructions": "Choose from one of the RMIT colours",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "#e60028": "RMIT Red",
+                        "#000054": "RMIT Blue",
+                        "#ffffff": "White",
+                        "#000000": "Black",
+                        "#FC9147": "Orange",
+                        "#FAC800": "Yellow",
+                        "#EEDC00": "Lemon",
+                        "#AAD75F": "Green",
+                        "#00DCB4": "RMIT Aqua",
+                        "#7AE1AA": "RMIT Teal",
+                        "#0078FF": "RMIT Blue",
+                        "#00AAFF": "RMIT Azure",
+                        "#50D2FF": "RMIT Artic",
+                        "#AA0082": "RMIT Purple",
+                        "#C864C8": "RMIT Lavender",
+                        "#FF8199": "RMIT Pink"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
                 }
             ]
         },
@@ -2232,5 +2309,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1529632346
+    "modified": 1529898924
 }

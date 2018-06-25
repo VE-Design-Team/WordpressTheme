@@ -23,7 +23,7 @@ if (have_rows('field_5a541f36eef91')):
         <?php
         $image = get_sub_field('field_5a5423847dc95');
         if (!empty($image)): ?>
-          <img src="<?php echo $image['url']; ?>" id="collapse<?php echo str_replace(str_split('\\/:*?" ()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="img-fluid collapse multi-collapse aim-<?php echo $i; ?>" height="400"/>
+          <img src="<?php echo $image['url']; ?>" id="collapse<?php echo str_replace(str_split('\\/:*?" ()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="img-fluid collapse multi-collapse aim-<?php echo $i; ?>" height="400" alt="<?php echo $image['alt']; ?>"/>
             <?php endif;?>
             <?php
     $i++;
