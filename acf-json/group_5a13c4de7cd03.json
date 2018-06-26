@@ -2143,7 +2143,7 @@
         },
         {
             "key": "field_5b1f6bd8746f7",
-            "label": "Tooltips",
+            "label": "Imagemap tooltips",
             "name": "Tooltips",
             "type": "repeater",
             "instructions": "When building SVGs in Illustrator ensure the layer name of the element is applied. The Path ID (see below) needs to match the case of this.",
@@ -2205,6 +2205,22 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5b31f2791c135",
+                    "label": "Image link",
+                    "name": "image_link",
+                    "type": "url",
+                    "instructions": "If you want the user to navigate somewhere click on this link",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -2309,5 +2325,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1529898924
+    "modified": 1530000117
 }

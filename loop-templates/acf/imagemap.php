@@ -68,7 +68,20 @@ if (have_rows('field_5b1f6bd8746f7')):
     // loop through the information
     while (have_rows('field_5b1f6bd8746f7')): the_row();?>
 
-		       $("#<?php the_sub_field('field_5b1f6bef746f8');?>").attr("class", "enabled");
+
+
+
+var g = document.getElementById('<?php the_sub_field('field_5b1f6bef746f8');?>');
+
+var parent = g.parentNode;
+var a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
+
+a.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '<?php the_sub_field('field_5b31f2791c135');?>');
+a.appendChild(g);
+
+parent.appendChild(a);
+
+ $("#<?php the_sub_field('field_5b1f6bef746f8');?>").attr("class", "enabled");
 		       $("#<?php the_sub_field('field_5b1f6bef746f8');?>").attr("id", "<?php the_sub_field('field_5b1f6e66746f9');?>");
 
 
@@ -85,6 +98,8 @@ endif;
 ?>
 
     <script>
+
+
 // apply tooltips
     $description = $(".description");
 
@@ -107,4 +122,5 @@ $(document).on('mousemove', function(e){
   });
 
 });
+
         </script>
