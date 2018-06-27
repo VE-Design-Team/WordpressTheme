@@ -9301,7 +9301,8 @@ reveal {
   -webkit-transform: rotate(330deg);
   padding-top: 10rem; }
 
-#SvgImageMap html, #SvgImageMap body {
+#SvgImageMap html,
+#SvgImageMap body {
   width: 100%; }
 
 #SvgImageMap svg {
