@@ -1538,44 +1538,6 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_5b3058d98687f",
-                    "label": "National Qualification code and title",
-                    "name": "national_qualification_code_and_title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b3058f786880",
-                    "label": "National unit code",
-                    "name": "national_unit_code",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_5b305d3e27736",
                     "label": "Em dash colour",
                     "name": "em_dash_colour",

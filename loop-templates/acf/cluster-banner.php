@@ -69,7 +69,6 @@ font-family: Museo-500;
         </div>
     </div>
 
-<h6 id="national-codes" class="text-muted mt-1 small">National course code: <?php  the_sub_field('field_5b3058d98687f'); ?><br> National Unit codes: <?php the_sub_field('field_5b3058f786880'); ?></h6>
 </div>
 
     <?php endwhile;
