@@ -11,12 +11,16 @@
 <?php get_template_part('loop-templates/acf/tooltip');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Sample Document'): ?>
 <?php get_template_part('loop-templates/acf/sample-document');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Chart'): ?>
+<?php get_template_part('loop-templates/acf/chart');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Cluster banner'): ?>
 <?php get_template_part('loop-templates/acf/cluster-banner');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Quadrant reveal'): ?>
 <?php get_template_part('loop-templates/acf/quadrant-reveal');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Image title reveal'): ?>
 <?php get_template_part('loop-templates/acf/image-title-reveal');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Imagemap'): ?>
+<?php get_template_part('loop-templates/acf/imagemap');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Accordion with image'): ?>
 <?php get_template_part('loop-templates/acf/accordion-with-image');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Carousel'): ?>
@@ -53,9 +57,14 @@
 {
 	border: none;
 }
+<?php the_field('field_5b2849d5b9d0c'); ?>
+
 </style>
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})</script>
+})
+
+<?php the_field('field_5b2849e6b9d0d'); ?>
+</script>
 <!-- end acf.php -->

@@ -63,15 +63,36 @@ hr
   <p class="h1 text-center align-middle text-white pt-5"><?php echo get_bloginfo( 'name' ); ?></p>
   <p class="h2 text-center align-middle text-white pt-3"><?php echo get_bloginfo( 'description' ); ?></p>
 <hr>
-  <p class="h3 text-center align-middle text-white pt-5">This content was developed in partnership with the</p> 
-<p class="text-center"><a href="https://sites.google.com/rmit.edu.au/project-c3is/the-team" target"_blank" class="display-4 text-white">VE Design team</a><br></p>
+  
 <!--<a href="https://vedesign.team">VE Design team</a>-->
 <p class="h4 text-white text-center small">
-For more information contact
-<a href="mailto:elissa.mckenzie@rmit.edu.au" class="text-white">Elissa McKenzie, Project manager</a><br> 
+For more information related to the content in this course, contact
+<p class="text-center"> 
+<?php 
 
+if (have_rows('field_5aaa08f0cbf4d', 'option')):
 
+  while (have_rows('field_5aaa08f0cbf4d', 'option')):
+
+      the_row();
+
+      
+      echo the_sub_field('field_5aaa0948cbf4f') . ', ';
+      echo the_sub_field('field_5aaa092bcbf4e') . ' : ';
+      the_sub_field('field_5aaa09a5cbf50');
+      echo '<br>';
+  endwhile;
+
+endif;
+?>
+<br>
+<a class="btn btn-sm btn-outline-light" href="<?php echo esc_url( wp_login_url() ); ?>" alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>">
+    <?php _e( 'Admin login', 'textdomain' );?>
+</a>
 </p>
+
+<p class="text-center align-middle text-white pt-5">The rich content of this course was developed in partnership with the <a href="https://emedia.rmit.edu.au/oedvedesign/" target"_blank" class="text-white">VE Design team</a><br></p>
+
 <p class="credit"><a href="https://www.flickr.com/photos/charlot17/6971678288/in/photolist-bC4F4N-a8HshS-S7ryvv-ZKQzzN-eMg9wC-akEGXm-9ms7yC-VVYp72-36hvWV-obN2uo-bU1yNg-S3QG5N-ZHQWsA-eM4KWz-YKq2g7-nyo4Zh-eMg7GW-9c6Fxt-ZMm1fL-7wAR9z-cP3r5f-xDgbW-dmFr4b-Xj2zTr-YKq2o1-QXkVLt-guvKfg-9pytrL-coRkEL-ZMkWJC-S7rzp4-bDn8WB-3xnLH-ggaWTT-dgNxe9-fhzUvm-ZMnn8q-9ms6zC-hDvDVs-eM4J9g-eMg7xm-SckHk6-CJ6G7b-dM2dze-VHnFM9-eM4JLc-VzsXhR-XfmW8S-dREL3-VMd3D4" target="_blank">Image credit:  Charlievdb</a></p>
   </div>
 </div>
