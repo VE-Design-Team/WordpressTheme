@@ -42,6 +42,7 @@
                 "Cards": "Cards",
                 "Carousel": "Carousel",
                 "Cluster banner": "Cluster banner",
+                "Chart": "Chart",
                 "Checklist": "Checklist",
                 "Custom HTML or table": "Custom HTML or table",
                 "Example content table": "Example content table",
@@ -2301,6 +2302,248 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5b33022fc17e8",
+            "label": "Chart Type",
+            "name": "chart_type",
+            "type": "select",
+            "instructions": "Select the chart type you wish to display.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "horizontalBar": "Horizontal Bar"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b33031972aec",
+            "label": "Chart content label",
+            "name": "chart_content_label",
+            "type": "text",
+            "instructions": "What does the data represent: Number of people? Percentage of votes?",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b33046a72aed",
+            "label": "Chart X label",
+            "name": "chart_y_label",
+            "type": "text",
+            "instructions": "If the chart content isn't clearly represented elsewhere you may affix a label here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b33056f72aee",
+            "label": "Chart Y label",
+            "name": "chart_y_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b330bd6f6f55",
+            "label": "Chart Data Title",
+            "name": "chart_data_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b3305d272aef",
+            "label": "Chart data set",
+            "name": "chart_datasets",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5b33060372af0",
+                    "label": "Data title",
+                    "name": "data_title",
+                    "type": "text",
+                    "instructions": "What the name of this series?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b33061b72af1",
+                    "label": "Data Value",
+                    "name": "data_value",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5b3306603fb40",
+                    "label": "Data color",
+                    "name": "data_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a13c5a7ec802",
+                                "operator": "==",
+                                "value": "Chart"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "rgba(230, 0, 40, 1)": "RMIT Red",
+                        "rgba(0, 0, 84, 1)": "RMIT Blue",
+                        "rgba(255, 255, 255, 1)": "White",
+                        "rgba(0,0,0, 1)": "Black",
+                        "rgba(252, 145, 71, 1)": "Orange",
+                        "rgba(250, 200, 0, 1)": "Yellow",
+                        "rgba(238, 220, 0, 1)": "Lemon",
+                        "rgba(170, 215, 95, 1)": "Green",
+                        "rgba(0, 220, 180, 1)": "RMIT Aqua",
+                        "rgba(122, 225, 170, 1)": "RMIT Teal",
+                        "rgba(0, 120, 255, 1)": "RMIT Blue",
+                        "rgba(0, 170, 255, 1)": "RMIT Azure",
+                        "rgba(80, 210, 255, 1)": "RMIT Artic",
+                        "rgba(170, 0, 130, 1)": "RMIT Purple",
+                        "rgba(200, 100, 200, 1)": "RMIT Lavender",
+                        "rgba(255, 129, 153, 1 ): RMIT Pink": "rgba(255, 129, 153, 1 ): RMIT Pink"
+                    },
+                    "default_value": [
+                        "rgb(230, 0, 40)"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -2325,5 +2568,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530000117
+    "modified": 1530078521
 }
