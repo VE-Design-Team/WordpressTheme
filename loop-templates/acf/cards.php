@@ -1,5 +1,5 @@
 <?php if (have_rows('field_5a1b72e2b4a86')): ?>
-<div id="calloutcards" class="card-deck <?php if ($x = 1) {
+<div id="calloutcards" class="<?php if ($x = 1) {
     echo " ml-0 ";
 }?> <?php if ($x !== $numrows) {
     echo "mr-0 ";
