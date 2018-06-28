@@ -2509,10 +2509,10 @@
                         "rgba(80, 210, 255, 1)": "RMIT Artic",
                         "rgba(170, 0, 130, 1)": "RMIT Purple",
                         "rgba(200, 100, 200, 1)": "RMIT Lavender",
-                        "rgba(255, 129, 153, 1 ): RMIT Pink": "rgba(255, 129, 153, 1 ): RMIT Pink"
+                        "rgba(255, 129, 153, 1 )": "RMIT Pink"
                     },
                     "default_value": [
-                        "rgb(230, 0, 40)"
+                        "rgba(230, 0, 40, 1)"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -2522,6 +2522,57 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b34316574802",
+            "label": "Chart source title",
+            "name": "chart_source_title",
+            "type": "text",
+            "instructions": "You really should include a source for the data represented in the chart.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b3431cc74803",
+            "label": "Chart source",
+            "name": "chart_source",
+            "type": "url",
+            "instructions": "Where can students get more info on this data? Provide a link.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -2546,5 +2597,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530082612
+    "modified": 1530147444
 }

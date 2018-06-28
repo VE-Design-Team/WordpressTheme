@@ -9092,6 +9092,10 @@ table {
   color: #fff;
   transition: 300ms; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
 #card-flip .card-text p {
   padding: 0;
   margin: 1rem; }
