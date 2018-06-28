@@ -1575,6 +1575,33 @@
                     "ajax": 0,
                     "return_format": "value",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5b3474591a392",
+                    "label": "Text colour",
+                    "name": "text_colour",
+                    "type": "select",
+                    "instructions": "What colour do you need the text to be on the banner. Think readability.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "#000054": "RMIT blue",
+                        "#ffffff": "White"
+                    },
+                    "default_value": [
+                        "#ffffff"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
                 }
             ]
         },
@@ -2597,5 +2624,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530147444
+    "modified": 1530164428
 }

@@ -45,6 +45,11 @@ font-family: Museo-500;
   color:  <?php echo the_sub_field('field_5b305d3e27736'); ?>;
  
 }
+.course-title, .course-code, .course-school
+{
+color: <?php the_sub_field('field_5b3474591a392')?>;
+}
+
 </style>    
 
 <div id="course-banner">
@@ -54,13 +59,13 @@ font-family: Museo-500;
         <div class="row">
             <div class="col-1"></div>
             <div class="col-11 pt-4 pl-5 pr-4 pb-0">
-                <h3 style="color: #000054;">
+                <h3 class="course-title" >
                     <?php the_sub_field('field_5a73d4088b83a'); ?>
                 </h3>
-                <p class="unit-code" style="color: #000054;">
+                <p class="course-code" >
                     <?php the_sub_field('field_5a73d4aa8b83b'); ?>
                 </p>
-                <p style="color: #000054;">
+                <p class="course-school" >
                     <strong>
                         <?php the_sub_field('field_5a73d4da8b83c'); ?>
                     </strong>
