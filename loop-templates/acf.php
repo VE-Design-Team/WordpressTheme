@@ -14,7 +14,7 @@
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Chart'): ?>
 <?php get_template_part('loop-templates/acf/chart');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Cluster banner'): ?>
-<?php get_template_part('loop-templates/acf/cluster-banner');?>
+<?php get_template_part('loop-templates/acf/banner-generator');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Quadrant reveal'): ?>
 <?php get_template_part('loop-templates/acf/quadrant-reveal');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Image title reveal'): ?>

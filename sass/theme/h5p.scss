@@ -8,8 +8,8 @@
     padding: 2rem;
 .h5p-standalone, .h5p-question, 
 {
-    border-top: $light-blue solid 4px;
-    background: $gray-25;
+    border-top: $accent-color $accent-thickness solid;
+    background: $rich-area;
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -21,8 +21,8 @@
     padding: 2rem;
 .h5p-multichoice, .h5p-drag-text
 {
-    border-top: $light-blue solid 4px;
-    background: $gray-25;
+    border-top: $accent-color $accent-thickness solid;
+    background: $rich-area;
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -32,7 +32,7 @@
 //Check button
 .h5p-joubelui-button
 {
- font-size:0.9em;
+  font-size:0.9em;
   cursor:pointer;
   position:relative;
   bottom:auto;
@@ -180,7 +180,7 @@ top: 0.5rem;
     box-shadow: none;
     width: 50%; // OK - for ie and edge
     width: max-content; // nicer
-    background: $gray-25; 
+    background: $rich-area; 
    }
    
 }
@@ -221,7 +221,7 @@ display: none;
     box-shadow: none;
     width: 50%; // OK - for ie and edge
     width: max-content; // nicer
-    background: $gray-25;
+    background: $rich-area;
 }
 .h5p-true-false-answer:before, .h5p-true-false-answer[aria-checked=true]::before
 {

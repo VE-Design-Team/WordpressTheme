@@ -2,7 +2,7 @@
     $i = 0;
     $last = count(get_field('field_5a1dfb52cb056'));?>
 				<div class="container-fluid" id="checklist">
-				  <div class="row darkgrey">
+				  <div class="row rich-background">
 				    <div class="container">
 				      <div class="checkpage row glossarize">
                 <?php $image = get_field('field_5a9ca670e8b54');
@@ -17,8 +17,7 @@
             <ul class="list-unstyled">
 
               <?php while (has_sub_field('field_5a1dfb52cb056')): ?>
-              <div class="item" >
-
+              <div class="item <?php the_field('field_5b3b06ad6c25f'); ?>" >
                 <li tabindex="<?php echo $i; ?>" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>">
                   <i class="fa fa-square" aria-hidden="true"></i>
                   <i class="fa fa-check-square" aria-hidden="true"></i>

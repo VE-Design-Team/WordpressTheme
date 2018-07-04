@@ -3,7 +3,7 @@
   background: #e3e6e8;
   padding: 2rem; }
   .h5p-container .h5p-standalone, .h5p-container .h5p-question {
-    border-top: #00AAFF solid 4px;
+    border-top: #00AAFF 0.5rem solid;
     background: #f9fafa;
     padding: 1rem;
     max-width: 1000px;
@@ -13,7 +13,7 @@
   background: #e3e6e8;
   padding: 2rem; }
   .h5p-content .h5p-multichoice, .h5p-content .h5p-drag-text {
-    border-top: #00AAFF solid 4px;
+    border-top: #00AAFF 0.5rem solid;
     background: #f9fafa;
     padding: 1rem;
     max-width: 1000px;

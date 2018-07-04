@@ -1970,7 +1970,7 @@
                     "label": "Front image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "Best to use an image that is the same size as the card content on the back.",
+                    "instructions": "Best to use an image that is the same size as the card content on the back. Square and landscape images work best if you're including text underneath.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -2033,6 +2033,78 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b3c038bf73ee",
+            "label": "Front card font size",
+            "name": "front_card_font_size",
+            "type": "select",
+            "instructions": "Depending on the number of words on the card choose which option will look best",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Flip cards"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1x": "Small",
+                "2x": "Medium",
+                "3x": "Large"
+            },
+            "default_value": [
+                "2x"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b3c03c1f73ef",
+            "label": "Rear card font size",
+            "name": "rear_card_font_size_copy",
+            "type": "select",
+            "instructions": "Depending on the number of words on the card choose which option will look best",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Flip cards"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1x": "Small",
+                "2x": "Medium",
+                "3x": "Large"
+            },
+            "default_value": [
+                "2x"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_5aeff956c7c3a",
@@ -2619,6 +2691,41 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5b3b06ad6c25f",
+            "label": "Checklist size",
+            "name": "checklist_size",
+            "type": "select",
+            "instructions": "How large do you want the checklist font to be? For short words text areas use small, for longer words use large.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Checklist"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Small",
+                "large": "Large"
+            },
+            "default_value": [
+                "1x"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -2643,5 +2750,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530164766
+    "modified": 1530661295
 }

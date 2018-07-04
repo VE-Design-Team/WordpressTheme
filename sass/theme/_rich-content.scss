@@ -1,17 +1,83 @@
+// Rich content Stylesheets
 //Global
-#instruction {
+.instruction {
   font-weight: 400;
-  background: $gray-200;
+  background: $instruction-background;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: .5rem;
+  color: $instruction-text;
   .fa-info-circle {
     color: $blue;
+  }
+}
+//buttons
+.btn
+{
+  font-family: Museo-500;  
+  font-size: 1rem;
+  cursor: pointer; 
+  border-radius: 2rem;
+  //bottom: 1rem;
+  //right: 2rem;
+  margin: 0 auto;
+  background-color: #EBEBEB; //pale grey
+  border-color: #AFAFAF; //darker-grey
+  color: #000; //almost blak
+  border-width: 1px;
+  padding: 0.5rem 2rem;
+  float: none;
+  margin-bottom: 0.5rem;
+  //height: 3rem;
+  
+}
+.btn-sm
+{
+  font-size: 0.8rem;
+  padding: 0.4rem 1.3rem;
+}
+.btn-lg
+{
+  font-size: 1.2rem;
+  padding: 0.7rem 2rem;
+}
+ .btn:hover,
+ .btn:focus {
+  background-color: $button-primary; 
+
+  color: #ffffff !important;
+  transition: 300ms;
+  border-color: $button-primary; 
+}
+.btn-primary
+{
+  background-color: $button-primary !important;
+  color: #ffffff !important;
+  transition: 300ms;
+  border-color: $button-primary !important; 
+}
+
+.numborder {
+  background: $numbers-background;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  font-family: Museo-500;
+  color: white;
+  .num {
+    position: relative;
+    left: 0.7rem;
+    top: 0.4rem;
+  }
+  .num2 {
+    position: relative;
+    left: 0.45rem;
+    top: 0.4rem;
   }
 }
 
 //Accordions
 #accordion {
-  background: $gray-200;
+  background: $rich-background;
   padding: 10px;
   #cards {
     .card {
@@ -22,8 +88,9 @@
         border-radius: 0;
         color: $black;
         font-weight: 700;
-        background-color: $red;
+        background-color: $accordion-header-active;
         color: $white;
+        font-family: $rich-heading-font;
         cursor: pointer;
         .fa-minus {
           display: inline;
@@ -31,6 +98,11 @@
         .fa-plus {
           display: none;
         }
+      }
+      .card-header:hover
+      {
+        background-color: $accordion-header-active;
+        color: $accordion-header-active-font;
       }
       .collapse {
         background: $gray-25;
@@ -70,7 +142,456 @@
   }
 }
 
-// Rich content
+//Cards
+#calloutcards {
+  .card {
+    border: 2px solid $mid-grey;
+    border-radius: 0;
+    margin: 5px;
+    background-color: $light-grey;
+    #content {
+      float: left;
+      display: inline;
+      position: relative;
+      top: 0;
+      .card-header {
+        border-radius: 0;
+        color: $black;
+        font-weight: 700;
+        background: inherit;
+        margin-left: 100px;
+        padding-top: 15px;
+        font-family: $rich-heading-font;
+        .fa-minus {
+          display: inline;
+        }
+        .fa-plus {
+          display: none;
+        }
+      }
+    }
+    .card-body {
+      margin-left: 100px;
+      margin-right: 50px;
+      padding-top: 0px;
+      hr {
+        background-color: $light-blue;
+      }
+    }
+  }
+  .curve {
+    width: 100px;
+    height: 100px;
+    margin-top: -2px;
+    margin-left: -2px;
+    float: left;
+    position: absolute;
+    background-color: $dark-grey;
+    -webkit-border-radius: 0px 0px 100px 100px;
+    border-radius: 0% 0% 100% 0%;
+    img {
+      height: 60px;
+      width: 60px;
+      margin-top: 10px;
+      margin-left: 10px;
+      position: relative;
+      .st0 {
+        fill: $white;
+      }
+    }
+  }
+  .pixel {
+    position: absolute;
+    width: 50px;
+    height: 50px; //margin-top: -5px;
+    float: right;
+    right: -2px;
+    bottom: -2px;
+    svg {
+      .pixel {
+        fill: $accent-color;
+      }
+    }
+  }
+}
+
+//Carousel
+#carousel {
+  .navs {
+    max-height: 100px;
+    .indicators {
+      .col-1 {
+        padding: 5px;
+        max-height: 100px;
+        img {
+          width: 100px;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+      }
+      .col-10 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .scrollers {
+    height: 100px;
+    a {
+      .fa-chevron-circle-left,
+      .fa-chevron-circle-right {
+        margin-top: 0%;
+      }
+    }
+  }
+  .indicators {
+    margin: 0;
+    padding: 0;
+    .col-auto .triangle {
+      position: relative;
+      width: 0;
+      display: none;
+      border-bottom: solid 20px $gray-450;
+      border-right: solid 20px transparent;
+      border-left: solid 20px transparent;
+      z-index: 1000;
+      width: 9px;
+      height: 9px;
+      .empty {
+        position: absolute;
+        top: 2px;
+        left: -19px;
+        width: 0;
+        border-bottom: solid 20px white;
+        border-right: solid 19px transparent;
+        border-left: solid 19px transparent;
+      }
+    }
+  }
+  .bordered {
+    border: 2px solid $gray-450;
+    padding: 1rem;
+  }
+}
+
+#carousel {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .navs {
+      max-height: 90px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .indicators .col-auto .triangle {
+      display: none;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .indicators .col-auto .triangle {
+      margin: 0px auto;
+      bottom: -10px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .indicators .col-auto .triangle {
+      margin: 6px auto;
+      bottom: -12px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .indicators .col-auto .triangle {
+      margin: 0px auto;
+      bottom: -16px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .indicators .col-auto .triangle {
+      margin: 0px auto;
+      bottom: -16px;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .top-nav {
+      display: none;
+    }
+  }
+  .side-nav {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    .side-nav {
+      display: block;
+      z-index: 1000;
+      padding: 20px;
+    }
+  }
+  .fa-chevron-circle-left {
+    float: left;
+    color: $carousel-chevron;
+    margin-bottom: 10px;
+  }
+  .fa-chevron-circle-right {
+    float: right;
+    color: $carousel-chevron;
+    margin-bottom: 10px;
+  }
+  div.container.navs>div.row.top-nav>div.col-10>div>div.col-1.col-auto.active> {
+    .triangle {
+      display: block;
+    }
+    img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.nxt-btn {
+  position: absolute;
+  float: right;
+  bottom: 0px;
+  right: 0;
+  color: $carousel-chevron;
+  cursor: pointer;
+  &:hover,
+  &:active {}
+}
+
+//Checklist
+#checklist {
+  .container-fluid {
+    padding: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  .large {
+    font-size: 1.2rem;
+  }
+  .rich-background {
+    background: $rich-background;
+    padding: 2rem;
+  }
+  .checkpage {
+    border-top: $accent-color $accent-thickness solid;
+    background: $light-grey; //margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    position: relative;
+    .note {}
+    .note:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0px 30px 30px;
+      border-style: solid;
+      border-color: $dark-grey $light-grey $dark-grey $grey;
+      background: #658e15;
+      display: block;
+      width: 0;
+    }
+  }
+  li>i.fa-check-square {
+    display: none;
+    color: $accent-color;
+  }
+  li.checked>i.fa-square {
+    display: none;
+  }
+  span {
+    // this makes the unrevealed text blurry   
+    margin-left: 0.5rem;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  li.checked>i.fa-check-square,
+  li.checked>span {
+    display: inline;
+  }
+  li.checked>span {
+    color: $black;
+    text-shadow: none;
+  }
+  i.fa-square {
+    color: $dark-grey;
+  }
+}
+//Hotspots
+#hotspots
+{
+.container-fluid
+{
+  margin: 0;
+}
+
+.hotspot:before {
+  content: "\f055";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 2rem;
+  background-size: 75%;
+  background-position: 53%;
+  background-repeat: no-repeat;
+}
+
+.hotspots-label {
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  transform: translateX(-50%);
+  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 350ms cubic-bezier(0.2, 0.5, 0.34, 1);
+  width: 100%;
+  cursor: pointer;
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hotspots-label {
+    width: 100%;
+    height: 100%;
+    padding: 50px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+    span {
+      display: none;
+    }
+    &:before {
+      display: block;
+      top: 25px;
+      left: auto;
+      right: 4px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+  }
+}
+
+.hotspot {
+  padding: 4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  color: $hotspot-color;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  line-height: 36px;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  opacity: 0;
+  width: 0;
+  transition: opacity 650ms ease-in, width 350ms linear;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0 0 10px #ffffff;
+  user-select: none;
+  &:hover {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  }
+  &.is-visible {
+    opacity: 1;
+  }
+  &.is-active {
+    text-indent: 0;
+    width: auto;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    > a > span {
+      display: none;
+    }
+    &:before {
+      color: #fff;
+    }
+  }
+  &:before {
+    transition: transform 150ms cubic-bezier(0.2, 0.5, 0.34, 1);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hotspot {
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    padding: 15px;
+    &.is-active {
+      text-indent: 0;
+      width: auto;
+    }
+    &:before {
+      top: 2px;
+      left: 2px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hotspot {
+    padding: 12px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    &.is-active {
+      padding: 0 10px 0 30px;
+      text-indent: 0;
+      width: auto;
+    }
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 70%;
+  }
+  .contain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+  }
+}
+
+}
 //Tabs
 .nav-tabs .nav-item {
   margin-bottom: -4px;
@@ -85,7 +606,7 @@
 }
 
 .text-black {
-  color: #000000;
+  color: $black;
 }
 
 .card-header {
@@ -286,6 +807,18 @@
   }
 }
 
+//Tooltip textstring
+#tooltip-textstring{
+  .container-fluid
+  {
+    background: $rich-background;
+  }
+  .top-trim {
+    background: $rich-area;
+    border-top: $accent-color $accent-thickness solid ;
+  }
+}
+
 //Glossary tooltips
 .glossarizer_replaced {
   cursor: help;
@@ -312,133 +845,6 @@
     right: 8px;
     top: 3px;
     font-size: 12px;
-  }
-}
-
-//Cards
-#calloutcards {
-  .card {
-    border: 2px solid $mid-grey;
-    border-radius: 0;
-    margin: 5px;
-    background-color: $light-grey;
-    #content {
-      float: left;
-      display: inline;
-      position: relative;
-      top: 0;
-      .card-header {
-        border-radius: 0;
-        color: $black;
-        font-weight: 700;
-        background: inherit;
-        margin-left: 100px;
-        padding-top: 15px;
-        .fa-minus {
-          display: inline;
-        }
-        .fa-plus {
-          display: none;
-        }
-      }
-    }
-    .card-body {
-      margin-left: 100px;
-      margin-right: 50px;
-      padding-top: 0px;
-      hr {
-        background-color: $light-blue;
-      }
-    }
-  }
-  .curve {
-    width: 100px;
-    height: 100px;
-    margin-top: -2px;
-    margin-left: -2px;
-    float: left;
-    position: absolute;
-    background-color: $dark-grey;
-    -webkit-border-radius: 0px 0px 100px 100px;
-    border-radius: 0% 0% 100% 0%;
-    img {
-      height: 60px;
-      width: 60px;
-      margin-top: 10px;
-      margin-left: 10px;
-      position: relative;
-      .st0 {
-        fill: $white;
-      }
-    }
-  }
-  .pixel {
-    position: absolute;
-    width: 50px;
-    height: 50px; //margin-top: -5px;
-    float: right;
-    right: -2px;
-    bottom: -2px;
-    svg {
-      .pixel {
-        fill: $light-blue;
-      }
-    }
-  }
-} //Checklist
-.instruction {
-  font-weight: 400;
-  background: $grey;
-  padding: 10px;
-  margin-bottom: .5rem;
-  .fa-info-circle {
-    color: $blue;
-  }
-}
-
-#checklist {
-  .container {
-    padding: 1rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-  }
-  .darkgrey {
-    background: $dark-grey;
-  }
-  .checkpage {
-    border-top: $light-blue 5px solid;
-    background: $light-grey; //margin: 1rem 0 1rem 0;
-    padding: 1rem;
-    position: relative;
-    .note {}
-    .note:before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      border-width: 0 0px 30px 30px;
-      border-style: solid;
-      border-color: $dark-grey $light-grey $dark-grey $grey;
-      background: #658e15;
-      display: block;
-      width: 0;
-    }
-  }
-  li>i.fa-check-square {
-    display: none;
-    color: $light-blue;
-  }
-  li.checked>i.fa-square,
-  span {
-    display: none;
-  }
-  li.checked>i.fa-check-square,
-  li.checked>span {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  i.fa-square {
-    color: $dark-grey;
   }
 } ///Tabs
 //Top
@@ -605,27 +1011,44 @@
   .card {
     background-repeat: no-repeat;
     background-size: 300%;
-    border-top: $light-blue 5px solid;
+    border-top: $accent-color $accent-thickness solid;
     border-top: 3px solid $red;
     border-radius: 0;
     display: flex;
     background-color: $light-grey;
     padding-bottom: 60px;
     overflow-y: scroll;
+    .card-body
+    {
+      display: table;
+      width: 100%;
+      //border: 1px dotted blue;
+      height: 80%;
+      .centre-align {
+        padding-top: 10%;
+        //border: 1px dashed gray;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .content {
+        
+        //background-color: red;
+        display: inline-block;
+        vertical-align: top; /* Removes the extra white space below the baseline */
+    }
+
+    }
     .btn {
-      float: right;
-      margin: 10px;
-      background: $red;
-      border: solid 1px $red;
-      border-radius: 25px;
-      font-size: 0.8rem;
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
-    .btn:hover {
-      border: solid 1px $red;
-    }
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      bottom: 0.5rem;
+      width: 100px;
+         }
+ 
   }
   @media (max-width: 575.98px) {
     .card-body {
@@ -719,7 +1142,7 @@
   box-shadow: 3px 3px 5px #ddd;
   border: none;
   border-radius: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 #card-flip .front p {
@@ -727,42 +1150,30 @@
   padding: 0px 12px;
 }
 
-#card-flip .card .btn,
-#card-flip .card .wpcf7 input[type=submit],
-.wpcf7 #card-flip .card input[type=submit] {
-  font-size: 0.9em;
-  cursor: pointer; //margin: 0 auto;
-  position: fixed;
-  bottom: 1rem;
-  right: 2rem;
-  margin: auto;
-  background-color: #EBEBEB;
-  border-color: #AFAFAF;
-  color: #000;
-  border-width: 1px;
-  padding: 8px 30px;
-  float: none;
+.btn
+ {
+
   vertical-align: bottom;
 }
 
-#card-flip .card .btn:hover,
-#card-flip .card .btn:focus {
-  background-color: #E60028;
-  border-width: 1px;
-  color: #fff;
-  transition: 300ms;
+/* width */
+
+::-webkit-scrollbar {
+  width: 0px;
 }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-#card-flip {
+
+#card-flip { 
+// TODO: This needs a tidy
+
   .card-text {
     p {
       padding: 0;
       margin: 1rem;
+      
     }
+  }
+  p{
+    text-align: center;
   }
   .card-img-top {
     border-radius: 10px 10px 0 0;

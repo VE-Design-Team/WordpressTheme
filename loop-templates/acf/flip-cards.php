@@ -31,20 +31,18 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 									<!-- front content -->
 									<div class="card" tabindex="0">
 										<div class="card-body">
-											<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
-
-											<?php if (get_sub_field('field_5a865a8c9f830')): ?>
-											<div class="card-text ">
-												<p><?php the_sub_field('field_5a865a8c9f830');?></p>
+									<?php if( get_sub_field('field_5a8663981362e') ): ?>
+									<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
+									<p class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
+<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
+							<div class="card-text centre-align text-center">
+												<p class="content <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
 											</div>
 
 											<?php endif;?>
 										</div>
 
-										<span class="btn btn-primary">Flip me
-											<span>
-											</span>
-										</span>
+										<span align="center" class="btn btn-sm">Flip me										</span>
 									</div>
 								</div>
 								<!-- end front-->
@@ -55,20 +53,19 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 									<div class="card">
 										<div class="card-body">
 
-											<?php if (get_sub_field('field_5a86650b13630')): ?>
-											<div class="card-text">
-
-												<?php the_sub_field('field_5a86650b13630');?>
-
+							<?php if( get_sub_field('field_5a8664851362f') ): ?>
+									<img class="card-img-top" src="<?php the_sub_field('field_5a8664851362f');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
+									<p class="text-center  <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></p>
+<?php elseif (get_sub_field('field_5a86650b13630')): ?>
+							<div class="card-text centre-align text-center">
+												<p class="text-center content <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></p>
 											</div>
+
 											<?php endif;?>
 
 										</div>
 
-										<span class="btn btn-primary">Flip me
-											<span>
-											</span>
-										</span>
+										<span align="center" class="btn btn-sm">Flip me</span>
 									</div>
 
 								</div>
@@ -112,5 +109,4 @@ $(function(){
      $(this).find('.card').toggleClass('hover');
     }		
   })
-})
-</script>	
+})</script>	
