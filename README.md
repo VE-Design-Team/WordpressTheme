@@ -1,6 +1,6 @@
 # Wordpress Rich Content theme
 
-Version 1.5.x (see style.css)
+Version 1.8.x (see style.css)
 
 This is an wordpress theme desigbed for the generation of rich content to be embeded in Instructure Canvas pages.  
 
