@@ -1594,7 +1594,7 @@
                         "#ffffff": "White"
                     },
                     "default_value": [
-                        "#ffffff"
+                        "#000054"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -1602,6 +1602,25 @@
                     "ajax": 0,
                     "return_format": "value",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5b3963a36f75b",
+                    "label": "Qualification",
+                    "name": "National course code and qualifications",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -2624,5 +2643,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530164428
+    "modified": 1530164766
 }
