@@ -13,7 +13,7 @@
 //buttons
 .btn
 {
-  font-family: Museo-500;  
+  font-family: Museo500;  
   font-size: 1rem;
   cursor: pointer; 
   border-radius: 2rem;
@@ -61,7 +61,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  font-family: Museo-500;
+  font-family: Museo500;
   color: white;
   .num {
     position: relative;
@@ -595,6 +595,7 @@
 //Tabs
 .nav-tabs .nav-item {
   margin-bottom: -4px;
+  background-color: red;
 }
 
 .tab-content {
@@ -855,6 +856,7 @@
     background: $white;
     .nav-link {
       border: 0;
+      background: $inactive-tab-background;
     }
     .nav-link:hover {
       border: 0;
@@ -864,22 +866,22 @@
     }
     .nav-item {
       font-weight: 700;
-      color: $dark-grey;
+      color: $gray-900;
       margin-bottom: -2px; // background: $mid-grey;
       i {
         margin-left: 0.5rem;
       }
       .title {
         margin-left: 1rem;
-        color: $v-dark-grey;
+        color: $tab-inactive-heading-colour;
         i {
-          color: $mid-grey;
+          color: $inactive-tab-background;
         }
       }
       .checked,
       .active {
         border-top: 0;
-        background: $white;
+        background: $tab-active-heading-background;
         position: relative;
         margin-top: -8px;
         padding-top: 11px;
@@ -889,9 +891,9 @@
         .title {
           position: relative;
           bottom: 3px;
-          color: $red;
+          color: $active-tab-heading;
           i {
-            color: $red;
+            color: $active-tab-heading;
           }
         }
       }
@@ -1002,11 +1004,19 @@
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     height: 100%;
+    .card{
+      background-color:$flip-card-front-colour;
+      color: $flip-card-front-text-colour
+    }
   }
   .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     height: 100%;
+    .card{
+      background-color:$flip-card-back-colour;
+      color: $flip-card-back-text-colour;
+    }
   }
   .card {
     background-repeat: no-repeat;
@@ -1022,11 +1032,9 @@
     {
       display: table;
       width: 100%;
-      //border: 1px dotted blue;
-      height: 80%;
+       height: 80%;
       .centre-align {
         padding-top: 10%;
-        //border: 1px dashed gray;
         display: table-cell;
         text-align: center;
         vertical-align: middle;

@@ -8472,7 +8472,7 @@ table {
     color: #000054; }
 
 .btn {
-  font-family: Museo-500;
+  font-family: Museo500;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -8511,7 +8511,7 @@ table {
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  font-family: Museo-500;
+  font-family: Museo500;
   color: white; }
   .numborder .num {
     position: relative;
@@ -8940,7 +8940,8 @@ table {
     background-size: cover; }
 
 .nav-tabs .nav-item {
-  margin-bottom: -4px; }
+  margin-bottom: -4px;
+  background-color: red; }
 
 .tab-content {
   border-left: 0.2rem solid #636668;
@@ -9166,20 +9167,21 @@ table {
     border-bottom: 2px solid #c7cdd1;
     background: #fff; }
     #tabs .nav-tabs .nav-link {
-      border: 0; }
+      border: 0;
+      background: #d7d7d7; }
     #tabs .nav-tabs .nav-link:hover {
       border: 0; }
     #tabs .nav-tabs li {
       background: #d7d7d7; }
     #tabs .nav-tabs .nav-item {
       font-weight: 700;
-      color: #c7cdd1;
+      color: #131414;
       margin-bottom: -2px; }
       #tabs .nav-tabs .nav-item i {
         margin-left: 0.5rem; }
       #tabs .nav-tabs .nav-item .title {
         margin-left: 1rem;
-        color: #4f5253; }
+        color: #131414; }
         #tabs .nav-tabs .nav-item .title i {
           color: #d7d7d7; }
       #tabs .nav-tabs .nav-item .checked,
@@ -9291,10 +9293,16 @@ table {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     height: 100%; }
+    #card-flip .front .card {
+      background-color: #fff;
+      color: #131414; }
   #card-flip .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     height: 100%; }
+    #card-flip .back .card {
+      background-color: #fff;
+      color: #131414; }
   #card-flip .card {
     background-repeat: no-repeat;
     background-size: 300%;
