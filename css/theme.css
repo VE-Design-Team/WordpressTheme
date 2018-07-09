@@ -8464,12 +8464,14 @@ table {
 
 .instruction {
   font-weight: 400;
-  background: #e3e6e8;
+  background: #e3e6e8 !important;
   padding: 10px;
   margin-bottom: .5rem;
   color: #131414; }
   .instruction .fa-info-circle {
-    color: #000054; }
+    color: #000054;
+    background: #fff;
+    border-radius: 0.5rem; }
 
 .btn {
   font-family: Museo500;
@@ -8500,6 +8502,12 @@ table {
   transition: 300ms;
   border-color: #d3261d; }
 
+.btn-default, .btn {
+  background-color: #d3261d !important;
+  color: #ffffff !important;
+  transition: 300ms;
+  border-color: #901a14 !important; }
+
 .btn-primary {
   background-color: #d3261d !important;
   color: #ffffff !important;
@@ -8507,7 +8515,7 @@ table {
   border-color: #d3261d !important; }
 
 .numborder {
-  background: #d3261d;
+  background: #000054;
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
@@ -8535,7 +8543,7 @@ table {
       font-weight: 700;
       background-color: #d3261d;
       color: #fff;
-      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer; }
       #accordion #cards .card .card-header .fa-minus {
         display: inline; }
@@ -8589,7 +8597,7 @@ table {
       background: inherit;
       margin-left: 100px;
       padding-top: 15px;
-      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
       #calloutcards .card #content .card-header .fa-minus {
         display: inline; }
       #calloutcards .card #content .card-header .fa-plus {
@@ -8647,7 +8655,9 @@ table {
   height: 100px; }
   #carousel .scrollers a .fa-chevron-circle-left,
   #carousel .scrollers a .fa-chevron-circle-right {
-    margin-top: 0%; }
+    margin-top: 0%;
+    width: 4rem;
+    z-index: 1000; }
 
 #carousel .indicators {
   margin: 0;
@@ -8656,7 +8666,7 @@ table {
     position: relative;
     width: 0;
     display: none;
-    border-bottom: solid 20px #c7cdd1;
+    border-bottom: solid 20px #d7d7d7;
     border-right: solid 20px transparent;
     border-left: solid 20px transparent;
     z-index: 1000;
@@ -8672,7 +8682,7 @@ table {
       border-left: solid 19px transparent; }
 
 #carousel .bordered {
-  border: 2px solid #c7cdd1;
+  border: 2px solid #d7d7d7;
   padding: 1rem; }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -9164,13 +9174,19 @@ table {
 #tabs {
   margin-top: 1rem; }
   #tabs .nav-tabs {
-    border-bottom: 2px solid #c7cdd1;
+    border-bottom: 2px solid #636668;
     background: #fff; }
     #tabs .nav-tabs .nav-link {
       border: 0;
-      background: #d7d7d7; }
+      background: #d7d7d7;
+      border-radius: 0; }
     #tabs .nav-tabs .nav-link:hover {
-      border: 0; }
+      border: 0;
+      background: #fff; }
+      #tabs .nav-tabs .nav-link:hover .title {
+        color: #d3261d; }
+        #tabs .nav-tabs .nav-link:hover .title i {
+          color: #d3261d; }
     #tabs .nav-tabs li {
       background: #d7d7d7; }
     #tabs .nav-tabs .nav-item {
@@ -9203,18 +9219,18 @@ table {
           #tabs .nav-tabs .nav-item .active .title i {
             color: #d3261d; }
   #tabs ul.nav-tabs li {
-    border-right: 2px solid #c7cdd1;
-    border-top: 2px solid #c7cdd1; }
+    border-right: 2px solid #636668;
+    border-top: 2px solid #636668; }
   #tabs ul.nav-tabs li:nth-child(1) {
-    border-left: 2px solid #c7cdd1; }
+    border-left: 2px solid #636668; }
   #tabs .tab-content {
     padding: 1rem;
-    border-left: 2px solid #c7cdd1;
-    border-right: 2px solid #c7cdd1;
-    border-bottom: 2px solid #c7cdd1; }
+    border-left: 2px solid #636668;
+    border-right: 2px solid #636668;
+    border-bottom: 2px solid #636668; }
 
 #left-tabs .tab-content {
-  border: 2px solid #c7cdd1; }
+  border: 2px solid #636668; }
 
 #left-tabs .tab-pane {
   margin: 1rem; }
@@ -9223,17 +9239,17 @@ table {
   color: black; }
 
 #left-tabs a.nav-link.active > .h5 {
-  color: #e60028; }
+  color: #d3261d; }
 
 #left-tabs .triangle {
   float: right;
-  background: red;
+  background: #d3261d;
   display: none;
   position: relative;
   background: #f1f1f1;
   left: 1.15rem;
   z-index: 1000;
-  top: 0.7rem; }
+  top: 0.8rem; }
 
 #left-tabs .triangle:after,
 #left-tabs .triangle:before {
@@ -9254,7 +9270,7 @@ table {
 
 #left-tabs .triangle:before {
   border-color: rgba(221, 221, 221, 0);
-  border-right-color: #c7cdd1;
+  border-right-color: #636668;
   border-width: 1.175rem;
   margin-top: -1.175rem; }
 

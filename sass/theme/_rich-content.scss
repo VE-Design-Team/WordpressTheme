@@ -2,12 +2,15 @@
 //Global
 .instruction {
   font-weight: 400;
-  background: $instruction-background;
+  background: $instruction-background  !important;
   padding: 10px;
   margin-bottom: .5rem;
   color: $instruction-text;
   .fa-info-circle {
-    color: $blue;
+    color: $instruction-logo;
+    background: $instruction-highlight;
+    border-radius: 0.5rem;
+    
   }
 }
 //buttons
@@ -47,6 +50,13 @@
   color: #ffffff !important;
   transition: 300ms;
   border-color: $button-primary; 
+}
+.btn-default, .btn
+{
+  background-color: $button-default !important;
+  color: #ffffff !important;
+  transition: 300ms;
+  border-color:  darken($button-default ,15%) !important; 
 }
 .btn-primary
 {
@@ -89,7 +99,7 @@
         color: $black;
         font-weight: 700;
         background-color: $accordion-header-active;
-        color: $white;
+        color:  $accordion-header-active-font;
         font-family: $rich-heading-font;
         cursor: pointer;
         .fa-minus {
@@ -238,9 +248,13 @@
   .scrollers {
     height: 100px;
     a {
+      
       .fa-chevron-circle-left,
       .fa-chevron-circle-right {
         margin-top: 0%;
+        width: 4rem;
+        z-index: 1000;
+        
       }
     }
   }
@@ -251,7 +265,7 @@
       position: relative;
       width: 0;
       display: none;
-      border-bottom: solid 20px $gray-450;
+      border-bottom: solid 20px $carousel-border;
       border-right: solid 20px transparent;
       border-left: solid 20px transparent;
       z-index: 1000;
@@ -269,7 +283,7 @@
     }
   }
   .bordered {
-    border: 2px solid $gray-450;
+    border: 2px solid $carousel-border;
     padding: 1rem;
   }
 }
@@ -596,6 +610,7 @@
 .nav-tabs .nav-item {
   margin-bottom: -4px;
   background-color: red;
+  
 }
 
 .tab-content {
@@ -852,14 +867,23 @@
 #tabs {
   margin-top: 1rem;
   .nav-tabs {
-    border-bottom: 2px solid $dark-grey;
+    border-bottom: 2px solid $nav-tabs-border-color;
     background: $white;
     .nav-link {
       border: 0;
       background: $inactive-tab-background;
+      border-radius: 0;
     }
     .nav-link:hover {
       border: 0;
+      background: $tab-active-heading-background;
+      .title{
+      color: $nav-tabs-active-text-color;
+      
+      i {
+        color: $nav-tabs-active-text-color;
+      }
+    }
     }
     li {
       background: $mid-grey;
@@ -868,6 +892,7 @@
       font-weight: 700;
       color: $gray-900;
       margin-bottom: -2px; // background: $mid-grey;
+      
       i {
         margin-left: 0.5rem;
       }
@@ -886,14 +911,14 @@
         margin-top: -8px;
         padding-top: 11px;
         bottom: -8px;
-        color: $red;
+        color: $nav-tabs-active-text-color;
         border-radius: 0;
         .title {
           position: relative;
           bottom: 3px;
-          color: $active-tab-heading;
+          color: $nav-tabs-active-text-color;
           i {
-            color: $active-tab-heading;
+            color: $nav-tabs-active-text-color;
           }
         }
       }
@@ -901,25 +926,25 @@
   }
   ul.nav-tabs {
     li {
-      border-right: 2px solid $dark-grey;
-      border-top: 2px solid $dark-grey;
+      border-right: 2px solid $nav-tabs-border-color;
+      border-top: 2px solid $nav-tabs-border-color;
     }
     li:nth-child(1) {
-      border-left: 2px solid $dark-grey;
+      border-left: 2px solid $nav-tabs-border-color;
     }
     .active {}
   }
   .tab-content {
     padding: 1rem;
-    border-left: 2px solid $dark-grey;
-    border-right: 2px solid $dark-grey;
-    border-bottom: 2px solid $dark-grey;
+    border-left: 2px solid $nav-tabs-border-color;
+    border-right: 2px solid $nav-tabs-border-color;
+    border-bottom: 2px solid $nav-tabs-border-color;
   }
 }
 
 #left-tabs {
   .tab-content {
-    border: 2px solid $dark-grey;
+    border: 2px solid $nav-tabs-border-color;
   }
   .tab-pane {
     margin: 1rem;
@@ -928,17 +953,18 @@
     color: black;
   }
   a.nav-link.active>.h5 {
-    color: #e60028;
+    color: $nav-tabs-active-text-color;
+    
   }
   .triangle {
     float: right; // position: relative;
-    background: red;
+    background: $nav-tabs-active-text-color;
     display: none;
     position: relative;
     background: #f1f1f1; //border: 2px solid $dark-grey;
     left: 1.15rem;
     z-index: 1000;
-    top: 0.7rem;
+    top: 0.8rem;
   }
   .triangle:after,
   .triangle:before {
@@ -959,7 +985,7 @@
   }
   .triangle:before {
     border-color: rgba(221, 221, 221, 0);
-    border-right-color: $dark-grey;
+    border-right-color: $nav-tabs-border-color;
     border-width: 1.175rem;
     margin-top: -1.175rem;
   }

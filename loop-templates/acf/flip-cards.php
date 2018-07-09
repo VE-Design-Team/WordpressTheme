@@ -4,37 +4,26 @@
 		border: none;
 	}
 </style>
-<script>
-
-</script>
-<?php
-
-if (have_rows('field_5a865a7a9f82f')): ?>
-
+<?php if (have_rows('field_5a865a7a9f82f')): ?>
 	<div id="card-flip">
-
 		<div class="container pt-5 pb-4">
 			<div class="row">
 				<!-- Build card-->
-				<?php
-$i = 1;
-while (have_rows('field_5a865a7a9f82f')): the_row();?>
+				<?php $i = 1;
+					  while (have_rows('field_5a865a7a9f82f')): the_row();?>
 					<div class="col-6 col-md-4 col-lg-3 <?php if ($i % 2 !== 0) {
-        print " offset-md-2 offset-lg-0 ";
-    }
-    ?> ">
+        print " offset-md-2 offset-lg-0 ";} ?> ">
 						<!-- these offsets on odds-->
 						<div class="card-flip">
 							<div class="flip card-deck"  >
 								<!-- front content -->
 								<div class="front">
-									<!-- front content -->
 									<div class="card" tabindex="0">
 										<div class="card-body">
 									<?php if( get_sub_field('field_5a8663981362e') ): ?>
-									<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
-									<p class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
-<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
+										<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
+										<p class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
+									<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
 							<div class="card-text centre-align text-center">
 												<p class="content <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
 											</div>
@@ -42,7 +31,7 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 											<?php endif;?>
 										</div>
 
-										<span align="center" class="btn btn-sm">Flip me										</span>
+										<span align="center" class="btn btn-sm btn-primary">Flip me										</span>
 									</div>
 								</div>
 								<!-- end front-->
@@ -65,7 +54,7 @@ while (have_rows('field_5a865a7a9f82f')): the_row();?>
 
 										</div>
 
-										<span align="center" class="btn btn-sm">Flip me</span>
+										<span align="center" class="btn btn-sm btn-primary">Flip me</span>
 									</div>
 
 								</div>
