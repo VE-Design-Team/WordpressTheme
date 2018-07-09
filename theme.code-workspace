@@ -2,6 +2,24 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/bootstrap"
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/css"
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/font-awesome"
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/js"
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/jszip"
+		},
+		{
+			"path": "/Users/jack/Downloads/Mesher-gh-pages 3/mesher"
 		}
 	]
 }
