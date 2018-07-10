@@ -57,7 +57,8 @@
                 "Sample Document": "Sample Document",
                 "Student File Download": "Student File Download",
                 "Tabbed sections": "Tabbed sections",
-                "Tooltip Textstrings": "Tooltip Textstrings"
+                "Tooltip Textstrings": "Tooltip Textstrings",
+                "3D .stl model": "3D .stl model"
             },
             "default_value": [
                 "None"
@@ -2726,6 +2727,145 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
+        },
+        {
+            "key": "field_5b4435607844c",
+            "label": "3D stl viewer",
+            "name": "3d_stl_viewer",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5b4436257844d",
+                    "label": "STL file",
+                    "name": "stl_file",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "stl"
+                },
+                {
+                    "key": "field_5b443ca5c690b",
+                    "label": "color",
+                    "name": "stl_color",
+                    "type": "color_picker",
+                    "instructions": "Pale colours are best",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5b4456b52c6f1",
+                    "label": "Scale",
+                    "name": "scale",
+                    "type": "number",
+                    "instructions": "Scale your model. You may need a larger number if this is a small object",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "0.1",
+                    "max": 100,
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_5b4458f5c16d3",
+                    "label": "Postion X",
+                    "name": "postion-x",
+                    "type": "number",
+                    "instructions": "You may need to move the model if you have multiple models. This moves the model in the X axis",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": -100,
+                    "max": 100,
+                    "step": 1
+                },
+                {
+                    "key": "field_5b44592bc16d5",
+                    "label": "Postion Y",
+                    "name": "postion-y",
+                    "type": "number",
+                    "instructions": "You may need to move the model if you have multiple models. This moves the model in the Y axis",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": -100,
+                    "max": 100,
+                    "step": 1
+                },
+                {
+                    "key": "field_5b44592ac16d4",
+                    "label": "Postion Z",
+                    "name": "postion-z",
+                    "type": "number",
+                    "instructions": "You may need to move the model if you have multiple models. This moves the model in the Z axis",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": -100,
+                    "max": 100,
+                    "step": 1
+                }
+            ]
         }
     ],
     "location": [
@@ -2750,5 +2890,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530661295
+    "modified": 1531206219
 }

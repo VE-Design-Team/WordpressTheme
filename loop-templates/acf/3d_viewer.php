@@ -1,6 +1,15 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/mesher/three.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/mesher/TrackballControls.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/mesher/STLLoader.js"></script>
+<style>
+#myCanvas
+{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+}
+</style>
+
 
 <script type="text/javascript">
   function onLoad(){
@@ -19,9 +28,9 @@
           scene = new THREE.Scene();
   
           //Create a perspective camera
-          camera = new THREE.PerspectiveCamera( 75,  
+          camera = new THREE.PerspectiveCamera( 50,  
               myCanvas.offsetWidth / myCanvas.offsetHeight, 1, 1000 );
-          camera.position.z = 20;
+          camera.position.z = 200;
             
           scene.add( camera );
   
@@ -45,52 +54,51 @@
     
           //Add some lights
           var dirLight = new THREE.DirectionalLight(0xffffff, 1);
-          dirLight.position.set(-3, 3, 7);
+          dirLight.position.set(-10, 10, 10);
           dirLight.position.normalize();
           scene.add(dirLight);
   
-          var pointLight = new THREE.PointLight(0xFFFFFF, 5, 50);
+          var pointLight = new THREE.PointLight(0xFFFFFF, 5, 5);
           pointLight.position.set(10, 20, -10);
           scene.add(pointLight);
+
+          var pointLight2 = new THREE.PointLight(0xFFFFFF, 10, 10);
+          pointLight2.position.set(10, -20, -100);
+          scene.add(pointLight2);
+       
+
+    
+          //loop through models
+          echo = "<?php if( have_rows('field_5b4435607844c') ):
+    $i = 0; 
+ 	// loop through the rows of data
+    while ( have_rows('field_5b4435607844c') ) : the_row();?>";
             
-          var material =  new THREE.MeshLambertMaterial(
-                  {color:0xff0000, shading: THREE.FlatShading } );
+        var material<?php if ($i == 0) {echo "";} else  { echo $i; };?> =  new THREE.MeshLambertMaterial(
+                  {color:0x<?php 
+                  echo (substr((get_sub_field('field_5b443ca5c690b')), 1)); ?>, shading: THREE.FlatShading } );     
 
-          var material2 =  new THREE.MeshLambertMaterial(
-              {color:0x00ff00, shading: THREE.FlatShading } );
-
-          var material3 = new THREE.MeshPhongMaterial(
-              { ambient: 0x555555, color: 0xAAAAAA,
-                specular: 0x111111, shininess: 200 } );
-
-          var loader = new THREE.STLLoader();
+       
+       var loader = new THREE.STLLoader();
           loader.addEventListener( 'load', function ( event ) {
               var geometry = event.content;
-              var mesh = new THREE.Mesh( geometry, material );
-              mesh.position.set( 0, 0, 0.0 );
-              mesh.rotation.set( -Math.PI/6, -Math.PI/6, 0 );
-              mesh.scale.set( 100, 100, 100 );
+              var mesh = new THREE.Mesh( geometry, material<?php if ($i == 0) {echo "";} else  { echo $i; };?> );
+              mesh.position.set( <?php the_sub_field('field_5b4458f5c16d3'); ?>, <?php the_sub_field('field_5b44592bc16d5'); ?>, <?php the_sub_field('field_5b44592ac16d4'); ?> );
+              //mesh.rotation.set( -Math.PI/6, -Math.PI/6, 0 );
+              mesh.scale.set( <?php the_sub_field('field_5b4456b52c6f1'); ?>, <?php the_sub_field('field_5b4456b52c6f1'); ?>, <?php the_sub_field('field_5b4456b52c6f1'); ?> );
               mesh.castShadow = true;
               mesh.receiveShadow = true;
               scene.add( mesh );
               
           } );
-          loader.load( '<?php echo get_stylesheet_directory_uri(); ?>/mesher/pr2_head_pan.stl' );
-            
+          loader.load( '<?php the_sub_field('field_5b4436257844d'); ?>' );
 
-          var loader = new THREE.STLLoader();
-          loader.addEventListener( 'load', function ( event ) {
-              var geometry = event.content;
-              var mesh = new THREE.Mesh( geometry, material2 );
-              mesh.position.set( 0, 0, 0.0 );
-              mesh.rotation.set( -Math.PI/6, -Math.PI/6, 0 );
-              mesh.scale.set( 50, 50, 50 );
-              mesh.castShadow = true;
-              mesh.receiveShadow = true;
-              scene.add( mesh );
-              
-          } );
-          loader.load( '<?php echo get_stylesheet_directory_uri(); ?>/mesher/pr2_head_tilt.stl' );
+
+     echo = "<?php $i++; endwhile; endif; ?>";
+
+
+          //end loop through models
+             
 
           //Call the animate function
           animate();
@@ -106,7 +114,8 @@
           renderer.render( scene, camera );
       }    
   }      
- window.onload = window.onresize = function() {onLoad();}        
+ window.onload = window.onresize = function() {onLoad();}    
+
 </script>  
-<canvas id="myCanvas" width="600" height="400"
-                style="background:lightgrey; float:right;" ></canvas>
+<canvas id="myCanvas" 
+                style="background:lightgrey;" ></canvas>

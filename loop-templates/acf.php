@@ -43,6 +43,8 @@
 <?php get_template_part('loop-templates/acf/roadmap');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Animation'): ?>
 <?php get_template_part('loop-templates/acf/animation');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == '3D .stl model'): ?>
+<?php get_template_part('loop-templates/acf/3d_viewer');?>
 <?php elseif(!empty(get_the_content())): { ?>
 <?php the_content(); ?>
 <?php } else: { echo '<div class="card">
