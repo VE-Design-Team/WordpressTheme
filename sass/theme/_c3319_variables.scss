@@ -6,14 +6,20 @@
 
 //Styles
 $card-border-width: 0.2rem;
-$headings-font-family: $font-family-serif !default;
-$nav-tabs-border-color: $gray-700 !default;
+$headings-font-family: $font-family-sans-serif !default;
+$nav-tabs-border-color: $gray-500 !default;
 $nav-tabs-link-hover-border-color: none !default;
 $nav-tabs-active-text-color: $rmit-red !default;
 $nav-tabs-link-active-color: $gray-700 !default;
 $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: $gray-700 !default;
 $nav-tabs-border-width: $card-border-width;
+$tab-active-heading-background: $white;
+$inactive-tab-background: $mid-grey;
+$tab-inactive-heading-colour: $gray-700;
+$active-tab-heading: $rmit-red;
+$tab-border: $mid-grey;
+$active-tab-heading-border: inherit;
 //$rmit-btn
 //$rmit-alternate-btn
 $numbers-background: $rmit-blue;
@@ -31,11 +37,7 @@ $accordion-header-inactive: $rich-area;
 $accordion-header-active: $rmit-red;
 $accordion-header-active-font: $white;
 $rich-heading-font: $font-family-sans-serif;
-$tab-active-heading-background: $white;
-$inactive-tab-background: $mid-grey;
-$tab-inactive-heading-colour: $gray-900;
-$active-tab-heading: $rmit-red;
-$tab-border: $mid-grey;  
+  
 $flip-card-front-colour: $white;
 $flip-card-front-text-colour: $gray-900;
 $flip-card-back-colour: $white;

@@ -283,7 +283,7 @@
     }
   }
   .bordered {
-    border: 2px solid $carousel-border;
+    border: $card-border-width solid $carousel-border;
     padding: 1rem;
   }
 }
@@ -609,7 +609,7 @@
 //Tabs
 .nav-tabs .nav-item {
   margin-bottom: -4px;
-  background-color: red;
+  font-family: $headings-font-family;
   
 }
 

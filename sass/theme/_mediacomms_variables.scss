@@ -2,11 +2,11 @@
 //For this course
  
 //Unique colours
-$pale-blue: #00AAFF;
+$pale-blue: $rmit-artic;
 $mid-blue: #0078FF;
 $dark-blue: #000054; 
 //Styles
-$card-border-width: 0.2rem;
+$card-border-width: 0.1rem;
 $headings-font-family: $font-family-serif !default;
 $nav-tabs-border-color: $pale-blue !default;
 $nav-tabs-active-text-color: $pale-blue !default;
@@ -16,9 +16,10 @@ $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-active-border-color: $gray-700 !default;
 $nav-tabs-border-width: $card-border-width;
 $tab-active-heading-background: $dark-blue;
-$inactive-tab-background: $mid-blue;
+$inactive-tab-background: $pale-blue;
 $tab-inactive-heading-colour: $gray-900;
 $active-tab-heading: $dark-blue; 
+$active-tab-heading-border: inherit;
 //$rmit-btn
 //$rmit-alternate-btn
 $numbers-background: $pale-blue;
@@ -86,3 +87,27 @@ $button-default-hover-text: $mid-blue;
     padding: 0.6rem 0.1em 0 0.7rem;
 }
 }
+#tabs .nav-tabs .nav-item .active .title i, #tabs .nav-tabs .nav-item .checked .title i 
+{
+    color: $dark-blue !important;
+}
+#tabs ul.nav-tabs li .active, 
+{
+border: $dark-blue 2px solid !important;
+top: 0.2rem;
+position: absolute;
+margin-left: -2px;
+margin-right: -2px;
+}
+#tabs .nav-tabs .nav-link:hover
+{
+background: $pale-blue !important;
+.title{
+color: $dark-blue !important;
+}}
+#tabs ul.nav-tabs li .active:hover
+{
+    background: $dark-blue !important; 
+    .title{
+        color: $pale-blue !important;
+        }}
