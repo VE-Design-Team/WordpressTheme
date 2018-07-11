@@ -18,9 +18,15 @@
 							<div class="flip card-deck"  >
 								<!-- front content -->
 								<div class="front">
-									<div class="card" tabindex="0">
+									<div class="card card<?php echo $i?>" tabindex="0">
 										<div class="card-body">
 									<?php if( get_sub_field('field_5a8663981362e') ): ?>
+									<style>
+									.front > .card<?php echo $i ?>
+									{
+										background-color: #fff !important;
+									}
+									</style>
 										<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
 										<p class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
 									<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
@@ -39,10 +45,16 @@
 								<!--front/back -->
 								<div class="back">
 									<!-- back content -->
-									<div class="card">
+									<div class="card cardb<?php echo $i?>">
 										<div class="card-body">
 
 							<?php if( get_sub_field('field_5a8664851362f') ): ?>
+							<style>
+									.back > .cardb<?php echo $i ?>
+									{
+										background-color: #fff !important;
+									}
+									</style>
 									<img class="card-img-top" src="<?php the_sub_field('field_5a8664851362f');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
 									<p class="text-center  <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></p>
 <?php elseif (get_sub_field('field_5a86650b13630')): ?>
