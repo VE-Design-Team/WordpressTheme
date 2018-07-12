@@ -8547,7 +8547,8 @@ table {
   transition: 300ms;
   border-color: #0078FF; }
 
-.btn-default, .btn {
+.btn-default,
+.btn {
   background-color: #d3261d !important;
   color: #ffffff !important;
   transition: 300ms;
@@ -9323,7 +9324,6 @@ table {
   display: inline; }
 
 #card-flip {
-  font-size: 1rem;
   background: #e3e6e8; }
   #card-flip .card-flip {
     -webkit-perspective: 1000px;
@@ -9357,6 +9357,12 @@ table {
     #card-flip .front .card {
       background-color: #50D2FF;
       color: #000054; }
+      #card-flip .front .card .x {
+        font-size: 0.9rem; }
+      #card-flip .front .card .xx {
+        font-size: 1rem; }
+      #card-flip .front .card .xxx {
+        font-size: 1.1rem; }
   #card-flip .back {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
@@ -9364,6 +9370,12 @@ table {
     #card-flip .back .card {
       background-color: #000054;
       color: #fff; }
+      #card-flip .back .card .x {
+        font-size: 0.9rem; }
+      #card-flip .back .card .xx {
+        font-size: 1rem; }
+      #card-flip .back .card .xxx {
+        font-size: 1.1rem; }
   #card-flip .card {
     background-repeat: no-repeat;
     background-size: 300%;

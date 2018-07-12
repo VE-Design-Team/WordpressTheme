@@ -25,13 +25,14 @@
 									.front > .card<?php echo $i ?>
 									{
 										background-color: #fff !important;
+										color: #000 !important;
 									}
 									</style>
 										<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
-										<p class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
+										<span class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></span>
 									<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
 							<div class="card-text centre-align text-center">
-												<p class="content <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></p>
+												<span class="content <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></span>
 											</div>
 
 											<?php endif;?>
@@ -53,13 +54,14 @@
 									.back > .cardb<?php echo $i ?>
 									{
 										background-color: #fff !important;
+										color: #000 !important;
 									}
 									</style>
 									<img class="card-img-top" src="<?php the_sub_field('field_5a8664851362f');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
-									<p class="text-center  <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></p>
+									<span class="text-center  <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></span>
 <?php elseif (get_sub_field('field_5a86650b13630')): ?>
 							<div class="card-text centre-align text-center">
-												<p class="text-center content <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></p>
+												<span class="text-center content <?php the_field('field_5b3c03c1f73ef'); ?>"><?php the_sub_field('field_5a86650b13630');?></span>
 											</div>
 
 											<?php endif;?>

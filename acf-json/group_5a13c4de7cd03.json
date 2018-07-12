@@ -1695,7 +1695,7 @@
             "label": "Hotspot background",
             "name": "hotspot_background",
             "type": "image",
-            "instructions": "Select an image to be used for hotspots",
+            "instructions": "Select an image to be used for hotspots. Make sure it's a ladnscape ratio of 1\/1.4142. Or 1400 pixels wide and 1000 pixels high.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -1712,7 +1712,7 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "thumbnail",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -2057,12 +2057,12 @@
                 "id": ""
             },
             "choices": {
-                "1x": "Small",
-                "2x": "Medium",
-                "3x": "Large"
+                "x": "Small",
+                "xx": "Medium",
+                "xxx": "Large"
             },
             "default_value": [
-                "2x"
+                "xx"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -2093,12 +2093,12 @@
                 "id": ""
             },
             "choices": {
-                "1x": "Small",
-                "2x": "Medium",
-                "3x": "Large"
+                "x": "Small",
+                "xx": "Medium",
+                "xxx": "Large"
             },
             "default_value": [
-                "2x"
+                "xx"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -2898,5 +2898,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531280102
+    "modified": 1531372933
 }
