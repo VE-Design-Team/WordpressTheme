@@ -73,8 +73,12 @@ if (have_rows('field_5a73d3d48b839')):
 						                </p>
 						            </div>
 						        </div>
-						    </div>
+							</div>
+							
+							<?php if( get_field('field_5b3963a36f75b') ): ?>
 							<h6 id="national-codes" class="text-muted mt-1 small">National course code: <?php  the_sub_field('field_5b3963a36f75b'); ?></h6> 
+<?php endif; ?>
+							
 
 				        </div>
 				        <?php endwhile;else:endif;?>
