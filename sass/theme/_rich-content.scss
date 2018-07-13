@@ -974,20 +974,20 @@
     display: inline;
   }
 } //cardflip
+
 #card-flip {
-  //font-size: 1rem;
-  background: #e3e6e8;
+  background: $rich-background;
   .card-flip {
     -webkit-perspective: 1000px;
     perspective: 1000px;
+    &.hover .flip {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+    width: 100%;
+    margin-bottom: 20px;
   }
-  .card-flip.hover .flip {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-  .card-flip,
-  .front,
-  .back {
+  .front, .back {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -998,8 +998,7 @@
     transform-style: preserve-3d;
     position: relative;
   }
-  .front,
-  .back {
+  .front, .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
@@ -1047,10 +1046,10 @@
     background-repeat: no-repeat;
     background-size: 300%;
     border-top: $accent-color $accent-thickness solid;
-    border-top: 3px solid $red;
+    border-top: 3px solid emit;
     border-radius: 0;
     display: flex;
-    background-color: $light-grey;
+    background-color: $white;
     padding-bottom: 60px;
     overflow-y: scroll;
     .card-body {
@@ -1062,12 +1061,12 @@
         display: table-cell;
         text-align: center;
         vertical-align: middle;
+      
       }
       .content {
-        //background-color: red;
         display: inline-block;
         vertical-align: top;
-        /* Removes the extra white space below the baseline */
+        /* Removes the extra $flip-card-back-text-colour space below the baseline */
       }
     }
     .btn {
@@ -1080,27 +1079,76 @@
       width: 100px;
     }
   }
-  @media (max-width: 575.98px) {
-    .card-body {
+  .back, .card-flip, .front {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+  }
+  .card-body {
+    padding: 0px;
+    margin: 0px;
+  }
+  .back .card-body {
+    margin: 0 0 2rem 0;
+  }
+  .card {
+    height: 350px;
+    background-color: $flip-card-back-text-colour;
+    box-shadow: 3px 3px 5px #ddd;
+    border: none;
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+  .front p {
+    margin-top: 30px;
+    padding: 0px 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #card-flip {
+    .card-body, .col-4 {
       padding: 0.5rem;
     }
-    .col-4 {
-      padding: 0.5rem;
-    }
-    .card p,
-    .btn {
+    .card p, .btn {
       font-size: 0.8rem;
     }
-  } // Small devices (landscape phones, less than 768px)
-  @media (max-width: 767.98px) {
-    .card-body {
-      padding: 0.05rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #card-flip .card-body {
+    padding: 0.05rem;
+  }
+}
+
+.btn {
+  vertical-align: bottom;
+}
+
+#card-flip {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  .card-text p {
+    padding: 0;
+    margin: 1rem;
+  }
+  p {
+    text-align: center;
+    
+  }
+  ul 
+  {
+    li {
+      text-align: left;
     }
-  } // Medium devices (tablets, less than 992px)
-  @media (max-width: 991.98px) {}
-  // Large devices (desktops, less than 1200px)
-  @media (max-width: 1199.98px) {}
-} //cardflip
+  }
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+  }
+}
+//end card flip
 //Example table body
 #table-body {
   background: $mid-grey;
@@ -1149,62 +1197,7 @@
   }
 }
 
-#card-flip .back,
-#card-flip .card-flip,
-#card-flip .front {
-  width: 100%;
-  max-width: 300px;
-  height: 350px;
-}
-
-#card-flip .card-body {
-  padding: 0px;
-  margin: 0px;
-}
-
-#card-flip .back .card-body {
-  margin: 0 0 2rem 0;
-}
-
-#card-flip .card {
-  height: 350px;
-  background-color: #ffffff;
-  box-shadow: 3px 3px 5px #ddd;
-  border: none;
-  border-radius: 10px;
-  padding-bottom: 10px;
-}
-
-#card-flip .front p {
-  margin-top: 30px;
-  padding: 0px 12px;
-}
-
-.btn {
-  vertical-align: bottom;
-}
-
-/* width */
-
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-#card-flip {
-  // TODO: This needs a tidy
-  .card-text {
-    p {
-      padding: 0;
-      margin: 1rem;
-    }
-  }
-  p {
-    text-align: center;
-  }
-  .card-img-top {
-    border-radius: 10px 10px 0 0;
-  }
-} //Roadmap
+ //Roadmap
 #roadmap {
   //background: #c7cdd1;
   ol {

@@ -9327,13 +9327,13 @@ table {
   background: #e3e6e8; }
   #card-flip .card-flip {
     -webkit-perspective: 1000px;
-    perspective: 1000px; }
-  #card-flip .card-flip.hover .flip {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
-  #card-flip .card-flip,
-  #card-flip .front,
-  #card-flip .back {
+    perspective: 1000px;
+    width: 100%;
+    margin-bottom: 20px; }
+    #card-flip .card-flip.hover .flip {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+  #card-flip .front, #card-flip .back {
     width: 100%;
     margin-bottom: 20px; }
   #card-flip .flip {
@@ -9342,8 +9342,7 @@ table {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative; }
-  #card-flip .front,
-  #card-flip .back {
+  #card-flip .front, #card-flip .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
@@ -9380,10 +9379,10 @@ table {
     background-repeat: no-repeat;
     background-size: 300%;
     border-top: #00AAFF 0.5rem solid;
-    border-top: 3px solid #d3261d;
+    border-top: 3px solid emit;
     border-radius: 0;
     display: flex;
-    background-color: #f9fafa;
+    background-color: #fff;
     padding-bottom: 60px;
     overflow-y: scroll; }
     #card-flip .card .card-body {
@@ -9398,7 +9397,7 @@ table {
       #card-flip .card .card-body .content {
         display: inline-block;
         vertical-align: top;
-        /* Removes the extra white space below the baseline */ }
+        /* Removes the extra $flip-card-back-text-colour space below the baseline */ }
     #card-flip .card .btn {
       position: fixed;
       margin-left: auto;
@@ -9407,17 +9406,54 @@ table {
       right: 0;
       bottom: 0.5rem;
       width: 100px; }
-  @media (max-width: 575.98px) {
-    #card-flip .card-body {
-      padding: 0.5rem; }
-    #card-flip .col-4 {
-      padding: 0.5rem; }
-    #card-flip .card p,
-    #card-flip .btn {
-      font-size: 0.8rem; } }
-  @media (max-width: 767.98px) {
-    #card-flip .card-body {
-      padding: 0.05rem; } }
+  #card-flip .back, #card-flip .card-flip, #card-flip .front {
+    width: 100%;
+    max-width: 300px;
+    height: 350px; }
+  #card-flip .card-body {
+    padding: 0px;
+    margin: 0px; }
+  #card-flip .back .card-body {
+    margin: 0 0 2rem 0; }
+  #card-flip .card {
+    height: 350px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px #ddd;
+    border: none;
+    border-radius: 10px;
+    padding-bottom: 10px; }
+  #card-flip .front p {
+    margin-top: 30px;
+    padding: 0px 12px; }
+
+@media (max-width: 575.98px) {
+  #card-flip .card-body, #card-flip .col-4 {
+    padding: 0.5rem; }
+  #card-flip .card p, #card-flip .btn {
+    font-size: 0.8rem; } }
+
+@media (max-width: 767.98px) {
+  #card-flip .card-body {
+    padding: 0.05rem; } }
+
+.btn {
+  vertical-align: bottom; }
+
+#card-flip ::-webkit-scrollbar {
+  width: 0px; }
+
+#card-flip .card-text p {
+  padding: 0;
+  margin: 1rem; }
+
+#card-flip p {
+  text-align: center; }
+
+#card-flip ul li {
+  text-align: left; }
+
+#card-flip .card-img-top {
+  border-radius: 10px 10px 0 0; }
 
 #table-body {
   background: #d7d7d7;
@@ -9455,49 +9491,6 @@ table {
   #table-body .highlight,
   #table-body .yellow {
     background: yellow; }
-
-#card-flip .back,
-#card-flip .card-flip,
-#card-flip .front {
-  width: 100%;
-  max-width: 300px;
-  height: 350px; }
-
-#card-flip .card-body {
-  padding: 0px;
-  margin: 0px; }
-
-#card-flip .back .card-body {
-  margin: 0 0 2rem 0; }
-
-#card-flip .card {
-  height: 350px;
-  background-color: #ffffff;
-  box-shadow: 3px 3px 5px #ddd;
-  border: none;
-  border-radius: 10px;
-  padding-bottom: 10px; }
-
-#card-flip .front p {
-  margin-top: 30px;
-  padding: 0px 12px; }
-
-.btn {
-  vertical-align: bottom; }
-
-/* width */
-::-webkit-scrollbar {
-  width: 0px; }
-
-#card-flip .card-text p {
-  padding: 0;
-  margin: 1rem; }
-
-#card-flip p {
-  text-align: center; }
-
-#card-flip .card-img-top {
-  border-radius: 10px 10px 0 0; }
 
 #roadmap ol {
   list-style-type: none; }
