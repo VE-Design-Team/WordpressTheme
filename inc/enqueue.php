@@ -24,3 +24,14 @@ if (! function_exists('understrap_scripts')) {
 } // endif function_exists( 'understrap_scripts' ).
 
 add_action('wp_enqueue_scripts', 'understrap_scripts');
+
+/**
+ * Enqueue a script in the WordPress admin, excluding edit.php.
+ *
+ * @param int $hook Hook suffix for the current admin page.
+ */
+function wpdocs_selectively_enqueue_admin_script( $hook ) {
+  
+    wp_enqueue_script( 'my_custom_script', get_template_directory_uri() . '/js/codeCopy.js' );
+}
+add_action( 'admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script' );
