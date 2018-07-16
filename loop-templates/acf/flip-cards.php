@@ -31,7 +31,7 @@
 										<img class="card-img-top" src="<?php the_sub_field('field_5a8663981362e');?>" width:="" 100%;="" display:="" block; "=" data-holder-rendered="true">
 										<span class="text-center <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></span>
 									<?php elseif (get_sub_field('field_5a865a8c9f830')): ?>
-							<div class="card-text centre-align text-center">
+							<div class="card-text <?php the_sub_field('field_5a8663981362e'); ?>-align text-center">
 												<span class="content <?php the_field('field_5b3c038bf73ee'); ?>"><?php the_sub_field('field_5a865a8c9f830');?></span>
 											</div>
 

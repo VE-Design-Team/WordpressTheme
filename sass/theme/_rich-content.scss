@@ -450,7 +450,7 @@
     color: white;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     left: 50%;
     padding: 15px;
     text-align: center;
@@ -1128,7 +1128,7 @@
 
 #card-flip {
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 10px;
   }
   .card-text p {
     padding: 0;
