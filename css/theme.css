@@ -8791,7 +8791,7 @@ table {
   text-shadow: 0 0 8.25px rgba(0, 0, 0, 0.5); }
 
 #checklist li:hover i.fa-square {
-  color: #00AAFF; }
+  color: #d7d7d7; }
 
 #checklist li.checked > i.fa-square {
   display: none; }
