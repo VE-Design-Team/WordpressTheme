@@ -400,6 +400,23 @@
   li>i.fa-check-square {
     display: none;
     color: $accent-color;
+ 
+  }
+  li{
+    
+    span:hover
+    {
+      margin-left: 0.5rem;
+      color: transparent;
+      text-shadow: 0 0 8.25px rgba(0, 0, 0, 0.5);
+    }
+    
+  }
+  li:hover
+  {
+    i.fa-square {
+      color: $accent-color;
+    }
   }
   li.checked>i.fa-square {
     display: none;
@@ -409,7 +426,9 @@
     margin-left: 0.5rem;
     color: transparent;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
   }
+
   li.checked>i.fa-check-square,
   li.checked>span {
     display: inline;
