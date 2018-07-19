@@ -8878,7 +8878,8 @@ h4,
   border-right: 0.2rem solid #b3b8bc;
   border-bottom: 0.2rem solid #b3b8bc;
   padding: 10px;
-  background-color: #fff; }
+  background-color: #fff;
+  display: flex; }
 
 .text-black {
   color: #000; }

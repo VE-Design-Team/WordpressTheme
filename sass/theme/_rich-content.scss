@@ -623,6 +623,7 @@
   border-bottom: $card-border-width solid $nav-tabs-border-color;
   padding: 10px;
   background-color: $nav-tabs-link-active-bg;
+  display: flex;
 }
 
 .text-black {
