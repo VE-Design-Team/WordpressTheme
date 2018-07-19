@@ -567,6 +567,36 @@
             ]
         },
         {
+            "key": "field_5b4fd3844e1cb",
+            "label": "Tables should be built with the following structure",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Custom HTML or table"
+                    },
+                    {
+                        "field": "field_5ab97b191f479",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "&lt;table&gt;\r\n&lt;thead&gt;\r\n  &lt;tr&gt;\r\n    &lt;th&gt;Table Header One&lt;\/th&gt;\r\n    &lt;th&gt;Table Header Two&lt;\/th&gt;\r\n  &lt;\/tr&gt;\r\n&lt;\/thead&gt;\r\n  &lt;tr&gt;\r\n    &lt;td&gt;Column One, Row One&lt;\/td&gt;\r\n    &lt;td&gt;Column Two, Row One&lt;\/td&gt;\r\n  &lt;\/tr&gt;\r\n  &lt;tr&gt;\r\n    &lt;td&gt;Column One, Row Two&lt;\/td&gt;\r\n    &lt;td&gt;Column Two, Row Two&lt;\/td&gt;\r\n  &lt;\/tr&gt;\r\n&lt;\/table&gt;",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
             "key": "field_5a30b394101e4",
             "label": "Tooltip textstrings",
             "name": "tooltip",
@@ -2898,5 +2928,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531457903
+    "modified": 1531971775
 }

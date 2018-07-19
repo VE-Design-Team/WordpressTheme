@@ -8373,95 +8373,6 @@ h4,
   filter: FlipH;
   -ms-filter: 'FlipH'; }
 
-table {
-  font-size: 1rem; }
-  table a {
-    color: #00AAFF; }
-  table thead {
-    background: #e8ebec; }
-    table thead tr th {
-      border: 1px solid #000; }
-  table tbody tr th {
-    border: 1px solid #000; }
-  table tbody tr td {
-    border: 1px solid #000; }
-
-.table-rmit thead {
-  background: #000054;
-  color: white; }
-  .table-rmit thead tr th {
-    border: 1px solid #fff; }
-
-.table-rmit tbody tr:nth-child(odd) {
-  background: #f3f5f5; }
-
-.table-rmit tbody tr:nth-child(even) {
-  background: #e8ebec; }
-
-.table-rmit tbody tr th,
-.table-rmit tbody tr td {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-top: 0;
-  border-bottom: 0; }
-
-.table-canvas thead {
-  background: #00AAFF;
-  color: white; }
-  .table-canvas thead tr th {
-    border: 1px solid #fff; }
-
-.table-canvas tbody tr:nth-child(odd) {
-  background: #f3f5f5; }
-
-.table-canvas tbody tr:nth-child(even) {
-  background: #e8ebec; }
-
-.table-canvas tbody tr th,
-.table-canvas tbody tr td {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-top: 0;
-  border-bottom: 0; }
-
-.table-document thead {
-  background: #3F99FF;
-  color: white; }
-  .table-document thead tr th {
-    border: 1px solid #fff; }
-
-.table-document tbody tr:nth-child(odd) {
-  background: #f3f5f5; }
-
-.table-document tbody tr:nth-child(even) {
-  background: #e8ebec; }
-
-.table-document tbody tr th,
-.table-document tbody tr td {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-top: 0;
-  border-bottom: 0; }
-
-.table-colour thead {
-  background: #AAD75F;
-  color: black; }
-  .table-colour thead tr th {
-    border: 1px solid #fff; }
-
-.table-colour tbody tr:nth-child(odd) {
-  background: #ebf6d9; }
-
-.table-colour tbody tr:nth-child(even) {
-  background: #d5ebb1; }
-
-.table-colour tbody tr th,
-.table-colour tbody tr td {
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-top: 0;
-  border-bottom: 0; }
-
 .instruction {
   font-weight: 400;
   background: #e3e6e8 !important;
@@ -9711,3 +9622,92 @@ reveal {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid white; }
+
+table {
+  font-size: 1rem; }
+  table a {
+    color: #00AAFF; }
+  table thead {
+    background: #e8ebec; }
+    table thead tr th {
+      border: 1px solid #000; }
+  table tbody tr th {
+    border: 1px solid #000; }
+  table tbody tr td {
+    border: 1px solid #000; }
+
+.table-rmit thead {
+  background: #000054;
+  color: white; }
+  .table-rmit thead tr th {
+    border: 1px solid #fff; }
+
+.table-rmit tbody tr:nth-child(odd) {
+  background: #f3f5f5; }
+
+.table-rmit tbody tr:nth-child(even) {
+  background: #e8ebec; }
+
+.table-rmit tbody tr th,
+.table-rmit tbody tr td {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0; }
+
+.table-canvas thead {
+  background: #00AAFF;
+  color: white; }
+  .table-canvas thead tr th {
+    border: 1px solid #fff; }
+
+.table-canvas tbody tr:nth-child(odd) {
+  background: #f3f5f5; }
+
+.table-canvas tbody tr:nth-child(even) {
+  background: #e8ebec; }
+
+.table-canvas tbody tr th,
+.table-canvas tbody tr td {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0; }
+
+.table-document thead {
+  background: #3F99FF;
+  color: white; }
+  .table-document thead tr th {
+    border: 1px solid #fff; }
+
+.table-document tbody tr:nth-child(odd) {
+  background: #f3f5f5; }
+
+.table-document tbody tr:nth-child(even) {
+  background: #e8ebec; }
+
+.table-document tbody tr th,
+.table-document tbody tr td {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0; }
+
+.table-colour thead {
+  background: #AAD75F;
+  color: black; }
+  .table-colour thead tr th {
+    border: 1px solid #fff; }
+
+.table-colour tbody tr:nth-child(odd) {
+  background: #ebf6d9; }
+
+.table-colour tbody tr:nth-child(even) {
+  background: #d5ebb1; }
+
+.table-colour tbody tr th,
+.table-colour tbody tr td {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0; }
