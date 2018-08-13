@@ -93,7 +93,8 @@
             },
             "choices": {
                 "bg": "Blue and grey",
-                "colours": "Colours"
+                "colours": "Colours",
+                "buttons": "Buttons"
             },
             "default_value": [
                 "bg"
@@ -1055,7 +1056,15 @@
                     "type": "wysiwyg",
                     "instructions": "This is the content that is revealed when the title is activated",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5a7a6b39ac350",
+                                "operator": "!=",
+                                "value": "buttons"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -1078,8 +1087,8 @@
                         [
                             {
                                 "field": "field_5a7a6b39ac350",
-                                "operator": "!=",
-                                "value": "bg"
+                                "operator": "==",
+                                "value": "colours"
                             }
                         ]
                     ],
@@ -2928,5 +2937,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531971775
+    "modified": 1532968522
 }

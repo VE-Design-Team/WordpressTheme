@@ -10,3 +10,5 @@
 
 /// Bugs
 
+* "Use a mouse, or surface pen for this activity when using Microsoft Edge on touchscreen devices." Message for Microsoft Edge
+
