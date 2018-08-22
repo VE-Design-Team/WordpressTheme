@@ -21,6 +21,9 @@
     max-width: 1000px;
     margin: 0 auto; }
 
+.h5p-multichoice .h5p-answer[role="checkbox"] .h5p-alternative-container:before {
+  display: none; }
+
 .h5p-joubelui-button {
   font-size: 0.9em;
   cursor: pointer;
@@ -70,6 +73,9 @@
 .h5p-question .h5p-question-next:before,
 .h5p-question .h5p-question-prev:before {
   top: 0.5rem; }
+
+.h5p-question-introduction {
+  line-height: 1.5; }
 
 ul.dots-container {
   padding-top: 1rem; }
