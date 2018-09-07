@@ -3174,6 +3174,13 @@
                 "operator": "==",
                 "value": "default"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "scorm"
+            }
         ]
     ],
     "menu_order": 2,
@@ -3184,5 +3191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536270712
+    "modified": 1536283601
 }
