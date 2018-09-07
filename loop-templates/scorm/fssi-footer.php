@@ -1,1 +1,1 @@
-FSSI footer
+<?php  get_template_part('footer');?>
