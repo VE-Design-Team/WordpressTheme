@@ -1,6 +1,6 @@
 {
     "key": "group_5b18788fafe2d",
-    "title": "Analytics",
+    "title": "Analytics and Settings",
     "fields": [
         {
             "key": "field_5b18789895a17",
@@ -64,6 +64,32 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5b8cd3c52f308",
+            "label": "SCORM builder ?",
+            "name": "scorm_builder",
+            "type": "select",
+            "instructions": "Select the output type for this content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "iframe": "Iframe",
+                "fssi": "FSSI",
+                "cde": "CDE"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -83,5 +109,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528332782
+    "modified": 1535956026
 }
