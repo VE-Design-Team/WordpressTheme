@@ -54,7 +54,6 @@
                 "Introduction page": "Introduction page",
                 "Roadmap": "Roadmap",
                 "Quadrant reveal": "Quadrant reveal",
-                "Quiz": "Quiz",
                 "Sample Document": "Sample Document",
                 "Student File Download": "Student File Download",
                 "Tabbed sections": "Tabbed sections",
@@ -3161,156 +3160,6 @@
                     "ui": 1
                 }
             ]
-        },
-        {
-            "key": "field_5bb2038203e86",
-            "label": "Quiz",
-            "name": "quiz",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Quiz"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 1,
-            "max": 0,
-            "layout": "row",
-            "button_label": "Add another question",
-            "sub_fields": [
-                {
-                    "key": "field_5bb2039703e87",
-                    "label": "Question",
-                    "name": "question",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5bb20bd5e1178",
-                    "label": "Question image",
-                    "name": "question_image",
-                    "type": "image",
-                    "instructions": "Not required",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_5bb20a29cf3f6",
-                    "label": "Answers",
-                    "name": "answers",
-                    "type": "repeater",
-                    "instructions": "At least one answer is required",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bb20a3acf3f7",
-                            "label": "Answer",
-                            "name": "answer",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "45",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5bb20a41cf3f8",
-                            "label": "Correct?",
-                            "name": "correct",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "-110",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_5bb20ad9cf3f9",
-                            "label": "Feedback if selected",
-                            "name": "feedback_if_selected",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "45",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
-                }
-            ]
         }
     ],
     "location": [
@@ -3342,5 +3191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538395800
+    "modified": 1536283601
 }
