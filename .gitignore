@@ -21,3 +21,5 @@ temp/
 sass/theme/course_selector\.scss
 
 \.DS_Store
+
+*.code-workspace
