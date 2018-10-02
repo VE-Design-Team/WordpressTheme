@@ -441,6 +441,88 @@
     color: $dark-grey;
   }
 }
+//Quiz
+#quiz {
+  .container-fluid {
+    padding: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  .large {
+    font-size: 1.2rem;
+  }
+  .rich-background {
+    background: $rich-background;
+    padding: 2rem;
+  }
+  .checkpage {
+    border-top: $accent-color $accent-thickness solid;
+    background: $light-grey; //margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    position: relative;
+  .controls{
+    position: relative;
+    right: 0;
+
+    margin: 2rem;
+  a.carousel-control-prev, a.carousel-control-next
+  {
+    color: $rmit-red;
+
+    //background: red;
+    padding: 1rem;
+  
+   
+  }
+  }
+  ul.carousel-indicators
+  {
+    
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    li {
+      a {
+        background: darken($rmit-red, 10%);
+          height: 2rem;
+          width: 2rem; //
+          //background: url(../img/carousel/1.png);
+          background-size: contain;
+          text-decoration: none;
+      }
+      .current {
+          background: $rmit-red;
+      }
+      a:before {
+          font-size: 1rem;
+          color: white;
+          content: '1';
+          font-family: $font-family-serif;
+      }
+      .answered, .progress-dot
+      {
+          background: $gray-400;
+      }
+
+}
+
+
+
+
+  
+  
+  }
+     
+}}
 
 //Hotspots
 #hotspots {
