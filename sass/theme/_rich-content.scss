@@ -472,7 +472,6 @@
     //background: red;
     padding: 1rem;
   
-   
   }
   }
   ul.carousel-indicators
@@ -515,11 +514,6 @@
 
 }
 
-
-
-
-  
-  
   }
      
 }}
@@ -1479,6 +1473,7 @@ reveal {
     cursor: pointer;
     text-align: left;
     font-size: 0.85rem;
+    font-family: $headings-font-family
   }
 }
 
