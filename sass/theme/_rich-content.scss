@@ -473,7 +473,9 @@
     padding: 1rem;
   
   }
-  }
+  //form styling
+
+}
   ul.carousel-indicators
   {
     
@@ -516,7 +518,25 @@
 
   }
      
-}}
+}
+.correct
+{
+  color: $red;
+  font-weight: 700;
+}
+.correct1
+{
+  color: green;
+  font-weight: 700;
+}
+
+//quiz forms
+.form-check-input
+{
+  margin-left: 0 !important;
+}
+  
+}
 
 //Hotspots
 #hotspots {
