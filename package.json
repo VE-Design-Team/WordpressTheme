@@ -1,6 +1,6 @@
 {
   "name": "rich-content-theme",
-  "version": "1.6.x",
+  "version": "2.0.2",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {

@@ -78,7 +78,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 @-ms-viewport {
   width: device-width; }
@@ -8733,6 +8733,59 @@ h4, .h4 {
 #checklist i.fa-square {
   color: #c7cdd1; }
 
+#quiz .container-fluid {
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+#quiz .large {
+  font-size: 1.2rem; }
+
+#quiz .rich-background {
+  background: #e3e6e8;
+  padding: 2rem; }
+
+#quiz .checkpage {
+  border-top: #00AAFF 0.5rem solid;
+  background: #f9fafa;
+  padding: 1rem;
+  position: relative; }
+  #quiz .checkpage .controls {
+    position: relative;
+    right: 0;
+    margin: 2rem; }
+    #quiz .checkpage .controls a.carousel-control-prev, #quiz .checkpage .controls a.carousel-control-next {
+      color: #d3261d;
+      padding: 1rem; }
+  #quiz .checkpage ul.carousel-indicators {
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none; }
+    #quiz .checkpage ul.carousel-indicators li a {
+      background: #a61e17;
+      height: 2rem;
+      width: 2rem;
+      background-size: contain;
+      text-decoration: none; }
+    #quiz .checkpage ul.carousel-indicators li .current {
+      background: #d3261d; }
+    #quiz .checkpage ul.carousel-indicators li a:before {
+      font-size: 1rem;
+      color: white;
+      content: '1';
+      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    #quiz .checkpage ul.carousel-indicators li .answered, #quiz .checkpage ul.carousel-indicators li .progress-dot {
+      background: #ccd2d5; }
+
 #hotspots .container-fluid {
   margin: 0; }
 
@@ -9536,7 +9589,8 @@ reveal {
   display: block;
   cursor: pointer;
   text-align: left;
-  font-size: 0.85rem; }
+  font-size: 0.85rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #sample-document .physical-document {
   border: solid 0px #cfcfcf;
