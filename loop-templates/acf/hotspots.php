@@ -1,6 +1,6 @@
 
 <div id="hotspots">
-<class="container-fluid">
+<div class="container-fluid">
   <div class="row">
     <div class="col-12">
       <div class="image">
@@ -26,7 +26,7 @@ if( have_rows('field_5a7b7e0ddb57c') ): ?>
                 <a class="hotspot" data-left="<?php echo $xaxis; ?>" data-top="<?php echo $yaxis; ?>" data-toggle="tooltip"
                   data-placement="top" tabindex="<?php echo $i; ?>" title="<?php echo $title; ?>">
                   <span class="sr-only">
-                    <?php echo $title; ?> :
+                    <?php echo $title; ?>:
                     <?php echo $description; ?>
                   </span>
                 </a>

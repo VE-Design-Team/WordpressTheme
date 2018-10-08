@@ -65,15 +65,24 @@
 
 .numborder {
   background: $numbers-background;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 1rem;
+  padding: 0.5rem;
   font-family: Museo500;
   color: white;
+  display: inline-block;
+  margin: 0 auto;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top: 0.1rem;
+
+
   .num {
     position: relative;
-    left: 0.7rem;
-    top: 0.4rem;
+    left: 0.1rem;
+    top: -0.3rem;
   }
   .num2 {
     position: relative;
@@ -454,6 +463,27 @@
   .rich-background {
     background: $rich-background;
     padding: 2rem;
+
+   #questions
+   {
+   .carousel-inner
+    {
+      .feedback, .feedback1 {
+     float: right;
+     font-weight: 700;
+     display: none;
+     margin-left: 1rem;
+     
+  }
+  .show{
+    display: inline;
+  }
+}
+   
+
+} 
+    
+
   }
   .checkpage {
     border-top: $accent-color $accent-thickness solid;
@@ -472,9 +502,10 @@
     //background: red;
     padding: 1rem;
   
-   
   }
-  }
+  //form styling
+
+}
   ul.carousel-indicators
   {
     
@@ -515,14 +546,27 @@
 
 }
 
-
-
-
-  
-  
   }
      
-}}
+}
+.correct
+{
+  color: $red;
+  font-weight: 700;
+}
+.correct1
+{
+  color: green;
+  font-weight: 700;
+}
+
+//quiz forms
+.form-check-input
+{
+  margin-left: 0 !important;
+}
+  
+}
 
 //Hotspots
 #hotspots {
@@ -1479,6 +1523,7 @@ reveal {
     cursor: pointer;
     text-align: left;
     font-size: 0.85rem;
+    font-family: $headings-font-family
   }
 }
 
