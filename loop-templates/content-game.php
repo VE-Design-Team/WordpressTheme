@@ -20,7 +20,7 @@
       <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="<?php echo $title; ?>">
 <?php endif; ?>
     <div class="card-body">
-    <h3 class="h4 text-muted"><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
+    <h3 class="h4"><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
 <!-- Card <?php echo $row_count; ?>-->
 <!-- get button data -->
 
@@ -39,13 +39,13 @@
         ?>
 <?php if (get_field('field_5a20e2a468c91') == 'button'): ?>
         <li class="button"><a class="border  mb-2 btn btn-default small" href="#<?php echo $button_location ?>"
-data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
+data-toggle="collapse" data-parent="#BranchingScenario" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
             <?php echo $button_title; ?>
         </a></li>
 <?php endif; ?>
 <?php if (get_field('field_5a20e2a468c91') == 'link'): ?>
     <li><a href="#<?php echo $button_location ?>"
-data-toggle="collapse" data-parent="#ChoiceGame" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
+data-toggle="collapse" data-parent="#BranchingScenario" data-target="#collapse<?php echo $button_location ?>" aria-expanded="false" aria-controls="collapse<?php echo $button_location ?> " ">
             <?php echo $button_title; ?>
         </a></li>
 <?php endif; ?>
@@ -74,7 +74,7 @@ if ($percent_completed > "95") {
     <?php 
 $row_count++;
     endwhile; ?>
-</div><!--ChoiceGame-->
+</div><!--BranchingScenario-->
 <?php endif; ?>
 <script>
 // Make first card show on loadding, rest hidden by default 
