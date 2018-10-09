@@ -8786,6 +8786,17 @@ h4, .h4 {
     #quiz .checkpage ul.carousel-indicators li .answered, #quiz .checkpage ul.carousel-indicators li .progress-dot {
       background: #ccd2d5; }
 
+#quiz .correct {
+  color: #d3261d;
+  font-weight: 700; }
+
+#quiz .correct1 {
+  color: green;
+  font-weight: 700; }
+
+#quiz .form-check-input {
+  margin-left: 0 !important; }
+
 #hotspots .container-fluid {
   margin: 0; }
 
