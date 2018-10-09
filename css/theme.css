@@ -8437,16 +8437,23 @@ h4, .h4 {
   border-color: #d3261d !important; }
 
 .numborder {
-  background: #000054;
-  width: 2rem;
-  height: 2rem;
+  background: #d3261d;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 1rem;
+  padding: 0.5rem;
   font-family: Museo500;
-  color: white; }
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 0.1rem; }
   .numborder .num {
     position: relative;
-    left: 0.7rem;
-    top: 0.4rem; }
+    left: 0.1rem;
+    top: -0.3rem; }
   .numborder .num2 {
     position: relative;
     left: 0.45rem;
@@ -8744,6 +8751,13 @@ h4, .h4 {
 #quiz .rich-background {
   background: #e3e6e8;
   padding: 2rem; }
+  #quiz .rich-background #questions .carousel-inner .feedback, #quiz .rich-background #questions .carousel-inner .feedback1 {
+    float: right;
+    font-weight: 700;
+    display: none;
+    margin-left: 1rem; }
+  #quiz .rich-background #questions .carousel-inner .show {
+    display: inline; }
 
 #quiz .checkpage {
   border-top: #00AAFF 0.5rem solid;
