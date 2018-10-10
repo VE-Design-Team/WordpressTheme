@@ -1,3 +1,48 @@
+@media (min-width: 768px) {
+  .fa.fa-chevron-circle-left, .fa.fa-chevron-circle-right {
+    position: relative; }
+  .fa.fa-chevron-circle-left:after, .fa.fa-chevron-circle-right:after {
+    background-color: #50D2FF;
+    height: 4rem;
+    width: 4rem;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    color: #fff;
+    position: absolute;
+    left: 0;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 1rem; }
+  .fa.fa-chevron-circle-left:after {
+    content: "\f053";
+    padding: 0.6rem 0.6em 0 0.7rem; }
+  .fa.fa-chevron-circle-right:after {
+    content: "\f054";
+    padding: 0.6rem 0.1em 0 0.7rem; } }
+
+#tabs .nav-tabs .nav-item .active .title i, #tabs .nav-tabs .nav-item .checked .title i {
+  color: #000054 !important; }
+
+#tabs ul.nav-tabs li .active {
+  border: #000054 2px solid !important;
+  top: 0.2rem;
+  position: absolute;
+  margin-left: -2px;
+  margin-right: -2px; }
+
+#tabs .nav-tabs .nav-link:hover {
+  background: #50D2FF !important; }
+  #tabs .nav-tabs .nav-link:hover .title {
+    color: #000054 !important; }
+
+#tabs ul.nav-tabs li .active:hover {
+  background: #000054 !important; }
+  #tabs ul.nav-tabs li .active:hover .title {
+    color: #50D2FF !important; }
+
 /* styles */
 .h5p-container {
   background: #e3e6e8;

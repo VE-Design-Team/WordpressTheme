@@ -429,6 +429,10 @@ function custom_myme_types($mime_types){
   }
   add_filter('upload_mimes', 'custom_myme_types', 1, 1);
 
+
+
+
+  
 //create post type SCORM
  // Register Custom Post Type
 function custom_post_type() {
