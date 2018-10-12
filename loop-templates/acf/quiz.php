@@ -114,7 +114,7 @@ endif;
 
                       </div></div></div></div>
 
-
+<!--- Data Dump
 <?php
 
 // check if there are questions
@@ -166,6 +166,7 @@ else :
 endif;
 
 ?>
+-->
 <script>
 $('label').click( function() {
   $(this).children().toggleClass('btn-primary').siblings().toggleClass('show');
