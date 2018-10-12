@@ -1,0 +1,113 @@
+@import "rmit_variables";
+//For this course
+ 
+//Unique colours
+$pale-blue: $rmit-artic;
+$mid-blue: #00A1E0;
+$dark-blue: #000054; 
+//Styles
+$card-border-width: 0.1rem;
+$headings-font-family: $font-family-serif !default;
+$nav-tabs-border-color: $pale-blue !default;
+$nav-tabs-active-text-color: $pale-blue !default;
+$nav-tabs-link-hover-border-color: none !default;
+$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-border-color: $gray-700 !default;
+$nav-tabs-border-width: $card-border-width;
+$tab-active-heading-background: $dark-blue;
+$inactive-tab-background: $pale-blue;
+$tab-inactive-heading-colour: $gray-900;
+$active-tab-heading: $dark-blue; 
+$active-tab-heading-border: inherit;
+//$rmit-btn
+//$rmit-alternate-btn
+$numbers-background: $pale-blue;
+$carousel-chevron: $pale-blue;  
+$carousel-border: $pale-blue;
+$instruction-background: $dark-blue;
+$instruction-text: $white;
+$instruction-logo: $mid-blue;
+$instruction-highlight: $white;
+$rich-background: $gray-200;
+$rich-area: $gray-25;
+$accent-thickness: 0.5rem;
+$accent-color: $rmit-azure;
+$accordion-header-inactive: $rich-area;
+$accordion-header-active: $pale-blue;
+$accordion-header-active-font: $dark-blue;
+$rich-heading-font: $font-family-serif;
+$flip-card-front-colour: $white;
+$flip-card-front-text-colour: $dark-blue;
+$flip-card-back-colour:$mid-blue;
+$flip-card-back-text-colour: $white;
+$hotspot-color: $rmit-red;
+$button-primary: $rmit-blue;
+$button-primary-text: $mid-blue;
+$button-primary-hover: $mid-blue;
+$button-primary-hover: $mid-blue;
+$button-default: $rmit-red;
+$button-default-text: $gray-900;
+$button-default-hover: $mid-blue;
+$button-default-hover-text: $mid-blue;
+ 
+//custom code for this theme
+ 
+@media (min-width: 768px) {
+ 
+.fa.fa-chevron-circle-left, .fa.fa-chevron-circle-right 
+{
+    position: relative;
+}
+.fa.fa-chevron-circle-left:after, .fa.fa-chevron-circle-right:after 
+{
+    background-color: $carousel-chevron;
+    height:4rem;
+    width:4rem;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: $white;
+    position: absolute;
+    left: 0;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+.fa.fa-chevron-circle-left:after
+{
+    content: "\f053";
+    padding: 0.6rem 0.6em 0 0.7rem;
+}
+.fa.fa-chevron-circle-right:after 
+{
+    content: "\f054";
+    padding: 0.6rem 0.1em 0 0.7rem;
+}
+}
+#tabs .nav-tabs .nav-item .active .title i, #tabs .nav-tabs .nav-item .checked .title i 
+{
+    color: $dark-blue !important;
+}
+#tabs ul.nav-tabs li .active, 
+{
+border: $dark-blue 2px solid !important;
+top: 0.2rem;
+position: absolute;
+margin-left: -2px;
+margin-right: -2px;
+}
+#tabs .nav-tabs .nav-link:hover
+{
+background: $pale-blue !important;
+.title{
+color: $dark-blue !important;
+}}
+#tabs ul.nav-tabs li .active:hover
+{
+    background: $dark-blue !important; 
+    .title{
+        color: $pale-blue !important;
+        }}
