@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Salesforce Virtual Workplace</title>
-  
-  
-  <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css'>
-<link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/css/theme.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-<style>
-#wrapper {
+
+  <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css'>
+  <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/css/theme.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  <style>
+    #wrapper {
     display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -100,6 +99,11 @@ button#chatter {
   left: 18%;
   top: 45%;}
 
+button#chattermsg {
+  width: 5%;
+  left: 15%;
+  top: 54%;}
+
 .vlab button img, ul.office-folder li img {
   -webkit-animation: pulse 3s infinite;
 }
@@ -137,18 +141,18 @@ button#chatter {
 /*Overides BS4 modal values*/
 
 .modal-content{
-  background-color:transparent; !important
-  border: 1px solid rgba(0,0,0,0); !important
+  background-color:transparent !important;
+  border: 1px solid rgba(0,0,0,0) !important;
 }
 
 .modal-header{
-  border-bottom: 0px solid transparent; !important
+  border-bottom: 0px solid transparent !important;
 }
 
-/*Computer scree modal*/
+/* Computer scree modal */
 
 .computer-screen{
-  background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/Screen%401000x.png");
+  background-image:url("https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Screen@1000x.png");
   background-repeat: no-repeat;
     background-size: cover;
 }
@@ -194,7 +198,7 @@ max-height: 25rem;
 
 .office {
   max-width: 70rem;
-  heigth: 100%;
+  height: 100%;
   
 }
 
@@ -214,7 +218,7 @@ max-height: 25rem;
 
 .org-chart {
   max-width: 70rem;
-  heigth: 100%;
+  height: 100%;
   
 }
 
@@ -311,11 +315,11 @@ img {
 /*login modal*/
 
 .login-container {
-  max-width: 50rem;
+  max-width: 47rem;
 }
 
 .login-modal {
-  height: 470px;
+  height: 475px;
 }
 
 .login-container {
@@ -331,11 +335,11 @@ img {
 /* Chatter modal*/
 
 .chatter-container {
-  max-width: 50rem;
+  max-width: 47rem;
 }
 
 .chatter-modal {
-  height: 470px;
+  height: 475px;
 }
 
 .chatter-container {
@@ -344,92 +348,137 @@ img {
   background-size: cover;
 }
 
+/* Update Chatter modal*/
+
+.chattermsg-container {
+  max-width: 50rem;
+}
+
+.chattermsg-modal {
+  height: 400px;
+}
+
+.chattermsg-container {
+  background-image: url("https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Update-Chatter-Profile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .close {
   right: 1em;
 }
 
 </style>
 
-  
+
 </head>
 
-<body>
-
-  <div id="wrapper">
-<div id="scroller" class="vlab">
 <body onload="loaded()">
-  
- <ul>
-   <li><button id="login" type="button" title="explore login" data-toggle="modal" data-target="#login-details"><img alt="login" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Log-In.png"></button></li>
-  </ul>
-   
-  <div class="modal fade" id="login-details" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog login-container" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="close" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-            <div class="login-modal"</div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <!--Set up chatter-->
- <ul>
-   <li><button id="chatter" type="button" title="explore chatter" data-toggle="modal" data-target="#chatter-details"><img alt="chatter" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Edit-Your-Chatter-Profile.png"></button></li>
-  </ul>
-   
-  <div class="modal fade" id="chatter-details" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog chatter-container" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="close" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-            <div class="chatter-modal"</div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-   
-  <li><button id="door" type="button" title="door" data-toggle="modal" data-target="#office"><img alt="door" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/HR-door.png"></button></li>
-  </ul>
-  </div>
-  
-<div class="modal fade" id="office" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog office" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">HR office</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-<div class="office-modal">
- 
+  <div class="wrapper" id="page-wrapper">
+    <div id="content" tabindex="-1">
+      <div id="wrapper" id="page-wrapper">
+        <div id="scroller" class="vlab">
 
-              
- <!-- orgchart zoom -->
-<div class="container">
-	<figure class="img-container">
-		<img class="thumb" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png" data-thumb="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png" data-big="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png">
+
+          <ul>
+            <li><button id="login" type="button" title="explore login" data-toggle="modal" data-target="#login-details"><img
+                  alt="login" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Log-In.png"></button></li>
+          </ul>
+
+          <div class="modal fade" id="login-details" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog login-container" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="close" aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="login-modal" </div> </div> </div> </div> </div> <!--Set up chatter-->
+                  <ul>
+                    <li><button id="chatter" type="button" title="explore chatter" data-toggle="modal" data-target="#chatter-details"><img
+                          alt="chatter" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Edit-Your-Chatter-Profile.png"></button></li>
+                  </ul>
+
+                  <div class="modal fade" id="chatter-details" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog chatter-container" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="close" aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="chatter-modal" </div> </div> </div> </div> </div> <!--update chatter-->
+                          <ul>
+                            <li><button id="chattermsg" type="button" title="explore chatter" data-toggle="modal"
+                                data-target="#chattermsg-thread"><img alt="chatter" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Update-Chatter-Profile.png"></button></li>
+                          </ul>
+
+                          <div class="modal fade" id="chattermsg-thread" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog chattermsg-container" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="close" aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="chattermsg-modal" </div> </div> </div> </div> </div> <!--HR door-->
+                                  <ul>
+                                    <li><button id="door" type="button" title="door" data-toggle="modal" data-target="#office"><img
+                                          alt="door" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/HR-door.png"></button></li>
+                                  </ul>
+                                </div>
+
+                                <div class="modal fade" id="office" tabindex="-1" role="dialog">
+                                  <div class="modal-dialog modal-dialog office" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">HR office</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="office-modal">
+
+
+
+                                        <!-- orgchart zoom -->
+                                        <div class="container">
+                                          <figure class="img-container">
+                                            <img class="thumb" src="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png"
+                                              data-thumb="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png"
+                                              data-big="https://emedia.rmit.edu.au/DEV402/wp-content/uploads/2018/10/Salesfore-Org-Chart.png">
+
+
+                                            <div class="img-container-bg">
+                                              <div>
+                                          </figure>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-		
-  <div class="img-container-bg"><div>
-  </figure>
-</div>
-     
-                        
-</div>  
 </body>
-  <script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.glossarize.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.glossarize.js'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.min.js'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/popper.min.js?ver=1'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/theme.min.js?ver=1.1.9a'></script>
@@ -437,50 +486,53 @@ img {
 <script src='https://emedia.rmit.edu.au/C3319/wp-includes/js/wp-embed.min.js?ver=4.8.1'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-includes/js/wp-emoji-release.min.js?ver=4.8.1'></script>
 
-  
 
-    <script>
-    
-    (() => {
-	const IMAGES = document.querySelectorAll(".thumb");
-	let imageActive = false;
-	let normalImage;
-	let bigImage;
 
-	IMAGES.forEach(image => image.addEventListener("click", () => {
-		handleImage(image);
-	}));
 
-	const handleImage = image => {
-		if (!imageActive) openImage(image);
-		else if (imageActive) closeImage(image);
-	};
-	
-	const openImage = image => {
-		imageActive = true;
-		setImageSrc(image);
-		image.parentNode.classList.add("is-active");
-	};
-	
-	const closeImage = image => {
-		imageActive = false;
-		setImageSrc(image);
-		image.parentNode.classList.remove("is-active");
-	};
 
-	const setImageSrc = image => image.setAttribute("src", getImageSrc(image));
-		
-	const getImageSrc = image => {
-		let normalImage = image.getAttribute("data-thumb");
-		let bigImage = image.getAttribute("data-big");
-		
-		if (imageActive) return bigImage;
-		else if (!imageActive) return normalImage;
-	};
-})();
-    
-    
-    </script>
+
+
+
+
+<script>
+  (() => {
+    const IMAGES = document.querySelectorAll(".thumb");
+    let imageActive = false;
+    let normalImage;
+    let bigImage;
+
+    IMAGES.forEach(image => image.addEventListener("click", () => {
+      handleImage(image);
+    }));
+
+    const handleImage = image => {
+      if (!imageActive) openImage(image);
+      else if (imageActive) closeImage(image);
+    };
+
+    const openImage = image => {
+      imageActive = true;
+      setImageSrc(image);
+      image.parentNode.classList.add("is-active");
+    };
+
+    const closeImage = image => {
+      imageActive = false;
+      setImageSrc(image);
+      image.parentNode.classList.remove("is-active");
+    };
+
+    const setImageSrc = image => image.setAttribute("src", getImageSrc(image));
+
+    const getImageSrc = image => {
+      let normalImage = image.getAttribute("data-thumb");
+      let bigImage = image.getAttribute("data-big");
+
+      if (imageActive) return bigImage;
+      else if (!imageActive) return normalImage;
+    };
+  })();
+</script>
 
 
 
