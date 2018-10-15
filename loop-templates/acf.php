@@ -50,7 +50,13 @@
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Virtual Workplace'): ?>
 <?php get_template_part('loop-templates/acf/virtual-workplace');?>
 <?php elseif(!empty(get_the_content())): { ?>
-<?php the_content(); ?>
+
+<?php if( get_post_type() == 'scorm' ) {
+    //don't get the content as it's already called
+} else {
+   the_content();
+}
+?>
 <?php } else: { echo '<div class="card">
   <div class="card-body">
     <h4 class="card-title">This content is currently being built</h4>

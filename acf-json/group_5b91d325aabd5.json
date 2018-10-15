@@ -20,6 +20,20 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5bc317e313d41",
+            "label": "Menu",
+            "name": "menu_select",
+            "type": "menu-chooser",
+            "instructions": "Select a menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -39,5 +53,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536283523
+    "modified": 1539513001
 }
