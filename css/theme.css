@@ -8745,13 +8745,18 @@ h4, .h4 {
   font-family: "Lato", sans-serif;
   font-weight: 400; }
 
+#quiz .hidden {
+  display: none;
+  position: absolute; }
+
 #quiz .large {
   font-size: 1.2rem; }
 
 #quiz .rich-background {
   background: #e3e6e8;
   padding: 2rem; }
-  #quiz .rich-background #questions .carousel-inner .feedback, #quiz .rich-background #questions .carousel-inner .feedback1 {
+  #quiz .rich-background #questions .carousel-inner .feedback,
+  #quiz .rich-background #questions .carousel-inner .feedback1 {
     float: right;
     font-weight: 700;
     display: none;
@@ -8765,50 +8770,35 @@ h4, .h4 {
   padding: 1rem;
   position: relative; }
   #quiz .checkpage .controls {
-    position: relative;
-    right: 0;
-    margin: 2rem; }
-    #quiz .checkpage .controls a.carousel-control-prev, #quiz .checkpage .controls a.carousel-control-next {
+    padding: 0 20% 0 20%;
+    margin: 0 0 2rem 0; }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      #quiz .checkpage .controls {
+        padding: 0 30% 0 30%; } }
+    #quiz .checkpage .controls .page-number {
+      margin: 0 1% 0 1%; }
+    #quiz .checkpage .controls a.carousel-control-prev,
+    #quiz .checkpage .controls a.carousel-control-next {
       color: #d3261d;
-      padding: 1rem; }
-  #quiz .checkpage ul.carousel-indicators {
-    height: 10px;
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none; }
-    #quiz .checkpage ul.carousel-indicators li a {
-      background: #a61e17;
-      height: 2rem;
-      width: 2rem;
-      background-size: contain;
-      text-decoration: none; }
-    #quiz .checkpage ul.carousel-indicators li .current {
-      background: #d3261d; }
-    #quiz .checkpage ul.carousel-indicators li a:before {
-      font-size: 1rem;
-      color: white;
-      content: '1';
-      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    #quiz .checkpage ul.carousel-indicators li .answered, #quiz .checkpage ul.carousel-indicators li .progress-dot {
-      background: #ccd2d5; }
+      padding: 0rem;
+      left: auto;
+      right: auto;
+      margin: 0 auto;
+      position: relative; }
 
-#quiz .correct {
-  color: #d3261d;
+.correct {
+  background: #f7c7c5;
+  border: 2px solid #d3261d;
+  color: #000;
   font-weight: 700; }
 
-#quiz .correct1 {
-  color: green;
+.correct1 {
+  color: #000;
+  background: #ebf6d9;
+  border: 2px solid #AAD75F;
   font-weight: 700; }
 
-#quiz .form-check-input {
+.form-check-input {
   margin-left: 0 !important; }
 
 #hotspots .container-fluid {
@@ -9296,7 +9286,8 @@ h4, .h4 {
     #card-flip .card-flip.hover .flip {
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
-  #card-flip .front, #card-flip .back {
+  #card-flip .front,
+  #card-flip .back {
     width: 100%;
     margin-bottom: 20px; }
   #card-flip .flip {
@@ -9305,7 +9296,8 @@ h4, .h4 {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative; }
-  #card-flip .front, #card-flip .back {
+  #card-flip .front,
+  #card-flip .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
@@ -9369,7 +9361,9 @@ h4, .h4 {
       right: 0;
       bottom: 0.5rem;
       width: 100px; }
-  #card-flip .back, #card-flip .card-flip, #card-flip .front {
+  #card-flip .back,
+  #card-flip .card-flip,
+  #card-flip .front {
     width: 100%;
     max-width: 300px;
     height: 350px; }
@@ -9390,9 +9384,11 @@ h4, .h4 {
     padding: 0px 12px; }
 
 @media (max-width: 575.98px) {
-  #card-flip .card-body, #card-flip .col-4 {
+  #card-flip .card-body,
+  #card-flip .col-4 {
     padding: 0.5rem; }
-  #card-flip .card p, #card-flip .btn {
+  #card-flip .card p,
+  #card-flip .btn {
     font-size: 0.8rem; } }
 
 @media (max-width: 767.98px) {
