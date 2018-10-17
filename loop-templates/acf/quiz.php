@@ -17,14 +17,24 @@ if (have_rows('field_5bb2038203e86')):
 
             <div class="row">
               <div class="col-12">
-                <h3 class="card-title">Question
+                <h3 class="card-title text-center">Question
                   <?php echo $q; ?>
                 </h3>
               </div>
-              <div class="col-12 col-sm-6 col-md-4">
+
+<?php 
+// no image in quiz fallback
+if( get_sub_field('field_5bb20bd5e1178') ): ?>
+<div class="col-12 col-sm-6 col-md-4">
                 <img src="<?php the_sub_field('field_5bb20bd5e1178');?>" class="img-fluid mx-auto d-flex justify-content-center flex-wrap">
               </div>
-              <div class="col-6 col-sm-6 col-md-8">
+              <div class="col-12 col-sm-6 col-md-8 mt-3">
+<?php else: ?>
+<div class="col-12 col-sm-6 offset-sm-3 col-md-8 offset-md-2 mt-3">
+<?php endif; ?>
+
+  
+            
                 <div class="questions">
 
                   <p class="h4">
@@ -60,14 +70,14 @@ if (have_rows('field_5bb2038203e86')):
                 </div>
                 <div class="answers">
                   <div class="card-action">
-                    <button id="question<?php echo $q; ?>" class="btn btn-primary btn-sm">Submit</span>
+                    <button id="question<?php echo $q; ?>" class="btn btn-primary btn-sm btn-quiz">Check answer</span>
                   </div>
                 </div>
               </div>
 
               <!-- get results-->
 
-              <div class="results mt-5 col-12 ">
+              <div class="results col-12 mt-3 mb-2">
 
                 <?php
         // check if there are answers
@@ -75,8 +85,8 @@ if (have_rows('field_5bb2038203e86')):
             $r = 1;
             // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
-                <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden">
-                  <div class="card card-body correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
+                <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
+                 
                     <h4>
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
@@ -89,10 +99,10 @@ if ($t == "1") {
 ?>
                     </h4>
 
-                    <?php // Feedback for this snaswer
-                the_sub_field('field_5bb20ad9cf3f9');?>
+                    <p><?php // Feedback for this snaswer
+                the_sub_field('field_5bb20ad9cf3f9');?></p>
 
-                  </div>
+               
 
                 </div>
 
@@ -106,6 +116,7 @@ if ($t == "1") {
 
                 <!-- end get results-->
               </div>
+      
             </div>
           </div>
 
@@ -118,7 +129,7 @@ else:
 endif;
 
 ?>
-          <div class="controls row">
+          <div class="controls row mt-2">
             <div class="col"><a class="carousel-control-prev" href="#questions" data-slide="prev"> <i class="fa fa-chevron-circle-left fa-2x"></i></a></div>
 
             <?php

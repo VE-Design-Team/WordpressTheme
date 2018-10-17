@@ -585,22 +585,28 @@
     }
 
   }
+  .correct {
+    background: lighten($red, 40%);
+    border: 2px solid $red;
+    color: $black;
+    font-weight: 700;
+  }
+  
+  .correct1 {
+    color: $black;
+    background: lighten($green, 30%);
+    border: 2px solid $green;
+    font-weight: 700;
+  
+  }
+  .btn-quiz 
+  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 1rem 2rem 0;
 
-}
-
-.correct {
-  background: lighten($red, 40%);
-  border: 2px solid $red;
-  color: $black;
-  font-weight: 700;
-}
-
-.correct1 {
-  color: $black;
-  background: lighten($green, 30%);
-  border: 2px solid $green;
-  font-weight: 700;
-
+  }
 }
 
 //quiz forms

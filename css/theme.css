@@ -8786,17 +8786,23 @@ h4, .h4 {
       margin: 0 auto;
       position: relative; }
 
-.correct {
+#quiz .correct {
   background: #f7c7c5;
   border: 2px solid #d3261d;
   color: #000;
   font-weight: 700; }
 
-.correct1 {
+#quiz .correct1 {
   color: #000;
   background: #ebf6d9;
   border: 2px solid #AAD75F;
   font-weight: 700; }
+
+#quiz .btn-quiz {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 1rem 2rem 0; }
 
 .form-check-input {
   margin-left: 0 !important; }
