@@ -14,6 +14,9 @@
 
   </div>
   <div class="col-12 col-sm-6">
+    <h3>
+      <?php the_sub_field('field_5a5820d027a5d');?> 
+    </h3>
     <p>
       <?php the_sub_field('field_5a55a5ef5861c');?>
     </p>
@@ -25,13 +28,10 @@
     <?php else: {?>
     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 carousel-text-only">
       <?php } endif; ?>
-
-
-
-
-
-
-      <p>
+      <h3>
+        <?php the_sub_field('field_5a5820d027a5d');?>
+      </h3>
+  <p>
         <?php the_sub_field('field_5a55a5ef5861c');?>
       </p>
     </div>
