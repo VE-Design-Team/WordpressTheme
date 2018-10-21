@@ -129,6 +129,7 @@
       .collapse {
         background: $gray-25;
         color: $black;
+
       }
 
       .collapsed {
@@ -324,6 +325,7 @@
   .bordered {
     border: $card-border-width solid $carousel-border;
     padding: 1rem;
+
   }
 }
 
@@ -585,22 +587,23 @@
     }
 
   }
+
   .correct {
     background: lighten($red, 40%);
     border: 2px solid $red;
     color: $black;
     font-weight: 700;
   }
-  
+
   .correct1 {
     color: $black;
     background: lighten($green, 30%);
     border: 2px solid $green;
     font-weight: 700;
-  
+
   }
-  .btn-quiz 
-  {
+
+  .btn-quiz {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1240,220 +1243,101 @@
   }
 }
 
-//cardflip
+//Flipcards
 
-#card-flip {
-  background: $rich-background;
+#flipcards {
 
-  .card-flip {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
+  display: flex;
 
-    &.hover .flip {
-      -webkit-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-    }
-
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .front,
-  .back {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .flip {
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-
-  .front,
-  .back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .front {
-    z-index: 2;
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    height: 100%;
-
-    .card {
-      background-color: $flip-card-front-colour;
-      color: $flip-card-front-text-colour;
-
-      .x {
-        font-size: 0.9rem;
-      }
-
-      .xx {
-        font-size: 1rem;
-      }
-
-      .xxx {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-  .back {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    height: 100%;
-
-    .card {
-      background-color: $flip-card-back-colour;
-      color: $flip-card-back-text-colour;
-
-      .x {
-        font-size: 0.9rem;
-      }
-
-      .xx {
-        font-size: 1rem;
-      }
-
-      .xxx {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-  .card {
-    background-repeat: no-repeat;
-    background-size: 300%;
-    border-top: $accent-color $accent-thickness solid;
-    border-top: 3px solid emit;
-    border-radius: 0;
+  .grid-container {
+    margin: auto;
     display: flex;
-    background-color: $white;
-    padding-bottom: 60px;
-    overflow-y: scroll;
-
-    .card-body {
-      display: table;
-      width: 100%;
-      height: 80%;
-
-      .centre-align {
-        padding-top: 10%;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-
-      }
-
-      .content {
-        display: inline-block;
-        vertical-align: top;
-        /* Removes the extra $flip-card-back-text-colour space below the baseline */
-      }
-    }
-
-    .btn {
-      position: fixed;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      bottom: 0.5rem;
-      width: 100px;
-    }
+    flex-wrap: wrap;
   }
 
-  .back,
-  .card-flip,
-  .front {
-    width: 100%;
-    max-width: 300px;
-    height: 350px;
-  }
-
-  .card-body {
-    padding: 0px;
-    margin: 0px;
-  }
-
-  .back .card-body {
-    margin: 0 0 2rem 0;
-  }
-
-  .card {
-    height: 350px;
-    background-color: $flip-card-back-text-colour;
-    box-shadow: 3px 3px 5px #ddd;
-    border: none;
-    border-radius: 10px;
-    padding-bottom: 10px;
-  }
-
-  .front p {
-    margin-top: 30px;
-    padding: 0px 12px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  #card-flip {
-
-    .card-body,
-    .col-4 {
-      padding: 0.5rem;
-    }
-
-    .card p,
-    .btn {
-      font-size: 0.8rem;
-    }
-  }
-}
-
-@media (max-width: 767.98px) {
-  #card-flip .card-body {
-    padding: 0.05rem;
-  }
-}
-
-.btn {
-  vertical-align: bottom;
-}
-
-#card-flip {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  .card-text p {
-    padding: 0;
+  .card-grid {
     margin: 1rem;
+    display: inline-block;
+    /* width: calc(25% - 10px);
+      height: calc(46% - 10px); */
+    height: 350px;
+    width: 270px;
+    position: relative;
+    .x
+    {font-size: 0.9rem;}
+    .xx
+    { font-size: 11rem}
+    .xxx
+    {
+      font-size: 1.1rem;
+    }
   }
 
-  p {
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5 {
+      padding: 0 0.5rem 0 0.5rem;
+    }
+
+  }
+
+  .btn-primary {
+
+    &:hover {}
+  }
+
+  .middler {
+    width: 100%;
+    height: 2rem;
+    bottom: 1rem;
+    position: absolute;
     text-align: center;
 
-  }
+    .btn {
+      -moz-user-select: none;
 
-  ul {
-    li {
-      text-align: left;
+      // margin-left: 75px;
+
     }
   }
 
   .card-img-top {
-    border-radius: 10px 10px 0 0;
+    height: 170px;
+    padding: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .card-body {
+    height: 170px;
+    padding: 0;
+   
+  }
+
+  .scroll-box {
+    overflow-y: hidden;
+    height: 100px;
   }
 }
 
-//end card flip
+//end flipcards
 //Example table body
 #table-body {
   background: $mid-grey;
