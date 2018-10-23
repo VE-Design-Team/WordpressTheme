@@ -9304,7 +9304,7 @@ h4, .h4 {
       height: 100%;
       position: absolute;
       border-radius: 0.5rem;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 0px solid rgba(0, 0, 0, 0.1);
       box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem; }
       #flipcards .card-grid .front h1,
       #flipcards .card-grid .front h2,
@@ -9347,7 +9347,6 @@ h4, .h4 {
       #flipcards .card-grid .middler .btn {
         -moz-user-select: none; }
     #flipcards .card-grid .card-img-top {
-      height: 170px;
       padding: 0;
       border-radius: 0.5rem 0.5rem 0 0; }
     #flipcards .card-grid .card-body {
