@@ -1248,6 +1248,8 @@
 #flipcards {
 
   display: flex;
+  background: $rich-background;
+  padding: 2rem 0 2rem 0;
 
   .grid-container {
     margin: auto;
@@ -1263,23 +1265,13 @@
     height: 350px;
     width: 270px;
     position: relative;
-    .x
-    {font-size: 0.9rem;}
-    .xx
-    { font-size: 11rem}
-    .xxx
-    {
-      font-size: 1.1rem;
-    }
-  }
-
+    
   .front,
   .back {
     width: 100%;
     height: 100%;
     position: absolute;
     border-radius: 0.5rem;
-    background: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
 
@@ -1296,12 +1288,22 @@
     .h5 {
       padding: 0 0.5rem 0 0.5rem;
     }
+    .card-text
+    {
+      padding-top: 0.5rem;
+    }
 
   }
-
-  .btn-primary {
-
-    &:hover {}
+  .front{
+    background: $flip-card-front-colour;
+    color: $flip-card-front-text-colour;
+   
+  }
+  .back
+  {
+    background: $flip-card-back-colour;
+    color: $flip-card-back-text-colour;
+  
   }
 
   .middler {
@@ -1335,6 +1337,21 @@
     overflow-y: hidden;
     height: 100px;
   }
+}
+}
+#flipcards > div > div > div.card.front > div,
+#flipcards > div > div > div.card.back > div 
+
+{
+  .x
+  {font-size: 0.9rem;}
+  .xx
+  { font-size: 1rem}
+  .xxx
+  {
+    font-size: 1.2rem;
+  }
+
 }
 
 //end flipcards

@@ -1,8 +1,8 @@
   <!-------------- footer ------------------->
 
   <div class="footer container-fluid" id="footer">
-    <div class="logos"><a class="rmit" href="#"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/fssi/img/vcoss_rmit.png"
-          alt="lorem" height: "6px"></a></div>
+    <div class="vcoss-rmit"><a class="rmit" href="#"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/fssi/img/vcoss_rmit.png"
+          alt="lorem" height: "60px"></a></div>
     <div class="p copyright text-center align-middle">Copyright <i class="far fa-copyright"></i> 2018 Future Social
       Service Institute. All rights reserved.</div>
   </div>

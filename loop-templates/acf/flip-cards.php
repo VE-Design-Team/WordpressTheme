@@ -1,3 +1,5 @@
+<script src='<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.flip.min.js'></script>
+
 <div id="flipcards" class="container-fluid">
   <div class="grid-container d-flex align-content-center justify-content-center">
 
@@ -9,38 +11,67 @@
 
     <div class="card-grid ">
       <!-- front content -->
-      <div class="front card">
+      <div class="card front">
         <!-- if have an image -->
 
         <div class="card-body scroll-box ">
           <?php if (get_sub_field('field_5a8663981362e')): ?>
           <img class="card-img-top img-fluid" src="<?php the_sub_field('field_5a8663981362e');?>" alt="Card image cap">
+          <div class="card-text <?php the_field('field_5b3c038bf73ee');?>">
+            <?php the_sub_field('field_5a865a8c9f830');?>
+          </div>
+          <?php  else: ?>
+          <table style="height: 100%" class="card-text">
+            <tbody>
+              <tr>
+
+                <td class="card-text align-middle <?php the_field('field_5b3c038bf73ee');?>">
+
+                  <?php the_sub_field('field_5a865a8c9f830');?>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
           <?php endif;?>
           <!--      <h5 class="card-title">Card title</h5> -->
           <!-- font card size-->
-          <p class="card-text <?php the_field('field_5b3c038bf73ee');?>">
-            <?php the_sub_field('field_5a865a8c9f830');?>
-          </p>
+
           <div class="middler">
-            <button class="flip-btn btn btn-primary  btn-sm">Click to flip</button></div>
+            <button class="flip-btn btn btn-primary  btn-sm">Flip</button></div>
         </div>
       </div>
 
       <!-- end front-->
 
       <!-- back content -->
-      <div class="back card">
+      <div class="card back">
 
         <div class="card-body scroll-box">
           <?php if (get_sub_field('field_5a8664851362f')): ?>
           <img class="card-img-top" src="  <?php the_sub_field('field_5a8664851362f');?>" alt="Card image cap">
+          <div class="card-text  <?php the_field('field_5b3c03c1f73ef');?>">
+
+            <?php the_sub_field('field_5a86650b13630');?>
+          </div>
+
+          <?php  else: ?>
+          <table style="height: 100%" class="card-text">
+            <tbody>
+              <tr>
+
+                <td class="card-text align-middle <?php the_field('field_5b3c03c1f73ef');?>">
+
+                  <?php the_sub_field('field_5a86650b13630');?>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
           <?php endif;?>
 
-          <p class="card-text <?php the_field('field_5b3c03c1f73ef');?>">
-            <?php the_sub_field('field_5a86650b13630');?>
-          </p>
           <div class="middler">
-            <button class="unflip-btn btn btn-primary btn-sm ">Click to flip</button>
+            <button class="unflip-btn btn btn-primary btn-sm ">Flip</button>
           </div>
         </div>
       </div>
@@ -59,7 +90,6 @@ endif;
 ?>
 
 </div>
-<script src='<?php echo get_stylesheet_directory_uri(); ?>/src/js/jquery.flip.min.js'></script>
 
 <script>
   $(".card-grid").flip({

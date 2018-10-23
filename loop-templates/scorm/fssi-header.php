@@ -262,13 +262,13 @@
       font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
     }
 
-    #footer .logos {
+    #footer .vcoss-rmit {
       position: absolute;
       right: 0;
       height: 100%;
     }
 
-    #footer .logos .rmit {
+    #footer .vcoss-rmit .rmit {
       background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/fssi/img/vcoss_rmit.png");
       display: inline-block;
       padding-top: 0px;
@@ -642,7 +642,7 @@
       <nav aria-label="breadcrumb" id="breadcrumb-1">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a class="thin" href="#">COURSE<!-- Module --></a></li>
-
+    
           <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo '<li class="breadcrumb-item d-none d-xs-none d-md-block"><a class="thin" href="#">'.get_the_title($grandparent).'</a> </li> <li class="breadcrumb-item d-none d-sm-none d-md-block"><a href="#" class="thin">'.get_the_title($parent).'</a></li>'; }else {echo '<li class="breadcrumb-item d-none d-sm-none d-md-block"><a href="#" class="thin">'.get_the_title($parent).'</a></li>'; }?>
          
 
