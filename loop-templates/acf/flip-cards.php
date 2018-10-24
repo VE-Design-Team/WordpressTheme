@@ -56,7 +56,7 @@
           </div>
 
           <?php  else: ?>
-          <table style="height: 100%" class="card-text">
+          <table style="height: 100%" class="card-text" >
             <tbody>
               <tr>
 

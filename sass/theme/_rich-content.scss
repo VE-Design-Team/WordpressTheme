@@ -1272,8 +1272,20 @@
     height: 100%;
     position: absolute;
     border-radius: 0.5rem;
-    border: 0px solid rgba(0, 0, 0, 0.1);
+    border: none;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
+
+    .card-body{
+
+      table.card-text{
+       
+        tr{
+          td{
+            border: none;
+          }
+        }
+      }
+    }
 
     h1,
     h2,

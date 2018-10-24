@@ -3311,6 +3311,48 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5bc4d38bc5b36",
+            "label": "Accordion action",
+            "name": "accordion_action",
+            "type": "select",
+            "instructions": "Choose how you want the the accordions to open",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion with image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "toggle": "Toggle",
+                "single": "Open individually"
+            },
+            "default_value": [
+                "single"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -3342,5 +3384,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538395800
+    "modified": 1539646867
 }

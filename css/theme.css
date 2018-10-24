@@ -18,6 +18,51 @@
   font-weight: normal;
   font-style: normal; }
 
+@media (min-width: 768px) {
+  .fa.fa-chevron-circle-left, .fa.fa-chevron-circle-right {
+    position: relative; }
+  .fa.fa-chevron-circle-left:after, .fa.fa-chevron-circle-right:after {
+    background-color: #50D2FF;
+    height: 4rem;
+    width: 4rem;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    color: #fff;
+    position: absolute;
+    left: 0;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 1rem; }
+  .fa.fa-chevron-circle-left:after {
+    content: "\f053";
+    padding: 0.6rem 0.6em 0 0.7rem; }
+  .fa.fa-chevron-circle-right:after {
+    content: "\f054";
+    padding: 0.6rem 0.1em 0 0.7rem; } }
+
+#tabs .nav-tabs .nav-item .active .title i, #tabs .nav-tabs .nav-item .checked .title i {
+  color: #000054 !important; }
+
+#tabs ul.nav-tabs li .active {
+  border: #000054 2px solid !important;
+  top: 0.2rem;
+  position: absolute;
+  margin-left: -2px;
+  margin-right: -2px; }
+
+#tabs .nav-tabs .nav-link:hover {
+  background: #50D2FF !important; }
+  #tabs .nav-tabs .nav-link:hover .title {
+    color: #000054 !important; }
+
+#tabs ul.nav-tabs li .active:hover {
+  background: #000054 !important; }
+  #tabs ul.nav-tabs li .active:hover .title {
+    color: #50D2FF !important; }
+
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -342,7 +387,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #d3261d; }
@@ -2487,15 +2532,15 @@ tbody.collapse.show {
     color: #8b8f92; }
 
 .nav-tabs {
-  border-bottom: 0.2rem solid #b3b8bc; }
+  border-bottom: 0.1rem solid #50D2FF; }
   .nav-tabs .nav-item {
-    margin-bottom: -0.2rem; }
+    margin-bottom: -0.1rem; }
   .nav-tabs .nav-link {
-    border: 0.2rem solid transparent;
+    border: 0.1rem solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
     .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-      border-color: none none #b3b8bc; }
+      border-color: none none #50D2FF; }
     .nav-tabs .nav-link.disabled {
       color: #8b8f92;
       background-color: transparent;
@@ -2506,7 +2551,7 @@ tbody.collapse.show {
     background-color: #fff;
     border-color: #636668 #636668 #fff; }
   .nav-tabs .dropdown-menu {
-    margin-top: -0.2rem;
+    margin-top: -0.1rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
@@ -2829,7 +2874,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 0.2rem solid rgba(0, 0, 0, 0.125);
+  border: 0.1rem solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -2865,18 +2910,18 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
-    border-radius: calc(0.25rem - 0.2rem) calc(0.25rem - 0.2rem) 0 0; }
+    border-radius: calc(0.25rem - 0.1rem) calc(0.25rem - 0.1rem) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
     border-top: 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 0.2rem solid rgba(0, 0, 0, 0.125); }
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 0.2rem) calc(0.25rem - 0.2rem); }
+    border-radius: 0 0 calc(0.25rem - 0.1rem) calc(0.25rem - 0.1rem); }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -2898,17 +2943,17 @@ tbody.collapse.show {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 0.2rem); }
+  border-radius: calc(0.25rem - 0.1rem); }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 0.2rem);
-  border-top-right-radius: calc(0.25rem - 0.2rem); }
+  border-top-left-radius: calc(0.25rem - 0.1rem);
+  border-top-right-radius: calc(0.25rem - 0.1rem); }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 0.2rem);
-  border-bottom-left-radius: calc(0.25rem - 0.2rem); }
+  border-bottom-right-radius: calc(0.25rem - 0.1rem);
+  border-bottom-left-radius: calc(0.25rem - 0.1rem); }
 
 .card-deck {
   display: flex;
@@ -8385,12 +8430,12 @@ h4, .h4 {
 
 .instruction {
   font-weight: 400;
-  background: #e3e6e8 !important;
+  background: #000054 !important;
   padding: 10px;
   margin-bottom: .5rem;
-  color: #131414; }
+  color: #fff; }
   .instruction .fa-info-circle {
-    color: #000054;
+    color: #0078FF;
     background: #fff;
     border-radius: 0.5rem; }
 
@@ -8418,10 +8463,10 @@ h4, .h4 {
 
 .btn:hover,
 .btn:focus {
-  background-color: #d3261d;
+  background-color: #0078FF;
   color: #ffffff !important;
   transition: 300ms;
-  border-color: #d3261d; }
+  border-color: #0078FF; }
 
 .btn-default,
 .btn {
@@ -8431,13 +8476,13 @@ h4, .h4 {
   border-color: #901a14 !important; }
 
 .btn-primary {
-  background-color: #d3261d !important;
+  background-color: #0078FF !important;
   color: #ffffff !important;
   transition: 300ms;
-  border-color: #d3261d !important; }
+  border-color: #0078FF !important; }
 
 .numborder {
-  background: #d3261d;
+  background: #50D2FF;
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 1rem;
@@ -8470,17 +8515,17 @@ h4, .h4 {
       border-radius: 0;
       color: #000;
       font-weight: 700;
-      background-color: #d3261d;
-      color: #fff;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #50D2FF;
+      color: #000054;
+      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer; }
       #accordion #cards .card .card-header .fa-minus {
         display: inline; }
       #accordion #cards .card .card-header .fa-plus {
         display: none; }
     #accordion #cards .card .card-header:hover {
-      background-color: #d3261d;
-      color: #fff; }
+      background-color: #50D2FF;
+      color: #000054; }
     #accordion #cards .card .collapse {
       background: #f9fafa;
       color: #000; }
@@ -8526,7 +8571,7 @@ h4, .h4 {
       background: inherit;
       margin-left: 100px;
       padding-top: 15px;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
       #calloutcards .card #content .card-header .fa-minus {
         display: inline; }
       #calloutcards .card #content .card-header .fa-plus {
@@ -8595,7 +8640,7 @@ h4, .h4 {
     position: relative;
     width: 0;
     display: none;
-    border-bottom: solid 20px #d7d7d7;
+    border-bottom: solid 20px #50D2FF;
     border-right: solid 20px transparent;
     border-left: solid 20px transparent;
     z-index: 1000;
@@ -8611,7 +8656,7 @@ h4, .h4 {
       border-left: solid 19px transparent; }
 
 #carousel .bordered {
-  border: 0.2rem solid #d7d7d7;
+  border: 0.1rem solid #50D2FF;
   padding: 1rem; }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -8657,12 +8702,12 @@ h4, .h4 {
 
 #carousel .fa-chevron-circle-left {
   float: left;
-  color: #d3261d;
+  color: #50D2FF;
   margin-bottom: 10px; }
 
 #carousel .fa-chevron-circle-right {
   float: right;
-  color: #d3261d;
+  color: #50D2FF;
   margin-bottom: 10px; }
 
 #carousel div.container.navs > div.row.top-nav > div.col-10 > div > div.col-1.col-auto.active > .triangle {
@@ -8677,7 +8722,7 @@ h4, .h4 {
   float: right;
   bottom: 0px;
   right: 0;
-  color: #d3261d;
+  color: #50D2FF;
   cursor: pointer; }
 
 #checklist .container-fluid {
@@ -8955,12 +9000,12 @@ h4, .h4 {
 
 .nav-tabs .nav-item {
   margin-bottom: -4px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .tab-content {
-  border-left: 0.2rem solid #b3b8bc;
-  border-right: 0.2rem solid #b3b8bc;
-  border-bottom: 0.2rem solid #b3b8bc;
+  border-left: 0.1rem solid #50D2FF;
+  border-right: 0.1rem solid #50D2FF;
+  border-bottom: 0.1rem solid #50D2FF;
   padding: 10px;
   background-color: #fff;
   display: flex; }
@@ -9179,19 +9224,19 @@ h4, .h4 {
 #tabs {
   margin-top: 1rem; }
   #tabs .nav-tabs {
-    border-bottom: 2px solid #b3b8bc;
+    border-bottom: 2px solid #50D2FF;
     background: #fff; }
     #tabs .nav-tabs .nav-link {
       border: 0;
-      background: #d7d7d7;
+      background: #50D2FF;
       border-radius: 0; }
     #tabs .nav-tabs .nav-link:hover {
       border: 0;
-      background: #fff; }
+      background: #000054; }
       #tabs .nav-tabs .nav-link:hover .title {
-        color: #d3261d; }
+        color: #50D2FF; }
         #tabs .nav-tabs .nav-link:hover .title i {
-          color: #d3261d; }
+          color: #50D2FF; }
     #tabs .nav-tabs li {
       background: #d7d7d7; }
     #tabs .nav-tabs .nav-item {
@@ -9202,40 +9247,40 @@ h4, .h4 {
         margin-left: 0.5rem; }
       #tabs .nav-tabs .nav-item .title {
         margin-left: 1rem;
-        color: #636668; }
+        color: #131414; }
         #tabs .nav-tabs .nav-item .title i {
-          color: #d7d7d7; }
+          color: #50D2FF; }
       #tabs .nav-tabs .nav-item .checked,
       #tabs .nav-tabs .nav-item .active {
         border-top: 0;
-        background: #fff;
+        background: #000054;
         position: relative;
         margin-top: -8px;
         padding-top: 11px;
         bottom: -8px;
-        color: #d3261d;
+        color: #50D2FF;
         border-radius: 0; }
         #tabs .nav-tabs .nav-item .checked .title,
         #tabs .nav-tabs .nav-item .active .title {
           position: relative;
           bottom: 3px;
-          color: #d3261d; }
+          color: #50D2FF; }
           #tabs .nav-tabs .nav-item .checked .title i,
           #tabs .nav-tabs .nav-item .active .title i {
-            color: #d3261d; }
+            color: #50D2FF; }
   #tabs ul.nav-tabs li {
-    border-right: 2px solid #b3b8bc;
-    border-top: 2px solid #b3b8bc; }
+    border-right: 2px solid #50D2FF;
+    border-top: 2px solid #50D2FF; }
   #tabs ul.nav-tabs li:nth-child(1) {
-    border-left: 2px solid #b3b8bc; }
+    border-left: 2px solid #50D2FF; }
   #tabs .tab-content {
     padding: 1rem;
-    border-left: 2px solid #b3b8bc;
-    border-right: 2px solid #b3b8bc;
-    border-bottom: 2px solid #b3b8bc; }
+    border-left: 2px solid #50D2FF;
+    border-right: 2px solid #50D2FF;
+    border-bottom: 2px solid #50D2FF; }
 
 #left-tabs .tab-content {
-  border: 2px solid #b3b8bc; }
+  border: 2px solid #50D2FF; }
 
 #left-tabs .tab-pane {
   margin: 1rem; }
@@ -9244,11 +9289,11 @@ h4, .h4 {
   color: black; }
 
 #left-tabs a.nav-link.active > .h5 {
-  color: #d3261d; }
+  color: #50D2FF; }
 
 #left-tabs .triangle {
   float: right;
-  background: #d3261d;
+  background: #50D2FF;
   display: none;
   position: relative;
   background: #f1f1f1;
@@ -9275,7 +9320,7 @@ h4, .h4 {
 
 #left-tabs .triangle:before {
   border-color: rgba(221, 221, 221, 0);
-  border-right-color: #b3b8bc;
+  border-right-color: #50D2FF;
   border-width: 1.175rem;
   margin-top: -1.175rem; }
 
@@ -9304,8 +9349,11 @@ h4, .h4 {
       height: 100%;
       position: absolute;
       border-radius: 0.5rem;
-      border: 0px solid rgba(0, 0, 0, 0.1);
+      border: none;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem; }
+      #flipcards .card-grid .front .card-body table.card-text tr td,
+      #flipcards .card-grid .back .card-body table.card-text tr td {
+        border: none; }
       #flipcards .card-grid .front h1,
       #flipcards .card-grid .front h2,
       #flipcards .card-grid .front h3,
@@ -9333,11 +9381,11 @@ h4, .h4 {
       #flipcards .card-grid .back .card-text {
         padding-top: 0.5rem; }
     #flipcards .card-grid .front {
-      background: #fff;
-      color: #131414; }
+      background: #50D2FF;
+      color: #000054; }
     #flipcards .card-grid .back {
-      background: #fff;
-      color: #131414; }
+      background: #000054;
+      color: #fff; }
     #flipcards .card-grid .middler {
       width: 100%;
       height: 2rem;
@@ -9565,7 +9613,7 @@ reveal {
   cursor: pointer;
   text-align: left;
   font-size: 0.85rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Museo500", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #sample-document .physical-document {
   border: solid 0px #cfcfcf;
