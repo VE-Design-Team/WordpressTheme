@@ -70,7 +70,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                 </div>
                 <div class="answers">
                   <div class="card-action">
-                    <button id="question<?php echo $q; ?>" class="btn btn-primary btn-sm btn-quiz">Check answer</span>
+                    <button id="question<?php echo $q; ?>" class="btn btn-primary btn-sm btn-quiz">Check answer</button>
                   </div>
                 </div>
               </div>
