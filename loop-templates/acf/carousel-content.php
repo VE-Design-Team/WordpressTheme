@@ -14,7 +14,7 @@
 
   </div>
   <div class="col-12 col-sm-6">
-    <h3>
+    <h3 class="h3">
       <?php the_sub_field('field_5a5820d027a5d');?> 
     </h3>
     <p>

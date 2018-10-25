@@ -16,7 +16,7 @@
 
 //buttons
 .btn {
-  font-family: Museo500;
+  font-family: $rich-heading-font;
   font-size: 1rem;
   cursor: pointer;
   border-radius: $double-radius;
@@ -29,6 +29,7 @@
   padding: 0.5rem 2rem;
   float: none;
   margin-bottom: 0.5rem; //height: 3rem;
+
 }
 
 .btn-sm {
@@ -176,9 +177,9 @@
 //Cards
 #calloutcards {
   .card {
-    border: 2px solid $mid-grey;
+    border: 0.2rem solid $mid-grey;
     border-radius: 0;
-    margin: 5px;
+    margin: 1rem;
     background-color: $light-grey;
 
     #content {
@@ -190,10 +191,9 @@
       .card-header {
         border-radius: 0;
         color: $black;
-        font-weight: 700;
         background: inherit;
-        margin-left: 100px;
-        padding-top: 15px;
+        margin-left: 7rem;
+        padding-top: 2rem;
         font-family: $rich-heading-font;
 
         .fa-minus {
@@ -207,12 +207,12 @@
     }
 
     .card-body {
-      margin-left: 100px;
-      margin-right: 50px;
+      margin-left: 7rem;
+      margin-right: 3rem;
       padding-top: 0px;
 
       hr {
-        background-color: $light-blue;
+        background-color: $accent-color;
       }
     }
   }
@@ -835,7 +835,7 @@
   border-bottom: $rmit-blue;
   background: $rmit-blue;
 
-  .h5 {
+  .h4 {
     color: white;
   }
 }
@@ -855,7 +855,8 @@
 .accord-item {
   border-top: 1px solid $gray-300;
 
-  .h5 {
+  .h4
+   {
     margin-bottom: 0;
     color: $rmit-lightblue;
   }
@@ -1125,7 +1126,7 @@
       font-weight: 700;
       color: $gray-900;
       margin-bottom: -2px; // background: $mid-grey;
-
+      border-bottom: $nav-tabs-border-color 2px solid;
       i {
         margin-left: 0.5rem;
       }
@@ -1193,11 +1194,11 @@
     margin: 1rem;
   }
 
-  a.nav-link>.h5 {
+  a.nav-link>.h4 {
     color: black;
   }
 
-  a.nav-link.active>.h5 {
+  a.nav-link.active>.h4 {
     color: $nav-tabs-active-text-color;
   }
 

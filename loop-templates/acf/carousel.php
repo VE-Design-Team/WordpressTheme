@@ -1,8 +1,5 @@
-<style>
- 
-</style>
 <div class="carousel mt-1" id="carousel">
-  <div class="container navs">
+  <div class="container-fluid navs">
     <div class="row top-nav ">
       <div class="col-1 scrollers">
         <a href="#carousel" role="button" data-slide="prev">
@@ -70,7 +67,7 @@ endwhile; //noe get right indicator ?>
   <?php if (get_field('field_5ad936e5e0fdd') == 'fullwidth'): ?>
   <div class="carousel container-fluid">
     <?php else:{?>
-    <div class="carousel container">
+    <div class="carousel container-fluid">
       <?php }endif;?>
 
 

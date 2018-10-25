@@ -5,10 +5,10 @@
       <div class="nav flex-column col-4 pr-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <!-- end setup tabs on left-->
         <?php while (have_rows('field_5a13c7fda9110')) : the_row();?>
-        <a class=" nav-link text-right  " aria-hidden="true" id="v-pills-home-tab" data-toggle="pill" href="#<?php echo str_replace(str_split('\\()/:*?"
+        <a class="nav-link text-right  " aria-hidden="true" id="v-pills-home-tab" data-toggle="pill" href="#<?php echo str_replace(str_split('\\()/:*?"
           <>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tab" aria-controls="v-pills-home" aria-selected="true">
           <h3
-            class="h5">
+            class="h4">
             <?php echo the_sub_field('field_5a14fdfcc7bba');?>&nbsp; 
             </span>
             <div class="triangle"></div>
