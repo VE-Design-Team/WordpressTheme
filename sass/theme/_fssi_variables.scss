@@ -55,3 +55,6 @@ $button-default: $green;
 $button-default-text: $gray-900;
 $button-default-hover: $green;
 $button-default-hover-text: $white;
+$radius: 0.1rem;
+$half-radius: $radius / 2;
+$double-radius: $radius *2; 

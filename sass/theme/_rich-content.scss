@@ -19,7 +19,7 @@
   font-family: Museo500;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 2rem; //bottom: 1rem;
+  border-radius: $double-radius;
   //right: 2rem;
   margin: 0 auto;
   background-color: #EBEBEB; //pale grey
@@ -68,7 +68,7 @@
   background: $numbers-background;
   width: 1.75rem;
   height: 1.75rem;
-  border-radius: 1rem;
+  border-radius: $radius;
   padding: 0.5rem;
   font-family: Museo500;
   color: white;
@@ -632,7 +632,7 @@
     display: block;
     width: 2rem;
     height: 2rem;
-    border-radius: 1rem;
+    border-radius: $radius;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -849,7 +849,7 @@
   background-color: #fff;
   background-clip: border-box;
   border: 2px solid $rmit-blue;
-  border-radius: .25rem;
+  border-radius: $half-radius;
 }
 
 .accord-item {
@@ -1074,7 +1074,7 @@
   position: absolute;
   z-index: 100;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: $radius / 4;
   box-sizing: border-box;
 }
 
@@ -1271,7 +1271,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    border-radius: 0.5rem;
+    border-radius: $half-radius;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
 
@@ -1303,6 +1303,7 @@
     .card-text
     {
       padding-top: 0.5rem;
+      width: 100%;
     }
 
   }
@@ -1336,7 +1337,7 @@
   .card-img-top {
     //height: 170px;
     padding: 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: $half-radius $half-radius 0 0;
   }
 
   .card-body {
@@ -1525,7 +1526,7 @@
     background: #dc291e;
     border: 1px solid #dc291e;
     color: #fff;
-    border-radius: 1.1rem;
+    //border-radius: $radius;
     font-weight: 400;
     font-size: 0.9rem;
     margin-top: 1rem;
@@ -1536,7 +1537,7 @@
   }
 
   .btn-roadmap {
-    border-radius: 1.1rem;
+    border-radius: $radius;
     height: 2.2rem;
     width: 2.2rem;
     margin: 0.25rem;
@@ -1733,7 +1734,7 @@ reveal {
     line-height: 30px;
     margin: 0 auto;
     color: #21669e;
-    border-radius: 5px;
+    border-radius: $half-radius;
     box-shadow: 0 0 0 1px #eee;
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
