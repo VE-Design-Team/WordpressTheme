@@ -3,45 +3,76 @@
 //For this course
 $gray: #ccc;
 $green: #055918;
+$green-light: lighten($green, 10%);
 $white: #fff;
 $black: #111;
 $footer: #f5f6f5;
+$rmit-red: $green;
+
 //Fonts
-  
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url("../fssi/fonts/TradeGothicLTStd-Cn18.woff2") format("woff2"), url("../fssi/fonts/TradeGothicLTStd-Cn18.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Pro Cn';
+    src: url("../fssi/fonts/TradeGothicLTPro-BdCn20.woff2") format("woff2"), url("../fssi/fonts/TradeGothicLTPro-BdCn20.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Trade Gothic LT Std";
+    src: url("../fssi/fonts/TradeGothicLTStd-Light.woff2") format("woff2"), url("../fssi/fonts/TradeGothicLTStd-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+$font: 'Trade Gothic LT Std',
+sans-serif;
+$font2: 'Trade Gothic LT Pro Cn',
+sans-serif;
+
 //Styles
+$headings-color: $green;
+$headings-font-family: $font2 !important;
+$headings-font-weight: 700;
 $card-border-width: 0.2rem;
-$headings-font-family: $font-family-sans-serif !default;
-$nav-tabs-border-color: $gray-500 !default;
-$nav-tabs-link-hover-border-color: none !default;
+$headings-font-family: $font2 !default;
+$nav-tabs-border-color: $green !default;
+$nav-tabs-link-hover-border-color: $green-light !default;
 $nav-tabs-active-text-color: $green !default;
 $nav-tabs-link-active-color: $gray-700 !default;
 $nav-tabs-link-active-bg: $white !default;
-$nav-tabs-link-active-border-color: $gray-700 !default;
+$nav-tabs-link-active-border-color: $green-light !default;
 $nav-tabs-border-width: $card-border-width;
 $tab-active-heading-background: $white;
-$inactive-tab-background: $mid-grey;
-$tab-inactive-heading-colour: $gray-700;
+$inactive-tab-background: $green;
+$tab-inactive-heading-colour: $white;
 $active-tab-heading: $green;
 $tab-border: $mid-grey;
 $active-tab-heading-border: inherit;
+$link-color: $green-light;
 //$rmit-btn
 //$rmit-alternate-btn
 $numbers-background: $green;
-$carousel-chevron: $green;  
+$carousel-chevron: $green;
 $carousel-border: $mid-grey;
 $instruction-background: $gray-200;
 $instruction-text: $gray-900;
-$instruction-logo: $green; 
+$instruction-logo: $green;
 $instruction-highlight: $white;
 $rich-background: $gray-200;
 $rich-area: $gray-25;
 $accent-thickness: 0.5rem;
-$accent-color: $rmit-azure;
+$accent-color: $green;
 $accordion-header-inactive: $rich-area;
 $accordion-header-active: $green;
 $accordion-header-active-font: $white;
-$rich-heading-font: $font-family-sans-serif;
-  
+$rich-heading-font: $font2;
 $flip-card-front-colour: $white;
 $flip-card-front-text-colour: $gray-900;
 $flip-card-back-colour: $white;
@@ -57,4 +88,71 @@ $button-default-hover: $green;
 $button-default-hover-text: $white;
 $radius: 0.1rem;
 $half-radius: $radius / 2;
-$double-radius: $radius *2; 
+$double-radius: $radius *2;
+
+*,
+html,
+body {
+    // font-family: $font;
+}
+
+#calloutcards {
+    .curve {
+        display: none;
+
+    }
+
+    .card {
+        border: 0.2rem solid $green;
+        border-radius: 0;
+        margin: 1rem;
+        background-color: $green;
+        //lighten($green, 10%);
+    }
+
+    .pixel {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
+
+//carousel and tabs
+@media (min-width: 768px) {
+
+    .fa.fa-chevron-circle-left,
+    .fa.fa-chevron-circle-right {
+        position: relative;
+    }
+
+    .fa.fa-chevron-circle-left:after,
+    .fa.fa-chevron-circle-right:after {
+        background-color: $carousel-chevron;
+        height: 4rem;
+        width: 4rem;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: $white;
+        position: absolute;
+        left: 0;
+        font-size: 3rem;
+        text-align: center;
+        border-radius: 1rem;
+    }
+
+    .fa.fa-chevron-circle-left:after {
+        content: "\f053";
+        padding: 0.6rem 0.6em 0 0.7rem;
+    }
+
+    .fa.fa-chevron-circle-right:after {
+        content: "\f054";
+        padding: 0.6rem 0.1em 0 0.7rem;
+    }
+}
+@import "fssi_scorm";

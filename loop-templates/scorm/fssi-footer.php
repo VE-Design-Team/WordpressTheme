@@ -139,4 +139,4 @@ function closeFullscreen() {
 
 </html>
 
-<?php // get_template_part('footer');?>
+<?php  get_template_part('footer');?>
