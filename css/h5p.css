@@ -127,7 +127,7 @@ header#titles .module {
   display: inline-block;
   padding: 0rem .8rem;
   text-transform: uppercase;
-  color: #055918;
+  color: green;
   margin-top: .8rem;
   font-family: "Trade Gothic LT Pro Cn";
   font-weight: bold;
@@ -148,21 +148,112 @@ header#titles .brand-menubar {
   display: flex;
   float: left; }
 
-header#titles ol.breadcrumb {
+header#titles .accordion-footer {
+  color: green;
+  padding: 20px 120px; }
+
+header#titles .card, header#titles .card-header {
+  border: 0;
+  width: 240px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #111;
+  margin: 0 !important;
+  border-bottom: 0.5px solid green; }
+
+header#titles .card-body {
+  border: 0;
+  width: 240px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #111;
+  margin: 0 !important;
+  border-bottom: 0.5px solid green; }
+  header#titles .card-body ul {
+    list-style: none;
+    position: relative;
+    padding: 0; }
+    header#titles .card-body ul:before {
+      content: '';
+      margin-left: 25px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: green; }
+    header#titles .card-body ul li {
+      padding: 10px 20px;
+      margin-left: 25px;
+      color: #fff; }
+      header#titles .card-body ul li.selected span {
+        font-size: 7px;
+        left: -3px;
+        color: #fff; }
+      header#titles .card-body ul li span {
+        color: green;
+        position: absolute;
+        left: -2.5px;
+        margin-left: 25px;
+        font-size: 6px;
+        background-color: #111; }
+  header#titles .card-body .card {
+    box-shadow: none; }
+  header#titles .card-body .card-header {
+    border-radius: 0;
+    width: 240px;
+    background-color: #111;
+    border-bottom: 0.5px solid green;
+    outline: none;
+    text-align: left;
+    padding: 15px 10px;
+    font-family: "Trade Gothic LT Std";
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .2s linear;
+    margin: 0; }
+  header#titles .card-body .card-title a {
+    text-decoration: none;
+    padding: 1em 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: rem; }
+  header#titles .card-body .card-title :hover:after, header#titles .card-body .card-title :after {
+    content: "\f056";
+    color: #fff;
+    font-family: "fontawesome";
+    font-size: 14px;
+    float: left;
+    margin-right: 30px; }
+  header#titles .card-body .card .card-header:hover:after {
+    content: "\f056";
+    color: #fff; }
+  header#titles .card-body .card-header:not(.collapsed) {
+    background: green; }
+  header#titles .card-body .card-header:hover {
+    background-color: green; }
+
+/*
+  @media (min-width: 1200px) {
+  display: block;
+  }
+  */
+ol.breadcrumb {
   background-color: inherit;
   padding: 0;
   margin: 1rem 0rem 0rem 1.5rem;
   margin-left: 1.5rem;
   color: white; }
-  header#titles ol.breadcrumb a {
+  ol.breadcrumb a {
     color: #fff; }
 
-header#titles .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
   font-family: "fontAwesome";
   content: "\f0da" !important;
   color: #fff; }
 
-header#titles .fullscreen {
+.fullscreen {
   float: right;
   position: absolute;
   right: 0;
@@ -170,7 +261,7 @@ header#titles .fullscreen {
   display: inline-block;
   padding-top: 10px; }
 
-header#titles .exit-course {
+.exit-course {
   display: inline-block;
   background-size: cover;
   color: white;
@@ -185,7 +276,7 @@ header#titles .exit-course {
   margin-top: 0px;
   position: fixed; }
 
-header#titles .fullscreenbtn {
+.fullscreenbtn {
   display: inline-block;
   background-size: cover;
   color: white;
@@ -197,7 +288,7 @@ header#titles .fullscreenbtn {
   height: 1.875rem;
   width: 1.875rem; }
 
-header#titles #show_hide {
+#show_hide {
   background-size: cover;
   display: inline-block;
   color: white;
@@ -209,18 +300,13 @@ header#titles #show_hide {
   width: 1.875rem;
   text-align: center; }
 
-header#titles .show {
+.show {
   display: none; }
 
 @media only screen and (max-width: 1200px) {
-  header#titles .show {
+  .show {
     display: block !important; } }
 
-/*
-  @media (min-width: 1200px) {
-  display: block;
-  }
-  */
 #footer {
   background: #f5f6f5;
   height: 3rem;
@@ -260,6 +346,158 @@ header#titles .show {
     display: hide; }
   #accordion-move .visibility {
     display: none; }
+  #accordion-move .accordion {
+    width: 240px;
+    padding: 0; }
+    #accordion-move .accordion .card-header {
+      background-color: #111;
+      border-bottom: 1px solid green; }
+      #accordion-move .accordion .card-header .card-title {
+        color: #fff;
+        padding-left: 20px; }
+      #accordion-move .accordion .card-header:after {
+        font-family: 'FontAwesome';
+        content: "\f056";
+        float: left;
+        color: #fff; }
+      #accordion-move .accordion .card-header.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "\f055";
+        color: green; }
+    @media (min-width: 1200px) {
+      #accordion-move .accordion {
+        left: 0;
+        display: visible;
+        min-height: 100%;
+        padding-left: 0px; } }
+    @media only screen and (max-width: 757px) {
+      #accordion-move .accordion {
+        position: fixed; } }
+    #accordion-move .accordion #header-accordion {
+      height: 75px;
+      background-color: #fff;
+      background-size: 100%;
+      width: 240px;
+      border-top: 2px solid white; }
+  @media only screen and (min-width: 1200px) {
+    #accordion-move .visibility {
+      padding-left: 0px;
+      display: block; } }
+  #accordion-move .accordion_footer {
+    height: 83px;
+    width: 240px;
+    background-color: #111; }
+  #accordion-move #header-accordion {
+    height: auto;
+    background-color: green;
+    background-size: 100%;
+    width: 240px; }
+
+.image {
+  height: 250px;
+  background-image: url("../fssi/img/course_welcome_banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#banner-image {
+  padding-left: 0px;
+  position: absolute;
+  z-index: auto;
+  margin: 0 auto;
+  float: right;
+  display: inline-block;
+  width: 100%;
+  padding-right: 0px; }
+
+@media (min-width: 1200px) {
+  #banner-image {
+    padding-left: 240px; } }
+
+#green_image {
+  background-color: green;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 0;
+  margin-top: -14vh;
+  height: 8vh;
+  width: 40vh;
+  float: right;
+  right: 0; }
+
+@media only screen and (max-width: 600px) {
+  #green_image {
+    margin-top: -10vh;
+    width: 30vh; } }
+
+@media only screen and (max-width: 414px) {
+  #green_image {
+    margin-top: -7vh;
+    width: 30vh;
+    height: 6vh; }
+    #green_image h2 {
+      font-size: 2rem; }
+    #green_image .banner-tag {
+      color: #fff;
+      text-align: center;
+      margin-top: .7vh; } }
+
+.banner-tag {
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5vh; }
+
+@media only screen and (max-width: 225px) {
+  #green_image {
+    margin-top: -5vh;
+    width: 30vh;
+    height: 6vh; }
+    #green_image h2 {
+      font-size: 2rem; }
+    #green_image .banner-tag {
+      color: #fff;
+      text-align: center;
+      margin-top: .7vh; } }
+
+.icons {
+  display: inline-block;
+  float: center;
+  height: 70px;
+  width: 90px;
+  cursor: pointer;
+  font-family: "Trade Gothic LT Std";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
+  margin-right: 30px; }
+
+#assesment {
+  padding-left: 0px;
+  position: absolute;
+  z-index: 0;
+  margin: 0 auto;
+  float: right;
+  display: inline-block;
+  width: 100%;
+  padding-right: 0px; }
+
+@media (min-width: 1200px) {
+  #assesment {
+    padding-left: 240px; } }
+
+#accordion-move {
+  width: 240px;
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  background-color: #111;
+  padding: 0; }
+
+#accordion-move .show {
+  display: block; }
+
+#accordion-move .hide {
+  display: hide; }
 
 @media (min-width: 1200px) {
   #accordion-move {
@@ -272,6 +510,9 @@ header#titles .show {
   #accordion-move {
     position: fixed; } }
 
+#accordion-move .visibility {
+  display: none; }
+
 @media only screen and (min-width: 1200px) {
   #accordion-move .visibility {
     padding-left: 0px;
@@ -279,36 +520,32 @@ header#titles .show {
 
 .accordion {
   width: 240px; }
-  .accordion .card-header {
-    background-color: #111;
-    border-bottom: 1px solid #055918; }
-    .accordion .card-header .card-title {
-      color: #fff;
-      padding-left: 20px; }
-    .accordion .card-header:after {
-      font-family: 'FontAwesome';
-      content: "\f056";
-      float: left;
-      color: #fff; }
-    .accordion .card-header.collapsed:after {
-      /* symbol for "collapsed" panels */
-      content: "\f055";
-      color: #055918; }
+
+.accordion .card-header {
+  background-color: #111;
+  border-bottom: 1px solid #055918; }
+
+.accordion .card-header .card-title {
+  color: #fff;
+  padding-left: 20px; }
+
+.accordion .card-header:after {
+  font-family: 'FontAwesome';
+  content: "\f056";
+  float: left;
+  color: #fff; }
+
+.accordion .card-header.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f055";
+  color: #055918; }
 
 .accordion-footer {
   color: #055918;
   padding: 20px 120px; }
 
 .card,
-.card-header {
-  border: 0;
-  width: 240px;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #111;
-  margin: 0 !important;
-  border-bottom: 0.5px solid #055918; }
-
+.card-header,
 .card-body {
   border: 0;
   width: 240px;
@@ -317,35 +554,40 @@ header#titles .show {
   background-color: #111;
   margin: 0 !important;
   border-bottom: 0.5px solid #055918; }
-  .card-body ul {
-    list-style: none;
-    position: relative;
-    padding: 0; }
-    .card-body ul:before {
-      content: '';
-      margin-left: 25px;
-      position: absolute;
-      top: 0;
-      bottom: 0px;
-      left: 0;
-      width: 1px;
-      height: 100%;
-      background: #055918; }
-    .card-body ul li {
-      padding: 10px 20px;
-      margin-left: 25px;
-      color: #fff; }
-      .card-body ul li.selected span {
-        font-size: 7px;
-        left: -3px;
-        color: #fff; }
-      .card-body ul li span {
-        color: #055918;
-        position: absolute;
-        left: -2.5px;
-        margin-left: 25px;
-        font-size: 6px;
-        background-color: #111; }
+
+.card-body ul {
+  list-style: none;
+  position: relative;
+  padding: 0; }
+
+.card-body ul:before {
+  content: '';
+  margin-left: 25px;
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #055918; }
+
+.card-body ul li {
+  padding: 10px 20px;
+  margin-left: 25px;
+  color: #fff; }
+
+.card-body ul li.selected span {
+  font-size: 7px;
+  left: -3px;
+  color: #fff; }
+
+.card-body ul li span {
+  color: #055918;
+  position: absolute;
+  left: -2.5px;
+  margin-left: 25px;
+  font-size: 6px;
+  background-color: #111; }
 
 .card {
   box-shadow: none; }
@@ -404,7 +646,7 @@ header#titles .show {
 
 .image {
   height: 250px;
-  background-image: url("../fssi/img/course_welcome_banner.png");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/course%20welcome%20banner%20(1).png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -444,12 +686,12 @@ header#titles .show {
     margin-top: -7vh;
     width: 30vh;
     height: 6vh; }
-    #green_image h2 {
-      font-size: 2rem; }
-    #green_image .banner-tag {
-      color: #fff;
-      text-align: center;
-      margin-top: .7vh; } }
+  #green_image h2 {
+    font-size: 2rem; }
+  #green_image .banner-tag {
+    color: #fff;
+    text-align: center;
+    margin-top: .7vh; } }
 
 .banner-tag {
   color: #fff;
@@ -461,12 +703,12 @@ header#titles .show {
     margin-top: -5vh;
     width: 30vh;
     height: 6vh; }
-    #green_image h2 {
-      font-size: 2rem; }
-    #green_image .banner-tag {
-      color: #fff;
-      text-align: center;
-      margin-top: .7vh; } }
+  #green_image h2 {
+    font-size: 2rem; }
+  #green_image .banner-tag {
+    color: #fff;
+    text-align: center;
+    margin-top: .7vh; } }
 
 #header-accordion {
   height: auto;

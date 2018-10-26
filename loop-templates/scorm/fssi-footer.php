@@ -133,10 +133,7 @@ function closeFullscreen() {
   </script>
 
 
+</div><!--div id#fssi -->
 
-
-</body>
-
-</html>
 
 <?php  get_template_part('footer');?>
