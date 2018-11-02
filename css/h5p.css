@@ -58,689 +58,127 @@ a {
     content: "\f054";
     padding: 0.6rem 0.1em 0 0.7rem; } }
 
-body {
-  font-family: "Trade Gothic LT Std";
-  font-weight: 300;
-  font-style: normal; }
-
-.thin {
-  font-family: "Trade Gothic LT Std";
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9rem; }
-
-@media (max-width: 820px) {
-  .thin {
-    font-size: .8rem; } }
-
-.nav-list {
-  font-family: "Trade Gothic LT Std";
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.8rem; }
-
-@media (max-width: 820px) {
-  .nav-list {
-    font-size: .6rem; } }
-
-.thick,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Trade Gothic LT Pro Cn";
-  font-weight: bold;
-  font-style: normal; }
-
-p {
-  font-family: "Arial";
-  font-weight: regular;
-  font-style: normal;
-  font-size: 1rem; }
-
-.header {
-  height: 4rem; }
-
-header#titles .headingbar {
-  background: #fff;
-  height: 3.8rem;
-  width: 100%;
-  display: none; }
-
-header#titles .header-image {
-  background: url("../fssi/img/nav_header_bg.png") no-repeat;
-  background-size: 100%;
-  height: 3.6rem; }
-
-header#titles .brand {
-  width: 10rem;
-  height: 3.8rem;
-  background: #fff;
-  display: inline-block; }
-
-header#titles .module {
-  height: 2rem;
-  background: white;
-  float: right;
-  display: inline-block;
-  padding: 0rem .8rem;
-  text-transform: uppercase;
-  color: green;
-  margin-top: .8rem;
-  font-family: "Trade Gothic LT Pro Cn";
-  font-weight: bold;
-  font-style: normal;
-  font-size: 1.4rem;
-  margin-right: .8rem; }
-
-header#titles .menubar {
-  height: 3rem;
-  background-image: url("../fssi/img/canvas_banner.png");
-  color: white;
-  display: flex; }
-
-header#titles .brand-menubar {
-  height: 3rem;
-  background: white;
-  width: 8rem;
-  display: flex;
-  float: left; }
-
-header#titles .accordion-footer {
-  color: green;
-  padding: 20px 120px; }
-
-header#titles .card, header#titles .card-header {
-  border: 0;
-  width: 240px;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #111;
-  margin: 0 !important;
-  border-bottom: 0.5px solid green; }
-
-header#titles .card-body {
-  border: 0;
-  width: 240px;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #111;
-  margin: 0 !important;
-  border-bottom: 0.5px solid green; }
-  header#titles .card-body ul {
-    list-style: none;
-    position: relative;
-    padding: 0; }
-    header#titles .card-body ul:before {
-      content: '';
-      margin-left: 25px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 1px;
-      height: 100%;
-      background: green; }
-    header#titles .card-body ul li {
-      padding: 10px 20px;
-      margin-left: 25px;
-      color: #fff; }
-      header#titles .card-body ul li.selected span {
-        font-size: 7px;
-        left: -3px;
-        color: #fff; }
-      header#titles .card-body ul li span {
-        color: green;
-        position: absolute;
-        left: -2.5px;
-        margin-left: 25px;
-        font-size: 6px;
-        background-color: #111; }
-  header#titles .card-body .card {
-    box-shadow: none; }
-  header#titles .card-body .card-header {
-    border-radius: 0;
-    width: 240px;
-    background-color: #111;
-    border-bottom: 0.5px solid green;
-    outline: none;
-    text-align: left;
-    padding: 15px 10px;
-    font-family: "Trade Gothic LT Std";
-    color: #fff;
-    cursor: pointer;
-    transition: background-color .2s linear;
-    margin: 0; }
-  header#titles .card-body .card-title a {
-    text-decoration: none;
-    padding: 1em 0;
-    font-weight: 300;
-    font-style: normal;
-    font-size: rem; }
-  header#titles .card-body .card-title :hover:after, header#titles .card-body .card-title :after {
-    content: "\f056";
-    color: #fff;
-    font-family: "fontawesome";
-    font-size: 14px;
-    float: left;
-    margin-right: 30px; }
-  header#titles .card-body .card .card-header:hover:after {
-    content: "\f056";
-    color: #fff; }
-  header#titles .card-body .card-header:not(.collapsed) {
-    background: green; }
-  header#titles .card-body .card-header:hover {
-    background-color: green; }
-
-/*
-  @media (min-width: 1200px) {
-  display: block;
-  }
-  */
-ol.breadcrumb {
-  background-color: inherit;
-  padding: 0;
-  margin: 1rem 0rem 0rem 1.5rem;
-  margin-left: 1.5rem;
-  color: white; }
-  ol.breadcrumb a {
-    color: #fff; }
-
-.breadcrumb-item + .breadcrumb-item::before {
-  font-family: "fontAwesome";
-  content: "\f0da" !important;
-  color: #fff; }
-
-.fullscreen {
-  float: right;
-  position: absolute;
-  right: 0;
-  width: 100px;
-  display: inline-block;
-  padding-top: 10px; }
-
-.exit-course {
-  display: inline-block;
-  background-size: cover;
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  height: 2.875rem;
-  width: 3.875rem;
-  float: right;
-  right: 0;
-  margin-top: 0px;
-  position: fixed; }
-
-.fullscreenbtn {
-  display: inline-block;
-  background-size: cover;
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  border-radius: 2px;
-  height: 1.875rem;
-  width: 1.875rem; }
-
-#show_hide {
-  background-size: cover;
-  display: inline-block;
-  color: white;
-  border-radius: 2px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  height: 1.875rem;
-  width: 1.875rem;
-  text-align: center; }
-
-.show {
-  display: none; }
-
-@media only screen and (max-width: 1200px) {
-  .show {
-    display: block !important; } }
-
-#footer {
-  background: #f5f6f5;
-  height: 3rem;
-  position: fixed;
-  bottom: 0;
-  flex-shrink: 0;
-  z-index: 2000; }
-  #footer .copyright {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.688rem;
-    font-family: Verdana, "Segoe UI", sans-serif, "Open Sans"; }
-  #footer .vcoss-rmit {
-    position: absolute;
-    right: 0;
-    height: 100%; }
-    #footer .vcoss-rmit .rmit {
-      background-image: url("../fssi/img/vcoss_rmit.png");
-      display: inline-block;
-      padding-top: 0px;
-      height: 3.125rem;
-      width: 8.5rem;
-      float: right;
-      right: 0;
-      background-color: white; }
-
-#accordion-move {
-  width: 240px;
-  z-index: 1000;
-  position: absolute;
-  right: 0;
-  background-color: #111;
-  padding: 0; }
-  #accordion-move .show {
-    display: block; }
-  #accordion-move .hide {
-    display: hide; }
-  #accordion-move .visibility {
-    display: none; }
-  #accordion-move .accordion {
-    width: 240px;
-    padding: 0; }
-    #accordion-move .accordion .card-header {
-      background-color: #111;
-      border-bottom: 1px solid green; }
-      #accordion-move .accordion .card-header .card-title {
-        color: #fff;
-        padding-left: 20px; }
-      #accordion-move .accordion .card-header:after {
-        font-family: 'FontAwesome';
-        content: "\f056";
-        float: left;
-        color: #fff; }
-      #accordion-move .accordion .card-header.collapsed:after {
-        /* symbol for "collapsed" panels */
-        content: "\f055";
-        color: green; }
-    @media (min-width: 1200px) {
-      #accordion-move .accordion {
-        left: 0;
-        display: visible;
-        min-height: 100%;
-        padding-left: 0px; } }
-    @media only screen and (max-width: 757px) {
-      #accordion-move .accordion {
-        position: fixed; } }
-    #accordion-move .accordion #header-accordion {
-      height: 75px;
-      background-color: #fff;
-      background-size: 100%;
-      width: 240px;
-      border-top: 2px solid white; }
-  @media only screen and (min-width: 1200px) {
-    #accordion-move .visibility {
-      padding-left: 0px;
-      display: block; } }
-  #accordion-move .accordion_footer {
-    height: 83px;
-    width: 240px;
-    background-color: #111; }
-  #accordion-move #header-accordion {
-    height: auto;
-    background-color: green;
-    background-size: 100%;
-    width: 240px; }
-
-.image {
-  height: 250px;
-  background-image: url("../fssi/img/course_welcome_banner.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#banner-image {
-  padding-left: 0px;
-  position: absolute;
-  z-index: auto;
-  margin: 0 auto;
-  float: right;
-  display: inline-block;
-  width: 100%;
-  padding-right: 0px; }
-
-@media (min-width: 1200px) {
-  #banner-image {
-    padding-left: 240px; } }
-
-#green_image {
-  background-color: green;
-  opacity: 0.8;
-  position: absolute;
-  z-index: 0;
-  margin-top: -14vh;
-  height: 8vh;
-  width: 40vh;
-  float: right;
-  right: 0; }
-
-@media only screen and (max-width: 600px) {
-  #green_image {
-    margin-top: -10vh;
-    width: 30vh; } }
-
-@media only screen and (max-width: 414px) {
-  #green_image {
-    margin-top: -7vh;
-    width: 30vh;
-    height: 6vh; }
-    #green_image h2 {
-      font-size: 2rem; }
-    #green_image .banner-tag {
-      color: #fff;
-      text-align: center;
-      margin-top: .7vh; } }
-
-.banner-tag {
-  color: #fff;
-  text-align: center;
-  margin-top: 1.5vh; }
-
-@media only screen and (max-width: 225px) {
-  #green_image {
-    margin-top: -5vh;
-    width: 30vh;
-    height: 6vh; }
-    #green_image h2 {
-      font-size: 2rem; }
-    #green_image .banner-tag {
-      color: #fff;
-      text-align: center;
-      margin-top: .7vh; } }
-
-.icons {
-  display: inline-block;
-  float: center;
-  height: 70px;
-  width: 90px;
-  cursor: pointer;
-  font-family: "Trade Gothic LT Std";
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9rem;
-  margin-right: 30px; }
-
-#assesment {
-  padding-left: 0px;
-  position: absolute;
-  z-index: 0;
-  margin: 0 auto;
-  float: right;
-  display: inline-block;
-  width: 100%;
-  padding-right: 0px; }
-
-@media (min-width: 1200px) {
-  #assesment {
-    padding-left: 240px; } }
-
-#accordion-move {
-  width: 240px;
-  z-index: 1000;
-  position: absolute;
-  right: 0;
-  background-color: #111;
-  padding: 0; }
-
-#accordion-move .show {
-  display: block; }
-
-#accordion-move .hide {
-  display: hide; }
-
-@media (min-width: 1200px) {
-  #accordion-move {
-    left: 0;
-    display: visible;
-    min-height: 100%;
-    padding-left: 0px; } }
-
-@media only screen and (max-width: 757px) {
-  #accordion-move {
-    position: fixed; } }
-
-#accordion-move .visibility {
-  display: none; }
-
-@media only screen and (min-width: 1200px) {
-  #accordion-move .visibility {
-    padding-left: 0px;
-    display: block; } }
-
-.accordion {
-  width: 240px; }
-
-.accordion .card-header {
-  background-color: #111;
-  border-bottom: 1px solid #055918; }
-
-.accordion .card-header .card-title {
-  color: #fff;
-  padding-left: 20px; }
-
-.accordion .card-header:after {
-  font-family: 'FontAwesome';
-  content: "\f056";
-  float: left;
-  color: #fff; }
-
-.accordion .card-header.collapsed:after {
-  /* symbol for "collapsed" panels */
-  content: "\f055";
-  color: #055918; }
-
-.accordion-footer {
-  color: #055918;
-  padding: 20px 120px; }
-
-.card,
-.card-header,
-.card-body {
-  border: 0;
-  width: 240px;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #111;
-  margin: 0 !important;
-  border-bottom: 0.5px solid #055918; }
-
-.card-body ul {
-  list-style: none;
-  position: relative;
-  padding: 0; }
-
-.card-body ul:before {
-  content: '';
-  margin-left: 25px;
-  position: absolute;
-  top: 0;
-  bottom: 0px;
-  left: 0;
-  width: 1px;
+#fssi {
   height: 100%;
-  background: #055918; }
-
-.card-body ul li {
-  padding: 10px 20px;
-  margin-left: 25px;
-  color: #fff; }
-
-.card-body ul li.selected span {
-  font-size: 7px;
-  left: -3px;
-  color: #fff; }
-
-.card-body ul li span {
-  color: #055918;
-  position: absolute;
-  left: -2.5px;
-  margin-left: 25px;
-  font-size: 6px;
-  background-color: #111; }
-
-.card {
-  box-shadow: none; }
-
-.card-header {
-  border-radius: 0;
-  width: 240px;
-  background-color: #111;
-  border-bottom: 0.5px solid #055918;
-  outline: none;
-  text-align: left;
-  padding: 15px 10px;
-  font-family: "Trade Gothic LT Std";
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s linear;
-  margin: 0px; }
-
-.card-title a {
-  text-decoration: none;
-  padding: 1em 0;
-  font-weight: 300;
-  font-style: normal;
-  font-size: rem; }
-
-.card-title :hover:after,
-.card-title :after {
-  content: "\f056";
-  color: #fff;
-  font-family: "fontawesome";
-  font-size: 14px;
-  float: left;
-  margin-right: 30px; }
-
-.card .card-header:hover:after {
-  content: "\f056";
-  color: #fff; }
-
-.card-header:not(.collapsed) {
-  background: #055918; }
-
-.card-header:hover {
-  background-color: #055918; }
-
-.accordion_footer {
-  height: 83px;
-  width: 240px;
-  background-color: #111; }
-
-#header-accordion {
-  height: 75px;
-  background-color: #fff;
-  background-size: 100%;
-  width: 240px;
-  border-top: 2px solid white; }
-
-.image {
-  height: 250px;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/course%20welcome%20banner%20(1).png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#banner-image {
-  padding-left: 0px;
-  position: absolute;
-  z-index: auto;
-  margin: 0 auto;
-  float: right;
-  display: inline-block;
-  width: 100%;
-  padding-right: 0px; }
-
-@media (min-width: 1200px) {
-  #banner-image {
-    padding-left: 240px; } }
-
-#green_image {
-  background-color: #055918;
-  opacity: 0.8;
-  position: absolute;
-  z-index: 0;
-  margin-top: -14vh;
-  height: 8vh;
-  width: 40vh;
-  float: right;
-  right: 0; }
-
-@media only screen and (max-width: 600px) {
-  #green_image {
-    margin-top: -10vh;
-    width: 30vh; } }
-
-@media only screen and (max-width: 414px) {
-  #green_image {
-    margin-top: -7vh;
-    width: 30vh;
-    height: 6vh; }
-  #green_image h2 {
-    font-size: 2rem; }
-  #green_image .banner-tag {
+  background: #fff; }
+  #fssi .thin-text {
+    font-family: "Trade Gothic LT Std";
+    font-weight: 500; }
+  #fssi #nav {
+    background: green;
+    width: 20rem;
+    z-index: 1000;
+    position: absolute;
+    top: 7rem;
+    right: 0; }
+    @media (min-width: 1200px) {
+      #fssi #nav {
+        left: 0; } }
+    @media (min-width: 1200px) {
+      #fssi #nav .visibility {
+        padding-left: 0px; } }
+  #fssi #banner {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/nav-header%20%20BG.png");
+    height: 4rem; }
+    #fssi #banner a {
+      margin-left: -15px;
+      background-color: #fff;
+      height: 4rem;
+      width: 10.8068rem;
+      float: left; }
+      #fssi #banner a .fssi-logo {
+        background-color: #fff;
+        background: url("../fssi/img/fssi_logo.png");
+        height: 4rem;
+        background-size: contain;
+        background-repeat: no-repeat; }
+    #fssi #banner .module-title {
+      background: #fff;
+      height: 2.4rem;
+      padding: 0.24rem;
+      float: right;
+      margin: 0.8rem;
+      display: inline-block; }
+      #fssi #banner .module-title h1 {
+        color: #055918;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0; }
+  #fssi #breadcrumbs {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/1096%20canvas%20banner-8.png");
     color: #fff;
-    text-align: center;
-    margin-top: .7vh; } }
+    height: 3rem;
+    border-top: 0.15rem #fff solid;
+    border-bottom: 0.15rem #fff solid; }
+    #fssi #breadcrumbs ul {
+      list-style: none;
+      margin: 0.45rem;
+      padding: 0;
+      float: left; }
+      #fssi #breadcrumbs ul li {
+        color: #fff;
+        display: inline;
+        font-size: 0.9rem;
+        padding-left: 0.5rem; }
+      #fssi #breadcrumbs ul li:before {
+        font-family: "fontAwesome";
+        content: "\f0da" !important;
+        color: #fff;
+        padding: 0 0.5rem 0 0; }
+    #fssi #breadcrumbs button#navtoggle {
+      float: right; }
+      @media (min-width: 1200px) {
+        #fssi #breadcrumbs button#navtoggle {
+          display: none; } }
+    #fssi #breadcrumbs button#fullscreen {
+      float: right; }
+    #fssi #breadcrumbs .btn-fs, #fssi #breadcrumbs .btn-menu {
+      height: 2.1rem;
+      width: 2.1rem;
+      margin: 0.3rem;
+      padding: 0;
+      float: right;
+      position: relative;
+      background-size: cover;
+      background-color: #055918; }
+    #fssi #breadcrumbs .btn-fs {
+      background: url("../fssi/img/full_screen_icon.svg"); }
+    #fssi #breadcrumbs .btn-menu {
+      background: url("../fssi/img/hamburger.svg"); }
+  #fssi #content {
+    width: 100%;
+    padding: 10px 15px 0 15px;
+    font-family: Verdana, "Segoe UI", sans-serif, "Open Sans"; }
+    @media (min-width: 1200px) {
+      #fssi #content {
+        margin-left: 20rem; } }
+    #fssi #content p {
+      font-size: 0.9rem; }
+  #fssi #footer {
+    height: 3rem;
+    background-color: #f5f6f5;
+    position: absolute;
+    bottom: 0; }
+    #fssi #footer p {
+      text-align: center;
+      font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
+      font-size: 0.75rem;
+      margin: 1rem;
+      padding: 0; }
+    #fssi #footer .partner-logos {
+      background: url("../fssi/img/vcoss_rmit.png");
+      height: 3rem;
+      background-size: contain;
+      width: 10rem;
+      float: right;
+      background-repeat: no-repeat; }
 
-.banner-tag {
-  color: #fff;
-  text-align: center;
-  margin-top: 1.5vh; }
-
-@media only screen and (max-width: 225px) {
-  #green_image {
-    margin-top: -5vh;
-    width: 30vh;
-    height: 6vh; }
-  #green_image h2 {
-    font-size: 2rem; }
-  #green_image .banner-tag {
-    color: #fff;
-    text-align: center;
-    margin-top: .7vh; } }
-
-#header-accordion {
-  height: auto;
-  background-color: #055918;
-  background-size: 100%;
-  width: 240px; }
-
-.icons {
-  display: inline-block;
-  float: center;
-  height: 70px;
-  width: 90px;
-  cursor: pointer;
-  font-family: "Trade Gothic LT Std";
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9rem;
-  margin-right: 30px; }
-
-#assesment {
-  padding-left: 0px;
-  position: absolute;
-  z-index: 0;
-  margin: 0 auto;
-  float: right;
-  display: inline-block;
-  width: 100%;
-  padding-right: 0px; }
-
-@media (min-width: 1200px) {
-  #assesment {
-    padding-left: 240px; } }
+.navshow {
+  display: none; }
+  @media (min-width: 1200px) {
+    .navshow {
+      display: block; } }
 
 /* styles */
 .h5p-container {

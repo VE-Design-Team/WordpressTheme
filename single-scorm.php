@@ -1,16 +1,23 @@
 <?php get_template_part( 'loop-templates/scorm/fssi', 'header' ); ?>
-<?php get_template_part( 'loop-templates/scorm/scorm', 'nav' ); ?>
-      <!--     content ----------------------------------------------------------------------->
-      <div class="col-12 pt-4" >
+<div class="container-fluid page-width">
+  <div class="row">
+    <div id="accordion-move" >
+      <?php get_template_part( 'loop-templates/scorm/scorm', 'nav' ); ?>
+    </div>
+    <!--     content ----------------------------------------------------------------------->
+    <div id="content" >
+      <div class="row">
         <div class="container-fluid">
-        <?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'loop-templates/scorm/scorm', 'content' ); ?>
-<?php endwhile; // end of the loop. ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+          <?php get_template_part( 'loop-templates/scorm/scorm', 'content' ); ?>
+          <?php endwhile; // end of the loop. ?>
           <!--   col-10 -->
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!------------------------------------------ content ----------------------------------->
-  <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
+
+<!------------------------------------------ content ----------------------------------->
+<?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>

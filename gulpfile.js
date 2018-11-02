@@ -124,7 +124,7 @@ gulp.task('sass', function () {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
-    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch('./sass/**/*.*', ['styles']);
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
 
     //Inside the watch task.
@@ -191,7 +191,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts', 'h5p-scss' ], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts', 'styles', 'h5p-scss' ], function () { });
 
 // Run: 
 // gulp scripts. 
