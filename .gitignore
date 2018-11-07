@@ -23,3 +23,11 @@ sass/theme/course_selector\.scss
 \.DS_Store
 
 *.code-workspace
+
+css/theme\.min\.css\.map
+
+css/theme\.min\.css
+
+css/theme\.css
+
+css/h5p\.css
