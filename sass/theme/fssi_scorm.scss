@@ -11,9 +11,16 @@ $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
+ html
+{
+ overflow: hidden;
+ 
+}
+
 #fssi {
   //height: 100%;
   background: $white;
+  min-height: 600px;
 
   .thin-text {
     font-family: "Trade Gothic LT Std";
@@ -316,7 +323,7 @@ $footer-height: 3rem;
           }
 
           li.menu-item-has-children {
-            border-top: $green solid 0.1rem;
+            //border-top: $green solid 0.1rem;
 
             ul {
               li.menu-item-has-children {
@@ -486,6 +493,7 @@ $footer-height: 3rem;
     position: absolute;
     background-color: #f5f6f5;
     bottom: 0;
+    z-index: 2000;
 
   p {
     text-align: center;

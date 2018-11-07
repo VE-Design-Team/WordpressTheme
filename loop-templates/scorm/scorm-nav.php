@@ -1,5 +1,5 @@
 <div id="nav">
-  <div class="visibility p-0">
+  <div id="reveal" class="visibility p-0">
   <div class="nav-header"></div>
     <?php 
 //get menu assigned to this page
@@ -41,6 +41,8 @@ wp_nav_menu(array(
 
     });
   })(jQuery);
+//ensure nav loads closed
+$('#reveal').addClass('navshow').removeClass('test2');
 //ensure the nav is always open for the current page  
 $("li.menu-item" ).children('ul').css({ display: "none" });
 $('li.active').closest('ul').addClass('open').css({ display: "block" })
