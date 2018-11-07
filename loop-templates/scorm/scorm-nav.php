@@ -1,6 +1,6 @@
 <div id="nav">
   <div class="visibility p-0">
-  <div class="nav-header">a</div>
+  <div class="nav-header"></div>
     <?php 
 //get menu assigned to this page
  $menu = get_field('field_5bc317e313d41');
@@ -11,7 +11,7 @@ wp_nav_menu(array(
 'walker' => new CSS_Menu_Maker_Walker()
 ));
 ?>
-      <div class="nav-footer">s</div>
+      <div class="nav-footer"></div>
 
   </div>
 
@@ -42,5 +42,6 @@ wp_nav_menu(array(
     });
   })(jQuery);
 //ensure the nav is always open for the current page  
-$('li.active').parents('ul').addClass('open').css({ display: "block" })
+$("li.menu-item" ).children('ul').css({ display: "none" });
+$('li.active').closest('ul').addClass('open').css({ display: "block" })
 </script>

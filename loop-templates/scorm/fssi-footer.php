@@ -18,30 +18,35 @@
   });
   //fullscreen
   //invokes browser's fullscreen mode
-  function toggleFullScreen(elem) {
-    if (!document.mozFullScreen && !document.webkitFullScreen) {
-      if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
-      } else {
-        elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-      }
-    } else {
-      if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else {
-        document.webkitCancelFullScreen();
-      }
-    }
-  }
+  function fullscreen() {
+    var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+        (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+        (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+        (document.msFullscreenElement && document.msFullscreenElement !== null);
 
-  //Transition to fullscreen on button click
-  $("#fullscreen")[0].addEventListener(
-    "click",
-    function () {
-      toggleFullScreen($("#fssi")[0]);
-    },
-    false
-  );
+    var docElm = document.documentElement;
+    if (!isInFullScreen) {
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
 </script>
 
 <?php  get_template_part('footer');?>

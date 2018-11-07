@@ -208,7 +208,7 @@ $footer-height: 3rem;
                     content: "\f111";
                     color: $green;
                     position: relative;
-                    left: -1.7rem;
+                    left: -1.6rem;
                     background-color: $black;
                     font-size: 0.5rem;
                     top: -.25rem;
@@ -450,6 +450,7 @@ $footer-height: 3rem;
       background-size: cover;
       //background-color: red;
       border: none;
+      z-index: 400;
     }
 
     .btn-fs {
@@ -480,15 +481,18 @@ $footer-height: 3rem;
 
 }
 #footer {
-  height: $footer-height;
-  background-color: $footer;
+   background-color: $footer;
+
+    position: absolute;
+    background-color: #f5f6f5;
+    bottom: 0;
 
   p {
     text-align: center;
     font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
     font-size: ($footer-height / 4.5);
     margin: ($footer-height /3);
-    padding-top: ($footer-height /3);
+    //padding-top: ($footer-height);
 
   }
 

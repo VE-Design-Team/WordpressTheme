@@ -83,7 +83,7 @@
                 "fssi": "FSSI",
                 "cde": "CDE"
             },
-            "default_value": [],
+            "default_value": "Iframe",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,

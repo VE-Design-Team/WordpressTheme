@@ -9,9 +9,21 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<!-- ensure iframe links are opened in a new tab in the parent -->
-	
-	<base target="_blank">
+	<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+	<?php
+
+$variable = get_field('field_5b8cd3c52f308', 'option');
+
+
+if ($variable  == "Iframe") {
+	//open all new links outside the iframe
+	echo '<base target="_blank">';
+}
+else{
+	//do nothing
+}
+?>
+
 	   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
 	<?php wp_head(); ?>
 <!--
