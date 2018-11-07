@@ -49,6 +49,8 @@
 <?php get_template_part('loop-templates/acf/3d_viewer');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Virtual Workplace'): ?>
 <?php get_template_part('loop-templates/acf/virtual-workplace');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Branching scenario'): ?>
+<?php get_template_part('loop-templates/acf/branching_scenario');?>
 <?php elseif(!empty(get_the_content())): { ?>
 
 <?php if( get_post_type() == 'scorm' ) {
