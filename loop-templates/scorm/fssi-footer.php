@@ -1,14 +1,16 @@
+
+</div><!-- row-->
+
+
+</div><!-- #fssi -->
+<div style="clear:both;"></div>
 <div id="footer" class="col-12 p-0 m-0">
   <div class="partner-logos"></div>
   <p clas="text-middle">Copyright <i class="fa fa-copyright"></i> 2018 Future Social Service Institute. All rights
     reserved.</p>
 
 
-</div>
-</div><!-- row-->
-
-</div><!-- #fssi -->
-
+</div><!--footer -->
 <script>
   //nave menu
   $("button#navtoggle").click(function () {
