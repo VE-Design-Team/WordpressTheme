@@ -34,6 +34,48 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "key": "field_5bdf9ea04ef39",
+            "label": "Next page",
+            "name": "next_page",
+            "type": "page_link",
+            "instructions": "Select the next page for the student to go to after this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "scorm"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5bdf9ede4ef3a",
+            "label": "Previous page",
+            "name": "previous_page",
+            "type": "page_link",
+            "instructions": "Select the next page for the student to go to after this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "scorm"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
@@ -53,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539513001
+    "modified": 1541381900
 }

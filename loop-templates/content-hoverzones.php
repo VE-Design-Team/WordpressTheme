@@ -28,21 +28,21 @@
 <?php
 
 // check if the repeater field has rows of data
-if( have_rows('field_5a3987d635060') ):
+if (have_rows('field_5a3987d635060')):
 
-  // loop through the rows of data
-    while ( have_rows('field_5a3987d635060') ) : the_row(); ?>
+    // loop through the rows of data
+    while (have_rows('field_5a3987d635060')): the_row();?>
 
-.<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>
-{
-  border-color:  <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
-  background-color: <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
-  color: <?php echo the_sub_field('field_5a3ae175998ac'); ?>;
-}
+		.<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>
+		{
+		  border-color:  <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
+		  background-color: <?php echo the_sub_field('field_5a3ad5223b377'); ?>;
+		  color: <?php echo the_sub_field('field_5a3ae175998ac'); ?>;
+		}
 
-   <?php endwhile;
+		   <?php endwhile;
 
-else :
+else:
 
     // no rows found
 
@@ -54,7 +54,7 @@ endif;
     <?php
 wp_link_pages(array(
     'before' => '<div class="page-links">' . __('Pages:', 'understrap'),
-    'after'  => '</div>',
+    'after' => '</div>',
 ));
 ?>
 <div class="container p-1">
@@ -65,10 +65,10 @@ wp_link_pages(array(
 if (have_rows('field_5a3987d635060')): ?>
    <div class="btn-group">
    <?php while (have_rows('field_5a3987d635060')): the_row();?>
-       <button type="button" data-toggle="collapse" data-target="#<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" aria-expanded="false" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="btn btn-primary btn-sm">
-          <?php echo the_sub_field('field_5a39880135061'); ?>
-        </button>
-   <?php endwhile;?>
+	       <button type="button" data-toggle="collapse" data-target="#<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" aria-expanded="false" aria-controls="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="btn btn-primary btn-sm">
+	          <?php echo the_sub_field('field_5a39880135061'); ?>
+	        </button>
+	   <?php endwhile;?>
 </div>
 <?php else:
     // no rows found
@@ -88,14 +88,14 @@ style="background-image: url(<?php the_field('field_5a398755da5b1');?>);"
 // check if the repeater field has rows of data
 if (have_rows('field_5a3987d635060')): ?>
    <?php while (have_rows('field_5a3987d635060')): the_row();?>
-     <div id="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="collapse">
-       <div class="card card-block mt-1 <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
-        <div class="card-body  <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
-         <span class="small"><?php echo the_sub_field('field_5a3ac8c7f9f2d'); ?></span>
-        </div>
-      </div>
-    </div>
-   <?php endwhile;?>
+	     <div id="<?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>" class="collapse">
+	       <div class="card card-block mt-1 <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
+	        <div class="card-body  <?php echo str_replace(' ', '', get_sub_field('field_5a39880135061')); ?>">
+	         <span class="small"><?php echo the_sub_field('field_5a3ac8c7f9f2d'); ?></span>
+	        </div>
+	      </div>
+	    </div>
+	   <?php endwhile;?>
 <?php else:
     // no rows found
 endif;

@@ -85,18 +85,169 @@ a {
     font-family: "Trade Gothic LT Std";
     font-weight: 500; }
   #fssi #nav {
-    background: green;
+    font-family: "Trade Gothic LT Std";
+    font-weight: 500;
+    background: #111;
     width: 20rem;
     z-index: 1000;
     position: absolute;
     top: 7rem;
     right: 0; }
+    #fssi #nav a {
+      color: white;
+      font-weight: inherit; }
+      #fssi #nav a ul {
+        list-style: none;
+        background: #111;
+        padding: 0 0 0 0; }
+        #fssi #nav a ul li {
+          background: red;
+          padding: 1rem;
+          padding: 0 0 0 0; }
+          #fssi #nav a ul li ul {
+            background: yellow; }
+            #fssi #nav a ul li ul li {
+              background: green; }
     @media (min-width: 1200px) {
       #fssi #nav {
         left: 0; } }
+    #fssi #nav .visibility #cssmenu {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      list-style: none;
+      line-height: 1;
+      display: block;
+      position: relative;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: black;
+      border-bottom: 0.1rem solid #055918; }
+      #fssi #nav .visibility #cssmenu ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        list-style: none;
+        line-height: 1;
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        #fssi #nav .visibility #cssmenu ul li {
+          margin: 0;
+          border: 0;
+          list-style: none;
+          line-height: 1;
+          display: block;
+          position: relative;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          #fssi #nav .visibility #cssmenu ul li a {
+            margin: 0;
+            border: 0;
+            list-style: none;
+            line-height: 1;
+            display: block;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 1rem 1rem;
+            cursor: pointer;
+            z-index: 2;
+            border-bottom: 0.1rem solid #055918;
+            text-decoration: none;
+            color: #ffffff; }
+          #fssi #nav .visibility #cssmenu ul li a:before {
+            font-family: FontAwesome;
+            content: "\f055";
+            margin-right: 0.4rem;
+            font-size: 0.8rem; }
+          #fssi #nav .visibility #cssmenu ul li a:hover:before {
+            font-family: FontAwesome;
+            margin-right: 0.4rem;
+            font-size: 0.8rem;
+            color: white; }
+          #fssi #nav .visibility #cssmenu ul li li ul a:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1.5rem;
+            top: 1.5rem;
+            left: 1rem;
+            padding-left: 1.5rem; }
+          #fssi #nav .visibility #cssmenu ul li li ul span {
+            margin-left: 1rem; }
+          #fssi #nav .visibility #cssmenu ul li ul {
+            border-left: 0.1rem solid #055918; }
+            #fssi #nav .visibility #cssmenu ul li ul li {
+              margin-left: 0; }
+              #fssi #nav .visibility #cssmenu ul li ul li a {
+                padding: 1rem 0 1rem 1rem;
+                border-bottom: 0;
+                border-left: 0.1rem solid #055918;
+                margin-left: 2rem;
+                width: inherit; }
+                #fssi #nav .visibility #cssmenu ul li ul li a span {
+                  position: relative;
+                  padding: 0 0 0 -1rem; }
+                #fssi #nav .visibility #cssmenu ul li ul li a span:before {
+                  font-family: FontAwesome;
+                  content: "\f111";
+                  color: #055918;
+                  position: relative;
+                  left: -1.7rem;
+                  background-color: #111;
+                  font-size: 0.5rem;
+                  top: -.25rem; }
+              #fssi #nav .visibility #cssmenu ul li ul li a:before {
+                font-family: FontAwesome;
+                content: "";
+                margin-right: 0.4rem;
+                font-size: 0.8rem; }
+              #fssi #nav .visibility #cssmenu ul li ul li li.menu-item-has-children ul li a:before {
+                content: "b"; }
+            #fssi #nav .visibility #cssmenu ul li ul li:hover {
+              background: #055918; }
+            #fssi #nav .visibility #cssmenu ul li ul li.menu-item-has-children a:before {
+              font-family: FontAwesome;
+              color: #055918;
+              position: relative;
+              left: -1.85rem;
+              font-size: .75rem; }
+            #fssi #nav .visibility #cssmenu ul li ul li.menu-item-has-children ul {
+              border-left: none;
+              border-bottom: none; }
+              #fssi #nav .visibility #cssmenu ul li ul li.menu-item-has-children ul a span:before {
+                content: "";
+                margin-left: .75rem; }
+              #fssi #nav .visibility #cssmenu ul li ul li.menu-item-has-children ul a:before {
+                content: "";
+                border-bottom: 0.15rem solid #055918;
+                position: absolute;
+                bottom: 1.5rem;
+                width: 2rem;
+                left: -0rem; }
+        #fssi #nav .visibility #cssmenu ul li.menu-item-has-children {
+          border-top: #055918 solid 0.1rem; }
+          #fssi #nav .visibility #cssmenu ul li.menu-item-has-children ul li.menu-item-has-children {
+            border-top: 0; }
+        #fssi #nav .visibility #cssmenu ul ul {
+          display: none; }
+      #fssi #nav .visibility #cssmenu ul.open {
+        background: red; }
     @media (min-width: 1200px) {
       #fssi #nav .visibility {
-        padding-left: 0px; } }
+        padding-left: 0px;
+        display: block; } }
+    #fssi #nav .nav-footer {
+      height: 4rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0; }
   #fssi #banner {
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/nav-header%20%20BG.png");
     height: 4rem; }
@@ -153,7 +304,8 @@ a {
           display: none; } }
     #fssi #breadcrumbs button#fullscreen {
       float: right; }
-    #fssi #breadcrumbs .btn-fs, #fssi #breadcrumbs .btn-menu {
+    #fssi #breadcrumbs .btn-fs,
+    #fssi #breadcrumbs .btn-menu {
       height: 2.1rem;
       width: 2.1rem;
       margin: 0.3rem;
@@ -163,12 +315,12 @@ a {
       background-size: cover;
       background-color: #055918; }
     #fssi #breadcrumbs .btn-fs {
-      background: url("../fssi/img/full_screen_icon.svg"); }
+      background: url("../fssi/img/theme/fullscreen_icon.svg"); }
     #fssi #breadcrumbs .btn-menu {
-      background: url("../fssi/img/hamburger.svg"); }
+      background: url("../fssi/img/theme/hamburger.svg"); }
   #fssi #content {
     width: 100%;
-    padding: 10px 15px 0 15px;
+    padding: 10px 15px 3rem 15px;
     font-family: Verdana, "Segoe UI", sans-serif, "Open Sans"; }
     @media (min-width: 1200px) {
       #fssi #content {
@@ -179,7 +331,8 @@ a {
     height: 3rem;
     background-color: #f5f6f5;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    z-index: 2000; }
     #fssi #footer p {
       text-align: center;
       font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
@@ -187,7 +340,7 @@ a {
       margin: 1rem;
       padding: 0; }
     #fssi #footer .partner-logos {
-      background: url("../fssi/img/vcoss_rmit.png");
+      background: url("../fssi/img/theme/footer.svg");
       height: 3rem;
       background-size: contain;
       width: 10rem;
@@ -199,6 +352,9 @@ a {
   @media (min-width: 1200px) {
     .navshow {
       display: block; } }
+
+.jack-test {
+  color: red; }
 
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)

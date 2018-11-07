@@ -1,25 +1,16 @@
 <?php  get_template_part('header');?>
 <?php 
-     
      $current = $post->ID;
-      
      $parent = $post->post_parent;
-      
-     $grandparent_get = get_post($parent);
-      
+     $grandparent_get = get_post($parent);  
      $grandparent = $grandparent_get->post_parent;
-      
-     ?>
-
+         ?>
 <div class="container-fluid" id="fssi">
   <div class="row">
     <div  id="banner" class="col-12">
      <a><div class="fssi-logo"></div></a>
      <div class="module-title"><h1>          <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
 </h1></div>
-
-     
-    
     </div>
     <div class="col-12" id="breadcrumbs">
       <ul class="thin-text">
