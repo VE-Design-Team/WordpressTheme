@@ -93,6 +93,11 @@ a {
     position: absolute;
     top: 7rem;
     right: 0; }
+    #fssi #nav .nav-header {
+      background-image: url("../fssi/img/theme/nav_header.png");
+      width: 20rem;
+      height: 6.66667rem;
+      background-size: contain; }
     #fssi #nav a {
       color: white;
       font-weight: inherit; }
@@ -212,6 +217,11 @@ a {
                 content: "b"; }
             #fssi #nav .visibility #cssmenu ul li ul li:hover {
               background: #055918; }
+              #fssi #nav .visibility #cssmenu ul li ul li:hover a {
+                border-left: .1rem solid white; }
+                #fssi #nav .visibility #cssmenu ul li ul li:hover a span:before {
+                  background: #055918;
+                  color: white; }
             #fssi #nav .visibility #cssmenu ul li ul li.menu-item-has-children a:before {
               font-family: FontAwesome;
               color: #055918;
@@ -235,10 +245,8 @@ a {
           border-top: #055918 solid 0.1rem; }
           #fssi #nav .visibility #cssmenu ul li.menu-item-has-children ul li.menu-item-has-children {
             border-top: 0; }
-        #fssi #nav .visibility #cssmenu ul ul {
-          display: none; }
-      #fssi #nav .visibility #cssmenu ul.open {
-        background: red; }
+        #fssi #nav .visibility #cssmenu ul li.active {
+          background: #02290b; }
     @media (min-width: 1200px) {
       #fssi #nav .visibility {
         padding-left: 0px;
@@ -249,7 +257,7 @@ a {
       position: absolute;
       bottom: 0; }
   #fssi #banner {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/nav-header%20%20BG.png");
+    background: url("../fssi/img/theme/logo_banner.png");
     height: 4rem; }
     #fssi #banner a {
       margin-left: -15px;
@@ -259,7 +267,7 @@ a {
       float: left; }
       #fssi #banner a .fssi-logo {
         background-color: #fff;
-        background: url("../fssi/img/fssi_logo.png");
+        background: url("../fssi/img/theme/fssi_logo.png");
         height: 4rem;
         background-size: contain;
         background-repeat: no-repeat; }
@@ -277,7 +285,7 @@ a {
         padding: 0;
         margin: 0; }
   #fssi #breadcrumbs {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/1096%20canvas%20banner-8.png");
+    background: url("../fssi/img/theme/breadcrumb_banner.png");
     color: #fff;
     height: 3rem;
     border-top: 0.15rem #fff solid;
@@ -313,11 +321,11 @@ a {
       float: right;
       position: relative;
       background-size: cover;
-      background-color: #055918; }
+      border: none; }
     #fssi #breadcrumbs .btn-fs {
-      background: url("../fssi/img/theme/fullscreen_icon.svg"); }
+      background-image: url("../fssi/img/theme/fullscreen_icon.png"); }
     #fssi #breadcrumbs .btn-menu {
-      background: url("../fssi/img/theme/hamburger.svg"); }
+      background-image: url("../fssi/img/theme/hamburger.png"); }
   #fssi #content {
     width: 100%;
     padding: 10px 15px 3rem 15px;
@@ -336,11 +344,11 @@ a {
     #fssi #footer p {
       text-align: center;
       font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
-      font-size: 0.75rem;
+      font-size: 0.66667rem;
       margin: 1rem;
       padding: 0; }
     #fssi #footer .partner-logos {
-      background: url("../fssi/img/theme/footer.svg");
+      background: url("../fssi/img/theme/vcoss_rmit_logo.png");
       height: 3rem;
       background-size: contain;
       width: 10rem;

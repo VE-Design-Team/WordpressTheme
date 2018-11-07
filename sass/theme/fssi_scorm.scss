@@ -1,9 +1,10 @@
-$url_2: url('../fssi/img/fssi_logo.png');
-$url_1: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/nav-header%20%20BG.png');
-$url_3: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/1096%20canvas%20banner-8.png");
-$url_4: url("../fssi/img/theme/hamburger.svg");
-$url_5: url("../fssi/img/theme/fullscreen_icon.svg");
-$url_6: url("../fssi/img/theme/footer.svg");
+$url_2: url('../fssi/img/theme/fssi_logo.png');
+$url_3: url('../fssi/img/theme/breadcrumb_banner.png');
+$url_1: url('../fssi/img/theme/logo_banner.png');
+$url_4: url("../fssi/img/theme/hamburger.png");
+$url_5: url("../fssi/img/theme/fullscreen_icon.png");
+$url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
+$url_7: url("../fssi/img/theme/nav_header.png");
 
 $banner-height: 4rem;
 $breadcrumbs-height: 3rem;
@@ -30,6 +31,14 @@ $footer-height: 3rem;
     top: ($banner-height + $breadcrumbs-height);
     right: 0;
 
+    .nav-header
+    {
+      background-image: $url_7; 
+      width: $nav-width;
+      height: ($nav-width/3);
+      background-size: contain;
+    }
+
     a {
       color: white;
       font-weight: inherit;
@@ -55,7 +64,6 @@ $footer-height: 3rem;
         }
       }
     
-
       //copied from accordion
 
     }
@@ -235,6 +243,13 @@ $footer-height: 3rem;
               }
               li:hover{
                 background: $green;
+                a{
+                  border-left: .1rem solid white;
+                span:before{
+                  background: $green;
+                  color: white;
+                }
+              }
               }
               li.menu-item-has-children {
                 
@@ -299,14 +314,14 @@ border-top: 0;
               }
             }
           }
-          ul {
-            display: none;
+          li.active
+          {
+            background: darken($green, 10%);
           }
-        
         }
-        ul.open
+        ul
         {
-          background: red;
+         // background: red;
         }
       }
 
@@ -323,6 +338,7 @@ border-top: 0;
       width: 100%;
       position: absolute;
       bottom: 0;
+  
     }
 
   }
@@ -422,16 +438,17 @@ border-top: 0;
       float: right;
       position: relative;
       background-size: cover;
-      background-color: $green;
+      //background-color: red;
+      border: none;
     }
 
     .btn-fs {
-      background: $url_5;
+      background-image: $url_5;
 
     }
 
     .btn-menu {
-      background: $url_4;
+      background-image: $url_4;
 
     }
   }
@@ -461,7 +478,7 @@ border-top: 0;
     p {
       text-align: center;
       font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
-      font-size: ($footer-height / 4);
+      font-size: ($footer-height / 4.5);
       margin: ($footer-height /3);
       padding: 0;
 
@@ -472,6 +489,7 @@ border-top: 0;
       height: $footer-height;
       background-size: contain;
       width: 10rem;
+      //background: red;
       float: right;
       background-repeat: no-repeat;
     }
