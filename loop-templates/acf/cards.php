@@ -25,7 +25,7 @@
         echo "mr-0 ";
     }?>">
 
-      <div id="content">
+      <div id="cardcontent">
         <div class="curve">
           <?php
     if (get_sub_field('field_5a1b730bb4a87') != "custom"): ?>
