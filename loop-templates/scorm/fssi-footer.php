@@ -3,14 +3,33 @@
 
 
 </div><!-- #fssi -->
+
+
+<?php if( get_field('field_5be47786ed504') == 'home-page' ): ?>
+<!-- display footer on home page -->
 <div style="clear:both;"></div>
 <div id="footer" class="col-12 p-0 m-0">
   <div class="partner-logos"></div>
   <p clas="text-middle">Copyright <i class="fa fa-copyright"></i> 2018 Future Social Service Institute. All rights
     reserved.</p>
 
-
 </div><!--footer -->
+<?php else: {?>
+  <div style="clear:both;"></div>
+<div id="footer " class="col-12 p-0 m-0">
+  <!--
+<button class="btn btn-primary float-left">
+Previous
+</button>
+<button class="btn btn-primary float-right">
+Next
+</button>
+-->
+</div><!--footer -->
+
+<?php } endif; ?>
+
+
 <script>
   //nave menu
   $("button#navtoggle").click(function () {

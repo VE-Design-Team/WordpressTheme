@@ -11,12 +11,6 @@ $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
- html
-{
- overflow: hidden;
- 
-}
-
 #fssi {
   //height: 100%;
   background: $white;
@@ -486,14 +480,64 @@ $footer-height: 3rem;
     }
   }
 
-}
-#footer {
-   background-color: $footer;
+  //Cards
+  #calloutcards {
+    .card {
 
-    position: absolute;
-    background-color: #f5f6f5;
-    bottom: 0;
-    z-index: 2000;
+      #cardcontent {
+
+        .card-header {
+          margin-left: 3rem;
+        }
+      }
+
+      .card-body {
+        margin-left: 3rem;
+      }
+    }
+
+  }
+
+  //Tabs
+  #left-tabs {
+    .tab-content {
+      border: 2px solid $nav-tabs-border-color;
+    }
+  
+    .tab-pane {
+      margin: 1rem;
+    }
+  
+    a.nav-link
+   
+    {
+      padding: 1rem 0 0rem 0;
+      
+      .h4 {
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $white;
+     
+    }
+  }
+    a.nav-link.active>.h4 {
+      color: $nav-tabs-active-text-color;
+      border-bottom: 2px solid $green;
+      
+    }
+  
+  }
+  // Carousel
+  
+}
+//#FSSI
+
+#footer {
+  background-color: $footer;
+
+  position: absolute;
+  background-color: #f5f6f5;
+  bottom: 0;
+  z-index: 2000;
 
   p {
     text-align: center;
@@ -513,7 +557,12 @@ $footer-height: 3rem;
     float: right;
     background-repeat: no-repeat;
   }
+
+  button {
+    //margin: 1rem;
+  }
 }
+
 .navshow {
   display: none;
 
@@ -525,3 +574,5 @@ $footer-height: 3rem;
 .jack-test {
   color: red;
 }
+
+//rich content edits

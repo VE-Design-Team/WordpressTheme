@@ -494,8 +494,8 @@ add_action( 'init', 'custom_post_type', 0 );
 add_action('wp_enqueue_scripts', 'cssmenumaker_scripts_styles' );
 
 function cssmenumaker_scripts_styles() {  
-   wp_enqueue_style( 'cssmenu-styles', get_template_directory_uri() . '/cssmenu/styles.css');
-   wp_enqueue_script('cssmenu-scripts', get_template_directory_uri() . '/cssmenu/script.js');
+ //  wp_enqueue_style( 'cssmenu-styles', get_template_directory_uri() . '/cssmenu/styles.css');
+ //  wp_enqueue_script('cssmenu-scripts', get_template_directory_uri() . '/cssmenu/script.js');
 }
 class CSS_Menu_Maker_Walker extends Walker {
 
