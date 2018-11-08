@@ -258,7 +258,9 @@
 }
 
 //Carousel
+
 #carousel {
+ padding-top: 1rem;
   .navs {
     max-height: 100px;
 
@@ -266,13 +268,21 @@
       .col-1 {
         padding: 5px;
         max-height: 100px;
-
+    
         img {
           width: 100px;
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
         }
-      }
+        
+      }.active
+        {
+          img {
+            width: 100px;
+            -webkit-filter: grayscale(00%);
+            filter: grayscale(00%);
+          }
+        }
 
       .col-10 {
         margin: 0;
@@ -283,13 +293,12 @@
 
   .scrollers {
     height: 100px;
-
+  
     a {
-
+     
       .fa-chevron-circle-left,
       .fa-chevron-circle-right {
-        margin-top: 0%;
-        width: 4rem;
+
         z-index: 1000;
       }
     }
@@ -298,6 +307,19 @@
   .indicators {
     margin: 0;
     padding: 0;
+    .carousel-indicator
+    {
+      display:flex;
+      align-items:center;
+    }
+    .left-right
+    { 
+      display:flex;
+      align-items:center;
+     top: -0.5rem;
+   
+      text-align: center;
+    }
 
     .col-auto .triangle {
       position: relative;
@@ -327,9 +349,6 @@
     padding: 1rem;
 
   }
-}
-
-#carousel {
   @media (min-width: 768px) and (max-width: 991.98px) {
     .navs {
       max-height: 90px;
@@ -389,15 +408,15 @@
   }
 
   .fa-chevron-circle-left {
-    float: left;
+
     color: $carousel-chevron;
-    margin-bottom: 10px;
+
   }
 
   .fa-chevron-circle-right {
-    float: right;
+
     color: $carousel-chevron;
-    margin-bottom: 10px;
+
   }
 
   div.container.navs>div.row.top-nav>div.col-10>div>div.col-1.col-auto.active> {

@@ -76,6 +76,33 @@
             "allow_null": 0,
             "allow_archives": 1,
             "multiple": 0
+        },
+        {
+            "key": "field_5be47786ed504",
+            "label": "Home page module",
+            "name": "home_page_module",
+            "type": "select",
+            "instructions": "Will display a splash page or other design on this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal": "No",
+                "home-page": "Yes"
+            },
+            "default_value": [
+                "normal"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -95,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541381900
+    "modified": 1541699603
 }
