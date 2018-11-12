@@ -24,7 +24,7 @@ $footer-height: 3rem;
   #nav {
     font-family: "Trade Gothic LT Std";
     font-weight: 500;
-    background: $black;
+    background: $warm-grey;
     width: $nav-width;
     z-index: 1000;
     position: absolute;
@@ -36,7 +36,7 @@ $footer-height: 3rem;
       background-image: $url_7;
       width: $nav-width;
       height: ($nav-width/3);
-      background-size: contain;
+      background-size: cover;
     }
 
     a {
@@ -46,12 +46,13 @@ $footer-height: 3rem;
       ul {
 
         list-style: none;
-        background: $black;
+     
         padding: 0 0 0 0;
 
         li {
           background: red;
           padding: 1rem;
+          background: $warm-grey;
           padding: 0 0 0 0;
 
           ul {
@@ -87,7 +88,7 @@ $footer-height: 3rem;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background: black;
+        background: $warm-grey;
         border-bottom: 0.1rem solid $green;
 
         ul {
@@ -132,7 +133,7 @@ $footer-height: 3rem;
               border-bottom: .1rem solid $green;
               //border-top: .1rem solid $green;
               text-decoration: none;
-              color: #ffffff;
+              color: $natural-green;
 
             }
 
@@ -476,7 +477,7 @@ $footer-height: 3rem;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 
@@ -516,6 +517,7 @@ $footer-height: 3rem;
       .h4 {
         padding-bottom: 0.5rem;
         border-bottom: 2px solid $white;
+        text-align: left;
      
     }
   }
@@ -528,7 +530,74 @@ $footer-height: 3rem;
   }
   // Carousel
   
+  //Accrordion
+
+  #accordion
+  {
+    padding: 0.1rem 0.1rem 0.05rem 0.1rem;
+    
+    #cards{
+
+      .card{
+        margin-bottom: 0;
+        border-bottom: 0.1rem solid $grey;
+        border-left: 0.05rem solid $grey;
+      
+        .card-header
+        {
+          padding: 1.1rem;
+
+        }
+
+        h3.card-header
+        {
+          background-color: #fff;
+          color: $text-grey;
+          text-transform: uppercase;
+          .h6{
+            font-size: 1.1rem;
+          }
+         
+          .fa-plus, .fa-minus
+          {
+            position: absolute;
+            right: 0.5rem;
+            color: $green-light;
+          }
+          .fa-plus:before
+          {
+            font-family: FontAwesome;  
+            Content: "\f055";
+          }
+          #headingTitle
+          {
+            padding-left: 2rem !important;
+          }
+        }
+        h3.collapsed{
+          border-left: 0.2rem $white solid;
+        }
+        h3{
+          border-left: 0.2rem $green-light solid;
+        }
+        .card-body{
+          p{
+          font-size: 0.9rem;
+          }
+        }
+        .collapsed, .collapsing{
+          border-left: 0.2rem $green-light solid;
+        }
+        .collapse
+        {
+          border-left: 0.2rem $green-light solid;
+        }
+      }
+    }
+  }
+
 }
+
 //#FSSI
 
 #footer {
