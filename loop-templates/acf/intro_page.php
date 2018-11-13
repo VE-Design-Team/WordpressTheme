@@ -7,7 +7,7 @@
     max-width: 100px;
   }
 </style>
-
+<div id="introtabs">
 <div id="tabs">
   <ul class="nav nav-tabs" role="tablist">
     <?php while (have_rows('field_5a67bc57f0b60')) : the_row();?>
@@ -58,7 +58,7 @@
     <?php endwhile;?>
   </div>
 </div>
-
+</div>
 
 <script>
   //Make first tab active- top tabs

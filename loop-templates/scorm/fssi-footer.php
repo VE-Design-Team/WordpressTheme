@@ -17,14 +17,14 @@
 <?php else: {?>
   <div style="clear:both;"></div>
 <div id="footer " class="col-12 p-0 m-0">
-  <!--
+  <div class="next-prev">
 <button class="btn btn-primary float-left">
 Previous
 </button>
 <button class="btn btn-primary float-right">
 Next
 </button>
--->
+</div>
 </div><!--footer -->
 
 <?php } endif; ?>

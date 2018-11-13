@@ -6,8 +6,16 @@ $url_5: url("../fssi/img/theme/fullscreen_icon.png");
 $url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../fssi/img/theme/nav_header.png");
 
-//rich content
+// //rich content
+// Flipcards
 $url_8: url("../fssi/img/theme/flipme_icon.png");
+// introtabs
+$url_9: url("../fssi/img/theme/learning_objectives_inverse.png");
+$url_10: url("../fssi/img/theme/key_activities_inverse.png");
+$url_11: url("../fssi/img/theme/assessments_inverse.png");
+$url_12: url("../fssi/img/theme/learning_objectives.png");
+$url_13: url("../fssi/img/theme/key_activities.png");
+$url_14: url("../fssi/img/theme/assessments.png");
 
 $banner-height: 4rem;
 $breadcrumbs-height: 3rem;
@@ -49,7 +57,7 @@ $footer-height: 3rem;
       ul {
 
         list-style: none;
-     
+
         padding: 0 0 0 0;
 
         li {
@@ -507,134 +515,267 @@ $footer-height: 3rem;
     .tab-content {
       border: 2px solid $nav-tabs-border-color;
     }
-  
+
     .tab-pane {
       margin: 1rem;
     }
-  
-    a.nav-link
-   
-    {
+
+    a.nav-link {
       padding: 1rem 0 0rem 0;
-      
+
       .h4 {
         padding-bottom: 0.5rem;
         border-bottom: 2px solid $white;
         text-align: left;
-     
+
+      }
     }
-  }
+
     a.nav-link.active>.h4 {
       color: $nav-tabs-active-text-color;
       border-bottom: 2px solid $green;
-      
+
     }
-  
+
   }
+
   // Carousel
-  
+
   //Accrordion
 
-  #accordion
-  {
+  #accordion {
     padding: 0.1rem 0.1rem 0.05rem 0.1rem;
-    
-    #cards{
 
-      .card{
+    #cards {
+
+      .card {
         margin-bottom: 0;
         border-bottom: 0.1rem solid $grey;
         border-left: 0.05rem solid $grey;
-      
-        .card-header
-        {
+
+        .card-header {
           padding: 1.1rem;
 
         }
 
-        h3.card-header
-        {
+        h3.card-header {
           background-color: #fff;
           color: $text-grey;
           text-transform: uppercase;
-          .h6{
+
+          .h6 {
             font-size: 1.1rem;
           }
-         
-          .fa-plus, .fa-minus
-          {
+
+          .fa-plus,
+          .fa-minus {
             position: absolute;
             right: 0.5rem;
             color: $green-light;
           }
-          .fa-plus:before
-          {
-            font-family: FontAwesome;  
+
+          .fa-plus:before {
+            font-family: FontAwesome;
             Content: "\f055";
           }
-          #headingTitle
-          {
+
+          #headingTitle {
             padding-left: 2rem !important;
           }
         }
-        h3.collapsed{
+
+        h3.collapsed {
           border-left: 0.2rem $white solid;
         }
-        h3{
+
+        h3 {
           border-left: 0.2rem $green-light solid;
         }
-        .card-body{
-          p{
-          font-size: 0.9rem;
+
+        .card-body {
+          p {
+            font-size: 0.9rem;
           }
         }
-        .collapsed, .collapsing{
+
+        .collapsed,
+        .collapsing {
           border-left: 0.2rem $green-light solid;
         }
-        .collapse
-        {
+
+        .collapse {
           border-left: 0.2rem $green-light solid;
         }
       }
     }
   }
+
   #flipcards {
     background: $white;
 
     .card {
       border: $green-light 0.1rem solid;
-      -webkit-box-shadow: 0 0 5rem lighten($green-light, 50%);
-      -moz-box-shadow: 0 0 2rem  lighten($green-light, 50%);
-      box-shadow: 0 0 2rem  lighten($green-light, 50%);
-      .card-body{
+      -webkit-box-shadow: 0 0 5rem lighten($green-light, 60%);
+      -moz-box-shadow: 0 0 2rem lighten($green-light, 60%);
+      box-shadow: 0 0 2rem lighten($green-light, 60%);
 
-        p{
+      .card-body {
+
+        p {
 
           font-size: 1.1rem;
           font-family: $font2;
           color: $green-light;
         }
       }
+
       .middler {
         margin-bottom: 1rem;
-       
-        button 
-        
-        {
+
+        button {
           background: none;
           background-image: $url_8;
           background-size: contain;
-          color: rgba(0,0,0,0);
+          color: rgba(0, 0, 0, 0);
           background-position: center;
           height: 3.5rem;
           border: none;
           background-repeat: no-repeat;
-          
+
           //display: none;
         }
       }
     }
-}
+  }
+
+  #introtabs {
+    #tabs {
+      width: 80%;
+      ul.nav {
+        border: none;
+        width:20rem;
+        margin:auto;
+
+        li.nav-item{
+          border: none;
+          background: none;
+          margin: auto;
+          padding: 0 0 0.5rem 0;
+          margin-top: 0;
+          background-position: center;
+          a {
+
+            height: 4.7rem;
+            width: 6rem;
+            border-bottom: solid $white 0.2rem;
+            padding: 0;
+            background: none;
+            background-size: cover;
+            background-position: top;
+            height: 100%;
+
+            .title {
+              //display: none;
+              position: relative;
+              top: 5rem;
+              background: $green-light;
+              font-family: $font2;
+              width: 5rem;
+              margin: auto;
+              padding: 0.5rem;
+              width: 100%;
+              text-align: center;
+              color: $white;
+              font-size: 1rem;
+              height: 4rem;
+              vertical-align: middle!important;
+
+            }
+            i.fa-chevron-down
+            {
+              display: none;
+            }
+         
+          }
+          a.nav-link
+          {
+      
+            //margin-bottom: 1.2rem;
+          }
+          a.nav-link.active {
+        
+            padding: 0;
+          }
+
+        }
+
+        li.nav-item:nth-child(1) {
+          a {background-image: $url_9;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          a.active
+           {
+            background-color: $green-light; 
+            background-image: $url_12;
+       
+          }
+        }
+
+        li.nav-item:nth-child(2) {
+          a {  background-image: $url_10;
+            background-repeat: no-repeat;
+            background-position: center;
+            .title
+            {
+              padding-top: 1.25rem;
+            }
+         }
+         a.active
+         {
+          background-color: $green-light;
+          background-image: $url_13;
+     
+        }
+        }
+
+        li.nav-item:nth-child(3) {
+          a {
+            background-image: $url_11;
+            background-repeat: no-repeat;
+            background-position: center;
+            .title
+            {
+              padding-top: 1.25rem;
+            }
+          }
+          a.active
+
+          {
+            background-color: $green-light;
+            background-image: $url_14;
+      
+         }
+        }
+
+      }
+
+      .tab-content {
+        border: none;
+        padding: 0;
+        margin-top: 5rem;
+
+        .tab-pane {
+
+          h3
+          {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+  }
 
 }
 
