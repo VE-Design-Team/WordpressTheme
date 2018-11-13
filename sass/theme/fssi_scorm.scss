@@ -6,6 +6,9 @@ $url_5: url("../fssi/img/theme/fullscreen_icon.png");
 $url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../fssi/img/theme/nav_header.png");
 
+//rich content
+$url_8: url("../fssi/img/theme/flipme_icon.png");
+
 $banner-height: 4rem;
 $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
@@ -595,6 +598,43 @@ $footer-height: 3rem;
       }
     }
   }
+  #flipcards {
+    background: $white;
+
+    .card {
+      border: $green-light 0.1rem solid;
+      -webkit-box-shadow: 0 0 5rem lighten($green-light, 50%);
+      -moz-box-shadow: 0 0 2rem  lighten($green-light, 50%);
+      box-shadow: 0 0 2rem  lighten($green-light, 50%);
+      .card-body{
+
+        p{
+
+          font-size: 1.1rem;
+          font-family: $font2;
+          color: $green-light;
+        }
+      }
+      .middler {
+        margin-bottom: 1rem;
+       
+        button 
+        
+        {
+          background: none;
+          background-image: $url_8;
+          background-size: contain;
+          color: rgba(0,0,0,0);
+          background-position: center;
+          height: 3.5rem;
+          border: none;
+          background-repeat: no-repeat;
+          
+          //display: none;
+        }
+      }
+    }
+}
 
 }
 

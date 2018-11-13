@@ -45,24 +45,24 @@
 .btn:hover,
 .btn:focus {
   background-color: $button-primary;
-  color: #ffffff !important;
+  color: #ffffff ;
   transition: 300ms;
   border-color: $button-primary;
 }
 
 .btn-default,
 .btn {
-  background-color: $button-default !important;
-  color: #ffffff !important;
+  background-color: $button-default ;
+  color: #ffffff ;
   transition: 300ms;
-  border-color: darken($button-default, 15%) !important;
+  border-color: darken($button-default, 15%);
 }
 
 .btn-primary {
-  background-color: $button-primary !important;
-  color: #ffffff !important;
+  background-color: $button-primary ;
+  color: #ffffff ;
   transition: 300ms;
-  border-color: $button-primary !important;
+  border-color: $button-primary ;
 }
 
 .numborder {
