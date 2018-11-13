@@ -5,6 +5,9 @@ $url_4: url("../fssi/img/theme/hamburger.png");
 $url_5: url("../fssi/img/theme/fullscreen_icon.png");
 $url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../fssi/img/theme/nav_header.png");
+//prev naext icons
+$url_16: url("../fssi/img/theme/prev-page.png");
+$url_15: url("../fssi/img/theme/next-page.png");
 
 // //rich content
 // Flipcards
@@ -651,18 +654,20 @@ $footer-height: 3rem;
   #introtabs {
     #tabs {
       width: 80%;
+
       ul.nav {
         border: none;
-        width:20rem;
-        margin:auto;
+        width: 20rem;
+        margin: auto;
 
-        li.nav-item{
+        li.nav-item {
           border: none;
           background: none;
           margin: auto;
           padding: 0 0 0.5rem 0;
           margin-top: 0;
           background-position: center;
+
           a {
 
             height: 4.7rem;
@@ -688,55 +693,58 @@ $footer-height: 3rem;
               color: $white;
               font-size: 1rem;
               height: 4rem;
-              vertical-align: middle!important;
+              vertical-align: middle !important;
 
             }
-            i.fa-chevron-down
-            {
+
+            i.fa-chevron-down {
               display: none;
             }
-         
+
           }
-          a.nav-link
-          {
-      
+
+          a.nav-link {
+
             //margin-bottom: 1.2rem;
           }
+
           a.nav-link.active {
-        
+
             padding: 0;
           }
 
         }
 
         li.nav-item:nth-child(1) {
-          a {background-image: $url_9;
+          a {
+            background-image: $url_9;
             background-repeat: no-repeat;
             background-position: center;
           }
-          a.active
-           {
-            background-color: $green-light; 
+
+          a.active {
+            background-color: $green-light;
             background-image: $url_12;
-       
+
           }
         }
 
         li.nav-item:nth-child(2) {
-          a {  background-image: $url_10;
+          a {
+            background-image: $url_10;
             background-repeat: no-repeat;
             background-position: center;
-            .title
-            {
+
+            .title {
               padding-top: 1.25rem;
             }
-         }
-         a.active
-         {
-          background-color: $green-light;
-          background-image: $url_13;
-     
-        }
+          }
+
+          a.active {
+            background-color: $green-light;
+            background-image: $url_13;
+
+          }
         }
 
         li.nav-item:nth-child(3) {
@@ -744,18 +752,17 @@ $footer-height: 3rem;
             background-image: $url_11;
             background-repeat: no-repeat;
             background-position: center;
-            .title
-            {
+
+            .title {
               padding-top: 1.25rem;
             }
           }
-          a.active
 
-          {
+          a.active {
             background-color: $green-light;
             background-image: $url_14;
-      
-         }
+
+          }
         }
 
       }
@@ -767,8 +774,7 @@ $footer-height: 3rem;
 
         .tab-pane {
 
-          h3
-          {
+          h3 {
             font-size: 1.5rem;
           }
         }
@@ -810,6 +816,38 @@ $footer-height: 3rem;
 
   button {
     //margin: 1rem;
+  }
+}
+#footer-page
+{
+  position: absolute;
+ 
+  bottom: 1rem;
+  z-index: 2000;
+  #next-prev
+  {
+    width: 10rem;
+    margin: auto;
+    bottom: 1rem;
+  .btn-next, .btn-prev
+  {
+    background-size: contain;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+  }
+  .btn-next
+  {
+    background-image: $url_15;
+  }
+  .btn-prev
+  {
+    background-image: $url_16;
+  }
   }
 }
 

@@ -16,14 +16,25 @@
 </div><!--footer -->
 <?php else: {?>
   <div style="clear:both;"></div>
-<div id="footer " class="col-12 p-0 m-0">
-  <div class="next-prev">
-<button class="btn btn-primary float-left">
-Previous
-</button>
-<button class="btn btn-primary float-right">
-Next
-</button>
+<div id="footer-page" class="col-12 p-0 m-0">
+  <div id="next-prev">
+
+<?php if( get_field('field_5bdf9ede4ef3a') ): ?>
+<a title="Previous page" href="<?php the_field('field_5bdf9ede4ef3a'); ?>"  class="col-1 btn-prev float-left">
+</a>
+	
+<?php endif; ?>
+<?php if( get_field('field_5bdf9ea04ef39') ): ?>
+<a title="Next page" href="<?php the_field('field_5bdf9ea04ef39'); ?>"  class="col-1 btn-next float-right">
+
+
+</a>
+<?php endif; ?>
+
+
+
+
+
 </div>
 </div><!--footer -->
 
