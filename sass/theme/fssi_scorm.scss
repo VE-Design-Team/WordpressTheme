@@ -1,6 +1,6 @@
 $url_2: url('../fssi/img/theme/fssi_logo.png');
 $url_3: url('../fssi/img/theme/breadcrumb_banner.png');
-$url_1: url('../fssi/img/theme/logo_banner.png');
+$url_1: url('../fssi/img/theme/logo_banner_lighter.png');
 $url_4: url("../fssi/img/theme/hamburger.png");
 $url_5: url("../fssi/img/theme/fullscreen_icon.png");
 $url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
@@ -20,7 +20,7 @@ $url_12: url("../fssi/img/theme/learning_objectives.png");
 $url_13: url("../fssi/img/theme/key_activities.png");
 $url_14: url("../fssi/img/theme/assessments.png");
 
-$banner-height: 4rem;
+$banner-height: 6rem;
 $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
@@ -43,14 +43,17 @@ $footer-height: 3rem;
     z-index: 1000;
     position: absolute;
 
-    top: ($banner-height + $breadcrumbs-height);
+    top: $breadcrumbs-height;
     right: 0;
-
+    @media (min-width: 1200px) {
+      top: ($banner-height + $breadcrumbs-height);
+    }
     .nav-header {
       background-image: $url_7;
       width: $nav-width;
       height: ($nav-width/3);
       background-size: cover;
+
     }
 
     a {
@@ -103,7 +106,7 @@ $footer-height: 3rem;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         background: $warm-grey;
-        border-bottom: 0.1rem solid $green;
+        //border-bottom: 0.1rem solid $green;
 
         ul {
           //top level
@@ -129,6 +132,8 @@ $footer-height: 3rem;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
+            border-bottom: 0.1rem solid $green;
+            transition: 0.3s;
 
             a {
               margin: 0;
@@ -144,30 +149,33 @@ $footer-height: 3rem;
               padding: 1rem 1rem;
               cursor: pointer;
               z-index: 2;
-              border-bottom: .1rem solid $green;
+              //border-bottom: .1rem solid $green;
               //border-top: .1rem solid $green;
               text-decoration: none;
               color: $natural-green;
+              transition: 0.3s;
 
             }
 
             a:before {
               font-family: FontAwesome;
               content: "\f055";
-              margin-right: 0.4rem;
-              font-size: 0.8rem;
+              margin-right: 2.2rem;
+              font-size: 1rem;
+              color: $green-light;
 
             }
 
             a:hover {
-              //background: $green;
+              background: $green-light;
+              color: $white;
             }
 
             a:hover:before {
               font-family: FontAwesome;
               //content: "\f056";
-              margin-right: 0.4rem;
-              font-size: 0.8rem;
+              //margin-right: 0.4rem;
+              font-size: 1rem;
               color: white;
 
             }
@@ -198,11 +206,14 @@ $footer-height: 3rem;
               //second level
               //background: red;
               //padding-left: 1rem;
-              border-left: 0.1rem solid $green;
+              //border-left: 0.1rem solid $green;
+              border-top: 0.1rem solid $green;
 
+              //border-bottom: 0.1rem solid $green;
               li {
                 margin-left: 0;
                 //padding-left: 0.5rem;
+                border-bottom: none;
 
                 a {
                   //background: silver;
@@ -221,6 +232,7 @@ $footer-height: 3rem;
 
                   span:before {
                     font-family: FontAwesome;
+
                     content: "\f111";
                     color: $green;
                     position: relative;
@@ -235,7 +247,7 @@ $footer-height: 3rem;
                   font-family: FontAwesome;
                   content: "";
                   margin-right: 0.4rem;
-                  font-size: 0.8rem;
+                  font-size: 1rem;
 
                 }
 
@@ -258,11 +270,29 @@ $footer-height: 3rem;
                   }
 
                 }
+              }
 
+              li.active {
+                a {
+                  //border-left: .1rem solid white;
+
+                  span:before {
+                    background: $warm-grey;
+                    color: white;
+
+                  }
+
+                  ul {
+
+                    li {
+                      background: red;
+                    }
+                  }
+                }
               }
 
               li:hover {
-                background: $green;
+                background: $green-light;
 
                 a {
                   border-left: .1rem solid white;
@@ -270,6 +300,7 @@ $footer-height: 3rem;
                   span:before {
                     background: $green;
                     color: white;
+
                   }
 
                   ul {
@@ -290,7 +321,7 @@ $footer-height: 3rem;
                   position: relative;
                   left: -1.85rem;
                   //background-color: $black;
-                  font-size: .75rem;
+                  font-size: 1rem;
 
                 }
 
@@ -308,7 +339,7 @@ $footer-height: 3rem;
 
                   a:before {
                     content: "";
-                    border-bottom: 0.15rem solid $green;
+                    //border-bottom: 0.15rem solid $green;
                     position: absolute;
                     bottom: 1.5rem;
                     width: 2rem;
@@ -323,12 +354,17 @@ $footer-height: 3rem;
 
           }
 
-          li.menu-item-has-children.has-sub {
+          li.menu-item-has-children.has-sub.open {
 
             a {
               //background: red;
             }
 
+            border-bottom: none;
+
+            ul {
+              border-bottom: .1rem solid
+            }
           }
 
           li.menu-item-has-children {
@@ -342,7 +378,8 @@ $footer-height: 3rem;
           }
 
           li.active {
-            background: darken($green, 10%);
+            //background: lighten($green-light, 10%);
+            color: $white;
           }
         }
 
@@ -370,21 +407,25 @@ $footer-height: 3rem;
   }
 
   #banner {
+    display: none;
     background: $url_1;
-
+    background-size: cover;
     height: $banner-height;
 
-    a {
+    #ws {
       margin-left: -15px;
       background-color: $white;
       height: $banner-height;
       width: ($banner-height * 2.7017);
+      background-color: $white;
       float: left;
+      width: 320px;
 
       .fssi-logo {
-        background-color: $white;
+
         background: $url_2;
-        height: $banner-height;
+        height: $banner-height/1.5;
+        margin: $banner-height/6;
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -393,34 +434,65 @@ $footer-height: 3rem;
 
     .module-title {
       background: $white;
-      height: ($banner-height * 0.6);
-      padding: ($banner-height * 0.06);
+      height: ($banner-height * 0.4);
+      padding: ($banner-height * 0.05);
       float: right;
-      margin: ($banner-height * 0.2);
+      margin: ($banner-height * 0.3);
       display: inline-block;
 
       h1 {
         color: $green;
-        font-size: ($banner-height * 0.4);
+        font-size: ($banner-height * 0.3);
+        line-height: ($banner-height * 0.3);
         text-transform: uppercase;
         padding: 0;
         margin: 0;
       }
     }
 
+    @media (min-width: 1200px) {
+      display: block;
+    }
   }
 
   #breadcrumbs {
     background: $url_3;
     color: $white;
     height: $breadcrumbs-height;
+    text-transform: uppercase;
 
-    border-top: ($breadcrumbs-height * 0.05) $white solid;
-    border-bottom: ($breadcrumbs-height * 0.05) $white solid;
+    #ws {
+      height: $breadcrumbs-height;
+      width: $breadcrumbs-height;
+      background: white;
+      margin-left: -15px;
+      padding: 0;
+      width: 7.2rem;
+      background-color: $white;
+      float: left;
+ 
+      .fssi-logo {
+        margin: 0;
+        background: $url_2;
+        height: $breadcrumbs-height;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+      }
+
+    }
+    @media (min-width: 1200px) {
+        
+      #ws {
+        display: none;
+      }
+      border-top: ($breadcrumbs-height * 0.05) $white solid;
+      border-bottom: ($breadcrumbs-height * 0.05) $white solid;
+    }
 
     ul {
       list-style: none;
-      margin: ($breadcrumbs-height * 0.15);
+      margin: ($breadcrumbs-height * 0.2);
       padding: 0;
       float: left;
 
@@ -580,6 +652,7 @@ $footer-height: 3rem;
           .fa-plus:before {
             font-family: FontAwesome;
             Content: "\f055";
+
           }
 
           #headingTitle {
@@ -783,6 +856,30 @@ $footer-height: 3rem;
 
   }
 
+  #quiz {
+
+    .rich-background {
+      background: $white;
+      padding: 0;
+
+      .container {
+        .correct {
+          border: none;
+          border-left: 0.2rem solid $red;
+          background: lighten($red, 30%);
+
+        }
+
+        .correct1 {
+          border: none;
+          border-left: 0.2rem solid $green-light;
+          background: lighten($green-light, 30%);
+        }
+
+      }
+
+    }
+  }
 }
 
 //#FSSI
@@ -818,36 +915,47 @@ $footer-height: 3rem;
     //margin: 1rem;
   }
 }
-#footer-page
-{
-  position: absolute;
- 
+
+#footer-page {
+  //position: absolute;
+
   bottom: 1rem;
   z-index: 2000;
-  #next-prev
-  {
-    width: 10rem;
+
+  #next-prev {
+    width: 6rem;
     margin: auto;
     bottom: 1rem;
-  .btn-next, .btn-prev
-  {
-    background-size: contain;
-    border: none;
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
--moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
-  }
-  .btn-next
-  {
-    background-image: $url_15;
-  }
-  .btn-prev
-  {
-    background-image: $url_16;
-  }
+
+    .slash {
+      background-size: contain;
+      border: none;
+      height: 2rem;
+      width: 2rem;
+      background-color: aqua;
+    }
+
+    .btn-next,
+    .btn-prev {
+      background-size: contain;
+      border: none;
+      height: 2rem;
+      width: 2rem;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+      -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+      background-size: contain;
+    }
+
+    .btn-next {
+      background-image: $url_15;
+    }
+
+    .btn-prev {
+      background-image: $url_16;
+    }
   }
 }
 

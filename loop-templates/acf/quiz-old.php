@@ -4,6 +4,7 @@
       <div class="checkpage row glossarize">
         <!-- carousel for pages -->
         <div id="questions" class="carousel col-12" data-ride="carousel" data-interval="false">
+
           <?php
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
@@ -15,7 +16,7 @@ if (have_rows('field_5bb2038203e86')):
 
             <div class="row">
               <div class="col-12">
-                <h3 class="h2 card-title text-center">Question
+                <h3 class="card-title text-center">Question
                   <?php echo $q; ?>
                 </h3>
               </div>
@@ -33,11 +34,12 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 
                   <div class="questions">
 
-                    <h4 class="h3">
+                    <p class="h4">
                       <?php // Display the question
         the_sub_field('field_5bb2039703e87');?>
                     </p>
-                    <form action="#" >
+                    <form action="#">
+
                       <!-- get answers -->
                       <p>
                         <?php if (have_rows('field_5bb20a29cf3f6')):
@@ -45,8 +47,8 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
 
-                        <input class="with-gap" name="group<?php echo $q; ?>" type="radio" id="testq<?php echo $q; ?>a<?php echo $a; ?>"  class="radio"/>
-                        <label for="testq<?php echo $q; ?>a<?php echo $a; ?>">
+                        <input class="with-gap" name="group<?php echo $q; ?>" type="radio" id="testq<?php echo $q; ?>a<? echo $a; ?>" />
+                        <label for="testq<? echo $a; ?>a<? echo $a; ?>">
                           <?php the_sub_field('field_5bb20a3acf3f7');?></label>
                         <br>
 
@@ -160,7 +162,7 @@ endif;
     </div>
   </div>
 
-  <script type="text/javascript">
+  <script>
     <?php
 
 // check if there are questions
@@ -204,10 +206,9 @@ else:
 endif;
 
 ?>
-   //disable radios after click
-
-$(":radio").click(function(){
- var radioName = $(this).attr("name"); //Get radio name
- $("input:radio[name='"+radioName+"']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
-});
+    //disable radios after click
+    $(window).load(":radio").click(function () {
+      var radioName = $(this).attr("name"); //Get radio name
+      $(":radio[name='" + radioName + "']").attr("disabled", true); //Disable all with the same name
+    });
   </script>

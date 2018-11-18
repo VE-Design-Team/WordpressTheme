@@ -1,6 +1,6 @@
 <div id="nav">
   <div id="reveal" class="visibility p-0">
-  <div class="nav-header"></div>
+ 
     <?php 
 //get menu assigned to this page
  $menu = get_field('field_5bc317e313d41');

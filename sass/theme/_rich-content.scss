@@ -1,5 +1,156 @@
 // Rich content Stylesheets
 //Global
+//feature-image
+#feature-image {
+  margin: -15px -15px 15px -15px;
+ 
+  #fi-left {
+
+    .background {
+      width: 75%;
+
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      //margin-bottom:  56.25%; /* 16:9 Aspect Ratio */
+      background-size: cover;
+      margin: 2rem 20% 0 5%;
+
+    }
+    .white-heading {
+      background: $white;
+      height: 6rem;
+      padding: 1rem;
+      left: -1rem;
+      position: relative;
+      //float: right;
+      margin: auto;
+      text-align: center;
+      display: inline-block;
+      //margin-top:-10%;
+
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 4rem;
+        padding: 0;
+        margin: 0;
+        line-height: 4rem;
+      }
+    }
+
+  }
+
+  #fi-right {
+    .background {
+      width: 75%;
+
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      //margin-bottom:  56.25%; /* 16:9 Aspect Ratio */
+      background-size: cover;
+      margin: 2rem 5% 0 20%;
+
+    }
+    .white-heading {
+      background: $white;
+      height: 6rem;
+      padding: 1rem;
+      left: -1rem;
+      position: relative;
+      //float: right;
+      margin: auto;
+      text-align: center;
+      display: inline-block;
+      //margin-top:-10%;
+
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 4rem;
+        padding: 0;
+        margin: 0;
+        line-height: 4rem;
+      }
+    }
+  }
+
+  #fi-center {
+    
+    .background {
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      //margin-bottom:  56.25%; /* 16:9 Aspect Ratio */
+      background-size: cover;
+    }
+    .centre-space{
+      background: rgba(255,255,255, 0.9);
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      top: -3rem;
+      position: relative;
+      height: 8rem;
+    .white-heading {
+      //background: $white;
+      height: 4rem;
+      padding: 2rem;
+      //float: right;
+      margin: auto;
+      text-align: center;
+      display: inline-block;
+      //margin-top:-10%;
+
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding: 0;
+        margin: 0;
+        line-height: 3rem;
+      }
+    }
+  }
+  }
+
+  #fi-banner {
+
+    .background {
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      //margin-bottom:  56.25%; /* 16:9 Aspect Ratio */
+      background-size: cover;
+    }
+
+    .white-heading {
+      background: $white;
+      height: 6rem;
+      padding: 1rem;
+      float: right;
+      margin: 2rem;
+      display: inline-block;
+      //margin-top:-10%;
+
+      h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 4rem;
+        padding: 0;
+        margin: 0;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+.whitebg
+{
+  background: white;
+  margin: 2rem auto;
+  padding: 1rem;
+
+}
+//Instruction
 .instruction {
   font-weight: 400;
   background: $instruction-background !important;
@@ -45,24 +196,24 @@
 .btn:hover,
 .btn:focus {
   background-color: $button-primary;
-  color: #ffffff ;
+  color: #ffffff;
   transition: 300ms;
   border-color: $button-primary;
 }
 
 .btn-default,
 .btn {
-  background-color: $button-default ;
-  color: #ffffff ;
+  background-color: $button-default;
+  color: #ffffff;
   transition: 300ms;
   border-color: darken($button-default, 15%);
 }
 
 .btn-primary {
-  background-color: $button-primary ;
-  color: #ffffff ;
+  background-color: $button-primary;
+  color: #ffffff;
   transition: 300ms;
-  border-color: $button-primary ;
+  border-color: $button-primary;
 }
 
 .numborder {
@@ -261,7 +412,8 @@
 //Carousel
 
 #carousel {
- padding-top: 1rem;
+  padding-top: 1rem;
+
   .navs {
     max-height: 100px;
 
@@ -269,21 +421,22 @@
       .col-1 {
         padding: 5px;
         max-height: 100px;
-    
+
         img {
           width: 100px;
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
         }
-        
-      }.active
-        {
-          img {
-            width: 100px;
-            -webkit-filter: grayscale(00%);
-            filter: grayscale(00%);
-          }
+
+      }
+
+      .active {
+        img {
+          width: 100px;
+          -webkit-filter: grayscale(00%);
+          filter: grayscale(00%);
         }
+      }
 
       .col-10 {
         margin: 0;
@@ -294,9 +447,9 @@
 
   .scrollers {
     height: 100px;
-  
+
     a {
-     
+
       .fa-chevron-circle-left,
       .fa-chevron-circle-right {
 
@@ -308,17 +461,17 @@
   .indicators {
     margin: 0;
     padding: 0;
-    .carousel-indicator
-    {
-      display:flex;
-      align-items:center;
+
+    .carousel-indicator {
+      display: flex;
+      align-items: center;
     }
-    .left-right
-    { 
-      display:flex;
-      align-items:center;
-     top: -0.5rem;
-   
+
+    .left-right {
+      display: flex;
+      align-items: center;
+      top: -0.5rem;
+
       text-align: center;
     }
 
@@ -350,6 +503,7 @@
     padding: 1rem;
 
   }
+
   @media (min-width: 768px) and (max-width: 991.98px) {
     .navs {
       max-height: 90px;
@@ -567,6 +721,7 @@
 
         .show {
           display: inline;
+
         }
       }
 
@@ -581,50 +736,83 @@
     position: relative;
 
     .controls {
-      padding: 0 20% 0 20%;
-
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-        padding: 0 30% 0 30%;
-      }
-
-      margin: 0 0 2rem 0;
+      //padding: 0 20% 0 20%;
+      margin: 0 auto;
 
       .page-number {
-        margin: 0 1% 0 1%;
+        //margin: 0 1% 0 1%;
       }
 
       a.carousel-control-prev,
       a.carousel-control-next {
-        color: $rmit-red;
+
         //background: red;
+        width: 1.75rem;
+        height: 1.75rem;
         padding: 0rem;
-        left: auto;
-        right: auto;
-        margin: 0 auto;
+        background: $rmit-red;
+        margin: auto;
         position: relative;
+        border-radius: $radius;
+
+      }
+
+      a.carousel-control-prev:before,
+      a.carousel-control-next:before {
+        color: $white;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+
+      }
+
+      .numborder {
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 0;
+      }
+
+      a.carousel-control-prev:before {
+        text-align: center;
+        position: relative;
+        content: "\f053";
+      }
+
+      a.carousel-control-next:before {
+        content: "\f054";
+        text-align: center;
+        position: relative;
+        left: 0.1rem;
       }
 
     }
 
   }
 
-  .correct {
-    background: lighten($red, 40%);
-    border: 2px solid $red;
-    color: $black;
-    font-weight: 700;
-  }
+  .results {
+    .correct {
+      background: lighten($red, 40%);
+      border: 2px solid $red;
+      color: $black;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
 
-  .correct1 {
-    color: $black;
-    background: lighten($green, 30%);
-    border: 2px solid $green;
-    font-weight: 700;
+    .correct1 {
+      color: $black;
+      background: lighten($green, 30%);
+      border: 2px solid $green;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
 
+    }
   }
 
   .btn-quiz {
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
     margin: 0 1rem 2rem 0;
@@ -875,8 +1063,7 @@
 .accord-item {
   border-top: 1px solid $gray-300;
 
-  .h4
-   {
+  .h4 {
     margin-bottom: 0;
     color: $rmit-lightblue;
   }
@@ -1147,6 +1334,7 @@
       color: $gray-900;
       margin-bottom: -2px; // background: $mid-grey;
       border-bottom: $nav-tabs-border-color 2px solid;
+
       i {
         margin-left: 0.5rem;
       }
@@ -1286,103 +1474,106 @@
     height: 350px;
     width: 270px;
     position: relative;
-    
-  .front,
-  .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: $half-radius;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
 
-    .card-body{
+    .front,
+    .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: $half-radius;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1rem;
 
-      table.card-text{
-       
-        tr{
-          td{
-            border: none;
+      .card-body {
+
+        table.card-text {
+
+          tr {
+            td {
+              border: none;
+            }
           }
         }
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5 {
+        padding: 0 0.5rem 0 0.5rem;
+      }
+
+      .card-text {
+        padding-top: 0.5rem;
+        width: 100%;
+      }
+
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    .h1,
-    .h2,
-    .h3,
-    .h4,
-    .h5 {
-      padding: 0 0.5rem 0 0.5rem;
+    .front {
+      background: $flip-card-front-colour;
+      color: $flip-card-front-text-colour;
+
     }
-    .card-text
-    {
-      padding-top: 0.5rem;
+
+    .back {
+      background: $flip-card-back-colour;
+      color: $flip-card-back-text-colour;
+
+    }
+
+    .middler {
       width: 100%;
+      height: 2rem;
+      bottom: 1rem;
+      position: absolute;
+      text-align: center;
+
+      .btn {
+        -moz-user-select: none;
+
+        // margin-left: 75px;
+
+      }
     }
 
-  }
-  .front{
-    background: $flip-card-front-colour;
-    color: $flip-card-front-text-colour;
-   
-  }
-  .back
-  {
-    background: $flip-card-back-colour;
-    color: $flip-card-back-text-colour;
-  
-  }
+    .card-img-top {
+      //height: 170px;
+      padding: 0;
+      border-radius: $half-radius $half-radius 0 0;
+    }
 
-  .middler {
-    width: 100%;
-    height: 2rem;
-    bottom: 1rem;
-    position: absolute;
-    text-align: center;
-
-    .btn {
-      -moz-user-select: none;
-
-      // margin-left: 75px;
+    .card-body {
+      height: 170px;
+      padding: 0;
 
     }
-  }
 
-  .card-img-top {
-    //height: 170px;
-    padding: 0;
-    border-radius: $half-radius $half-radius 0 0;
-  }
-
-  .card-body {
-    height: 170px;
-    padding: 0;
-   
-  }
-
-  .scroll-box {
-    overflow-y: hidden;
-    height: 100px;
+    .scroll-box {
+      overflow-y: hidden;
+      height: 100px;
+    }
   }
 }
-}
-#flipcards > div > div > div.card.front > div,
-#flipcards > div > div > div.card.back > div 
 
-{
-  .x
-  {font-size: 0.9rem;}
-  .xx
-  { font-size: 1rem}
-  .xxx
-  {
+#flipcards>div>div>div.card.front>div,
+#flipcards>div>div>div.card.back>div {
+  .x {
+    font-size: 0.9rem;
+  }
+
+  .xx {
+    font-size: 1rem
+  }
+
+  .xxx {
     font-size: 1.2rem;
   }
 
