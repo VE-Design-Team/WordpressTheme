@@ -470,7 +470,7 @@ function custom_post_type() {
 		'label'                 => __( 'scorm page', 'text_domain' ),
 		'description'           => __( 'scorm page geenrator', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'page-attributes' ),
+		'supports'              => array( 'title', 'editor', 'page-attributes','thumbnail'  ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,

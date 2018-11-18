@@ -8,11 +8,12 @@
 <div class="container-fluid" id="fssi">
   <div class="row">
     <div  id="banner" class="col-12">
-     <a><div class="fssi-logo"></div></a>
+     <div id="ws"><div class="fssi-logo"></div></div>
      <div class="module-title"><h1>          <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
 </h1></div>
     </div>
     <div class="col-12" id="breadcrumbs">
+    <div id="ws"><div class="fssi-logo"></div></div>
       <ul class="thin-text">
            <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo '<li >'.get_the_title($grandparent).'</li> <li >'.get_the_title($parent).'</li>'; }else {echo '<li>'.get_the_title($parent).'</li>'; }?>
     <li><?php wp_title(''); ?></li>
