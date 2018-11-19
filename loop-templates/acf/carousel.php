@@ -11,15 +11,14 @@
           <i class="fa fa-chevron-circle-left fa-3x"></i>
         </a>
       </div>
-          <?php
-$i = 1;
+          <?php $i = 1;
 
 while (have_rows('field_5a55a5855861a')):
  the_row(); //get carousel indicators
   ?>
 
           <div class="col-1 col-auto carousel-indicator <?php
- if ($i == " 1 ") {
+ if ($i == "1") {
   echo "active ";
  } ?>" data-target="#carousel" data-slide-to="<?php
  echo $i - 1; ?>">
@@ -123,7 +122,7 @@ endif;
   </div>
   <script>
 
-    // $('.carousel-indicator:first').addClass('active');
-    // $('.carousel-item:first').addClass('active');
+     $('.carousel-indicator:second').addClass('active');
+     $('.carousel-item:first').addClass('active');
 
   </script>

@@ -424,8 +424,8 @@
 
         img {
           width: 100px;
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+          //-webkit-filter: grayscale(100%);
+          //filter: grayscale(100%);
         }
 
       }
@@ -433,8 +433,8 @@
       .active {
         img {
           width: 100px;
-          -webkit-filter: grayscale(00%);
-          filter: grayscale(00%);
+          //-webkit-filter: grayscale(00%);
+          //filter: grayscale(00%);
         }
       }
 
@@ -465,6 +465,7 @@
     .carousel-indicator {
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
 
     .left-right {
@@ -703,11 +704,24 @@
     font-size: 1.2rem;
   }
 
+  .carousel-item{
+    border: solid $dark-grey 0.1rem;
+    box-shadow: 5px 5px 5px $dark-grey ;
+    
+  }
   .rich-background {
-    background: $rich-background;
+    background: $white;
     padding: 2rem;
 
-    #questions {
+    .questions {
+      margin-bottom: 2rem;
+      padding: 0;
+
+      .h2
+      {
+        text-align: left;
+      }
+
       .carousel-inner {
 
         .feedback,
@@ -730,9 +744,9 @@
   }
 
   .checkpage {
-    border-top: $accent-color $accent-thickness solid;
-    background: $light-grey; //margin: 1rem 0 1rem 0;
-    padding: 1rem;
+    //border-top: $accent-color $accent-thickness solid;
+    background: $white;
+    //padding: 1rem;
     position: relative;
 
     .controls {
@@ -757,58 +771,94 @@
 
       }
 
-      a.carousel-control-prev:before,
-      a.carousel-control-next:before {
-        color: $white;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-
-      }
-
-      .numborder {
-        margin: auto;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        margin-top: 0;
-      }
-
-      a.carousel-control-prev:before {
-        text-align: center;
-        position: relative;
-        content: "\f053";
-      }
-
-      a.carousel-control-next:before {
-        content: "\f054";
-        text-align: center;
-        position: relative;
-        left: 0.1rem;
-      }
-
     }
 
   }
-
-  .results {
-    .correct {
-      background: lighten($red, 40%);
-      border: 2px solid $red;
+ .qline{}
+  .q-footer {
+    
+    .correct, .correct1 {
+      //background: lighten($red, 40%);
+      
       color: $black;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      background: $white;
+      border: none;
     }
-
+      
     .correct1 {
-      color: $black;
-      background: lighten($green, 30%);
-      border: 2px solid $green;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+      h4
+      {
+        color: $green;
+      }
 
     }
+    .correct {
+      h4
+      {
+        color: $red;
+      }
+      
+    }
+    
+  }
+  .next-prev{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;;
+
+    a.carousel-control-prev,
+    a.carousel-control-next {
+
+      //background: red;
+      width: 1.2rem;
+      height: 1.2rem;
+      padding: 0rem;
+      background: $rmit-red;
+      margin: auto;
+      position: relative;
+      border-radius: .6rem;
+      float: right;
+      font-size: 0.6rem;
+      line-height: 0.6rem;
+     
+    }
+
+    a.carousel-control-prev:before,
+    a.carousel-control-next:before {
+      color: $white;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+
+    }
+    a.carousel-control-prev:before,
+    a.carousel-control-next:before {
+      color: $white;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+
+    }
+    a.carousel-control-prev:before {
+      text-align: center;
+      position: relative;
+      content: "\f053";
+      font-family: FontAwesome;
+      
+    }
+
+    a.carousel-control-next:before {
+      content: "\f054";
+      font-family: FontAwesome;
+      text-align: center;
+      position: relative;
+      
+    }
+
   }
 
   .btn-quiz {
@@ -816,8 +866,28 @@
     bottom: 0;
     right: 0;
     margin: 0 1rem 2rem 0;
+    cursor: pointer;
+    color: $green-light;
 
   }
+  .progress{
+    height: 4rem;
+    background: $white;
+  .controls{
+    
+    //width: 100%;
+    margin-top: 2rem;
+    margin: auto;
+    position: relative;
+    
+  .numborder{
+    background: $dark-grey;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.5rem;
+  }
+  }
+}
 }
 
 //quiz forms
@@ -1724,6 +1794,11 @@
     padding: 1rem;
     position: relative;
     margin: 1rem;
+    
+  }
+  .bordered{
+    border-bottom: 0.2rem solid red;
+
   }
 
   .bipolar-adjective {

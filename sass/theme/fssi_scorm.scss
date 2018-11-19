@@ -160,7 +160,7 @@ $footer-height: 3rem;
             a:before {
               font-family: FontAwesome;
               content: "\f055";
-              margin-right: 2.2rem;
+              margin-right: 1.3rem;
               font-size: 1rem;
               color: $green-light;
 
@@ -176,6 +176,7 @@ $footer-height: 3rem;
               //content: "\f056";
               //margin-right: 0.4rem;
               font-size: 1rem;
+            
               color: white;
 
             }
@@ -231,9 +232,9 @@ $footer-height: 3rem;
                   }
 
                   span:before {
-                    font-family: FontAwesome;
+                   // font-family: FontAwesome;
 
-                    content: "\f111";
+                   // content: "\f111";
                     color: $green;
                     position: relative;
                     left: -1.6rem;
@@ -245,9 +246,12 @@ $footer-height: 3rem;
 
                 a:before {
                   font-family: FontAwesome;
-                  content: "";
+                  content: "\f111";
                   margin-right: 0.4rem;
-                  font-size: 1rem;
+                  font-size: 0.8rem;
+                  left: -0.44rem;
+                  position: absolute;
+                  color: $green;
 
                 }
 
@@ -264,7 +268,7 @@ $footer-height: 3rem;
 
                     a:before {
 
-                      content: "b";
+                      content: "";
 
                     }
                   }
@@ -355,15 +359,17 @@ $footer-height: 3rem;
           }
 
           li.menu-item-has-children.has-sub.open {
-
-            a {
-              //background: red;
+            a:before {
+             
+              content: "\f056";
+            
             }
-
+      
             border-bottom: none;
 
             ul {
               border-bottom: .1rem solid
+            
             }
           }
 
@@ -865,15 +871,15 @@ $footer-height: 3rem;
       .container {
         .correct {
           border: none;
-          border-left: 0.2rem solid $red;
-          background: lighten($red, 30%);
+          //border-left: 0.2rem solid $red;
+          //background: lighten($red, 30%);
 
         }
 
         .correct1 {
           border: none;
-          border-left: 0.2rem solid $green-light;
-          background: lighten($green-light, 30%);
+          //border-left: 0.2rem solid $green-light;
+         // background: lighten($green-light, 30%);
         }
 
       }
