@@ -3384,6 +3384,41 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
+        },
+        {
+            "key": "field_5bf72deeb1307",
+            "label": "Accordion style",
+            "name": "accordion_style",
+            "type": "select",
+            "instructions": "Choose a style, expand or dissolve",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "expand": "Expand",
+                "dissolve": "Dissolve"
+            },
+            "default_value": [
+                "expand"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -3415,5 +3450,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541611712
+    "modified": 1542925869
 }
