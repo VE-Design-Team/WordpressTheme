@@ -1,7 +1,7 @@
 <div id="nav">
   <div id="reveal" class="visibility p-0">
- 
-    <?php 
+
+    <?php
 //get menu assigned to this page
  $menu = get_field('field_5bc317e313d41');
 // and place in the page
@@ -43,7 +43,7 @@ wp_nav_menu(array(
   })(jQuery);
 //ensure nav loads closed
 $('#reveal').addClass('navshow').removeClass('test2');
-//ensure the nav is always open for the current page  
+//ensure the nav is always open for the current page
 $("li.menu-item" ).children('ul').css({ display: "none" });
 $('li.active').closest('ul').addClass('open').css({ display: "block" })
 </script>

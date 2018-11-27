@@ -1,7 +1,7 @@
 
 <?php
 
- 
+
 if ( has_post_thumbnail() ) { ?>
 
 <?php echo get_template_part('loop-templates/scorm/feature-image');?>
