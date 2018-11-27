@@ -823,11 +823,13 @@ height: 120%;
 
   #introtabs {
     #tabs {
-      width: 80%;
+    /*  width: 80%; */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 
       ul.nav {
         border: none;
-        width: 20rem;
+        width: 30rem;
         margin: auto;
 
         li.nav-item {
