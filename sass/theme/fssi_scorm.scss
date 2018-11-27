@@ -25,6 +25,97 @@ $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
+
+h3 a{
+  color: #055918;
+}
+
+.background {
+  height: 100%;
+  background-size: cover;
+}
+.row .splash {
+  height: calc(100vh - 160px);
+  background-color: #444;
+  max-width: 100%!important;
+    padding: 0rem!important;
+}
+.container .splash {
+  max-width: 100%!important;
+  min-width: 100%!important;
+  padding: 0rem!important;
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+}
+
+.fssi-logo-text {
+background-image: url("../fssi/img/fssi-white.svg");
+background-repeat: no-repeat;
+width: 220px;
+height: 180px;
+border-right: 4px solid #fff;
+}
+.fssi-splash-button {
+  padding: 8px 15px;
+  margin: 15px 20px;
+  background-color:  #fff;
+    text-transform: uppercase;
+    width: fit-content;
+    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+-moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+}
+.splash-right{
+  margin: auto 20px;
+
+}
+.splash-container {
+  width: 100%;
+}
+
+.splash {
+  height: 100%;
+}
+.splash-left{
+  margin: auto 0px;
+}
+.splash-banner {
+  background-color: #055918a3;
+  top: 30%;
+    position: relative;
+}
+.splash-banner .inner {
+display:flex; padding:30px  0 ;
+flex-wrap: wrap;
+}
+#fssi #content-nav {
+  width: 100%;
+}
+#fssi #breadcrumbs .btn-fs:active {
+  background-image: url("../fssi/img/theme/hamburger.png");
+}
+
+#fssi #nav .visibility #cssmenu ul li.active {
+
+    background: $gray-100;
+}
+
+#footer-page #next-prev .btn-next
+{
+  transform: rotate(-90deg);
+}
+#footer-page #next-prev .btn-prev
+{
+  transform: rotate(-90deg);
+}
+
+.fa.fa-chevron-circle-left:after, .fa.fa-chevron-circle-right:after {
+    background-color: $green-light !important;
+  }
+
+.container {
+padding: 4rem !important;
+}
 #fssi {
   //height: 100%;
   background: $white;
@@ -45,8 +136,11 @@ $footer-height: 3rem;
 
     top: $breadcrumbs-height;
     right: 0;
+
+
     @media (min-width: 1200px) {
       top: ($banner-height + $breadcrumbs-height);
+height: 120%;
     }
     .nav-header {
       background-image: $url_7;
@@ -176,7 +270,7 @@ $footer-height: 3rem;
               //content: "\f056";
               //margin-right: 0.4rem;
               font-size: 1rem;
-            
+
               color: white;
 
             }
@@ -360,16 +454,16 @@ $footer-height: 3rem;
 
           li.menu-item-has-children.has-sub.open {
             a:before {
-             
+
               content: "\f056";
-            
+
             }
-      
+
             border-bottom: none;
 
             ul {
               border-bottom: .1rem solid
-            
+
             }
           }
 
@@ -476,7 +570,7 @@ $footer-height: 3rem;
       width: 7.2rem;
       background-color: $white;
       float: left;
- 
+
       .fssi-logo {
         margin: 0;
         background: $url_2;
@@ -488,7 +582,7 @@ $footer-height: 3rem;
 
     }
     @media (min-width: 1200px) {
-        
+
       #ws {
         display: none;
       }
@@ -562,7 +656,7 @@ $footer-height: 3rem;
 
     width: 100%;
     padding: 10px 15px $footer-height 15px;
-    font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";
+    /*font-family: Verdana, "Segoe UI", sans-serif, "Open Sans";*/
 
     @media (min-width: 1200px) {
       margin-left: $nav-width;
@@ -762,14 +856,14 @@ $footer-height: 3rem;
               //display: none;
               position: relative;
               top: 5rem;
-              background: $green-light;
+            /*  background: $green-light; */
               font-family: $font2;
               width: 5rem;
               margin: auto;
               padding: 0.5rem;
               width: 100%;
               text-align: center;
-              color: $white;
+              color: $black;
               font-size: 1rem;
               height: 4rem;
               vertical-align: middle !important;
