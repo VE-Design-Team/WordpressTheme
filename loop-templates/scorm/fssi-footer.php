@@ -4,7 +4,9 @@
 
 </div><!-- #fssi -->
 
-<?php if( get_field('field_5be47786ed504') == 'home-page' ): ?>
+
+
+<?php if ( has_post_thumbnail($post->ID) ): ?>
   <!--
 
 <div style="clear:both;"></div>

@@ -60,11 +60,9 @@
       </div>
     </div>
   </div>
-  <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
+
   <?php }
   ?>
 
-
-
-
 <!------------------------------------------ content ----------------------------------->
+  <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
