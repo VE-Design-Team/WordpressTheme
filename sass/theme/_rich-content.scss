@@ -249,7 +249,8 @@
   background: $rich-background;
   padding: 10px;
 
-  #cards {
+  #cards.expand {
+
     .card {
       border: 0;
       border-radius: 0;
@@ -302,6 +303,57 @@
         background: $white;
       }
     }
+  }
+  #cards.dissolve{
+
+    .card{
+      border-radius: 0;
+      margin-bottom: 5px;
+      border: none;
+      //padding: 1rem; 
+    }
+    .card-header{
+     
+      z-index: 1000;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+  
+      background-color: $accordion-header-active;
+      opacity: 1;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+     
+      .centerer
+      {
+      position:absolute; height:100%; width:100%;
+    display: table;
+        
+      h3{
+        
+        color: $accordion-header-active-font;
+        height: inherit;
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
+        
+      }
+    }
+    }
+    .active{
+     //display: none;
+     opacity: 0;
+ 
+    }
+
+    .card-body{
+      z-index: 10;
+      position: relative;
+    }
+
   }
 }
 
@@ -867,7 +919,7 @@
     right: 0;
     margin: 0 1rem 2rem 0;
     cursor: pointer;
-    color: $green-light;
+    color: lighten($green, 20%);
 
   }
   .progress{
