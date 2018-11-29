@@ -38,7 +38,7 @@ endif;
 
       <?php if (have_rows('field_5a541f36eef91')): ?>
       <div id="accordion">
-        <div id="cards">
+        <div id="cards" class="expand"> 
           <!-- get text accordion -->
           <?php while (have_rows('field_5a541f36eef91')): the_row();?>
           <div class="card" >

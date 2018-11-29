@@ -1,11 +1,9 @@
 <div id="carousel" class="carousel mt-1" >
   <div class="container-fluid navs">
     <div class="row top-nav ">
-      <div class="col-1 scrollers">
-  
-      </div>
+ 
       <div class="col-12">
-        <div class="row justify-content-center carousel-indicators indicators">
+        <div class="row justify-content-center  indicators">
         <div class="col-1 scrollers left-right">
         <a href="#carousel" role="button" data-slide="prev">
           <i class="fa fa-chevron-circle-left fa-3x"></i>
@@ -39,7 +37,7 @@ while (have_rows('field_5a55a5855861a')):
 
               <img src="<?php
    echo get_stylesheet_directory_uri(); ?>/img/carousel/<?php
-   echo " " . $i + 1; ?>.png" alt="View this slide"
+   echo " " . $i + 0; ?>.png" alt="View this slide"
                 class="img-fluid">
 
               <?php
@@ -63,9 +61,7 @@ endwhile; //noe get right indicator
       </div>
         </div>
       </div>
-      <div class="col-1 scrollers">
 
-      </div>
     </div>
 
   </div>
