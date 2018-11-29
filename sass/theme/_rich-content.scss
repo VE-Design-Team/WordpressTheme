@@ -874,8 +874,9 @@
 
   .next-prev {
     position: absolute;
-    bottom: 1rem;
-    right: 2rem;
+    bottom: 2rem;
+    right: 1rem;
+    padding-right: 2rem;
     ;
 
     a.carousel-control-prev,
@@ -935,14 +936,9 @@
 
   .btn-quiz {
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;;
     right: 2rem;
-    text-align: right;
-    margin: 0 1rem 2rem 0;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: darken($green, 20%);
-
+    color: $white;
   }
 
   .progress {

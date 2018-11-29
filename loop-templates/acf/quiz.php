@@ -63,7 +63,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                   </div>
                   <div class="answers">
                     <div class="card-action">
-                      <a id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4 pl-3 btn-quiz">Submit</a>
+                      <a id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-primary btn-quiz">Submit</a>
                     </div>
                   </div>
                 </div>
