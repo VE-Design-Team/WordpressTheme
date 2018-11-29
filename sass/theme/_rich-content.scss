@@ -858,7 +858,7 @@
 
     .correct1 {
       h4 {
-        color: $green;
+        color: darken( $green, 30%);
       }
 
     }
@@ -875,7 +875,7 @@
   .next-prev {
     position: absolute;
     bottom: 1rem;
-    right: 1rem;
+    right: 2rem;
     ;
 
     a.carousel-control-prev,
@@ -934,12 +934,14 @@
   }
 
   .btn-quiz {
-    position: relative;
+    position: absolute;
     bottom: 0;
-    right: 0;
+    right: 2rem;
+    text-align: right;
     margin: 0 1rem 2rem 0;
+    text-transform: uppercase;
     cursor: pointer;
-    color: lighten($green, 20%);
+    color: darken($green, 20%);
 
   }
 
