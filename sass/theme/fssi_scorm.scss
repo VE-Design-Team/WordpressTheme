@@ -954,8 +954,15 @@ height: 120%;
     }
 
   }
+  label {
+    display: inline !important;
+  }
+  #quiz .btn-quiz {
+      position: inherit !important;}
 
   #quiz {
+
+
 
     .rich-background {
       background: $white;
