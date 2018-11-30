@@ -14,7 +14,7 @@
 
     <li class="nav-item">
       <a class="nav-link" id="<?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>-tab" data-toggle="tab"
-        href="#<?php echo str_replace(str_split('\\/:*?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tab" aria-controls="
+        href="#<?php echo str_replace(str_split('\\/:*()?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tab" aria-controls="
         <?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>" aria-selected="true">
         <div class="title">
           <?php echo the_sub_field('field_5a67bc81f0b61');?>
@@ -41,8 +41,8 @@
  //   $background = "bg-info";
 //}
 ?>
-    <div class="tab-pane fade show" id="<?php echo str_replace(str_split('\\/:*?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tabpanel" aria-labelledby="
-      <?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>-tab">
+    <div class="tab-pane fade show" id="<?php echo str_replace(str_split('\\()/:*?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tabpanel" aria-labelledby="
+      <?php echo str_replace(str_split('\\/:*?()"<>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>-tab">
       <div class="row align-items-center <?php echo $background;?>">
         <div class="p-3 bg-white">
           <h3 class="text-dark">

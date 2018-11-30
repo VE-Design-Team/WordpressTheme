@@ -19,10 +19,17 @@ echo "<br><b>Stylesheet directory: </b>".$theme->stylesheet_dir;
 
 // Get the template directory name
 echo "<br><b>raw location: </b>".$theme->template;
+?>
 
-?>
 <h2>Content</h2>
-<b>Number of pages:</b>
-<?php
-$count_pages = wp_count_posts('page');
-?>
+<ul>
+    <?php
+    global $id;
+    wp_list_pages( array(
+        'title_li'    => '',
+        'child_of'    => $id,
+        //'show_date'   => 'modified',
+        //'date_format' => $date_format
+    ) );
+    ?>
+</ul>
