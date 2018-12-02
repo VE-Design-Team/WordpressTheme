@@ -55,7 +55,7 @@ width: 220px;
 height: 180px;
 border-right: 4px solid #fff;
 }
-.fssi-splash-button {
+.fssi-splash-title {
   padding: 8px 15px;
   margin: 15px 20px;
   background-color:  #fff;
@@ -64,6 +64,28 @@ border-right: 4px solid #fff;
     -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
 -moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
 box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+}
+.fssi-splash-button{
+  margin-top: 25px;
+}
+
+.fssi-splash-button a {
+  color: #fff !important;
+  background-color: #055918;
+  border: 1px solid #fff;
+    padding: 8px 15px;
+    margin: 15px 20px !important;
+    text-transform: uppercase;
+    width: fit-content;
+    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+-moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+}
+.fssi-splash-button a:hover{
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+-moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+box-shadow: 8px 8px 10px -2px rgba(0,0,0,0.26);
+
 }
 .splash-right{
   margin: auto 20px;

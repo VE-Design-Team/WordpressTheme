@@ -20,12 +20,12 @@
                     </div>
                   </div>
                     <div class="splash-right col-lg-4 col-md-4 col-sm-4 col-12">
-                      <h2 class="fssi-splash-button">
+                      <h2 class="fssi-splash-title">
                         <?php the_title();?>
                       </h2>
                       <h3  class="fssi-splash-button">
                         <?php if( get_field('field_5bdf9ea04ef39') ): ?>
-                        <a title="Next page" href="<?php the_field('field_5bdf9ea04ef39'); ?>">
+                        <a title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">
                         Start here</a>
                         <?php endif; ?>
                       </h3>
