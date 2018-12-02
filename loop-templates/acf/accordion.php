@@ -27,7 +27,9 @@
 				<?php endwhile;?>
 	</div><!--cards -->
 </div><!--accordion-->
-<?php else: ?>
+<?php 
+//else expand
+else: ?>
 <?php endif;?>
 
 <script>
@@ -38,8 +40,7 @@ $('.card-header').click(function(){
 
 
 
-<?php elseif( get_field('field_5bf72deeb1307') == 'expand' ): ?>
-
+<?php else: ?>
 <?php if (have_rows('field_5a13c61e91a66')): ?>
 <div id="accordion" class="mr-1">
 <div id="cards" class="expand">

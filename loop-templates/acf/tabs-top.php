@@ -16,9 +16,9 @@
 
     <?php endwhile;?>
   </ul>
-  <div class="tab-content glossarize" id="myTabContent<?php echo str_replace(str_split('\\/:*?" <>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
+  <div class="tab-content glossarize" id="myTabContent<?php echo str_replace(str_split('\\()/:*?"<>,.| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
     <?php while (have_rows('field_5a13c7fda9110')) : the_row();?>
-    <div class="tab-pane fade show" id="<?php echo str_replace(str_split('\\/:*?" <>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tabpanel" aria-labelledby="
+    <div class="tab-pane fade show" id="<?php echo str_replace(str_split('\\()/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>" role="tabpanel" aria-labelledby="
       <?php echo str_replace(str_split('\\()/:*?"<>,.| '), '', get_sub_field('field_5a14fdfcc7bba')); ?>-tab">
       <?php echo the_sub_field('field_5a14fdab64ad0');?>
     </div>

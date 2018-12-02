@@ -43,13 +43,13 @@ endif;
           <?php while (have_rows('field_5a541f36eef91')): the_row();?>
           <div class="card" >
             <div class="card-header collapsed pl-2" tabindex="0" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>"
-              role="button" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?" ()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>  " aria-expanded="true" aria-controls="collapse   <?php echo str_replace(str_split('\\/:*?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>">
+              role="button" data-toggle="collapse" data-target="#collapse<?php echo str_replace(str_split('\\/:*?" ()<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>  " aria-expanded="true" aria-controls="collapse   <?php echo str_replace(str_split('\\/:*()?"<>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>">
               <i class="fa fa-plus mr-1"></i>
               <i class="fa fa-minus mr-1 mr-1"></i>
               <?php echo get_sub_field('field_5a541fbfeef92'); ?>
             </div>
             <?php if (get_sub_field('field_5a541fc6eef93')): ?>
-            <div id="collapse<?php echo str_replace(str_split('\\/:*?" <>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="collapse" aria-labelledby="heading
+            <div id="collapse<?php echo str_replace(str_split('\\/:()*?" <>,.| '), '', get_sub_field('field_5a541fbfeef92')); ?>" class="collapse" aria-labelledby="heading
               <?php echo str_replace(' ', '', get_sub_field('field_5a541fbfeef92')); ?>" data-parent="#accordion">
               <div class="card-body glossarize multi-collapse aim-<?php
     echo $i; ?>">
