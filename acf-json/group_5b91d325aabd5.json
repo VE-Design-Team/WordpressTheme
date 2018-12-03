@@ -52,7 +52,7 @@
                 "scorm"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "allow_archives": 1,
             "multiple": 0
         },
@@ -73,7 +73,7 @@
                 "scorm"
             ],
             "taxonomy": [],
-            "allow_null": 0,
+            "allow_null": 1,
             "allow_archives": 1,
             "multiple": 0
         },
