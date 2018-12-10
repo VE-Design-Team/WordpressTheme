@@ -1,7 +1,7 @@
 <?php get_template_part( 'loop-templates/scorm/fssi', 'header' ); ?>
 
   <?php
-  if ( has_post_thumbnail($post->ID) ) { ?>
+  if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { ?>
 
   <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
   <div class="page-width splash-container">

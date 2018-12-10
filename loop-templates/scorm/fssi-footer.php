@@ -6,7 +6,7 @@
 
 
 
-<?php if ( has_post_thumbnail($post->ID) ): ?>
+<?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
   <!--
 
 <div style="clear:both;"></div>

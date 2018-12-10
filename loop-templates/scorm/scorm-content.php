@@ -1,9 +1,5 @@
-
 <?php
-
-
 if ( has_post_thumbnail() ) { ?>
-
 <?php echo get_template_part('loop-templates/scorm/feature-image');?>
 <?php }
 else { ?>
@@ -12,9 +8,6 @@ else { ?>
 </h1>
 <?php }
 ?>
-
-
-
 <article>
     <?php the_content();?>
 </article>
