@@ -203,27 +203,69 @@ function my_custom_columns($column)
 
 }
 
-add_action("manage_pages_custom_column", "my_custom_columns");
-add_filter("manage_pages_columns", "my_page_columns");
-// Allow sort by custom field
+//LAst modified columns for pages
 
-//Allow game fields to choose game pages
-
-function dynamic_author_dropdown($field)
-{
-
-    $authors = get_users(array(
-        'role' => 'author',
-    ));
-
-    if (!empty($authors)) {
-        foreach ($authors as $author) {
-            $field['choices'][$author->ID] = $author->display_name;
-        }
+add_action ( 'manage_pages_custom_column',	'rkv_heirch_columns',	10,	2	);
+add_filter ( 'manage_edit-page_columns',	'rkv_page_columns'				);
+function rkv_heirch_columns( $column, $post_id ) {
+	switch ( $column ) {
+	case 'modified':
+		$m_orig		= get_post_field( 'post_modified', $post_id, 'raw' );
+		$m_stamp	= strtotime( $m_orig );
+		$modified	= date('n/j/y @ g:i a', $m_stamp );
+	       	$modr_id	= get_post_meta( $post_id, '_edit_last', true );
+	       	$auth_id	= get_post_field( 'post_author', $post_id, 'raw' );
+	       	$user_id	= !empty( $modr_id ) ? $modr_id : $auth_id;
+	       	$user_info	= get_userdata( $user_id );
+	
+	       	echo '<p class="mod-date">';
+	       	echo '<em>'.$modified.'</em><br />';
+	       	echo 'by <strong>'.$user_info->display_name.'<strong>';
+	       	echo '</p>';
+		break;
+	// end all case breaks
     }
+ 
+    
 
-    return $field;
+
+
 }
+function rkv_page_columns( $columns ) {
+	$columns['modified']	= 'Last Modified';
+	return $columns;
+}
+// Last modified columns for SCORM pages
+
+add_action ( 'manage_scorm_custom_column',	'rkvs_heirch_columns',	10,	2	);
+add_filter ( 'manage_edit-scorm_columns',	'rkvs_page_columns'				);
+function rkvs_heirch_columns( $column, $post_id ) {
+	switch ( $column ) {
+	case 'modified':
+		$m_orig		= get_post_field( 'post_modified', $post_id, 'raw' );
+		$m_stamp	= strtotime( $m_orig );
+		$modified	= date('n/j/y @ g:i a', $m_stamp );
+	       	$modr_id	= get_post_meta( $post_id, '_edit_last', true );
+	       	$auth_id	= get_post_field( 'post_author', $post_id, 'raw' );
+	       	$user_id	= !empty( $modr_id ) ? $modr_id : $auth_id;
+	       	$user_info	= get_userdata( $user_id );
+	
+	       	echo '<p class="mod-date">';
+	       	echo '<em>'.$modified.'</em><br />';
+	       	echo 'by <strong>'.$user_info->display_name.'<strong>';
+	       	echo '</p>';
+		break;
+	// end all case breaks
+	}
+}
+function rkvs_page_columns( $columns ) {
+	$columns['modified']	= 'Last Modified';
+	return $columns;
+}
+
+
+
+
 
 // acf/load_field/key={$field_key} - filter for a specific field based on it's key name , CHANGE THIS TO YOUR FIELDS KEY!
 add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
@@ -438,8 +480,8 @@ function custom_myme_types($mime_types){
 function custom_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'scorm pages', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'scorm page', 'Post Type Singular Name', 'text_domain' ),
+		'name'                  => _x( 'SCORM pages', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'SCORM page', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'             => __( 'SCORM pages', 'text_domain' ),
 		'name_admin_bar'        => __( 'SCORM page', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
@@ -487,7 +529,25 @@ function custom_post_type() {
 	register_post_type( 'scorm', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+
+//check to see if this site is being used for SCORM or page building
+
+
+ 
+$scorm_setting = get_field('field_5b8cd3c52f308', 'option');
+
+if ($scorm_setting == "iframe") {
+    //show non SCORM features
+} else {
+    // Show scorm features    
+    add_action( 'init', 'custom_post_type', 0 );
+}
+
+
+
+
+
+
 
 //nav menu walker accordion
 
