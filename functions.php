@@ -532,22 +532,17 @@ function custom_post_type() {
 
 //check to see if this site is being used for SCORM or page building
 
-
- 
 $scorm_setting = get_field('field_5b8cd3c52f308', 'option');
 
 if ($scorm_setting == "iframe") {
     //show non SCORM features
-} else {
+} elseif ($scorm_setting == "cde")  {
+    // Show scorm features    
+    add_action( 'init', 'custom_post_type', 0 );
+} elseif ($scorm_setting == "fssi")  {
     // Show scorm features    
     add_action( 'init', 'custom_post_type', 0 );
 }
-
-
-
-
-
-
 
 //nav menu walker accordion
 
