@@ -25,13 +25,43 @@ $breadcrumbs-height: 3rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
+*,
+html,
+body {
+  // font-family: $font;
 
-h3 a{
+}
+
+#calloutcards {
+  .curve {
+    display: none;
+
+  }
+
+  .card {
+    border: 0.2rem solid $green;
+    border-radius: 0;
+    margin: 1rem;
+    background-color: $green;
+    //lighten($green, 10%);
+  }
+
+  .pixel {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+
+h3 a {
   color: #055918;
 }
 
 #feature-image #fi-left .background {
-    width:90% !important;}
+  width: 90% !important;
+}
 
 .wp-video {
   margin: 40px auto;
@@ -42,59 +72,64 @@ h3 a{
   height: 100%;
   background-size: cover;
 }
+
 .row .splash {
   height: calc(100vh - 160px);
   background-color: #444;
-  max-width: 100%!important;
-    padding: 0rem!important;
+  max-width: 100% !important;
+  padding: 0rem !important;
 }
+
 .container .splash {
-  max-width: 100%!important;
-  min-width: 100%!important;
-  padding: 0rem!important;
-  margin-right: 0px!important;
-  margin-left: 0px!important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  padding: 0rem !important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 
 .fssi-logo-text {
-background-image: url("../fssi/img/fssi-white.svg");
-background-repeat: no-repeat;
-width: 220px;
-height: 180px;
-border-right: 4px solid #fff;
+  background-image: url("../fssi/img/fssi-white.svg");
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 180px;
+  border-right: 4px solid #fff;
 }
+
 .fssi-button {
   padding: 8px 15px;
-  background-color:  #fff;
+  background-color: #fff;
   border: 1px #055918 solid;
-    width: fit-content;
-    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
--moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+  width: fit-content;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
 }
+
 .transcript-button {
   padding: 8px 15px;
   margin: 0 auto;
   text-align: center;
   display: block;
-  background-color:  #fff;
+  background-color: #fff;
   border: 1px #055918 solid;
-    width: fit-content;
-    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
--moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+  width: fit-content;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
 }
 
 .fssi-splash-title {
   padding: 8px 15px;
   margin: 15px 20px;
-  background-color:  #fff;
-    width: fit-content;
-    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
--moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+  background-color: #fff;
+  width: fit-content;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
 }
-.fssi-splash-button{
+
+.fssi-splash-button {
   margin-top: 25px;
 }
 
@@ -102,24 +137,27 @@ box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
   color: #fff !important;
   background-color: #055918;
   border: 1px solid #fff;
-    padding: 8px 15px;
-    margin: 15px 20px !important;
-    text-transform: uppercase;
-    width: fit-content;
-    -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
--moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
+  padding: 8px 15px;
+  margin: 15px 20px !important;
+  text-transform: uppercase;
+  width: fit-content;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
 }
-.fssi-splash-button a:hover{
-  -webkit-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
--moz-box-shadow: 4px 4px 5px -2px rgba(0,0,0,0.26);
-box-shadow: 8px 8px 10px -2px rgba(0,0,0,0.26);
+
+.fssi-splash-button a:hover {
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.26);
+  box-shadow: 8px 8px 10px -2px rgba(0, 0, 0, 0.26);
 
 }
-.splash-right{
+
+.splash-right {
   margin: auto 20px;
 
 }
+
 .splash-container {
   width: 100%;
 }
@@ -127,43 +165,49 @@ box-shadow: 8px 8px 10px -2px rgba(0,0,0,0.26);
 .splash {
   height: 100%;
 }
-.splash-left{
+
+.splash-left {
   margin: auto 0px;
 }
+
 .splash-banner {
   background-color: #055918a3;
   top: 30%;
-    position: relative;
+  position: relative;
 }
+
 .splash-banner .inner {
-display:flex; padding:30px  0 ;
-flex-wrap: wrap;
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
 }
+
 #fssi #content-nav {
   width: 100%;
 }
 
 #fssi #nav .visibility #cssmenu ul li.active {
 
-    background: $gray-100;
+  background: $gray-100;
 }
 
-#footer-page #next-prev .btn-next
-{
-  transform: rotate(-90deg);
-}
-#footer-page #next-prev .btn-prev
-{
+#footer-page #next-prev .btn-next {
   transform: rotate(-90deg);
 }
 
-.fa.fa-chevron-circle-left:after, .fa.fa-chevron-circle-right:after {
-    background-color: $green-light !important;
-  }
+#footer-page #next-prev .btn-prev {
+  transform: rotate(-90deg);
+}
+
+.fa.fa-chevron-circle-left:after,
+.fa.fa-chevron-circle-right:after {
+  background-color: $green-light !important;
+}
 
 .container {
-padding: 1rem 2rem !important;
+  padding: 1rem 2rem !important;
 }
+
 #fssi {
   //height: 100%;
   background: $white;
@@ -185,11 +229,11 @@ padding: 1rem 2rem !important;
     top: $breadcrumbs-height;
     right: 0;
 
-
     @media (min-width: 1200px) {
       top: ($banner-height + $breadcrumbs-height);
-height: 120%;
+      height: 120%;
     }
+
     .nav-header {
       background-image: $url_7;
       width: $nav-width;
@@ -374,9 +418,9 @@ height: 120%;
                   }
 
                   span:before {
-                   // font-family: FontAwesome;
+                    // font-family: FontAwesome;
 
-                   // content: "\f111";
+                    // content: "\f111";
                     color: $green;
                     position: relative;
                     left: -1.6rem;
@@ -511,7 +555,6 @@ height: 120%;
 
             ul {
               border-bottom: .1rem solid
-
             }
           }
 
@@ -629,11 +672,13 @@ height: 120%;
       }
 
     }
+
     @media (min-width: 1200px) {
 
       #ws {
         display: none;
       }
+
       border-top: ($breadcrumbs-height * 0.05) $white solid;
       border-bottom: ($breadcrumbs-height * 0.05) $white solid;
     }
@@ -762,8 +807,6 @@ height: 120%;
 
   }
 
-  // Carousel
-
   //Accrordion
 
   #accordion {
@@ -817,7 +860,7 @@ height: 120%;
         }
 
         .card-body {
-        /*  p {
+          /*  p {
             font-size: 0.9rem;
           } */
         }
@@ -832,6 +875,13 @@ height: 120%;
         }
       }
     }
+  }
+
+  // Carousel
+  #carousel
+  {
+      background: $mid-grey;
+  
   }
 
   #flipcards {
@@ -874,9 +924,9 @@ height: 120%;
 
   #introtabs {
     #tabs {
-    /*  width: 80%; */
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+      /*  width: 80%; */
+      margin-top: 3rem;
+      margin-bottom: 2rem;
 
       ul.nav {
         border: none;
@@ -906,7 +956,7 @@ height: 120%;
               //display: none;
               position: relative;
               top: 5rem;
-            /*  background: $green-light; */
+              /*  background: $green-light; */
               font-family: $font2;
               width: 5rem;
               margin: auto;
@@ -1005,15 +1055,16 @@ height: 120%;
     }
 
   }
+
   label {
     display: inline !important;
   }
+
   #quiz .btn-quiz {
-      position: inherit !important;}
+    position: inherit !important;
+  }
 
   #quiz {
-
-
 
     .rich-background {
       background: $white;
@@ -1030,13 +1081,16 @@ height: 120%;
         .correct1 {
           border: none;
           //border-left: 0.2rem solid $green-light;
-         // background: lighten($green-light, 30%);
+          // background: lighten($green-light, 30%);
         }
 
       }
 
     }
   }
+
+  // Carousel
+
 }
 
 //#FSSI

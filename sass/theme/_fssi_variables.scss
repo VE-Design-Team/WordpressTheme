@@ -69,7 +69,7 @@ $instruction-background: $gray-200;
 $instruction-text: $gray-900;
 $instruction-logo: $green;
 $instruction-highlight: $white;
-$rich-background: $gray-200;
+$rich-background: $mid-grey;
 $rich-area: $gray-25;
 $accent-thickness: 0.5rem;
 $accent-color: $green;
@@ -94,70 +94,4 @@ $radius: 0.1rem;
 $half-radius: $radius / 2;
 $double-radius: $radius *2;
 
-*,
-html,
-body {
-    // font-family: $font;
-
-}
-
-#calloutcards {
-    .curve {
-        display: none;
-
-    }
-
-    .card {
-        border: 0.2rem solid $green;
-        border-radius: 0;
-        margin: 1rem;
-        background-color: $green;
-        //lighten($green, 10%);
-    }
-
-    .pixel {
-        display: none;
-    }
-}
-
-a {
-    text-decoration: underline;
-}
-
-//carousel and tabs
-@media (min-width: 768px) {
-
-    .fa.fa-chevron-circle-left,
-    .fa.fa-chevron-circle-right {
-        position: relative;
-    }
-
-    .fa.fa-chevron-circle-left:after,
-    .fa.fa-chevron-circle-right:after {
-        background-color: $carousel-chevron;
-        height: 4rem;
-        width: 4rem;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        /*--adjust as necessary--*/
-        color: $white;
-        position: absolute;
-        left: 0;
-        font-size: 3rem;
-        text-align: center;
-        border-radius: 1rem;
-    }
-
-    .fa.fa-chevron-circle-left:after {
-        content: "\f053";
-        padding: 0.6rem 0.6em 0 0.7rem;
-    }
-
-    .fa.fa-chevron-circle-right:after {
-        content: "\f054";
-        padding: 0.6rem 0.1em 0 0.7rem;
-    }
-}
 @import "fssi_scorm";
