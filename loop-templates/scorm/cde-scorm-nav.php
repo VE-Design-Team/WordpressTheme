@@ -1,0 +1,17 @@
+<div id="nav">
+  <div id="reveal" class="visibility p-0">
+  <div class="nav-header"></div>
+    <?php
+//get menu assigned to this page
+ $menu = get_field('field_5bc317e313d41');
+// and place in the page
+wp_nav_menu(array(
+  'menu' => $menu,
+'container_id' => 'cssmenu',
+'walker' => new CSS_Menu_Maker_Walker()
+));
+?>
+      <div class="nav-footer"></div>
+
+  </div>
+</div>
