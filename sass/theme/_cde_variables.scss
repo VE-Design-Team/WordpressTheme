@@ -1,0 +1,158 @@
+@import "rmit_variables";
+
+//For this course
+$gray: #ccc;
+$gray-50: #f9FAFA;
+$gray-100: #F5F5F5;
+$gray-150: #E8E8E8;
+$gray-200: #828282;
+$gray-400: #D4D4D4;
+$gray-600: #9B9B9B;
+$green: #055918;
+$red: #E60028;
+$green-light: lighten($green, 10%);
+$light-green: #00DCB4;
+$dark-green: #006E5A;
+$white: #fff;
+$black: #000;
+$black-light: #4A4A4A;
+$footer: #f5f6f5;
+$rmit-red: $red;
+$font: 'Museo500',
+sans-serif;
+$font2: 'Museo500',
+sans-serif;
+
+
+//Styles
+$headings-color: $black;
+$headings-font-family: $font2 !important;
+$headings-font-weight: 700;
+$card-border-width: 0.2rem;
+$headings-font-family: $font2 !default;
+$nav-tabs-border-color: none !default;
+$nav-tabs-link-hover-border-color: $gray !default;
+$nav-tabs-active-text-color: $black !default;
+$nav-tabs-link-active-color: $gray-400 !default;
+$nav-tabs-link-active-bg: $gray-25 !default;
+$nav-tabs-link-active-border-color: $gray !default;
+$tabs-border-radius: .6rem;
+$nav-tabs-border-width: $card-border-width;
+$tab-active-heading-background: $gray-25;
+$inactive-tab-background: $gray-400;
+$tab-inactive-heading-colour: $gray-600;
+$active-tab-heading: $gray-400;
+$tab-border: none;
+$active-tab-heading-border: inherit;
+$link-color: $green-light;
+//$rmit-btn
+//$rmit-alternate-btn
+$numbers-background: $green;
+$carousel-chevron: $dark-green;
+$carousel-border: $gray-25;
+$instruction-background: $gray-200;
+$instruction-text: $gray-900;
+$instruction-logo: $green;
+$instruction-highlight: $white;
+$rich-background: $gray-50;
+$rich-area: $gray-25;
+$accent-thickness: 0.5rem;
+$accent-color: $green;
+$accordion-header-inactive: $rich-area;
+$accordion-header-active: $dark-green;
+$accordion-header-active-font: $white;
+$rich-heading-font: $font2;
+$flip-card-front-colour: $white;
+$flip-card-front-text-colour: $gray-900;
+$flip-card-back-colour: $white;
+$flip-card-back-text-colour: $gray-900;
+$hotspot-color: $green;
+$button-primary: $green;
+$button-primary-text: $gray-900;
+$button-primary-hover: $green;
+$button-primary-hover-text: $white;
+$button-default: $green;
+$button-default-text: $gray-900;
+$button-default-hover: $green;
+$button-default-hover-text: $white;
+$radius: 0.1rem;
+$half-radius: $radius / 2;
+$double-radius: $radius *2;
+
+*,
+html,
+body {
+    // font-family: $font;
+
+}
+
+#calloutcards {
+    .curve {
+        display: none;
+
+    }
+
+    .card {
+        border: 0rem solid $gray-200 !important;
+        border-radius: 8px !important;
+        margin: 1rem;
+        background-color: $gray-100 !important;
+        //lighten($green, 10%);
+    }
+    .card-header{
+      margin: 2rem 2rem .2rem 2rem !important;
+      padding: 0rem !important;
+    }
+    .card-body {
+      margin: 1rem 1rem 1rem 1rem !important;
+    }
+    hr {
+      background-color: $red !important;
+    }
+
+    .pixel {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
+
+//carousel and tabs
+@media (min-width: 768px) {
+
+    .fa.fa-chevron-circle-left,
+    .fa.fa-chevron-circle-right {
+        position: relative;
+    }
+
+    .fa.fa-chevron-circle-left:after,
+    .fa.fa-chevron-circle-right:after {
+        background-color: $carousel-chevron;
+        height: 4rem;
+        width: 4rem;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: $white;
+        position: absolute;
+        left: 0;
+        font-size: 3rem;
+        text-align: center;
+        border-radius: 1rem;
+    }
+
+    .fa.fa-chevron-circle-left:after {
+        content: "\f053";
+        padding: 0.6rem 0.6em 0 0.7rem;
+    }
+
+    .fa.fa-chevron-circle-right:after {
+        content: "\f054";
+        padding: 0.6rem 0.1em 0 0.7rem;
+    }
+}
+@import "cde_scorm";
