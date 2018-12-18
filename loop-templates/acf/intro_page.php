@@ -44,9 +44,7 @@
     <div class="tab-pane fade show" id="<?php echo str_replace(str_split('\\()/:*?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tabpanel" aria-labelledby="
       <?php echo str_replace(str_split('\\/:*?()"<>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>-tab">
       <div class="row align-items-center <?php echo $background;?>">
-        <div class="p-3 bg-white">
-          <h3 class="text-dark">
-            <?php echo the_sub_field('field_5a67bc81f0b61');?> </h3>
+        <div class="p-3 bg-white">     
           <?php echo the_sub_field('field_5a67c80324ecd');?>
         </div>
         <!--<div class="col-3 col-sm-2 text-center icon">
