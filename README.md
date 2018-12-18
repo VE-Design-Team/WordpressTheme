@@ -9,7 +9,10 @@ NPM, gulp
 
 ## Contributors
 * [Jack Dunstan](jack.dunstan@rmit.edu.au) - Lead developer
-* [Michael Grant](michael.grant@rmit.edu.au)
+* Michael Grant
+* Lawrence Makoona
+* Claire Tao
+* James Ratsasane
 * David Beaumont
 
 ## Licences
