@@ -1,5 +1,4 @@
 <!-- row-->
-
 </div><!-- #cde -->
  <script>
  ( function( $ ) {

@@ -11,7 +11,6 @@
      $grandparent = $grandparent_get->post_parent;
 
      ?>
-
 <div class="container-fluid" id="cde">
   <div class="row">
     <div  id="banner" class="col-12">
