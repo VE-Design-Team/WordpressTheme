@@ -2758,10 +2758,11 @@
             },
             "choices": {
                 "small": "Small",
+                "medium": "Medium",
                 "large": "Large"
             },
             "default_value": [
-                "1x"
+                "medium"
             ],
             "allow_null": 0,
             "multiple": 0,
