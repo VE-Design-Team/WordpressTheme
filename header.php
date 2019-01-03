@@ -9,17 +9,55 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 	<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
 	<?php
+	//CSS and js cache buster
+	$my_theme = wp_get_theme();
+	$ver = $my_theme->get( 'Version' );
+
 
 $variable = get_field('field_5b8cd3c52f308', 'option');
-if ($variable  == "Iframe") {
+if ($variable  == 'iframe') {
 	//open all new links outside the iframe
+	$basefiles = get_stylesheet_directory_uri();
 	echo '<base target="_blank">';
+	echo '<!-- Iframe -->';
+	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/theme.min.css?ver='.$ver.'"type="text/css" media="">';
+
+}
+elseif ($variable  == 'fssi') { 
+	//open all new links outside the iframe
+	$basefiles = get_stylesheet_directory_uri()."/fssi";
+	echo '<base target="_blank">';
+	echo '<!-- FSSI -->';
+	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/fssi.css'.'"type="text/css" media="">';
+
+
+}
+elseif ($variable  == 'cde') { 
+	//open all new links outside the iframe
+	$basefiles = get_stylesheet_directory_uri()."/cde";
+	echo '<base target="_blank">';
+	echo '<!-- CDE -->';
+	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/cde.css'.'"type="text/css" media="">';
+
+
+}
+elseif ($variable  == 'embed') { 
+	//open all new links outside the iframe
+	$basefiles = get_stylesheet_directory_uri()."/embed";
+	echo '<base target="_blank">';
+	echo '<!-- embed -->';
+	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/embed.css'.'"type="text/css" media="">';
+
+
 }
 else{
-	// is SCORM
-}
+	echo '<!-- No setting -->';
+		$basefiles = get_stylesheet_directory_uri();
+		echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/theme.min.css'.'"type="text/css" media="">';
+
+};
 ?>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
+	
 	<?php wp_head(); ?>
 	<!--
  __      ________   _____            _               _______                   
