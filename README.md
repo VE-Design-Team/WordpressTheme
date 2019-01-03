@@ -1,19 +1,21 @@
-# Wordpress Rich Content theme
+# VE Authoring Tool
 
-Version 1.8.x (see style.css)
+Version 2.3.x (see style.css)
 
-This is an wordpress theme desigbed for the generation of rich content to be embeded in Instructure Canvas pages.  
+This is an wordpress theme designed for the generation of rich content to be embeded in Instructure Canvas pages.  
 
 ## Requirements
 NPM, gulp
 
 ## Contributors
+* Nicky Callinan
 * [Jack Dunstan](jack.dunstan@rmit.edu.au) - Lead developer
 * Michael Grant
 * Lawrence Makoona
 * Claire Tao
 * James Ratsasane
 * David Beaumont
+
 
 ## Licences
 
