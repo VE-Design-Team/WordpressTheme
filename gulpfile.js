@@ -120,6 +120,46 @@ gulp.task('sass', function () {
     return stream;
 });
 
+gulp.task('cde-sass', function () {
+    var stream = gulp.src('./sass/cde.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./cde/css'))
+        .pipe(rename('theme.min.css'))
+    return stream;
+});
+gulp.task('fssi-sass', function () {
+    var stream = gulp.src('./sass/fssi.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./fssi/css'))
+        .pipe(rename('theme.min.css'))
+    return stream;
+});
+gulp.task('embed-sass', function () {
+    var stream = gulp.src('./sass/embed.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./embed/css'))
+        .pipe(rename('theme.min.css'))
+    return stream;
+});
+
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
@@ -179,7 +219,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass', 'h5p-scss', 'minify-css')(callback) });
+gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'embed-sass', 'h5p-scss', 'minify-css')(callback) });
  
 // Run:
 // gulp browser-sync
@@ -210,11 +250,28 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/iframeResizer.contentWindow.js',
 
     ];
-  gulp.src(scripts)
+  //iframe
+    gulp.src(scripts)
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
-
+  //cde  
+    gulp.src(scripts)
+    .pipe(concat('theme.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./cde/js/'));
+  //fssi  
+    gulp.src(scripts)
+    .pipe(concat('theme.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./fssi/js/'));  
+  //embed
+    gulp.src(scripts)
+    .pipe(concat('embed.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./embed/js/'));  
+     
+   // human 
   gulp.src(scripts)
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('./js/'));
