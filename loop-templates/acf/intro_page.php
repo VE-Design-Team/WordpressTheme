@@ -13,8 +13,8 @@
     <?php while (have_rows('field_5a67bc57f0b60')) : the_row();?>
 
     <li class="nav-item">
-      <a class="nav-link" id="<?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>-tab" data-toggle="tab"
-        href="#<?php echo str_replace(str_split('\\/:*()?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tab" aria-controls="
+      <a class="nav-link" tabindex="0"  id="<?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>-tab" data-toggle="tab"
+      data-target="#<?php echo str_replace(str_split('\\/:*()?" <>,.| '), '', get_sub_field('field_5a67bc81f0b61')); ?>" role="tab" aria-controls="
         <?php echo str_replace(' ', '', get_sub_field('field_5a67bc81f0b61')); ?>" aria-selected="true">
         <div class="title">
           <?php echo the_sub_field('field_5a67bc81f0b61');?>
@@ -60,7 +60,7 @@
 
 <script>
   //Make first tab active- top tabs
-  $('.nav-item a.nav-link:first').addClass('active');
+  $('.nav-item .nav-link:first').addClass('active');
   //Make first tab active- left tabs
   $('.nav-link:first').addClass('active');
   $('.tab-pane:first').addClass('active show');

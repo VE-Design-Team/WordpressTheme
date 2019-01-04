@@ -75,8 +75,8 @@
         },
         {
             "key": "field_5a7a6b39ac350",
-            "label": "Accordion style",
-            "name": "accordion_style",
+            "label": "Accordion Colours",
+            "name": "accordion_colour",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -101,6 +101,41 @@
             },
             "default_value": [
                 "bg"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bf72deeb1307",
+            "label": "Accordion style",
+            "name": "accordion_style",
+            "type": "select",
+            "instructions": "Choose a style, expand or dissolve",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Accordion"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "expand": "Expand",
+                "dissolve": "Dissolve"
+            },
+            "default_value": [
+                "expand"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -1672,7 +1707,7 @@
             "label": "Table options",
             "name": "table_options",
             "type": "select",
-            "instructions": "If there is a table on this page, how would you like it styled? For best results use this tool - https:\/\/www.tablestrap.com\/#tables",
+            "instructions": "If there is a table on this page, how would you like it styled? For best results use this tool - http:\/\/www.tablestrap.com\/#tables",
             "required": 0,
             "conditional_logic": [
                 [
@@ -2181,7 +2216,7 @@
             "label": "Animation file",
             "name": "animation_file",
             "type": "file",
-            "instructions": "Upload a json file that contains the animation. You need to generate this file using the After Effects Bodymovin plugin as outlined here: https:\/\/github.com\/airbnb\/lottie-web",
+            "instructions": "Upload a json file that contains the animation. You need to generate this file using the After Effects Bodymovin plugin as outlined here: http:\/\/github.com\/airbnb\/lottie-web",
             "required": 0,
             "conditional_logic": [
                 [
@@ -3251,7 +3286,7 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add another answer",
                     "sub_fields": [
                         {
                             "key": "field_5bb20a3acf3f7",
@@ -3274,10 +3309,10 @@
                         },
                         {
                             "key": "field_5bb20a41cf3f8",
-                            "label": "Correct?",
+                            "label": "Correct answer?",
                             "name": "correct",
-                            "type": "true_false",
-                            "instructions": "",
+                            "type": "select",
+                            "instructions": "1: Correct\r\n0: Incorrect",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3285,11 +3320,14 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": [],
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         },
                         {
                             "key": "field_5bb20ad9cf3f9",
@@ -3298,7 +3336,15 @@
                             "type": "text",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5c188bc3b0b84",
+                                        "operator": "!=",
+                                        "value": "multiple"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "45",
                                 "class": "",
@@ -3311,6 +3357,85 @@
                             "maxlength": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_5c188bc3b0b84",
+                    "label": "Question type",
+                    "name": "question_type",
+                    "type": "select",
+                    "instructions": "Select if you want the student to be able to select",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "one": "One correct answer",
+                        "multiple": "Multiple correct answers"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c188d065cbb6",
+                    "label": "Correct Feedback",
+                    "name": "correct_feedback",
+                    "type": "text",
+                    "instructions": "Feedback for the correct answer",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c188bc3b0b84",
+                                "operator": "==",
+                                "value": "multiple"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c188ec05cbb7",
+                    "label": "Incorrect feedback",
+                    "name": "incorrect_feedback",
+                    "type": "text",
+                    "instructions": "What to tell the student if they have given an incorrect answer",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c188bc3b0b84",
+                                "operator": "==",
+                                "value": "multiple"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -3385,41 +3510,6 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
-        },
-        {
-            "key": "field_5bf72deeb1307",
-            "label": "Accordion style",
-            "name": "accordion_style",
-            "type": "select",
-            "instructions": "Choose a style, expand or dissolve",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a13c5a7ec802",
-                        "operator": "==",
-                        "value": "Accordion"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "expand": "Expand",
-                "dissolve": "Dissolve"
-            },
-            "default_value": [
-                "expand"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
         }
     ],
     "location": [
@@ -3439,7 +3529,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "scorm"
+                "value": "post"
             }
         ]
     ],
@@ -3451,5 +3541,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542925869
+    "modified": 1546494910
 }
