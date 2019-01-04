@@ -55,7 +55,7 @@ h3:target {
 
 <div class="container">
 	<div id="content" tabindex="-1"	>
-			<h1>Cheatsheet</h1>
+			<h1 class="text-center">Cheatsheet</h1>
 
 	<article>
  
@@ -74,6 +74,7 @@ h3:target {
 </div><!-- Wrapper end -->
 <?php get_footer();?>
 <script>
+//Make Table of contents
 var ToC =
   "<nav role='navigation' class='table-of-contents'>" +
     "<h3>On this page:</h3>" +
@@ -103,4 +104,5 @@ ToC +=
   "</nav>";
 
 $(".cheats").prepend(ToC);
+
 </script>
