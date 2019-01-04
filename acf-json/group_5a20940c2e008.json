@@ -3,6 +3,25 @@
     "title": "Branching Scenario",
     "fields": [
         {
+            "key": "field_5a209938a0d69",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a20e2a468c91",
             "label": "Button Style",
             "name": "button_style",
@@ -69,6 +88,25 @@
             "layout": "row",
             "button_label": "Add another page",
             "sub_fields": [
+                {
+                    "key": "4360",
+                    "label": "",
+                    "name": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
                 {
                     "key": "field_5a209938a0dce",
                     "label": "Title",
@@ -231,5 +269,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1540261421
+    "modified": 1545111646
 }
