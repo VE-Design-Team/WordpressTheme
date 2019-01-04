@@ -15,9 +15,11 @@
     <div class="col-12" id="breadcrumbs">
     <div id="ws"><div class="fssi-logo"></div></div>
       <ul class="thin-text">
-           <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo '<li >'.get_the_title($grandparent).'</li> <li >'.get_the_title($parent).'</li>'; }else {echo '<li>'.get_the_title($parent).'</li>'; }?>
+           <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo '<li class="d-md-none d-lg-inline">'.get_the_title($grandparent).'</li> <li >'.get_the_title($parent).'</li>'; }else {echo '<li>'.get_the_title($parent).'</li>'; }?>
     <li><?php wp_title(''); ?></li>
 </ul>
+<div id="access">
     <button id="navtoggle" class="btn btn-primary btn-menu"></button>
     <button onclick="fullscreen()" id="fullscreen" class="btn btn-primary btn-fs"></button>
-    </div>
+</div>    
+</div>

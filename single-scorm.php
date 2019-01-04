@@ -42,13 +42,13 @@
    <?php ?>
   <?php }
   else { ?>
-    <div class="container-fluid page-width">
+    <div class="container-fluid page-width ">
     <div class="row">
       <div id="accordion-move" >
         <?php get_template_part( 'loop-templates/scorm/scorm', 'nav' ); ?>
       </div>
       <!--     content ----------------------------------------------------------------------->
-      <div id="content" >
+      <div id="content" class="scorm" >
         <div class="row">
           <div class="container">
             <?php while ( have_posts() ) : the_post(); ?>

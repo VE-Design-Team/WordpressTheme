@@ -15,7 +15,7 @@ $natural-green: lighten($green, 0%);
 
 //Fonts
 @font-face {
-    font-family: 'Trade Gothic LT Std';
+    font-family: 'Trade Gothic LT Cn Std';
     src: url("../fssi/fonts/TradeGothicLTStd-Cn18.woff2") format("woff2"), url("../fssi/fonts/TradeGothicLTStd-Cn18.woff") format("woff");
     font-weight: 500;
     font-style: normal;
@@ -35,10 +35,52 @@ $natural-green: lighten($green, 0%);
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fssi/fonts/open-sans-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('../fssi/fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fssi/fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fssi/fonts/open-sans-v15-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fssi/fonts/open-sans-v15-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fssi/fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fssi/fonts/open-sans-v15-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../fssi/fonts/open-sans-v15-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fssi/fonts/open-sans-v15-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fssi/fonts/open-sans-v15-latin-700.woff') format('woff'),
+        /* Modern Browsers
+        url('../fssi/fonts/open-sans-v15-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fssi/fonts/open-sans-v15-latin-700.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
 $font: 'Trade Gothic LT Std',
 sans-serif;
 $font2: 'Trade Gothic LT Pro Cn',
 sans-serif;
+$font3: 'Open Sans',
+sans-serif;
+$font1: 'Trade Gothic LT Cn Std', sans-serif;
 
 //Styles
 $headings-color: $green;
