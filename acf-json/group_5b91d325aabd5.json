@@ -53,7 +53,7 @@
             ],
             "taxonomy": [],
             "allow_null": 1,
-            "allow_archives": 1,
+            "allow_archives": 0,
             "multiple": 0
         },
         {
@@ -180,5 +180,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542337599
+    "modified": 1546556370
 }
