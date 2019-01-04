@@ -81,7 +81,8 @@
             "choices": {
                 "iframe": "iframe",
                 "fssi": "FSSI",
-                "cde": "CDE"
+                "cde": "CDE",
+                "embed": "Embed pages in Canvas"
             },
             "default_value": [
                 "iframe"
@@ -111,5 +112,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545099200
+    "modified": 1545273771
 }
