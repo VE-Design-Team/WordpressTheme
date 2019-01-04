@@ -105,6 +105,13 @@ if (defined('WP_DEBUG') && false === WP_DEBUG) {
 include_once get_stylesheet_directory() . '/acf/acf.php';
 
 /**
+ * Load Tree view plugin
+ */
+
+ //todo
+
+
+/**
  * Load iFrame helper content
  */
 require get_template_directory() . '/inc/iframe.php';
@@ -268,7 +275,7 @@ function rkvs_page_columns( $columns ) {
 
 
 // acf/load_field/key={$field_key} - filter for a specific field based on it's key name , CHANGE THIS TO YOUR FIELDS KEY!
-add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
+//add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
 
 //custom dashboard content
 
