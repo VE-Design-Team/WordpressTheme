@@ -214,7 +214,7 @@ endif;
 ?>
     //disable radios after click
 
-    $(":radio").click(function () {
+    $("a").click(function () {
       var radioName = $(this).attr("name"); //Get radio name
       $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
     });
