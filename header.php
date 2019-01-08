@@ -26,7 +26,7 @@ if ($variable  == 'iframe') {
 elseif ($variable  == 'fssi') { 
 	//open all new links outside the iframe
 	$basefiles = get_stylesheet_directory_uri()."/fssi";
-	echo '<base target="_blank">';
+
 	echo '<!-- FSSI -->';
 	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/fssi.css'.'"type="text/css" media="">';
 
@@ -35,7 +35,7 @@ elseif ($variable  == 'fssi') {
 elseif ($variable  == 'cde') { 
 	//open all new links outside the iframe
 	$basefiles = get_stylesheet_directory_uri()."/cde";
-	echo '<base target="_blank">';
+
 	echo '<!-- CDE -->';
 	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/cde.css'.'"type="text/css" media="">';
 
