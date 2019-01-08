@@ -516,8 +516,8 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'scorm page', 'text_domain' ),
-		'description'           => __( 'scorm page geenrator', 'text_domain' ),
+		'label'                 => __( 'Scorm page', 'text_domain' ),
+		'description'           => __( 'Scorm page generator', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'page-attributes','thumbnail'  ),
 		'hierarchical'          => true,
@@ -528,7 +528,7 @@ function custom_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
