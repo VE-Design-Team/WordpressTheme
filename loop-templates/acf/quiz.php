@@ -23,7 +23,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
               </div>
               <div class="col-12 col-sm-6 col-md-8 mt-3">
                 <?php else: ?>
-                <div class="col-12 col-sm-6 offset-sm-3 col-md-8 offset-md-2 mt-3 ">
+                <div class="col-12 col-md-8 offset-md-2 mt-3 ">
                   <?php endif; ?>
 
                   <div class="questions pl-3">
@@ -70,7 +70,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 
                 <!-- get results-->
                 <hr>
-                <div class="q-footer col-10 mt-3 mb-2">
+                <div class="q-footer col-10 mt-3 mb-2 offset-md-2">
 
                   <?php
         // check if there are answers
