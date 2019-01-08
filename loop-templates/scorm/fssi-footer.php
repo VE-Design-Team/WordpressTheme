@@ -18,21 +18,51 @@
 </div>
 -->
 <?php else: {?>
+
+<?php //previous next variables 
+ $prevlink = the_field('field_5bdf9ede4ef3a');
+ $nextlink = the_field('field_5bdf9ea04ef39');
+ if ($prevlink == "" AND $nextlink == ""):
+    {
+        //no footer links;   
+    }
+
+else:{ 
+      //get footer links
+      ?>
   <div style="clear:both;"></div>
-<div id="footer-page" class="col-12 p-0 m-0">
-<div id="next-prev">
-<?php if( get_field('field_5bdf9ede4ef3a') ): ?>
-<a title="Previous page" target="_self" href="<?php the_field('field_5bdf9ede4ef3a'); ?>"  class="col-1 btn-prev float-left">
-</a>
+<div id="footer-page" class="p-0 m-0">
+    <div id="next-prev" class="d-flex justify-content-center ">
+        <?php if( get_field('field_5bdf9ede4ef3a') ): ?>
+        <a title="Previous page" target="_self" href="<?php echo $prevlink; ?>" class="btn-prev">
+        </a>
+        <?php else: {
+    echo "<div class='pn-helper'>Next</div> ";
+};?>
+        <?php endif; ?>
+        <?php if( get_field('field_5bdf9ea04ef39') ): ?>
+        <a title="Next page" target="_self" href="<?php echo $nextlink; ?>" class=" btn-next"></a>
 
-<?php endif; ?>
-<?php if( get_field('field_5bdf9ea04ef39') ): ?>
-<a title="Next page" target="_self"  href="<?php the_field('field_5bdf9ea04ef39'); ?>"  class="col-1 btn-next float-right"></a>
-<?php endif; ?>
+        <?php else: {
+    echo "<div class='pn-helper'>Prev</div>";
+};?>
+        <?php endif; ?>
+
+    </div>
+    <!--footer -->
+
+    <?php } endif; ?>
 </div>
-</div><!--footer -->
+  <?php }
+endif;
+?>
 
-<?php } endif; ?>
+
+
+
+
+
+
 
 
 <script>

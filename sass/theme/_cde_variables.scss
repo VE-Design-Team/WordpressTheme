@@ -23,7 +23,6 @@ sans-serif;
 $font2: 'Museo500',
 sans-serif;
 
-
 //Styles
 $headings-color: $black;
 $headings-font-family: $font2 !important;
@@ -82,7 +81,7 @@ $double-radius: $radius *2;
 *,
 html,
 body {
-    // font-family: $font;
+    font-family: $font-family-sans-serif
 
 }
 
