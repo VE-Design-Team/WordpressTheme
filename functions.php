@@ -356,12 +356,7 @@ function post_remove() //creating functions post_remove for removing menu item
 {
     remove_menu_page('edit.php');
  }
-function postpage_remove() //creating functions post_remove for removing menu item
 
-{
-    remove_menu_page('edit.php');
-    remove_menu_page( 'edit.php?post_type=page' );    //Pages
-}
 
 
 //check to see if this site is being used for SCORM or page building and create post types and turn off others in the menu
@@ -374,11 +369,11 @@ if ($scorm_setting == "iframe") {
 } elseif ($scorm_setting == "cde")  {
     // Show scorm features    
     add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'postpage_remove'); //adding action for triggering function call
+    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
 } elseif ($scorm_setting == "fssi")  {
     // Show scorm features    
     add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'postpage_remove'); //adding action for triggering function call
+    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
  
 }
 
