@@ -49,16 +49,75 @@
       </div>
       <!--     content ----------------------------------------------------------------------->
       <div id="content" class="scorm" >
-        <div class="row">
+        <div class="row mb-4" >
           <div class="container">
             <?php while ( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'loop-templates/scorm/scorm', 'content' ); ?>
             <?php endwhile; // end of the loop. ?>
             <!--   col-10 -->
-          </div>
-        </div>
-      </div>
+          </div><!--container-->
+        </div><!--row -->
+      <!-- footer buttons-->
+  <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
+<!--
+
+<div style="clear:both;"></div>
+<div id="footer" class="col-12 p-0 m-0">
+  <div class="partner-logos"></div>
+  <p clas="text-middle">Copyright <i class="fa fa-copyright"></i> 2018 Future Social Service Institute. All rights
+    reserved.</p>
+
+</div>
+-->
+<?php else: {?>
+
+<?php //previous next variables 
+ $prevlink = get_field('field_5bdf9ede4ef3a');
+ $nextlink = get_field('field_5bdf9ea04ef39');
+ if ($prevlink == "" AND $nextlink == ""):
+    {
+        //no footer links;   
+    }
+
+else:{ 
+      //get footer links
+      ?>
+
+<div id="footer-page" class="p-0 m-0">
+    <div id="next-prev" class="d-flex justify-content-center ">
+        <?php if( get_field('field_5bdf9ede4ef3a') ): ?>
+        <a title="Previous page" target="_self" href="<?php echo $prevlink; ?>" class="btn-prev">
+        </a>
+        <?php else: {
+    echo "<div class='pn-helper  m-0'>Next page</div> ";
+};?>
+        <?php endif; ?>
+        <?php if( get_field('field_5bdf9ea04ef39') ): ?>
+        <a title="Next page" target="_self" href="<?php echo $nextlink; ?>" class=" btn-next"></a>
+
+        <?php else: {
+    echo "<div class='pn-helper  m-0'>Previous page</div>";
+};?>
+        <?php endif; ?>
+
     </div>
+    <!--footer -->
+
+    <?php } endif; ?>
+</div>
+<?php }
+endif;
+?>
+
+</div><!-- row-->
+
+</div><!-- #fssi -->
+  <!-- footer buttons end -->
+      </div><!-- content -->
+   
+   
+    </div>
+ 
   </div>
 
   <?php }
