@@ -349,15 +349,47 @@ function mytheme_admin_bar_render()
 }
 add_action('wp_before_admin_bar_render', 'mytheme_admin_bar_render');
 
-// Completely remove posts - we're only using pages
+// Completely remove posts (and pages if it's a SCRM builder) - we're only using pages
 
 function post_remove() //creating functions post_remove for removing menu item
 
 {
     remove_menu_page('edit.php');
+ }
+function postpage_remove() //creating functions post_remove for removing menu item
+
+{
+    remove_menu_page('edit.php');
+    remove_menu_page( 'edit.php?post_type=page' );    //Pages
 }
 
-add_action('admin_menu', 'post_remove'); //adding action for triggering function call
+
+//check to see if this site is being used for SCORM or page building and create post types and turn off others in the menu
+
+$scorm_setting = get_field('field_5b8cd3c52f308', 'option');
+
+if ($scorm_setting == "iframe") {
+    //show non SCORM features
+    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
+} elseif ($scorm_setting == "cde")  {
+    // Show scorm features    
+    add_action( 'init', 'custom_post_type', 0 );
+    add_action('admin_menu', 'postpage_remove'); //adding action for triggering function call
+} elseif ($scorm_setting == "fssi")  {
+    // Show scorm features    
+    add_action( 'init', 'custom_post_type', 0 );
+    add_action('admin_menu', 'postpage_remove'); //adding action for triggering function call
+ 
+}
+
+
+
+
+
+
+
+
+
 
 // Dashboard content
 
@@ -537,19 +569,7 @@ function custom_post_type() {
 
 }
 
-//check to see if this site is being used for SCORM or page building
 
-$scorm_setting = get_field('field_5b8cd3c52f308', 'option');
-
-if ($scorm_setting == "iframe") {
-    //show non SCORM features
-} elseif ($scorm_setting == "cde")  {
-    // Show scorm features    
-    add_action( 'init', 'custom_post_type', 0 );
-} elseif ($scorm_setting == "fssi")  {
-    // Show scorm features    
-    add_action( 'init', 'custom_post_type', 0 );
-}
 
 //nav menu walker accordion
 
