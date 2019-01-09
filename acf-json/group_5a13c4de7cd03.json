@@ -3312,7 +3312,7 @@
                             "label": "Correct answer?",
                             "name": "correct",
                             "type": "select",
-                            "instructions": "1: Correct\r\n0: Incorrect",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3320,7 +3320,10 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": [],
+                            "choices": {
+                                "1": "Correct",
+                                "0": "Incorrect"
+                            },
                             "default_value": [],
                             "allow_null": 0,
                             "multiple": 0,
@@ -3548,5 +3551,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547013254
+    "modified": 1547078114
 }
