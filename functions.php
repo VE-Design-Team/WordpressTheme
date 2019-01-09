@@ -408,7 +408,7 @@ function add_dashboard_video_widgets()
 }
 add_action('wp_dashboard_setup', 'add_dashboard_video_widgets');
 
-function MYPLUGIN_alter_styles(&$styles, $libraries, $embed_type)
+function H5P_alter_styles(&$styles, $libraries, $embed_type)
 {
     $styles[] = (object) array(
         // Path must be relative to wp-content/uploads/h5p or absolute.
@@ -416,7 +416,7 @@ function MYPLUGIN_alter_styles(&$styles, $libraries, $embed_type)
         'version' => '?ver=' . rand() . '/n', // Cache buster
     );
 }
-add_action('h5p_alter_library_styles', 'MYPLUGIN_alter_styles', 10, 3);
+add_action('h5p_alter_library_styles', 'H5P_alter_styles', 10, 3);
 
 //custom login logo
 
