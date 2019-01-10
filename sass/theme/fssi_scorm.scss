@@ -20,15 +20,15 @@ $url_12: url("../fssi/img/theme/learning_objectives.png");
 $url_13: url("../fssi/img/theme/key_activities.png");
 $url_14: url("../fssi/img/theme/assessments.png");
 
-$banner-height: 6rem;
-$breadcrumbs-height: 3rem;
+$banner-height: 72px;
+$breadcrumbs-height: 48px;
 $nav-width: 20rem;
-$footer-height: 3rem;
+$footer-height: 48px;
 
 *,
 html,
 body {
- 
+
 }
 
 #calloutcards {
@@ -794,7 +794,7 @@ h3 a {
 
   .scorm {
 
-    height: 600px;
+    height: 552px;
     overflow-y: scroll;
 
     @media (min-width: 1200px) {
