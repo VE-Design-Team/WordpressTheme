@@ -107,9 +107,6 @@ if ($t == "1") {
 
         endif;?>
 
-
-
-
                 </div>
                 <div class="col-2 next-prev">
 
@@ -135,7 +132,6 @@ endif;
           <div class=" progress container  ">
             <div class="controls row justify-content-md-center">
 
-
               <?php
 // get progress indicators
 if (have_rows('field_5bb2038203e86')): ?>
@@ -158,8 +154,6 @@ endif;
 
 ?>
               <!-- right control -->
-
-
 
             </div>
           </div>
