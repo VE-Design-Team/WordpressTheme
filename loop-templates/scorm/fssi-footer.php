@@ -41,3 +41,4 @@
 </script>
 
 <?php  get_template_part('footer');?>
+<?php edit_post_link('Edit', '<div title="Only logged in administrators see this">', '</div>');?>

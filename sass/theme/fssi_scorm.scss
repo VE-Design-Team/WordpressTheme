@@ -30,6 +30,22 @@ html,
 body {
 
 }
+.post-edit-link
+{
+background: #af3200;
+color: white;
+padding: 5px;
+font-size: 0.7rem;
+text-decoration: none;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2000;
+}
+.post-edit-link:hover
+{
+color: silver;
+}
 
 .single-scorm
 {
