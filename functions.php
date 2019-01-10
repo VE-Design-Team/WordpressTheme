@@ -110,7 +110,6 @@ include_once get_stylesheet_directory() . '/acf/acf.php';
 
  //todo
 
-
 /**
  * Load iFrame helper content
  */
@@ -233,10 +232,6 @@ function rkv_heirch_columns( $column, $post_id ) {
 	// end all case breaks
     }
  
-    
-
-
-
 }
 function rkv_page_columns( $columns ) {
 	$columns['modified']	= 'Last Modified';
@@ -269,10 +264,6 @@ function rkvs_page_columns( $columns ) {
 	$columns['modified']	= 'Last Modified';
 	return $columns;
 }
-
-
-
-
 
 // acf/load_field/key={$field_key} - filter for a specific field based on it's key name , CHANGE THIS TO YOUR FIELDS KEY!
 //add_filter('acf/load_field/key=field_5a209938a0dce', 'dynamic_author_dropdown');
@@ -357,8 +348,6 @@ function post_remove() //creating functions post_remove for removing menu item
     remove_menu_page('edit.php');
  }
 
-
-
 //check to see if this site is being used for SCORM or page building and create post types and turn off others in the menu
 
 $scorm_setting = get_field('field_5b8cd3c52f308', 'option');
@@ -374,17 +363,7 @@ if ($scorm_setting == "iframe") {
     // Show scorm features    
     add_action( 'init', 'custom_post_type', 0 );
     add_action('admin_menu', 'post_remove'); //adding action for triggering function call
- 
 }
-
-
-
-
-
-
-
-
-
 
 // Dashboard content
 
@@ -449,19 +428,19 @@ add_action('h5p_alter_library_styles', 'H5P_alter_styles', 10, 3);
 
 function rmit_login_logo()
 {?>
-	<style type="text/css">
-		#login h1 a,
-		.login h1 a {
-			background-image: url(<?php echo get_stylesheet_directory_uri();
-			?>/img/rmit-login-logo.png);
-			height: 65px;
-			width: 320px;
-			background-size: 320px 65px;
-			background-repeat: no-repeat;
-			padding-bottom: 30px;
-		}
-	</style>
-	<?php }
+<style type="text/css">
+    #login h1 a,
+    .login h1 a {
+        background-image: url(<?php echo get_stylesheet_directory_uri();
+        ?>/img/rmit-login-logo.png);
+        height: 65px;
+        width: 320px;
+        background-size: 320px 65px;
+        background-repeat: no-repeat;
+        padding-bottom: 30px;
+    }
+</style>
+<?php }
 add_action('login_enqueue_scripts', 'rmit_login_logo');
 
 function rmit_login_logo_url()
@@ -486,7 +465,6 @@ function remove_wp_logo($wp_admin_bar)
 //remove toolbar from logged in users
 add_filter('show_admin_bar', '__return_false');
 
-
 // Admin footer modification
 
 function remove_footer_admin()
@@ -505,10 +483,6 @@ function custom_myme_types($mime_types){
   }
   add_filter('upload_mimes', 'custom_myme_types', 1, 1);
 
-
-
-
-  
 //create post type SCORM
  // Register Custom Post Type
 function custom_post_type() {
@@ -563,8 +537,6 @@ function custom_post_type() {
 	register_post_type( 'scorm', $args );
 
 }
-
-
 
 //nav menu walker accordion
 
