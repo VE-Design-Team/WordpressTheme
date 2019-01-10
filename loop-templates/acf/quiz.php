@@ -206,6 +206,10 @@ else:
 endif;
 
 ?>
+    //disable submit until radio selected
+    //$("input:radio").change(function () {$("#postGender").prop("disabled", false);});
+
+
     //disable radios after click
 
     $("a").click(function () {
