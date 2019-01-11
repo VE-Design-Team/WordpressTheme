@@ -1,18 +1,16 @@
 $url_2: url('../cde/img/fssi_logo.png');
 $url_1: url('../cde/img/cnc-hero.jpg');
-$url_3: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1534167/1096%20canvas%20banner-8.png");
 $url_4: url("../cde/img/hamburger.svg");
 $url_5: url("../cde/img/full_screen_icon.svg");
 $url_6: url("../cde/img/vcoss_rmit.png");
 $url_7: url("../cde/img/pixel-01.svg");
 $url_8: url("../cde/img/pixel-02.svg");
-//prev naext icons
+//prev next icons
 $url_16: url("../cde/img/prev-page.svg");
 $url_15: url("../cde/img/next-page.svg");
 
 $banner-height: 8rem;
 $banner-height-mobile: 10rem;
-
 
 $breadcrumbs-height: 0rem;
 $nav-width: 20rem;
@@ -23,6 +21,12 @@ $footer-height: 3rem;
 h1 {
   font-size: 1.5rem !important;
   padding-top: 2rem;
+  
+}
+h1,h2,h3,h4, .h1,.h2,.h3,.h4
+{
+font-family: $font;
+
 }
 
 .cde_h1 {
@@ -107,19 +111,25 @@ text-decoration: underline;
     #quiz label {
         display: contents;
       }
-    #quiz .lead {
-      font-size: 1rem;
+    #quiz {
+      .lead {
+        font-size: 1rem;
+      }
     }
 
-    #quiz .btn-quiz {
-    color: black !important;
-    background: #F9C606;
-    border-radius: 50px;
-    padding: .5rem 3rem .5rem 3rem;
-    text-align: center;
-}
-#quiz .btn-quiz:hover {
-  background: #f9c811;
+    #quiz {
+      .btn-quiz {
+        color: black !important;
+        background: #F9C606;
+        border-radius: 50px;
+        padding: .5rem 3rem .5rem 3rem;
+        text-align: center;
+    }
+    }
+#quiz {
+  .btn-quiz:hover {
+    background: #f9c811;
+  }
 }
 .card-action{
   margin: 0 auto;
@@ -133,12 +143,14 @@ text-decoration: underline;
   margin: 0 0 2rem 0 !important;
 }
 
-#checklist .checkpage {
-  border-top: $dark-green .5rem solid !important
-}
-#checklist .rich-background {
+#checklist {
+  .checkpage {
+    border-top: 0;
+  }
+  .rich-background {
     padding: 0px !important;
     margin: 0 0 2rem 0 !important;
+}
 }
 
 #flipcards .card-grid .back .card-text {
@@ -153,7 +165,6 @@ text-decoration: underline;
   padding: 2rem;
 }
 /* end-acf*/
-
 
 /* footer */
 
@@ -187,7 +198,6 @@ z-index: 1000;
 
 /* end-footer */
 
-
 #myTabContent {
   padding: 2rem !important;
 }
@@ -203,7 +213,6 @@ z-index: 1000;
 }
 .btn {
 }
-
 
 #cde {
   background: $white;
@@ -319,7 +328,6 @@ z-index: 1000;
     margin-bottom: 2rem;
   }
 
-
   #footer {
     height: $footer-height;
     background-color: $footer;
@@ -376,7 +384,6 @@ z-index: 1000;
     display: block;
   }
 }
-
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -438,7 +445,6 @@ padding-inline-start: 0px!important;
     color: #fff;
     background: $light-green;
 }
-
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -510,7 +516,6 @@ a[aria-expanded="true"]::before {
 #cssmenu ul ul {
   display: none;
 }
-
 
 /* ---------------------------------------------------
     CONTENT STYLE

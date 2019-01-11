@@ -50,7 +50,7 @@
       <!--     content ----------------------------------------------------------------------->
       <div id="content" class="scorm" >
         <div class="row mb-4" >
-          <div class="container">
+          <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
             <?php while ( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'loop-templates/scorm/scorm', 'content' ); ?>
             <?php endwhile; // end of the loop. ?>

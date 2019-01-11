@@ -43,7 +43,7 @@ if ($scorm_setting == "iframe") {
              <div class="notice notice-warning is-dismissible">
                           <h2>Embed this SCORM Page in Canvas by pasting this code <span onclick="copyClipboard()" title="Click here to copy to clipboard" class="dashicons dashicons-paperclip" style="cursor: pointer; color: #0073aa;"></span></h2>  <div id="divClipboard">
     
-    &lt;iframe src="' .get_permalink(). '" title="' . $iframe_title . '" style="border:0px #ffffff none;" id="VEDTSCORM"   width="1200" height="400" name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this); scroll(0,0);" allowfullscreen="allowfullscreen" onload="iFrameResize()" &gt;&lt;/iframe&gt;
+    &lt;iframe src="' .get_permalink(). '" title="' . $iframe_title . '" style="border:0px #ffffff none;" id="VEDTSCORM"   width="1200" height="800" name="Richcontent" scrolling="no" frameborder="0" onload="resizeIframe(this); scroll(0,0);" allowfullscreen="allowfullscreen" onload="iFrameResize()" &gt;&lt;/iframe&gt;
                       </div>      </div>
              ';
         }
