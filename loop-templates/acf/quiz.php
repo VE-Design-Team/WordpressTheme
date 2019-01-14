@@ -8,6 +8,7 @@
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
     $q = 1;
+    $count = count(get_field('field_5bb2038203e86'));
     // Get each of the questions
     while (have_rows('field_5bb2038203e86')): the_row();?>
 
@@ -26,9 +27,10 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                 <div class="col-12 col-md-8 offset-md-2 mt-3 ">
                   <?php endif; ?>
 
-                  <div class="questions pl-3">
+                  <div class="questions pl-3 mb-0">
                     <h3 class="h2">Question
-                      <?php echo $q; ?>
+                      <?php echo $q; ?> of
+                      <?php echo $count; ?>
                     </h3>
                     <p class="lead">
                       <?php // Display the question
@@ -63,14 +65,14 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                   </div>
                   <div class="answers">
                     <div class="card-action">
-                      <a id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-primary btn-quiz">Submit</a>
+                      <a id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz">Submit</a>
                     </div>
                   </div>
                 </div>
 
                 <!-- get results-->
                 <hr>
-                <div class="q-footer col-10 mt-3 mb-2 offset-md-2">
+                <div class="q-footer col-12 col-md-8 mt-3 mb-2 offset-md-2">
 
                   <?php
         // check if there are answers
@@ -96,7 +98,12 @@ if ($t == "1") {
                       <?php // Feedback for this snaswer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
+                    <div class="col-2 next-prev">
 
+                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+                      </a>
+                    </div>
                   </div>
 
                   <?php $r++;endwhile;
@@ -108,12 +115,7 @@ if ($t == "1") {
         endif;?>
 
                 </div>
-                <div class="col-2 next-prev">
 
-                  <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
-                  <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
-                  </a>
-                </div>
               </div>
 
             </div>
@@ -129,34 +131,7 @@ endif;
 ?>
 
           </div>
-          <div class=" progress container  ">
-            <div class="controls row justify-content-md-center">
 
-              <?php
-// get progress indicators
-if (have_rows('field_5bb2038203e86')): ?>
-              <?php $p = 0;?>
-
-              <?php // Get each of the questions
-while (have_rows('field_5bb2038203e86')): the_row();?>
-
-              <div data-target="#questions" data-slide-to="<?php echo $p; ?>" class="col align-self-center"><span class="numborder"><span
-                    class="num">
-                  </span></div>
-
-              <?php $p++;endwhile;?>
-
-              <?php else:
-
-    // There are no questions
-
-endif;
-
-?>
-              <!-- right control -->
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -168,6 +143,7 @@ endif;
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
     $q = 1;
+    
     // Get each of the questions
     while (have_rows('field_5bb2038203e86')): the_row();?>
 
@@ -207,8 +183,9 @@ endif;
 
 ?>
     //disable submit until radio selected
-    //$("input:radio").change(function () {$("#postGender").prop("disabled", false);});
-
+    $("input:radio").change(function () {
+      $("#postGender").prop("disabled", false);
+    });
 
     //disable radios after click
 
