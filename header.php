@@ -81,7 +81,7 @@ elseif ($variable  == 'cde') {
 elseif ($variable  == 'embed') { 
     $basefiles = get_stylesheet_directory_uri()."/embed";
 	echo '<script src="'.$basefiles.'/js/jquery.min.js"></script>';
-	echo '<script src="'.get_stylesheet_directory_uri() . '/embed/js/theme.min.js"></script>';
+	echo '<script src="'.get_stylesheet_directory_uri() . '/embed/js/canvas-embed.min.js"></script>';
 
 }
 else{

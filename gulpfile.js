@@ -156,7 +156,7 @@ gulp.task('embed-sass', function () {
         }))
         .pipe(sass())
         .pipe(gulp.dest('./embed/css'))
-        .pipe(rename('theme.min.css'))
+        .pipe(rename('canvas-embed.min.css'))
     return stream;
 });
 
@@ -267,7 +267,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./fssi/js/'));  
   //embed
     gulp.src(scripts)
-    .pipe(concat('embed.min.js'))
+    .pipe(concat('canvas-embed.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./embed/js/'));  
      
