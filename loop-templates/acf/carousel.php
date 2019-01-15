@@ -1,14 +1,14 @@
-<div id="carousel" class="carousel mt-1" >
+<div id="carousel" data-interval="false" class="carousel mt-1">
   <div class="container-fluid navs">
     <div class="row top-nav ">
- 
+
       <div class="col-12">
         <div class="row justify-content-center  indicators">
-        <div class="col-1 scrollers left-right">
-        <a href="#carousel" role="button" data-slide="prev">
-          <i class="fa fa-chevron-circle-left fa-3x"></i>
-        </a>
-      </div>
+          <div class="col-1 scrollers left-right">
+            <a href="#carousel" role="button" data-slide="prev">
+              <i class="fa fa-chevron-circle-left fa-3x"></i>
+            </a>
+          </div>
           <?php $i = 1;
 
 while (have_rows('field_5a55a5855861a')):
