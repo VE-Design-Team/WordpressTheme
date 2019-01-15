@@ -198,19 +198,19 @@ endif;
 
 ?>
     //disable submit until radio selected
-      $("input[type=submit]").attr("disabled", "disabled");
-    //enable submit after radio selected - only wqorks on first question
-    $('input:radio').change(function(){
-            //Validate your form here, example:
-            var validated = true;
-            if($('#testq1a1').val().length === 0) validated = false;
- 
-            //If form is validated enable form
-            if(validated) $("input[type=submit]").removeAttr("disabled");                             
-      });
+    //$("input[type=submit]").attr("disabled", "disabled");
+    //enable submit after radio selected 
+    $('input').change(function () {
+      //Validate your form here, example:
+      var groupName = $(this).attr("name"); //Get radio name
+      var validated = true;
+      if ($("input[name='" + groupName + "']").val().length === 0) validated = false;
+      //If form is validated enable form
+      if (validated) $("input[type=submit][name='" + groupName + "']").removeAttr("disabled");
+    });
     //disable radios after click
 
-    $("input[type=submit]").click(function () {
+    $("input[type=submit]").attr("disabled", "disabled").click(function () {
       var radioName = $(this).attr("name"); //Get radio name
       $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
     });
