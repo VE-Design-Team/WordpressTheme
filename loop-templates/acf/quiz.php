@@ -72,7 +72,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                   </div>
                   <div class="answers">
                     <div class="card-action">
-                      <button id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz">Submit</button>
+                      <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz" value="Submit">
                     </div>
                   </div>
                 </div>
@@ -198,17 +198,19 @@ endif;
 
 ?>
     //disable submit until radio selected
-  
-
-
-
-
-
-
-
+      $("input[type=submit]").attr("disabled", "disabled");
+    //enable submit after radio selected - only wqorks on first question
+    $('input:radio').change(function(){
+            //Validate your form here, example:
+            var validated = true;
+            if($('#testq1a1').val().length === 0) validated = false;
+ 
+            //If form is validated enable form
+            if(validated) $("input[type=submit]").removeAttr("disabled");                             
+      });
     //disable radios after click
 
-    $("button").click(function () {
+    $("input[type=submit]").click(function () {
       var radioName = $(this).attr("name"); //Get radio name
       $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
     });
