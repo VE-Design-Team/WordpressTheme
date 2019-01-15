@@ -3375,10 +3375,12 @@
                         "id": ""
                     },
                     "choices": {
-                        "one": "One correct answer",
-                        "multiple": "Multiple correct answers"
+                        "radio": "One correct answer",
+                        "checkbox": "Multiple correct answers"
                     },
-                    "default_value": [],
+                    "default_value": [
+                        "radio"
+                    ],
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -3539,7 +3541,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "scorm"
+                "value": "post"
             }
         ]
     ],
@@ -3551,5 +3553,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547078114
+    "modified": 1547530351
 }

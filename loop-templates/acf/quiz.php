@@ -32,6 +32,13 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                       <?php echo $q; ?> of
                       <?php echo $count; ?>
                     </h3>
+                    <?php 
+                     $qtype = get_sub_field('field_5c188bc3b0b84');
+
+                           ?>
+
+
+
                     <p class="lead">
                       <?php // Display the question
         the_sub_field('field_5bb2039703e87');?>
@@ -44,7 +51,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
 
-                        <input class="with-gap" name="group<?php echo $q; ?>" type="radio" id="testq<?php echo $q; ?>a<?php echo $a; ?>"
+                        <input class="with-gap" name="group<?php echo $q; ?>" type="<?php echo $qtype; ?>" id="testq<?php echo $q; ?>a<?php echo $a; ?>"
                           class="radio" />
                         <label for="testq<?php echo $q; ?>a<?php echo $a; ?>">
                           <?php the_sub_field('field_5bb20a3acf3f7');?></label>
@@ -65,7 +72,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                   </div>
                   <div class="answers">
                     <div class="card-action">
-                      <a id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz">Submit</a>
+                      <button id="question<?php echo $q; ?>" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz">Submit</button>
                     </div>
                   </div>
                 </div>
@@ -80,12 +87,18 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
             $r = 1;
             // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
+               <?php $f = get_sub_field('field_5bb20a41cf3f8');
+                //this variable not used
+               ?>   
                   <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
 
                     <h4>
+
+
+
+
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
-
 if ($t == "1") {
     echo "Correct";
 } else {
@@ -93,6 +106,8 @@ if ($t == "1") {
 }
 ?>
                     </h4>
+
+                  
 
                     <p>
                       <?php // Feedback for this snaswer
@@ -183,13 +198,17 @@ endif;
 
 ?>
     //disable submit until radio selected
-    $("input:radio").change(function () {
-      $("#postGender").prop("disabled", false);
-    });
+  
+
+
+
+
+
+
 
     //disable radios after click
 
-    $("a").click(function () {
+    $("button").click(function () {
       var radioName = $(this).attr("name"); //Get radio name
       $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
     });
