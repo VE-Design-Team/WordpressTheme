@@ -34,18 +34,11 @@ echo "<br><b>raw location: </b>".$theme->template;
     ?>
 </ul>
 
-<ul>
-    <?php
-
-
-    ?>
-</ul>
-
 <?php 
 $variable = get_field('field_5b8cd3c52f308', 'option');
 if ($variable  == 'fssi') { 
     
-    echo "<h2>SCORM Content</h2>";
+    echo "<h2>SCORM Content</h2><ul>";
     $args = array(
 
 
@@ -55,10 +48,10 @@ if ($variable  == 'fssi') {
        
     );
     wp_list_pages( $args ); 
-
+    echo "</ul>";
 }
 elseif ($variable  == 'cde') {  
-    echo "<h2>SCORM Content</h2>";
+    echo "<h2>SCORM Content</h2><ul>";
 
     $args = array(
         'post_type' => 'scorm',
@@ -67,7 +60,7 @@ elseif ($variable  == 'cde') {
        
     );
     wp_list_pages( $args ); 
-
+    echo "</ul>";
 
 }else{
     echo "No pages";
