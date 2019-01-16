@@ -8,6 +8,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 	<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
+	
+	
+	<?php wp_head(); ?>
 	<?php
 	//CSS and js cache buster
 	$my_theme = wp_get_theme();
@@ -57,8 +60,6 @@ else{
 
 };
 ?>
-	
-	<?php wp_head(); ?>
 	<?php 
 $variable = get_field('field_5b8cd3c52f308', 'option');
 if ($variable  == 'iframe') {

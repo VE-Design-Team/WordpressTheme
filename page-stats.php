@@ -33,3 +33,45 @@ echo "<br><b>raw location: </b>".$theme->template;
     ) );
     ?>
 </ul>
+
+<ul>
+    <?php
+
+
+    ?>
+</ul>
+
+<?php 
+$variable = get_field('field_5b8cd3c52f308', 'option');
+if ($variable  == 'fssi') { 
+    
+    echo "<h2>SCORM Content</h2>";
+    $args = array(
+
+
+        'post_type' => 'scorm',
+        'title_li'    => '',
+        'child_of'    => $id,
+       
+    );
+    wp_list_pages( $args ); 
+
+}
+elseif ($variable  == 'cde') {  
+    echo "<h2>SCORM Content</h2>";
+
+    $args = array(
+        'post_type' => 'scorm',
+        'title_li'    => '',
+        'child_of'    => $id,
+       
+    );
+    wp_list_pages( $args ); 
+
+
+}else{
+    echo "No pages";
+};
+?>
+
+

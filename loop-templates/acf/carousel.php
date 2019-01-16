@@ -16,9 +16,9 @@ while (have_rows('field_5a55a5855861a')):
   ?>
 
           <div class="col-1 col-auto carousel-indicator <?php
- if ($i == "1") {
-  echo "active ";
- } ?>" data-target="#carousel" data-slide-to="<?php
+ if ($i == " 1") { echo "active " ; } ?>"
+            data-target="#carousel" data-slide-to="
+            <?php
  echo $i - 1; ?>">
 
             <?php
@@ -32,42 +32,38 @@ while (have_rows('field_5a55a5855861a')):
 
 ?>
 
-              <?php
+            <?php
  else: { ?>
 
-              <img src="<?php
+            <img src="<?php
    echo get_stylesheet_directory_uri(); ?>/img/carousel/<?php
-   echo " " . $i + 0; ?>.png" alt="View this slide"
-                class="img-fluid">
+   echo " " . $i + 0; ?>.png"
+              alt="View this slide" class="img-fluid">
 
-              <?php
+            <?php
   }
 
  endif; ?>
 
-              <div class="triangle">
-                <div class="empty"></div>
-              </div>
+            <div class="triangle">
+              <div class="empty"></div>
+            </div>
           </div>
 
           <?php
  $i++;
 endwhile; //noe get right indicator
  ?>
-<div class="col-1 scrollers left-right">
-        <a class="right" href="#carousel" role="button" data-slide="next">
-          <i class="fa fa-chevron-circle-right fa-3x "></i>
-        </a>
-      </div>
+          <div class="col-1 scrollers left-right">
+            <a class="right" href="#carousel" role="button" data-slide="next">
+              <i class="fa fa-chevron-circle-right fa-3x "></i>
+            </a>
+          </div>
         </div>
       </div>
-
     </div>
-
   </div>
-
   <?php
-
 if (get_field('field_5ad936e5e0fdd') == 'fullwidth'): ?>
   <div class="carousel container-fluid">
     <?php
@@ -94,14 +90,14 @@ if (have_rows('field_5a55a5855861a')):
  $e = 0;
  while (have_rows('field_5a55a5855861a')):
   the_row(); ?>
-            <div class="carousel-item <?php
+          <div class="carousel-item <?php
   if ($e == " 0 ") {
-   echo "active ";
+   echo " active ";
   } ?>">
-              <?php
-  get_template_part('loop-templates/acf/carousel-content'); ?>
-            </div>
             <?php
+  get_template_part('loop-templates/acf/carousel-content'); ?>
+          </div>
+          <?php
   $e++;
  endwhile;
 else:
@@ -117,8 +113,10 @@ endif;
     </div>
   </div>
   <script>
-
-     $('.carousel-indicator:second').addClass('active');
-     $('.carousel-item:first').addClass('active');
-
+    $('.carousel-indicator:second').addClass('active');
+    $('.carousel-item:first').addClass('active');
+    //stops Carousel scrolling 
+    $('#carousel').carousel({
+      interval: 20
+    })
   </script>

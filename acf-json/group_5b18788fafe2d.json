@@ -51,7 +51,7 @@
             "label": "Analytics URL",
             "name": "analytics_url",
             "type": "text",
-            "instructions": "It may help to add the url of your analytics dashboard here for easy viewing it will look something like this : https:\/\/analytics.google.com\/analytics\/web\/#\/report-home\/a115957094w172218090p171774450",
+            "instructions": "It may help to add the url of your analytics dashboard here for easy viewing it will look something like this : http:\/\/analytics.google.com\/analytics\/web\/#\/report-home\/a115957094w172218090p171774450",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -93,6 +93,25 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
+        },
+        {
+            "key": "field_5c3d3a8832610",
+            "label": "Copyright owner",
+            "name": "copyright_owner",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "RMIT",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -112,5 +131,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545273771
+    "modified": 1547517491
 }
