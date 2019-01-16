@@ -31,14 +31,12 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                     <h3 class="h2">Question
                       <?php echo $q; ?> of
                       <?php echo $count; ?>
+
                     </h3>
                     <?php 
                      $qtype = get_sub_field('field_5c188bc3b0b84');
 
                            ?>
-
-
-
                     <p class="lead">
                       <?php // Display the question
         the_sub_field('field_5bb2039703e87');?>
@@ -71,32 +69,37 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                     </form>
                   </div>
                   <div class="answers">
+           
                     <div class="card-action">
-                      <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz" value="Submit">
+                      <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz"
+                        value="Submit">
                     </div>
                   </div>
                 </div>
-
                 <!-- get results-->
                 <hr>
                 <div class="q-footer col-12 col-md-8 mt-3 mb-2 offset-md-2">
+                 
+                  <!-- multiple question feedback -->
 
                   <?php
+                  //find if feedback is for single or multiple question
+$t = get_sub_field('field_5c188bc3b0b84');
+
+if ($t == "checkbox") { ?>
+     
+<!-- start of multipole answer feedback -->
+<?php
         // check if there are answers
         if (have_rows('field_5bb20a29cf3f6')):
             $r = 1;
             // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
-               <?php $f = get_sub_field('field_5bb20a41cf3f8');
+                  <?php $f = get_sub_field('field_5bb20a41cf3f8');
                 //this variable not used
-               ?>   
+               ?>
                   <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
-
                     <h4>
-
-
-
-
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
 if ($t == "1") {
@@ -106,11 +109,10 @@ if ($t == "1") {
 }
 ?>
                     </h4>
-
-                  
-
+                   
+              
                     <p>
-                      <?php // Feedback for this snaswer
+                      <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
                     <div class="col-2 next-prev">
@@ -128,6 +130,62 @@ if ($t == "1") {
             // No answers
 
         endif;?>
+
+<!-- get end of multipole answer feedback -->
+
+<?php } else { ?>
+ 
+  <?php
+        // check if there are answers
+        if (have_rows('field_5bb20a29cf3f6')):
+            $r = 1;
+            // get each of the answers
+            while (have_rows('field_5bb20a29cf3f6')): the_row();?>
+                  <?php $f = get_sub_field('field_5bb20a41cf3f8');
+                //this variable not used
+               ?>
+                  <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
+                    <h4>
+                      <?php
+$t = get_sub_field('field_5bb20a41cf3f8');
+if ($t == "1") {
+    echo "Correct";
+} else {
+    echo "Incorrect";
+}
+?>
+                    </h4>
+                   
+              
+                    <p>
+                      <?php // Feedback for this answer
+                the_sub_field('field_5bb20ad9cf3f9');?>
+                    </p>
+                    <div class="col-2 next-prev">
+
+                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+                      </a>
+                    </div>
+                  </div>
+
+                  <?php $r++;endwhile;
+
+        else:
+
+            // No answers
+
+        endif;?>
+
+
+          <!-- get end of single answer feedback -->
+
+<?php }; ?>
+       
+ 
+                 
+
+
 
                 </div>
 
@@ -151,14 +209,12 @@ endif;
       </div>
     </div>
   </div>
-
   <script type="text/javascript">
     <?php
-
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
     $q = 1;
-    
+  
     // Get each of the questions
     while (have_rows('field_5bb2038203e86')): the_row();?>
 
