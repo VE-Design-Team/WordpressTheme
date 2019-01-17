@@ -16,11 +16,13 @@ $breadcrumbs-height: 0rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
-
-
-
-
 /* typography*/
+
+#cdescrom{
+
+
+
+}
 
 h1 {
   font-size: 1.5rem !important;
@@ -527,6 +529,7 @@ a[aria-expanded="true"]::before {
 #content {
     padding: 20px;
     transition: all 0.3s;
+    width: 100%;
 }
 .content {
   width: 100% !important;

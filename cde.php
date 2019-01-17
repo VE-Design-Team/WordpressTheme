@@ -1,4 +1,4 @@
-<div id="cdescrom" class="wrapper">
+<div id="cdescorm" class="wrapper">
 <nav id="sidebar">
   <div>
       <!--   -->
