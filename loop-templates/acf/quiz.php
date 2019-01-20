@@ -246,7 +246,7 @@ endif;
 
 ?>
     //disable submit until radio selected
-    //$("input[type=submit]").attr("disabled", "disabled");
+    $("input[type=submit]").attr("disabled", "disabled");
     //enable submit after radio selected 
     $('input').change(function () {
       //Validate your form here, example:
@@ -256,10 +256,13 @@ endif;
       //If form is validated enable form
       if (validated) $("input[type=submit][name='" + groupName + "']").removeAttr("disabled");
     });
-    //disable radios after click
+    //disable inputs after click
 
     $("input[type=submit]").attr("disabled", "disabled").click(function () {
       var radioName = $(this).attr("name"); //Get radio name
-      $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
+      //radios with same name
+      $("input:radio[name='" + radioName + "']:not(:checked)").attr("disabled", true);
+      //checkboxes
+      $("input:checkbox[name='" + radioName + "']").attr("disabled", true); 
     });
   </script>
