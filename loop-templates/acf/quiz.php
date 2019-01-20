@@ -50,7 +50,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
 
                         <input class="with-gap" name="group<?php echo $q; ?>" type="<?php echo $qtype; ?>" id="testq<?php echo $q; ?>a<?php echo $a; ?>"
-                          class="radio" />
+                          class="radio form-check-input" />
                         <label for="testq<?php echo $q; ?>a<?php echo $a; ?>">
                           <?php the_sub_field('field_5bb20a3acf3f7');?></label>
                         <br>
@@ -78,7 +78,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                 </div>
                 <!-- get results-->
                 <hr>
-                <div class="q-footer col-12 col-md-8 mt-3 mb-2 offset-md-2">
+                <div class="q-footer col-12 col-md-10 offset-md-1">
                  
                   <!-- multiple question feedback -->
 
@@ -110,8 +110,7 @@ if ($t == "1") {
 ?>
                     </h4>
                    
-              
-                    <p>
+                    <p class="mb-5">
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
@@ -156,7 +155,6 @@ if ($t == "1") {
 ?>
                     </h4>
                    
-              
                     <p>
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
@@ -177,16 +175,10 @@ if ($t == "1") {
 
         endif;?>
 
-
           <!-- get end of single answer feedback -->
 
 <?php }; ?>
        
- 
-                 
-
-
-
                 </div>
 
               </div>
