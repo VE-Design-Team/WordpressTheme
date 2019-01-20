@@ -3,7 +3,7 @@
 
 
 <?php if (have_rows('field_5a13c61e91a66')): ?>
-<div id="accordion" class="mr-1">
+<div id="accordion" class="mr-1 mb-3">
 <div id="cards" class="dissolve">
  <?php while (have_rows('field_5a13c61e91a66')): the_row();?>
  <div class="card dissolve">
@@ -42,7 +42,7 @@ $('.card-header').click(function(){
 
 <?php else: ?>
 <?php if (have_rows('field_5a13c61e91a66')): ?>
-<div id="accordion" class="mr-1">
+<div id="accordion" class="mr-1 mb-3">
 <div id="cards" class="expand">
  <?php while (have_rows('field_5a13c61e91a66')): the_row();?>
  <div class="card expand">
