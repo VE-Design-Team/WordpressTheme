@@ -1,6 +1,5 @@
 <?php
 get_header();
-$sidebar_pos = get_theme_mod('understrap_sidebar_position');
 ?>
 
 <?php edit_post_link('Update this content', '<div class="edit-me btn-sm small" title="Only logged in administrators see this">', '</div>');?>

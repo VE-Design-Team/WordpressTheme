@@ -63,36 +63,33 @@ h4,
 /* ACF*/
 .instruction {
   border-radius: 8px;
+  color: white !important;
 }
 
 .tab-content {
   border-radius: 0 0 8px 8px;
 }
 
-#tabs ul.nav-tabs li:nth-child(1) {
-  border-radius: 8px 0 0 0;
+#tabs {
+  ul.nav-tabs li:nth-child(1), .nav-tabs .nav-item .active {
+    border-radius: 8px 0 0 0;
+  }
 }
 
-#tabs .nav-tabs .nav-item .active {
-  border-radius: 8px 0 0 0;
-}
-
-.nav-link active {
+.nav-link .active {
   text-decoration: underline;
 }
 
-#tabs .nav-tabs .nav-item .title {
-  margin-right: 1rem;
-  margin-top: .4rem;
-  color: $black-light !important;
-}
-
-#tabs .nav-tabs .nav-item .active .title {
-  border-bottom: 2px red solid;
-  color: $black !important;
-}
-
 #tabs .nav-tabs .nav-item {
+  .title {
+    margin-right: 1rem;
+    margin-top: 0.4rem;
+    color: $black-light !important;
+  }
+  .active .title {
+    border-bottom: 2px red solid;
+    color: $black !important;
+  }
   font-weight: 500 !important;
 }
 
@@ -157,8 +154,6 @@ h4,
   margin: 0 auto;
   text-align: center;
 }
-
-
 
 #cde {
   #accordion {
