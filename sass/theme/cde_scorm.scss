@@ -20,8 +20,6 @@ $orange : #f9c811;
 
 /* typography*/
 
-#cdescrom {}
-
 h1 {
   font-size: 1.5rem !important;
   padding-top: 2rem;
@@ -160,24 +158,28 @@ h4,
   text-align: center;
 }
 
-#checklist {
+
+
+#cde {
+  #accordion {
   margin: 0 0 2rem 0 !important;
-  padding: 0px !important;
+  padding: 0;
 }
 
-#accordion {
-  margin: 0 0 2rem 0 !important;
-}
-
-#checklist {
-  .checkpage {
-    border-top: 0;
-  }
-
-  .rich-background {
+  #checklist {
+   
     padding: 0px !important;
-    margin: 0 0 2rem 0 !important;
+    .checkpage {
+      border-top: none !important;
+  
+    }
+  
+    .rich-background {
+      padding: 0px !important;
+      margin: 0 0 2rem 0 !important;
+    }
   }
+
 }
 
 #flipcards .card-grid .back .card-text {
