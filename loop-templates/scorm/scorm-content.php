@@ -19,6 +19,6 @@ else { ?>
 <?php endif;?>
     <?php get_template_part('loop-templates/acf');?>
 </section>
-<article>
+<article class="mt-3">
     <?php the_field('field_5b91d32f52a61');?>
 </article>
