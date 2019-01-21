@@ -16,6 +16,8 @@ $breadcrumbs-height: 0rem;
 $nav-width: 20rem;
 $footer-height: 3rem;
 
+$orange : #f9c811;
+
 /* typography*/
 
 #cdescrom{
@@ -88,53 +90,50 @@ text-decoration: underline;
   display: none !important;
 }
 
-#quiz .carousel-item {
+#quiz {
+  .carousel-item {
     background: $gray-100;
     border-radius: 8px;
     border: solid #c7cdd1 0rem !important;
     box-shadow: 0 0 0 #ffffff00 !important;
     padding: 30px;
-}
-
-#quiz .rich-background {
-    background: transparent !important;
   }
-
-#quiz .next-prev a.carousel-control-next {
-    background: $green-light !important;
+  .rich-background {
+    background: transparent;
   }
-  #quiz .next-prev a.carousel-control-prev {
-      background: $green-light !important;
+  .next-prev a {
+    &.carousel-control-next, &.carousel-control-prev {
+      background: $green-light;
     }
-    #quiz .rich-background .questions .h2 {
-        font-size: 1.4rem;
-        border-bottom: 2px $red solid;
-        padding: 0 0 .5rem 0;
-        margin-bottom: 1.5rem;
+  }
+  .rich-background .questions .h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px red solid;
+    padding: 0 0 0.5rem 0;
+    margin-bottom: 1.5rem;
+  }
+  label {
+    display: contents;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .btn-quiz {
+    color: black !important;
+    background: #F9C606;
+    border-radius: 50px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    text-align: center;
+    &:hover {
+      background: $orange;
     }
-    #quiz label {
-        display: contents;
-      }
-    #quiz {
-      .lead {
-        font-size: 1rem;
-      }
-    }
-
-    #quiz {
-      .btn-quiz {
-        color: black !important;
-        background: #F9C606;
-        border-radius: 50px;
-        padding: .5rem 3rem .5rem 3rem;
-        text-align: center;
-    }
-    }
-#quiz {
-  .btn-quiz:hover {
-    background: #f9c811;
+  }
+  .card
+  {
+    margin-top: 2rem;
   }
 }
+
 .card-action{
   margin: 0 auto;
   text-align: center;

@@ -114,7 +114,7 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class="col-2 next-prev">
+                    <div class=" next-prev">
 
                       <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
                       <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
@@ -159,7 +159,7 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class="col-2 next-prev">
+                    <div class="next-prev">
 
                       <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
                       <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
