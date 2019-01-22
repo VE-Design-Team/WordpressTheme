@@ -812,6 +812,9 @@
       }
 
     }
+    label{
+      line-height: 1.7rem;
+    }
 
   }
 
@@ -882,9 +885,7 @@
     position: absolute;
     bottom: 2rem;
     right: 1rem;
-    padding-right: 2rem;
-    ;
-
+  
     a.carousel-control-prev,
     a.carousel-control-next {
 
@@ -944,8 +945,8 @@
 
   .btn-quiz {
     position: absolute;
-    bottom: 1rem;;
-    right: 2rem;
+    bottom: 1rem;
+    //right: 2rem;
     color: $white;
   }
 

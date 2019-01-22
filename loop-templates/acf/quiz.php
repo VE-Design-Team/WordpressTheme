@@ -3,7 +3,7 @@
     <div class="container">
       <div class="checkpage row glossarize">
         <!-- carousel for pages -->
-        <div id="questions" class="carousel col-12 p-0" data-ride="carousel" data-interval="false">
+        <div id="questions" class="carousel col-12" data-ride="carousel" data-interval="false">
           <?php
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
@@ -19,15 +19,15 @@ if (have_rows('field_5bb2038203e86')):
               <?php 
 // no image in quiz fallback
 if( get_sub_field('field_5bb20bd5e1178') ): ?>
-              <div class="col-12 col-sm-6 col-md-4 p-0">
+              <div class="col-12 col-sm-6 col-md-4 ">
                 <img src="<?php the_sub_field('field_5bb20bd5e1178');?>" class="img-fluid d-flex justify-content-center flex-wrap">
               </div>
-              <div class="col-12 col-sm-6 col-md-8 mt-3">
+              <div class="col-12 col-sm-6 col-md-8 ">
                 <?php else: ?>
-                <div class="col-12 col-md-8 offset-md-2 mt-3 ">
+                <div class="col-12 col-md-8 offset-md-2  ">
                   <?php endif; ?>
-
-                  <div class="questions pl-3 mb-0">
+<div class="row p-4">
+                  <div class="questions pl-3 mb-0 col-10">
                     <h3 class="h2">Question
                       <?php echo $q; ?> of
                       <?php echo $count; ?>
@@ -43,7 +43,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                     </p>
                     <form action="#">
                       <!-- get answers -->
-                      <p>
+                      <p >
                         <?php if (have_rows('field_5bb20a29cf3f6')):
             $a = 1;
 // get each of the answers
@@ -68,12 +68,13 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 
                     </form>
                   </div>
-                  <div class="answers">
+                  <div class="answers col-2 ">
            
                     <div class="card-action">
                       <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz"
                         value="Submit">
                     </div>
+                  </div>
                   </div>
                 </div>
                 <!-- get results-->
