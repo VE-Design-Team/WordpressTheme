@@ -48,12 +48,13 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
             $a = 1;
 // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
-
+<p>
                         <input class="with-gap" name="group<?php echo $q; ?>" type="<?php echo $qtype; ?>" id="testq<?php echo $q; ?>a<?php echo $a; ?>"
                           class="radio form-check-input" />
-                        <label for="testq<?php echo $q; ?>a<?php echo $a; ?>">
+                        <label for="testq<?php echo $q; ?>a<?php echo $a; ?>" class="mb-3" >
                           <?php the_sub_field('field_5bb20a3acf3f7');?></label>
-                        <br>
+                        </p> 
+                    
 
                         <?php $a++;endwhile;
 
@@ -68,7 +69,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 
                     </form>
                   </div>
-                  <div class=" answers col-4 col-md-2">
+                  <div class=" answers col-4 col-md-2 pr-0">
            
                     <div class="card-action">
                       <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz"
@@ -115,13 +116,27 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class=" next-prev">
 
-                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
-                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
-                      </a>
-                    </div>
-                  </div>
+<?php  $numberofqs = count(get_field('field_5bb2038203e86'));
+
+if ($numberofqs = 1) {
+  //don't get next previous buttons
+} else { 
+  //do
+  ?>
+  <div class="next-prev">
+
+<a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+<a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+</a>
+</div>
+</div>
+  
+<?php }
+//End if ($numberofqs = 1)
+
+?>
+                  
 
                   <?php $r++;endwhile;
 
@@ -160,12 +175,25 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class="next-prev">
+                    <?php  $numberofqs = count(get_field('field_5bb2038203e86'));
 
-                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
-                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
-                      </a>
-                    </div>
+if ($numberofqs = 1) {
+  //don't get next previous buttons
+} else { 
+  //do
+  ?>
+  <div class="next-prev">
+
+<a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+<a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+</a>
+</div>
+</div>
+  
+<?php }
+//End if ($numberofqs = 1)
+
+?>
                   </div>
 
                   <?php $r++;endwhile;
