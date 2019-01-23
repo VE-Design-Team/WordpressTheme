@@ -89,14 +89,14 @@ else:{
         <a title="Previous page" target="_self" href="<?php echo $prevlink; ?>" class="btn-prev">
         </a>
         <?php else: {
-    echo "<div class='pn-helper  m-0'>Next page</div> ";
+    echo "<a href='#' title='Next page' target='_self' class='pn-helper  m-0'>Next page</a> ";
 };?>
         <?php endif; ?>
         <?php if( get_field('field_5bdf9ea04ef39') ): ?>
         <a title="Next page" target="_self" href="<?php echo $nextlink; ?>" class=" btn-next"></a>
 
         <?php else: {
-    echo "<div class='pn-helper  m-0'>Previous page</div>";
+    echo "<a href='#' title='Previous page' target='_self' class='pn-helper  m-0'>Previous page</div>";
 };?>
         <?php endif; ?>
 
