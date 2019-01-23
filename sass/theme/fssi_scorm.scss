@@ -27,31 +27,31 @@ $footer-height: 48px;
 
 *,
 html,
-body {
+body {}
 
-}
-.post-edit-link
-{
-background: #af3200;
-color: white;
-padding: 5px;
-font-size: 0.7rem;
-text-decoration: none;
-position: absolute;
-top: 0;
-left: 0;
-z-index: 2000;
-}
-.post-edit-link:hover
-{
-color: silver;
+.post-edit-link {
+  background: #af3200;
+  color: white;
+  padding: 5px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
 }
 
-.single-scorm
-{
+.post-edit-link:hover {
+  color: silver;
+}
+
+.single-scorm {
   border: solid 1px $mid-grey;
-}  
-
+}
+.instruction
+{
+  font-size: 0.9rem;
+}
 #calloutcards {
   .curve {
     display: none;
@@ -95,6 +95,7 @@ h3 a {
 
 .row .splash {
   height: calc(100vh - 160px);
+  height: 800px;
   background-color: #444;
   max-width: 100% !important;
   padding: 0rem !important;
@@ -247,7 +248,7 @@ h3 a {
     @media (min-width: 1200px) {
       top: ($banner-height + $breadcrumbs-height);
       height: 100%;
-     
+
     }
 
     .nav-header {
@@ -261,7 +262,7 @@ h3 a {
     a {
       color: white;
       //font-weight: inherit;
-      
+
       ul {
 
         list-style: none;
@@ -269,13 +270,13 @@ h3 a {
         padding: 0 0 0 0;
 
         li {
-        
+
           padding: 1rem;
           background: $warm-grey;
           padding: 0 0 0 0;
 
           ul {
-           
+
             li {
               background: green;
             }
@@ -780,6 +781,7 @@ h3 a {
       .btn-fs {
         background-image: $url_5;
       }
+
       .btn-menu {
         background-image: $url_4;
       }
@@ -816,6 +818,8 @@ h3 a {
   }
 
   .fullpage {}
+
+  //Tables
 
   //Cards
   #calloutcards {
@@ -934,229 +938,247 @@ h3 a {
     }
   }
 }
-  // Carousel
-  #carousel {
-    background: $mid-grey;
 
-  }
-
-  #flipcards {
-    background: $white;
-
-    .card {
-      border: $green-light 0.1rem solid;
-      -webkit-box-shadow: 0 0 5rem lighten($green-light, 60%);
-      -moz-box-shadow: 0 0 2rem lighten($green-light, 60%);
-      box-shadow: 0 0 2rem lighten($green-light, 60%);
-
-      .card-body {
-
-        p {
-
-          font-size: 1.1rem;
-          font-family: $font2;
-          color: $green-light;
-        }
-      }
-
-      .middler {
-        margin-bottom: 1rem;
-
-        button {
-          background: none;
-          background-image: $url_8;
-          background-size: contain;
-          color: rgba(0, 0, 0, 0);
-          background-position: center;
-          height: 3.5rem;
-          border: none;
-          background-repeat: no-repeat;
-
-          //display: none;
-        }
-      }
-    }
-  }
-
-  #introtabs {
-    #tabs {
-      /*  width: 80%; */
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-
-      ul.nav {
-        border: none;
-        width: 30rem;
-        margin: auto;
-
-        li.nav-item {
-          border: none;
-          background: none;
-          margin: auto;
-          padding: 0 0 0.5rem 0;
-          margin-top: 0;
-          background-position: center;
-
-          a {
-
-            height: 4.7rem;
-            width: 6rem;
-            border-bottom: solid $white 0.2rem;
-            padding: 0;
-            background: none;
-            background-size: cover;
-            background-position: top;
-            height: 100%;
-
-            .title {
-              //display: none;
-              position: relative;
-              top: 5rem;
-              /*  background: $green-light; */
-              font-family: $font2;
-              width: 5rem;
-              margin: auto;
-              padding: 0.5rem;
-              width: 100%;
-              text-align: center;
-              color: $black;
-              font-size: 1rem;
-              height: 4rem;
-              vertical-align: middle !important;
-
-            }
-
-            i.fa-chevron-down {
-              display: none;
-            }
-
-          }
-
-          a.nav-link {
-
-            //margin-bottom: 1.2rem;
-          }
-
-          a.nav-link.active {
-
-            padding: 0;
-          }
-
-        }
-
-        li.nav-item:nth-child(1) {
-          a {
-            background-image: $url_9;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-
-          a.active {
-            background-color: $green-light;
-            background-image: $url_12;
-
-          }
-        }
-
-        li.nav-item:nth-child(2) {
-          a {
-            background-image: $url_10;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            .title {
-              padding-top: 1.25rem;
-            }
-          }
-
-          a.active {
-            background-color: $green-light;
-            background-image: $url_13;
-
-          }
-        }
-
-        li.nav-item:nth-child(3) {
-          a {
-            background-image: $url_11;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            .title {
-              padding-top: 1.25rem;
-            }
-          }
-
-          a.active {
-            background-color: $green-light;
-            background-image: $url_14;
-
-          }
-        }
-
-      }
-
-      .tab-content {
-        border: none;
-        padding: 0;
-        margin-top: 5rem;
-
-        .tab-pane {
-
-          h3 {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-
-  }
-  .card-legend 
+// Carousel
+#carousel {
+  background: $rich-background;
+.carousel-indicator
+{
+  img
   {
-    background-color: #eee;
-    padding: 3rem 1rem 3rem 3rem !important;
-    border: 0;
+    background: $white;
+    -webkit-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+  }
+}
+.bordered
+{
+  border: 0 !important;
+}
+}
 
-   display: inline;
-   img
-   {
-     float: left;
-     margin-right: 1rem;
-   }
-    p
-    {
-          float: left;
+#flipcards {
+  background: $white;
+
+  .card {
+    border: $green-light 0.1rem solid;
+    -webkit-box-shadow: 0 0 5rem lighten($green-light, 60%);
+    -moz-box-shadow: 0 0 2rem lighten($green-light, 60%);
+    box-shadow: 0 0 2rem lighten($green-light, 60%);
+
+    .card-body {
+
+      p {
+
+        font-size: 1.1rem;
+        font-family: $font2;
+        color: $green-light;
+      }
+    }
+
+    .middler {
+      margin-bottom: 1rem;
+
+      button {
+        background: none;
+        background-image: $url_8;
+        background-size: contain;
+        color: rgba(0, 0, 0, 0);
+        background-position: center;
+        height: 3.5rem;
+        border: none;
+        background-repeat: no-repeat;
+
+        //display: none;
+      }
     }
   }
-  }
-  label {
-    display: inline !important;
-  }
+}
 
-  #quiz {
+#introtabs {
+  #tabs {
+    /*  width: 80%; */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 
-    .rich-background {
-      background: $white;
-      padding: 0;
+    ul.nav {
+      border: none;
+      width: 30rem;
+      margin: auto;
 
-      .container {
-        .correct {
-          border: none;
-          //border-left: 0.2rem solid $red;
-          //background: lighten($red, 30%);
+      li.nav-item {
+        border: none;
+        background: none;
+        margin: auto;
+        padding: 0 0 0.5rem 0;
+        margin-top: 0;
+        background-position: center;
+
+        a {
+
+          height: 4.7rem;
+          width: 6rem;
+          border-bottom: solid $white 0.2rem;
+          padding: 0;
+          background: none;
+          background-size: cover;
+          background-position: top;
+          height: 100%;
+
+          .title {
+            //display: none;
+            position: relative;
+            top: 5rem;
+            /*  background: $green-light; */
+            font-family: $font2;
+            width: 5rem;
+            margin: auto;
+            padding: 0.5rem;
+            width: 100%;
+            text-align: center;
+            color: $black;
+            font-size: 1rem;
+            height: 4rem;
+            vertical-align: middle !important;
+
+          }
+
+          i.fa-chevron-down {
+            display: none;
+          }
 
         }
 
-        .correct1 {
-          border: none;
-          //border-left: 0.2rem solid $green-light;
-          // background: lighten($green-light, 30%);
+        a.nav-link {
+
+          //margin-bottom: 1.2rem;
+        }
+
+        a.nav-link.active {
+
+          padding: 0;
         }
 
       }
 
+      li.nav-item:nth-child(1) {
+        a {
+          background-image: $url_9;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        a.active {
+          background-color: $green-light;
+          background-image: $url_12;
+
+        }
+      }
+
+      li.nav-item:nth-child(2) {
+        a {
+          background-image: $url_10;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .title {
+            padding-top: 1.25rem;
+          }
+        }
+
+        a.active {
+          background-color: $green-light;
+          background-image: $url_13;
+
+        }
+      }
+
+      li.nav-item:nth-child(3) {
+        a {
+          background-image: $url_11;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .title {
+            padding-top: 1.25rem;
+          }
+        }
+
+        a.active {
+          background-color: $green-light;
+          background-image: $url_14;
+
+        }
+      }
+
+    }
+
+    .tab-content {
+      border: none;
+      padding: 0;
+      margin-top: 5rem;
+
+      .tab-pane {
+
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
+
+}
+
+.card-legend {
+  background-color: #eee;
+  padding: 3rem 1rem 3rem 3rem !important;
+  border: 0;
+  
+  display: inline;
+
+  img {
+    float: left;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+  p {
+    float: left;
+  }
+}
+
+label {
+  display: inline !important;
+}
+
+#quiz {
+
+  .rich-background {
+    background: $white;
+    padding: 0;
+
+    .container {
+      .correct {
+        border: none;
+        //border-left: 0.2rem solid $red;
+        //background: lighten($red, 30%);
+
+      }
+
+      .correct1 {
+        border: none;
+        //border-left: 0.2rem solid $green-light;
+        // background: lighten($green-light, 30%);
+      }
+
+    }
+
+  }
+}
 
 #footer {
   background-color: $footer;
@@ -1192,30 +1214,34 @@ h3 a {
 
 #footer-page {
   //position: absolute;
- 
+
   bottom: 2rem;
+
   @media (min-width: 1200px) {
     bottom: 1rem;
   }
+
   z-index: 2000;
+
   #next-prev {
     //width: 6rem;
     bottom: 1rem;
     font-family: $font2;
     position: relative;
     margin-top: 1rem;
-    height: 2rem; 
-    .pn-helper
-{
-  background: silver;
-  border-radius: 0.3rem;
-  padding: 0.25rem;
-  margin: 0.5rem;
-  height: 2rem;  
-  color: $black;
-  text-decoration: none;
+    height: 2rem;
 
-}
+    .pn-helper {
+      background: silver;
+      border-radius: 0.3rem;
+      padding: 0.25rem;
+      margin: 0.5rem;
+      height: 2rem;
+      color: $black;
+      text-decoration: none;
+
+    }
+
     .btn-next,
     .btn-prev {
       background-size: contain;
@@ -1227,7 +1253,7 @@ h3 a {
       -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
       -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
       box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
-    
+
     }
 
     .btn-next {
