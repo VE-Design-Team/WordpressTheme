@@ -8,7 +8,7 @@ else { ?>
 </h1>
 <?php }
 ?>
-<article>
+<article class="mb-3">
     <?php the_content();?>
 </article>
 <section>
