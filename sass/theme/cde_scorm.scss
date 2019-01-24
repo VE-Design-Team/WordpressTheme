@@ -559,11 +559,17 @@ a.article:hover {
   border-radius: .5rem;
 }
 
-#cssmenu,
-#cssmenu ul,
-#cssmenu ul li,
-#cssmenu ul li a {
+#cssmenu {
   list-style: none;
+  ul {
+    list-style: none;
+    li {
+      list-style: none;
+      a {
+        list-style: none;
+      }
+    }
+  }
 }
 
 #cssmenu ul ul {
@@ -600,3 +606,4 @@ a.article:hover {
     }
     */
 }
+//James edit from here
