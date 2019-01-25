@@ -50,5 +50,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
+<style>
+#nav-tab .tab-content
+{
+	border: none;
+}
+<?php the_field('field_5b2849d5b9d0c'); ?>
 
+</style>
 <?php get_footer(); ?>
