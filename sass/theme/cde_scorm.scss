@@ -606,3 +606,51 @@ a.article:hover {
     }
     */
 }
+
+/* ---------------------------------------------------
+    James updates January
+----------------------------------------------------- */
+
+// fix font weights
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: normal !important;
+  text-rendering: optimizeLegibility;
+}
+
+// adds space around main content.
+#content {
+  padding: 4rem;
+}
+
+// iphone 6/7/8plus and below will have more realestate.
+@media (max-width: 414px) {
+#content {
+  padding: 2rem;
+}
+}
+
+
+// align humburger flush left with content
+#cde #sidebarCollapse {
+  padding-left: 15px;
+}
+
+
+// fix banner elements from collapsing on mobile
+#cde #banner .module-title {
+  position: absolute;
+  padding-left: 0;
+}
+
+// ensures prev next buttons are centered on mobile, module title is contained within banner
+@media (max-width: 414px) { 
+.cde_footer_left {
+  width: 44%;
+  }
+  #cde #banner .module-title {
+    margin: 0;
+    padding-left: 0;
+  }
+}
