@@ -66,14 +66,7 @@
 	edit_post_link('Update this content', '<p>', '</p>');
    echo '</div></div>'; };?> 
 <?php endif;?>
-<style>
-#nav-tab .tab-content
-{
-	border: none;
-}
-<?php the_field('field_5b2849d5b9d0c'); ?>
 
-</style>
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()

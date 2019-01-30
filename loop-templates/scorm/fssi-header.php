@@ -9,7 +9,7 @@
   <div class="row">
     <div  id="banner" class="col-12">
      <div id="ws"><div class="fssi-logo"></div></div>
-     <div class="module-title"><h1>          <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
+     <div class="module-title"><h1>          <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo 'get_the_title($grandparent)'; }else {echo get_the_title($parent); }?>
 </h1></div>
     </div>
     <div class="col-12" id="breadcrumbs">

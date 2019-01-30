@@ -92,6 +92,11 @@ else{
 	echo '<script src="'.get_stylesheet_directory_uri() . '/js/theme.min.js"></script>';
 };
 ?>
+<style>
+
+<?php the_field('field_5b2849d5b9d0c'); ?>
+
+</style>
 	<!--
  __      ________   _____            _               _______                   
  \ \    / /  ____| |  __ \          (_)             |__   __|                  
