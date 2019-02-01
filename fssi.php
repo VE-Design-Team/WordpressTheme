@@ -68,8 +68,13 @@
       <!--row -->
       <!-- footer buttons-->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
 
+=======
+      <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
+      <!--
+>>>>>>> Stashed changes
 =======
       <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
       <!--
@@ -83,8 +88,13 @@
 
 </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 <?php else: {?>
+=======
+-->
+      <?php else: {?>
+>>>>>>> Stashed changes
 =======
 -->
       <?php else: {?>
@@ -133,6 +143,7 @@ endif;
   </div><!-- #fssi -->
   <!-- footer buttons end -->
 </div><!-- content -->
+<<<<<<< Updated upstream
 
 
 </div>
@@ -144,12 +155,20 @@ endif;
   ?>
 
 =======
+=======
+
+
+</div>
+>>>>>>> Stashed changes
 
 </div>
 
 <?php }
   ?>
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 <!------------------------------------------ content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
