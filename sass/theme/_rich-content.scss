@@ -163,6 +163,7 @@
   margin-bottom: .5rem;
   color: $instruction-text;
   width: 100%;
+
   .fa-info-circle {
     color: $instruction-logo;
     background: $instruction-highlight;
@@ -676,9 +677,11 @@
   .large {
     font-size: 1.2rem;
   }
+
   .small {
     font-size: 0.9rem;
   }
+
   .medium {
     font-size: 1rem;
   }
@@ -761,6 +764,7 @@
 
 //Quiz
 #quiz {
+ 
   .container-fluid {
     padding: 1rem;
     font-family: "Lato", sans-serif;
@@ -784,7 +788,6 @@
 
   .rich-background {
     background: $white;
-    padding: 2rem;
 
     .questions {
       margin-bottom: 2rem;
@@ -793,7 +796,8 @@
       .h2 {
         text-align: left;
       }
-      p{
+
+      p {
         margin-bottom: 0.3rem;
       }
 
@@ -815,7 +819,8 @@
       }
 
     }
-    label{
+
+    label {
       line-height: 1.7rem;
     }
 
@@ -856,22 +861,30 @@
   .qline {}
 
   .q-footer {
+    border: none;
+   .card, .card-body{
+     border: 0;
 
+   }
     .correct0,
     .correct1 {
       //background: lighten($red, 40%);
 
       color: $black;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      background: $white;
+      //margin-bottom: 0.5rem;
+      //background: $white;
       border: none;
+      padding-bottom: 0.5rem;
+      background-color: inherit;
+
     }
 
     .correct1 {
       h4 {
-        color: darken( $green, 30%);
+        color: darken($green, 30%);
       }
+      //background: green;
 
     }
 
@@ -879,6 +892,7 @@
       h4 {
         color: $red;
       }
+      //background: red;
 
     }
 
@@ -888,7 +902,7 @@
     position: absolute;
     bottom: 2rem;
     right: 1rem;
-  
+
     a.carousel-control-prev,
     a.carousel-control-next {
 
@@ -947,10 +961,13 @@
   }
 
   .btn-quiz {
-    position: absolute;
-    bottom: 1rem;
+
     //right: 2rem;
     color: $white;
+    float: right;
+    margin-right: 1rem;
+    position: relative;
+
   }
 
   .progress {
@@ -1091,7 +1108,8 @@
       width: auto;
       color: #fff;
       text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
-            >a>span {
+
+      >a>span {
         display: none;
       }
 
@@ -1099,13 +1117,12 @@
         color: #fff;
       }
     }
-    
 
     &:before {
       transition: transform 150ms cubic-bezier(0.2, 0.5, 0.34, 1);
     }
   }
-  
+
   @media screen and (max-width: 960px) {
     .hotspot {
       height: 30px;
@@ -2301,3 +2318,13 @@ table {
     }
   }
 }
+
+@media (max-width: 575.98px) {}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}
