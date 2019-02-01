@@ -67,8 +67,13 @@
       </div>
       <!--row -->
       <!-- footer buttons-->
+<<<<<<< Updated upstream
   <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
 
+=======
+      <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
+      <!--
+>>>>>>> Stashed changes
 
 <div style="clear:both;"></div>
 <div id="footer" class="col-12 p-0 m-0">
@@ -77,8 +82,13 @@
     reserved.</p>
 
 </div>
+<<<<<<< Updated upstream
 
 <?php else: {?>
+=======
+-->
+      <?php else: {?>
+>>>>>>> Stashed changes
 
       <?php //previous next variables 
  $prevlink = get_field('field_5bdf9ede4ef3a');
@@ -126,12 +136,21 @@ endif;
 
 
 </div>
+<<<<<<< Updated upstream
 
 </div>
 
 <?php }
   ?>
 
+=======
+
+</div>
+
+<?php }
+  ?>
+
+>>>>>>> Stashed changes
 <!------------------------------------------ content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
 <?php
