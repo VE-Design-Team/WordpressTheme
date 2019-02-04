@@ -67,8 +67,8 @@
       </div>
       <!--row -->
       <!-- footer buttons-->
-
-  <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
+      <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
+      <!--
 
 
 <div style="clear:both;"></div>
@@ -78,9 +78,8 @@
     reserved.</p>
 
 </div>
-
-
-<?php else: {?>
+-->
+      <?php else: {?>
 
       <?php //previous next variables 
  $prevlink = get_field('field_5bdf9ede4ef3a');
@@ -126,6 +125,8 @@ endif;
   <!-- footer buttons end -->
 </div><!-- content -->
 
+
+</div>
 
 </div>
 
