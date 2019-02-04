@@ -69,7 +69,10 @@
       <!-- footer buttons-->
       <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
       <!--
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 <div style="clear:both;"></div>
 <div id="footer" class="col-12 p-0 m-0">
