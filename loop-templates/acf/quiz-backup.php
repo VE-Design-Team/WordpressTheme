@@ -27,7 +27,7 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
                 <div class="col-12 col-md-8 offset-md-2  ">
                   <?php endif; ?>
 <div class="row p-4">
-                  <div class="questions pl-3 mb-0 col-12 col-md-8 col-lg-10">
+                  <div class="questions pl-3 mb-0 col-8 col-md-8 col-lg-10">
                     <h3 class="h2">Question
                       <?php echo $q; ?> of
                       <?php echo $count; ?>
@@ -48,12 +48,13 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
             $a = 1;
 // get each of the answers
             while (have_rows('field_5bb20a29cf3f6')): the_row();?>
-
+<p>
                         <input class="with-gap" name="group<?php echo $q; ?>" type="<?php echo $qtype; ?>" id="testq<?php echo $q; ?>a<?php echo $a; ?>"
                           class="radio form-check-input" />
-                        <label for="testq<?php echo $q; ?>a<?php echo $a; ?>">
+                        <label for="testq<?php echo $q; ?>a<?php echo $a; ?>" class="mb-3" >
                           <?php the_sub_field('field_5bb20a3acf3f7');?></label>
-                        <br>
+                        </p> 
+                    
 
                         <?php $a++;endwhile;
 
@@ -68,10 +69,10 @@ if( get_sub_field('field_5bb20bd5e1178') ): ?>
 
                     </form>
                   </div>
-                  <div class=" answers col-12">
-           
+                  <div class=" answers col-12  pr-0">
+
                     <div class="card-action">
-                      <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4  btn btn-sm btn-default btn-quiz"
+                      <input id="question<?php echo $q; ?>" type="submit" name="group<?php echo $q; ?>" class="h4 btn btn-default btn-quiz"
                         value="Submit">
                     </div>
                   </div>
@@ -100,7 +101,9 @@ if ($t == "checkbox") { ?>
                 //this variable not used
                ?>
                   <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
-                    <h4>
+                    
+                    
+                  <h4>
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
 if ($t == "1") {
@@ -115,13 +118,17 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class=" next-prev">
 
-                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
-                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
-                      </a>
-                    </div>
-                  </div>
+
+  <div class="next-prev">
+
+<a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+<a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+</a>
+</div>
+</div>
+  
+          
 
                   <?php $r++;endwhile;
 
@@ -144,7 +151,7 @@ if ($t == "1") {
                   <?php $f = get_sub_field('field_5bb20a41cf3f8');
                 //this variable not used
                ?>
-                  <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden  card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
+                  <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden card card-body col correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
                     <h4>
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
@@ -160,12 +167,16 @@ if ($t == "1") {
                       <?php // Feedback for this answer
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
-                    <div class="next-prev">
+                    
+  <div class="next-prev">
 
-                      <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
-                      <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
-                      </a>
-                    </div>
+<a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
+<a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
+</a>
+</div>
+</div>
+  
+
                   </div>
 
                   <?php $r++;endwhile;
