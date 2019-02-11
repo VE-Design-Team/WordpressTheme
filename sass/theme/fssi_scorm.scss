@@ -95,7 +95,11 @@ h3 a {
   margin: 40px auto;
   text-align: center;
 }
-
+.wp-caption-text
+{
+  font-size: 0.9rem;
+  color: $mid-grey;
+}
 .background {
   height: 100%;
   background-size: cover;
