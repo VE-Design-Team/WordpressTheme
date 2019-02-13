@@ -1039,12 +1039,43 @@ width: 100%;
   }
 
 }
+#checklist
+{
+  .rich-background
+  {
+    background-color :$white;
+  }
+  .checkpage
+  {
+    background-color :$rich-background;
+  }
+  
+  li{
+    span
+    {
+      background: $text-grey;
+      text-shadow: none;
+    }
+    span:hover
+    {
+      
+      text-shadow: none;
+    }
+  }
+  li.checked{
+    span
+    {
+      background: $rich-background;
+    }
+  }
+  
+}
 
 #introtabs {
   #tabs {
     /*  width: 80%; */
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    //margin-bottom: 2rem;
 
     ul.nav {
       border: none;
