@@ -15,11 +15,8 @@ while (have_rows('field_5a55a5855861a')):
  the_row(); //get carousel indicators
   ?>
 
-          <div class="col-1 col-auto carousel-indicator <?php
- if ($i == " 1") { echo "active " ; } ?>"
-            data-target="#carousel" data-slide-to="
-            <?php
- echo $i - 1; ?>">
+          <div class="col-1 col-auto carousel-indicator "
+            >
 
             <?php
  if (get_sub_field('field_5a55a5d15861b')): ?>
@@ -38,7 +35,7 @@ while (have_rows('field_5a55a5855861a')):
             <img src="<?php
    echo get_stylesheet_directory_uri(); ?>/img/carousel/<?php
    echo " " . $i + 0; ?>.png"
-              alt="View this slide" class="img-fluid">
+              alt="View this slide" class="img-fluid no-image">
 
             <?php
   }
