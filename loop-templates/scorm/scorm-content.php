@@ -24,7 +24,7 @@ else { ?>
 </article>
 
 <?php if (get_field('field_5a13c5a7ec802') == 'Introduction page'): ?>
-<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 card-legend mb-3 ">
+<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 card card-legend mb-3 ">
 
 <h3 style="font-family: Trade Gothic LT Pro Cn !important; font-weight: bold; line-height: 1.2; color: #3b3d3e; font-size: 1.5rem;">Start here</h3>
   <p><img class="alignnone wp-image-1907" src="<?php echo get_stylesheet_directory_uri()?>/fssi/img/theme/svg/next.svg" alt="" width="32" height="32" />  Work through this module using the arrows at the bottom of the page.</p>
