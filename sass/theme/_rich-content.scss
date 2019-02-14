@@ -917,6 +917,7 @@
       float: right;
       font-size: 0.6rem;
       line-height: 0.6rem;
+      text-decoration: none;
 
     }
 
@@ -1564,6 +1565,7 @@
 }
 
 #left-tabs {
+
   .tab-content {
     border: 2px solid $nav-tabs-border-color;
   }
@@ -1574,10 +1576,21 @@
 
   a.nav-link>.h4 {
     color: black;
+
+  }
+  a.nav-link.active
+  {
+    border-bottom: 2px solid $nav-tabs-border-color;
+  }
+  a.nav-link
+  {
+    border-bottom: 2px solid $white;
+    padding: 1rem 1rem 0 1rem;
   }
 
   a.nav-link.active>.h4 {
     color: $nav-tabs-active-text-color;
+    
   }
 
   .triangle {

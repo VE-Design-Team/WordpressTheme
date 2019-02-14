@@ -44,14 +44,23 @@ body {}
 .post-edit-link:hover {
   color: silver;
 }
-.copyright{
-  position: absolute;
+.down{
+  position: initial;
   bottom: 0;
-  background-color: rgba(0,0,0,0.9);
-  color: white;
-  width: 100%;
+.copyright{
+
+  p{
+
+  //background-color: rgba(0,0,0,0.75);
+  color: $gray-100;
   
-      }
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.25rem;
+  margin: 0;
+  } 
+ }
+}
 
 .single-scorm {
   border: solid 1px $mid-grey;
@@ -70,7 +79,7 @@ body {}
     border: 0.2rem solid $green;
     border-radius: 0;
     margin: 1rem;
-    background-color: $green;
+    //background-color: $green;
     width: 100%;
   }
 
@@ -78,9 +87,11 @@ body {}
     display: none;
   }
 }
-
-a {
-  text-decoration: underline;
+#hotspots
+{
+  a {
+    text-decoration: none;
+  }
 }
 
 h3 a {
@@ -840,7 +851,7 @@ width: 100%;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -864,7 +875,7 @@ width: 100%;
   //Cards
   #calloutcards {
     .card {
-
+      
       #cardcontent {
 
         .card-header {
@@ -878,36 +889,7 @@ width: 100%;
     }
 
   }
-
-  //Tabs
-  #left-tabs {
-    .tab-content {
-      border: 2px solid $nav-tabs-border-color;
-    }
-
-    .tab-pane {
-      margin: 1rem;
-    }
-
-    a.nav-link {
-      padding: 1rem 0 0rem 0;
-
-      .h4 {
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid $white;
-        text-align: left;
-
-      }
-    }
-
-    a.nav-link.active>.h4 {
-      color: $nav-tabs-active-text-color;
-      border-bottom: 2px solid $green;
-
-    }
-
-  }
-
+  
   //Accordion
 
   #accordion {
@@ -982,14 +964,29 @@ width: 100%;
 // Carousel
 #carousel {
   background: $rich-background;
+.indicators{
+  .carousel-indicator{
+    cursor: default; 
+
+    .no-image
+    {
+      background: $rich-background;
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+    }
+  }
+}
+
 .carousel-indicator
 {
+  
+  ;
   img
   {
     background: $white;
-    -webkit-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
-    box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+ 
     -webkit-filter: grayscale(100%);
     -moz-filter:    grayscale(100%);
     -ms-filter:     grayscale(100%);
@@ -999,6 +996,10 @@ width: 100%;
 .bordered
 {
   border: 0 !important;
+}
+img
+{
+  background-color: $white;
 }
 }
 
@@ -1044,6 +1045,11 @@ width: 100%;
   .rich-background
   {
     background-color :$white;
+    padding: 0;
+    .container
+    {
+      padding-top: 0;
+    }
   }
   .checkpage
   {
@@ -1204,13 +1210,11 @@ width: 100%;
   }
 
 }
-
 .card-legend {
-  background-color: #eee;
-  padding: 3rem 1rem 3rem 3rem !important;
+
+  padding: 2rem !important;
   border: 0;
-  
-  display: inline;
+  background-color:  $warm-grey;
 
   img {
     float: left;

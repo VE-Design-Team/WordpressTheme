@@ -26,14 +26,15 @@
 
   <?php while ( have_posts() ) : the_post(); ?>
   <div class="splash-banner">
-    <div class="splash-banner inner col-12">
-      <div class="splash-left col-lg-3 col-md-3 col-sm-4 col-12 offset-1 offset-lg-2 offset-md-3 offset-sm-2">
-        <div class=" fssi-logo-text">
+    <div class="splash-banner inner container">
+      <div class="row">
+      <div class="splash-left col-12 col-sm-6 offset-1">
+        <div class=" fssi-logo-text float-right">
 
         </div>
       </div>
-      <div class="splash-right col-lg-4 col-md-4 col-sm-4 col-12">
-        <h2 class="fssi-splash-title">
+      <div class="splash-right col-12 col-sm-5">
+        <h2 class="fssi-splash-title ">
           <?php the_title();?>
         </h2>
         <h3 class="fssi-splash-button">
@@ -43,9 +44,13 @@
           <?php endif; ?>
         </h3>
       </div>
+  
+</div><!--row-->
+
     </div>
 
   </div>
+
   <?php endwhile; // end of the loop. ?>
 <?php }
   else { ?>
@@ -133,11 +138,13 @@ endif;
   ?>
 
 <!------------------------------------------ content ----------------------------------->
+
+
 <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
+
 <?php
   if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { 
-    
-   echo "<div class='copyright'>Copyright</div>";
+   echo "<div id='' class='down'><div class='copyright'><p>© VCOSS and RMIT University 2019, v1.0, released February 2019 </p></div>
+   </div>";
 }
         ?>
-
