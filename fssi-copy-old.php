@@ -4,12 +4,17 @@
 <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 <style>
   html {
+    background-image: url('<?php echo $image[0]; ?>');
+    background-color: #055918;
     background-size: cover;
     background-position: center;
-        }
+
+
+  }
   body{
   
   }
+
   #fssi {
     background-image: url('<?php echo $image[0]; ?>');
     background-size: cover;
@@ -19,7 +24,7 @@
   }
   .single-scorm
   {
-    
+    border: none;
   }
 
   #navtoggle {
@@ -37,7 +42,7 @@
     <div class="splash-banner inner container">
       <div class="row">
       <div class="splash-left col-12 col-sm-6 offset-1">
-        <div class=" fssi-logo-text float-sm-right">
+        <div class=" fssi-logo-text float-right">
 
         </div>
       </div>

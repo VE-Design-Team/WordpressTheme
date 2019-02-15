@@ -138,7 +138,22 @@ h3 a {
   background-repeat: no-repeat;
   width: 220px;
   height: 180px;
-  border-right: 4px solid #fff;
+ float: left;
+ margin-left: 40px;
+
+}
+
+@media (min-width: 576px)  {
+
+  .fssi-logo-text {
+    background-image: url("../fssi/img/fssi-white.svg");
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 180px;
+      
+    border-right: 4px solid #fff;
+  }
+  
 }
 
 .fssi-button {
@@ -1057,6 +1072,8 @@ img
   }
   
   li{
+   
+    padding-bottom: 0.2rem;
     span
     {
       background: $text-grey;
