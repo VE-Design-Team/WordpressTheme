@@ -6,9 +6,10 @@
         <div id="questions" class="carousel col-12" data-ride="carousel" data-interval="false">
           <?php
 // check if there are questions
+$count = count(get_field('field_5bb2038203e86'));
 if (have_rows('field_5bb2038203e86')):
     $q = 1;
-    $count = count(get_field('field_5bb2038203e86'));
+
     // Get each of the questions
     while (have_rows('field_5bb2038203e86')): the_row();?>
 
@@ -120,13 +121,11 @@ if ($t == "1") {
   </div>
                     <div class=" next-prev col-12 col-md-2">
                   
-                    <?php
-                    //if there are more than one questions provide scollers
-if ($count > "2") { ?>
+       
               <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
                       <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
                       </a>
-<?php } ?>
+
 
 
            
@@ -155,7 +154,7 @@ if ($count > "2") { ?>
                 //this variable not used
                ?>
                   <div id="q<?php echo $q; ?>a<?php echo $r; ?>" class="hidden  card card-body correct<?php the_sub_field('field_5bb20a41cf3f8');?> ">
-                  <div class="col-10">
+                  <div class="col-12 col-md-10">
                     <h4>
                       <?php
 $t = get_sub_field('field_5bb20a41cf3f8');
@@ -172,15 +171,13 @@ if ($t == "1") {
                 the_sub_field('field_5bb20ad9cf3f9');?>
                     </p>
                     </div>
-                    <div class="next-prev col-2">
-                    <?php
-                     //if there are more than one questions provide scollers
-if ($count > "1") { ?>
+                    <div class="next-prev col-12 col-md-2">
+              
          <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
                       <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
                       </a>
   
- <?php } ?>
+
 
 
               
@@ -222,7 +219,10 @@ endif;
       </div>
     </div>
   </div>
+
   <script type="text/javascript">
+  
+
     <?php
 // check if there are questions
 if (have_rows('field_5bb2038203e86')):
