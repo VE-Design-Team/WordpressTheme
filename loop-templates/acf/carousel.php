@@ -9,15 +9,12 @@
               <i class="fa fa-chevron-circle-left fa-3x"></i>
             </a>
           </div>
-          <?php $i = 1;
+          <?php $i = 1; $thumb = 0;
 
 while (have_rows('field_5a55a5855861a')):
  the_row(); //get carousel indicators
   ?>
-
-          <div class="col-1 col-auto carousel-indicator "
-            >
-
+          <div class="col-1 col-auto carousel-indicator" data-target="#carousel" data-slide-to="<?php echo $thumb; ?>">
             <?php
  if (get_sub_field('field_5a55a5d15861b')): ?>
             <?php
@@ -26,31 +23,21 @@ while (have_rows('field_5a55a5855861a')):
   if ($image) {
    echo wp_get_attachment_image($image, $size);
   }
-
+  $thumb++; 
 ?>
-
-            <?php
- else: { ?>
-
+            <?php else: { ?>
             <img src="<?php
    echo get_stylesheet_directory_uri(); ?>/img/carousel/<?php
    echo " " . $i + 0; ?>.png"
               alt="View this slide" class="img-fluid no-image">
-
-            <?php
-  }
-
- endif; ?>
+            <?php  }  endif; ?>
 
             <div class="triangle">
               <div class="empty"></div>
             </div>
           </div>
-
-          <?php
- $i++;
-endwhile; //noe get right indicator
- ?>
+          <?php $i++; endwhile; //noe get right indicator
+          ?>
           <div class="col-1 scrollers left-right">
             <a class="right" href="#carousel" role="button" data-slide="next">
               <i class="fa fa-chevron-circle-right fa-3x "></i>
