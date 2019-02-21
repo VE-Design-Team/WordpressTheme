@@ -608,7 +608,7 @@ a.article:hover {
 }
 
 /* ---------------------------------------------------
-    James updates January
+    James updates February
 ----------------------------------------------------- */
 
 // fix font weights
@@ -655,4 +655,64 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-//test
+// ensures accessibility standards on nav item active links
+#sidebar ul li.active > a {
+  color: #000054;
+  background: #00DCB4;
+}
+
+#sidebar ul li a:hover {
+  color: #000054;
+}
+
+// change flip card button colors from fssi to align more with CNC
+.btn-primary {
+  background-color: #000054 !important;
+  color: #ffffff;
+  transition: 300ms;
+  border-color: #000054;
+}
+
+.btn-primary:hover {
+  background-color: #000054b3 !important;
+  border-color: #000054b3;
+}
+
+//accordian collapse just reordering the css hierarchy moving accordian behind #cards.expand
+
+#cards.expand .card {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 5px; }
+
+#cards.expand .card .card-header {
+  border-radius: 0;
+  color: #000;
+  font-weight: 700;
+  padding-left: 0.5rem;
+  background-color: #006E5A;
+  color: #fff;
+  font-family: "Museo500", sans-serif;
+  cursor: pointer; }
+
+ #cards.expand #accordion .card .card-header .fa-minus {
+    display: inline; }
+#cards.expand #accordion .card .card-header .fa-plus {
+    display: none; }
+#cards.expand #accordion .card .card-header:hover {
+  background-color: #006E5A;
+  color: #fff; }
+#cards.expand #accordion .card .collapse {
+  background: #f9fafa;
+  color: #000; }
+#cards.expand #accordion .card .collapsed {
+  background: #f9fafa;
+  color: #000; }
+#cards.expand #accordion .card .collapsed .fa-minus {
+    display: none; }
+#cards.expand #accordion .card .collapsed .fa-plus {
+    display: inline; }
+#cards.expand #accordion .card .card-body {
+  background: #fff; }
+
+  //test
