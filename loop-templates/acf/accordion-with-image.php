@@ -37,8 +37,13 @@ endif;
     <div class="col-xs-12 col-sm-6 col-sm-1 pl-0 accordion">
 
       <?php if (have_rows('field_5a541f36eef91')): ?>
-      <div id="accordion">
+      <?php if( get_field('field_5bc4d38bc5b36') == 'single' ): ?>
+<div id="accordion">
+<?php endif; ?>
         <div id="cards" class="expand"> 
+        <?php if( get_field('field_5bc4d38bc5b36') == 'toggle' ): ?>
+<div id="accordion">
+<?php endif; ?>
           <!-- get text accordion -->
           <?php while (have_rows('field_5a541f36eef91')): the_row();?>
           <div class="card" >
@@ -80,5 +85,8 @@ $(function(){
     
     }		        
   })
+})
+$('accordion').collapse({
+  toggle: true
 })
 </script>	

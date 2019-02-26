@@ -281,17 +281,66 @@ abbr.glossarizer_replaced
 }
 
 //Accordions
-#accordion {
+#accordion
+{
   background: $rich-background;
   padding: 10px;
+}
 
+#accordion, #aim {
+  
+  #cards.card
+  {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    .card-header {
+      border-radius: 0;
+      color: $black;
+      font-weight: 700;
+      padding-left: 0.5rem;
+      background-color: $accordion-header-active;
+      color: $accordion-header-active-font;
+      font-family: $rich-heading-font;
+      cursor: pointer;
+
+      .fa-minus {
+        display: inline;
+      }
+
+      .fa-plus {
+        display: none;
+      }
+    }
+    .card-header:hover {
+      background-color: $accordion-header-active;
+      color: $accordion-header-active-font;
+    }
+    .collapse {
+      background: $gray-25;
+      color: $black;
+
+    }
+
+    .collapsed {
+      background: $gray-25;
+      color: $black;
+
+      .fa-minus {
+        display: none;
+      }
+
+      .fa-plus {
+        display: inline;
+      }
+    }
+  }
+ 
   #cards.expand {
-
     .card {
       border: 0;
       border-radius: 0;
       margin-bottom: 5px;
-
       .card-header {
         border-radius: 0;
         color: $black;
