@@ -16,7 +16,19 @@
 
         <div class="card-body scroll-box ">
           <?php if (get_sub_field('field_5a8663981362e')): ?>
-          <img class="card-img-top img-fluid" src="<?php the_sub_field('field_5a8663981362e');?>" alt="Card image cap">
+
+          <?php 
+
+$image = get_sub_field('field_5a8663981362e');
+
+if( !empty($image) ): ?>
+
+	<img class="card-img-top img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+<?php endif; ?>
+
+
+         
           <div class="card-text <?php the_field('field_5b3c038bf73ee');?>">
             <?php the_sub_field('field_5a865a8c9f830');?>
           </div>
@@ -49,8 +61,19 @@
 
         <div class="card-body scroll-box">
           <?php if (get_sub_field('field_5a8664851362f')): ?>
-          <img class="card-img-top" src="  <?php the_sub_field('field_5a8664851362f');?>" alt="Card image cap">
-          <div class="card-text  <?php the_field('field_5b3c03c1f73ef');?>">
+ 
+
+<?php 
+
+$image2 = get_sub_field('field_5a8664851362f');
+
+if( !empty($image2) ): ?>
+
+<img class="card-img-top img-fluid" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" />
+
+<?php endif; ?>
+
+         <div class="card-text  <?php the_field('field_5b3c03c1f73ef');?>">
 
             <?php the_sub_field('field_5a86650b13630');?>
           </div>
