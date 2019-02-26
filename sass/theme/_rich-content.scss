@@ -1779,6 +1779,22 @@ abbr.glossarizer_replaced
       .card-text {
         padding-top: 0.5rem;
         width: 100%;
+
+        p{
+          //anti blur
+          -webkit-filter: blur(0.1px);
+        }
+      }
+      .x {
+        font-size: 0.9rem;
+      }
+    
+      .xx {
+        font-size: 1rem
+      }
+    
+      .xxx {
+        font-size: 1.2rem;
       }
 
     }
@@ -1827,22 +1843,6 @@ abbr.glossarizer_replaced
       height: 100px;
     }
   }
-}
-
-#flipcards>div>div>div.card.front>div,
-#flipcards>div>div>div.card.back>div {
-  .x {
-    font-size: 0.9rem;
-  }
-
-  .xx {
-    font-size: 1rem
-  }
-
-  .xxx {
-    font-size: 1.2rem;
-  }
-
 }
 
 //end flipcards

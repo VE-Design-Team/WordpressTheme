@@ -1,9 +1,9 @@
 <?php if (have_rows('field_5a1dfb52cb056')):
     $i = 0;
     $last = count(get_field('field_5a1dfb52cb056'));?>
-				<div class="container-fluid" id="checklist">
-				  <div class="row rich-background">
-				    <div class="container">
+				<div id="checklist">
+				  <div class="rich-background">
+				    <div class="container-fluid">
 				      <div class="checkpage row glossarize">
                 <?php $image = get_field('field_5a9ca670e8b54');
                       if (!empty($image)): ?>

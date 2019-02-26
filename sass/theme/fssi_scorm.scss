@@ -29,6 +29,11 @@ $footer-height: 48px;
 html,
 body {}
 
+abbr.glossarizer_replaced
+{
+    border-bottom: $green 2px dotted;
+}
+
 .post-edit-link {
   background: #af3200;
   color: white;
@@ -64,6 +69,9 @@ body {}
 
 .single-scorm {
   border: solid 1px $mid-grey;
+}
+.single-scorm:fullscreen {
+  border: 0px;
 }
 .instruction
 {
@@ -110,7 +118,7 @@ h3 a {
 .wp-caption-text
 {
   font-size: 0.9rem;
-  color: $mid-grey;
+  color: $text-grey;
 }
 .background {
   height: 100%;
@@ -520,7 +528,7 @@ width: 100%;
                 a {
                   //border-left: .1rem solid white;
 
-                  span:before {
+                  span:before { 
                     background: $warm-grey;
                     color: white;
 
@@ -977,8 +985,7 @@ width: 100%;
   background: $rich-background;
 .indicators{
   .carousel-indicator{
-    cursor: default; 
-
+  
     .no-image
     {
       background: $rich-background;

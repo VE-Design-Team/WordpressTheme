@@ -78,80 +78,25 @@ $radius: 0.1rem;
 $half-radius: $radius / 2;
 $double-radius: $radius *2;
 
-*,
-html,
-body {
-    //font-family: $font-family-sans-serif
 
-}
+//custom
 
-#calloutcards {
-    .curve {
-        display: none;
+$url_2: url('../cde/img/fssi_logo.png');
+$url_1: url('../cde/img/cnc-hero.jpg');
+$url_4: url("../cde/img/hamburger.svg");
+$url_5: url("../cde/img/full_screen_icon.svg");
+$url_6: url("../cde/img/vcoss_rmit.png");
+$url_7: url("../cde/img/pixel-01.svg");
+$url_8: url("../cde/img/pixel-02.svg");
+//prev next icons
+$url_16: url("../cde/img/prev-page.svg");
+$url_15: url("../cde/img/next-page.svg");
 
-    }
+$banner-height: 8rem;
+$banner-height-mobile: 10rem;
 
-    .card {
-        border: 0rem solid $gray-200 !important;
-        border-radius: 8px !important;
-        margin: 1rem;
-        background-color: $gray-100 !important;
-        //lighten($green, 10%);
-    }
-    .card-header{
-      margin: 2rem 2rem .2rem 2rem !important;
-      padding: 0rem !important;
-    }
-    .card-body {
-      margin: 1rem 1rem 1rem 1rem !important;
-    }
-    hr {
-      background-color: $red !important;
-    }
+$breadcrumbs-height: 0rem;
+$nav-width: 20rem;
+$footer-height: 3rem;
 
-    .pixel {
-        display: none;
-    }
-}
-
-a {
-    text-decoration: underline;
-}
-
-//carousel and tabs
-@media (min-width: 768px) {
-
-    .fa.fa-chevron-circle-left,
-    .fa.fa-chevron-circle-right {
-        position: relative;
-    }
-
-    .fa.fa-chevron-circle-left:after,
-    .fa.fa-chevron-circle-right:after {
-        background-color: $carousel-chevron;
-        height: 4rem;
-        width: 4rem;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        /*--adjust as necessary--*/
-        color: $white;
-        position: absolute;
-        left: 0;
-        font-size: 3rem;
-        text-align: center;
-        border-radius: 1rem;
-    }
-
-    .fa.fa-chevron-circle-left:after {
-        content: "\f053";
-        padding: 0.6rem 0.6em 0 0.7rem;
-    }
-
-    .fa.fa-chevron-circle-right:after {
-        content: "\f054";
-        padding: 0.6rem 0.1em 0 0.7rem;
-    }
-}
-@import "cde_scorm";
+$orange : #f9c811;
