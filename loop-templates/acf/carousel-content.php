@@ -22,7 +22,6 @@
     </p>
   </div>
   <?php else: ?>
-
   <?php if( get_field('field_5ad936e5e0fdd') == 'fullwidth' ): ?>
   <div class="col-12 carousel-text-only">
     <?php else: {?>
@@ -31,7 +30,7 @@
       <h3>
         <?php the_sub_field('field_5a5820d027a5d');?>
       </h3>
-  <p>
+      <p>
         <?php the_sub_field('field_5a55a5ef5861c');?>
       </p>
     </div>

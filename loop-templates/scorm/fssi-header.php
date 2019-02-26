@@ -16,7 +16,7 @@
     <?php
   if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { //no breadcrumbs ?>
 <?php } else { ?>
-
+    
 <?php } ?>
 
 
@@ -33,9 +33,6 @@
            <li><?php wp_title(''); ?></li>
       </ul>
 <?php } ?>
-
-
-   
 <div id="access">
     <button id="navtoggle" class="btn btn-primary btn-menu"></button>
     <button onclick="fullscreen()" id="fullscreen" class="btn btn-primary btn-fs"></button>

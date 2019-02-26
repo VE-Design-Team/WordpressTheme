@@ -24,7 +24,4 @@ $sidebar_pos = get_theme_mod('understrap_sidebar_position');
 		</div><!-- #primary -->
 </div><!-- Container end -->
 </div><!-- Wrapper end -->
-<style>
-
-</style>
 <?php get_footer(); ?>
