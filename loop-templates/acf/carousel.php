@@ -5,7 +5,7 @@
       <div class="col-12">
         <div class="row justify-content-center  indicators">
           <div class="col-1 scrollers left-right">
-            <a href="#carousel" role="button" data-slide="prev">
+            <a href="#carousel" role="button" title="View previous slide" data-slide="prev">
               <i class="fa fa-chevron-circle-left fa-3x"></i>
             </a>
           </div>
@@ -29,17 +29,17 @@ while (have_rows('field_5a55a5855861a')):
             <img src="<?php
    echo get_stylesheet_directory_uri(); ?>/img/carousel/<?php
    echo " " . $i + 0; ?>.png"
-              alt="View this slide" class="img-fluid no-image">
+              alt="decorative image" class="img-fluid no-image">
             <?php  }  endif; ?>
 
             <div class="triangle">
               <div class="empty"></div>
             </div>
-          </div>
+          </div><!-- indicator-->
           <?php $i++; endwhile; //noe get right indicator
           ?>
           <div class="col-1 scrollers left-right">
-            <a class="right" href="#carousel" role="button" data-slide="next">
+            <a id="next-button" title="View next slide" title="View next slide" class="right" href="#carousel" role="button" tabindex="0" data-slide="next">
               <i class="fa fa-chevron-circle-right fa-3x "></i>
             </a>
           </div>
@@ -97,6 +97,14 @@ endif;
     </div>
   </div>
   <script>
+    //accessibility button
+    $("#next-button").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#next-button").click();
+        }
+    });
+
+    //make carousel work
     $('.carousel-indicator:second').addClass('active');
     $('.carousel-item:first').addClass('active');
     //stops Carousel scrolling 
