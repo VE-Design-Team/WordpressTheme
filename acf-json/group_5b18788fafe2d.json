@@ -112,6 +112,33 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5c748dc886533",
+            "label": "Glossary",
+            "name": "glossary",
+            "type": "select",
+            "instructions": "Does this environment require a glossary for appropriate content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "glossary": "Enable glossary",
+                "disabled": "Disable glossary"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -131,5 +158,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547517491
+    "modified": 1551146880
 }

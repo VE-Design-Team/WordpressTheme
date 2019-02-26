@@ -13,13 +13,13 @@
         targets.bind( 'mouseenter', function()
         {
             target  = $( this );
-            tip     = target.attr( 'title' );
+            tip     = target.attr( 'glossary-title' );
             tooltip = $( '<div id="tooltip"></div>' );
      
             if( !tip || tip == '' )
                 return false;
      
-            target.removeAttr( 'title' );
+            target.removeAttr( 'glossary-title' );
             tooltip.css( 'opacity', 0 )
                    .html( tip )
                    .appendTo( 'body' );
@@ -72,7 +72,7 @@
                     $( this ).remove();
                 });
      
-                target.attr( 'title', tip );
+                target.attr( 'glossary-title', tip );
             };
      
             target.bind( 'mouseleave', remove_tooltip );

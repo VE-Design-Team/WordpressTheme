@@ -1,5 +1,35 @@
 // Rich content Stylesheets
-//Global
+//Global 
+
+//Glossary
+abbr.glossarizer_replaced
+{
+    text-decoration: none;
+    border-bottom: $rmit-red 2px dotted;
+}
+
+[data-title] {
+  position: relative;
+  cursor: help;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
+  white-space: nowrap;
+  z-index: 2000;
+}
+[data-title]:hover::after {
+
+}
 //feature-image
 #feature-image {
   margin: -15px -15px 15px -15px;

@@ -27,11 +27,11 @@
 
   var pluginName = 'glossarizer',
     defaults = {
-      sourceURL: '', /* URL of the JSON file with format {"term": "", "description": ""} */
-      replaceTag: 'abbr', /* Matching words will be wrapped with abbr tags by default */
-      lookupTagName: 'p, ul', /* Lookup in either paragraphs or lists. Do not replace in headings */
-      callback: null, /* Callback once all tags are replaced: Call or tooltip or anything you like */
-      replaceOnce: false, /* Replace only once in a TextNode */
+      sourceURL: '', 
+      replaceTag: 'abbr',
+      lookupTagName: 'p, ul', 
+      callback: null, 
+      replaceOnce: false, 
       replaceClass: 'glossarizer_replaced',
       caseSensitive: false,
       exactMatch: false
@@ -222,10 +222,10 @@
                 if (exid <= id && id <= exl) {
                   return match
                 } else {
-                  return '<' + base.options.replaceTag + ' class="' + base.options.replaceClass + '" title="' + base.getDescription(match) + '">' + match + '</' + base.options.replaceTag + '>'
+                  return '<' + base.options.replaceTag + ' class="' + base.options.replaceClass + '" data-title="' + base.getDescription(match) + '">' + match + '</' + base.options.replaceTag + '>'
                 }
               } else {
-                return '<' + base.options.replaceTag + ' class="' + base.options.replaceClass + '" title="' + base.getDescription(match) + '">' + match + '</' + base.options.replaceTag + '>'
+                return '<' + base.options.replaceTag + ' class="' + base.options.replaceClass + '" data-title="' + base.getDescription(match) + '">' + match + '</' + base.options.replaceTag + '>'
               }
             }
           })

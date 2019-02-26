@@ -98,6 +98,22 @@
                     "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_5c748c96f4d7a",
+            "label": "Glossary location",
+            "name": "glossary_location",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/example.com\/glossary.json"
         }
     ],
     "location": [
@@ -119,5 +135,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1518409682
+    "modified": 1551142112
 }
