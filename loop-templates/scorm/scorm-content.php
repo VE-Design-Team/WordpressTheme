@@ -8,7 +8,7 @@ else { ?>
 </h1>
 <?php }
 ?>
-<article class="mb-3">
+<article class="mb-3 glossary-show">
     <?php the_content();?>
 </article>
 <section>
@@ -19,7 +19,7 @@ else { ?>
 <?php endif;?>
     <?php get_template_part('loop-templates/acf');?>
 </section>
-<article class="mt-3">
+<article class="mt-3 glossary-show">
     <?php the_field('field_5b91d32f52a61');?>
 </article>
 

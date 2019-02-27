@@ -17,19 +17,22 @@ abbr.glossarizer_replaced
   content: attr(data-title);
   position: absolute;
   bottom: 1.5rem;
-  display: inline-block;
+  display: block;
   padding: 1rem;
+  left: -5rem;
   border-radius: 0.5rem;
   background: rgba(0,0,0,0.8);
   color: #fff;
   font-size: 12px;
   font-family: sans-serif;
-  white-space: nowrap;
-  z-index: 2000;
+  //white-space: nowrap;
+  z-index: 5000;
+  width: 25rem;
 }
 [data-title]:hover::after {
 
 }
+
 //feature-image
 #feature-image {
   margin: -15px -15px 15px -15px;
