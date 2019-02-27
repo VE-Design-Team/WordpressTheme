@@ -2416,7 +2416,17 @@ table {
     }
   }
 }
-
+//Download cards
+.card-download
+{
+  border-color: $green;
+  color: white;
+  .card-header
+  {
+    
+    background: green;
+  }
+}
 @media (max-width: 575.98px) {}
 
 @media (min-width: 576px) and (max-width: 767.98px) {}

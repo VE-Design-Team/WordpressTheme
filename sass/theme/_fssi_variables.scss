@@ -135,5 +135,33 @@ $button-default-hover-text: $white;
 $radius: 0.1rem;
 $half-radius: $radius / 2;
 $double-radius: $radius *2;
+ //Custom Variables
+
+ $url_2: url('../fssi/img/theme/fssi_logo.png');
+$url_3: url('../fssi/img/theme/breadcrumb_banner.png');
+$url_1: url('../fssi/img/theme/logo_banner_lighter.png');
+$url_4: url("../fssi/img/theme/svg/hamburger.svg");
+$url_5: url("../fssi/img/theme/svg/fullscreen.svg");
+$url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
+$url_7: url("../fssi/img/theme/nav_header.png");
+//prev next icons 
+$url_16: url("../fssi/img/theme/svg/prev.svg");
+$url_15: url("../fssi/img/theme/svg/next.svg");
+
+// //rich content
+// Flipcards
+$url_8: url("../fssi/img/theme/flipme_icon.png");
+// introtabs
+$url_9: url("../fssi/img/theme/learning_objectives_inverse.png");
+$url_10: url("../fssi/img/theme/key_activities_inverse.png");
+$url_11: url("../fssi/img/theme/assessments_inverse.png");
+$url_12: url("../fssi/img/theme/learning_objectives.png");
+$url_13: url("../fssi/img/theme/key_activities.png");
+$url_14: url("../fssi/img/theme/assessments.png");
+
+$banner-height: 72px;
+$breadcrumbs-height: 48px;
+$nav-width: 20rem;
+$footer-height: 48px;
 
 @import "fssi_scorm";

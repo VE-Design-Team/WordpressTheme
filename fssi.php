@@ -81,16 +81,7 @@
         <!--row -->
         <!-- footer buttons-->
         <?php if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page'): ?>
-        <!--
 
-<div style="clear:both;"></div>
-<div id="footer" class="col-12 p-0 m-0">
-  <div class="partner-logos"></div>
-  <p clas="text-middle">Copyright <i class="fa fa-copyright"></i> 2018 Future Social Service Institute. All rights
-    reserved.</p>
-
-</div>
--->
         <?php else: {?>
 
         <?php //previous next variables 
