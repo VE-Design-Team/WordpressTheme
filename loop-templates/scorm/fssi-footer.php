@@ -46,6 +46,9 @@
 #fssi
 {
     height: 100vh;
+    <!--[if IE]>
+	width: 100vh;
+    <![endif]-->
 }
 .single-scorm
 {

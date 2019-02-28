@@ -28,12 +28,6 @@ $natural-green: lighten($green, 0%);
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Trade Gothic LT Std";
-    src: url("../fssi/fonts/TradeGothicLTStd-Light.woff2") format("woff2"), url("../fssi/fonts/TradeGothicLTStd-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Open Sans';

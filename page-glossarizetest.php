@@ -8,25 +8,12 @@
   <link rel="stylesheet" href="tooltip/tooltip.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Content */
 
-    .content{
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    /* Glossarized Content */
-
-    .glossarizer_replaced{
-      border-bottom: 1px #333 dotted;
-      cursor: help;
-      display: inline;
-    }
   </style>
 </head>
 <body>
 
-  <div class="content">
+  <div class="glossary-show">
     
     <h1>Forth Very Creature Sixth Abundantly</h1>
     <p>
