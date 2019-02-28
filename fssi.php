@@ -6,7 +6,6 @@
   html {
     background-size: cover;
     background-position: center;
-
   }
 
   body {}
@@ -15,8 +14,6 @@
     background-image: url('<?php echo $image[0]; ?>');
     background-size: cover;
     background-position: center;
-
-
   }
 
   .single-scorm {}
@@ -33,14 +30,14 @@
 
   <?php while ( have_posts() ) : the_post(); ?>
   <div class="splash-banner">
-    <div class="splash-banner inner container">
-      <div class="row">
-        <div class="splash-left col-12 col-sm-6 offset-1">
-          <div class=" fssi-logo-text float-sm-right">
-
-          </div>
+    <div class="splash-banner inner container-fluid">
+      <div class="container">
+        <div class="row">
+        <div class=" col-12 col-sm-6">
+          <img class="img-fluid fssi-logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/fssi/img/fssi-white.svg">
+          <!--<div class=" fssi-logo-text float-sm-right"></div>-->
         </div>
-        <div class="splash-right col-12 col-sm-5">
+        <div class="col-12 col-sm-5">
           <h2 class="fssi-splash-title ">
             <?php the_title();?>
           </h2>
@@ -50,6 +47,7 @@
           <?php endif; ?>
 
         </div>
+</div>
 
       </div>
       <!--row-->

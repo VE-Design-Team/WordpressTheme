@@ -42,3 +42,23 @@
 
 <?php  get_template_part('footer');?>
 <?php edit_post_link('Edit', '<div title="Only logged in administrators see this">', '</div>');?>
+<style>
+#fssi
+{
+    height: 100vh;
+}
+.single-scorm
+{
+    border: none;
+
+}
+#fssi  .scorm
+{
+    height: inherit;
+    overflow-y: hidden;
+}
+#fssi #nav #reveal {
+    height: 100%;
+     overflow-y: hidden; */
+}
+</style>    
