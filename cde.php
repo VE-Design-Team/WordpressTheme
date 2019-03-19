@@ -13,12 +13,8 @@
       <!--     content ----------------------------------------------------------------------->
       <div id="content" >
         <div id="push" dir=""class="row">
-          <div>
-              <button type="button" id="sidebarCollapse" class="">
-                  <span class="fas"></span>
-              </button>
-          </div>
-          <div class="container-fluid">
+
+          <div class="container">
             <?php while ( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'loop-templates/scorm/cde-scorm', 'content' ); ?>
             <?php endwhile; // end of the loop. ?>
