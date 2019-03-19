@@ -120,7 +120,7 @@ if ($t == "1") {
                     </p>
   </div>
                     <div class=" next-prev ">
-                  
+                    <?php $count; ?>
        
               <a class="carousel-control-next " href="#questions" data-slide="next" title="Next question"></a>
                       <a class="carousel-control-prev mr-1" href="#questions" data-slide="prev" title=" Previous question">
