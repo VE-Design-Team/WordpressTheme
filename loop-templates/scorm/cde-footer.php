@@ -25,7 +25,7 @@
   //ensure nav loads closed
   $('#reveal').addClass('navshow').removeClass('test2');
   //ensure the nav is always open for the current page
-  $("li.menu-item" ).children('ul').css({ display: "none" });
+  $("li.menu-item" ).children('ul').css({ display: "block" });
   $('li.active').closest('ul').addClass('open').css({ display: "block" })
  });
  } )( jQuery );
@@ -48,7 +48,7 @@
    //nave menu
    $(document).ready(function () {
        $('#sidebarCollapse').on('click', function () {
-           $('#sidebar').toggleClass('active');
+         $('#sidebar').toggleClass('active');
        });
    });
    //fullscreen
