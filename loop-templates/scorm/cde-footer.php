@@ -26,7 +26,7 @@
   $('#reveal').addClass('navshow').removeClass('test2');
   //ensure the nav is always open for the current page
   $("li.menu-item" ).children('ul').css({ display: "block" });
-  $('li.active').closest('ul').addClass('open').css({ display: "block" })
+  //$('li.active').closest('ul').addClass('open').css({ display: "block" })
  });
  } )( jQuery );
  </script>

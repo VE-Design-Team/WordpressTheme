@@ -2,7 +2,7 @@
 <nav id="sidebar">
   <div>
       <!--   -->
-    <div><?php get_template_part( 'loop-templates/scorm/cde-scorm', 'nav' ); ?> </div>
+    <div class="sticky-sidebar"><?php get_template_part( 'loop-templates/scorm/cde-scorm', 'nav' ); ?> </div>
   </div>
 </nav>
 

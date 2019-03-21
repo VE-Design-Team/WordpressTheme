@@ -1,18 +1,25 @@
 
-
 *,
 html,
 body {
     //font-family: $font-family-sans-serif
-
+    &::-webkit-scrollbar {
+      width: 5px;
+      z-index: 2000;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #666;
+    }
 }
-
 #calloutcards {
     .curve {
         display: none;
-
     }
-
     .card {
         border: 0rem solid $gray-200 !important;
         border-radius: 8px !important;
@@ -30,16 +37,21 @@ body {
     hr {
       background-color: $red !important;
     }
-
     .pixel {
         display: none;
     }
 }
+#content{
 
 a {
     text-decoration: underline;
 }
+a.nav-link
+ {
+  text-decoration: none;
+}
 
+}
 //carousel and tabs
 @media (min-width: 768px) {
 
@@ -104,8 +116,14 @@ h4,
 /* end-typography*/
 
 /* navigation*/
-#sidebar ul li a:hover {
-  text-decoration: none !important;
+#sidebar {
+    ul {
+        li {
+            a:hover {
+                text-decoration: none !important;
+            }
+        }
+    }
 }
 
 .dropdown-toggle {
@@ -133,6 +151,10 @@ h4,
   ul.nav-tabs li:nth-child(1), .nav-tabs .nav-item .active {
     border-radius: 8px 0 0 0;
   }
+}
+a.nav-link
+{
+  text-decoration: none;
 }
 
 .nav-link .active {
@@ -272,11 +294,19 @@ h4,
   color: $gray-200;
   height: 45px;
   z-index: 1000;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.22);
+-moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.22);
+box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.22);
 }
 
 .cde_footer_left {
   width: 48%;
   float: left;
+
+  i{
+    margin-top: -0.2rem;
+    cursor: pointer;
+  }
 }
 
 .cde_footer_center {
@@ -289,6 +319,10 @@ h4,
   /*width: 40%;*/
   float: right;
   right: 0px;
+  .btn-fs
+  {
+    cursor: pointer;
+  }
 }
 
 /* end-footer */
@@ -341,15 +375,17 @@ h4,
 
   @media (max-width: 768px) {
     #banner {
-      height: $banner-height-mobile !important;
+      height: $banner-height ;
     }
   }
 
   #banner {
-    background-size: contain !important;
+   
     background: $url_1;
     height: $banner-height;
-
+    background-position: center;
+    background-size: cover;
+    
     .cde-pixel-left {
       background: $url_8;
       height: $banner-height;
@@ -358,6 +394,12 @@ h4,
       width: 100px;
       float: left;
       margin-left: -15px;
+      display: none;
+
+@media (min-width: 768px)  {
+  display: block;
+}
+
     }
 
     .cde-pixel-right {
@@ -369,6 +411,11 @@ h4,
       width: 65px;
       float: right;
       margin-right: -15px;
+      display: none;
+      
+@media (min-width: 768px)  {
+  display: block;
+}
 
     }
 
@@ -382,13 +429,19 @@ h4,
 
     .module-title {
       /*background: $white;*/
-      height: ($banner-height * 0.6);
-      padding: ($banner-height * 0.06);
+      //height: ($banner-height * 0.6);
+      //padding: ($banner-height * 0.06);
       float: left;
-      margin: ($banner-height * 0.2);
-      margin-top: ($banner-height * 0.08);
+      
       display: inline-block;
+      width: 90%;
+
+      @media (min-width: 768px) {
+
+        margin: ($banner-height * 0.2);
+      margin-top: ($banner-height * 0.08);
       width: 70%;
+      }
 
       h1 {
         color: $white;
@@ -398,26 +451,14 @@ h4,
         margin: 0;
         line-height: 2.24rem;
       }
-
+      @media (min-width: 414px) {
       .dash:before {
         content: "–";
         color: $red;
       }
     }
+    }
 
-  }
-
-  .fas:before {
-    font-family: "fontAwesome";
-    font-size: 2rem;
-    content: "\f0c9" !important;
-    color: $black;
-  }
-
-  #sidebarCollapse {
-    background: transparent;
-    border: 0px;
-    font-size: 3rem;
   }
 
   .heading-underline {
@@ -456,6 +497,12 @@ h4,
 #footer-page {
   position: relative;
   z-index: 2000;
+
+  button{
+    height: 2rem;
+    width: 2rem;
+    background: red;
+  }
 
   #next-prev {
 
@@ -497,33 +544,26 @@ h4,
 }
 
 #sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: $black;
-  color: $white;
-  transition: all 0.3s;
-}
+    min-width: 250px;
+    max-width: 250px;
+    background: $black;
+    color: $white;
+    transition: all 0.3s;
+    ul {
+        font-size: .9rem;
+        background: $dark-green;
+        padding-inline-start: 0px !important;
+    }
+    .sidebar-header {
+        padding: 20px;
+        background: $black;
+    }
 
-#sidebar ul {
-  font-size: .9rem;
-  background: $dark-green;
-  padding-inline-start: 0px !important;
-}
-
-#sidebar.active {
-  margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-  padding: 20px;
-  background: $black;
-}
-
-#sidebar ul.components {
+ ul.components {
   padding: 20px 0;
   border-bottom: 1px solid #47748b;
 }
-
+}
 #sidebar ul p {
   color: #fff;
   padding: 10px;
@@ -547,7 +587,7 @@ h4,
 
 #sidebar ul li.active>a,
 a[aria-expanded="strue"] {
-  color: #fff;
+  color: #000054;
   background: $light-green;
 }
 
@@ -619,8 +659,15 @@ a.article:hover {
 }
 
 #cssmenu {
+  position: fixed;
+  width: 250px;
+ 
+  height: 100vh;
+  overflow: scroll;
+ 
   list-style: none;
   ul {
+    
     list-style: none;
     li {
       list-style: none;
@@ -651,19 +698,14 @@ a.article:hover {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #sidebar {
-    margin-left: -250px;
+   margin-left: -250px;
   }
 
   #sidebar.active {
-    margin-left: 0;
+   margin-left: 0;
   }
-
-  /*  #sidebarCollapse span {
-        display: none;
-    }
-    */
 }
 
 /* ---------------------------------------------------
@@ -680,13 +722,13 @@ h1, h2, h3, h4, h5, h6,
 
 // adds space around main content.
 #content {
-  padding: 4rem;
+  //padding: 4rem; 
 }
 
 // iphone 6/7/8plus and below will have more realestate.
 @media (max-width: 414px) {
 #content {
-  padding: 2rem;
+  //padding: 2rem;
 }
 }
 
