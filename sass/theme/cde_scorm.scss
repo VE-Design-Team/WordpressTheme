@@ -10,6 +10,8 @@ body {
     
     &::-webkit-scrollbar-track {
       background: rgba(0,0,0,0);
+      position: absolute;
+      left: -5px;
     }
     
     &::-webkit-scrollbar-thumb {
@@ -117,6 +119,7 @@ h4,
 
 /* navigation*/
 #sidebar {
+
     ul {
         li {
             a:hover {
@@ -548,7 +551,8 @@ box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.22);
     max-width: 250px;
     background: $black;
     color: $white;
-    transition: all 0.3s;
+    
+    //transition: all 0.3s  ease-out;
     ul {
         font-size: .9rem;
         background: $dark-green;
@@ -661,14 +665,28 @@ a.article:hover {
 #cssmenu {
   position: fixed;
   width: 250px;
- 
   height: 100vh;
   overflow: scroll;
- 
   list-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    }
+    
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
   ul {
     
     list-style: none;
+    ul{
+      
+    }
     li {
       list-style: none;
       a {
@@ -687,7 +705,7 @@ a.article:hover {
 ----------------------------------------------------- */
 #content {
   padding: 20px;
-  transition: all 0.3s;
+  //transition: all 0.3s  ease-out;
   width: 100%;
 }
 
@@ -701,6 +719,7 @@ a.article:hover {
 @media (max-width: 1200px) {
   #sidebar {
    margin-left: -250px;
+  
   }
 
   #sidebar.active {
