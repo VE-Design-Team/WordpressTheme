@@ -3,6 +3,7 @@
  <script>
  ( function( $ ) {
  $( document ).ready(function() {
+     //raises and lowers menu sub items
  $('#cssmenu li.has-sub>a').on('click', function(){
  		$(this).removeAttr('href');
  		var element = $(this).parent('li');
@@ -54,7 +55,7 @@
    //fullscreen
    //invokes browser's fullscreen mode
    function fullscreen() {
-     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement  !== null) ||
          (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
          (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
          (document.msFullscreenElement && document.msFullscreenElement !== null);
