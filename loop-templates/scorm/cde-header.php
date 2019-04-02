@@ -20,7 +20,7 @@
         <div class="module-title">
           <h1>
           <div class="dash"><?php echo "<br>"; ?>
-           <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent); }?>
+           <?php echo get_the_title($parent); ?>
           </div>
         </h1>
         </div>
