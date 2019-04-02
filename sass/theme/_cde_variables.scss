@@ -33,11 +33,11 @@ $nav-tabs-border-color: none !default;
 $nav-tabs-link-hover-border-color: $gray !default;
 $nav-tabs-active-text-color: $black !default;
 $nav-tabs-link-active-color: $gray-400 !default;
-$nav-tabs-link-active-bg: $gray-25 !default;
+$nav-tabs-link-active-bg: $gray-100 !default;
 $nav-tabs-link-active-border-color: $gray !default;
 $tabs-border-radius: .6rem;
 $nav-tabs-border-width: $card-border-width;
-$tab-active-heading-background: $gray-25;
+$tab-active-heading-background: $gray-100;
 $inactive-tab-background: $gray-400;
 $tab-inactive-heading-colour: $gray-600;
 $active-tab-heading: $gray-400;
@@ -77,7 +77,6 @@ $button-default-hover-text: $white;
 $radius: 0.1rem;
 $half-radius: $radius / 2;
 $double-radius: $radius *2;
-
 
 //custom
 
