@@ -291,6 +291,18 @@ a.nav-link
   z-index: 1030;
 }
 
+#introtabs
+{
+  #tabs
+  {
+    .bg-white
+    {
+      background: inherit;
+    }
+  }
+}
+
+
 .cde_footer {
   padding: 10px 20px;
   background-color: $gray-100;
