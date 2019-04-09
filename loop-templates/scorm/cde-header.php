@@ -1,4 +1,5 @@
 <?php  get_template_part('header');?>
+<?php edit_post_link('Edit', '<btn style="color: white !important; float:right; z-index:2000; position: absolute;" class="btn btn-sm btn-danger" title="Only logged in administrators see this">', '</btn>');?>
 <?php
 //var
 

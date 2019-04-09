@@ -293,15 +293,23 @@ a.nav-link
 
 #introtabs
 {
+  .bg-white
+  {
+    background: inherit !important;
+  }
   #tabs
   {
-    .bg-white
+    .tab-content
     {
-      background: inherit;
+      .bg-white
+      {
+        background: inherit !important;
+        
+      }
     }
   }
-}
 
+}
 
 .cde_footer {
   padding: 10px 20px;
