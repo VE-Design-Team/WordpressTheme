@@ -141,8 +141,11 @@ endif;
 <?php get_template_part( 'loop-templates/scorm/fssi', 'footer' ); ?>
 
 <?php
+
+$my_theme = wp_get_theme();
+
   if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { 
-   echo "<div id='' class='down'><div class='copyright'><p>© VCOSS and RMIT University 2019, v".get_bloginfo( 'version' ).", released ".date('F')." ".date('Y')." </p></div>
+   echo "<div id='' class='down'><div class='copyright'><p>© VCOSS and RMIT University 2019, v".$my_theme->get( 'Version' ).", released ".date('F')." ".date('Y')." </p></div>
    </div>";
 }
         ?>
