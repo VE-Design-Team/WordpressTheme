@@ -1,0 +1,56 @@
+@import "rmit_variables";
+
+//For this course
+
+//Unique colours
+
+//Styles
+$card-border-width: 0.2rem;
+$headings-font-family: $font-family-sans-serif !default;
+$nav-tabs-border-color: $gray-500 !default;
+$nav-tabs-link-hover-border-color: none !default;
+$nav-tabs-active-text-color: $rmit-red !default;
+$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-border-color: $gray-700 !default;
+$nav-tabs-border-width: $card-border-width;
+$tab-active-heading-background: $white;
+$inactive-tab-background: $mid-grey;
+$tab-inactive-heading-colour: $gray-700;
+$active-tab-heading: $rmit-red;
+$tab-border: $mid-grey;
+$active-tab-heading-border: inherit;
+//$rmit-btn
+//$rmit-alternate-btn
+$numbers-background: $rmit-red;
+$carousel-chevron: $rmit-red;  
+$carousel-border: $mid-grey;
+$instruction-background: $gray-200;
+$instruction-text: $gray-900;
+$instruction-logo: $rmit-blue; 
+$instruction-highlight: $white;
+$rich-background: $gray-200;
+$rich-area: $gray-25;
+$accent-thickness: 0.5rem;
+$accent-color: $rmit-azure;
+$accordion-header-inactive: $rich-area;
+$accordion-header-active: $rmit-red;
+$accordion-header-active-font: $white;
+$rich-heading-font: $font-family-sans-serif;
+  
+$flip-card-front-colour: $white;
+$flip-card-front-text-colour: $gray-900;
+$flip-card-back-colour: $white;
+$flip-card-back-text-colour: $gray-900;
+$hotspot-color: $rmit-red;
+$button-primary: $rmit-red;
+$button-primary-text: $gray-900;
+$button-primary-hover: $rmit-red;
+$button-primary-hover-text: $white;
+$button-default: $rmit-red;
+$button-default-text: $gray-900;
+$button-default-hover: $rmit-red;
+$button-default-hover-text: $white;
+$radius: 1rem;
+$half-radius: $radius / 2;
+$double-radius: $radius *2; 

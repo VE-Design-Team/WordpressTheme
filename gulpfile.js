@@ -159,6 +159,19 @@ gulp.task('embed-sass', function () {
         .pipe(rename('canvas-embed.min.css'))
     return stream;
 });
+gulp.task('bridge-sass', function () {
+    var stream = gulp.src('./sass/bridge.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./bridge/css'))
+        .pipe(rename('bridge.min.css'))
+    return stream;
+});
 
 // Run:
 // gulp watch
@@ -219,7 +232,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'embed-sass', 'h5p-scss', 'minify-css')(callback) });
+gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'embed-sass','bridge-sass', 'h5p-scss', 'minify-css')(callback) });
  
 // Run:
 // gulp browser-sync
