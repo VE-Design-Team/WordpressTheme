@@ -1,7 +1,7 @@
-
+<?php  get_template_part('header');?>
   <div class="container-fluid page-width">
     <div class="row">
-      <!--     content ----------------------------------------------------------------------->
+      <!-- bridge content ----------------------------------------------------------------------->
       <div id="content" >
         <div id="push" dir=""class="row">
 

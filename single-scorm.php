@@ -6,5 +6,8 @@ if ($variable  == 'fssi') {
 }
 elseif ($variable  == 'cde') { 
   get_template_part( 'cde' );
+}
+elseif ($variable  == 'bridge') { 
+  get_template_part( 'bridge' );
 };
 ?>
