@@ -82,7 +82,8 @@
                 "iframe": "iframe",
                 "fssi": "FSSI",
                 "cde": "CDE",
-                "embed": "Embed pages in Canvas"
+                "embed": "Embed pages in Canvas",
+                "bridge": "Bridge Embed"
             },
             "default_value": [
                 "iframe"

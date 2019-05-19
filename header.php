@@ -53,6 +53,15 @@ elseif ($variable  == 'embed') {
 
 
 }
+elseif ($variable  == 'bridge') { 
+	//open all new links outside the iframe
+	$basefiles = get_stylesheet_directory_uri()."/embed";
+	echo '<base target="_blank">';
+	echo '<!-- embed -->';
+	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/bridge.css'.'"type="text/css" media="">';
+
+
+}
 else{
 	echo '<!-- No setting -->';
 		$basefiles = get_stylesheet_directory_uri();
