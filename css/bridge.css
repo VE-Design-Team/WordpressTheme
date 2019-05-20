@@ -10018,3 +10018,11 @@ table {
   color: white; }
   .card-download .card-header {
     background: green; }
+
+.bridge-nav {
+  bottom: 0; }
+  .bridge-nav .btn-prev {
+    bottom: 0;
+    font-weight: 700; }
+  .bridge-nav .btn-next {
+    font-weight: 700; }
