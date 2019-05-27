@@ -44,6 +44,8 @@
 
           <?php if( get_field('field_5bdf9ea04ef39') ): ?>
           <a class="btn btn-splash" title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Start here</a>
+			<br>
+			<img src="https://emedia.rmit.edu.au/CHC33015/wp-content/uploads/2019/05/by-nc-nd.svg" alt="Creative Commons License icon" height="60" width="120" style="margin-left: 20px; margin-top: 6px">
           <?php endif; ?>
 
         </div>
