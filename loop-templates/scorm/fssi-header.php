@@ -1,8 +1,8 @@
 <?php  get_template_part('header');?>
-<?php 
+<?php
      $current = $post->ID;
      $parent = $post->post_parent;
-     $grandparent_get = get_post($parent);  
+     $grandparent_get = get_post($parent);
      $grandparent = $grandparent_get->post_parent;
          ?>
 <div class="container-fluid" id="fssi">
@@ -16,7 +16,7 @@
     <?php
   if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { //no breadcrumbs ?>
 <?php } else { ?>
-    
+
 <?php } ?>
 
 
@@ -36,5 +36,5 @@
 <div id="access">
     <button id="navtoggle" class="btn btn-primary btn-menu"></button>
     <button onclick="fullscreen()" id="fullscreen" class="btn btn-primary btn-fs"></button>
-</div>    
+</div>
 </div>

@@ -1,0 +1,160 @@
+@import "rmit_variables";
+
+//For this course
+$gray: #ccc;
+$gray-100: #d0d0d0;
+$green: #055918;
+$green-light: #3BA96A;
+$white: #fff;
+$black: #222;
+$footer: #f5f6f5;
+$rmit-red: $green;
+$warm-grey: #eee;
+$text-grey: #606161;
+$natural-green: lighten($green, 0%);
+
+//Fonts
+@font-face {
+    font-family: 'Trade Gothic LT Cn Std';
+    src: url("../whm/fonts/TradeGothicLTStd-Cn18.woff2") format("woff2"), url("../whm/fonts/TradeGothicLTStd-Cn18.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Pro Cn';
+    src: url("../whm/fonts/TradeGothicLTPro-BdCn20.woff2") format("woff2"), url("../whm/fonts/TradeGothicLTPro-BdCn20.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../whm/fonts/open-sans-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('../whm/fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../whm/fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../whm/fonts/open-sans-v15-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../whm/fonts/open-sans-v15-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../whm/fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../whm/fonts/open-sans-v15-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../whm/fonts/open-sans-v15-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../whm/fonts/open-sans-v15-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../whm/fonts/open-sans-v15-latin-700.woff') format('woff'),
+        /* Modern Browsers
+        url('../whm/fonts/open-sans-v15-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../whm/fonts/open-sans-v15-latin-700.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+$font: 'Trade Gothic LT Std',
+sans-serif;
+$font2: 'Trade Gothic LT Pro Cn',
+sans-serif;
+$font3: 'Open Sans',
+sans-serif;
+$font1: 'Trade Gothic LT Cn Std', sans-serif;
+
+//Styles
+$headings-color: $green;
+$headings-font-family: $font2 !important;
+$headings-font-weight: 700;
+$card-border-width: 0.2rem;
+$headings-font-family: $font2 !default;
+$nav-tabs-border-color: $green !default;
+$nav-tabs-link-hover-border-color: $green-light !default;
+$nav-tabs-active-text-color: $green !default;
+$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-border-color: $green-light !default;
+$nav-tabs-border-width: $card-border-width;
+$tab-active-heading-background: $white;
+$inactive-tab-background: $green;
+$tab-inactive-heading-colour: $white;
+$active-tab-heading: $green;
+$tab-border: $mid-grey;
+$active-tab-heading-border: inherit;
+$link-color: $green-light;
+//$rmit-btn
+//$rmit-alternate-btn
+$numbers-background: $green;
+$carousel-chevron: $green;
+$carousel-border: $mid-grey;
+$instruction-background: $gray-200;
+$instruction-text: $gray-900;
+$instruction-logo: $green;
+$instruction-highlight: $white;
+$rich-background: $gray-200;
+$rich-area: $gray-25;
+$accent-thickness: 0.5rem;
+$accent-color: $green;
+$accordion-header-inactive: $rich-area;
+$accordion-header-active: $green;
+$accordion-header-active-font: $white;
+$rich-heading-font: $font2;
+$flip-card-front-colour: $white;
+$flip-card-front-text-colour: $gray-900;
+$flip-card-back-colour: $white;
+$flip-card-back-text-colour: $gray-900;
+$hotspot-color: $green;
+$button-primary: $green;
+$button-primary-text: $gray-900;
+$button-primary-hover: $green;
+$button-primary-hover-text: $white;
+$button-default: $green;
+$button-default-text: $gray-900;
+$button-default-hover: $green;
+$button-default-hover-text: $white;
+$radius: 0.1rem;
+$half-radius: $radius / 2;
+$double-radius: $radius *2;
+ //Custom Variables
+
+ $url_2: url('../whm/img/theme/fssi_logo.png');
+$url_3: url('../whm/img/theme/breadcrumb_banner.png');
+$url_1: url('../whm/img/theme/logo_banner_lighter.png');
+$url_4: url("../whm/img/theme/svg/hamburger.svg");
+$url_5: url("../whm/img/theme/svg/fullscreen.svg");
+$url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
+$url_7: url("../whm/img/theme/nav_header.png");
+//prev next icons
+$url_16: url("../whm/img/theme/svg/prev.svg");
+$url_15: url("../whm/img/theme/svg/next.svg");
+
+// //rich content
+// Flipcards
+$url_8: url("../whm/img/theme/flipme_icon.png");
+// introtabs
+$url_9: url("../whm/img/theme/learning_objectives_inverse.png");
+$url_10: url("../whm/img/theme/key_activities_inverse.png");
+$url_11: url("../whm/img/theme/assessments_inverse.png");
+$url_12: url("../whm/img/theme/learning_objectives.png");
+$url_13: url("../whm/img/theme/key_activities.png");
+$url_14: url("../whm/img/theme/assessments.png");
+
+$banner-height: 72px;
+$breadcrumbs-height: 48px;
+$nav-width: 20rem;
+$footer-height: 48px;
+
+@import "whm_scorm";

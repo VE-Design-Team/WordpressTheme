@@ -1,24 +1,24 @@
-$url_2: url('../fssi/img/theme/fssi_logo.png');
-$url_3: url('../fssi/img/theme/breadcrumb_banner.png');
-$url_1: url('../fssi/img/theme/logo_banner_lighter.png');
-$url_4: url("../fssi/img/theme/svg/hamburger.svg");
-$url_5: url("../fssi/img/theme/svg/fullscreen.svg");
-$url_6: url("../fssi/img/theme/vcoss_rmit_logo.png");
-$url_7: url("../fssi/img/theme/nav_header.png");
-//prev next icons 
-$url_16: url("../fssi/img/theme/svg/prev.svg");
-$url_15: url("../fssi/img/theme/svg/next.svg");
+$url_2: url('../whm/img/theme/fssi_logo.png');
+$url_3: url('../whm/img/theme/breadcrumb_banner.png');
+$url_1: url('../whm/img/theme/logo_banner_lighter.png');
+$url_4: url("../whm/img/theme/svg/hamburger.svg");
+$url_5: url("../whm/img/theme/svg/fullscreen.svg");
+$url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
+$url_7: url("../whm/img/theme/nav_header.png");
+//prev next icons
+$url_16: url("../whm/img/theme/svg/prev.svg");
+$url_15: url("../whm/img/theme/svg/next.svg");
 
 // //rich content
 // Flipcards
-$url_8: url("../fssi/img/theme/flipme_icon.png");
+$url_8: url("../whm/img/theme/flipme_icon.png");
 // introtabs
-$url_9: url("../fssi/img/theme/learning_objectives_inverse.png");
-$url_10: url("../fssi/img/theme/key_activities_inverse.png");
-$url_11: url("../fssi/img/theme/assessments_inverse.png");
-$url_12: url("../fssi/img/theme/learning_objectives.png");
-$url_13: url("../fssi/img/theme/key_activities.png");
-$url_14: url("../fssi/img/theme/assessments.png");
+$url_9: url("../whm/img/theme/learning_objectives_inverse.png");
+$url_10: url("../whm/img/theme/key_activities_inverse.png");
+$url_11: url("../whm/img/theme/assessments_inverse.png");
+$url_12: url("../whm/img/theme/learning_objectives.png");
+$url_13: url("../whm/img/theme/key_activities.png");
+$url_14: url("../whm/img/theme/assessments.png");
 
 $banner-height: 72px;
 $breadcrumbs-height: 48px;
@@ -58,12 +58,12 @@ abbr.glossarizer_replaced
 
   //background-color: rgba(0,0,0,0.75);
   color: $gray-100;
-  
+
   text-align: center;
   font-size: 0.7rem;
   padding: 0.25rem;
   margin: 0;
-  } 
+  }
  }
 }
 
@@ -104,7 +104,7 @@ abbr.glossarizer_replaced
 
 h3 a {
   color: $link-color;
- 
+
 }
 
 #feature-image #fi-left .background {
@@ -155,7 +155,7 @@ h3 a {
     background-repeat: no-repeat;
     border-right: 4px solid #fff;
   }
-  
+
 }
 
 .fssi-button {
@@ -523,7 +523,7 @@ width: 100%;
                 a {
                   //border-left: .1rem solid white;
 
-                  span:before { 
+                  span:before {
                     background: $warm-grey;
                     color: white;
 
@@ -824,17 +824,17 @@ width: 100%;
    width: 100%;
    background: rgba($green, 0.9);
    margin-top: 15%;
- 
+
    @media (max-width: 575.98px) {}
 
    @media (min-width: 576px) and (max-width: 767.98px) {}
-   
+
    @media (min-width: 768px) and (max-width: 991.98px) {
     margin-top: 10%;
    }
-   
+
    @media (min-width: 992px) and (max-width: 1199.98px) {}
-   
+
    @media (min-width: 1200px) {
     margin-top: 5%;
 
@@ -844,14 +844,14 @@ width: 100%;
     display: inline;
     position: relative;
     .inner {
-      
+
       display: flex;
       padding: 30px 0;
       flex-wrap: wrap;
     }
 
   }
- 
+
   }
 
   #content {
@@ -890,7 +890,7 @@ width: 100%;
   //Cards
   #calloutcards {
     .card {
-      
+
       #cardcontent {
 
         .card-header {
@@ -904,7 +904,7 @@ width: 100%;
     }
 
   }
-  
+
   //Accordion
 
   #accordion {
@@ -981,7 +981,7 @@ width: 100%;
   background: $rich-background;
 .indicators{
   .carousel-indicator{
-  
+
     .no-image
     {
       background: $rich-background;
@@ -995,12 +995,12 @@ width: 100%;
 
 .carousel-indicator
 {
-  
+
   ;
   img
   {
     background: $white;
- 
+
     -webkit-filter: grayscale(100%);
     -moz-filter:    grayscale(100%);
     -ms-filter:     grayscale(100%);
@@ -1031,7 +1031,7 @@ img
       p {
 
         font-size: 0.9rem;
-       
+
       }
     }
 
@@ -1069,9 +1069,9 @@ img
   {
     background-color :$rich-background;
   }
-  
+
   li{
-   
+
     padding-bottom: 0.2rem;
     span
     {
@@ -1080,7 +1080,7 @@ img
     }
     span:hover
     {
-      
+
       text-shadow: none;
     }
   }
@@ -1090,7 +1090,7 @@ img
       background: $rich-background;
     }
   }
-  
+
 }
 
 #introtabs {
@@ -1373,7 +1373,7 @@ label {
 }
 
 //Branching scenario
-#BranchingScenario 
+#BranchingScenario
 {
 .card
 {

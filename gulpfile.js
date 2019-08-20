@@ -16,7 +16,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/wordpress481/",
+    proxy: "http://127.0.0.1:82/wordpress/",
     notify: false
 };
 
@@ -93,7 +93,7 @@ gulp.task('h5p-scss', function() {
                 this.emit('end');
             }
         }))
- 
+
         .pipe(sass())
 
         .pipe(gulp.dest('css/'))
@@ -143,6 +143,19 @@ gulp.task('fssi-sass', function () {
         }))
         .pipe(sass())
         .pipe(gulp.dest('./fssi/css'))
+        .pipe(rename('theme.min.css'))
+    return stream;
+});
+gulp.task('whm-sass', function () {
+    var stream = gulp.src('./sass/whm.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./whm/css'))
         .pipe(rename('theme.min.css'))
     return stream;
 });
@@ -232,8 +245,8 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'embed-sass','bridge-sass', 'h5p-scss', 'minify-css')(callback) });
- 
+gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'whm-sass', 'embed-sass','bridge-sass', 'h5p-scss', 'minify-css')(callback) });
+
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
@@ -246,8 +259,8 @@ gulp.task('browser-sync', function() {
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts', 'styles', 'h5p-scss' ], function () { });
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
@@ -268,23 +281,28 @@ gulp.task('scripts', function() {
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
-  //cde  
+  //cde
     gulp.src(scripts)
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./cde/js/'));
-  //fssi  
+  //fssi
     gulp.src(scripts)
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./fssi/js/'));  
+    .pipe(gulp.dest('./fssi/js/'));
+    //whm
+      gulp.src(scripts)
+      .pipe(concat('theme.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('./whm/js/'));
   //embed
     gulp.src(scripts)
     .pipe(concat('canvas-embed.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./embed/js/'));  
-     
-   // human 
+    .pipe(gulp.dest('./embed/js/'));
+
+   // human
   gulp.src(scripts)
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('./js/'));
@@ -307,7 +325,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
     var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
-  
+
 // Copy all Bootstrap SCSS files
     gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
@@ -341,7 +359,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copy Popper JS files
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
         .pipe(gulp.dest(basePaths.js));
-        
+
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
         .pipe(gulp.dest(basePaths.js));
     return stream;

@@ -81,6 +81,7 @@
             "choices": {
                 "iframe": "iframe",
                 "fssi": "FSSI",
+                "whm": "WHM",
                 "cde": "CDE",
                 "embed": "Embed pages in Canvas",
                 "bridge": "Bridge Embed"
