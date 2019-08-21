@@ -11,7 +11,7 @@ wp_nav_menu(array(
 'walker' => new CSS_Menu_Maker_Walker()
 ));
 ?>
-      <div class="nav-footer"></div>
+      <div class="nav-footer"></div> 
 
   </div>
 

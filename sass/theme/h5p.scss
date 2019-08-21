@@ -64,7 +64,7 @@
     box-shadow: none;
 }
 
-//Quiz 
+//Quiz
 .h5p-question-content.h5p-radio>ul>li {
     //make buttons smaller
     width: 50%; // OK - for ie and edge
@@ -95,13 +95,13 @@ margin: 0.25rem;
 }
 .h5p-question .h5p-question-next:before,
 .h5p-question .h5p-question-prev:before {
-    //centers arrow    
+    //centers arrow
     top: 0.5rem;
-    
+
 }
 .h5p-question-introduction
 {
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 //Progress icons
 
@@ -188,7 +188,7 @@ ul.dots-container {
     .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container,
     .h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container,
     .h5p-answer[role="radio"] .h5p-alternative-container:before,
-    .h5p-answer[role="radio"][aria-checked="true"] .h5p-alternative-container:before //remove radio icon from selected button 
+    .h5p-answer[role="radio"][aria-checked="true"] .h5p-alternative-container:before //remove radio icon from selected button
         {
         content: '';
     }
@@ -235,7 +235,7 @@ ul.dots-container {
 }
 
 .h5p-should {
-    // shows solution 
+    // shows solution
     .h5p-alternative-container {
         background: $rmit-green !important;
         border: darken($rmit-green, 30%) 1px solid !important;
@@ -250,7 +250,7 @@ ul.dots-container {
     }
 }
 
-// True False activity 
+// True False activity
 .h5p-true-false-answer {
     padding: .375rem .75rem .375rem .75rem;
     margin: 0;
