@@ -76,7 +76,7 @@ abbr.glossarizer_replaced
 
 .single-scorm
   {
-    border: solid 1px $mid-grey;
+    border: solid 0px;
   }
 .single-scorm:fullscreen
   {
@@ -85,6 +85,11 @@ abbr.glossarizer_replaced
 .instruction
   {
     font-size: 0.9rem;
+  }
+
+.heading-underline {
+    border-bottom: 2px solid $green;
+    margin-bottom: 2rem;
   }
 #calloutcards {
   .curve {
@@ -491,7 +496,7 @@ h3 a
                 {
                   position: absolute;
                   right: 0.5rem;
-                  color: $green-light;
+                  color: $green;
                 }
 
               .fa-plus:before
@@ -512,16 +517,16 @@ h3 a
               }
             h3
               {
-                border-left: 0.2rem $green-light solid;
+                border-left: 0.2rem $green solid;
               }
             .collapsed,
             .collapsing
               {
-                border-left: 0.2rem $green-light solid;
+                border-left: 0.2rem $green solid;
               }
             .collapse
               {
-                border-left: 0.2rem $green-light solid;
+                border-left: 0.2rem $green solid;
               }
         }
       }
@@ -570,10 +575,10 @@ h3 a
   background: $white;
 
   .card {
-    border: $green-light 0.1rem solid;
-    -webkit-box-shadow: 0 0 5rem lighten($green-light, 60%);
-    -moz-box-shadow: 0 0 2rem lighten($green-light, 60%);
-    box-shadow: 0 0 2rem lighten($green-light, 60%);
+    border: $green 0.1rem solid;
+    -webkit-box-shadow: 0 0 5rem lighten($green, 60%);
+    -moz-box-shadow: 0 0 2rem lighten($green, 60%);
+    box-shadow: 0 0 2rem lighten($green, 60%);
 
     .card-body {
 
@@ -674,7 +679,7 @@ h3 a
             //display: none;
             position: relative;
             top: 5rem;
-            /*  background: $green-light; */
+            /*  background: $green; */
             font-family: $font;
             width: 5rem;
             margin: auto;
@@ -714,7 +719,7 @@ h3 a
         }
 
         a.active {
-          background-color: $green-light;
+          background-color: $green;
           background-image: $url_12;
 
         }
@@ -732,7 +737,7 @@ h3 a
         }
 
         a.active {
-          background-color: $green-light;
+          background-color: $green;
           background-image: $url_13;
 
         }
@@ -750,7 +755,7 @@ h3 a
         }
 
         a.active {
-          background-color: $green-light;
+          background-color: $green;
           background-image: $url_14;
 
         }
@@ -808,8 +813,8 @@ label {
 
       .correct1 {
         border: none;
-        //border-left: 0.2rem solid $green-light;
-        // background: lighten($green-light, 30%);
+        //border-left: 0.2rem solid $green;
+        // background: lighten($green, 30%);
       }
 
     }

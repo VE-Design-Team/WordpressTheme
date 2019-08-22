@@ -3,15 +3,12 @@
 //For this course
 $gray: #ccc;
 $gray-100: #d0d0d0;
-$green: #055918;
-$green-light: #3BA96A;
 $white: #fff;
 $black: #222;
 $footer: #f5f6f5;
 $rmit-red: $green;
 $warm-grey: #eee;
 $text-grey: #606161;
-$natural-green: lighten($green, 0%);
 
 //Fonts
 @font-face {
@@ -28,17 +25,17 @@ sans-serif;
 
 
 //Styles
-$headings-color: $green;
+$headings-color: $blue;
 $headings-font-family: $font2 !important;
 $headings-font-weight: 700;
 $card-border-width: 0.2rem;
 $headings-font-family: $font2 !default;
 $nav-tabs-border-color: $green !default;
-$nav-tabs-link-hover-border-color: $green-light !default;
+$nav-tabs-link-hover-border-color: $green !default;
 $nav-tabs-active-text-color: $green !default;
 $nav-tabs-link-active-color: $gray-700 !default;
 $nav-tabs-link-active-bg: $white !default;
-$nav-tabs-link-active-border-color: $green-light !default;
+$nav-tabs-link-active-border-color: $green !default;
 $nav-tabs-border-width: $card-border-width;
 $tab-active-heading-background: $white;
 $inactive-tab-background: $green;
@@ -46,7 +43,7 @@ $tab-inactive-heading-colour: $white;
 $active-tab-heading: $green;
 $tab-border: $mid-grey;
 $active-tab-heading-border: inherit;
-$link-color: $green-light;
+$link-color: $green;
 //$rmit-btn
 //$rmit-alternate-btn
 $numbers-background: $green;
