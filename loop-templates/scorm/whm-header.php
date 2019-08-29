@@ -24,7 +24,7 @@
     <div class="mt-3" id="breadcrumbs">
     <div id="ws">
         <div class="whm-logo"></div>
-      </div>
+    </div>
     <?php
   if ( has_post_thumbnail($post->ID) && get_field('field_5be47786ed504') == 'home-page') { //no breadcrumbs or logo opn splash page?>
 <?php } else { ?>
@@ -34,12 +34,7 @@
            <li style="color:#01A19A; font-weight: 500;"><?php wp_title(''); ?></li>
       </ul>
 <?php } ?>
-<div id="access">
-    <button id="navtoggle" class="btn btn-primary btn-menu"></button>
-    <button onclick="fullscreen()" id="fullscreen" class="btn btn-primary btn-fs"></button>
-</div>
-</div>
-
-</div>
-</div>
+    </div>
+    </div>
+  </div>
 </div>
