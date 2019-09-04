@@ -1,0 +1,221 @@
+{
+    "key": "group_5b91d325aabd5",
+    "title": "SCORM settings",
+    "fields": [
+        {
+            "key": "field_5b91d32f52a61",
+            "label": "Bottom Content",
+            "name": "top_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5bc317e313d41",
+            "label": "Menu",
+            "name": "menu_select",
+            "type": "menu-chooser",
+            "instructions": "Select a menu",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_5bdf9ea04ef39",
+            "label": "Next page",
+            "name": "next_page",
+            "type": "page_link",
+            "instructions": "Select the next page for the student to go to after this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "scorm"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "allow_archives": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5bdf9ede4ef3a",
+            "label": "Previous page",
+            "name": "previous_page",
+            "type": "page_link",
+            "instructions": "Select the next page for the student to go to after this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "scorm"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_5be47786ed504",
+            "label": "Home page module",
+            "name": "home_page_module",
+            "type": "select",
+            "instructions": "Will display a splash page or other design on this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal": "No",
+                "home-page": "Yes"
+            },
+            "default_value": [
+                "normal"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bedb6d5e8e74",
+            "label": "Feature image style",
+            "name": "feature_image_style",
+            "type": "select",
+            "instructions": "Choose how you would like the featured image to be handled in this page. It will appear above all text and incorporate the header",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "banner": "Banner",
+                "left": "Left",
+                "right": "Right",
+                "center": "Center"
+            },
+            "default_value": [
+                "banner"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bedf8e67644b",
+            "label": "Feature image aspect ratio",
+            "name": "feature_image_aspect_ratio",
+            "type": "select",
+            "instructions": "Choose the aspect ratio of the image you want to use",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "100": "Square",
+                "75": "Four by Three",
+                "56.25": "Sixteen by Nine",
+                "20": "Five by one"
+            },
+            "default_value": [
+                169
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c50e222af9f1",
+            "label": "Document Control",
+            "name": "Document control",
+            "type": "text",
+            "instructions": "Format for document control of SCORM package eg XX:XX:XX:XX:XX",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5be47786ed504",
+                        "operator": "==",
+                        "value": "home-page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "scorm"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "page_attributes",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1548804929
+}

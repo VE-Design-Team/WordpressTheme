@@ -1,0 +1,139 @@
+{
+    "key": "group_5a1b4c9e33f3d",
+    "title": "Glossary",
+    "fields": [
+        {
+            "key": "field_5a1b4e5ebab7b",
+            "label": "Content",
+            "name": "content",
+            "type": "repeater",
+            "instructions": "Add your first word by filling in the blanks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a1b4e9abab7c",
+                    "label": "Term title",
+                    "name": "term_title",
+                    "type": "text",
+                    "instructions": "The term's titles, separated by commas. (eg: kit, apparatus, container, gear)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a81179b7173a",
+                    "label": "Other terms",
+                    "name": "other_terms",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a1b4ec2bab7d",
+                    "label": "Ignore terms",
+                    "name": "ignore_terms",
+                    "type": "text",
+                    "instructions": "Terms to exclude from this search (eg: 'kit and caboodle')",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a1b51d28610a",
+                    "label": "Description of term",
+                    "name": "description_of_term",
+                    "type": "textarea",
+                    "instructions": "Provide the meaning of the term. 60 words or less will enable readability on all devices.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c748c96f4d7a",
+            "label": "Glossary location",
+            "name": "glossary_location",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/example.com\/glossary.json"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-glossarydata.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1551142112
+}

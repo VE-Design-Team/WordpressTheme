@@ -1,0 +1,180 @@
+{
+    "key": "group_5b18788fafe2d",
+    "title": "Analytics and Settings",
+    "fields": [
+        {
+            "key": "field_5b18789895a17",
+            "label": "Analytics type",
+            "name": "analytics_type",
+            "type": "radio",
+            "instructions": "Choose the analytics type you wish to apply to this course",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "tag_manager": "Google Tag Manager",
+                "analytics": "Google Analytics",
+                "none": "No Google analytics tracking on this course"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b1879dde566f",
+            "label": "Tracking code",
+            "name": "tracking_code",
+            "type": "text",
+            "instructions": "Paste this in the field below. Your tracking code should look something like this : GTM-MPHV7HK",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "GTM-MPHV7HK",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b187a2ce5670",
+            "label": "Analytics URL",
+            "name": "analytics_url",
+            "type": "text",
+            "instructions": "It may help to add the url of your analytics dashboard here for easy viewing it will look something like this : http:\/\/analytics.google.com\/analytics\/web\/#\/report-home\/a115957094w172218090p171774450",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b8cd3c52f308",
+            "label": "SCORM builder ?",
+            "name": "scorm_builder",
+            "type": "select",
+            "instructions": "Select the output type for this content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "iframe": "iframe",
+                "fssi": "FSSI",
+                "whm": "WHM",
+                "cde": "CDE",
+                "embed": "Embed pages in Canvas",
+                "bridge": "Bridge Embed"
+            },
+            "default_value": [
+                "iframe"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c3d3a8832610",
+            "label": "Copyright owner",
+            "name": "copyright_owner",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "RMIT",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c748dc886533",
+            "label": "Glossary",
+            "name": "glossary",
+            "type": "select",
+            "instructions": "Does this environment require a glossary for appropriate content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "glossary": "Enable glossary",
+                "disabled": "Disable glossary"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c75d39e68af3",
+            "label": "Glossary location",
+            "name": "glossary_location",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "analytics-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1551225780
+}

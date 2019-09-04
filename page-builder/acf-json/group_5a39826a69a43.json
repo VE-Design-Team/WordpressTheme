@@ -1,0 +1,172 @@
+{
+    "key": "group_5a39826a69a43",
+    "title": "Image Text Reveal",
+    "fields": [
+        {
+            "key": "field_5a398755da5b1",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Select a 800 x 600 image for the background, a placeholder template image will be used if there is no image uploaded.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a3987d635060",
+            "label": "Click zone",
+            "name": "click_zone",
+            "type": "repeater",
+            "instructions": "This will create a button, hover text area for each click zone created.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a39880135061",
+                    "label": "Button text",
+                    "name": "Button text",
+                    "type": "text",
+                    "instructions": "Button text",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a3ac8c7f9f2d",
+                    "label": "Reveal text",
+                    "name": "reveal_text",
+                    "type": "textarea",
+                    "instructions": "200 Character limit",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 200,
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5a3ad5223b377",
+                    "label": "Background colour",
+                    "name": "background_colour",
+                    "type": "select",
+                    "instructions": "Pick a colour from RMIT's brand guidelines",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "#e60028": "Red",
+                        "#000054": "Blue",
+                        "#FAC800": "Yellow",
+                        "#AAD75F": "Green",
+                        "#FC9147": "Orange",
+                        "#7ae1AA": "Teal"
+                    },
+                    "default_value": [
+                        "#e60028"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a3ae175998ac",
+                    "label": "Text colour",
+                    "name": "text_colour",
+                    "type": "radio",
+                    "instructions": "Never white on yellow",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "black": "Black",
+                        "white": "White"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-hover-zones.php"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "discussion",
+        "comments",
+        "author",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1513817562
+}

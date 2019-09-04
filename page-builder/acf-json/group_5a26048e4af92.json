@@ -1,0 +1,50 @@
+{
+    "key": "group_5a26048e4af92",
+    "title": "IFrame Title",
+    "fields": [
+        {
+            "key": "field_5a2604a30cdd2",
+            "label": "Iframe title",
+            "name": "iframe_title",
+            "type": "text",
+            "instructions": "For screen readers this helps the user understand the content that is being placed in page. This helps meet accessibility requirements.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "115"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "game"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1512441088
+}
