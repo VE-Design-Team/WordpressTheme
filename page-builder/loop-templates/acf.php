@@ -1,6 +1,8 @@
 <!-- acf.php -->
 <?php if (get_field('field_5a13c5a7ec802') == 'Accordion'): ?>
 <?php get_template_part('loop-templates/acf/accordion');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Test1'): ?>
+<?php get_template_part('loop-templates/acf/org-chart');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Checklist'): ?>
 <?php get_template_part('loop-templates/acf/checklist');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Tabbed sections'): ?>
@@ -13,6 +15,8 @@
 <?php get_template_part('loop-templates/acf/sample-document');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Chart'): ?>
 <?php get_template_part('loop-templates/acf/chart');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Org chart'): ?>
+<?php get_template_part('loop-templates/acf/org-chart');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Cluster banner'): ?>
 <?php get_template_part('loop-templates/acf/banner-generator');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Quiz'): ?>
@@ -62,9 +66,9 @@
 <?php } else: { echo '<div class="card">
   <div class="card-body">
     <h4 class="card-title">This content is currently being built</h4>
-	<p class="card-text">Please check back later</p>';	
+	<p class="card-text">Please check back later</p>';
 	edit_post_link('Update this content', '<p>', '</p>');
-   echo '</div></div>'; };?> 
+   echo '</div></div>'; };?>
 <?php endif;?>
 
 <script>

@@ -53,6 +53,7 @@
                 "Image title reveal": "Image title reveal",
                 "Imagemap": "Imagemap",
                 "Introduction page": "Introduction page",
+                "Org chart": "Org chart",
                 "Roadmap": "Roadmap",
                 "Quadrant reveal": "Quadrant reveal",
                 "Quiz": "Quiz",
@@ -1420,6 +1421,34 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5d7877c830be9",
+            "label": "org chart test",
+            "name": "org_chart_test",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Org chart"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": ""
+
         },
         {
             "key": "field_5a68162825811",
