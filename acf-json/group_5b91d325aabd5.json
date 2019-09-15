@@ -92,7 +92,8 @@
             },
             "choices": {
                 "normal": "No",
-                "home-page": "Yes"
+                "home-page": "Yes",
+                "tour": "Take the tour"
             },
             "default_value": [
                 "normal"
@@ -217,5 +218,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1548804929
+    "modified": 1568338543
 }

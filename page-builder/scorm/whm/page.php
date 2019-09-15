@@ -1,12 +1,12 @@
 <head>
 <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
     	<script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        	<script src="wp-content/themes/page-builder/js/jquery.min.js"></script>
 </head>
 <body class="cbp-spmenu-push">
-  <div id="showRightPush" class="">
+  <div id="showRightPush" class="" >
     <span></span>
     <span></span>
     <span></span>

@@ -2,11 +2,14 @@
 <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="wp-content/themes/page-builder/sass/theme/whm_introjs.css">
     	<script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+
+      	<script src="wp-content/themes/page-builder/js/introjs.js"></script>
     <script src="wp-content/themes/page-builder/js/jquery.min.js"></script>
 </head>
-<body class="cbp-spmenu-push">
-  <div id="showRightPush" class="">
+<body onload="introJs().start();" class="cbp-spmenu-push page-scroll" >
+  <div id="showRightPush" class="" data-intro="quo inventore harum ex magni">
     <span></span>
     <span></span>
     <span></span>
@@ -25,6 +28,35 @@
       <?php get_template_part( 'loop-templates/scorm/whm-scorm', 'content' ); ?>
       <?php endwhile; // end of the loop. ?>
     </div>
+    <header>
+  <div class="container">
+    <div>
+      <a href="">TRY ME</a>
+    </div>
+  </div>
+</header>
+      <div class="container">
+            <div class="row">
+             </div>
+            <div class="text-center">
+                <div class="col-md-4" data-intro="quo inventore harum ex magni">
+                    <span>
+
+                    </span>
+                    <h4>Content 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4" data-intro="Minima maxime quam architecto quo">
+                    <h4>Content 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4" data-intro="Lorem ipsum dolor sit amet">
+
+                    <h4>Content 3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
     <div class="fixed-bottom b-0 container">
       <?php get_template_part( 'loop-templates/scorm/whm', 'bottom_navigation' ); ?>
     </div>

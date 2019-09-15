@@ -30,7 +30,9 @@ if( have_rows('field_5d786c0bf2dfa') ):
 
  	// loop through the rows of data
     while ( have_rows('field_5d786c0bf2dfa') ) : the_row();
-?><div id="staff">
+?>
+ <?php echo '<div class="col-sm-12 col-md-6  col-lg-3 card shadow">'; ?>
+ <?php echo '<div class="" style="background-color: #01A19A; color: white;">'; ?>
         <?php the_sub_field('field_5d786c0bf2dfb'); ?>
         <?php echo "<br>";?>
         <?php the_sub_field('field_5d786c0bf2dfc');?>
@@ -38,7 +40,7 @@ if( have_rows('field_5d786c0bf2dfa') ):
         <?php the_sub_field('field_5d786c0bf2dfd');?>
         <?php echo "<br>";?>
         <?php echo "<br>";?>
-
+<?php echo '</div>'; ?>
         <?php if( have_rows('field_5d786cb288b0c') ):
 
          	// loop through the rows of data
@@ -51,7 +53,8 @@ if( have_rows('field_5d786c0bf2dfa') ):
               <?php   the_sub_field('field_5d786dc0252a1'); ?>
               <?php echo "<br>";?>
               <?php echo "<br>";?>
-
+<?php echo '</div>'; ?>
+  <?php echo "<br>";?>
           <?php   endwhile; ?>
 
       <?php    else : ?>
