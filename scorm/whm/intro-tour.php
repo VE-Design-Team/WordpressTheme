@@ -2,10 +2,10 @@
 <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
-<link rel="stylesheet" href="wp-content/themes/page-builder/sass/theme/whm_introjs.css">
-    	<script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="wp-content/themes/page-builder/sass/theme/whm_introjs.css">
 
-      	<script src="wp-content/themes/page-builder/js/introjs.js"></script>
+    <script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+    <script src="wp-content/themes/page-builder/js/introjs.js"></script>
     <script src="wp-content/themes/page-builder/js/jquery.min.js"></script>
 </head>
 <body onload="introJs().start();" class="cbp-spmenu-push page-scroll" >
