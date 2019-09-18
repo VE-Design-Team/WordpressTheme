@@ -56,6 +56,7 @@
                 "Org chart": "Org chart",
                 "Roadmap": "Roadmap",
                 "Quadrant reveal": "Quadrant reveal",
+                "Quick Link Card": "Quick Link Card",
                 "Quiz": "Quiz",
                 "Sample Document": "Sample Document",
                 "Student File Download": "Student File Download",
@@ -3838,6 +3839,127 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5d81a64d2b322",
+            "label": "Quick Link Card",
+            "name": "quick_link",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a13c5a7ec802",
+                        "operator": "==",
+                        "value": "Quick Link Card"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5d81a7b8de03e",
+                    "label": "Quick-link post",
+                    "name": "quick-link_post",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "scorm"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5d81a7ebde03f",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d81aeb75f8fc",
+                    "label": "Quick link featured image",
+                    "name": "quick_link_featured_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ".jpg, .jpeg"
+                },
+                {
+                    "key": "field_5d81b4fc0d499",
+                    "label": "Call to action",
+                    "name": "call_to_action",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Read more": "Read more",
+                        "Learn more": "Learn more",
+                        "Visit": "Visit",
+                        "Try": "Try"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -3869,5 +3991,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1568183805
+    "modified": 1568785022
 }
