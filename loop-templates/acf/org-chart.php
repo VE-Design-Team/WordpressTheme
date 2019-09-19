@@ -52,12 +52,25 @@ if( !empty($image) ): ?>
       } else {
       }
   ?>
-
-
-
                   <?php  echo "<div class='org_title'>"; ?>
                     <?php the_sub_field('field_5d786c0bf2dfc');?>
                   <?php  echo "</div>"; ?>
+                  <?php
+                    if (get_sub_field('field_5d786c0bf2dfd')) {
+                        ?>
+                      <?php echo "<div class='bio'>"; ?>
+                        <?php the_sub_field('field_5d786c0bf2dfd');?>
+                        <?php echo "<br><br><strong>Contact:</strong>"; ?>
+                          <?php the_sub_field('field_5d82c61c2ff3d');?>
+
+                      <?php echo "</div>"; ?>
+                      <?php
+                    } else {
+                    }
+                ?>
+
+
+
              <?php echo "</div>"; ?>
               <?php
               // check if the repeater field has rows of data for Staffs
@@ -67,6 +80,7 @@ if( !empty($image) ): ?>
                         <?php echo "<div class='level2'>"; ?>
                           <?php the_sub_field('field_5d786db3252a0');?>
                         <?php echo "</div>"; ?>
+
              <?php  endwhile; ?>
              <?php else : ?>
              <?php endif; ?>

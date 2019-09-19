@@ -1481,6 +1481,14 @@ label {
     box-shadow: 0px 3px 5px rgba(3, 3, 3, 0.18);
   }
 }
+.bio {
+  background-color: $white;
+  text-align: left;
+  color: $blue;
+  font-size: .9rem;
+  padding: 20px;
+margin: 20px -20px -20px;
+}
 /*Cards*/
 
 .card-1 {
@@ -1504,6 +1512,7 @@ label {
 }
 .quick_link_title a{
 color: $blue;
+text-decoration: none;
 }
 
 .quick_link_content{

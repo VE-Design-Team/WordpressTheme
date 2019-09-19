@@ -3737,6 +3737,25 @@
                     "mime_types": ".jpg, jpeg"
                 },
                 {
+                    "key": "field_5d82c61c2ff3d",
+                    "label": "Manager contact",
+                    "name": "manager_contact",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5d786cb288b0c",
                     "label": "Staff",
                     "name": "staff_level2",
@@ -3991,5 +4010,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1568785022
+    "modified": 1568851511
 }
