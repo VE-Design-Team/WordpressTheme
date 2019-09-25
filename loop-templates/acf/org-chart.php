@@ -1,4 +1,5 @@
-    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
+
     <?php
       // check if the repeater field has rows of data
       if( have_rows('field_5d788e3e4ccf0') ):
@@ -19,15 +20,15 @@
     <?php else : ?>
     <?php endif; ?>
 
-    <?php echo '<div class="container box grid">'; ?>
-
+    <?php echo '<div id="masonry-grid" class="">'; ?>
+	<div class="gutter-sizer"></div>
 <?php
 // check if the repeater field has rows of data for Managers
   if( have_rows('field_5d786c0bf2dfa') ):
 // loop through the rows of data
   while ( have_rows('field_5d786c0bf2dfa') ) : the_row();?>
 
-<?php echo '<div class="grid-item col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 ">'; ?>
+<?php echo '<div class="grid-item col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 float-left mb-3">'; ?>
 <?php echo '<div class="card-1 shadow">'; ?>
            <?php echo "<div class='level1'>"; ?>
 
@@ -92,9 +93,4 @@ if( !empty($image) ): ?>
 <?php else : ?>
 <?php endif; ?>
 <?php echo '</div>'; ?>
-<script>
-  $('.grid').masonry({
-  itemSelector: '.grid-item',
-});
-
-</script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.js"></script>

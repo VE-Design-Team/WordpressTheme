@@ -6,5 +6,8 @@
 	  <?php echo the_field('field_5ade80680cd32'); ?>
 	</div>
 <?php endif;?>
-<section><?php get_template_part( 'loop-templates/acf' ); ?></section>
+<?php if (get_field('field_5a13c5a7ec802') == 'None'): ?>
+<?php else: ?>
+	<section><?php get_template_part( 'loop-templates/acf' ); ?></section>
+<?php endif;?>
 <article class="mt-3"><?php the_field('field_5b91d32f52a61'); ?></article>

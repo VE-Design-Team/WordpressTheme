@@ -1,11 +1,9 @@
 <head>
 <!-- Our Custom CSS -->
-
-
-    <link rel="stylesheet" href="wp-content/themes/page-builder/sass/theme/whm_introjs.css">
-    <link rel="stylesheet" href="wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
-    <script src="wp-content/themes/page-builder/js/jquery.min.js"></script>
-    <script src="wp-content/themes/page-builder/js/classie.js"></script>
+  <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/sass/theme/whm_introjs.css">
+    <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
+    <script src="/wordpress481/wp-content/themes/page-builder/js/jquery.min.js"></script>
+    <script src="/wordpress481/wp-content/themes/page-builder/js/classie.js"></script>
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push" >
 
@@ -44,45 +42,10 @@
 </body>
 
 
-
-<script>
-$(document).ready(function(){
-	$('#showRightPush').click(function(){
-		$(this).toggleClass('open');
-	});
-});
-</script>
-
-
-
-<script>
-var
-  menuRight = document.getElementById( 'sidebar' ),
-  showRightPush = document.getElementById( 'showRightPush' ),
-  body = document.body;
-
-showRightPush.onclick = function() {
-  classie.toggle( this, 'active' );
-  classie.toggle( body, 'cbp-spmenu-push-toleft' );
-  classie.toggle( menuRight, 'cbp-spmenu-open' );
-};
-</script>
 <!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/whm', 'footer' ); ?>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar, #content').toggleClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
-    });
-</script>
-<script src="wp-content/themes/page-builder/js/introjs.js"></script>
-<script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
-<script src="wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/menu.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/introjs.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>

@@ -211,12 +211,11 @@
         "comments",
         "author",
         "format",
-        "page_attributes",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1568338543
+    "modified": 1569218131
 }

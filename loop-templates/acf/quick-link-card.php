@@ -1,9 +1,10 @@
-<script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
+<div id="masonry-grid">
+
+		<div class="gutter-sizer"></div>
 
 <?php if( have_rows('field_5d81a64d2b322') ): ?>
-
-
-	<?php while( have_rows('field_5d81a64d2b322') ): the_row();
+<?php while( have_rows('field_5d81a64d2b322') ): the_row();
 
 		// vars
 		$qimage = get_sub_field('field_5d81aeb75f8fc');
@@ -17,7 +18,7 @@
     	setup_postdata( $post );
 
     	?>
-      <div class="grid-item col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+<div class="grid-item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 float-left mb-3">
         <div class="card-1 shadow quick_link">
             <div class="quick_link_image" style="background-image: url(<?php echo $qimage['url']; ?>);">
             </div>
@@ -35,7 +36,7 @@
                   </div>
                 </div>
           </div>
-      </div>
+</div>
  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
 
@@ -43,11 +44,8 @@
 
 	<?php endwhile; ?>
 
+</div>
+
 
 <?php endif; ?>
-<script>
-  $('.grid').masonry({
-  itemSelector: '.grid-item',
-});
-
-</script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.js"></script>
