@@ -1,4 +1,5 @@
 <script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/imagesloaded.pkgd.min.js"></script>
 
     <?php
       // check if the repeater field has rows of data
@@ -12,7 +13,7 @@
         <?php   the_sub_field('field_5d7893d64e436');?>
         <?php   the_sub_field('field_5d7894124e437');?>
        <?php echo "</div>"; ?>
-              <?php echo "<div class='row'>"; ?>
+              <?php echo "<div class='row ceo-sub'>"; ?>
        <?php echo '<span class="col-6 d-inline b-r"></span> <span class="col-6 d-inline b-l"></span>' ?>
               <?php echo "</div>"; ?>
        <?php echo "<div class='sublevel0'> </div>";?>
@@ -20,15 +21,15 @@
     <?php else : ?>
     <?php endif; ?>
 
-    <?php echo '<div id="masonry-grid" class="">'; ?>
-	<div class="gutter-sizer"></div>
+    <?php echo '<div class="grid mb-3 mt-3">'; ?>
+	<div class="grid-sizer col-xs-12 col-sm-12 col-md-6 col-lg-4 "></div>
 <?php
 // check if the repeater field has rows of data for Managers
   if( have_rows('field_5d786c0bf2dfa') ):
 // loop through the rows of data
   while ( have_rows('field_5d786c0bf2dfa') ) : the_row();?>
 
-<?php echo '<div class="grid-item col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 float-left mb-3">'; ?>
+<?php echo '<div class="grid-item col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3 mt-3">'; ?>
 <?php echo '<div class="card-1 shadow">'; ?>
            <?php echo "<div class='level1'>"; ?>
 
