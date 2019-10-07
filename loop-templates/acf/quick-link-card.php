@@ -1,5 +1,8 @@
+
+<script src="/wordpress481/wp-content/themes/page-builder/js/cards.js"></script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/imagesloaded.pkgd.min.js"></script>
+
 
 <div class="grid">
 		<div class="grid-sizer col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
@@ -21,11 +24,13 @@
     	?>
 <div class="grid-item col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mb-3 mt-3">
         <div class="card-1 shadow quick_link">
-            <div class="quick_link_image" style="background-image: url(<?php echo $qimage['url']; ?>);">
+            <div class="quick_link_image"  style="background-image: url(<?php echo $qimage['url']; ?>);">
             </div>
-                <div class="quick_link_right p-4">
+
+								<a class="material-card quick_link_right p-4"  href="<?php the_permalink(); ?>">
+									<div class=" ">
                     <div class="quick_link_title">
-                      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                      <h3><?php the_title(); ?></h3>
                     </div>
                   <?php if( $post_object ): ?>
                   <?php endif; ?>
@@ -33,10 +38,12 @@
                       <?php echo $content; ?>
                     </div>
                   <div class="quick_link_cta">
-                    <span><a href="<?php the_permalink(); ?>"><?php the_sub_field('field_5d81b4fc0d499'); ?></a></span>
+                    <span><?php the_sub_field('field_5d81b4fc0d499'); ?></span>
                   </div>
                 </div>
+								</a>
           </div>
+
 </div>
  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
@@ -49,4 +56,7 @@
 
 
 <?php endif; ?>
+<script>
+MaterialRipple.set(['.material-card']);
+</script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/masonry.js"></script>

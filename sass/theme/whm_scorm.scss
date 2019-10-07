@@ -33,6 +33,15 @@ $blue: #372A57;
 *,
 html,
 body {}
+
+*:fullscreen
+*:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+   overflow: auto !important;
+}
+
+
 #whm {
   margin-bottom: 2rem;
 }
@@ -1369,6 +1378,27 @@ label {
         right: 5.5rem;
         top: 0rem;
       }
+      #next-prev
+      {
+        display: flex;
+     flex-wrap:wrap;}
+.float-left
+  {
+  width: 100%;
+  order: 2;
+  }
+  .float-right{
+    width: 100%;
+    order: 1;
+  }
+    }
+  .float-right
+    {
+      padding: 5px 0px;
+    }
+  .float-left
+    {
+      padding: 5px 0px;
     }
     /*Bottom navigation*/
 #bottom_navigation{
@@ -1379,7 +1409,7 @@ label {
 }
     #next-prev
     {
-      text-align: center;
+     text-align: center;
       margin: 0 auto;
         a {
         color: $green !important;
@@ -1495,6 +1525,7 @@ margin: 20px -20px -20px;
     display: flex;
     overflow: hidden;
     background-color: $white;
+    min-height: 170px;
 }
 .quick-link-card {
 
@@ -1523,13 +1554,16 @@ text-decoration: none;
 
 }
 .quick_link_right {
-flex-basis: 60%;
+flex-basis: 70%;
 position: relative;
     display: block;
     text-align: left;
 }
 
-
+.quick_link a:hover {
+background-color: #fbfbfb;
+  text-decoration: none;
+}
 .quick_link_cta a{
 color: $green;
 }
@@ -1537,4 +1571,11 @@ color: $green;
 .quick_link_cta{
 
   padding-top: 1rem;
+}
+
+
+.material-card {
+}
+.zindex-indev{
+  z-index: 1000;
 }

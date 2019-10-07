@@ -5,6 +5,7 @@
     <script src="/wordpress481/wp-content/themes/page-builder/js/jquery.min.js"></script>
     <script src="/wordpress481/wp-content/themes/page-builder/js/classie.js"></script>
 </head>
+
 <body class="cbp-spmenu-push cbp-spmenu-push" >
 
   <div id="showRightPush" class="">

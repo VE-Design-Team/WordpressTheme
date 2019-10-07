@@ -3816,7 +3816,7 @@
                             "key": "field_5d786dc0252a1",
                             "label": "Staff bio",
                             "name": "staff_bio",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3827,9 +3827,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         },
                         {
                             "key": "field_5d786dd1252a2",
@@ -3967,6 +3967,8 @@
                     "choices": {
                         "Read more": "Read more",
                         "Learn more": "Learn more",
+                        "Login": "Login",
+                        "Go to": "Go to",
                         "Visit": "Visit",
                         "Try": "Try"
                     },
@@ -4010,5 +4012,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1568851511
+    "modified": 1570087789
 }

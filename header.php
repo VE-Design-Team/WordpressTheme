@@ -9,8 +9,22 @@
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 	<!-- ensure iframe links are opened in a new tab in the parent uless this is a scorm page builder -->
 
+<?php if(get_field('field_5d96ba9048134')): ?>
+	<div class="col-12 text-light bg-danger text-center p-3 zindex-indev"><strong> Page is in development - do not review. </strong>
 
-	<?php wp_head(); ?>
+		<?php if(get_field('field_5d96ba9048134')): ?>
+			<?php echo "Developer Note: "; ?>
+<?php
+		echo the_field('field_5d96d31960caa'); ?>
+<?php endif;
+?>
+	</div>
+
+<?php endif;
+?>
+
+<?php wp_head(); ?>
+
 	<?php
 	//CSS and js cache buster
 	$my_theme = wp_get_theme();
@@ -26,7 +40,7 @@ if ($variable  == 'iframe') {
 	echo '<link rel="stylesheet" id="understrap-styles-css" href="'.get_stylesheet_directory_uri() . '/css/theme.min.css?ver='.$ver.'"type="text/css" media="">';
 
 }
-elseif ($variable  == 'fssi') { 
+elseif ($variable  == 'fssi') {
 	//open all new links outside the iframe
 	$basefiles = get_stylesheet_directory_uri()."/fssi";
 
