@@ -1,10 +1,15 @@
 <head>
 <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/sass/theme/whm_introjs.css">
+    <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/sass/theme/whm_introjs.css">
     <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
     <script src="/wordpress481/wp-content/themes/page-builder/js/jquery.min.js"></script>
     <script src="/wordpress481/wp-content/themes/page-builder/js/classie.js"></script>
+    <script src="/wordpress481/wp-content/themes/page-builder/js/cards.js"></script>
+
+
+
 </head>
+
 
 <body class="cbp-spmenu-push cbp-spmenu-push" >
 
@@ -17,13 +22,13 @@
         <a class="full-screen" onclick="fullscreen()" id="fullscreen" href="#"></a>
       </div>
       <div class="">
-        <a href="javascript:void(0)" onclick="introJs().start();" class="help-tip page-scroll"></a>
+        <a href="http://localhost/wordpress481/scorm/home/tour-walk-me/" class="help-tip page-scroll"></a>
       </div>
     </div>
   </div>
 
   <nav id="sidebar" class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" >
-    <div>
+    <div class="col-12 p-0">
       <div class="sidebar"><?php get_template_part( 'loop-templates/scorm/whm-scorm', 'nav' ); ?> </div>
     </div>
   </nav>
@@ -45,8 +50,3 @@
 
 <!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/whm', 'footer' ); ?>
-
-<script src="/wordpress481/wp-content/themes/page-builder/js/menu.js"></script>
-<script src="/wordpress481/wp-content/themes/page-builder/js/introjs.js"></script>
-<script src="/wordpress481/wp-content/themes/page-builder/js/modernizr.custom.js"></script>
-<script src="/wordpress481/wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>

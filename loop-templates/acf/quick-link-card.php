@@ -1,9 +1,5 @@
-
-<script src="/wordpress481/wp-content/themes/page-builder/js/cards.js"></script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/imagesloaded.pkgd.min.js"></script>
-
-
 <div class="grid">
 		<div class="grid-sizer col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
 
@@ -38,7 +34,7 @@
                       <?php echo $content; ?>
                     </div>
                   <div class="quick_link_cta">
-                    <span><?php the_sub_field('field_5d81b4fc0d499'); ?></span>
+                    <span><strong><?php the_sub_field('field_5d81b4fc0d499'); ?></strong></span>
                   </div>
                 </div>
 								</a>
@@ -56,7 +52,5 @@
 
 
 <?php endif; ?>
-<script>
-MaterialRipple.set(['.material-card']);
-</script>
+
 <script src="/wordpress481/wp-content/themes/page-builder/js/masonry.js"></script>

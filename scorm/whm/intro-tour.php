@@ -1,15 +1,15 @@
 <head>
 <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="wp-content/themes/page-builder/sass/theme/whm_introjs.css">
+    <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/wordpress481/wp-content/themes/page-builder/sass/theme/whm_introjs.css">
 
-    <script src="wp-content/themes/page-builder/js/modernizr.custom.js"></script>
-    <script src="wp-content/themes/page-builder/js/introjs.js"></script>
-    <script src="wp-content/themes/page-builder/js/jquery.min.js"></script>
+    <script src="/wordpress481/wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+    <script src="/wordpress481/wp-content/themes/page-builder/js/introjs.js"></script>
+    <script src="/wordpress481/wp-content/themes/page-builder/js/jquery.min.js"></script>
 </head>
 <body onload="introJs().start();" class="cbp-spmenu-push page-scroll" >
-  <div id="showRightPush" class="" data-intro="quo inventore harum ex magni">
+  <div id="showRightPush" class="" data-intro="Select to close the menu.">
     <span></span>
     <span></span>
     <span></span>
@@ -31,35 +31,33 @@
     <header>
   <div class="container">
     <div>
-      <a href="">TRY ME</a>
+      <a class="btn border-0 rounded-0 ripple-card"  data-intro="Select to download written transcripts of videos and interactivities." href="">DOWNLOAD TRANSCRIPT</a>
     </div>
   </div>
 </header>
-      <div class="container">
+      <div class="container mt-5 mb-5">
             <div class="row">
              </div>
             <div class="text-center">
-                <div class="col-md-4" data-intro="quo inventore harum ex magni">
+                <div class="col-md-4 material-card quick_link_right p-4" data-intro="quo inventore harum ex magni">
                     <span>
 
                     </span>
                     <h4>Content 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
-                <div class="col-md-4" data-intro="Minima maxime quam architecto quo">
+                <div class="col-md-4 material-card quick_link_right p-4" data-intro="Minima maxime quam architecto quo">
                     <h4>Content 2</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
-                <div class="col-md-4" data-intro="Lorem ipsum dolor sit amet">
+                <div class="col-md-4 material-card quick_link_right p-4" data-intro="Lorem ipsum dolor sit amet">
 
                     <h4>Content 3</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
             </div>
         </div>
-    <div class="fixed-bottom b-0 container">
-      <?php get_template_part( 'loop-templates/scorm/whm', 'bottom_navigation' ); ?>
-    </div>
+
   </div>
 
 </body>
@@ -105,4 +103,4 @@ showRightPush.onclick = function() {
 </script>
 
 
-<script src="wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>

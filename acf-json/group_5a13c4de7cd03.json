@@ -3900,7 +3900,8 @@
                         "id": ""
                     },
                     "post_type": [
-                        "scorm"
+                        "scorm",
+                        "attachment"
                     ],
                     "taxonomy": [],
                     "allow_null": 0,
@@ -3970,7 +3971,8 @@
                         "Login": "Login",
                         "Go to": "Go to",
                         "Visit": "Visit",
-                        "Try": "Try"
+                        "Try": "Try",
+                        "Download": "Download"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -4012,5 +4014,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570087789
+    "modified": 1571874685
 }

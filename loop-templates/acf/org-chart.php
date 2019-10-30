@@ -10,8 +10,8 @@
        <?php echo "<div class='level0'>"; ?>
 
         <?php   the_sub_field('field_5d7893394e623');?>
-        <?php   the_sub_field('field_5d7893d64e436');?>
-        <?php   the_sub_field('field_5d7894124e437');?>
+    <h2 class="ripple-card level1 material-card  col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3 mt-3 mx-auto" style="font-size: 1.5rem;">  <?php   the_sub_field('field_5d7893d64e436');?> </h2>
+         <p class="description pl-5 pr-5"><?php   the_sub_field('field_5d7894124e437');?></p>
        <?php echo "</div>"; ?>
               <?php echo "<div class='row ceo-sub'>"; ?>
        <?php echo '<span class="col-6 d-inline b-r"></span> <span class="col-6 d-inline b-l"></span>' ?>
@@ -31,7 +31,7 @@
 
 <?php echo '<div class="grid-item col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-3 mt-3">'; ?>
 <?php echo '<div class="card-1 shadow">'; ?>
-           <?php echo "<div class='level1'>"; ?>
+           <?php echo "<div class='ripple-card level1 material-card'>"; ?>
 
              <?php
 
@@ -49,7 +49,7 @@ if( !empty($image) ): ?>
         <?php  echo "<div class='org_name'>"; ?>
           <?php the_sub_field('field_5d786c0bf2dfb');?>
         <?php  echo "</div>"; ?>
-            <?php  echo "<div class='sub_org'>"; ?><?php echo "<span class='sub_org_name'></span>";?>  <?php  echo "</div>"; ?>
+            <?php  echo "<div class='sub_org '>"; ?><?php echo "<span class='sub_org_name'></span>";?>  <?php  echo "</div>"; ?>
         <?php
       } else {
       }
@@ -62,9 +62,15 @@ if( !empty($image) ): ?>
                         ?>
                       <?php echo "<div class='bio'>"; ?>
                         <?php the_sub_field('field_5d786c0bf2dfd');?>
-                        <?php echo "<br><br><strong>Contact:</strong>"; ?>
-                          <?php the_sub_field('field_5d82c61c2ff3d');?>
-
+                        <?php
+                              if (get_sub_field('field_5d82c61c2ff3d')) {
+                             ?>
+                                <?php echo "<br><br><strong>Contact:</strong>"; ?>
+                                  <?php the_sub_field('field_5d82c61c2ff3d');?>
+                                  <?php
+                                } else {
+                                }
+                                ?>
                       <?php echo "</div>"; ?>
                       <?php
                     } else {
@@ -79,7 +85,7 @@ if( !empty($image) ): ?>
                 if( have_rows('field_5d786cb288b0c') ):
                   while ( have_rows('field_5d786cb288b0c') ) : the_row();
                ?>
-                        <?php echo "<div class='level2'>"; ?>
+                        <?php echo "<div class='ripple-card level2 material-card'>"; ?>
                           <?php the_sub_field('field_5d786db3252a0');?>
                         <?php echo "</div>"; ?>
 

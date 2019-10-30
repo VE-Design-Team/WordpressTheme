@@ -1,7 +1,9 @@
 <!-- row-->
 </div><!-- #cde -->
 
-
+<script src="/wordpress481/wp-content/themes/page-builder/js/menu.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/modernizr.custom.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
  <script>
    // do the opening and closing for the menu accordion
