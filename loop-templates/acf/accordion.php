@@ -22,8 +22,7 @@
 							<?php echo the_sub_field('field_5a13c6ac91a68'); ?>
 						</div>
 	</span>
-
-				</div>
+  </div>
 				<?php endwhile;?>
 	</div><!--cards -->
 </div><!--accordion-->

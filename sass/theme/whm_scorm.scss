@@ -930,7 +930,7 @@ label {
     a
     {
       color: $white;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       text-decoration: none;
     }
     ul {
@@ -996,7 +996,7 @@ label {
     a
     {
       color: $white;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       text-decoration: none;
     }
     ul {
@@ -1482,13 +1482,17 @@ label {
 /*Org Chart*/
 
 * { box-sizing: border-box; }
+#org_chart button {
+border-width: 0px !important;
 
+}
 
 .grid-item {/*
   float: left;
   padding-bottom: 1rem;
   margin-bottom: 1rem;*/
 }
+
 .ceo-sub {
   height: 1rem;
 }
@@ -1628,6 +1632,7 @@ text-decoration: none;
 }
 .quick_link_right {
 flex-basis: 70%;
+min-height: 195px;
 position: relative;
     display: block;
     text-align: left;
