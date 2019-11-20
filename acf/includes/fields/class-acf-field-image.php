@@ -26,7 +26,7 @@ class acf_field_image extends acf_field {
 		$this->category = 'content';
 		$this->defaults = array(
 			'return_format'	=> 'array',
-			'preview_size'	=> 'medium',
+			'preview_size'	=> 'thumbnail',
 			'library'		=> 'all',
 			'min_width'		=> 0,
 			'min_height'	=> 0,
@@ -36,37 +36,21 @@ class acf_field_image extends acf_field {
 			'max_size'		=> 0,
 			'mime_types'	=> ''
 		);
+		$this->l10n = array(
+			'select'		=> __("Select Image",'acf'),
+			'edit'			=> __("Edit Image",'acf'),
+			'update'		=> __("Update Image",'acf'),
+			'uploadedTo'	=> __("Uploaded to this post",'acf'),
+			'all'			=> __("All images",'acf'),
+		);
+		
 		
 		// filters
 		add_filter('get_media_item_args',				array($this, 'get_media_item_args'));
+		add_filter('wp_prepare_attachment_for_js',		array($this, 'wp_prepare_attachment_for_js'), 10, 3);
     
     }
     
-    
-    /*
-	*  input_admin_enqueue_scripts
-	*
-	*  description
-	*
-	*  @type	function
-	*  @date	16/12/2015
-	*  @since	5.3.2
-	*
-	*  @param	$post_id (int)
-	*  @return	$post_id (int)
-	*/
-	
-	function input_admin_enqueue_scripts() {
-		
-		// localize
-		acf_localize_text(array(
-		   	'Select Image'	=> __('Select Image', 'acf'),
-			'Edit Image'	=> __('Edit Image', 'acf'),
-			'Update Image'	=> __('Update Image', 'acf'),
-			'All images'	=> __('All images', 'acf'),
-	   	));
-	}
-	
 	
 	/*
 	*  render_field()
@@ -201,8 +185,8 @@ class acf_field_image extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
-			'instructions'	=> '',
+			'label'			=> __('Return Value','acf'),
+			'instructions'	=> __('Specify the returned value on front end','acf'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
@@ -217,7 +201,7 @@ class acf_field_image extends acf_field {
 		// preview_size
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Preview Size','acf'),
-			'instructions'	=> '',
+			'instructions'	=> __('Shown when entering data','acf'),
 			'type'			=> 'select',
 			'name'			=> 'preview_size',
 			'choices'		=> acf_get_image_sizes()
@@ -373,6 +357,65 @@ class acf_field_image extends acf_field {
 	    $vars['send'] = true;
 	    return($vars);
 	    
+	}
+		
+	
+	/*
+	*  wp_prepare_attachment_for_js
+	*
+	*  this filter allows ACF to add in extra data to an attachment JS object
+	*  This sneaky hook adds the missing sizes to each attachment in the 3.5 uploader. 
+	*  It would be a lot easier to add all the sizes to the 'image_size_names_choose' filter but 
+	*  then it will show up on the normal the_content editor
+	*
+	*  @type	function
+	*  @since:	3.5.7
+	*  @date	13/01/13
+	*
+	*  @param	{int}	$post_id
+	*  @return	{int}	$post_id
+	*/
+	
+	function wp_prepare_attachment_for_js( $response, $attachment, $meta ) {
+		
+		// only for image
+		if( $response['type'] != 'image' ) {
+		
+			return $response;
+			
+		}
+		
+		
+		// make sure sizes exist. Perhaps they dont?
+		if( !isset($meta['sizes']) ) {
+		
+			return $response;
+			
+		}
+		
+		
+		$attachment_url = $response['url'];
+		$base_url = str_replace( wp_basename( $attachment_url ), '', $attachment_url );
+		
+		if( isset($meta['sizes']) && is_array($meta['sizes']) ) {
+		
+			foreach( $meta['sizes'] as $k => $v ) {
+			
+				if( !isset($response['sizes'][ $k ]) ) {
+				
+					$response['sizes'][ $k ] = array(
+						'height'      => $v['height'],
+						'width'       => $v['width'],
+						'url'         => $base_url .  $v['file'],
+						'orientation' => $v['height'] > $v['width'] ? 'portrait' : 'landscape',
+					);
+				}
+				
+			}
+			
+		}
+
+		return $response;
 	}
 	
 	

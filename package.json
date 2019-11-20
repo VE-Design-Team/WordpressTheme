@@ -1,5 +1,5 @@
 {
-  "name": "rich-content-theme",
+  "name": "wordpress481",
   "version": "2.0.2",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -56,7 +56,6 @@
     "watch": "^1.0.2"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-minify": "^3.1.0"
+    "gulp": "^3.9.1"
   }
 }

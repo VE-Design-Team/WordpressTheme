@@ -16,7 +16,7 @@
     z-index: 100;
     padding: 15px;
     border-radius: 5px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
     @media only screen and (max-width: 800px){
@@ -28,8 +28,8 @@
             top: 3px;
             font-size: 12px;
         }
-    }    
- 
+    }
+
     #tooltip:after /* triangle decoration */
     {
         width: 0;
@@ -43,22 +43,22 @@
         bottom: -10px;
         margin-left: -10px;
     }
- 
+
         #tooltip.top:after
         {
             border-top-color: transparent;
             border-bottom: 10px solid #111;
-            top: -20px;                         
+            top: -20px;
             bottom: auto;
         }
 
- 
+
         #tooltip.left:after
         {
             left: 10px;
             margin: 0;
         }
- 
+
         #tooltip.right:after
         {
             right: 10px;
@@ -84,7 +84,7 @@
 <body>
 
   <div class="course-content">
-    
+
     <h1>Forth Very Creature Sixth Abundantly</h1>
     <p>
       <strong>
@@ -94,7 +94,7 @@
 
     <p>Power of Attorney (POA)</p>
     <p>
-      <a href="#"> A link within a paragraph: 
+      <a href="#"> A link within a paragraph:
         Treatment is here, but not evidence based treatment
       </a>
     </p>
@@ -181,10 +181,10 @@
     <p>Moved. Air fruit that lesser own creature. <strong>Life</strong> likeness <strong>you&#39;ll</strong> image our shall. Over sixth called very. Make fourth us, their don&#39;t herb one cattle greater she&#39;d two living. You&#39;re his, life stars whose female Under after said creature shall.</p>
 
   </div>
-  
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="http://localhost/wordpress481/wp-content/themes/authoring-tool/js/tooltip.js"></script><script src="http://localhost/wordpress481/wp-content/themes/authoring-tool/js/jquery.glossarize.js"></script>
+  <script src="http://localhost/wordpress481/wp-content/themes/bagwan_health/authoring-tool/js/tooltip.js"></script><script src="http://localhost/wordpress481/wp-content/themes/authoring-tool/js/jquery.glossarize.js"></script>
   <script>
 
   $(function(){
@@ -200,6 +200,6 @@
   });
 
   </script>
-  
+
 </body>
 </html>

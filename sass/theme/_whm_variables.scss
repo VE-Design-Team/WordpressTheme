@@ -54,7 +54,7 @@ $danger: $red !default;
 $headings-color: $red !default;
 $light-blue: $azure;
 //Fonts
-$font-family-sans-serif: "Roboto",
+$font-family-sans-serif: "Helvetica Neue",
 Helvetica,
 Arial,
 sans-serif;
@@ -77,14 +77,16 @@ cursive !default;
 
 //Fonts
 @font-face {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
 
-$font: 'Roboto', sans-serif;
-$font2: 'Roboto', sans-serif;
+$font: 'Arial,Helvetica Neue,Helvetica,sans-serif;',
+sans-serif;
+$font2: 'Arial,Helvetica Neue,Helvetica,sans-serif;',
+sans-serif;
 
 
 //Styles
@@ -149,7 +151,6 @@ $url_4: url("../whm/img/theme/svg/hamburger.svg");
 $url_5: url("../whm/img/theme/svg/fullscreen.svg");
 $url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../whm/img/theme/nav_header.png");
-$url_37: url('../whm/img/theme/cc.png');
 //prev next icons
 $url_16: url("../whm/img/theme/svg/prev.svg");
 $url_15: url("../whm/img/theme/svg/next.svg");

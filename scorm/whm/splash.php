@@ -4,13 +4,17 @@ if ( has_post_thumbnail() ) {
     $image = get_the_post_thumbnail_url(get_the_ID(),'full');
 }
 else {
-
+    
     $image = get_bloginfo( 'stylesheet_directory' ) . '/cde/img/c4de/splash.jpg';
 }
+
+  
+
+
 ?>
 <style>
-html {
-  background: url(<?php echo $image; ?>) no-repeat center center fixed;
+html { 
+  background: url(<?php echo $image; ?>) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,34 +26,48 @@ html {
 }
 body
 {
+    padding: 0 2rem 2rem 2rem;
     text-align: center;
     text-rendering: optimizeLegibility;
+    border-radius: 0.5rem;
+    max-width: 70%;
+}
+h1
+{
+
+}
+.heading-underline{
+    height: 3px;
+    width: 100%;
+    background-color: #00DCB4;
+    margin-bottom: 2rem;
+}
+.copyright
+{
+
 }
 </style>
 <div id="splash-info">
-
-  <div  id="banner-splash" class="" style="z-index:1;">
-    <div id="ws">
-      <div class="whm-logo"></div>
-    </div>
-
-
+<h1 class="h3">
+<?php
+   echo get_the_title( $post->post_parent );
+?>
+</h1>
+<h2 class="h1"><?php echo get_the_title(); ?></h2>
+<div class="heading-underline" style=""></div>
 <?php if( get_field('field_5bdf9ea04ef39') ): ?>
-<a class="btn btn-splash ripple-card" title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Start here</a>
+<a class="btn btn-splash" title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Start here</a>
+<br>
+<br>
 <?php endif; ?>
-  </div>
-  <div class='pt-5' >
-    <p class="small text-white">
-      <?php
-          $my_theme = wp_get_theme();
-          echo "© Women's Health Victoria ".$my_theme->get( 'Version' ).", released ".date('F')." ".date('Y');
-        ?>
-  </p>
+<p class="small"><?php
+ $my_theme = wp_get_theme();
+    echo "© C4DE & RMIT University<br>V".$my_theme->get( 'Version' ).", released ".date('F')." ".date('Y')."</div>";
 
-          <div class="whm-cc"></div>
 
-    <!-- images of partner logos
-    <img src="http://image.com" class="logo-partner">
-    -->
-  </div>
+?></p>
+<!-- images of partner logos
+<img src="http://image.com" class="logo-partner">
+-->
 </div>
+<?php get_template_part( 'footer' ); ?>

@@ -1,5 +1,6 @@
 //document push and pull
 $(document).ready(function(){
+	
 	$('#showRightPush').click(function(){
 		$(this).toggleClass('open');
 	});
@@ -19,6 +20,7 @@ $(document).ready(function(){
 //scrollbar for menu
 
     $(document).ready(function () {
+
         $("#sidebar").mCustomScrollbar({
             theme: "minimal"
         });

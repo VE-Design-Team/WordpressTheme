@@ -7,7 +7,7 @@
 
 
   <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/plugins/h5p/h5p-php-library/styles/h5p.css'>
-  <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/css/theme.min.css'>
+  <link rel='stylesheet' href='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/>stable/css/theme.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
   <style>
@@ -19,7 +19,7 @@
 	left: 0;
 	width: 100%;
 min-height: 100px;
-  
+
 }
 
 
@@ -159,12 +159,12 @@ button#chattermsg {
 .computer-bg-top{
 border-top: 1.2rem solid #2C2D2D;
 border-right:1.2rem solid #2C2D2D;
-border-left:1.2rem solid #2C2D2D; 
+border-left:1.2rem solid #2C2D2D;
 }
 
 .computer-bg-bottom{
 border-right:1.2rem solid #2C2D2D;
-border-left:1.2rem solid #2C2D2D; 
+border-left:1.2rem solid #2C2D2D;
 border-bottom:1.2rem solid #2C2D2D;
 max-height: 25rem;
 }
@@ -199,7 +199,7 @@ max-height: 25rem;
 .office {
   max-width: 70rem;
   height: 100%;
-  
+
 }
 
 .office-modal {
@@ -219,7 +219,7 @@ max-height: 25rem;
 .org-chart {
   max-width: 70rem;
   height: 100%;
-  
+
 }
 
 .org-chart-modal {
@@ -478,11 +478,11 @@ img {
   </div>
 </div>
 </body>
-<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.glossarize.js'></script>
-<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/jquery.min.js'></script>
-<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/popper.min.js?ver=1'></script>
-<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/theme.min.js?ver=1.1.9a'></script>
-<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/stable/js/tooltip.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/stable/js/jquery.glossarize.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/stable/js/jquery.min.js'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/stable/js/popper.min.js?ver=1'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/stable/js/theme.min.js?ver=1.1.9a'></script>
+<script src='https://emedia.rmit.edu.au/C3319/wp-content/themes/bagwan_health/stable/js/tooltip.js'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-includes/js/wp-embed.min.js?ver=4.8.1'></script>
 <script src='https://emedia.rmit.edu.au/C3319/wp-includes/js/wp-emoji-release.min.js?ver=4.8.1'></script>
 

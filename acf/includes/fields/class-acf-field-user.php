@@ -28,7 +28,6 @@ class acf_field_user extends acf_field {
 			'role' 			=> '',
 			'multiple' 		=> 0,
 			'allow_null' 	=> 0,
-			'return_format'	=> 'array',
 		);
 		
 		
@@ -203,10 +202,14 @@ class acf_field_user extends acf_field {
 				
 			}
 			
-			// optgroup or single
-			if( !empty($args['role']) && count($args['role']) == 1 ) {
-				$results = $results[0]['children'];
-			}
+			
+		}
+		
+		// optgroup or single
+		if( !empty($args['role']) && count($args['role']) == 1 ) {
+			
+			$results = $results[0]['children'];
+			
 		}
 		
 		
@@ -329,33 +332,45 @@ class acf_field_user extends acf_field {
 	
 	function render_field( $field ) {
 		
-		// Change Field into a select.
+		// Change Field into a select
 		$field['type'] = 'select';
 		$field['ui'] = 1;
 		$field['ajax'] = 1;
 		$field['choices'] = array();
 		
-		// Populate choices.
-		if( $field['value'] ) {
+		
+		// populate choices
+		if( !empty($field['value']) ) {
 			
-			// Clean value into an array of IDs.
-			$user_ids = array_map('intval', acf_array($field['value']));
+			// force value to array
+			$field['value'] = acf_get_array( $field['value'] );
 			
-			// Find users in database (ensures all results are real).
-			$users = acf_get_users(array(
-				'include' => $user_ids
+			
+			// convert values to int
+			$field['value'] = array_map('intval', $field['value']);
+			
+			
+			$users = get_users(array(
+				'include' => $field['value']
 			));
 			
-			// Append.
-			if( $users ) {
+			
+			if( !empty($users) ) {
+			
 				foreach( $users as $user ) {
+				
 					$field['choices'][ $user->ID ] = $this->get_result( $user, $field );
+					
 				}
-			}			
+				
+			}
+			
 		}
 		
-		// Render.
+		
+		// render
 		acf_render_field( $field );
+		
 	}
 	
 	
@@ -407,20 +422,6 @@ class acf_field_user extends acf_field {
 			'ui'			=> 1,
 		));
 		
-		// return_format
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
-			'instructions'	=> '',
-			'type'			=> 'radio',
-			'name'			=> 'return_format',
-			'choices'		=> array(
-				'array'			=> __("User Array",'acf'),
-				'object'		=> __("User Object",'acf'),
-				'id'			=> __("User ID",'acf'),
-			),
-			'layout'	=>	'horizontal',
-		));
-		
 		
 	}
 	
@@ -442,25 +443,23 @@ class acf_field_user extends acf_field {
 	*/
 	
 	function update_value( $value, $post_id, $field ) {
+	
+		// array?
+		if( is_array($value) && isset($value['ID']) ) {
 		
-		// Bail early if no value.
-		if( empty($value) ) {
-			return $value;
+			$value = $value['ID'];	
+			
 		}
 		
-		// Format array of values.
-		// - ensure each value is an id.
-		// - Parse each id as string for SQL LIKE queries.
-		if( acf_is_sequential_array($value) ) {
-			$value = array_map('acf_idval', $value);
-			$value = array_map('strval', $value);
+		// object?
+		if( is_object($value) && isset($value->ID) ) {
 		
-		// Parse single value for id.
-		} else {
-			$value = acf_idval( $value );
+			$value = $value->ID;
+			
 		}
 		
-		// Return value.
+		
+		// return
 		return $value;
 	}
 	
@@ -513,65 +512,69 @@ class acf_field_user extends acf_field {
 	
 	function format_value( $value, $post_id, $field ) {
 		
-		// Bail early if no value.
-		if( !$value ) {
-			return false;
-		}
+		// bail early if no value
+		if( empty($value) ) {
 		
-		// Clean value into an array of IDs.
-		$user_ids = array_map('intval', acf_array($value));
-		
-		// Find users in database (ensures all results are real).
-		$users = acf_get_users(array(
-			'include' => $user_ids
-		));
-		
-		// Bail early if no users found.
-		if( !$users ) {
-			return false;
-		}
-		
-		// Format values using field settings.
-		$value = array();
-		foreach( $users as $user ) {
+			return $value;
 			
-			// Return object.
-			if( $field['return_format'] == 'object' ) {
-				$item = $user;
+		}
+		
+		
+		// force value to array
+		$value = acf_get_array( $value );
+		
+		
+		// convert values to int
+		$value = array_map('intval', $value);
+		
+		
+		// load users	
+		foreach( array_keys($value) as $i ) {
+			
+			// vars
+			$user_id = $value[ $i ];
+			$user_data = get_userdata( $user_id );
+			
+			
+			//cope with deleted users by @adampope
+			if( !is_object($user_data) ) {
+			
+				unset( $value[ $i ] );
+				continue;
 				
-			// Return array.		
-			} elseif( $field['return_format'] == 'array' ) {
-				$item = array(
-					'ID'				=> $user->ID,
-					'user_firstname'	=> $user->user_firstname,
-					'user_lastname'		=> $user->user_lastname,
-					'nickname'			=> $user->nickname,
-					'user_nicename'		=> $user->user_nicename,
-					'display_name'		=> $user->display_name,
-					'user_email'		=> $user->user_email,
-					'user_url'			=> $user->user_url,
-					'user_registered'	=> $user->user_registered,
-					'user_description'	=> $user->user_description,
-					'user_avatar'		=> get_avatar( $user->ID ),
-				);
-				
-			// Return ID.		
-			} else {
-				$item = $user->ID;
 			}
+	
 			
-			// Append item
-			$value[] = $item;
+			// append to array
+			$value[ $i ] = array();
+			$value[ $i ]['ID'] = $user_id;
+			$value[ $i ]['user_firstname'] = $user_data->user_firstname;
+			$value[ $i ]['user_lastname'] = $user_data->user_lastname;
+			$value[ $i ]['nickname'] = $user_data->nickname;
+			$value[ $i ]['user_nicename'] = $user_data->user_nicename;
+			$value[ $i ]['display_name'] = $user_data->display_name;
+			$value[ $i ]['user_email'] = $user_data->user_email;
+			$value[ $i ]['user_url'] = $user_data->user_url;
+			$value[ $i ]['user_registered'] = $user_data->user_registered;
+			$value[ $i ]['user_description'] = $user_data->user_description;
+			$value[ $i ]['user_avatar'] = get_avatar( $user_id );
+			
 		}
 		
-		// Convert to single.
+		
+		// convert back from array if neccessary
 		if( !$field['multiple'] ) {
-			$value = array_shift( $value );
+		
+			$value = array_shift($value);
+			
 		}
 		
-		// Return.
+		
+		// return value
 		return $value;
-	}	
+		
+	}
+		
 }
 
 

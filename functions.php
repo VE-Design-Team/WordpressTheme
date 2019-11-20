@@ -60,8 +60,19 @@ require get_template_directory() . '/inc/editor.php';
 /**
  *  Load Advanced Custom Fields from theme directory
  */
+//
+
+add_action('wp_enqueue_script','restapitesting');
+
 // 1. customize ACF path
 add_filter('acf/settings/path', 'my_acf_settings_path');
+
+
+function add_cors_http_header(){
+    header("Access-Control-Allow-Origin: *");
+}
+add_action('init','add_cors_http_header');
+
 
 function my_acf_settings_path($path)
 {
@@ -173,6 +184,16 @@ function game()
 
 }
 add_action('init', 'game', 0);
+
+
+function my_customize_rest_cors() {
+    remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+    add_filter( 'rest_pre_serve_request', function( $value ) {
+    
+    return $value;
+    } );
+    }
+    add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
 
 // Display advancecd custom fields in admin columns
 
@@ -367,7 +388,12 @@ if ($scorm_setting == "iframe") {
     // Show scorm features
     add_action( 'init', 'custom_post_type', 0 );
     add_action('admin_menu', 'post_remove'); //adding action for triggering function call
-} elseif ($scorm_setting == "bridge")  {
+} elseif ($scorm_setting == "vwp")  {
+    // Show scorm features
+    add_action( 'init', 'custom_post_type', 0 );
+    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
+}
+elseif ($scorm_setting == "bridge")  {
     // Show scorm features
     add_action( 'init', 'custom_post_type', 0 );
     add_action('admin_menu', 'post_remove'); //adding action for triggering function call
@@ -477,7 +503,7 @@ add_filter('show_admin_bar', '__return_false');
 
 function remove_footer_admin()
 {
-    echo '<span id="footer-thankyou">Latest version of this custom Wordpress theme <a href="https://stash.its.rmit.edu.au/users/e37247/repos/rich-content-page-builder/" target="_blank">is available here</a></span>';
+    echo '<span id="footer-thankyou">Latest version of this custom Wordpress theme <a href="https://stash.its.rmit.edu.au/users/e37247/repos/rich-content-/" target="_blank">is available here</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
@@ -634,3 +660,5 @@ class CSS_Menu_Maker_Walker extends Walker {
     add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
   }
   add_action( 'init', 'disable_wp_emojicons' );
+
+
