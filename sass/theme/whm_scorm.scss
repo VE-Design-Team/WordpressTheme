@@ -58,6 +58,7 @@ abbr.glossarizer_replaced
       border-bottom: $green 2px dotted;
   }
 
+
 .post-edit-link
   {
     background: #af3200;
@@ -190,6 +191,95 @@ h3 a
   }
 
 }
+
+/*Communication - Social Media*/
+
+#social-content{
+  img {
+  border-radius: .8rem !important;
+  }
+  font-size: 14px !important;
+}
+.rounded-1 {
+  border-radius: .8rem !important;
+
+}
+.rounded-2 {
+  border-radius: 1.2rem !important;
+}
+.bg-light-1
+{
+background-color:  #F9F8FA;
+}
+.social-green {
+  font-size: 14px;
+  color: $green;
+}
+.social-right {
+  float: right;
+  padding-left: .4rem;
+}
+.cls-2 {
+  border: 3px $green solid;
+}
+.cls-2:hover {
+fill: $green !important;
+.cls-3:hover {
+fill: $green !important;
+}
+}
+
+.social-left {
+  float: left;
+}
+.social-replies
+{
+  border-left: 2px solid;
+  border-color: $green;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+}
+.x-replies{
+  margin-left: 3rem;
+  color: $green;
+  font-size: 14px;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+.socialmediafeed {
+  margin-right: 2rem;
+}
+/*ENDS Communication - Social Media*/
+
+
+/*
+----------------------------------------------------------
+
+#Animations
+
+----------------------------------------------------------
+*/
+/* CSS Animations */
+
+
+.booming {
+  animation: boom 0.8s ease forwards;
+}
+
+
+
+@keyframes boom {
+ 0%{
+    transform: scale(0.2);
+  }
+  30%{
+    transform: scale(0.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 
 .whm-button {
   padding: 8px 15px;

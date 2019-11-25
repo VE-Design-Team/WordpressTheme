@@ -3876,6 +3876,28 @@
                     "allow_null": 0,
                     "allow_archives": 1,
                     "multiple": 0
+                },
+                {
+                    "key": "field_5dd4b0ceae1c3",
+                    "label": "Staff pick",
+                    "name": "staff_pick",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "staff"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
         },
@@ -4051,6 +4073,30 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5dc39a03dfda9",
+                    "label": "Social media user profile picture",
+                    "name": "social_media_user_profile_picture",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg, JPG, jpeg, png"
+                },
+                {
                     "key": "field_5db91fbec957b",
                     "label": "Social media handle",
                     "name": "social_media_handle",
@@ -4089,34 +4135,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5db92008c957d",
-                    "label": "Social media image",
-                    "name": "social_media_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5db92022c957e",
                     "label": "Social media post content",
                     "name": "social_media_post_content",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -4126,10 +4148,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_5db9211db6c12",
@@ -4170,6 +4192,30 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_5dc399c9dfda8",
+                            "label": "Social media user profile picture",
+                            "name": "social_media_user_profile_picture",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "jpg, JPG, jpeg, png"
+                        },
+                        {
                             "key": "field_5db9214bb6c14",
                             "label": "Social media handle",
                             "name": "social_media_handle",
@@ -4208,34 +4254,10 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5db92162b6c16",
-                            "label": "Social media image",
-                            "name": "social_media_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
                             "key": "field_5db92176b6c17",
                             "label": "Social media post content",
                             "name": "social_media_post_content",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -4245,10 +4267,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ]
                 }
@@ -4284,5 +4306,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572414126
+    "modified": 1574220071
 }
