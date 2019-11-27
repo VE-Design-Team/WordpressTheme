@@ -35,6 +35,8 @@
 <?php get_template_part('loop-templates/acf/accordion-with-image');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Quick Link Card'): ?>
 <?php get_template_part('loop-templates/acf/quick-link-card');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Download document'): ?>
+<?php get_template_part('loop-templates/acf/download-document');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Carousel'): ?>
 <?php get_template_part('loop-templates/acf/carousel');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Introduction page'): ?>
