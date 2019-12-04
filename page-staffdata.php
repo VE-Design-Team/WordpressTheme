@@ -53,10 +53,12 @@
 
 <head>
 <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="/testsite/wp-content/themes/bagwan_health/sass/theme/vwp_introjs.css">
-    <link rel="stylesheet" href="/testsite/wp-content/themes/bagwan_health/css/jquery.mCustomScrollbar.min.css">
-    <script src="/testsite/wp-content/themes/bagwan_health/js/jquery.min.js"></script>
-    <script src="/testsite/wp-content/themes/bagwan_health/js/classie.js"></script>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/sass/theme/vwp_introjs.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/sass/theme/vwp_introjs.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.mCustomScrollbar.min.css">
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/classie.js"></script>
 </head>
 
 <body class="cbp-spmenu-push cbp-spmenu-push" >
@@ -97,7 +99,7 @@
       <!--<div class="sidebar"><?php get_template_part( 'loop-templates/scorm/vwp-scorm', 'nav' ); ?> </div> -->
 
       <div class="menu"><ul>
-      <img style="margin-top:40%;margin-left:30%;" src="/testsite/wp-content/themes/bagwan_health/vwp/img/home_icon.png" alt="home icon" height="42" width="42">
+      <img style="margin-top:40%;margin-left:30%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/home_icon.png" alt="home icon" height="42" width="42">
 
       <div style="height:200px;"></div>
 <ul class="bagwan-nav" id="menu-item-108"><a><span style="color:white;">Our community</span></a></ul>
@@ -111,7 +113,7 @@
 <ul class="bagwan-nav" id="menu-item-2"><a><span style="color:white;">On call</span></a></ul>
 
 </ul></div>
-<img style="margin-top:40%;margin-left:40%;" src="/testsite/wp-content/themes/bagwan_health/vwp/img/search_button.png" alt="home icon" height="42" width="42">
+<img style="margin-top:40%;margin-left:40%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/search_button.png" alt="home icon" height="42" width="42">
 
 
     </div>
@@ -176,11 +178,10 @@
 <!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/vwp', 'footer' ); ?>
 
-<script src="/testsite/wp-content/themes/bagwan_health/js/menu.js"></script>
-<script src="/testsite/wp-content/themes/bagwan_health/js/introjs.js"></script>
-<script src="/testsite/wp-content/themes/bagwan_health/js/modernizr.custom.js"></script>
-<script src="/testsite/wp-content/themes/bagwan_health/js/jquery.mCustomScrollbar.concat.min.js"></script>
-
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/menu.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/introjs.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
 
