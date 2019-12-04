@@ -1,9 +1,9 @@
 <head>
 <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="/wordpress481/wp-content/themes/bagwan_health/sass/theme/whm_introjs.css">
-    <link rel="stylesheet" href="/wordpress481/wp-content/themes/bagwan_health/css/jquery.mCustomScrollbar.min.css">
-    <script src="/wordpress481/wp-content/themes/bagwan_health/js/jquery.min.js"></script>
-    <script src="/wordpress481/wp-content/themes/bagwan_health/js/classie.js"></script>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/sass/theme/whm_introjs.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.mCustomScrollbar.min.css">
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri();?>/js/classie.js"></script>
 </head>
 
 <body class="cbp-spmenu-push cbp-spmenu-push" >
@@ -46,7 +46,7 @@
 <!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/whm', 'footer' ); ?>
 
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/menu.js"></script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/introjs.js"></script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/modernizr.custom.js"></script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/menu.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/introjs.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.mCustomScrollbar.concat.min.js"></script>

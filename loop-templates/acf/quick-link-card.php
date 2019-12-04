@@ -1,7 +1,7 @@
 
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/cards.js"></script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/masonry.pkgd.js"></script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/imagesloaded.pkgd.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/cards.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/masonry.pkgd.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/imagesloaded.pkgd.min.js"></script>
 
 
 <div class="grid">
@@ -59,4 +59,4 @@
 <script>
 MaterialRipple.set(['.material-card']);
 </script>
-<script src="/wordpress481/wp-content/themes/bagwan_health/js/masonry.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/masonry.js"></script>
