@@ -6,8 +6,9 @@ if(restapibutton){
 restapibutton.addEventListener("click", function(){
 
     var ourRequest = new XMLHttpRequest();
-    //ourRequest.open('GET', 'http://localhost/wordpress481/wp-json/wp/v2/posts');
-    ourRequest.open('GET', 'http://localhost/wordpress481/wp-content/VR-Editing-master/public/static_assets/hello-world.json');
+    
+    //Emedia site link to handle VR Editor REST API request
+    ourRequest.open('GET', 'https://emedia.rmit.edu.au/bagwanhealth/VR/public/static_assets/hello-world.json');
     ourRequest.onload = function() {
       if (ourRequest.status >= 200 && ourRequest.status < 400) {
         var data = JSON.parse(ourRequest.responseText);
@@ -67,8 +68,8 @@ function createHTML(postData)
 postData.scenes[2].infos[0].rotateX= document.getElementById("title").value;
 postData.scenes[2].infos[0].rotateY= document.getElementById("content").value;
 
-
-    createPost.open("POST", "http://localhost/wordpress481/wp-content/themes/bagwan_health/scorm/vwp/receive_update.php");
+//Emedia site link for REST APIs
+    createPost.open("POST", "https://emedia.rmit.edu.au/bagwanhealth/wp-content/themes/bagwan_health/scorm/vwp/receive_update.php");
         //Extra security need to code with nonce value in .php file its being called from
         //createPost.setRequestHeader("X-WP-NONCE",);
         createPost.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -90,10 +91,7 @@ postData.scenes[2].infos[0].rotateY= document.getElementById("content").value;
 
 
 
-
-//Quick add post REST api
-
-/*
+/* Uncomment below code only to test with Node on local environment
 var quickAddButton = document.querySelector("#quick-add-button");
 
 if(quickAddButton)
