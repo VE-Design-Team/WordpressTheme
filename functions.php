@@ -391,7 +391,6 @@ if ($scorm_setting == "iframe") {
 } elseif ($scorm_setting == "vwp")  {
     // Show scorm features
     add_action( 'init', 'custom_post_type', 0 );
-    add_action('admin_menu', 'post_remove'); //adding action for triggering function call
 }
 elseif ($scorm_setting == "bridge")  {
     // Show scorm features
