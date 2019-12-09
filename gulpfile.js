@@ -169,7 +169,7 @@ gulp.task('vwp-sass', function () {
         }))
         .pipe(sass())
         .pipe(gulp.dest('./vwp/css'))
-        .pipe(rename('theme.min.css'))
+        .pipe(rename('vwp.css'))
     return stream;
 });
 gulp.task('embed-sass', function () {

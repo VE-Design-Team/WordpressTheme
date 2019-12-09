@@ -1,7 +1,7 @@
 <!-- intranet home page -->
 <!-- start get cards -->
 
-<div class="row">
+<div id="intranet" class="row">
 <div class="col-12 col-lg-6">
 
 <?php if( have_rows('field_5dddcb8593260') ): ?>
@@ -18,7 +18,7 @@
 
     ?>
 
-   <div class="col-12 col-lg-4 mb-5">
+   <div id="latestnews" class="col-12 col-lg-4 mb-5 pl-0 pr-3">
     <?php if( $card_link ): ?>
             <a href="<?php echo $card_link; ?>">
         <?php endif; ?>
@@ -50,10 +50,11 @@
 </div>
 
 <!-- end get cards-->
-
-<div class="col-8 offset-2 offset-lg-2 col-lg-4">
-
 <h2>Quick Links</h2>
+
+<div id="quicklinks" class="col-8 offset-2 offset-lg-2 col-lg-4">
+
+
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
@@ -80,7 +81,7 @@
             </a>
         <?php endif; ?>
 
-        <?php echo $button_title; ?>
+       <p> <?php echo $button_title; ?></p>
 
     </div><!-- end col-->
 
