@@ -84,6 +84,28 @@
       <?php the_sub_field('field_5d786db3252a0');?>
     <?php echo "</div>"; ?>
 
+    <?php
+    if (get_sub_field('field_5d786dc0252a1')) {
+    ?>
+    <!-- level managers - bio section -->
+      <?php echo "<div class='bio-staff'>"; ?>
+        <?php the_sub_field('field_5d786dc0252a1');?>
+        <?php
+        if (get_sub_field('field_5d82c61c2ff3d')) {
+        ?>
+
+
+    <?php
+    } else {
+    }
+    ?>
+      <?php echo "</div>"; ?>
+    <?php
+    } else {
+    }
+    ?>
+
+
   <?php  endwhile; ?>
   <?php else : ?>
   <?php endif; ?>
