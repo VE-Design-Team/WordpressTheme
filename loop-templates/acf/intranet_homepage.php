@@ -1,9 +1,11 @@
 <!-- intranet home page -->
-
 <!-- start get cards -->
+
+<div class="row">
+<div class="col-12 col-lg-6">
+
 <?php if( have_rows('field_5dddcb8593260') ): ?>
-The UX of this page is in development
-<h2>Cards</h2>
+<h1>Latest news</h1>
 <div class="row">
 
 <?php while( have_rows('field_5dddcb8593260') ): the_row(); 
@@ -16,29 +18,42 @@ The UX of this page is in development
 
     ?>
 
-    <div class="col-4">
-
-        <?php if( $card_link ): ?>
+   <div class="col-12 col-lg-4 mb-5">
+    <?php if( $card_link ): ?>
             <a href="<?php echo $card_link; ?>">
         <?php endif; ?>
 
-            <img src="<?php echo $card_image['url']; ?>" alt="<?php echo $card_image['alt'] ?>" />
-
-        <?php if( $card_link ): ?>
-            </a>
-        <?php endif; ?>
-        <?php echo $card_title; ?>
-        <?php echo $card_content; ?>
+    <div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-5 col-lg-12">
+    <img src="<?php echo $card_image['url']; ?>" class="card-img" alt="<?php echo $card_image['alt'] ?>" />
+    
+    </div>
+    <div class="col-7 col-lg-12">
+      <div class="card-body">
+        <h5 class="card-title">  <?php echo $card_title; ?></h5>
+        <p class="card-text">        <?php echo $card_content; ?></p>
+      </div>
+    </div>
+  </div>
+  </a>
+</div>
 
         </div><!-- end col-->
-
+     
 <?php endwhile; ?>
 
 </div><!-- end row-->
 
 <?php endif; ?>
+<a class="btn btn-primary mb-5" href="https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/intranet/news-feed/">Read more staff news</a>
+</div>
+
 <!-- end get cards-->
-<h2>Buttons</h2>
+
+<div class="col-8 offset-2 offset-lg-2 col-lg-4">
+
+<h2>Quick Links</h2>
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
@@ -74,5 +89,8 @@ The UX of this page is in development
 </div><!-- end row-->
 
 <?php endif; ?>
+</div>
+</div>
+
 <!-- end get buttons -->
 <!-- intranet home page end -->

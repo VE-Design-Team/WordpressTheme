@@ -43,6 +43,8 @@
 <?php get_template_part('loop-templates/acf/hotspots');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Horizontal cards'): ?>
 <?php get_template_part('loop-templates/acf/horizontal-cards');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Intranet home page'): ?>
+<?php get_template_part('loop-templates/acf/intranet_homepage');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Flip cards'): ?>
 <?php get_template_part('loop-templates/acf/flip-cards');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Example content table'): ?>
