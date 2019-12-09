@@ -50,21 +50,26 @@ $('.card-header').click(function(){
 <?php endif; ?>
 
  <?php while (have_rows('field_5a13c61e91a66')): the_row();?>
- <div id="cards" class="expand card">
-<h3 class="card-header collapsed h6" role="button" tabindex="0" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>"
- data-toggle="collapse"  data-target="#collapse<?php echo str_replace(str_split('\\/:*?"&<>(),.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" aria-expanded="false"
- aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.()| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
+
+
+<div id="cards" class="expand card">
+  <h3 class="mb-0">
+  <button class="card-header collapsed h6 collapsed w-100 text-left" style="border-width: 0px;" type="button" role="button"  tabindex="0" id="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>"
+   data-toggle="collapse"  data-target="#collapse<?php echo str_replace(str_split('\\/:*?"&<>(),.| '), '', get_sub_field('field_5a13c67d91a67')); ?>" aria-expanded="false"
+   aria-controls="collapse<?php echo str_replace(str_split('\\/:*?"<>,.()| '), '', get_sub_field('field_5a13c67d91a67')); ?>">
 						<i class="fa fa-plus mr-1"></i>
 						<i class="fa fa-minus mr-1 mr-1"></i>
 						<?php echo get_sub_field('field_5a13c67d91a67'); ?>
-					</h3>
-					<span id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.()| '), '', get_sub_field('field_5a13c67d91a67')); ?>" class="collapse" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" data-parent="#accordion">
-						<div class="card-body glossarize">
-							<?php echo the_sub_field('field_5a13c6ac91a68'); ?>
-						</div>
-	</span>
+  </button>
+</h3>
+  <span id="collapse<?php echo str_replace(str_split('\\/:*?"<>,.()| '), '', get_sub_field('field_5a13c67d91a67')); ?>" class="collapse" aria-labelledby="heading<?php echo str_replace(' ', '', get_sub_field('field_5a13c67d91a67')); ?>" data-parent="#accordion">
+    <div class="card-body glossarize">
+    							<?php echo the_sub_field('field_5a13c6ac91a68'); ?>
+    </div>
+  </span>
+</div>
 
-				</div>
+
 				<?php endwhile;?>
 	</div><!--cards -->
 </div><!--accordion-->
