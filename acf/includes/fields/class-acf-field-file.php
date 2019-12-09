@@ -31,33 +31,17 @@ class acf_field_file extends acf_field {
 			'max_size'		=> 0,
 			'mime_types'	=> ''
 		);
+		$this->l10n = array(
+			'select'		=> __("Select File",'acf'),
+			'edit'			=> __("Edit File",'acf'),
+			'update'		=> __("Update File",'acf'),
+			'uploadedTo'	=> __("Uploaded to this post",'acf'),
+		);
+		
 		
 		// filters
-		add_filter('get_media_item_args', array($this, 'get_media_item_args'));
-	}
-	
-	
-	/*
-	*  input_admin_enqueue_scripts
-	*
-	*  description
-	*
-	*  @type	function
-	*  @date	16/12/2015
-	*  @since	5.3.2
-	*
-	*  @param	$post_id (int)
-	*  @return	$post_id (int)
-	*/
-	
-	function input_admin_enqueue_scripts() {
-		
-		// localize
-		acf_localize_text(array(
-		   	'Select File'	=> __('Select File', 'acf'),
-			'Edit File'		=> __('Edit File', 'acf'),
-			'Update File'	=> __('Update File', 'acf'),
-	   	));
+		add_filter('get_media_item_args',			array($this, 'get_media_item_args'));
+    	
 	}
 	
 	
@@ -94,8 +78,8 @@ class acf_field_file extends acf_field {
 			'icon'		=> '',
 			'title'		=> '',
 			'url'		=> '',
+			'filesize'	=> '',
 			'filename'	=> '',
-			'filesize'	=> ''
 		);
 		
 		$div = array(
@@ -109,21 +93,26 @@ class acf_field_file extends acf_field {
 		// has value?
 		if( $field['value'] ) {
 			
-			$attachment = acf_get_attachment($field['value']);
-			if( $attachment ) {
+			$file = get_post( $field['value'] );
+			
+			if( $file ) {
 				
-				// has value
+				$o['icon'] = wp_mime_type_icon( $file->ID );
+				$o['title']	= $file->post_title;
+				$o['filesize'] = @size_format(filesize( get_attached_file( $file->ID ) ));
+				$o['url'] = wp_get_attachment_url( $file->ID );
+				
+				$explode = explode('/', $o['url']);
+				$o['filename'] = end( $explode );	
+							
+			}
+			
+			
+			// url exists
+			if( $o['url'] ) {
 				$div['class'] .= ' has-value';
-				
-				// update
-				$o['icon'] = $attachment['icon'];
-				$o['title']	= $attachment['title'];
-				$o['url'] = $attachment['url'];
-				$o['filename'] = $attachment['filename'];
-				if( $attachment['filesize'] ) {
-					$o['filesize'] = size_format($attachment['filesize']);
-				}
-			}		
+			}
+						
 		}
 				
 ?>
@@ -357,19 +346,37 @@ class acf_field_file extends acf_field {
 	
 	function update_value( $value, $post_id, $field ) {
 		
-		// Bail early if no value.
-		if( empty($value) ) {
-			return $value;
+		// bail early if is empty
+		if( empty($value) ) return false;
+		
+		
+		// validate
+		if( is_array($value) && isset($value['ID']) ) { 
+			
+			$value = $value['ID'];
+			
+		} elseif( is_object($value) && isset($value->ID) ) { 
+			
+			$value = $value->ID;
+			
 		}
 		
-		// Parse value for id.
-		$attachment_id = acf_idval( $value );
 		
-		// Connect attacment to post.
-		acf_connect_attachment_to_post( $attachment_id, $post_id );
+		// bail early if not attachment ID
+		if( !$value || !is_numeric($value) ) return false;
 		
-		// Return id.
-		return $attachment_id;
+		
+		// confirm type
+		$value = (int) $value;
+		
+		
+		// maybe connect attacment to post 
+		acf_connect_attachment_to_post( $value, $post_id );
+		
+		
+		// return
+		return $value;
+		
 	}
 		
 	

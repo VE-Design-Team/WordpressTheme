@@ -1,5 +1,9 @@
-<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.pkgd.js"></script>
-<script src="/wordpress481/wp-content/themes/page-builder/js/imagesloaded.pkgd.min.js"></script>
+
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/cards.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/masonry.pkgd.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/imagesloaded.pkgd.min.js"></script>
+
+
 <div class="grid">
 		<div class="grid-sizer col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
 
@@ -34,7 +38,7 @@
                       <?php echo $content; ?>
                     </div>
                   <div class="quick_link_cta">
-                    <span><strong><?php the_sub_field('field_5d81b4fc0d499'); ?></strong></span>
+                    <span><?php the_sub_field('field_5d81b4fc0d499'); ?></span>
                   </div>
                 </div>
 								</a>
@@ -52,5 +56,7 @@
 
 
 <?php endif; ?>
-
-<script src="/wordpress481/wp-content/themes/page-builder/js/masonry.js"></script>
+<script>
+MaterialRipple.set(['.material-card']);
+</script>
+<script src="<?php echo get_stylesheet_directory_uri();?>/js/masonry.js"></script>

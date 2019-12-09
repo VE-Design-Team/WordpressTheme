@@ -41,7 +41,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
+	
 
+		
 
 	</div><!-- .row -->
 

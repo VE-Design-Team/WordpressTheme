@@ -15,6 +15,7 @@ NPM, gulp
 * Claire Tao
 * James Ratsasane
 * David Beaumont
+* Anirudh Mana
 
 
 ## Licences
@@ -25,7 +26,7 @@ This package includes
 * [Font Awesome](http://fontawesome.io/license)(Font: SIL OFL 1.1, CSS: MIT License)
 * [Bootstrap](http://getbootstrap.com),  [Code licensed under MIT, documentation under CC BY 3.0.](https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * [Owl Carousel 2](http://www.owlcarousel.owlgraphic.com/) [Code licensed under MIT](https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE)
-* [jQuery](https://jquery.org) Code licensed under MIT 
+* [jQuery](https://jquery.org) Code licensed under MIT
 * [Advanced Custom Fields Pro by Elliot Condon](https://www.advancedcustomfields.com) - GNU GPL v2
 * [Iframe Resizer by David Bradshaw](https://github.com/davidjbradshaw/iframe-resizer) MIT licence
 
@@ -35,7 +36,7 @@ Provided as is, with no warranty
 
 ## Development
 
-Contributions are welcome, this wordpress theme forked from [understrap](https://github.com/understrap/understrap) Build guidelines how to develop information can be found here. 
+Contributions are welcome, this wordpress theme forked from [understrap](https://github.com/understrap/understrap) Build guidelines how to develop information can be found here.
 
 ## To do
 
@@ -46,4 +47,3 @@ Contributions are welcome, this wordpress theme forked from [understrap](https:/
 * Update ACF
 * improve file structure
 * IMG metadata
-

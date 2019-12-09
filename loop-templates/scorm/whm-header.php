@@ -38,17 +38,3 @@
     </div>
   </div>
 </div>
-
-<?php if(get_field('field_5d96ba9048134')): ?>
-	<div id="dev-notification" class="col-12 text-light bg-danger text-center p-3 zindex-indev"><strong> Page is in development - Do not review. </strong>
-
-		<?php if(get_field('field_5d96ba9048134')): ?>
-			<?php echo "Developer Note: "; ?>
-<?php
-		echo the_field('field_5d96d31960caa'); ?>
-<?php endif;
-?>
-	</div>
-
-<?php endif;
-?>

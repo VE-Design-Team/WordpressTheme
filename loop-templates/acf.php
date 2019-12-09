@@ -3,8 +3,6 @@
 <?php get_template_part('loop-templates/acf/accordion');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Org chart'): ?>
 <?php get_template_part('loop-templates/acf/org-chart');?>
-<?php elseif (get_field('field_5a13c5a7ec802') == 'Social media feed'): ?>
-<?php get_template_part('loop-templates/acf/socialmedia-feed');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Org chart'): ?>
 <?php get_template_part('loop-templates/acf/org-chart');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Checklist'): ?>
@@ -33,8 +31,6 @@
 <?php get_template_part('loop-templates/acf/accordion-with-image');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Quick Link Card'): ?>
 <?php get_template_part('loop-templates/acf/quick-link-card');?>
-<?php elseif (get_field('field_5a13c5a7ec802') == 'Download document'): ?>
-<?php get_template_part('loop-templates/acf/download-document');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Carousel'): ?>
 <?php get_template_part('loop-templates/acf/carousel');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Introduction page'): ?>
@@ -47,6 +43,8 @@
 <?php get_template_part('loop-templates/acf/hotspots');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Horizontal cards'): ?>
 <?php get_template_part('loop-templates/acf/horizontal-cards');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Intranet home page'): ?>
+<?php get_template_part('loop-templates/acf/intranet_homepage');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Flip cards'): ?>
 <?php get_template_part('loop-templates/acf/flip-cards');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Example content table'): ?>

@@ -158,16 +158,13 @@ class acf_form_widget {
 			
 			// render post data
 			acf_form_data(array( 
-				'screen'		=> 'widget',
-				'post_id'		=> $post_id,
+				'post_id'		=> $post_id, 
+				'nonce'			=> 'widget',
 				'widget_id'		=> 'widget-' . $widget->id_base,
 				'widget_number'	=> $widget->number,
 				'widget_prefix'	=> $prefix
 			));
 			
-			
-			// wrap
-			echo '<div class="acf-widget-fields acf-fields -clear">';
 			
 			// loop
 			foreach( $field_groups as $field_group ) {
@@ -185,12 +182,9 @@ class acf_form_widget {
 				
 				
 				// render
-				acf_render_fields( $fields, $post_id, 'div', $field_group['instruction_placement'] );
+				acf_render_fields( $post_id, $fields, 'div', $field_group['instruction_placement'] );
 				
 			}
-			
-			//wrap
-			echo '</div>';
 			
 			
 			// jQuery selector looks odd, but is necessary due to WP adding an incremental number into the ID
@@ -199,7 +193,7 @@ class acf_form_widget {
 			<script type="text/javascript">
 			(function($) {
 				
-				acf.doAction('append', $('[id^="widget"][id$="<?php echo $widget->id; ?>"]') );
+				acf.do_action('append', $('[id^="widget"][id$="<?php echo $widget->id; ?>"]') );
 				
 			})(jQuery);	
 			</script>
@@ -256,70 +250,132 @@ class acf_form_widget {
 	*/
 	
 	function admin_footer() {
+		
 ?>
 <script type="text/javascript">
 (function($) {
 	
-	// vars
-	acf.set('post_id', 'widgets');
+	 acf.add_filter('get_fields', function( $fields ){
+	 	
+	 	// widgets
+	 	$fields = $fields.not('#available-widgets .acf-field');
+	 	
+	 	
+	 	// customizer
+	 	$fields = $fields.not('.widget-tpl .acf-field');
+	 	
+	 	
+	 	// return
+	 	return $fields;
+	 	
+    });
 	
-	// Only initialize visible fields.
-	acf.addFilter('find_fields', function( $fields ){
-		
-		// not templates
-		$fields = $fields.not('#available-widgets .acf-field');
-		
-		// not widget dragging in
-		$fields = $fields.not('.widget.ui-draggable-dragging .acf-field');
-		
-		// return
-		return $fields;
-	});
 	
-	// on publish
 	$('#widgets-right').on('click', '.widget-control-save', function( e ){
 		
 		// vars
-		var $button = $(this);
-		var $form = $button.closest('form');
+		var $form = $(this).closest('form');
 		
-		// validate
-		var valid = acf.validateForm({
-			form: $form,
-			event: e,
-			reset: true
-		});
 		
-		// if not valid, stop event and allow validation to continue
-		if( !valid ) {
-			e.preventDefault();
-			e.stopImmediatePropagation();
+		// bail early if not active
+		if( !acf.validation.active ) {
+		
+			return true;
+			
 		}
+		
+		
+		// ignore validation (only ignore once)
+		if( acf.validation.ignore ) {
+		
+			acf.validation.ignore = 0;
+			return true;
+			
+		}
+		
+		
+		// bail early if this form does not contain ACF data
+		if( !$form.find('#acf-form-data').exists() ) {
+		
+			return true;
+		
+		}
+
+		
+		// stop WP JS validation
+		e.stopImmediatePropagation();
+		
+		
+		// store submit trigger so it will be clicked if validation is passed
+		acf.validation.$trigger = $(this);
+		
+		
+		// run validation
+		acf.validation.fetch( $form );
+		
+		
+		// stop all other click events on this input
+		return false;
+		
 	});
 	
-	// show
-	$('#widgets-right').on('click', '.widget-top', function(){
-		var $widget = $(this).parent();
-		if( $widget.hasClass('open') ) {
-			acf.doAction('hide', $widget);
-		} else {
-			acf.doAction('show', $widget);
-		}
+	
+	$(document).on('click', '.widget-top', function(){
+		
+		var $el = $(this).parent().children('.widget-inside');
+		
+		setTimeout(function(){
+			
+			acf.get_fields('', $el).each(function(){
+				
+				acf.do_action('show_field', $(this));	
+				
+			});
+			
+		}, 250);
+				
 	});
 	
 	$(document).on('widget-added', function( e, $widget ){
 		
 		// - use delay to avoid rendering issues with customizer (ensures div is visible)
 		setTimeout(function(){
-			acf.doAction('append', $widget );
+			
+			acf.do_action('append', $widget );
+			
 		}, 100);
+		
 	});
 	
+	$(document).on('widget-saved widget-updated', function( e, $widget ){
+		
+		// unlock form
+		acf.validation.toggle( $widget, 'unlock' );
+		
+		
+		// submit
+		acf.do_action('submit', $widget );
+		
+	});
+	
+	
+	// sortable
+	$('div.widgets-sortables').on('sortstart', function( event, ui ) {
+		
+		acf.do_action('sortstart', ui.item, ui.placeholder);
+		
+	}).on('sortstop', function( event, ui ) {
+		
+		acf.do_action('sortstop', ui.item, ui.placeholder);
+		
+	});
+		
 })(jQuery);	
 </script>
 <?php
 		
 	}
+	
 }
 
 new acf_form_widget();

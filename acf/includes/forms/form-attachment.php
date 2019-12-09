@@ -14,6 +14,7 @@ if( ! class_exists('acf_form_attachment') ) :
 
 class acf_form_attachment {
 	
+	
 	/*
 	*  __construct
 	*
@@ -44,6 +45,48 @@ class acf_form_attachment {
 	
 	
 	/*
+	*  validate_page
+	*
+	*  This function will check if the current page is for a post/page edit form
+	*
+	*  @type	function
+	*  @date	23/06/12
+	*  @since	3.1.8
+	*
+	*  @param	n/a
+	*  @return	(boolean)
+	*/
+	
+	function validate_page() {
+		
+		// global
+		global $pagenow, $typenow, $wp_version;
+		
+		
+		// validate page
+		if( $pagenow === 'post.php' && $typenow === 'attachment' ) {
+			
+			return true;
+			
+		}
+		
+		
+		// validate page
+		if( $pagenow === 'upload.php' && version_compare($wp_version, '4.0', '>=') ) {
+			
+			add_action('admin_footer', array($this, 'admin_footer'), 0);
+			
+			return true;
+			
+		}
+		
+		
+		// return
+		return false;		
+	}
+	
+	
+	/*
 	*  admin_enqueue_scripts
 	*
 	*  This action is run after post query but before any admin script / head actions. 
@@ -59,20 +102,17 @@ class acf_form_attachment {
 	
 	function admin_enqueue_scripts() {
 		
-		// bail early if not valid screen
-		if( !acf_is_screen(array('attachment', 'upload')) ) {
+		// bail early if not valid page
+		if( !$this->validate_page() ) {
+			
 			return;
+			
 		}
-				
-		// load acf scripts
-		acf_enqueue_scripts(array(
-			'uploader'	=> true,
-		));
 		
-		// actions
-		if( acf_is_screen('upload') ) {
-			add_action('admin_footer', array($this, 'admin_footer'), 0);
-		}
+		
+		// load acf scripts
+		acf_enqueue_scripts();
+				
 	}
 	
 	
@@ -93,9 +133,11 @@ class acf_form_attachment {
 		
 		// render post data
 		acf_form_data(array( 
-			'screen'	=> 'attachment',
-			'post_id'	=> 0,
+			'post_id'	=> 0, 
+			'nonce'		=> 'attachment',
+			'ajax'		=> 1
 		));
+		
 		
 ?>
 <script type="text/javascript">
@@ -125,7 +167,7 @@ acf.unload.active = 0;
 	function edit_attachment( $form_fields, $post ) {
 		
 		// vars
-		$is_page = acf_is_screen('attachment');
+		$is_page = $this->validate_page();
 		$post_id = $post->ID;
 		$el = 'tr';
 		$args = array(
@@ -145,9 +187,47 @@ acf.unload.active = 0;
 			
 			
 			acf_form_data(array( 
-				'screen'	=> 'attachment',
-				'post_id'	=> $post_id,
+				'post_id'	=> $post_id, 
+				'nonce'		=> 'attachment',
 			));
+			
+			
+			if( $this->validate_page() ) {
+				
+				echo '<style type="text/css">
+					
+					.compat-attachment-fields,
+					.compat-attachment-fields > tbody,
+					.compat-attachment-fields > tbody > tr,
+					.compat-attachment-fields > tbody > tr > th,
+					.compat-attachment-fields > tbody > tr > td {
+						display: block;
+					}
+					
+					.compat-attachment-fields > tbody > tr.acf-field {
+						margin: 0 0 15px;
+					}
+					
+					.compat-attachment-fields > tbody > tr.acf-field > td.acf-label {
+						margin: 0;
+					}
+					
+					.compat-attachment-fields > tbody > tr.acf-field > td.acf-label label {
+						margin: 0;
+						padding: 0;
+					}
+					
+					.compat-attachment-fields > tbody > tr.acf-field > td.acf-label p {
+						margin: 0 0 3px !important;
+					}
+					
+					.compat-attachment-fields > tbody > tr.acf-field > td.acf-input {
+						margin: 0;
+					}
+					
+				</style>';
+				
+			}
 			
 			
 			// open
@@ -169,7 +249,7 @@ acf.unload.active = 0;
 				
 				
 				// render			
-				acf_render_fields( $fields, $post_id, $el, $field_group['instruction_placement'] );
+				acf_render_fields( $post_id, $fields, $el, $field_group['instruction_placement'] );
 				
 			}
 			
@@ -216,21 +296,24 @@ acf.unload.active = 0;
 	function save_attachment( $post, $attachment ) {
 		
 		// bail early if not valid nonce
-		if( !acf_verify_nonce('attachment') ) {
+		if( ! acf_verify_nonce('attachment') ) {
+		
 			return $post;
+			
 		}
 		
-		// bypass validation for ajax
-		if( acf_is_ajax('save-attachment-compat') ) {
+	    
+	    // validate and save
+	    if( acf_validate_save_post(true) ) {
+	    
 			acf_save_post( $post['ID'] );
-		
-		// validate and save
-		} elseif( acf_validate_save_post(true) ) {
-			acf_save_post( $post['ID'] );
+			
 		}
+		
 		
 		// return
-		return $post;	
+		return $post;
+			
 	}
 	
 			

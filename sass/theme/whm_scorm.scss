@@ -4,7 +4,6 @@ $url_4: url("../whm/img/theme/svg/hamburger.svg");
 $url_5: url("../whm/img/theme/svg/fullscreen.svg");
 $url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../whm/img/theme/nav_header.png");
-$url_37: url('../whm/img/theme/cc.png');
 //prev next icons
 $url_16: url("../whm/img/theme/svg/prev.svg");
 $url_15: url("../whm/img/theme/svg/next.svg");
@@ -57,7 +56,6 @@ abbr.glossarizer_replaced
   {
       border-bottom: $green 2px dotted;
   }
-
 
 .post-edit-link
   {
@@ -192,6 +190,7 @@ h3 a
 
 }
 
+<<<<<<< HEAD
 /*Communication - Social Media*/
 
 #social-content{
@@ -282,6 +281,8 @@ fill: $green !important;
 }
 
 
+=======
+>>>>>>> c8d635242f5379c41004ee71bce2cb2fc61eb755
 .whm-button {
   padding: 8px 15px;
   background-color: #fff;
@@ -325,16 +326,19 @@ fill: $green !important;
 }
 .btn-splash
 {
-  border: 0px !important;
-  border-radius: 0px !important;
-  width: 100%;
-  background-color: $white !important;
-  color: $green !important;
-
+  border: 1px solid $gray-100;
+  margin-left: 20px;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.25);
 
 }
 .btn-splash:hover
 {
+  border: 1px solid $white;
+  -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.75);
 }
 .splash
   {
@@ -350,46 +354,7 @@ fill: $green !important;
 .splash-left {
   margin: auto 0px;
 }
-#banner-splash {
-  height: $banner-height;
-  position:initial;
-  margin-bottom: 20px;
-  width: 100%;
 
-  #ws
-    {
-      margin: 0 auto;
-      height: $banner-height;
-      width: ($banner-height * 2.7017);
-      width: 320px;
-      max-width: 100%;
-
-      .whm-logo
-        {
-          background: $url_2;
-          height:100%;
-          width: 320px;
-            max-width: 100%;
-          margin-bottom: 20px;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-
-      }
-}
-
-.whm-cc
-    {
-      background: $url_37;
-      width: 150px;
-      height:100px;
-        max-width: 100%;
-      margin: 0 auto;
-      position: initial;
-      text-align: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
 #banner {
   height: $banner-height;
   background-color: $green;
@@ -412,7 +377,6 @@ fill: $green !important;
           background-size: contain;
           background-repeat: no-repeat;
         }
-
       }
 
   .module-title {
@@ -1016,37 +980,33 @@ label {
 #menu-whm li
   {
     list-style-type: none !important;
-    padding-top: .5rem;
- padding-bottom: .5rem;
+    padding-top: 1rem;
+ padding-bottom: 1rem;
     a
     {
       color: $white;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       text-decoration: none;
     }
     ul {
         padding-inline-start: 0px !important;
         background-color: #ffffff;
+        padding-inline-start: 40px !important;
         margin-left: -2rem !important;
         margin-right: -2rem !important;
     /*    padding-bottom: 1.3rem !important; */
       /*  margin-bottom: -0.4rem !important; */
         border-left: 3px solid $green !important;
-        margin-top: .5rem;
+        margin-top: 1rem;
           li
             {
+              padding-bottom: 0rem;
               padding-right: 2rem;
-
-              padding-inline-start: 40px !important;
             }
             li:last-child
               {
                 padding-bottom: 1rem;
               }
-              li:first-child
-                {
-                  padding-top: 1rem;
-                }
           a {
               color: $green !important;
               font-weight: 400;
@@ -1087,7 +1047,7 @@ label {
     a
     {
       color: $white;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       text-decoration: none;
     }
     ul {
@@ -1497,27 +1457,7 @@ label {
     font-size: 1.9rem;
       margin: 1.5rem;
   }
-  #next-prev a{
-    padding: 10px 15px;
-    border-radius: 3px;
-  }
-  #next-prev a:hover{
 
-      background-color: #01a19a17;
-      text-decoration: none;
-  }
-
-  .next-page {
-    float: right;
-    overflow: hidden;
-  }
-  .prev-page{
-    float: left;
-    overflow: hidden;
-  }
-  .ripple-card{
-    overflow: hidden;
-  }
   @media (min-width: 100px) and (max-width: 767px)
     {
       .fscreen {
@@ -1573,17 +1513,13 @@ label {
 /*Org Chart*/
 
 * { box-sizing: border-box; }
-#org_chart button {
-border-width: 0px !important;
 
-}
 
 .grid-item {/*
   float: left;
   padding-bottom: 1rem;
   margin-bottom: 1rem;*/
 }
-
 .ceo-sub {
   height: 1rem;
 }
@@ -1593,14 +1529,7 @@ border-width: 0px !important;
   color: $green;
   font-weight: 600;
   font-size: 3rem;
-.description {
-  color: #372A57;
-  font-size: .9rem;
-  font-weight: 400;
-
 }
-}
-
 .sublevel0 {
 
   border-top: 2px solid $green;
@@ -1642,16 +1571,12 @@ border-width: 0px !important;
   background-color: $green;
   padding: 20px;
   font-size: 1rem;
-    border-bottom: 1px solid #eee !important;
 }
 .level2 {
   border-bottom: 1px solid #eee;
   padding: 20px;
   background-color: $white;
   text-align: center;
-}
-.level2:first-child {
-  border-top: 1px solid #eee !important;
 }
 .level2:last-child {
   border-bottom: 0px;
@@ -1997,7 +1922,6 @@ text-decoration: none;
 }
 .quick_link_right {
 flex-basis: 70%;
-min-height: 195px;
 position: relative;
     display: block;
     text-align: left;
@@ -2012,9 +1936,7 @@ color: $green;
 }
 
 .quick_link_cta{
-  position: inherit;
-   bottom: 1rem;
-   left: 1.5rem;
+
   padding-top: 1rem;
 }
 
@@ -2023,29 +1945,4 @@ color: $green;
 }
 .zindex-indev{
   z-index: 1000;
-}
-.single-scorm {
-  background-color: #fff0 !important;
-}
-
-/*Dev notification*/
-#dev-notification
-{
-  position: fixed;
-  z-index: 999;
-  bottom: 0;
-}
-
-
-/*Splash page*/
-
-#splash-info {
-  max-width: 320px !important;
-  padding: 0 2rem;
-}
-
-.bottom {
-  position: absolute;
-  bottom: 0px;
-  max-width: 320px;
 }

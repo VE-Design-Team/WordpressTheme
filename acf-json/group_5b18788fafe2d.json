@@ -84,7 +84,8 @@
                 "whm": "WHM",
                 "cde": "CDE",
                 "embed": "Embed pages in Canvas",
-                "bridge": "Bridge Embed"
+                "bridge": "Bridge Embed",
+                "vwp": "Virtualworkplace"
             },
             "default_value": [
                 "iframe"

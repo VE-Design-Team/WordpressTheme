@@ -6,7 +6,6 @@
  * by David DeSandro
  */
 
-
 /**
  * Bridget makes jQuery widgets
  * v2.0.1

@@ -10,6 +10,9 @@ elseif ($variable  == 'cde') {
 elseif ($variable  == 'whm') {
   get_template_part( 'whm' );
 }
+elseif ($variable  == 'vwp') {
+  get_template_part( 'vwp' );
+}
 elseif ($variable  == 'bridge') {
   get_template_part( 'bridge' );
 };

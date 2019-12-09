@@ -22,11 +22,11 @@ if ($glossary === "glossary") {
 <style>
 
 </style>
-<?php 
+<?php
 $glossary_url = get_field('field_5c75d39e68af3', 'option');
 
 if( $glossary_url ): ?>
-	
+
 <script>
 
 
@@ -45,4 +45,3 @@ if( $glossary_url ): ?>
 </body>
 
 </html>
-

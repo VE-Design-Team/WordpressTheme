@@ -159,6 +159,19 @@ gulp.task('whm-sass', function () {
         .pipe(rename('theme.min.css'))
     return stream;
 });
+gulp.task('vwp-sass', function () {
+    var stream = gulp.src('./sass/vwp.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./vwp/css'))
+        .pipe(rename('theme.min.css'))
+    return stream;
+});
 gulp.task('embed-sass', function () {
     var stream = gulp.src('./sass/embed.scss')
         .pipe(plumber({
@@ -245,7 +258,7 @@ gulp.task('cleancss', function() {
     .pipe(rimraf());
 });
 
-gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'whm-sass', 'embed-sass','bridge-sass', 'h5p-scss', 'minify-css')(callback) });
+gulp.task('styles', function(callback){ gulpSequence('sass','cde-sass', 'fssi-sass', 'whm-sass','vwp-sass', 'embed-sass','bridge-sass', 'h5p-scss', 'minify-css')(callback) });
 
 // Run:
 // gulp browser-sync
@@ -296,6 +309,11 @@ gulp.task('scripts', function() {
       .pipe(concat('theme.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest('./whm/js/'));
+    //vwp
+      gulp.src(scripts)
+      .pipe(concat('theme.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('./vwp/js/'));
   //embed
     gulp.src(scripts)
     .pipe(concat('canvas-embed.min.js'))
