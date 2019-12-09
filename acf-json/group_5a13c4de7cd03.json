@@ -4015,14 +4015,15 @@
                         "Go to": "Go to",
                         "Visit": "Visit",
                         "Try": "Try",
-                        "Download": "Download"
+                        "Download": "Download",
+                        "Listen": "Listen"
                     },
                     "default_value": [],
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
-                    "ajax": 0,
                     "return_format": "value",
+                    "ajax": 0,
                     "placeholder": ""
                 }
             ]
@@ -4428,5 +4429,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574820340
+    "modified": 1574984356
 }
