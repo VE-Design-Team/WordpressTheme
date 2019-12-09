@@ -1,6 +1,6 @@
-<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+<script src="/wordpress481/wp-content/themes/page-builder/js/aos.js"></script>
 <script src="/wordpress481/wp-content/themes/page-builder/js/animate.js"></script>
-<link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet">
+<link href="/wordpress481/wp-content/themes/page-builder/css/aos.css" rel="stylesheet">
 <div class="socialmediafeed">
 <!--Staff Section starts - e.g staff reporting directly to the CEO -->
 <?php
@@ -33,7 +33,15 @@
 
               <!-- Social media post time -->
 <div class="pb-5 pt-1" ?>
-              <div class="social-green social-left pt-1 pb-2" >    <?php the_sub_field('field_5db91fdfc957c');?> ago</div>
+<?php
+if (get_sub_field('field_5db91fdfc957c')) {
+  ?>
+    <div class="social-green social-left pt-1 pb-2" >    <?php the_sub_field('field_5db91fdfc957c');?> ago</div>
+  <?php
+} else {
+}
+?>
+
               <div class="social-green social-right pt-1 pb-2" > <img src="/wordpress481/wp-content/uploads/2019/11/like.svg" alt="like" height="23" width="23"></div>
               <div class="social-green social-right pt-1 pb-2" > <img src="/wordpress481/wp-content/uploads/2019/11/share.svg" alt="share" height="23" width="23"></div>
 </div>
@@ -56,6 +64,8 @@ if (is_array($replies)) {
 }
 
 if ($count > 1 ) { echo "<div class='x-replies'>"."$count replies"."</div>";
+}
+elseif  ($count < 1 ) { echo "";
 }
 elseif  ($count < 2 ) { echo "<div class='x-replies'>"."$count reply"."</div>";
 }
