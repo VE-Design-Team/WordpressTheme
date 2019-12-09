@@ -26,7 +26,7 @@
     <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-5 col-lg-12">
-    <img src="<?php echo $card_image['url']; ?>" class="card-img" alt="<?php echo $card_image['alt'] ?>" />
+    <img src="<?php echo $card_image['url']; ?>" class="card-img card-img-top" alt="<?php echo $card_image['alt'] ?>" />
     
     </div>
     <div class="col-7 col-lg-12">
@@ -50,11 +50,11 @@
 </div>
 
 <!-- end get cards-->
+
+
+<div  class="col-8 offset-2 offset-lg-2 col-lg-4">
 <h2>Quick Links</h2>
-
-<div id="quicklinks" class="col-8 offset-2 offset-lg-2 col-lg-4">
-
-
+<div id="quicklinks">
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
@@ -75,7 +75,7 @@
             <a href="<?php echo $button_link; ?>">
         <?php endif; ?>
 
-            <img src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
+            <img  src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
 
         <?php if( $button_link ): ?>
             </a>
@@ -90,6 +90,7 @@
 </div><!-- end row-->
 
 <?php endif; ?>
+        </div>
 </div>
 </div>
 
