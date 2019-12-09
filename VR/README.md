@@ -1,4 +1,4 @@
-# vr-editor
+# vr-editor to run on local Node server. Change port as per your requirements.
 
 npm install
 
