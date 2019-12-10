@@ -1,0 +1,63 @@
+@import "vwp_rendered";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+section {
+  background-color: #fff;
+}
+
+#intranet {
+  
+  #latestnews {
+    .card {
+      border: 0px;
+      background-color: #f8f8f8;
+      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      .card-img-top {
+        width: 100%;
+        height: 10vw;
+        object-fit: cover;
+    }
+      p:hover
+      {
+        text-decoration: none;
+      }
+      .card-body
+      {
+        padding: 0.5rem;
+      }
+    }
+
+    .card:hover {
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: #000054;
+      border-radius: 2rem;
+      border: #000054;
+    }
+    #intranet .btn-primary
+{
+  background: black !important;
+}
+
+  }
+  #quicklinks
+  {
+    background: #000054;
+    padding: 1rem; 
+    p
+    {
+     color: #fff;
+    font-size: 11.5px;
+    line-height: 16px;
+    font-weight: 600;
+    text-align: center;
+    }
+  }
+}
+#testdiv
+{
+  color: orange;
+}

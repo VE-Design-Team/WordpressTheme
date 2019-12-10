@@ -1,12 +1,12 @@
 @import "rmit_variables";
 
 //For this course
-
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
 //Unique colours
 
 //Styles
 $card-border-width: 0.2rem;
-$headings-font-family: $font-family-sans-serif !default;
+$headings-font-family: 'Manjari', sans-serif;
 $nav-tabs-border-color: $gray-500 !default;
 $nav-tabs-link-hover-border-color: none !default;
 $nav-tabs-active-text-color: $rmit-red !default;
