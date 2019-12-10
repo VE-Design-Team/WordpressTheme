@@ -2,7 +2,7 @@
 <!-- start get cards -->
 
 <div id="intranet" class="row">
-<div class="col-12 col-lg-6">
+<div class="col-12 col-lg-7">
 
 <?php if( have_rows('field_5dddcb8593260') ): ?>
 <h1>Latest news</h1>
@@ -51,8 +51,7 @@
 
 <!-- end get cards-->
 
-
-<div  class="col-8 offset-2 offset-lg-2 col-lg-4">
+<div  class="col-8 offset-1 offset-lg-1 col-lg-4 pr-0">
 <h2>Quick Links</h2>
 <div id="quicklinks">
 <!-- start get buttons -->
