@@ -345,7 +345,7 @@ box-shadow: 0 2px 5px rgba(0,0,0,.4);
 }
 
 .introjs-fixedTooltip {
-  position: fixed;
+  position: absolute;
 }
 
 .introjs-hint {
