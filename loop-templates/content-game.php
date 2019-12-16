@@ -5,7 +5,7 @@
 	<?php endif;?>
 <?php if (have_rows('field_5a2094f978d32')): ?>
     <div id="BranchingScenario">
-    <?php 
+    <?php
         $row_count = 1;
         while (have_rows('field_5a2094f978d32')): the_row();
         // vars
@@ -17,7 +17,7 @@
     <div class="collapse parent " id="collapse<?php echo $row_count; ?>">
 <div class="card ">
 <?php if (get_sub_field('field_5a20996ca0dd0')): ?>
-      <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="<?php echo $title; ?>">
+      <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 <?php endif; ?>
     <div class="card-body">
     <h3 class="h4"><?php echo $title; ?></h3><p class="card-text"><?php echo $content; ?></p>
@@ -57,7 +57,7 @@ data-toggle="collapse" data-parent="#BranchingScenario" data-target="#collapse<?
       </div><!--card-body-->
 </div><!--card-->
  <div class="progress mt-2 mr-1 ml-1">
-    <?php 
+    <?php
     $total_row_count = count(get_field('field_5a2094f978d32'));
   $percent_completed =(($row_count / $total_row_count) * 100);
 $progress_colour = "bg-danger";
@@ -71,12 +71,12 @@ if ($percent_completed > "95") {
 </div>
 </div><!--collapse-->
 </div><!--parent-->
-    <?php 
+    <?php
 $row_count++;
     endwhile; ?>
 </div><!--BranchingScenario-->
 <?php endif; ?>
 <script>
-// Make first card show on loadding, rest hidden by default 
+// Make first card show on loadding, rest hidden by default
 $('.collapse:first').addClass('show');
-</script>   
+</script>
