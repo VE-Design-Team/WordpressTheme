@@ -5,19 +5,25 @@
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/classie.js"></script>
 </head>
+<?php if ( 'yes' == get_field('field_5df03c463c0f1') ): ?>
+  <body onload="introJs().start();" class="cbp-spmenu-push page-scroll" >
+<?php else: ?>
+    <body class="cbp-spmenu-push cbp-spmenu-push" >
+<?php endif; ?>
 
-<body class="cbp-spmenu-push cbp-spmenu-push" >
 
-  <div id="showRightPush" class="">
+  <div id="showRightPush" class="" data-intro="Select to open and close the menu." >
+    <div >
+    <div><span></span>
     <span></span>
     <span></span>
-    <span></span>
-    <div class="text-right w-100 fscreen">
-      <div class="">
-        <a class="full-screen" onclick="fullscreen()" id="fullscreen" href="#"></a>
-      </div>
-      <div class="">
-        <a href="javascript:void(0)" onclick="introJs().start();" class="help-tip page-scroll"></a>
+  </div></div>
+    <div class="text-right w-100 fscreen" >
+      <div id="fullscreen" >
+      <a class="full-screen" data-intro="Select to enter or exit full screen mode" onclick="fullscreen()" id="fullscreen" href="#" ></a>
+    </div>
+      <div id="help"  >
+        <a href="javascript:void(0)" data-intro="Select for information on how to navigate the GCBH website" onclick="introJs().start();" class="help-tip page-scroll" ></a>
       </div>
     </div>
   </div>
