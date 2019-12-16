@@ -33,6 +33,7 @@
     <div class="col-7 col-lg-12">
       <div class="card-body">
         <h5 class="card-title">  <?php echo $card_title; ?></h5>
+        <hr>
         <p class="card-text">        <?php echo $card_content; ?></p>
       </div>
     </div>
@@ -75,7 +76,8 @@
             <a href="<?php echo $button_link; ?>">
         <?php endif; ?>
 
-            <img  src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
+            <img class="mx-auto d-block
+            " src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
 
         <?php if( $button_link ): ?>
             </a>
