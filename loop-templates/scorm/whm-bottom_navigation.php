@@ -9,7 +9,7 @@
               // check
               if( $next ): ?>
               <div class="next-page">
-              <a class="float-right material-card" title="Next page" href="<?php echo get_the_permalink($next); ?>">Next page: <strong><?php echo get_the_title($next); ?></strong></a>
+              <a class="float-right material-card" title="Next page" data-intro="Select to view the next page in the menu." href="<?php echo get_the_permalink($next); ?>">Next page: <strong><?php echo get_the_title($next); ?></strong></a>
               </div>
               <?php endif; ?>
 
@@ -20,7 +20,7 @@ $prev = get_field('field_5bdf9ede4ef3a', false, false);
 
 // check
 if( $prev ): ?>
-<a class="float-left" title="Previous page" href="<?php echo get_the_permalink($prev); ?>">Previous page: <strong><?php echo get_the_title($prev); ?></strong></a>
+<a class="float-left" title="Previous page" data-intro="Select to view the previous page in the menu." href="<?php echo get_the_permalink($prev); ?>">Previous page: <strong><?php echo get_the_title($prev); ?></strong></a>
 
 <?php endif; ?>
 

@@ -1,6 +1,6 @@
 //document push and pull
 $(document).ready(function(){
-	
+
 	$('#showRightPush').click(function(){
 		$(this).toggleClass('open');
 	});

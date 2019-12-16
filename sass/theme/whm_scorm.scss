@@ -4,6 +4,7 @@ $url_4: url("../whm/img/theme/svg/hamburger.svg");
 $url_5: url("../whm/img/theme/svg/fullscreen.svg");
 $url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
 $url_7: url("../whm/img/theme/nav_header.png");
+$url_37: url('../whm/img/theme/cc.png');
 //prev next icons
 $url_16: url("../whm/img/theme/svg/prev.svg");
 $url_15: url("../whm/img/theme/svg/next.svg");
@@ -40,7 +41,15 @@ body {}
 *:-moz-full-screen {
    overflow: auto !important;
 }
-
+a {
+  color: $blue !important;
+  text-decoration: underline !important;
+}
+.btn {
+color: $white !important;
+background: $blue !important;
+text-decoration: none !important;
+}
 
 #whm {
   margin-bottom: 2rem;
@@ -323,7 +332,10 @@ fill: $green !important;
 }
 .btn-splash
 {
-  border: 1px solid $gray-100;
+  background-color: $white !important;
+  color: $blue !important;
+  font-weight: 700;
+  border: 0px solid $green !important;
   margin-left: 20px;
   -webkit-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 5px -2px rgba(0, 0, 0, 0.25);
@@ -351,6 +363,18 @@ fill: $green !important;
 .splash-left {
   margin: auto 0px;
 }
+.whm-cc
+    {
+      background: $url_37;
+      width: 150px;
+      height:100px;
+        max-width: 100%;
+      margin: 0 auto;
+      position: initial;
+      text-align: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
 #banner {
   height: $banner-height;
@@ -373,6 +397,50 @@ fill: $green !important;
           margin: $banner-height/6;
           background-size: contain;
           background-repeat: no-repeat;
+        }
+      }
+
+  .module-title {
+    background: $white;
+    height: ($banner-height * 0.4);
+    padding: ($banner-height * 0.05);
+    float: right;
+    margin: ($banner-height * 0.3);
+    display: inline-block;
+
+      h1
+        {
+          color: $blue;
+          font-size: ($banner-height * 0.3);
+          line-height: ($banner-height * 0.3);
+          text-transform: uppercase;
+          padding: 0;
+          margin: 0;
+        }
+    }
+
+  @media (min-width: 1200px)
+    {
+      display: block;
+    }
+}
+#banner-splash {
+  height: $banner-height;
+
+  #ws
+    {
+      height: $banner-height;
+      width: ($banner-height * 2.7017);
+      width: 320px;
+      margin-bottom: 1rem;
+
+      .whm-logo
+        {
+          background: $url_2;
+          height: $banner-height/1;
+          background-size: contain;
+          background-repeat: no-repeat;
+      background-position: center;
         }
       }
 
@@ -701,14 +769,14 @@ fill: $green !important;
 
 
       button {
-        background: none;
-        background-image: $url_8;
-        background-size: contain;
-        color: rgba(0, 0, 0, 0);
-        background-position: center;
-        height: 3.5rem;
-        border: none;
-        background-repeat: no-repeat;
+        background: none !important;
+        background-image: $url_8 !important;
+        background-size: contain !important;
+        color: rgba(0, 0, 0, 0) !important;
+        background-position: center !important;
+        height: 3.5rem !important;
+        border: none !important;
+        background-repeat: no-repeat !important;
 
         //display: none;
       }
@@ -967,7 +1035,7 @@ label {
 
 //MENU//
 .menu {
-  padding: 0 2rem;
+  padding: 0 1.8rem;
 }
 #cssmenu
   {
@@ -981,15 +1049,15 @@ label {
  padding-bottom: 1rem;
     a
     {
-      color: $white;
+      color: $white !important;
       font-size: 1.5rem;
-      text-decoration: none;
+      text-decoration: none !important;
     }
     ul {
         padding-inline-start: 0px !important;
         background-color: #ffffff;
         padding-inline-start: 40px !important;
-        margin-left: -2rem !important;
+        margin-left: -1.8rem !important;
         margin-right: -2rem !important;
     /*    padding-bottom: 1.3rem !important; */
       /*  margin-bottom: -0.4rem !important; */
@@ -1005,7 +1073,7 @@ label {
                 padding-bottom: 1rem;
               }
           a {
-              color: $green !important;
+              color: $blue !important;
               font-weight: 400;
               font-size: 1.2rem;
               border-left: 2px solid $white;
@@ -1043,16 +1111,16 @@ label {
     padding-bottom: 1rem;
     a
     {
-      color: $white;
+      color: $white !important;
       font-size: 1.5rem;
-      text-decoration: none;
+      text-decoration: none !important;
     }
     ul {
         padding-inline-start: 0px !important;
         background-color: #ffffff;
         padding-inline-start: 40px !important;
         background-color: #ffffff;
-        margin-left: -2rem !important;
+        margin-left: -1.8rem !important;
         margin-right: -2rem !important;
         padding-bottom: 1.3rem !important;
         margin-bottom: -0.4rem !important;
@@ -1064,7 +1132,8 @@ label {
               padding-right: 2rem;
             }
           a {
-              color: $green !important;
+              color: $blue !important;
+              text-decoration: none !important;
               font-weight: 400;
               font-size: 1.2rem;
               border-left: 2px solid $white;
@@ -1218,7 +1287,7 @@ label {
   position: fixed;
   top: 1.5rem;
   right: 2rem;
-  z-index: 1000;
+  z-index: 9999999 !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -1256,6 +1325,7 @@ label {
   .help-tip{
     right: 5.5rem;
     top: 0rem;
+    text-decoration: none !important;
   }
 }
 
@@ -1397,18 +1467,23 @@ label {
   }
 
   /*Help button*/
+
+
+
 .help-tip{
 	position: absolute;
 	top: 0rem;
 	right: 21rem;
 	text-align: center;
 	background-color: $white;
+  border: 0px solid #fff;
 	border-radius: 50%;
 	width: 2rem;
 	height: 2rem;
 	font-size: 1.5rem;
 	line-height:2rem;
-	cursor: default;
+	cursor: help;
+      text-decoration: none !important;
 
 }
 
@@ -1428,6 +1503,8 @@ label {
   width: 1em;
   height: 1em;
   position: absolute;
+  background-color:#01A19A;
+
 }
 .full-screen:before, .full-screen:after {
   content: '';
@@ -1502,10 +1579,13 @@ label {
      text-align: center;
       margin: 0 auto;
         a {
-        color: $green !important;
+        color: $blue !important;
+        text-decoration: underline;
         }
     }
-
+.next-page {
+  width: 100%;
+}
 
 /*Org Chart*/
 
@@ -1520,10 +1600,17 @@ label {
 .ceo-sub {
   height: 1rem;
 }
+.manager-sub{
+  height: .6rem;
+}
+.staff-sub {
+  border:1px solid $green;
+}
 .level0 {
   border: 0px solid #eee;
   text-align: center;
   color: $green;
+  background-color: $blue;
   font-weight: 600;
   font-size: 3rem;
 }
@@ -1546,10 +1633,9 @@ label {
   padding-bottom: 10px;
 }
 .sub_org_name{
-  border-bottom: 1px solid $white;
+  border-bottom: 2px solid $white;
   width: 10%;
-  position: absolute;
-  left: 45%;
+margin: 0 auto;
 }
 .org_title {
   font-weight: 400;
@@ -1565,20 +1651,24 @@ label {
 }
 .level1 {
   color: $white;
-  background-color: $green;
-  padding: 20px;
+  background-color: $blue;
+  padding: 30px 20px 30px 20px;
   font-size: 1rem;
 }
 .level2 {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  background-color: $white;
+  border-bottom: 0px solid #eee;
+  padding: 20px 20px 20px 20px;
+  background-color: #fff;
   text-align: center;
+  color: $blue;
+  font-weight: 600;
 }
 .level2:last-child {
   border-bottom: 0px;
 }
-
+.manager-line{
+ border-bottom: 1px solid $grey; margin: 0 auto;
+}
 .org_chart_profile {
   max-width: 40%;
   min-width: 120px;
@@ -1591,12 +1681,12 @@ label {
   }
 }
 .bio {
-  background-color: $white;
+  background-color: $blue;
   text-align: left;
-  color: $blue;
+  color: $white;
   font-size: .9rem;
-  padding: 20px;
-margin: 20px -20px -20px;
+  padding: 20px 20px 30px 20px;
+margin: 0px -20px -20px;
 border-bottom: 1px solid $green !important;
 }
 .bio-staff {
@@ -1605,7 +1695,7 @@ border-bottom: 1px solid $green !important;
   color: $blue;
   font-size: .9rem;
   padding: 20px;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid $green !important;
 }
 
 
@@ -1896,10 +1986,10 @@ ol.organizational-chart > li > ol:after {
 }
 .quick_link_title a{
 color: $blue;
-text-decoration: none;
 }
 
 .quick_link_content{
+  color: $blue;
 
 }
 .quick_link_image
@@ -1922,18 +2012,21 @@ flex-basis: 70%;
 position: relative;
     display: block;
     text-align: left;
+
+      text-decoration: none !important;
 }
 
 .quick_link a:hover {
 background-color: #fbfbfb;
   text-decoration: none;
 }
-.quick_link_cta a{
-color: $green;
+.quick_link_cta span{
+color: $blue !important;
+
+font-size: bold !important; 
 }
 
 .quick_link_cta{
-
   padding-top: 1rem;
 }
 
@@ -1942,4 +2035,46 @@ color: $green;
 }
 .zindex-indev{
   z-index: 1000;
+}
+
+.single-scorm {
+  background-color: #fff0 !important; }
+
+/*Dev notification*/
+#dev-notification {
+  position: fixed;
+  z-index: 999;
+  bottom: 0; }
+
+/*Splash page*/
+#splash-info {
+  max-width: 320px !important;
+  margin: 100px auto;
+
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0px;
+  max-width: 320px; }
+/*Video embeding responsive*/
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/* HELP ME */
+
+.introjs-tooltipReferenceLayer a {
+  text-decoration: none !important;
+
 }
