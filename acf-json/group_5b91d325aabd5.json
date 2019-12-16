@@ -235,6 +235,44 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5df03c463c0f1",
+            "label": "Walk me through",
+            "name": "walk_me_through",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "yes",
+            "ui_off_text": "no"
+        },
+        {
+            "key": "field_5df1c474d1e60",
+            "label": "Dummy login",
+            "name": "dummy_login",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -263,5 +301,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1570165555
+    "modified": 1576125693
 }
