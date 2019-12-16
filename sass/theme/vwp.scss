@@ -64,7 +64,10 @@ a {
       background-color: #f8f8f8;
       box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
       text-decoration: none;
-
+      a:hover
+      {
+        text-decoration: none;
+      }
       .card-img-top {
         width: 100%;
         height: 10vw;
@@ -74,17 +77,27 @@ a {
       p:hover {
         text-decoration: none;
       }
-
+     
       .card-body {
         padding: 0.5rem;
 
         h5 {
           padding-top: 1rem;
+          margin-bottom: 0rem;
           font-size: 1rem;
+          font-weight: 700;
+          color: #111;
+          
+        }
+        hr
+        {
+          padding: 0 1rem 0 1rem;
+          border: 1px solid #AAD75F;
         }
 
         p {
           font-size: 0.8rem;
+          color: #111;
         }
 
       }
@@ -123,6 +136,7 @@ a {
     p {
       color: #fff;
       font-size: 11.5px;
+      padding-top: 5px;
       line-height: 16px;
       font-weight: 600;
       text-align: center;

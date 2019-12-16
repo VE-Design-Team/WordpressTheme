@@ -475,7 +475,7 @@
 
 #banner #ws .vwp-logo {
   background: url("../vwp/img/theme/bagwan_logo.png");
-  height: 68px;
+  height: 50px;
   margin: 12px;
   background-size: contain;
   background-repeat: no-repeat; }
@@ -649,6 +649,8 @@ section {
   background-color: #f8f8f8;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   text-decoration: none; }
+  #intranet #latestnews .card a:hover {
+    text-decoration: none; }
   #intranet #latestnews .card .card-img-top {
     width: 100%;
     height: 10vw;
@@ -659,9 +661,16 @@ section {
     padding: 0.5rem; }
     #intranet #latestnews .card .card-body h5 {
       padding-top: 1rem;
-      font-size: 1rem; }
+      margin-bottom: 0rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111; }
+    #intranet #latestnews .card .card-body hr {
+      padding: 0 1rem 0 1rem;
+      border: 1px solid #AAD75F; }
     #intranet #latestnews .card .card-body p {
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      color: #111; }
 
 #intranet #latestnews .card:hover {
   text-decoration: none; }
@@ -683,6 +692,7 @@ section {
   #intranet #quicklinks p {
     color: #fff;
     font-size: 11.5px;
+    padding-top: 5px;
     line-height: 16px;
     font-weight: 600;
     text-align: center; }
