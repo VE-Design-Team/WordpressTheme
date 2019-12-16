@@ -199,6 +199,7 @@ h3 a
 
 }
 
+
 /*Communication - Social Media*/
 
 #social-content{
@@ -287,7 +288,6 @@ fill: $green !important;
     transform: scale(1);
   }
 }
-
 
 .whm-button {
   padding: 8px 15px;
@@ -2022,11 +2022,11 @@ background-color: #fbfbfb;
 }
 .quick_link_cta span{
 color: $blue !important;
-
-font-size: bold !important; 
+font-weight: bold;
 }
 
 .quick_link_cta{
+
   padding-top: 1rem;
 }
 
@@ -2065,7 +2065,7 @@ font-size: bold !important;
     position:relative;
     height:0;
 }
-.video-responsive iframe{
+.video-responsive iframe{ 
     left:0;
     top:0;
     height:100%;
