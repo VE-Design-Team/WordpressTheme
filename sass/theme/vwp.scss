@@ -1,30 +1,92 @@
-@import "vwp_rendered";
+@import "vwp_rendered_current";
+//@import "vwp_rendered_old";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+html,
+body {
+  font-family: $font-family-sans-serif !important;
+}
 
 section {
   background-color: #fff;
 }
 
+#menu-scorm-menu-1 > li.menu-item.menu-item-type-post_type.menu-item-object-scorm.menu-item-has-children.has-sub > a
+a {
+  color: white;
+}
+
+  #cssmenu {
+    margin-top: 5rem;
+    width: 100%;
+    font-family: $font-family-sans-serif;
+    margin-left: -3rem;
+    ul {
+      li {
+          padding: 1rem 0 1rem 0;
+          list-style-type: none;
+          border-bottom: 1px solid #eee;
+          font-size: 1rem;
+        a {
+          color: #eee;
+        }
+        a:hover
+        {
+          color: #fff;
+          text-decoration: none;
+        }
+        ul {
+          margin-left:1rem;
+          padding: 1rem;
+          li {
+            a {
+              color: #ccc;
+              font-size: 0.9rem;
+              //border-bottom: 1px solid #ccc;
+            }
+            a:hover
+            {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
 #intranet {
-  
+
   #latestnews {
     .card {
       border: 0px;
       background-color: #f8f8f8;
       box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
       text-decoration: none;
+
       .card-img-top {
         width: 100%;
         height: 10vw;
         object-fit: cover;
-    }
-      p:hover
-      {
+      }
+
+      p:hover {
         text-decoration: none;
       }
-      .card-body
-      {
+
+      .card-body {
         padding: 0.5rem;
+
+        h5 {
+          padding-top: 1rem;
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
       }
     }
 
@@ -37,27 +99,37 @@ section {
       border-radius: 2rem;
       border: #000054;
     }
-    #intranet .btn-primary
-{
-  background: black !important;
-}
+
+    #intranet .btn-primary {
+      background: black !important;
+    }
 
   }
-  #quicklinks
-  {
-    background: #000054;
-    padding: 1rem; 
-    p
+
+  #quicklinks {
+    
+    padding: 1rem;
+    
+    .col-4
     {
-     color: #fff;
-    font-size: 11.5px;
-    line-height: 16px;
-    font-weight: 600;
-    text-align: center;
+      background: #000054;
+    }
+
+    img
+    {
+      margin-top: 10px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 11.5px;
+      line-height: 16px;
+      font-weight: 600;
+      text-align: center;
     }
   }
 }
-#testdiv
-{
+
+#testdiv {
   color: orange;
 }

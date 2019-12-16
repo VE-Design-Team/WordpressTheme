@@ -44,21 +44,25 @@
       <!--<div class="sidebar"><?php get_template_part( 'loop-templates/scorm/vwp-scorm', 'nav' ); ?> </div> -->
 
       <div class="menu"><ul>
-      <img style="margin-top:40%;margin-left:30%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/home_icon.png" alt="home icon" height="42" width="42">
+     <img style="margin-top:40%;margin-left:30%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/home_icon.png" alt="home icon" height="42" width="42">
 
-      <div style="height:200px;"></div>
-<ul id="menu-item-108"><a><span style="color:white;">Our community</span></a></ul>
-<hr style="margin-left:20%;background-color:white;" width="50%">
-<ul id="menu-item-2"><a><span style="color:white;">Documents</span></a></ul>
-<hr style="margin-left:20%;background-color:white;" width="50%">
-<ul id="menu-item-2"><a><span style="color:white;">Emergencies</span></a></ul>
-<hr style="margin-left:20%;background-color:white;" width="50%">
-<ul id="menu-item-2"><a><span style="color:white;">Departments</span></a></ul>
-<hr style="margin-left:20%;background-color:white;" width="50%">
-<ul id="menu-item-2"><a><span style="color:white;">On call</span></a></ul>
-<hr style="margin-left:20%;background-color:white;" width="50%">
-</ul></div>
-<img style="margin-top:40%;margin-left:40%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/search_button.png" alt="home icon" height="42" width="42">
+    
+
+  
+
+  <?php
+//get menu assigned to this page
+ $menu = get_field('field_5bc317e313d41');
+// and place in the page
+  wp_nav_menu(array(
+  'menu' => $menu,
+'container_id' => 'cssmenu',
+'walker' => new CSS_Menu_Maker_Walker()
+));
+?>
+
+</div>
+<!--<img style="margin-top:40%;margin-left:40%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/search_button.png" alt="Search icon" height="42" width="42">-->
 
 
     </div>

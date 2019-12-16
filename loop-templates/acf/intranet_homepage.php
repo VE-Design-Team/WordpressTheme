@@ -1,11 +1,12 @@
 <!-- intranet home page -->
 <!-- start get cards -->
-
+<hr>
 <div id="intranet" class="row">
 <div class="col-12 col-lg-7">
 
 <?php if( have_rows('field_5dddcb8593260') ): ?>
-<h1>Latest news</h1>
+<h2>Latest news</h2>
+
 <div class="row">
 
 <?php while( have_rows('field_5dddcb8593260') ): the_row(); 
@@ -68,7 +69,7 @@
 
     ?>
 
-<div class="col-4">
+<div class="col-4 border">
 
         <?php if( $button_link ): ?>
             <a href="<?php echo $button_link; ?>">
