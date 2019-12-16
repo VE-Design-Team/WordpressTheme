@@ -3,8 +3,11 @@
 <?php get_template_part('loop-templates/acf/accordion');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Org chart'): ?>
 <?php get_template_part('loop-templates/acf/org-chart');?>
-<?php elseif (get_field('field_5a13c5a7ec802') == 'Org chart'): ?>
-<?php get_template_part('loop-templates/acf/org-chart');?>
+
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Social media feed'): ?>
+<?php get_template_part('loop-templates/acf/socialmedia-feed');?>
+<?php elseif (get_field('field_5a13c5a7ec802') == 'Download document'): ?>
+<?php get_template_part('loop-templates/acf/download-document');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Checklist'): ?>
 <?php get_template_part('loop-templates/acf/checklist');?>
 <?php elseif (get_field('field_5a13c5a7ec802') == 'Tabbed sections'): ?>
