@@ -43,8 +43,8 @@
     <div>
       <!--<div class="sidebar"><?php get_template_part( 'loop-templates/scorm/vwp-scorm', 'nav' ); ?> </div> -->
 
-      <div class="menu"><ul>
-     <img style="margin-top:40%;margin-left:30%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/home_icon.png" alt="home icon" height="42" width="42">
+      <div class="menu"><ul><a href="https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/intranet/">
+     <img style="margin-top:40%;margin-left:30%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/home_icon.png" alt="home icon" height="42" width="42"></a>
 
     
 
@@ -88,13 +88,13 @@
 
 </body>
 
-<div class="bagwanfooter">
+<!--<div class="bagwanfooter">
     <h5 style="margin-left:16%;color: #000054;"><u>Acknowledgement of Country</u></h5>
     <p style="margin-left:16%;color: #000054;">Bagwan Health acknowledges the people of the Woi wurrung and Boon wurrung language groups of the eastern Kulin
       Nation on whose unceded lands we conduct the business of the University. Bagwan Health respectfully acknowledges
       their Ancestors and Elders, past and present. Bagwan Health also acknowledges the Traditional Custodians and their
       Ancestors of the lands and waters across Australia where we conduct our business.</p>
-</div>
+</div>-->
 
 <!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/vwp', 'footer' ); ?>
