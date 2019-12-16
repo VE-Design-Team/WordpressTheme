@@ -35,7 +35,7 @@
                       <?php echo $content; ?>
                     </div>
                   <div class="quick_link_cta">
-                    <span><strong><?php the_sub_field('field_5dddd7b6961fd'); ?></strong></span>
+                    <span><?php the_sub_field('field_5dddd7b6961fd'); ?></span>
                   </div>
                 </div>
 								</a>

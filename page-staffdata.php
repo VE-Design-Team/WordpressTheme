@@ -113,7 +113,7 @@
 <ul class="bagwan-nav" id="menu-item-2"><a><span style="color:white;">On call</span></a></ul>
 
 </ul></div>
-<img style="margin-top:40%;margin-left:40%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/search_button.png" alt="home icon" height="42" width="42">
+<!--<img style="margin-top:40%;margin-left:40%;" src="<?php echo get_stylesheet_directory_uri();?>/vwp/img/search_button.png" alt="home icon" height="42" width="42">-->
 
 
     </div>

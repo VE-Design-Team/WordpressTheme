@@ -1,11 +1,12 @@
 <!-- intranet home page -->
 <!-- start get cards -->
-
-<div class="row">
-<div class="col-12 col-lg-6">
+<hr>
+<div id="intranet" class="row">
+<div class="col-12 col-lg-7">
 
 <?php if( have_rows('field_5dddcb8593260') ): ?>
-<h1>Latest news</h1>
+<h2>Latest news</h2>
+
 <div class="row">
 
 <?php while( have_rows('field_5dddcb8593260') ): the_row(); 
@@ -18,7 +19,7 @@
 
     ?>
 
-   <div class="col-12 col-lg-4 mb-5">
+   <div id="latestnews" class="col-12 col-lg-4 mb-5 pl-0 pr-3">
     <?php if( $card_link ): ?>
             <a href="<?php echo $card_link; ?>">
         <?php endif; ?>
@@ -26,7 +27,7 @@
     <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-5 col-lg-12">
-    <img src="<?php echo $card_image['url']; ?>" class="card-img" alt="<?php echo $card_image['alt'] ?>" />
+    <img src="<?php echo $card_image['url']; ?>" class="card-img card-img-top" alt="<?php echo $card_image['alt'] ?>" />
     
     </div>
     <div class="col-7 col-lg-12">
@@ -51,9 +52,9 @@
 
 <!-- end get cards-->
 
-<div class="col-8 offset-2 offset-lg-2 col-lg-4">
-
+<div  class="col-8 offset-1 offset-lg-1 col-lg-4 pr-0">
 <h2>Quick Links</h2>
+<div id="quicklinks">
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
@@ -68,19 +69,19 @@
 
     ?>
 
-<div class="col-4">
+<div class="col-4 border">
 
         <?php if( $button_link ): ?>
             <a href="<?php echo $button_link; ?>">
         <?php endif; ?>
 
-            <img src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
+            <img  src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
 
         <?php if( $button_link ): ?>
             </a>
         <?php endif; ?>
 
-        <?php echo $button_title; ?>
+       <p> <?php echo $button_title; ?></p>
 
     </div><!-- end col-->
 
@@ -89,6 +90,7 @@
 </div><!-- end row-->
 
 <?php endif; ?>
+        </div>
 </div>
 </div>
 
