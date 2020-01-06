@@ -39,15 +39,15 @@ body
   <?php if ( 'yes' == get_field('field_5df1c474d1e60') ): ?>
 <div class=" ">
 
-  <div class="float-left"><a class="btn btn-splash ripple-card" title="Start here" href="<?php the_field('field_5bdf9ede4ef3a'); ?>">Take the tour</a></div>
+  <div class="float-left"><a class="btn btn-splash ripple-card" title="Take the tour" href="<?php the_field('field_5bdf9ede4ef3a'); ?>">Take the tour</a></div>
   <div class="float-right"><a class="btn btn-splash ripple-card" title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Start here</a></div>
 </div>
   <?php else: ?>
     <form class="text-center" action="">
-      <input class="form-control" type="text" name="firstname" value="User"><br>
-      <input class="form-control" type="text" name="lastname" value="******"><br>
+      <input class="form-control" type="text" name="username" value="LearnerAccess" disabled><br>
+      <input class="form-control" type="text" name="password" value="Password" disabled><br>
     </form>
-  <div class="">  <a class="btn btn-splash ripple-card" title="Start here" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Login</a></div>
+  <div class="">  <a class="btn btn-splash ripple-card" title="Login" href="<?php the_field('field_5bdf9ea04ef39'); ?>">Login</a></div>
   <?php endif; ?>
 
 <?php endif; ?>
@@ -61,9 +61,9 @@ body
         ?>
   </p>
 
-          <div class="whm-cc"></div>
+      <!--       <div class="whm-cc"></div>
 
-    <!-- images of partner logos
+  images of partner logos
     <img src="http://image.com" class="logo-partner">
     -->
   </div>

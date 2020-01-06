@@ -47,7 +47,6 @@
                 "Checklist": "Checklist",
                 "Custom HTML or table": "Custom HTML or table",
                 "Download document": "Download document",
-                "Intranet home page": "Intranet home page",
                 "Example content table": "Example content table",
                 "Flip cards": "Flip cards",
                 "Horizontal cards": "Horizontal cards",
@@ -4504,5 +4503,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576030599
+    "modified": 1576543607
 }

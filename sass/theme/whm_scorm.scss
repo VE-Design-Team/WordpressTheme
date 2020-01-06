@@ -54,6 +54,10 @@ text-decoration: none !important;
 #whm {
   margin-bottom: 2rem;
 }
+
+/*
+
+*/
 section
 {
   background-color: #EAE9EE;
@@ -166,6 +170,8 @@ h3 a
   background-size: cover;
   background-position: center;
 }
+
+
 
 .row .splash {
   height: calc(100vh - 160px);
@@ -1052,6 +1058,12 @@ label {
       color: $white !important;
       font-size: 1.5rem;
       text-decoration: none !important;
+    }
+    .current-menu-item a
+    {
+      border-left: 2px solid $white;
+      padding-left: .5rem;
+
     }
     ul {
         padding-inline-start: 0px !important;
@@ -2065,7 +2077,7 @@ font-weight: bold;
     position:relative;
     height:0;
 }
-.video-responsive iframe{ 
+.video-responsive iframe{
     left:0;
     top:0;
     height:100%;
