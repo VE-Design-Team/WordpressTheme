@@ -1,5 +1,15 @@
 <head>
 <!-- Our Custom CSS -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154715485-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+_gaq.push(['_setDomainName', 'none']);
+  gtag('config', 'UA-154715485-1');
+</script>
+
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/sass/theme/whm_introjs.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.mCustomScrollbar.min.css">
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js"></script>
