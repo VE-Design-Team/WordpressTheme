@@ -18,16 +18,17 @@ _gaq.push(['_setDomainName', 'none']);
 <?php if ( 'yes' == get_field('field_5df03c463c0f1') ): ?>
   <body onload="introJs().start();" class="cbp-spmenu-push page-scroll" >
 <?php else: ?>
-    <body class="cbp-spmenu-push cbp-spmenu-push" >
+    <body class="cbp-spmenu-push " >
 <?php endif; ?>
 
 
   <div id="showRightPush" class="" data-intro="Select to open and close the menu." >
-    <div >
+    <div>
     <div><span></span>
     <span></span>
     <span></span>
-  </div></div>
+  </div>
+</div>
     <div class="text-right w-100 fscreen" >
       <div id="fullscreen" >
       <a class="full-screen" data-intro="Select to enter or exit full screen mode" onclick="fullscreen()" id="fullscreen" href="#" ></a>

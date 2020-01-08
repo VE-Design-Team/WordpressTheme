@@ -10,21 +10,7 @@
 
 }
 
-/* Top Bar and Menu */
 
-.navbar {
-  left: auto;
-  bottom: 0;
-  width: 300px;
-  flex-flow: column nowrap;
-  align-items: flex-start !important;
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  display: flex !important;
-  background-color: #000053;
-  padding: 0px !important;
-}
 
 @media (min-width: 768px) {
   body {
@@ -177,88 +163,7 @@
 
 /*PUSH AND PULL MENU*/
 /* General styles for all menus */
-.cbp-spmenu {
-  position: fixed;
-}
 
-@media (min-width: 100px) and (max-width: 767px) {
-
-  /* Orientation-dependent styles for the content of the menu */
-  .cbp-spmenu-vertical {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-
-  /* Vertical menu that slides from the left or right */
-  .cbp-spmenu-right {
-    left: -100%;
-  }
-
-  .cbp-spmenu-right.cbp-spmenu-open {
-    left: 0%;
-  }
-
-  /* Push classes applied to the body */
-  .cbp-spmenu-push {
-    overflow-x: hidden;
-    position: relative;
-    left: 0;
-  }
-
-  .cbp-spmenu-push-toleft {
-    width: 100%;
-  }
-
-  /* Transitions */
-  .cbp-spmenu,
-  .cbp-spmenu-push {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-}
-
-@media (min-width: 768px) {
-
-  /* Orientation-dependent styles for the content of the menu */
-  .cbp-spmenu-vertical {
-    width: 300px;
-    height: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-
-  /* Vertical menu that slides from the left or right */
-  .cbp-spmenu-right {
-    left: 0px;
-  }
-
-  .cbp-spmenu-right.cbp-spmenu-open {
-    left: -300px;
-  }
-
-  /* Push classes applied to the body */
-  .cbp-spmenu-push {
-    overflow-x: hidden;
-    position: relative;
-    left: 0;
-    width: calc(100% + 300px);
-  }
-
-  .cbp-spmenu-push-toleft {
-    width: 100%;
-  }
-
-  /* Transitions */
-  .cbp-spmenu,
-  .cbp-spmenu-push {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-}
 
 /*Hamburger Icon - Menu*/
 .hamburger {
@@ -563,9 +468,9 @@
 #banner #ws {
   margin-left: -15px;
   height: 72px;
-  width: 194.5224px;
-  float: right;
   width: 320px;
+  right: 0px;
+  position: fixed;
 }
 
 #banner #ws .vwp-logo {
@@ -727,4 +632,102 @@
 
 .card-1:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+.main-nav {/**************nav principal***************/
+position: fixed;
+  background-color: #000053;
+top: 0;
+width: 300px;
+height: 100%;
+overflow: auto;
+transition: width 0.3s ease;
+margin:0;
+padding: 0;
+z-index: 1000 !important;
+}
+@media (min-width: 100px) and (max-width: 767px)
+  {
+    .main-nav {/**************nav principal***************/
+    position: fixed;
+    background-color: #000053;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: width 0.3s ease;
+    margin:0;
+    padding: 0;
+    z-index: 1000;
+    }
+  }
+
+.main-nav::selection, .main-nav a::selection, .main-nav label::selection, .main-nav div a::selection{/*on enlève la selection dans le nav*/
+
+}
+
+.main-nav-check , .part-nav-check{
+display: none;
+}
+
+#main-nav-check:disabled ~ nav {
+  display: none !important;
+}
+.page-wrap {/*************contenu du site***************/
+position:relative;
+float: right;
+width: calc(100% - 300px);
+transition: width 0.3s ease;
+z-index: 999;				/*on le met par dessus tout, pour éviter que le sous-menu passe par dessus le contenu, lorsqu'il est ouvert et que le menu principal est fermé*/
+}
+.content {
+}
+.right-menu {
+display: flex !important;
+z-index: 999;
+font-size: 2rem;
+position: absolute;
+}
+@media (min-width: 100px) and (max-width: 767px)
+  {
+    .right-menu {
+    display: flex !important;
+    z-index: 1001;
+    font-size: 2rem;
+    position: fixed;
+    right: 0;
+    color: white;
+    }
+  }
+.close-menu {
+display: none;
+}
+
+/*lorsque le symbole du nav est coché*/
+#main-nav-check:checked + #main-nav {				/* note: note: la checkbox est coché par defaut*/
+width: 0;											/*on cache le nav*/
+}
+#main-nav-check:checked ~ .page-wrap {
+width: 100%;										/*le contenu prend toute la place*/
+}
+#main-nav-check:checked ~ .page-wrap .close-menu {
+display: block;
+}
+#main-nav-check:checked ~ .page-wrap .open-menu {
+display: none;
+}
+#main-nav-check:checked ~ .page-wrap .main-header {
+width: 100%;									/*le header prend tout la largeur*/
+left: 0;										/*aucun espace à gauche*/
+}
+/*losrque "Section1" est coché*/
+#part-nav-check:checked + #ss_part {
+top:52px;										/*on fait apparaitre le sous menu, on le décale vers le bas de 52px, pour éviter qu'il chevauche "Section1"*/
+height: 104px;									/*on lui attribut la hauteur 104px car une lien fait 52px de hauteur et il y en 2*/
+}
+#part-nav-check:checked ~ #ss_part {
+height: 104px;
+}
+#part-nav-check:checked~ #other_links{
 }
