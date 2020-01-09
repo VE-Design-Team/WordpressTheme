@@ -1,8 +1,8 @@
 <head>
 <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="wp-content/themes/bagwan_health/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="wp-content/themes/bagwan_health/sass/theme/whm_introjs.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/vwp/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/vwp/css/vwp_introjs.css">
 
     <script src="wp-content/themes/bagwan_health/js/modernizr.custom.js"></script>
     <script src="wp-content/themes/bagwan_health/js/introjs.js"></script>

@@ -30,20 +30,6 @@
   background-color: #b3ff66;
   color: #AAD75F; }
 
-/* Top Bar and Menu */
-.navbar {
-  left: auto;
-  bottom: 0;
-  width: 300px;
-  flex-flow: column nowrap;
-  align-items: flex-start !important;
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  display: flex !important;
-  background-color: #000053;
-  padding: 0px !important; }
-
 @media (min-width: 768px) {
   body {
     margin-right: 300px; } }
@@ -477,7 +463,9 @@
   height: 72px;
   width: 194.5224px;
   float: left;
-  width: 320px; }
+  width: 320px;
+  right: 0px;
+  position: fixed; }
 
 #banner #ws .vwp-logo {
   background: url("../vwp/img/theme/bagwan_logo.png");
@@ -707,8 +695,67 @@ section {
     font-weight: 600;
     text-align: center; }
 
-#testdiv {
-  color: orange; }
+/*Cards*/
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/*Quick Link Card*/
+.quick_link {
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+  min-height: 170px; }
+
+.quick_link_title a {
+  color: #000054; }
+
+.quick_link_content {
+  color: #000054; }
+
+.quick_link_image {
+  flex-basis: 30%;
+  height: auto;
+  position: relative;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .2s; }
+
+.quick_link_right {
+  background-color: #fbfbfb;
+  flex-basis: 70%;
+  position: relative;
+  display: block;
+  text-align: left;
+  text-decoration: none !important; }
+
+.quick_link a:hover {
+  background-color: #fbfbfb;
+  text-decoration: none; }
+
+.quick_link_cta span {
+  color: #000054 !important;
+  font-weight: bold; }
+
+.quick_link_cta {
+  padding-top: 1rem; }
+
+.zindex-indev {
+  z-index: 1000; }
+
+/*Dev notification*/
+#dev-notification {
+  position: fixed;
+  z-index: 999;
+  bottom: 0; }
 
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)

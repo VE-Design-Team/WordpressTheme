@@ -144,6 +144,86 @@ a {
   }
 }
 
-#testdiv {
-  color: orange;
+
+
+/*Cards*/
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+
+.card-1:hover  {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*Quick Link Card*/
+.quick_link {
+
+    display: flex;
+    overflow: hidden;
+    background-color: $white;
+    min-height: 170px;
+}
+.quick-link-card {
+
+}
+.quick_link_title a{
+color: $blue;
+}
+
+.quick_link_content{
+  color: $blue;
+
+}
+.quick_link_image
+  {
+    flex-basis: 30%;
+    height: auto;
+    position: relative;
+    display: block;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-size: cover;
+   background-position: center;
+   transition: transform .2s;
+
+}
+.quick_link_right {
+  background-color: #fbfbfb;
+flex-basis: 70%;
+position: relative;
+    display: block;
+    text-align: left;
+
+      text-decoration: none !important;
+}
+
+.quick_link a:hover {
+background-color: #fbfbfb;
+  text-decoration: none;
+}
+.quick_link_cta span{
+color: $blue !important;
+font-weight: bold;
+}
+
+.quick_link_cta{
+
+  padding-top: 1rem;
+}
+
+
+.material-card {
+}
+.zindex-indev{
+  z-index: 1000;
+}
+
+/*Dev notification*/
+#dev-notification {
+  position: fixed;
+  z-index: 999;
+  bottom: 0; }

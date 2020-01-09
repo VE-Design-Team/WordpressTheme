@@ -36,7 +36,6 @@
 </body>
 
 
-<!-- content ----------------------------------->
 <?php get_template_part( 'loop-templates/scorm/vwp', 'footer' ); ?>
 
 <script src="<?php echo get_stylesheet_directory_uri();?>/js/menu.js"></script>
