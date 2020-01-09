@@ -22,7 +22,7 @@ _gaq.push(['_setDomainName', 'none']);
 <?php endif; ?>
 
 
-  <div id="showRightPush" class="" data-intro="Select to open and close the menu." >
+  <div id="showRightPush" class="" >
     <div >
     <div><span></span>
     <span></span>

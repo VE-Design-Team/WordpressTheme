@@ -7,9 +7,9 @@
 <?php if( have_rows('field_5dddcb8593260') ): ?>
 <h2>Latest news</h2>
 
-<div class="row">
+<div class="row m-0">
 
-<?php while( have_rows('field_5dddcb8593260') ): the_row(); 
+<?php while( have_rows('field_5dddcb8593260') ): the_row();
 
     // vars
     $card_image = get_sub_field('field_5dddcbac93261');
@@ -28,7 +28,7 @@
   <div class="row no-gutters">
     <div class="col-5 col-lg-12">
     <img src="<?php echo $card_image['url']; ?>" class="card-img card-img-top" alt="<?php echo $card_image['alt'] ?>" />
-    
+
     </div>
     <div class="col-7 col-lg-12">
       <div class="card-body">
@@ -42,7 +42,7 @@
 </div>
 
         </div><!-- end col-->
-     
+
 <?php endwhile; ?>
 
 </div><!-- end row-->
@@ -53,15 +53,15 @@
 
 <!-- end get cards-->
 
-<div  class="col-8 offset-1 offset-lg-1 col-lg-4 pr-0">
+<div  class="col-8 col-lg-4 pr-0">
 <h2>Quick Links</h2>
 <div id="quicklinks">
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
-    <div class="row">
+    <div class="row m-0">
 
-<?php while( have_rows('field_5dddca8ee40a5') ): the_row(); 
+<?php while( have_rows('field_5dddca8ee40a5') ): the_row();
 
     // vars
     $button_image = get_sub_field('field_5dddcb49e158f');
@@ -79,12 +79,12 @@
             <img class="mx-auto d-block
             " src="<?php echo $button_image['url']; ?>" alt="<?php echo $button_image['alt'] ?>" />
 
-        <?php if( $button_link ): ?>
-            </a>
-        <?php endif; ?>
+
 
        <p> <?php echo $button_title; ?></p>
-
+       <?php if( $button_link ): ?>
+           </a>
+       <?php endif; ?>
     </div><!-- end col-->
 
 <?php endwhile; ?>
