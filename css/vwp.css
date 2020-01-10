@@ -30,6 +30,20 @@
   background-color: #b3ff66;
   color: #AAD75F; }
 
+/* Top Bar and Menu */
+.navbar {
+  left: auto;
+  bottom: 0;
+  width: 300px;
+  flex-flow: column nowrap;
+  align-items: flex-start !important;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  display: flex !important;
+  background-color: #000053;
+  padding: 0px !important; }
+
 @media (min-width: 768px) {
   body {
     margin-right: 300px; } }
@@ -86,15 +100,19 @@
   font-size: 1.5rem; }
 
 /* Intranet menu */
+/*
 #menu-vwp-intranet li {
   list-style-type: none !important;
   padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+}
 
 #menu-vwp-intranet li a {
   color: #fff;
   font-size: 1.5rem;
-  text-decoration: none; }
+  text-decoration: none;
+}
+
 
 #menu-virtual-workplace li ul {
   padding-inline-start: 0px !important;
@@ -104,11 +122,13 @@
   padding-bottom: 1.3rem !important;
   margin-bottom: -0.4rem !important;
   border-left: 3px solid #01A19A !important;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+}
 
 #menu-vwp-intranet li ul li {
   padding-bottom: 0rem;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+}
 
 #menu-vwp-intranet li ul a {
   color: #01A19A !important;
@@ -118,7 +138,8 @@
   -webkit-transition: .2s ease-in-out;
   -moz-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out; }
+  transition: .2s ease-in-out;
+}
 
 #menu-vwp-intranet li ul a:hover {
   color: #372A57 !important;
@@ -127,18 +148,21 @@
   -webkit-transition: .2s ease-in-out;
   -moz-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out; }
+  transition: .2s ease-in-out;
+}
 
 #menu-vwp-intranet li ul .current-menu-item a {
   color: #372A57 !important;
   border-left: 2px solid #372A57;
   padding-left: .5rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 #menu-vwp-intranet li.open {
-  padding-bottom: 0rem !important; }
+  padding-bottom: 0rem !important;
+}
 
-/* END - Intranet Menu */
+ END - Intranet Menu */
 .menu-item {
   border-bottom: 1px solid white; }
 
@@ -463,9 +487,7 @@
   height: 72px;
   width: 194.5224px;
   float: left;
-  width: 320px;
-  right: 0px;
-  position: fixed; }
+  width: 320px; }
 
 #banner #ws .vwp-logo {
   background: url("../vwp/img/theme/bagwan_logo.png");
@@ -695,67 +717,8 @@ section {
     font-weight: 600;
     text-align: center; }
 
-/*Cards*/
-.card-1 {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-
-.card-1:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
-/*Quick Link Card*/
-.quick_link {
-  display: flex;
-  overflow: hidden;
-  background-color: #fff;
-  min-height: 170px; }
-
-.quick_link_title a {
-  color: #000054; }
-
-.quick_link_content {
-  color: #000054; }
-
-.quick_link_image {
-  flex-basis: 30%;
-  height: auto;
-  position: relative;
-  display: block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform .2s; }
-
-.quick_link_right {
-  background-color: #fbfbfb;
-  flex-basis: 70%;
-  position: relative;
-  display: block;
-  text-align: left;
-  text-decoration: none !important; }
-
-.quick_link a:hover {
-  background-color: #fbfbfb;
-  text-decoration: none; }
-
-.quick_link_cta span {
-  color: #000054 !important;
-  font-weight: bold; }
-
-.quick_link_cta {
-  padding-top: 1rem; }
-
-.zindex-indev {
-  z-index: 1000; }
-
-/*Dev notification*/
-#dev-notification {
-  position: fixed;
-  z-index: 999;
-  bottom: 0; }
+#testdiv {
+  color: orange; }
 
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)

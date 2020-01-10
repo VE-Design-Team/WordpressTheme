@@ -10,7 +10,21 @@
 
 }
 
+/* Top Bar and Menu */
 
+.navbar {
+  left: auto;
+  bottom: 0;
+  width: 300px;
+  flex-flow: column nowrap;
+  align-items: flex-start !important;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  display: flex !important;
+  background-color: #000053;
+  padding: 0px !important;
+}
 
 @media (min-width: 768px) {
   body {
@@ -78,6 +92,7 @@
 }
 
 /* Intranet menu */
+/*
 #menu-vwp-intranet li {
   list-style-type: none !important;
   padding-top: 1rem;
@@ -139,7 +154,7 @@
   padding-bottom: 0rem !important;
 }
 
-/* END - Intranet Menu */
+ END - Intranet Menu */
 .menu-item {
   border-bottom: 1px solid white;
 }
@@ -161,7 +176,6 @@
 
 
 /* General styles for all menus */
-
 .cbp-spmenu {
 	position: fixed;
 }
@@ -241,7 +255,6 @@
 }
 
 }
-
 /*Hamburger Icon - Menu*/
 
 .hamburger{
@@ -563,8 +576,6 @@
   width: 194.5224px;
   float: left;
   width: 320px;
-  right: 0px;
-  position: fixed;
 }
 
 #banner #ws .vwp-logo {

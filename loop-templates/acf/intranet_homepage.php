@@ -9,7 +9,6 @@
 
 <div class="row m-0">
 
-
 <?php while( have_rows('field_5dddcb8593260') ): the_row();
 
     // vars
@@ -49,20 +48,18 @@
 </div><!-- end row-->
 
 <?php endif; ?>
-<a class="btn btn-primary mb-5" href="/bagwanhealth/scorm/intranet/news-feed/">Read more staff news</a>
+<a class="btn btn-primary mb-5" href="https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/intranet/news-feed/">Read more staff news</a>
 </div>
 
 <!-- end get cards-->
 
 <div  class="col-8 col-lg-4 pr-0">
-
 <h2>Quick Links</h2>
 <div id="quicklinks">
 <!-- start get buttons -->
 <?php if( have_rows('field_5dddca8ee40a5') ): ?>
 
     <div class="row m-0">
-
 
 <?php while( have_rows('field_5dddca8ee40a5') ): the_row();
 
