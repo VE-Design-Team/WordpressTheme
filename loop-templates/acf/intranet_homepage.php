@@ -25,7 +25,7 @@
         <?php endif; ?>
 
     <div class="card mb-3">
-  <div class="row no-gutters">
+  <div class="row no-gutters single-news">
     <div class="col-5 col-lg-12">
     <img src="<?php echo $card_image['url']; ?>" class="card-img card-img-top" alt="<?php echo $card_image['alt'] ?>" />
 
@@ -40,15 +40,40 @@
   </div>
   </a>
 </div>
-
         </div><!-- end col-->
-
 <?php endwhile; ?>
-
 </div><!-- end row-->
-
 <?php endif; ?>
-<a class="btn btn-primary mb-5" href="https://emedia.rmit.edu.au/bagwanhealth/index.php/scorm/intranet/news-feed/">Read more staff news</a>
+<a class="btn btn-primary mb-5" href="../../scorm/intranet/news-feed/">Read more staff news</a>
+
+<?php
+
+// check if the repeater field has rows of data
+if( have_rows('field_5e1e7ce9bb5ae') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('field_5e1e7ce9bb5ae') ) : the_row();
+
+        // display a sub field value
+
+        the_sub_field('field_5e1e836a9811e');
+
+$postObject = get_sub_field('field_5e1e83469811d');
+$postURL = get_permalink($postobject->ID);
+echo $postURL;
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+
+
+
 </div>
 
 <!-- end get cards-->
@@ -70,7 +95,7 @@
 
     ?>
 
-<div class="col-4 border">
+<div class="col-4 border card">
 
         <?php if( $button_link ): ?>
             <a href="<?php echo $button_link; ?>">

@@ -189,7 +189,7 @@ add_action('init', 'game', 0);
 function my_customize_rest_cors() {
     remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
     add_filter( 'rest_pre_serve_request', function( $value ) {
-    
+
     return $value;
     } );
     }
@@ -661,3 +661,4 @@ class CSS_Menu_Maker_Walker extends Walker {
   add_action( 'init', 'disable_wp_emojicons' );
 
 
+  function breadcrumbs($id = null) {}

@@ -3161,7 +3161,7 @@ fieldset[disabled] a.btn {
 .btn-primary:not([disabled]):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #a61e17;
+  background-color: $rmit-blue;
   border-color: #9b1c15;
   box-shadow: 0 0 0 0.2rem rgba(211, 38, 29, 0.5);
 }
@@ -13038,7 +13038,7 @@ abbr.glossarizer_replaced {
 }
 
 .btn-primary {
-  background-color: #01A19A;
+  background-color: $rmit-blue;
   color: #ffffff;
   transition: 300ms;
   border-color: #01A19A;
@@ -15346,3 +15346,4 @@ ol.organizational-chart {
   }
 
 }
+.testme {}

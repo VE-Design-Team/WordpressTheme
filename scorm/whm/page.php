@@ -21,14 +21,9 @@ _gaq.push(['_setDomainName', 'none']);
     <body class="cbp-spmenu-push " >
 <?php endif; ?>
 
-
-<<<<<<< HEAD
-  <div id="showRightPush" class="" >
-    <div >
-=======
   <div id="showRightPush" class="" data-intro="Select to open and close the menu." >
     <div>
->>>>>>> 1cf80a2359fb5d53a1277f4c858b9923b2415e46
+
     <div><span></span>
     <span></span>
     <span></span>

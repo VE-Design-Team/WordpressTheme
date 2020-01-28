@@ -91,70 +91,6 @@
   font-size: 1.5rem;
 }
 
-/* Intranet menu */
-/*
-#menu-vwp-intranet li {
-  list-style-type: none !important;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-#menu-vwp-intranet li a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-
-#menu-virtual-workplace li ul {
-  padding-inline-start: 0px !important;
-  background-color: #ffffff;
-  margin-left: -2rem !important;
-  margin-right: -2rem !important;
-  padding-bottom: 1.3rem !important;
-  margin-bottom: -0.4rem !important;
-  border-left: 3px solid #01A19A !important;
-  margin-top: 1rem;
-}
-
-#menu-vwp-intranet li ul li {
-  padding-bottom: 0rem;
-  padding-right: 2rem;
-}
-
-#menu-vwp-intranet li ul a {
-  color: #01A19A !important;
-  font-weight: 400;
-  font-size: 1.2rem;
-  border-left: 2px solid #fff;
-  -webkit-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-#menu-vwp-intranet li ul a:hover {
-  color: #372A57 !important;
-  border-left: 2px solid #372A57;
-  padding-left: .5rem;
-  -webkit-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -o-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-#menu-vwp-intranet li ul .current-menu-item a {
-  color: #372A57 !important;
-  border-left: 2px solid #372A57;
-  padding-left: .5rem;
-  font-size: 1.5rem;
-}
-
-#menu-vwp-intranet li.open {
-  padding-bottom: 0rem !important;
-}
-
- END - Intranet Menu */
 .menu-item {
   border-bottom: 1px solid white;
 }
@@ -485,12 +421,12 @@
 
 /*Fullscreen button*/
 .full-screen {
-  right: 18rem;
-  top: 0rem;
+  right: 3rem;
+  top: .3rem;
   vertical-align: middle;
   box-sizing: border-box;
   display: inline-block;
-  border: 0.1em solid #fff;
+  border: 0.1em solid $rmit-blue;
   width: 1em;
   height: 1em;
   position: absolute;
@@ -499,7 +435,7 @@
 .full-screen:before,
 .full-screen:after {
   content: '';
-  background: #283896;
+  background: $white;
   position: absolute;
 }
 
@@ -586,6 +522,10 @@
   background-repeat: no-repeat;
 }
 
+#banner #ws .vwp-logo a {
+  height:160px;
+  width:470px;
+}
 #banner .module-title {
   background: #fff;
   height: 28.8px;

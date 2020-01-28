@@ -1,7 +1,40 @@
 @import "vwp_rendered_current";
 //@import "vwp_rendered_old";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+$url_2: url('../whm/img/theme/whm_logo.png');
+$url_1: url('../whm/img/theme/logo_banner_lighter.png');
+$url_4: url("../whm/img/theme/svg/hamburger.svg");
+$url_5: url("../whm/img/theme/svg/fullscreen.svg");
+$url_6: url("../whm/img/theme/vcoss_rmit_logo.png");
+$url_7: url("../whm/img/theme/nav_header.png");
+$url_37: url('../whm/img/theme/cc.png');
+//prev next icons
+$url_16: url("../whm/img/theme/svg/prev.svg");
+$url_15: url("../whm/img/theme/svg/next.svg");
 
+// //rich content
+// Flipcards
+$url_8: url("../whm/img/theme/flipme_icon.png");
+// introtabs
+$url_9: url("../whm/img/theme/learning_objectives_inverse.png");
+$url_10: url("../whm/img/theme/key_activities_inverse.png");
+$url_11: url("../whm/img/theme/assessments_inverse.png");
+$url_12: url("../whm/img/theme/learning_objectives.png");
+$url_13: url("../whm/img/theme/key_activities.png");
+$url_14: url("../whm/img/theme/assessments.png");
+
+$banner-height: 72px;
+$breadcrumbs-height: 48px;
+$nav-width: 20rem;
+$footer-height: 48px;
+
+//font
+
+// Colours
+$green: #01A19A;
+$blue: $rmit-blue;
+
+*,
 html,
 body {
   font-family: $font-family-sans-serif !important;
@@ -49,8 +82,17 @@ a {
               color: #fff;
               text-decoration: none;
             }
+
           }
 
+        }
+
+        .current-menu-item a
+        {
+          color: $white !important;
+          border-left: 2px solid $white;
+          padding-left: .5rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -105,10 +147,13 @@ a {
 
     .card:hover {
       text-decoration: none;
+      background-color: #f1f1f1;
+      opacity: 1;
+      transition: 300ms;
     }
 
     .btn-primary {
-      background-color: #000054;
+      background-color: $rmit-blue;
       border-radius: 2rem;
       border: #000054;
     }
@@ -140,10 +185,200 @@ a {
       line-height: 16px;
       font-weight: 600;
       text-align: center;
+      text-decoration: none!important;
+    }
+    .card {
+      background: $rmit-blue;
+      color: $white;
+      border-radius: 0px !important;
+      text-decoration: none!important;
+    }
+    .card:hover {
+      background-color: $bagwan-light-blue;
+      transition: 300ms;
+      color: $white !important;
+      border-radius: 0px !important;
+      text-decoration: none!important;
+      a {
+            text-decoration: none!important;
+      p {
+        color: $white;
+        text-decoration: none!important;
+      }
+      }
     }
   }
 }
 
-#testdiv {
-  color: orange;
-}
+#breadcrumbs
+{
+    color: $blue;
+    height: $breadcrumbs-height;
+
+    //background-position-y: -0.1rem;
+
+    #ws {
+      height: $breadcrumbs-height;
+      width: $breadcrumbs-height;
+      margin-left: -15px;
+      padding: 0;
+      width: 7.2rem;
+      float: left;
+
+      .fssi-logo
+        {
+          margin: 0;
+          background: $url_2;
+          height: $breadcrumbs-height;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+    }
+
+  @media (min-width: 1200px)
+    {
+      #ws
+        {
+            display: none;
+        }
+        //border-top: ($breadcrumbs-height * 0.05) $white solid;
+        //border-bottom: ($breadcrumbs-height * 0.05) $white solid;
+    }
+
+    ul {
+      list-style: none;
+      margin: 1rem 0rem;
+      padding: 0;
+      float: left;
+
+      li {
+        display: inline;
+        font-size: 16px;
+        font-weight: 700;
+        color: $blue !important;
+      }
+
+      li:before {
+        font-weight: 700;
+        content: " / " !important;
+        color: $blue;
+        padding: 0 0.2rem 0 0.2rem;
+      }
+
+      li:nth-child(1):before
+        {
+          display: none;
+        }
+    }
+
+    button#navtoggle
+      {
+        float: right;
+
+        @media (min-width: 1200px) {
+          display: none;
+      }
+    }
+
+    button#fullscreen {
+      float: right;
+    }
+
+    #access {
+      z-index: 2000;
+      position: absolute;
+      float: right;
+      height: $breadcrumbs-height;
+      right: 0;
+
+      .btn-fs,
+      .btn-menu {
+        height: ($breadcrumbs-height * 0.7);
+        width: ($breadcrumbs-height * 0.7);
+        margin-top: ($breadcrumbs-height * 0.15);
+        margin-right: ($breadcrumbs-height * 0.1);
+        padding: 0;
+        float: right;
+        position: relative;
+        background-size: cover;
+        //background-color: red;
+        border: none;
+        z-index: 400;
+      }
+
+      .btn-fs {
+        background-image: $url_5;
+      }
+
+      .btn-menu {
+        background-image: $url_4;
+      }
+    }
+  }
+
+  /*Quick Link Card*/
+  .quick_link {
+
+      display: flex;
+      overflow: hidden;
+      background-color: $white;
+      min-height: 170px;
+  }
+  .quick-link-card {
+
+  }
+  .quick_link_title a{
+  color: $blue;
+  }
+
+  .quick_link_content{
+    color: $blue;
+
+  }
+  .quick_link_image
+    {
+      flex-basis: 30%;
+      height: auto;
+      position: relative;
+      display: block;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background-size: cover;
+     background-position: center;
+     transition: transform .2s;
+
+  }
+  .quick_link_right {
+  flex-basis: 70%;
+  position: relative;
+      display: block;
+      text-align: left;
+
+        text-decoration: none !important;
+  }
+
+  .quick_link a:hover {
+  background-color: #fbfbfb;
+    text-decoration: none;
+  }
+  .quick_link_cta span{
+  color: $blue !important;
+  font-weight: bold;
+  }
+
+  .quick_link_cta{
+
+    padding-top: 1rem;
+  }
+
+
+  .material-card {
+  }
+  .zindex-indev{
+    z-index: 1000;
+  }
+
+  .single-scorm {
+    background-color: #fff0 !important; }

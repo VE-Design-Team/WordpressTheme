@@ -1,6 +1,5 @@
 <head>
 <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/sass/theme/vwp_introjs.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.mCustomScrollbar.min.css">
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/classie.js"></script>
@@ -12,10 +11,15 @@
     <span></span>
     <span></span>
     <span></span>
-    <div class="text-right w-100 fscreen">
+    <div class="w-100 fscreen" >
+      <div id="fullscreen" >
+      <a class="full-screen" onclick="fullscreen()" id="fullscreen" href="#" ></a>
+    </div>
     </div>
   </div>
 
+
+  </div>
   <nav id="sidebar" class="navbar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" >
     <div>
       <div class="sidebar"><?php get_template_part( 'loop-templates/scorm/vwp-scorm', 'nav' ); ?> </div>
@@ -39,6 +43,5 @@
 <?php get_template_part( 'loop-templates/scorm/vwp', 'footer' ); ?>
 
 <script src="<?php echo get_stylesheet_directory_uri();?>/js/menu.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri();?>/js/introjs.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
